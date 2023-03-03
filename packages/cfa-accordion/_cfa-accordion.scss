@@ -1,0 +1,38 @@
+@use 'uswds-core' as *;
+
+$theme-accordion-border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
+
+.cfa-accordion {
+  .usa-accordion__button {
+    border-top-left-radius: radius($theme-border-radius-lg);
+    border-top-right-radius: radius($theme-border-radius-lg);
+    border-top-start-radius: radius($theme-border-radius-lg);
+    border-top-end-radius: radius($theme-border-radius-lg);
+  }
+
+  .usa-accordion__button[aria-expanded='false'] {
+    border-radius: radius($theme-border-radius-lg);
+  }
+
+  .usa-accordion__content {
+    border-bottom-left-radius: radius($theme-border-radius-lg);
+    border-bottom-right-radius: radius($theme-border-radius-lg);
+    border-bottom-start-radius: radius($theme-border-radius-lg);
+    border-bottom-end-radius: radius($theme-border-radius-lg);
+  }
+
+  .usa-accordion__content {
+    background-color: color($theme-color-base-lightest);
+  }
+}
+
+.cfa-accordion.usa-accordion--bordered {
+  .usa-accordion__button {
+    border: $theme-accordion-border;
+    border-bottom: 0;
+  }
+
+  .usa-accordion__button[aria-expanded='false'] {
+    border: $theme-accordion-border;
+  }
+}

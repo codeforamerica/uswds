@@ -1,0 +1,14 @@
+@use 'uswds-core' as *;
+
+.cfa-input {
+  font-weight: $theme-font-weight-bold;
+  background-color: color($theme-color-base-lightest);
+  box-shadow: inset 0px units($theme-input-state-border-width) 0px color($theme-color-base-lighter);
+
+  height: units(8);
+  padding: units(2) units(2.5);
+}
+
+.cfa-input:not(.usa-input--error):not(.usa-input--success) {
+  @include u-border(2px, 'ink');
+}

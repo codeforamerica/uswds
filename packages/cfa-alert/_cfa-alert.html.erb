@@ -1,0 +1,11 @@
+<div class="usa-alert<% if modifier %> <%= modifier %><% end %>"<% if role %> role="<%= role %>"<% end %><% if label %> aria-label="<%= label %>"<% end %><% if labelledby %> aria-labelledby="<%= labelledby %>"<% end %>>
+  <div class="usa-alert__body">
+    <% if heading %><h4 class="usa-alert__heading"<% if labelledby %> id="<%= labelledby %>"<% end %>><%= heading %></h4><% end %>
+
+    <% if body %>
+      <div><%= body %></div>
+    <% else text %>
+      <div><p class="usa-alert__text"><%= text %></p></div>
+    <% end %>
+  </div>
+</div>

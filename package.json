@@ -1,0 +1,42 @@
+{
+  "name": "@codeforamerica/uswds",
+  "nice": "Code for America USWDS theme",
+  "version": "0.0.0-12",
+  "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeforamerica/uswds.git"
+  },
+  "design": {
+    "type": "figma",
+    "url": "https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0"
+  },
+  "homepage": "https://codeforamerica.github.io/uswds/dist",
+  "author": "dhirth@codeforamerica.org",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/codeforamerica/uswds/issues"
+  },
+  "scripts": {
+    "start": "npx concurrently 'npm run views' 'npm run uswds'",
+    "default": "npx @11ty/eleventy && npx gulp compile",
+    "views": "npx @11ty/eleventy --serve",
+    "uswds": "npx gulp watch",
+    "version": "npm run default && git add .",
+    "rollup": "npx rollup --config rollup.config.cjs",
+    "preview": "NODE_ENV=production npm run views"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@factorial/eleventy-plugin-twig": "^0.1.2",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@uswds/compile": "^1.0.0",
+    "js-beautify": "^1.14.7",
+    "markdown-it-attrs": "^4.1.6",
+    "thymeleaf": "^0.21.0"
+  },
+  "dependencies": {
+    "@uswds/uswds": "^3.4.1"
+  }
+}

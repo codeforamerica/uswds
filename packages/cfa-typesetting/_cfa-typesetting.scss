@@ -1,0 +1,9 @@
+@use 'uswds-core' as *;
+
+.usa-prose > h6, h6 {
+  text-transform: none;
+}
+
+ol, ul {
+  line-height: line-height('body', 6);
+}

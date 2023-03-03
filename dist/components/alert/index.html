@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>Code for America USWDS theme</title>
+
+  <link rel="stylesheet" href="/uswds/css/styles.css">
+  <link rel="stylesheet" href="/highlight/styles/default.min.css">
+  <script type="text/javascript" src="/highlight/highlight.min.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['ruby', 'html', 'javascript', 'css', 'sass']
+      });
+
+      document.querySelectorAll('pre').forEach(function(pre) {
+        if (!pre.hasAttribute('tabindex')) {
+          pre.setAttribute('tabindex', '0');
+        }
+
+        hljs.highlightElement(pre);
+      });
+    });
+  </script>
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
+
+  </head>
+
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <section class="usa-banner" aria-label="Official website of the United States government">
+    <div class="usa-accordion">
+      <header class="usa-banner__header">
+        <div class="usa-banner__inner">
+          <div class="grid-col-auto">
+            <img aria-hidden="true" class="usa-banner__header-flag" src="/uswds/img/us_flag_small.png" alt="" />
+          </div>
+
+          <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+            <p class="usa-banner__header-text">Not an official website of the United States government</p>
+
+            <p class="usa-banner__header-action">Here's how you know</p>
+          </div>
+
+          <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+            <span class="usa-banner__button-text">Here's how you know</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+        <div class="grid-row grid-gap-lg">
+          <div class="usa-banner__guidance">
+            <img class="usa-banner__icon usa-media-block__img" src="/uswds/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
+            <div class="usa-media-block__body">
+              <p><strong>Official websites use .gov</strong><br />A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <div class="usa-overlay"></div>
+
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="-logo">
+          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        </div>
+
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <button type="button" class="usa-nav__close">
+          <img src="/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+
+        <ul class="usa-nav__primary usa-accordion">
+                              <li class="usa-nav__primary-item">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d09e676381e36">
+              <span>Components</span>
+            </button>
+
+            <ul id="aria-c-d09e676381e36" class="usa-nav__submenu">
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/" ><span>Components</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/accordion/" ><span>Accordion</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/alert/" aria-current="page"><span>Alert</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/button/" ><span>Button</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/text-input/" ><span>Text input</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/typography/" ><span>Typography</span></a>
+                </li>
+                          </ul>
+          </li>
+                              <li class="usa-nav__primary-item">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-e44ff5a1aa192">
+              <span>Design tokens</span>
+            </button>
+
+            <ul id="aria-c-e44ff5a1aa192" class="usa-nav__submenu">
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/design-tokens/" ><span>Design tokens</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/design-tokens/color/" ><span>Color</span></a>
+                </li>
+                          </ul>
+          </li>
+          
+          <li class="usa-nav__primary-item">
+            <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+          </li>
+
+          <li class="usa-nav__primary-item">
+            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+          </li>
+        </ul>
+
+        
+
+        
+      </nav>
+    </div>
+  </header>
+
+  <div class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+          <nav aria-label="Secondary navigation">
+            <ul class="usa-sidenav">
+                                          
+              
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/" >Components</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/accordion/" >Accordion</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/alert/" class="usa-current" aria-current="page">Alert</a>
+
+                                <ul class="usa-sidenav__sublist">
+                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#design-library">Design library</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
+                </ul>
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/button/" >Button</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/text-input/" >Text input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/typography/" >Typography</a>
+
+                              </li>
+                          </ul>
+          </nav>
+        </div>
+
+        <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
+          <div class="usa-prose">
+            <h1>Alert</h1>
+
+            <p class="usa-intro">"Alerts appear when I need help or when something has changed. It may be time-sensitive."</p>
+          </div>
+
+          <!-- INTRO -->
+<p>Alerts (notices) distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.</p>
+<!-- DETAILS -->
+<h2 id="details">Details</h2>
+<ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/alert" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Notice atom</a></li>
+  <li>
+    <strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Tokens</abbr>
+    and <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr>
+  </li>
+  <li><strong><abbr title="The class name that applies extended style customization to modify the component's visual appearance.">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
+</ul>
+<p>The <strong>Alert</strong> extends the <a href="https://designsystem.digital.gov/components/alert" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component</a>. The visual appearance is modified using <strong>design tokens</strong> applied to the <a href="https://designsystem.digital.gov/components/alert#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Notice atom</a>. Further styling is applied using the <strong>CSS modifier</strong> <code>.cfa-alert</code> to add <strong>styles</strong> defined in a custom stylesheet.</p>
+<!-- ACCESSIBILITY -->
+<h2 id="accessibility">Accessibility</h2>
+<ol>
+<li>
+<p>Existing research references</p>
+</li>
+<li>
+<p>Manual accessibility tests</p>
+</li>
+<li>
+<p>Automated accessibility tests</p>
+</li>
+<li>
+<p>Basic usability tests</p>
+</li>
+<li>
+<p>Assistive tech usability tests</p>
+</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Informational, gray</figcaption>
+    <div role="region" aria-label="false" aria-labelledby="" class="usa-alert cfa-alert usa-alert--info">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading" id="">Can we ask about your race and ethnicity?</h4>
+    <div>
+      <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
+      <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
+    </div>
+  </div>
+</div>
+<div class="usa-alert cfa-alert usa-alert--info" role="region" aria-labelledby="aria-lb-9dcf06cb77f94">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading" id="aria-lb-9dcf06cb77f94">Can we ask about your race and ethnicity?</h4>
+    <div>
+      <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
+      <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f95f4abbb9e6f">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-f95f4abbb9e6f" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div role=&quot;region&quot; aria-label=&quot;false&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--info&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
+      &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-9dcf06cb77f94&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-9dcf06cb77f94&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
+      &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Warning, yellow</figcaption>
+    <div role="false" aria-label="false" aria-labelledby="" class="usa-alert cfa-alert usa-alert--warning">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading" id="">Make sure your address is correct</h4>
+    <div>
+      <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
+    </div>
+  </div>
+</div>
+<div class="usa-alert cfa-alert usa-alert--warning">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading">Make sure your address is correct</h4>
+    <div>
+      <p class="usa-alert__text">We couldn&#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f7315927424e4">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-f7315927424e4" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div role=&quot;false&quot; aria-label=&quot;false&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Make sure your address is correct&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn&#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Make sure your address is correct&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn&amp;#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Error, red</figcaption>
+    <div role="alert" aria-label="false" aria-labelledby="" class="usa-alert cfa-alert usa-alert--error">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading" id="">Error notice</h4>
+    <div>
+      <p class="usa-alert__text">This is an example error notice. Its a great way to highlight <strong>errors or dangerous issues</strong>.</p>
+    </div>
+  </div>
+</div>
+<div class="usa-alert cfa-alert usa-alert--error" role="alert">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading">Error notice</h4>
+    <div>
+      <p class="usa-alert__text">This is an example error notice. Its a great way to highlight <strong>errors or dangerous issues</strong>.</p>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3c9ece65e1b5e">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-3c9ece65e1b5e" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div role=&quot;alert&quot; aria-label=&quot;false&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--error&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Error notice&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;This is an example error notice. Its a great way to highlight &lt;strong&gt;errors or dangerous issues&lt;/strong&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-alert cfa-alert usa-alert--error&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Error notice&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;This is an example error notice. Its a great way to highlight &lt;strong&gt;errors or dangerous issues&lt;/strong&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Success, green</figcaption>
+    <div role="status" aria-label="false" aria-labelledby="" class="usa-alert cfa-alert usa-alert--success">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading" id="">Done! Your application has been submitted.</h4>
+    <div>
+      <p class="usa-alert__text">You were recommended for expedited food assistance (SNAP).</p>
+    </div>
+  </div>
+</div>
+<div class="usa-alert cfa-alert usa-alert--success" role="status">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading">Done! Your application has been submitted.</h4>
+    <div>
+      <p class="usa-alert__text">You were recommended for expedited food assistance (SNAP).</p>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c673b01bb885">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-c673b01bb885" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div role=&quot;status&quot; aria-label=&quot;false&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--success&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Done! Your application has been submitted.&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;You were recommended for expedited food assistance (SNAP).&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot; role=&quot;status&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Done! Your application has been submitted.&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;You were recommended for expedited food assistance (SNAP).&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+<p>This is an example of what the Alert component looks like without the modifier <code>.cfa-alert</code>. The colors for each Alert component variant are the same in the examples above. Additional variant modifiers for the Alert component can be found in the <a href="https://designsystem.digital.gov/components/alert#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.</p>
+</figcaption>
+    <div role="false" aria-label="false" aria-labelledby="" class="usa-alert usa-alert--info">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading" id="">Can we ask about your race and ethnicity?</h4>
+    <div>
+      <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
+      <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
+    </div>
+  </div>
+</div>
+<div class="usa-alert usa-alert--info">
+  <div class="usa-alert__body">
+    <h4 class="usa-alert__heading">Can we ask about your race and ethnicity?</h4>
+    <div>
+      <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
+      <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-767063193ac04">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-767063193ac04" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div role=&quot;false&quot; aria-label=&quot;false&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert usa-alert--info&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
+      &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-alert usa-alert--info&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;div&gt;
+      &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
+      &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<h2 id="guidance">Guidance</h2>
+<p><strong>Informational, gray</strong>. For non-urgent messages or context that is important to find but should not interrupt a user’s workflow. The HTML element may have the <code>role=&quot;region&quot;</code> attribute. If so, it must also have an <code>aria-labelledby</code> attribute that refers to the heading id. If it does not have a visible heading it must have an <code>aria-label</code> with the value of the label based on information inside the alert.</p>
+<p><strong>Warning, yellow</strong>. For temporary scenarios. They can be used outside the form card for extra emphasis.</p>
+<p><strong>Error, red</strong>. For urgent messages or application failure messages that are out of the user’s control. This is the least likely notice to appear. The HTML element should have <code>role=&quot;alert&quot;</code> attribute.</p>
+<p><strong>Success, green</strong>. For successful interactions such as a submitting an application. The HTML element should have the <code>role=&quot;status&quot;</code> attribute.</p>
+<p><strong>Attention and color</strong>. A notice that uses a tertiary background color, or color that appears in roughly 5% of the color palette, will draw more attention. Also consider choosing combinations that are distinguishable across a broad spectrum of color blindness such as blue against orange, where orange is the emphasis color (<a href="https://www.tableau.com/blog/examining-data-viz-rules-dont-use-red-green-together" target="_blank" rel="noopener nofollow" class="usa-link--external">source</a>).</p>
+<!-- DESIGN -->
+<h2 id="design-library">Design library</h2>
+<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5003-527&mode=design" allowfullscreen></iframe>
+<!-- SOURCE -->
+<h2 id="source-and-usage">Source and usage</h2>
+<p class="usa-icon-list__item">
+  <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="/uswds/img/sprite.svg#folder_open"></use></svg></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-alert</code></span>
+</p>
+<p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
+<ul class="usa-content-list">
+  <li><strong>Sass stylesheet:</strong> <code>../_cfa-alert.scss</code></li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>../cfa-alert.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>../_cfa-alert.html.erb</code></li>
+</ul>
+<figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
+  <figcaption class="margin-bottom-2">
+    <strong>Sass theme settings and stylesheet loading</strong>
+    <p>Below is a demonstration of customizing the component theme settings and loading the Sass stylesheet from the package. Refer to the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
+  </figcaption>
+  <div class="code-block"><pre class="language-scss">@use 'uswds-core' with (
+  $theme-alert-padding-x: 2,
+  // ... additional theme settings here ...
+);
+@forward 'uswds';
+@forward '@codeforamerica/uswds/packages/cfa-alert/_cfa-alert.scss';</pre></div>
+</figure>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>Thymeleaf template fragment</strong>
+      <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html th:lang=&quot;${#locale.language}&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+  &lt;body&gt;
+    &lt;div th:fragment=&quot;alert(modifier, role, heading, label, labelledBy, body, text)&quot; th:class=&quot;&#39;usa-alert &#39; + ${modifier}&quot; th:attr=&quot;role=${role},aria-label=${label},aria-labelledby=${labelledBy}&quot;&gt;
+      &lt;div class=&quot;usa-alert__body&quot;&gt;
+        &lt;h4 class=&quot;usa-alert__heading&quot; th:if=&quot;${heading}&quot; th:text=&quot;${heading}&quot; th:attr=&quot;id=${labelledBy}&quot;&gt;Heading&lt;/h4&gt;
+        &lt;div th:if=&quot;${body}&quot; th:utext=&quot;${body}&quot;&gt;&lt;/div&gt;
+        &lt;p class=&quot;usa-alert__text&quot; th:if=&quot;${text}&quot; th:text=&quot;${text}&quot;&gt;Text&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Template fragment inclusion</strong>
+      <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-alert/cfa-alert.th :: alert({{ modifier }}, {{ role }}, {{ label }}, {{ labelledBy }}, {{ heading }}, {{ body }}, {{ text }})}&quot; /&gt;</pre></div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>ERB template partial</strong>
+      <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-ruby">&lt;div class=&quot;usa-alert&lt;% if modifier %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&lt;% if role %&gt; role=&quot;&lt;%= role %&gt;&quot;&lt;% end %&gt;&lt;% if label %&gt; aria-label=&quot;&lt;%= label %&gt;&quot;&lt;% end %&gt;&lt;% if labelledby %&gt; aria-labelledby=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;% if heading %&gt;&lt;h4 class=&quot;usa-alert__heading&quot;&lt;% if labelledby %&gt; id=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= heading %&gt;&lt;/h4&gt;&lt;% end %&gt;
+    &lt;% if body %&gt;
+      &lt;div&gt;&lt;%= body %&gt;&lt;/div&gt;
+    &lt;% else text %&gt;
+      &lt;div&gt;&lt;p class=&quot;usa-alert__text&quot;&gt;&lt;%= text %&gt;&lt;/p&gt;&lt;/div&gt;
+    &lt;% end %&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Partial render</strong>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-ruby">&lt;%= render &#39;@codeforamerica/uswds/packages/cfa-alert/cfa-alert&#39;, modifier={{ modifier }}, role={{ role }}, label={{ label }}, labelledby={{ labelledby }}, heading={{ heading }}, body={{ body }}, text={{ text }} %&gt;</pre></div>
+  </figure>
+</div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="usa-footer">
+    <div class="grid-container usa-footer__return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+
+    <div class="usa-footer__primary-section">
+      <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <ul class="grid-row grid-gap">
+                    <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" href="/components/">Components</a>
+          </li>
+                    <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" href="/design-tokens/">Design tokens</a>
+          </li>
+          
+          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>Design Library</span></a>
+          </li>
+
+          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="usa-footer__secondary-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class=" usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+            <div class="mobile-lg:grid-col-auto">
+              <img class="usa-footer__logo-img" src="/uswds/img/logo-img.png" alt=""/>
+            </div>
+
+            <div class="mobile-lg:grid-col-auto">
+              <p class="usa-footer__logo-heading">The USWDS Honeycrisp theme</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="usa-identifier padding-0">
+    <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+      <div class="usa-identifier__container">
+        <div class="usa-identifier__logos">
+          <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img" src="/uswds/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
+        </div>
+
+        <section class="usa-identifier__identity" aria-label="Agency description">
+          <p class="usa-identifier__identity-domain">codeforamerica.org</p>
+
+          <p class="usa-identifier__identity-disclaimer">An official website of <a href="https://codeforamerica.org">Code for America</a></p>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  
+  <script src="/js/default.js"></script>
+
+  </body>
+</html>
