@@ -72,7 +72,7 @@
     <div class="usa-nav-container">
       <div class="usa-navbar">
         <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Design Tokens Test">Design Tokens Test</a> <a href="git+https://github.com/codeforamerica/design-tokens-test.git" target="_blank" rel="noopener nofollow">v0.0.0-1</a></em>
+          <em class="usa-logo__text"><a href="/" title="Design Tokens Test">Design Tokens Test</a> <a href="https://github.com/codeforamerica/design-tokens-test.git" target="_blank" rel="noopener nofollow">v0.0.0-1</a></em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
@@ -113,6 +113,7 @@
 
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/accordion/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Accordion component</a></li>
+    <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion" target="_blank" rel="noopener nofollow">Accordion molecule</a></li>
     <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
     <li><strong><abbr title="The class name that modifies the default component styles">Modifier</abbr>:</strong> <code>.cfa-accordion</code></li>
   </ul>
@@ -128,21 +129,21 @@
 <div class="usa-accordion cfa-accordion">
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-392035129">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1114982890">
         What is an accordion used for?
       </button>
     </h4>
-    <div id="aria-c-392035129" class="usa-accordion__content usa-prose">
+    <div id="aria-c-1114982890" class="usa-accordion__content usa-prose">
         <p>An accordion element allows the user to expand and hide content on a page. Multiple accordions are usually used in tandem. It is useful to break up long pages for easy scannability.</p>
 
     </div>
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1549936358">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-954941200">
         What documents will I need to provide to get CalFresh?
       </button>
     </h4>
-    <div id="aria-c-1549936358" class="usa-accordion__content usa-prose">
+    <div id="aria-c-954941200" class="usa-accordion__content usa-prose">
         <p><b>These documents are usually required to get CalFresh:</b></p>
 
   <ul class="list--bulleted">
@@ -181,21 +182,21 @@
 <div class="usa-accordion cfa-accordion usa-accordion--bordered">
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-177775491">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1931390627">
         What is an accordion used for?
       </button>
     </h4>
-    <div id="aria-c-177775491" class="usa-accordion__content usa-prose">
+    <div id="aria-c-1931390627" class="usa-accordion__content usa-prose">
         <p>An accordion element allows the user to expand and hide content on a page. Multiple accordions are usually used in tandem. It is useful to break up long pages for easy scannability.</p>
 
     </div>
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-502760086">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1676736411">
         What documents will I need to provide to get CalFresh?
       </button>
     </h4>
-    <div id="aria-c-502760086" class="usa-accordion__content usa-prose">
+    <div id="aria-c-1676736411" class="usa-accordion__content usa-prose">
         <p><b>These documents are usually required to get CalFresh:</b></p>
 
   <ul class="list--bulleted">
@@ -230,12 +231,56 @@
   </div>
   </figure>
 
+  <h2 id="alert-component">
+    <a id="section_11" class="usa-anchor"></a> Alert
+  </h2>
+
+  <ul class="usa-content-list">
+    <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Alert component</a></li>
+    <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow">Notice atom</a></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+    <li><strong><abbr title="The class name that modifies the default component styles">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
+  </ul>
+
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Alert component example.</figcaption>
+
+    <div class="usa-alert cfa-alert usa-alert--info" >
+  <div class="usa-alert__body">      <h4 class="usa-alert__heading">Informative notice</h4>    <p class="usa-alert__text">
+      This is an example notice. It's a great way to provide additional information on a certain issue.
+    </p>
+  </div>
+</div>
+
+    <div class="usa-alert cfa-alert usa-alert--warning" >
+  <div class="usa-alert__body">      <h4 class="usa-alert__heading">Warning notice</h4>    <p class="usa-alert__text">
+      This is an example warning notice. It's a great way to highlight <strong>potential issues</strong>.
+    </p>
+  </div>
+</div>
+
+    <div class="usa-alert cfa-alert usa-alert--error" role="alert">
+  <div class="usa-alert__body">      <h4 class="usa-alert__heading">Error notice</h4>    <p class="usa-alert__text">
+      This is an example warning notice. It's a great way to highlight <strong>errors or dangerous issues</strong>.
+    </p>
+  </div>
+</div>
+
+    <div class="usa-alert cfa-alert usa-alert--success" >
+  <div class="usa-alert__body">      <h4 class="usa-alert__heading">Success notice</h4>    <p class="usa-alert__text">
+      This is an example success notice. It's a great way to highlight <b>confirmations or successful actions</b>.
+    </p>
+  </div>
+</div>
+  </figure>
+
   <h2 id="button-component">
     <a id="section_20" class="usa-anchor"></a> Button
   </h2>
 
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/button/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Button component</a></li>
+    <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons" target="_blank" rel="noopener nofollow">Button atom</a></li>
     <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
   </ul>
 
@@ -276,6 +321,7 @@
 
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/design-tokens/color/theme-tokens/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Theme color tokens</a></li>
+    <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-colors" target="_blank" rel="noopener nofollow">Color atom</a></li>
     <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr></li>
   </ul>
 
@@ -697,6 +743,7 @@
 
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/typography/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Typography component</a></li>
+    <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-typography" target="_blank" rel="noopener nofollow">Typography atom</a></li>
     <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr></li>
   </ul>
 

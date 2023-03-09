@@ -1,0 +1,29 @@
+@use 'uswds-core' as *;
+
+.cfa-alert {
+  border: 2px solid;
+
+  .usa-alert__body {
+    padding: units($theme-alert-padding-x);
+  }
+
+  .usa-alert__body::before {
+    display: none
+  }
+}
+
+.usa-alert--info {
+  border-color: color($theme-color-info);
+}
+
+.usa-alert--warning {
+  border-color: color($theme-color-warning);
+}
+
+.usa-alert--error {
+  border-color: color($theme-color-error);
+}
+
+.usa-alert--success {
+  border-color: color($theme-color-success-darker);
+}
