@@ -1,0 +1,6 @@
+@use 'uswds-core' as *;
+
+.usa-button:not([disabled]).usa-focus,
+.usa-button:not([disabled]):focus {
+  outline-offset: 0;
+}

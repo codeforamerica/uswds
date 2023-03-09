@@ -1,0 +1,81 @@
+{% set uswds = '../../node_modules/@uswds/uswds/packages/' %}
+
+{% set accordion_explainer %}
+  <p>An accordion element allows the user to expand and hide content on a page. Multiple accordions are usually used in tandem. It is useful to break up long pages for easy scannability.</p>
+{% endset %}
+
+{% set accordion_requirements %}
+  <p><b>These documents are usually required to get CalFresh:</b></p>
+
+  <ul class="list--bulleted">
+    <li>A copy of your ID</li>
+    <li>Proof of any income from the last 30 days</li>
+    <li>Proof of student status (for college students)</li>
+  </ul>
+
+  <p><b>Immigrants may also be asked to provide proof of status to get benefits:</b></p>
+
+  <ul class="list--bulleted">
+    <li>Copy of your green card (both sides)</li>
+    <li>A copy of your most recent paperwork for a U Visa, T Visa, Asylum, Refugee or Parolee status, or VAWA petition</li>
+    <li>Naturalized US Citizens may be asked to provide a copy of their US passport or naturalization papers</li>
+    <li>Important: If you are only applying for other people in your household, you don’t have to provide proof of immigration status. </li>
+  </ul>
+
+  <p><b>These documents are optional but can increase your benefit amount:</b></p>
+
+  <ul class="list--bulleted">
+    <li>Proof of housing expenses</li>
+    <li>Proof of child support paid</li>
+    <li>Proof of child/dependent care paid</li>
+    <li>If you are 60+ or disabled, proof of medical expenses</li>
+  </ul>
+
+  <p><b>What if I can’t get the proof?</b></p>
+
+  <p>Tell your case worker during your CalFresh applicant interview. CalFresh will generally accept a sworn statement as a last resort if you cannot get the documents needed.</p>
+{% endset %}
+
+<h3 class="site-preview-heading">Borderless</h3>
+
+{% include uswds ~ 'usa-accordion/src/usa-accordion.twig' with {
+  id_prefix: 'aria-c-',
+  modifier: 'cfa-accordion',
+  multiselectable: false,
+  items: [
+    {
+      id: random(),
+      title: 'What is an accordion used for?',
+      expanded: true,
+      content: accordion_explainer
+    },
+    {
+      id: random(),
+      title: 'What documents will I need to provide to get CalFresh?',
+      expanded: true,
+      content: accordion_requirements
+    }
+  ]
+} only %}
+
+<h3 class="site-preview-heading">Bordered Accordion</h3>
+
+{% include uswds ~ 'usa-accordion/src/usa-accordion.twig' with {
+  id_prefix: 'aria-c-',
+  modifier: 'cfa-accordion usa-accordion--bordered',
+  multiselectable: false,
+  items: [
+    {
+      id: random(),
+      title: 'What is an accordion used for?',
+      expanded: true,
+      content: accordion_explainer
+    },
+    {
+      id: random(),
+      title: 'What documents will I need to provide to get CalFresh?',
+      expanded: true,
+      content: accordion_requirements
+    }
+  ]
+} only %}

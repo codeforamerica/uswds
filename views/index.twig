@@ -1,0 +1,126 @@
+{% extends '_layouts/default.twig' %}
+
+{% set heading = 'Components' %}
+{% set intro = 'This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.' %}
+{% set uswds = '../node_modules/@uswds/uswds/packages/' %}
+
+{% block content %}
+  <h2 id="accordion-component">
+    <a id="section_10" class="usa-anchor"></a> Accordion
+  </h2>
+
+  <ul class="usa-content-list">
+    <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/accordion/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Accordion component</a></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+    <li><strong><abbr title="The class name that modifies the default component styles">Modifier</abbr>:</strong> <code>.cfa-accordion</code></li>
+  </ul>
+
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Accordion component example.</figcaption>
+
+    {% include '../packages/cfa-accordion/cfa-accordion.twig' %}
+  </figure>
+
+  <h2 id="button-component">
+    <a id="section_20" class="usa-anchor"></a> Button
+  </h2>
+
+  <ul class="usa-content-list">
+    <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/button/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Button component</a></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+  </ul>
+
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Button component example.</figcaption>
+
+    <h3 class="site-preview-heading">Primary color</h3>
+    {% include uswds ~ 'usa-button/src/usa-button.twig' with {is_demo: true} only %}
+
+    <h3 class="site-preview-heading">Outline</h3>
+    {% include uswds ~ 'usa-button/src/usa-button.twig' with {is_demo: true, modifier: 'usa-button--outline'} only %}
+
+    <h3 class="site-preview-heading">Big</h3>
+    {% include uswds ~ 'usa-button/src/usa-button.twig' with {is_demo: true, modifier: 'usa-button--big', text: 'Big Button'} only %}
+  </figure>
+
+  <h2 id="theme-color-tokens">
+    <a id="section_21" class="usa-anchor"></a> Color
+  </h2>
+
+  <ul class="usa-content-list">
+    <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/design-tokens/color/theme-tokens/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Theme color tokens</a></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr></li>
+  </ul>
+
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Theme color token table illustrating the customized theme colors.</figcaption>
+
+    {% include '../packages/cfa-color/cfa-color.twig' %}
+  </figure>
+
+  <h2 id="typesetting-component">
+    <a id="section_30" class="usa-anchor"></a> Typesetting
+  </h2>
+
+  <ul class="usa-content-list">
+    <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/typography/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Typography component</a></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr></li>
+  </ul>
+
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Typography component example.</figcaption>
+
+    <h1>Page heading</h1>
+    <p class="usa-intro">Great Smoky Mountains National Park straddles the border of North Carolina and Tennessee.</p>
+
+    <h2>Section heading</h2>
+
+    <h3>Section of the page</h3>
+    <p>The sprawling landscape encompasses lush forests and an abundance of wildflowers that bloom year-round. Streams, rivers and waterfalls appear along hiking routes that include a segment of the Appalachian Trail.</p>
+
+    <h4>Subsection of the page</h4>
+    <p>World renowned for its diversity of plant and animal life, the beauty of its ancient mountains, and the quality of its remnants of Southern Appalachian mountain culture, this is America's most visited national park.</p>
+    <p>Right now scientists think that we only know about 17 percent of the plants and animals that live in the park, or about 17,000 species of a probable 100,000 different organisms.</p>
+
+    <h5>Subsection of the page</h5>
+    <p>Entrance to Great Smoky Mountains National Park is free. The park is one of the few national parks where no entrance fees are charged.</p>
+
+    <ul>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>
+        Unordered list item
+        <ul>
+          <li>Nested unordered list item</li>
+          <li>
+            Nested unordered list item
+            <ul>
+              <li>3rd level nesting</li>
+              <li>3rd level nesting</li>
+              <li>3rd level nesting</li>
+            </ul>
+          </li>
+          <li>Nested unordered list item</li>
+          <li>Nested unordered list item</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Right now scientists think that we only know about 17 percent of the plants and animals that live in the park, or about 17,000 species of a probable 100,000 different organisms.</p>
+
+    <ol>
+      <li>Ordered list item</li>
+      <li>
+        Ordered list item
+        <ol>
+          <li>Nested ordered list item</li>
+          <li>Nested ordered list item</li>
+          <li>Nested ordered list item</li>
+          <li>Nested ordered list item</li>
+        </ol>
+      </li>
+      <li>Ordered list item</li>
+    </ol>
+  </figure>
+
+{% endblock %}

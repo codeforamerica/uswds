@@ -1,0 +1,40 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Custom project SASS goes here.
+
+i.e.
+@include u-padding-right('05');
+----------------------------------------
+*/
+
+@use 'uswds-core' as *;
+
+.site-prose .site-component-section-title {
+  border-top: 1px solid;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  padding-top: .75rem;
+}
+
+.site-prose .site-preview-heading {
+  margin-bottom: 1rem;
+}
+
+.site-swatch {
+  height: 2rem;
+  width: 2rem;
+  text-align: middle;
+}
