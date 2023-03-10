@@ -2,12 +2,28 @@
 
 $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 
-.usa-button:not([disabled]).usa-focus,
-.usa-button:not([disabled]):focus {
+.usa-button:not(.usa-button--unstyled) {
+  padding: units(1.5) units(2);
+
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+}
+
+.usa-button--big:not(.usa-button--unstyled) {
+  border-radius: radius($theme-border-radius-lg);
+  font-size: font-size($theme-button-font-family, 'md');
+  padding: units(2.5) units(4);
+}
+
+.usa-button:not([disabled]):focus,
+.usa-button:not([disabled]).usa-focus {
   outline-offset: 0;
 }
 
 .usa-button--outline:not(.usa-button--unstyled):not([disabled]) {
+  -moz-osx-font-smoothing: auto;
+   -webkit-font-smoothing: auto;
+
   // background-color: color('transparent');
   box-shadow: $theme-button-stroke color('ink');
   color: color('ink');

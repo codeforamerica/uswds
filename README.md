@@ -21,10 +21,22 @@ Install dependencies (if using NVM, you may set the supported Node version numbe
 npm install
 ```
 
+Run `npm start` to start development. `npx` is used to run development dependencies without including them in the package. When the commands are first run, it will ask whether to install the required package or not.
+
+Serve the static demo and watch view files for changes + watch USWDS theme styles and compile assets.
+
+## Commands
+
 Compile USWDS with the custom theme.
 
 ```
 npx gulp compile
+```
+
+Watch USWDS theme styles and compile assets.
+
+```
+npx gulp watch
 ```
 
 Compile demo using 11ty.
@@ -33,7 +45,7 @@ Compile demo using 11ty.
 npx @11ty/eleventy@2.0.0
 ```
 
-Serve the static demo
+Serve the static demo and watch view files for changes.
 
 ```
 npx @11ty/eleventy@2.0.0 --serve

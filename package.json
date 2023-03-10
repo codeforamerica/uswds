@@ -1,7 +1,7 @@
 {
   "name": "@codeforamerica/design-tokens-test",
   "nice": "Design Tokens Test",
-  "version": "0.0.0-3",
+  "version": "0.0.0-4",
   "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
   "repository": {
     "type": "git",
@@ -11,6 +11,13 @@
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/codeforamerica/design-tokens-test/issues"
+  },
+  "scripts": {
+    "start": "npx concurrently 'npm run views' 'npm run uswds'",
+    "default": "npx @11ty/eleventy && npx gulp compile",
+    "views": "npx @11ty/eleventy --serve",
+    "uswds": "npx gulp watch",
+    "version": "npm run default && git add ."
   },
   "homepage": "https://github.com/codeforamerica/design-tokens-test#readme",
   "devDependencies": {

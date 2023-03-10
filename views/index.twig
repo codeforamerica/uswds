@@ -12,7 +12,7 @@
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/accordion/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Accordion component</a></li>
     <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion" target="_blank" rel="noopener nofollow">Accordion molecule</a></li>
-    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr></li>
     <li><strong><abbr title="The class name that modifies the default component styles">Modifier</abbr>:</strong> <code>.cfa-accordion</code></li>
   </ul>
 
@@ -29,7 +29,7 @@
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Alert component</a></li>
     <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow">Notice atom</a></li>
-    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr></li>
     <li><strong><abbr title="The class name that modifies the default component styles">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
   </ul>
 
@@ -52,13 +52,13 @@
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/button/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Button component</a></li>
     <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons" target="_blank" rel="noopener nofollow">Button atom</a></li>
-    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr></li>
   </ul>
 
   <figure class="border margin-0 padding-3 radius-lg">
     <figcaption>Button component example.</figcaption>
 
-    <h3 class="site-preview-heading">Primary color</h3>
+    <h3 class="site-preview-heading">Primary</h3>
     {% include uswds ~ 'usa-button/src/usa-button.twig' with {is_demo: true} only %}
 
     <h3 class="site-preview-heading">Outline</h3>
@@ -66,6 +66,9 @@
 
     <h3 class="site-preview-heading">Big</h3>
     {% include uswds ~ 'usa-button/src/usa-button.twig' with {is_demo: true, modifier: 'usa-button--big', text: 'Big Button'} only %}
+
+    <h3 class="site-preview-heading">Big Outline</h3>
+    {% include uswds ~ 'usa-button/src/usa-button.twig' with {is_demo: true, modifier: 'usa-button--big usa-button--outline', text: 'Big Button'} only %}
   </figure>
 
   <h2 id="theme-color-tokens">
@@ -84,6 +87,23 @@
     {% include '../packages/cfa-color/cfa-color-token-table.twig' %}
   </figure>
 
+  <h2 id="text-input-component">
+    <a id="section_29" class="usa-anchor"></a> Text Input
+  </h2>
+
+  <ul class="usa-content-list">
+    <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/text-input/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Text input component</a></li>
+    <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow">Form element, text input field atom</a></li>
+    <li><strong>Customization:</strong> <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr></li>
+    <li><strong><abbr title="The class name that modifies the default component styles">Modifier</abbr>:</strong> <code>.cfa-input</code></li>
+  </ul>
+
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Text input component example.</figcaption>
+
+    {% include '../packages/cfa-input/cfa-input.twig' with {modifier: 'cfa-input'} only %}
+  </figure>
+
   <h2 id="typesetting-component">
     <a id="section_30" class="usa-anchor"></a> Typesetting
   </h2>
@@ -91,7 +111,7 @@
   <ul class="usa-content-list">
     <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/design-tokens/typesetting/overview/" target="_blank" rel="noopener nofollow"><code>@USWDS</code> Theme typesetting tokens</a></li>
     <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-typography" target="_blank" rel="noopener nofollow">Typography atom</a></li>
-    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to apply the component's visual appearance.">Styles</abbr></li>
+    <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr></li>
   </ul>
 
   <figure class="border margin-0 margin-bottom-4 padding-3 radius-lg">
