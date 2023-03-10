@@ -28,8 +28,8 @@ in the form $setting: value,
   // 3. Color
   // $test-color-tokens: TRUE,
   $theme-color-base-family: 'gray-warm',
-  $theme-color-base-lightest: 'gray-warm-5',
-  $theme-color-base-lighter: 'gray-warm-10',
+  $theme-color-base-lightest: 'gray-warm-4', // affects accordion background
+  $theme-color-base-lighter: 'gray-warm-10', // affects accordion button hover state
   $theme-color-base-light: 'gray-warm-30',
   $theme-color-base: 'gray-warm-50',
   $theme-color-base-dark: 'gray-warm-60',
@@ -39,19 +39,20 @@ in the form $setting: value,
 
   // - Primary
   $theme-color-primary-family: 'mint',
+  $theme-color-primary-lightest: 'mint-cool-5',
   $theme-color-primary-lighter: 'mint-10',
   $theme-color-primary-light: 'mint-30',
-  $theme-color-primary: 'mint-60',
-  $theme-color-primary-vivid: 'mint-60v',
-  $theme-color-primary-dark: 'mint-70v',
-  $theme-color-primary-darker: 'mint-80v',
+  $theme-color-primary: 'mint-50',
+  $theme-color-primary-vivid: 'mint-40v',
+  $theme-color-primary-dark: 'mint-cool-70v',
+  $theme-color-primary-darker: 'mint-cool-80v',
 
   // - Secondary
   $theme-color-secondary-family: 'magenta-vivid',
   $theme-color-secondary-lighter: 'magenta-10v',
   $theme-color-secondary-light: 'magenta-30v',
   $theme-color-secondary: 'magenta-50v',
-  $theme-color-secondary-vivid: 'magenta-50v',
+  $theme-color-secondary-vivid: 'magenta-40v',
   $theme-color-secondary-dark: 'magenta-60v',
   $theme-color-secondary-darker: 'magenta-70v',
 
@@ -97,11 +98,11 @@ in the form $setting: value,
 
   // - Info
   $theme-color-info-family: 'gray-warm',
-  $theme-color-info-lighter: 'gray-warm-5',
+  $theme-color-info-lighter: 'gray-warm-4',
   $theme-color-info-light: 'gray-warm-20',
-  $theme-color-info: 'gray-warm-30',
-  $theme-color-info-dark: 'gray-warm-40',
-  $theme-color-info-darker: 'gray-warm-60',
+  $theme-color-info: 'gray-warm-50',
+  $theme-color-info-dark: 'gray-warm-60',
+  $theme-color-info-darker: 'gray-warm-70',
 
   // - Emergency
   $theme-color-emergency: 'orange-warm-50v',
@@ -119,11 +120,28 @@ in the form $setting: value,
 
   // 4. Typography
   // $theme-root-font-size: '',
-  $theme-global-paragraph-styles: false,
+  $theme-global-paragraph-styles: true,
   $theme-global-link-styles: true,
   $theme-global-content-styles: true,
+  $theme-font-type-sans: 'system', // Temp to match Honeycrisp codebase
   $theme-font-type-serif: false,
   $theme-font-role-heading: 'sans',
+
+  // - Type scale
+  $theme-type-scale-3xs: 3,
+  $theme-type-scale-2xs: 4,
+  $theme-type-scale-xs: 5,     // h6?
+  $theme-type-scale-sm: 6,     // h5, paragraphs?
+  // $theme-type-scale-md: 7,  // h4?
+  // $theme-type-scale-lg: 9,  // h3
+  // $theme-type-scale-xl: 12, // h2
+  $theme-type-scale-2xl: 15,   // h1
+  $theme-type-scale-3xl: 17,   // Pushing this more because h1 is originally set to 15
+
+  $theme-body-line-height: 4,
+  $theme-h6-font-size: 'xs',
+  $theme-small-font-size: 'xs',
+  $theme-lead-line-height: 4,
 
   // 5. Components
   // - Input

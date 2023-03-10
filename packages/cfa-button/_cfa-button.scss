@@ -1,6 +1,32 @@
 @use 'uswds-core' as *;
 
+$theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
+
 .usa-button:not([disabled]).usa-focus,
 .usa-button:not([disabled]):focus {
   outline-offset: 0;
+}
+
+.usa-button--outline:not(.usa-button--unstyled):not([disabled]) {
+  // background-color: color('transparent');
+  box-shadow: $theme-button-stroke color('ink');
+  color: color('ink');
+
+  &:visited {
+    color: color('ink');
+  }
+
+  &:hover,
+  &.usa-button--hover {
+    // background-color: color('transparent');
+    box-shadow: $theme-button-stroke color('ink');
+    color: color('ink');
+  }
+
+  &:active,
+  &.usa-button--active {
+    // background-color: color('transparent');
+    box-shadow: $theme-button-stroke color('ink');
+    color: color('ink');
+  }
 }
