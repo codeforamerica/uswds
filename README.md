@@ -21,9 +21,9 @@ Install dependencies (if using NVM, you may set the supported Node version numbe
 npm install
 ```
 
-Run `npm start` to start development. `npx` is used to run development dependencies without including them in the package. When the commands are first run, it will ask whether to install the required package or not.
+Run `npm start`[*](/#ref) to start development. `npx` is used to run development dependencies without including them in the package. When the commands are first run, it will ask whether to install the required package or not.
 
-Serve the static demo and watch view files for changes + watch USWDS theme styles and compile assets.
+<span id="ref">*</span>Serve the static demo site, compile 11ty view directory files when they change, and compile USWDS theme directory styles when they change.
 
 ## Commands
 
