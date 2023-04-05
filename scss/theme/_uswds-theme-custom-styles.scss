@@ -52,7 +52,6 @@ i.e.
 
   --cfa-code-text: #{color($theme-color-base-lighter)};
   --cfa-code-link: #{color($theme-color-base-lighter)};
-  --cfa-code-text-base: #{color($theme-color-base-lighter)};
   --cfa-code-text-css: #{color($theme-color-base-lighter)};
   --cfa-code-text-javascript: #{color($theme-color-base-lighter)};
 
@@ -60,9 +59,14 @@ i.e.
   --cfa-code-text-keyword: #{color($theme-color-success-light)};
   --cfa-code-text-string: #{color($theme-color-warning)};
   --cfa-code-text-symbol: #{color($theme-color-warning)};
-  --cfa-code-text-code: #{color($theme-color-warning)};
 
   --cfa-code-background: #{color($theme-color-primary-darker)};
+
+  --cfa-code-text-code: #{color($theme-color-primary-darker)};
+  --cfa-code-text-webkit-font-smoothing: auto;
+  --cfa-code-text-moz-osx-font-smoothing: auto;
+  --cfa-code-text-code-background: #{color($theme-color-base-lightest)};
+
   --cfa-code-border: hsla(0, 0%, 100%, 0);
 }
 
@@ -156,7 +160,11 @@ code, .code, .code-block, pre, .hljs {
 }
 
 p code, li code, td code, dl code, dd code {
-  color: var(--cfa-code-text-code) !important
+  color: var(--cfa-code-text-code) !important;
+  background-color: var(--cfa-code-text-code-background) !important;
+
+  --moz-osx-font-smoothing: var(--cfa-code-text-moz-osx-font-smoothing);
+    -webkit-font-smoothing: var(--cfa-code-text-webkit-font-smoothing);
 }
 
 /**
