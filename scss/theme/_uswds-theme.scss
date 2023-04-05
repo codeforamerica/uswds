@@ -123,9 +123,21 @@ in the form $setting: value,
   $theme-global-paragraph-styles: true,
   $theme-global-link-styles: true,
   $theme-global-content-styles: true,
-  $theme-font-type-sans: 'system', // Temp to match Honeycrisp codebase
+  $theme-font-type-sans: 'system', // Match Honeycrisp codebase
   $theme-font-type-serif: false,
   $theme-font-role-heading: 'sans',
+
+  /**
+   * Custom monospaced font for code demonstration
+   */
+  $theme-typeface-tokens: (
+    "jetbrains-mono": (
+      "display-name": '"JetBrains Mono"',
+      "cap-height": 365px
+    )
+  ),
+  $theme-font-type-mono: 'jetbrains-mono',
+  $theme-font-mono-custom-stack: monospace,
 
   // - Type scale
   $theme-type-scale-3xs: 3,

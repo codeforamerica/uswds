@@ -9,7 +9,27 @@
 
   <title>Design Tokens Test</title>
 
-  <link href="uswds/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="uswds/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['html', 'javascript', 'css', 'sass']
+      });
+
+      document.querySelectorAll('pre').forEach(function(pre) {
+        if (!pre.hasAttribute('tabindex')) {
+          pre.setAttribute('tabindex', '0');
+        }
+
+        hljs.highlightBlock(pre);
+      });
+    });
+  </script>
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
 
   </head>
 
@@ -72,7 +92,7 @@
     <div class="usa-nav-container">
       <div class="usa-navbar">
         <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Design Tokens Test">Design Tokens Test</a> <a href="https://github.com/codeforamerica/design-tokens-test.git" target="_blank" rel="noopener nofollow">v0.0.0-7</a></em>
+          <em class="usa-logo__text"><a href="/" title="Design Tokens Test">Design Tokens Test</a> <a href="https://github.com/codeforamerica/design-tokens-test.git" target="_blank" rel="noopener nofollow">v0.0.0-8</a></em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
@@ -122,7 +142,7 @@
   </ul>
 
   <figure class="border margin-0 padding-3 radius-lg">
-    <figcaption>Accordion component example.</figcaption>
+    <figcaption>Accordion component example</figcaption>
 
     
 
@@ -132,21 +152,21 @@
 <div class="usa-accordion cfa-accordion">
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1840688386">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1894613755">
         What is an accordion used for?
       </button>
     </h4>
-    <div id="aria-c-1840688386" class="usa-accordion__content usa-prose">
+    <div id="aria-c-1894613755" class="usa-accordion__content usa-prose">
         <p>An accordion element allows the user to expand and hide content on a page. Multiple accordions are usually used in tandem. It is useful to break up long pages for easy scannability.</p>
 
     </div>
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-505016490">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-572866514">
         What documents will I need to provide to get CalFresh?
       </button>
     </h4>
-    <div id="aria-c-505016490" class="usa-accordion__content usa-prose">
+    <div id="aria-c-572866514" class="usa-accordion__content usa-prose">
         <p><b>These documents are usually required to get CalFresh:</b></p>
 
   <ul class="list--bulleted">
@@ -185,21 +205,21 @@
 <div class="usa-accordion cfa-accordion usa-accordion--bordered">
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1505857364">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1583310873">
         What is an accordion used for?
       </button>
     </h4>
-    <div id="aria-c-1505857364" class="usa-accordion__content usa-prose">
+    <div id="aria-c-1583310873" class="usa-accordion__content usa-prose">
         <p>An accordion element allows the user to expand and hide content on a page. Multiple accordions are usually used in tandem. It is useful to break up long pages for easy scannability.</p>
 
     </div>
       <!-- Use the accurate heading level to maintain the document outline -->
     <h4 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-489990581">
+      <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-1827784225">
         What documents will I need to provide to get CalFresh?
       </button>
     </h4>
-    <div id="aria-c-489990581" class="usa-accordion__content usa-prose">
+    <div id="aria-c-1827784225" class="usa-accordion__content usa-prose">
         <p><b>These documents are usually required to get CalFresh:</b></p>
 
   <ul class="list--bulleted">
@@ -245,8 +265,8 @@
     <li><strong><abbr title="The class name that applies extended style customization to modify the component's visual appearance">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
   </ul>
 
-  <figure class="border margin-0 padding-3 radius-lg">
-    <figcaption>Alert component example.</figcaption>
+  <figure class="border margin-0 padding-3 radius-lg margin-bottom-3">
+    <figcaption>Alert component example</figcaption>
 
     <div class="usa-alert cfa-alert usa-alert--info" >
   <div class="usa-alert__body">      <h4 class="usa-alert__heading">Informative notice</h4>    <p class="usa-alert__text">
@@ -277,6 +297,39 @@
 </div>
   </figure>
 
+  <figure class="border margin-0 padding-3 radius-lg">
+    <figcaption>Alert component code</figcaption>
+
+    <div class="code-block"><pre>&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Informative notice&lt;/h4&gt;
+    &lt;p class=&quot;usa-alert__text&quot;&gt; This is an example notice. It&#039;s a great way to provide additional information on a certain issue. &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- template source: node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig --&gt;</pre></div>
+    <div class="code-block"><pre>&lt;div class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Warning notice&lt;/h4&gt;
+    &lt;p class=&quot;usa-alert__text&quot;&gt; This is an example warning notice. It&#039;s a great way to highlight &lt;strong&gt;potential issues&lt;/strong&gt;. &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- template source: node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig --&gt;</pre></div>
+    <div class="code-block"><pre>&lt;div class=&quot;usa-alert cfa-alert usa-alert--error&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Error notice&lt;/h4&gt;
+    &lt;p class=&quot;usa-alert__text&quot;&gt; This is an example warning notice. It&#039;s a great way to highlight &lt;strong&gt;errors or dangerous issues&lt;/strong&gt;. &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- template source: node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig --&gt;</pre></div>
+    <div class="code-block"><pre>&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Success notice&lt;/h4&gt;
+    &lt;p class=&quot;usa-alert__text&quot;&gt; This is an example success notice. It&#039;s a great way to highlight &lt;b&gt;confirmations or successful actions&lt;/b&gt;. &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- template source: node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig --&gt;</pre></div>
+  </figure>
+
   <h2 id="button-component">
     <a id="section_20" class="usa-anchor"></a> Button
   </h2>
@@ -288,7 +341,7 @@
   </ul>
 
   <figure class="border margin-0 padding-3 radius-lg">
-    <figcaption>Button component example.</figcaption>
+    <figcaption>Button component example</figcaption>
 
     <h3 class="site-preview-heading">Primary</h3>
     
@@ -336,7 +389,7 @@
   </ul>
 
   <figure class="border margin-0 padding-3 radius-lg">
-    <figcaption>Theme color token table illustrating the customized theme colors.</figcaption>
+    <figcaption>Theme color token table illustrating the customized theme colors</figcaption>
 
     <div class="usa-table-container--scrollable">
   <table class="usa-table usa-table--borderless usa-table--stacked width-full">
@@ -768,7 +821,7 @@
   </ul>
 
   <figure class="border margin-0 padding-3 radius-lg">
-    <figcaption>Text input component example.</figcaption>
+    <figcaption>Text input component example</figcaption>
 
     <label class="usa-label" for="input-type-text">Text input label</label>
 <input class="usa-input cfa-input" id="input-type-text" name="input-type-text" type="text">
@@ -800,7 +853,7 @@
   </ul>
 
   <figure class="border margin-0 margin-bottom-4 padding-3 radius-lg">
-    <figcaption>Theme typesetting token table illustrating the customized font sizes.</figcaption>
+    <figcaption>Theme typesetting token table illustrating the customized font sizes</figcaption>
 
     <div class="usa-table-container--scrollable">
   <table class="usa-table usa-table--borderless usa-table--stacked width-full">
@@ -882,7 +935,7 @@
 </div>  </figure>
 
   <figure class="border margin-0 padding-3 radius-lg">
-    <figcaption>Theme typesetting example.</figcaption>
+    <figcaption>Theme typesetting example</figcaption>
 
     <h1>Heading level 1</h1>
 <p class="usa-intro">Great Smoky Mountains National Park straddles the border of North Carolina and Tennessee.</p>
