@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/codeforamerica/design-tokens-test.git"
   },
+  "homepage": "https://codeforamerica.github.io/design-tokens-test",
   "author": "dhirth@codeforamerica.org",
   "license": "UNLICENSED",
   "bugs": {
@@ -19,12 +20,13 @@
     "uswds": "npx gulp watch",
     "version": "npm run default && git add ."
   },
-  "homepage": "https://github.com/codeforamerica/design-tokens-test#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
     "@uswds/compile": "^1.0.0",
-    "js-beautify": "^1.14.7"
+    "js-beautify": "^1.14.7",
+    "markdown-it-attrs": "^4.1.6",
+    "thymeleaf": "^0.21.0"
   },
   "dependencies": {
     "@uswds/uswds": "^3.4.1"
