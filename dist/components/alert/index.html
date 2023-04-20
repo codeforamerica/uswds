@@ -121,12 +121,178 @@
 
         <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
           <div class="usa-prose">
-            <h1>Honeycrisp 1.0</h1>
+            <h1>Alert</h1>
 
-            <p class="usa-intro">This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp Design System are applied to USWDS settings.</p>
+            <p class="usa-intro">Alerts (notices) are a way to highlight important information by separating it from the main copy.</p>
           </div>
 
-          
+          <h2>Details</h2>
+<ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Notice atom</a></li>
+  <li><strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component">Tokens</abbr> and <abbr title="A custom stylesheet is used to modify the component's visual appearance">Styles</abbr></li>
+  <li><strong><abbr title="The class name that applies extended style customization to modify the component's visual appearance">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
+</ul>
+<p>The <strong>Alert</strong> extends the <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert</a> component. The visual appearance is modified using <strong>design tokens</strong> applied to the USWDS Alert settings from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Notice atom</a>. Further styling is applied using the <strong>CSS modifier</strong> <code>.cfa-alert</code> to adds <strong>styles</strong> defined in a custom stylesheet.</p>
+<h2>Examples</h2>
+<div class="border margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>Informational alert</figcaption>
+    <div>
+  <div role="" class="usa-alert cfa-alert usa-alert--info">
+    <div class="usa-alert__body">
+      <h4 class="usa-alert__heading">Can we ask about your race and ethnicity?</h4>
+      <div>
+        <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
+        <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>HTML</figcaption>
+    <div class="code-block"><pre>&lt;div&gt;
+  &lt;div role=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--info&quot;&gt;
+    &lt;div class=&quot;usa-alert__body&quot;&gt;
+      &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+      &lt;div&gt;
+        &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
+        &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+</div>
+<div class="border margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>Warning alert</figcaption>
+    <div>
+  <div role="" class="usa-alert cfa-alert usa-alert--warning">
+    <div class="usa-alert__body">
+      <h4 class="usa-alert__heading">Make sure your address is correct</h4>
+      <div>
+        <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>HTML</figcaption>
+    <div class="code-block"><pre>&lt;div&gt;
+  &lt;div role=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
+    &lt;div class=&quot;usa-alert__body&quot;&gt;
+      &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Make sure your address is correct&lt;/h4&gt;
+      &lt;div&gt;
+        &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn&#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+</div>
+<div class="border margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>Error notice</figcaption>
+    <div>
+  <div role="alert" class="usa-alert cfa-alert usa-alert--error">
+    <div class="usa-alert__body">
+      <h4 class="usa-alert__heading">Error notice</h4>
+      <div>
+        <p class="usa-alert__text">This is an example error notice. It's a great way to highlight <strong>errors or dangerous issues</strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>HTML</figcaption>
+    <div class="code-block"><pre>&lt;div&gt;
+  &lt;div role=&quot;alert&quot; class=&quot;usa-alert cfa-alert usa-alert--error&quot;&gt;
+    &lt;div class=&quot;usa-alert__body&quot;&gt;
+      &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Error notice&lt;/h4&gt;
+      &lt;div&gt;
+        &lt;p class=&quot;usa-alert__text&quot;&gt;This is an example error notice. It&#39;s a great way to highlight &lt;strong&gt;errors or dangerous issues&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+</div>
+<div class="border margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>Success</figcaption>
+    <div>
+  <div role="" class="usa-alert cfa-alert usa-alert--success">
+    <div class="usa-alert__body">
+      <h4 class="usa-alert__heading">Done! Your application has been submitted.</h4>
+      <div>
+        <p class="usa-alert__text">You were recommended for expedited food assistance (SNAP).</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>HTML</figcaption>
+    <div class="code-block"><pre>&lt;div&gt;
+  &lt;div role=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--success&quot;&gt;
+    &lt;div class=&quot;usa-alert__body&quot;&gt;
+      &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Done! Your application has been submitted.&lt;/h4&gt;
+      &lt;div&gt;
+        &lt;p class=&quot;usa-alert__text&quot;&gt;You were recommended for expedited food assistance (SNAP).&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+</div>
+<!-- SOURCE -->
+<h3>Source</h3>
+<ul class="usa-content-list">
+  <li><strong>Package:</strong> @codeforamerica/design-tokens-test/packages/cfa-alert</li>
+  <li><strong>Thymeleaf template:</strong> @codeforamerica/design-tokens-test/packages/cfa-alert/cfa-alert.th.html</li>
+  <li><strong>ERB template:</strong> @codeforamerica/design-tokens-test/packages/cfa-alert/cfa-alert.erb</li>
+  <li><strong>SCSS Stylesheet:</strong> @codeforamerica/design-tokens-test/packages/cfa-alert/_cfa-alert.scss</li>
+</ul>
+<div class="border margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption>Thymeleaf template</figcaption>
+    <div class="code-block"><pre>&lt;!DOCTYPE html&gt;
+&lt;html th:lang=&quot;${#locale.language}&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+  &lt;body&gt;
+    &lt;div th:fragment=&quot;alert&quot;&gt;
+      &lt;div th:class=&quot;&#39;usa-alert &#39; + ${modifier}&quot; th:attr=&quot;role=${role}&quot;&gt;
+        &lt;div class=&quot;usa-alert__body&quot;&gt;
+          &lt;h4 class=&quot;usa-alert__heading&quot; th:if=&quot;${heading}&quot; th:text=&quot;${heading}&quot;&gt;Heading&lt;/h4&gt;
+          &lt;div th:utext=&quot;${body}&quot;&gt;
+            &lt;p class=&quot;usa-alert__text&quot; th:if=&quot;${text}&quot; th:text=&quot;${text}&quot;&gt;Text&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption>Embedded Ruby (ERB) template</figcaption>
+    <div class="code-block"><pre>&lt;div class=&quot;usa-alert &lt;%= modifier %&gt;&quot; &lt;% if role %&gt;role=&quot;&lt;%= role %&gt;&quot;&lt;% end %&gt;&gt;
+  &lt;div class=&quot;usa-alert__body&quot;&gt;
+    &lt;% if text %&gt;&lt;h4 class=&quot;usa-alert__heading&quot;&gt;&lt;%= heading %&gt;&lt;/h4&gt;&lt;% end %&gt;
+    &lt;div&gt;
+      &lt;% if body %&gt;
+        &lt;%= body %&gt;
+      &lt;% else if text %&gt;
+        &lt;p class=&quot;usa-alert__text&quot;&gt;&lt;%= text %&gt;&lt;/p&gt;
+      &lt;% end %&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+</div>
+
 
         </main>
       </div>

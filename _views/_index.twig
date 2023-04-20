@@ -55,9 +55,11 @@
     <figcaption>Alert component code</figcaption>
 
     <div class="code-block"><pre>{% filter escape %}{{ beautify('node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig', {modifier: 'cfa-alert usa-alert--info', role: false, title: 'Informative notice', text: 'This is an example notice. It\'s a great way to provide additional information on a certain issue.'}) }}{% endfilter %}</pre></div>
-    <div class="code-block"><pre>{% filter escape %}{{ beautify('node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig', {modifier: 'cfa-alert usa-alert--warning', role: false, title: 'Warning notice', text: 'This is an example warning notice. It\'s a great way to highlight <strong>potential issues</strong>.'}) }}{% endfilter %}</pre></div>
+
+    <div class="code-block"><pre>{% filter escape %}{{ user('packages/cfa-alert/cfa-alert.th.html', {modifier: 'cfa-alert usa-alert--info', role: null, heading: 'Informative notice', text: 'This is an example notice. It\'s a great way to provide additional information on a certain issue.'}) }}{% endfilter %}</pre></div>
+    {# <div class="code-block"><pre>{% filter escape %}{{ beautify('node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig', {modifier: 'cfa-alert usa-alert--warning', role: false, title: 'Warning notice', text: 'This is an example warning notice. It\'s a great way to highlight <strong>potential issues</strong>.'}) }}{% endfilter %}</pre></div>
     <div class="code-block"><pre>{% filter escape %}{{ beautify('node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig', {modifier: 'cfa-alert usa-alert--error', role: 'alert', title: 'Error notice', text: 'This is an example warning notice. It\'s a great way to highlight <strong>errors or dangerous issues</strong>.'}) }}{% endfilter %}</pre></div>
-    <div class="code-block"><pre>{% filter escape %}{{ beautify('node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig', {modifier: 'cfa-alert usa-alert--success', role: false, title: 'Success notice', text: 'This is an example success notice. It\'s a great way to highlight <b>confirmations or successful actions</b>.'}) }}{% endfilter %}</pre></div>
+    <div class="code-block"><pre>{% filter escape %}{{ beautify('node_modules/@uswds/uswds/packages/usa-alert/src/usa-alert.twig', {modifier: 'cfa-alert usa-alert--success', role: false, title: 'Success notice', text: 'This is an example success notice. It\'s a great way to highlight <b>confirmations or successful actions</b>.'}) }}{% endfilter %}</pre></div> #}
   </figure>
 
   <h2 id="button-component">

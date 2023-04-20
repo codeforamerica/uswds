@@ -9,14 +9,14 @@
 
   <title>{{ package.nice }}</title>
 
-  <link rel="stylesheet" href="uswds/css/styles.css">
+  <link rel="stylesheet" href="{{ config.baseUrl }}uswds/css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
       hljs.configure({
-        languages: ['html', 'javascript', 'css', 'sass']
+        languages: ['ruby', 'html', 'javascript', 'css', 'sass']
       });
 
       document.querySelectorAll('pre').forEach(function(pre) {
@@ -42,7 +42,7 @@
       <header class="usa-banner__header">
         <div class="usa-banner__inner">
           <div class="grid-col-auto">
-            <img aria-hidden="true" class="usa-banner__header-flag" src="uswds/img/us_flag_small.png" alt="" />
+            <img aria-hidden="true" class="usa-banner__header-flag" src="{{ config.baseUrl }}uswds/img/us_flag_small.png" alt="" />
           </div>
 
           <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
@@ -60,13 +60,13 @@
       <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
         <div class="grid-row grid-gap-lg">
           <div class="usa-banner__guidance tablet:grid-col-6">
-            <img class="usa-banner__icon usa-media-block__img" src="uswds/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
+            <img class="usa-banner__icon usa-media-block__img" src="{{ config.baseUrl }}uswds/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
             <div class="usa-media-block__body">
               <p><strong>Official websites use .gov</strong><br />A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
             </div>
           </div>
           <div class="usa-banner__guidance tablet:grid-col-6">
-            <img class="usa-banner__icon usa-media-block__img" src="uswds/img/icon-https.svg" role="img" alt="" aria-hidden="true" />
+            <img class="usa-banner__icon usa-media-block__img" src="{{ config.baseUrl }}uswds/img/icon-https.svg" role="img" alt="" aria-hidden="true" />
             <div class="usa-media-block__body">
               <p>
                 <strong>Secure .gov websites use HTTPS</strong>
@@ -117,7 +117,7 @@
 
       {# <nav aria-label="Primary navigation," class="usa-nav">
         <button type="button" class="usa-nav__close">
-          <img src="uswds/img/usa-icons/close.svg" role="img" alt="Close" />
+          <img src="{{ config.baseUrl }}uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
@@ -159,7 +159,7 @@
 
             <button class="usa-button" type="submit">
               <img
-                src="uswds/img/usa-icons-bg/search--white.svg"
+                src="{{ config.baseUrl }}uswds/img/usa-icons-bg/search--white.svg"
                 class="usa-search__submit-icon"
                 alt="Search"
               />
@@ -176,7 +176,7 @@
         <div class="usa-layout-docs__sidenav desktop:grid-col-3">
           <nav aria-label="Secondary navigation">
             <ul class="usa-sidenav">
-              <li class="usa-sidenav__item"><a href="#section_10">Accordion</a></li>
+              {# <li class="usa-sidenav__item"><a href="#section_10">Accordion</a></li> #}
 
               {# <li class="usa-sidenav__item">
                 <a href="" class="usa-current">Current page</a>
@@ -212,27 +212,29 @@
                   <li class="usa-sidenav__item"><a href="">Child link</a></li>
                 </ul>
               </li> #}
-              <li class="usa-sidenav__item"><a href="#section_11">Alert</a></li>
 
-              <li class="usa-sidenav__item"><a href="#section_20">Button</a></li>
+              <li class="usa-sidenav__item"><a href="{{ baseUrl }}components/alert">Alert</a></li>
+
+              {# <li class="usa-sidenav__item"><a href="#section_20">Button</a></li>
 
               <li class="usa-sidenav__item"><a href="#section_21">Color</a></li>
 
               <li class="usa-sidenav__item"><a href="#section_29">Text Input</a></li>
 
-              <li class="usa-sidenav__item"><a href="#section_30">Typesetting</a></li>
+              <li class="usa-sidenav__item"><a href="#section_30">Typesetting</a></li> #}
             </ul>
           </nav>
         </div>
 
-        <main class="usa-layout-docs__main desktop:grid-col-9 usa-prose usa-layout-docs" id="main-content">
-          <div class="styleguide-content usa-prose site-prose">
-            <h1>{{ heading }}</h1>
+        <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
+          <div class="usa-prose">
+            <h1>{{ title }}</h1>
 
             <p class="usa-intro">{{ intro }}</p>
-
-            {% block content %}{% endblock %}
           </div>
+
+          {{ content|raw }}
+
         </main>
       </div>
     </div>
@@ -270,7 +272,7 @@
         <div class="grid-row grid-gap">
           <div class=" usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
             <div class="mobile-lg:grid-col-auto">
-              <img class="usa-footer__logo-img" src="uswds/img/logo-img.png" alt=""/>
+              <img class="usa-footer__logo-img" src="{{ config.baseUrl }}uswds/img/logo-img.png" alt=""/>
             </div>
 
             <div class="mobile-lg:grid-col-auto">
@@ -281,23 +283,23 @@
           <div class="usa-footer__contact-links mobile-lg:grid-col-6">
             <div class="usa-footer__social-links grid-row grid-gap-1">
               <div class="grid-col-auto">
-                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="uswds/img/usa-icons/facebook.svg" alt="Facebook" /></a>
+                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="{{ config.baseUrl }}uswds/img/usa-icons/facebook.svg" alt="Facebook" /></a>
               </div>
 
               <div class="grid-col-auto">
-                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="uswds/img/usa-icons/twitter.svg" alt="Twitter" /></a>
+                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="{{ config.baseUrl }}uswds/img/usa-icons/twitter.svg" alt="Twitter" /></a>
               </div>
 
               <div class="grid-col-auto">
-                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="uswds/img/usa-icons/youtube.svg" alt="YouTube" /></a>
+                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="{{ config.baseUrl }}uswds/img/usa-icons/youtube.svg" alt="YouTube" /></a>
               </div>
 
               <div class="grid-col-auto">
-                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="uswds/img/usa-icons/instagram.svg" alt="Instagram" /></a>
+                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="{{ config.baseUrl }}uswds/img/usa-icons/instagram.svg" alt="Instagram" /></a>
               </div>
 
               <div class="grid-col-auto">
-                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="uswds/img/usa-icons/rss_feed.svg" alt="RSS"/></a>
+                <a class="usa-social-link" href="javascript:void(0);"><img class="usa-social-link__icon" src="{{ config.baseUrl }}uswds/img/usa-icons/rss_feed.svg" alt="RSS"/></a>
               </div>
             </div>
 
@@ -324,7 +326,7 @@
     <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
       <div class="usa-identifier__container">
         <div class="usa-identifier__logos">
-          <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img" src="uswds/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
+          <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img" src="{{ config.baseUrl }}uswds/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
         </div>
 
         <section class="usa-identifier__identity" aria-label="Agency description">
@@ -378,7 +380,7 @@
     </section>
   </div>
 
-  <script src="uswds/js/uswds.js"></script>
+  <script src="{{ config.baseUrl }}uswds/js/uswds.js"></script>
 
   {% block scripts %}{% endblock %}
 </body>
