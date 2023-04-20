@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="alert">
+      <div th:class="'usa-alert ' + ${modifier}" th:attr="role=${role}">
+        <div class="usa-alert__body">
+          <h4 class="usa-alert__heading" th:if="${heading}" th:text="${heading}">Heading</h4>
+
+          <div th:utext="${body}">
+            <p class="usa-alert__text" th:if="${text}" th:text="${text}">Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
