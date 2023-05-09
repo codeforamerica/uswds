@@ -10,6 +10,7 @@ const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const beautify = require('js-beautify').html;
 const thymeleaf = require('thymeleaf');
+const execSync = require('child_process').execSync;
 
 let CONFIG_BEAUTIFY = config.beautify;
 let CONFIG_ELEVENTY = config.eleventy;
@@ -29,12 +30,13 @@ let ThymeleafTempate = new thymeleaf.TemplateEngine(CONFIG_THYMELEAF);
  *
  * @return  {String}          The escaped template string
  */
-const escape = (string) => {
-  return string.replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
-    .replace(/"/g, '&quot;');
+const escape = (str) => {
+  return (typeof str === 'string') ?
+    str.replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/'/g, '&#39;')
+      .replace(/"/g, '&quot;') : str;
 };
 
 /**
@@ -93,7 +95,7 @@ const getFile = (name, type = '') => {
       break
 
     case 'erb':
-      filename = `${filename}/cfa-${name}.erb`;
+      filename = `${filename}/cfa-${name}.html.erb`;
       break
 
     case 'thymeleaf':
@@ -110,10 +112,66 @@ const getFile = (name, type = '') => {
   let exists = fs.existsSync(resolved);
 
   if (false === exists) {
-    console.log(`The file for ${name} of type ${type} does not exist: ${filename}`);
+    console.log(`[${package.name}] The file for "${name}" of type "${type}" does not exist: ${filename}`);
   }
 
   return (exists) ? resolved : exists;
+};
+
+/**
+ * Ruby ERB experiment
+ *
+ * @param   {[type]}  name     [name description]
+ * @param   {[type]}  context  [context description]
+ *
+ * @return  {[type]}           [return description]
+ */
+const erbInclude = async (name, context) => {
+  let rubyPath = getFile(name, 'erb');
+
+  let vars = Object.keys(context).map(c => {
+    return `${c}=${(typeof context[c] === 'string') ?
+      `"${context[c].replace(/"/g, '\\"')}"` : context[c]}`.replace(/\n/g, '')
+  }).join('; ');
+
+  let command = `(echo '<% ${vars} %>' && cat ${rubyPath}) | erb`;
+
+  try {
+    const stdout = execSync(command);
+
+    console.log(`[${package.name}] ERB "${name}" render passing`);
+
+    return stdout.toString();
+  } catch (err) {
+    console.log(`[${package.name}] ERB "${name}" render failing; ${command}`);
+  }
+};
+
+/**
+ * Retrieve a package Thymeleaf template fragment, pass context to it, render, and return
+ *
+ * @param   {String}  name     The name of the template
+ * @param   {String}  context  The context to pass to the template
+ *
+ * @return  {String}           The rendered template
+ */
+const fragmentInclude = async (name, context) => {
+  let templatePath = getFile(name, 'thymeleaf')
+    .replace(__dirname + '/', '').replace('.html', '');
+
+  let params = Object.keys(context).map(c => `'${escape(context[c])}'`.replace(/\n/g, '') ).join(', ');
+
+  let include = `<th:block th:replace="~{${templatePath} :: ${name}(${params})}" />`;
+
+  try {
+    let rendered = await ThymeleafTempate.process(include, {});
+
+    console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion passing`);
+
+    return rendered;
+  } catch (err) {
+    console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion failing; \n ${include}`);
+  }
 };
 
 /**
@@ -147,8 +205,9 @@ module.exports = function(eleventyConfig) {
    * string escaped and wrapped in a code block if the 3rd argument, escape,
    * is true.
    *
-   * @param   {Array}  args  Accepts 1: Name as String, 2: Context as JSON
-   *                         String, 3: 0: Content body as mixed markdown
+   * @param   {Array}  args  Accepts 0: Context body, 1: name as String,
+   *                         2: context as JSON String, 3: wether to return
+   *                         rendered HTML or pre-rendered HTML in a code block
    *
    * @return  {String}       Rendered template or code block source preview
    */
@@ -165,18 +224,17 @@ module.exports = function(eleventyConfig) {
 
     let rendered = unwrap(await ThymeleafTempate.process(template, context));
 
-    // Attempt at a test for fragment replacement
-    // console.dir(await ThymeleafTempate.process(`<!DOCTYPE html>
-    //   <html th:lang="\$\{#locale.language\}" xmlns:th="http://www.thymeleaf.org">
-    //     <body>
-    //       <div th:replace="::packages/cfa-${name}/cfa-${name}.th.html" th:with="${Object.keys(context).map(c => `${c}=\$\{${context[c]}\}`).join(',')}"></div>
-    //     </body>
-    // </html>`, {}));
-
     if (args[3]) {
       return block(rendered);
     } else {
-      return beautify(rendered, CONFIG_BEAUTIFY);
+      // Test fragment include method and ERB template
+      let fragment = await fragmentInclude(name, context);
+      // console.dir(fragment);
+
+      let erb = await erbInclude(name, context);
+      // console.dir(erb);
+
+      return beautify(rendered + erb, CONFIG_BEAUTIFY);
     }
   });
 
@@ -187,8 +245,20 @@ module.exports = function(eleventyConfig) {
    *
    * @return  {String}        The template source escaped and wrapped in a code block
    */
-  eleventyConfig.addShortcode('thymeleaf', async function(name) {
+  eleventyConfig.addShortcode('thymeleaf', async function(name, include = false) {
+    let templatePath = getFile(name, 'thymeleaf')
+      .replace(__dirname, package.name)
+      .replace('.html', '');
+
     let template = unline(fs.readFileSync(getFile(name, 'template'), 'utf-8'));
+
+    if (include) {
+      let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
+
+      return block(`<th:block th:replace="~{${templatePath} :: ${name}(${
+          params.map(c => `${c.replace('${', '').replace('}', '')}`).join(',')
+        })}" />`, true);
+    }
 
     return block(template, false);
   });
@@ -206,6 +276,8 @@ module.exports = function(eleventyConfig) {
     return block(template, false);
   });
 
+
+
   /**
    * Gets a resolved file path by name and file type then adds the package name
    * for display
@@ -220,6 +292,26 @@ module.exports = function(eleventyConfig) {
 
     return (resolved) ? resolved.replace(__dirname, package.name) : resolved;
   });
+
+  /**
+   * Creates a random string ID
+   *
+   * @return  {String}  Random string ID
+   */
+  eleventyConfig.addShortcode('createId', async function() {
+    return Math.random().toString(16).substring(2);
+  });
+
+  /**
+   * Create a filename friendly string from supplied string
+   *
+   * @return  {String}  Returns filename friendly string
+   */
+  eleventyConfig.addShortcode('createSlug', async function(s) {
+    return s.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
+    .replace(/\s+/g, '-').replace(/-+/g, '-')
+  });
+
 
   /**
    * Data

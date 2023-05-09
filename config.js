@@ -30,9 +30,7 @@ module.exports = {
   'thymeleaf': {
     ...thymeleaf.STANDARD_CONFIGURATION,
     templateResolver: (templateName) => {
-      console.dir(templateName);
-
-      return fs.readFileSync(path.join(__dirname, templateName));
+      return fs.readFileSync(path.join(__dirname, `${templateName}.html`));
     }
   },
   'dictionary': {
