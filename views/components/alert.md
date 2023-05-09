@@ -1,4 +1,5 @@
 ---
+tags: component
 title: Alert
 layout: default
 intro: Alerts (notices) are a way to highlight important information by separating it from the main copy.
@@ -79,6 +80,6 @@ This is an example of what the component looks like by default, without the modi
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'alert', nice: 'Notice', theme: '$theme-alert-padding-x: 2', usage: 'https://designsystem.digital.gov/components/alert/#using-the-alert-component-2' %}
+{% render 'source.md', name: 'alert', nice: 'Notice', theme: '$theme-alert-padding-x: 2', usage: 'https://designsystem.digital.gov/components/alert/#using-the-alert-component-2', config: config %}
 
 {% render 'figma.md', url: 'https://www.figma.com/file/H8qVKsmn0dGFG03pomDBDI/Reorganize-components?type=design&node-id=5003-527' %}

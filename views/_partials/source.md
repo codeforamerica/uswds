@@ -1,7 +1,14 @@
 ## Source and usage {#source-and-usage}
 
 {% capture package %}{% getFile name %}{% endcapture %}
-<p>{% for i in package %}<strong>Package:</strong> <code>{{ package }}</code>{% endfor %}</p>
+{% for i in package %}
+<p class="usa-icon-list__item">
+  <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="{{ config.baseUrl }}uswds/img/sprite.svg#folder_open"></use></svg></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <code>{{ package }}</code></span>
+</p>
+{% endfor %}
+
+{{ config.dictionary.package }} Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.
 
 <ul class="usa-content-list">
   {% capture stylesheet %}{% getFile name 'stylesheet' %}{% endcapture %}
@@ -14,7 +21,7 @@
 
 <figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
   <figcaption class="margin-bottom-2"><strong>Sass theme settings and stylesheet loading</strong></figcaption>
-  <p>Below is a demonstration of customizing the Alert theme settings and loading the Sass stylesheet from the package. Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
+  <p>Below is a demonstration of customizing the component theme settings and loading the Sass stylesheet from the package. Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
   <div class="code-block"><pre>@use 'uswds-core' with (
   {{ theme }},
   // ... additional theme settings here ...

@@ -62,7 +62,9 @@ const block = (string, beautifyStr = true, escapeStr = true) => {
  * @return  {String}          The template string with tags removed
  */
 const unwrap = (string) => {
-  return string.replace('<!DOCTYPE html><html th:lang="${#locale.language}"><head></head><body>', '')
+  return string
+    .replace('<!DOCTYPE html><html th:lang="${#locale.language}"><head></head><body>', '')
+    .replace('<html><head></head><body>', '')
     .replace('</body></html>', '');
 };
 
@@ -119,14 +121,14 @@ const getFile = (name, type = '') => {
 };
 
 /**
- * Ruby ERB experiment
+ * Render Ruby ERB template using a child process command execution
  *
- * @param   {[type]}  name     [name description]
- * @param   {[type]}  context  [context description]
+ * @param   {String}  name     The name of the package to retrieve
+ * @param   {Object}  context  JSON object with context to pass to the template
  *
- * @return  {[type]}           [return description]
+ * @return  {String}           A rendered HTML string
  */
-const erbInclude = async (name, context) => {
+const erbInclude = async (name, context, log = false) => {
   let rubyPath = getFile(name, 'erb');
 
   let vars = Object.keys(context).map(c => {
@@ -139,7 +141,7 @@ const erbInclude = async (name, context) => {
   try {
     const stdout = execSync(command);
 
-    console.log(`[${package.name}] ERB "${name}" render passing`);
+    if (log) console.log(`[${package.name}] ERB "${name}" render passing`);
 
     return stdout.toString();
   } catch (err) {
@@ -148,14 +150,15 @@ const erbInclude = async (name, context) => {
 };
 
 /**
- * Retrieve a package Thymeleaf template fragment, pass context to it, render, and return
+ * Retrieve a package Thymeleaf template fragment, pass context to it, render,
+ * and return the rendered string
  *
  * @param   {String}  name     The name of the template
  * @param   {String}  context  The context to pass to the template
  *
  * @return  {String}           The rendered template
  */
-const fragmentInclude = async (name, context) => {
+const fragmentInclude = async (name, context, log = false) => {
   let templatePath = getFile(name, 'thymeleaf')
     .replace(__dirname + '/', '').replace('.html', '');
 
@@ -166,12 +169,33 @@ const fragmentInclude = async (name, context) => {
   try {
     let rendered = await ThymeleafTempate.process(include, {});
 
-    console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion passing`);
+    if (log) console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion passing`);
 
     return rendered;
   } catch (err) {
     console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion failing; \n ${include}`);
   }
+};
+
+/**
+ * Creates a random string ID
+ *
+ * @return  {String}  Random string ID
+ */
+const createId = function() {
+  return Math.random().toString(16).substring(2);
+};
+
+/**
+ * Create a filename friendly string from supplied string
+ *
+ * @param   {String}  s  The string to transform into a slug
+ *
+ * @return  {String}     Returns filename friendly string
+ */
+const createSlug = function(s) {
+  return s.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
+    .replace(/\s+/g, '-').replace(/-+/g, '-');
 };
 
 /**
@@ -192,7 +216,23 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.amendLibrary('md', lib => lib.use(markdownItAttrs));
 
   eleventyConfig.addPlugin(eleventyPluginTwig, {
-    dir: CONFIG_ELEVENTY.dir
+    dir: CONFIG_ELEVENTY.dir,
+    twig: {
+      shortcodes: [
+        {
+          symbol: 'createId',
+          callback: () => {
+            return createId();
+          }
+        },
+        {
+          symbol: 'createSlug',
+          callback: (eleventyConfig, userOptions, s) => {
+            return createSlug(s);
+          }
+        }
+      ]
+    }
   });
 
   /**
@@ -220,21 +260,19 @@ module.exports = function(eleventyConfig) {
       context.body = markdown.render(args[0]);
     }
 
-    let template = unline(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
-
-    let rendered = unwrap(await ThymeleafTempate.process(template, context));
-
     if (args[3]) {
-      return block(rendered);
-    } else {
-      // Test fragment include method and ERB template
-      let fragment = await fragmentInclude(name, context);
-      // console.dir(fragment);
+      let th = unwrap(await fragmentInclude(name, context));
 
       let erb = await erbInclude(name, context);
-      // console.dir(erb);
 
-      return beautify(rendered + erb, CONFIG_BEAUTIFY);
+      return block(th + erb);
+    } else {
+      // Log fragment testing include method and ERB template
+      let th = unwrap(await fragmentInclude(name, context, true));
+
+      let erb = await erbInclude(name, context, true);
+
+      return beautify(th + erb, CONFIG_BEAUTIFY);
     }
   });
 
@@ -276,8 +314,6 @@ module.exports = function(eleventyConfig) {
     return block(template, false);
   });
 
-
-
   /**
    * Gets a resolved file path by name and file type then adds the package name
    * for display
@@ -299,7 +335,7 @@ module.exports = function(eleventyConfig) {
    * @return  {String}  Random string ID
    */
   eleventyConfig.addShortcode('createId', async function() {
-    return Math.random().toString(16).substring(2);
+    return createId();
   });
 
   /**
@@ -308,10 +344,8 @@ module.exports = function(eleventyConfig) {
    * @return  {String}  Returns filename friendly string
    */
   eleventyConfig.addShortcode('createSlug', async function(s) {
-    return s.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
-    .replace(/\s+/g, '-').replace(/-+/g, '-')
+    return createSlug(s);
   });
-
 
   /**
    * Data
@@ -322,6 +356,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addGlobalData('dictionary', config.dictionary);
 
   eleventyConfig.addGlobalData('config', config);
+
+  eleventyConfig.addCollection('componentByAlpha', (collectionApi) => {
+    let alpha = collectionApi.getFilteredByTag('component').sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+    return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
+  });
+
+  eleventyConfig.addCollection('design_tokenByAlpha', (collectionApi) => {
+    let alpha = collectionApi.getFilteredByTag('design_token').sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+    return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
+  });
+
 
   return CONFIG_ELEVENTY;
 };
