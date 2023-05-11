@@ -218,8 +218,8 @@
               <li class="usa-sidenav__item is-current">
                 {% set url = item.url|split('/', 2) %}
                 <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}class="usa-current" aria-current="page"{% endif %}>{{ item.data.title }}</a>
-                {% if item.url == page.url %}
 
+                {% if item.url == page.url %}
                 <ul class="usa-sidenav__sublist">
                   <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 

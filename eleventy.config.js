@@ -97,7 +97,7 @@ const getFile = (name, type = '') => {
       break
 
     case 'erb':
-      filename = `${filename}/cfa-${name}.html.erb`;
+      filename = `${filename}/_cfa-${name}.html.erb`;
       break
 
     case 'thymeleaf':
@@ -256,6 +256,8 @@ module.exports = function(eleventyConfig) {
 
     let context = (args[2]) ? JSON.parse(args[2]) : false;
 
+    let rendered = '';
+
     if (args[0]) {
       context.body = markdown.render(args[0]);
     }
@@ -263,23 +265,37 @@ module.exports = function(eleventyConfig) {
     if (args[3]) {
       let th = unwrap(await fragmentInclude(name, context));
 
-      let erb = await erbInclude(name, context);
+      if (process.NODE_ENV != 'production') {
+        let erb = await erbInclude(name, context);
 
-      return block(th + erb);
+        rendered = th + erb;
+      } else {
+        rendered = th
+      }
+
+      return block(rendered);
     } else {
-      // Log fragment testing include method and ERB template
+      // Template fragment inclusion testing
       let th = unwrap(await fragmentInclude(name, context, true));
 
-      let erb = await erbInclude(name, context, true);
+      if (process.NODE_ENV != 'production') {
+        // ERB partial render testing
+        let erb = await erbInclude(name, context, true);
 
-      return beautify(th + erb, CONFIG_BEAUTIFY);
+        rendered = th + erb;
+      } else {
+        rendered = th;
+      }
+
+      return beautify(rendered, CONFIG_BEAUTIFY);
     }
   });
 
   /**
    * Retrieves a package's Thymeleaf template source and wraps it in a code block
    *
-   * @param   {String}  name  Name of the package
+   * @param   {String}   name     Name of the package
+   * @param   {Boolean}  include  Pass true to return the inclusion demonstration instead of the template
    *
    * @return  {String}        The template source escaped and wrapped in a code block
    */
@@ -288,7 +304,7 @@ module.exports = function(eleventyConfig) {
       .replace(__dirname, package.name)
       .replace('.html', '');
 
-    let template = unline(fs.readFileSync(getFile(name, 'template'), 'utf-8'));
+    let template = unline(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
 
     if (include) {
       let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
@@ -304,12 +320,30 @@ module.exports = function(eleventyConfig) {
   /**
    * Retrieves a package's ERB template source and wraps it in a code block
    *
-   * @param   {String}  name  Name of the package
+   * @param   {String}   name     Name of the package
+   * @param   {Boolean}  include  Pass true to return the inclusion demonstration instead of the template
    *
    * @return  {String}        The template source escaped and wrapped in a code block
    */
-  eleventyConfig.addShortcode('erb', async function(name) {
+  eleventyConfig.addShortcode('erb', async function(name, include = false) {
+    let templatePath = getFile(name, 'erb')
+      .replace(__dirname, package.name)
+      .replace('/_', '/')
+      .replace('.html.erb', '');
+
     let template = unline(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
+
+    if (include) {
+      let params = [...new Set(template.match(/<%= [A-z$_.-][\w$]{0,} %>/g))];
+
+      return block(`<%= render '${templatePath}', ${
+          params.map(c => {
+            let attr = c.replace('<%= ', '').replace(' %>', '');
+
+            return `${attr}='${attr}'`;
+          }).join(', ')
+        } %>`, true);
+    }
 
     return block(template, false);
   });
