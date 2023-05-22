@@ -26,11 +26,11 @@ let ThymeleafTempate = new thymeleaf.TemplateEngine(CONFIG_THYMELEAF);
 /**
  * Replaces the HTML markup characters in a string with HTML entity counterparts
  *
- * @param   {String}  string  An HTML template string
+ * @param   {String}  str  An HTML template string
  *
- * @return  {String}          The escaped template string
+ * @return  {String}       The escaped template string
  */
-const escape = (str) => {
+const escapeHtml = (str) => {
   return (typeof str === 'string') ?
     str.replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
@@ -38,6 +38,35 @@ const escape = (str) => {
       .replace(/'/g, '&#39;')
       .replace(/"/g, '&quot;') : str;
 };
+
+/**
+ * Replaces the HTML markup characters in a string with HTML entity counterparts
+ *
+ * @param   {String}  str  An HTML template string
+ *
+ * @return  {String}       The escaped template string
+ */
+const escapeHtmlForFragment = (str) => {
+  return (typeof str === 'string') ?
+    str.replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/'/g, '&\\#39;')
+      .replace(/"/g, '&quot;') : str;
+};
+
+/**
+ * Processes the params passed as arguments to templates
+ *
+ * @param   {Mixed}  param  The parameter
+ *
+ * @return  {Mixed}         The sanitized parameter
+ */
+const sanitize = (param) => {
+  param = (typeof param === 'string') ? `'${escapeHtmlForFragment(param)}'` : param;
+
+  return param;
+}
 
 /**
  * Wraps passed string a code block and performs transformations on the content for display
@@ -49,7 +78,7 @@ const escape = (str) => {
 const block = (string, beautifyStr = true, escapeStr = true) => {
   string = (beautifyStr) ? beautify(string, CONFIG_BEAUTIFY) : string;
 
-  string = (escapeStr) ? escape(string) : string;
+  string = (escapeStr) ? escapeHtml(string) : string;
 
   return `<div class="code-block"><pre>${string}</pre></div>`;
 };
@@ -61,11 +90,11 @@ const block = (string, beautifyStr = true, escapeStr = true) => {
  *
  * @return  {String}          The template string with tags removed
  */
-const unwrap = (string) => {
-  return string
+const unwrap = (str) => {
+  return (typeof str === 'string') ? str
     .replace('<!DOCTYPE html><html th:lang="${#locale.language}"><head></head><body>', '')
     .replace('<html><head></head><body>', '')
-    .replace('</body></html>', '');
+    .replace('</body></html>', '') : str;
 };
 
 /**
@@ -128,12 +157,12 @@ const getFile = (name, type = '') => {
  *
  * @return  {String}           A rendered HTML string
  */
-const erbInclude = async (name, context, log = false) => {
+const erbRender = async (name, context, log = false) => {
   let rubyPath = getFile(name, 'erb');
 
   let vars = Object.keys(context).map(c => {
     return `${c}=${(typeof context[c] === 'string') ?
-      `"${context[c].replace(/"/g, '\\"')}"` : context[c]}`.replace(/\n/g, '')
+      `"${context[c].replace(/"/g, '\\"').replace(/'/g, '&#39;')}"` : context[c]}`.replace(/\n/g, '')
   }).join('; ');
 
   let command = `(echo '<% ${vars} %>' && cat ${rubyPath}) | erb`;
@@ -162,7 +191,7 @@ const fragmentInclude = async (name, context, log = false) => {
   let templatePath = getFile(name, 'thymeleaf')
     .replace(__dirname + '/', '').replace('.html', '');
 
-  let params = Object.keys(context).map(c => `'${escape(context[c])}'`.replace(/\n/g, '') ).join(', ');
+  let params = Object.keys(context).map(c => `${sanitize(context[c])}`.replace(/\n/g, '') ).join(', ');
 
   let include = `<th:block th:replace="~{${templatePath} :: ${name}(${params})}" />`;
 
@@ -266,7 +295,7 @@ module.exports = function(eleventyConfig) {
       let th = unwrap(await fragmentInclude(name, context));
 
       if (process.NODE_ENV != 'production') {
-        let erb = await erbInclude(name, context);
+        let erb = await erbRender(name, context);
 
         rendered = th + erb;
       } else {
@@ -280,7 +309,7 @@ module.exports = function(eleventyConfig) {
 
       if (process.NODE_ENV != 'production') {
         // ERB partial render testing
-        let erb = await erbInclude(name, context, true);
+        let erb = await erbRender(name, context, true);
 
         rendered = th + erb;
       } else {
@@ -403,6 +432,15 @@ module.exports = function(eleventyConfig) {
     return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
   });
 
+  /**
+   * Events
+   */
+
+  // eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
+  //   // Run me after the build ends
+
+  //   console.dir({ outputMode })
+  // });
 
   return CONFIG_ELEVENTY;
 };

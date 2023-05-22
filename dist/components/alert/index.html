@@ -10,8 +10,8 @@
   <title>USWDS Honeycrisp theme</title>
 
   <link rel="stylesheet" href="/uswds/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="/highlight/styles/default.min.css">
+  <script type="text/javascript" src="/highlight/highlight.min.js"></script>
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -90,11 +90,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f22788150ebbd">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c3f9e70036a85">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-f22788150ebbd" class="usa-nav__submenu">
+            <ul id="aria-c-c3f9e70036a85" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="/components/" ><span>Components</span></a>
                 </li>
@@ -116,11 +116,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-498f22b65c236">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-804aeeafa7a52">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-498f22b65c236" class="usa-nav__submenu">
+            <ul id="aria-c-804aeeafa7a52" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -168,11 +168,13 @@
                                 <ul class="usa-sidenav__sublist">
                   <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
+                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
+
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
-                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-
                   <li class="usa-sidenav__item"><a href="#design-library">Design library</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
                 </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -195,10 +197,11 @@
           <div class="usa-prose">
             <h1>Alert</h1>
 
-            <p class="usa-intro">Alerts (notices) are a way to highlight important information by separating it from the main copy.</p>
+            <p class="usa-intro">"Alerts (notices) appear when I need help or that something has changed... it may be time-sensitive."</p>
           </div>
 
-          <h2 id="details">Details</h2>
+          <p>Notices distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if they're used sparingly and appear after a user interaction.</p>
+<h2 id="details">Details</h2>
 <ul class="usa-content-list">
   <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component</a></li>
   <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Notice atom</a></li>
@@ -206,22 +209,41 @@
   <li><strong><abbr title="The class name that applies extended style customization to modify the component's visual appearance.">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
 </ul>
 <p>The <strong>Alert</strong> extends the <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert</a> component. The visual appearance is modified using <strong>design tokens</strong> applied to the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Notice atom</a>. Further styling is applied using the <strong>CSS modifier</strong> <code>.cfa-alert</code> to add <strong>styles</strong> defined in a custom stylesheet.</p>
+<!-- ACCESSIBILITY -->
+<h2 id="accessibility">Accessibility</h2>
+<ol>
+<li>
+<p>Existing Research</p>
+</li>
+<li>
+<p>Manual Accessibility</p>
+</li>
+<li>
+<p>Automated Accessibility</p>
+</li>
+<li>
+<p>Basic Usability</p>
+</li>
+<li>
+<p>Assistive Tech Usability</p>
+</li>
+</ol>
 <h2 id="examples">Examples</h2>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
   <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Informational</figcaption>
-    <div role="false" class="usa-alert cfa-alert usa-alert--info">
+    <figcaption class="margin-bottom-2">Informational, gray</figcaption>
+    <div role="region" aria-label="" aria-labelledby="aria-lb-432bcd6424a67" class="usa-alert cfa-alert usa-alert--info">
   <div class="usa-alert__body">
-    <h4 class="usa-alert__heading">Can we ask about your race and ethnicity?</h4>
+    <h4 class="usa-alert__heading" id="aria-lb-432bcd6424a67">Can we ask about your race and ethnicity?</h4>
     <div>
       <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
       <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
     </div>
   </div>
 </div>
-<div class="usa-alert cfa-alert usa-alert--info">
+<div class="usa-alert cfa-alert usa-alert--info" role="region" aria-labelledby="aria-lb-432bcd6424a67">
   <div class="usa-alert__body">
-    <h4 class="usa-alert__heading">Can we ask about your race and ethnicity?</h4>
+    <h4 class="usa-alert__heading" id="aria-lb-432bcd6424a67">Can we ask about your race and ethnicity?</h4>
     <div>
       <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
       <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
@@ -232,23 +254,23 @@
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-73b94a7e56a77">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-6d8c64d01d2b9">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-73b94a7e56a77" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block"><pre>&lt;div role=&quot;false&quot; class=&quot;usa-alert cfa-alert usa-alert--info&quot;&gt;
+      <div id="aria-c-6d8c64d01d2b9" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre>&lt;div role=&quot;region&quot; aria-label=&quot;&quot; aria-labelledby=&quot;aria-lb-432bcd6424a67&quot; class=&quot;usa-alert cfa-alert usa-alert--info&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-432bcd6424a67&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
     &lt;div&gt;
       &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
       &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot;&gt;
+&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-432bcd6424a67&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-432bcd6424a67&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
     &lt;div&gt;
       &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
       &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
@@ -261,12 +283,12 @@
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
   <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Warning</figcaption>
-    <div role="false" class="usa-alert cfa-alert usa-alert--warning">
+    <figcaption class="margin-bottom-2">Warning, yellow</figcaption>
+    <div role="" aria-label="" aria-labelledby="" class="usa-alert cfa-alert usa-alert--warning">
   <div class="usa-alert__body">
-    <h4 class="usa-alert__heading">Make sure your address is correct</h4>
+    <h4 class="usa-alert__heading" id="">Make sure your address is correct</h4>
     <div>
-      <p class="usa-alert__text">We couldnt find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
+      <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
     </div>
   </div>
 </div>
@@ -274,7 +296,7 @@
   <div class="usa-alert__body">
     <h4 class="usa-alert__heading">Make sure your address is correct</h4>
     <div>
-      <p class="usa-alert__text">We couldnt find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
+      <p class="usa-alert__text">We couldn&#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.</p>
     </div>
   </div>
 </div>
@@ -282,16 +304,16 @@
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ef98bc628de39">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-b7e6463dabbeb">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-ef98bc628de39" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block"><pre>&lt;div role=&quot;false&quot; class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
+      <div id="aria-c-b7e6463dabbeb" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre>&lt;div role=&quot;&quot; aria-label=&quot;&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Make sure your address is correct&lt;/h4&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Make sure your address is correct&lt;/h4&gt;
     &lt;div&gt;
-      &lt;p class=&quot;usa-alert__text&quot;&gt;We couldnt find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn&#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -299,7 +321,7 @@
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Make sure your address is correct&lt;/h4&gt;
     &lt;div&gt;
-      &lt;p class=&quot;usa-alert__text&quot;&gt;We couldnt find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
+      &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn&amp;#39;t find your address. To make sure you get mail from the county, you may edit your address or keep going.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre></div>
@@ -309,10 +331,10 @@
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
   <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Error</figcaption>
-    <div role="alert" class="usa-alert cfa-alert usa-alert--error">
+    <figcaption class="margin-bottom-2">Error, red</figcaption>
+    <div role="alert" aria-label="" aria-labelledby="" class="usa-alert cfa-alert usa-alert--error">
   <div class="usa-alert__body">
-    <h4 class="usa-alert__heading">Error notice</h4>
+    <h4 class="usa-alert__heading" id="">Error notice</h4>
     <div>
       <p class="usa-alert__text">This is an example error notice. Its a great way to highlight <strong>errors or dangerous issues</strong>.</p>
     </div>
@@ -330,14 +352,14 @@
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-86df0035fd7">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-7f3fe49b40131">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-86df0035fd7" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block"><pre>&lt;div role=&quot;alert&quot; class=&quot;usa-alert cfa-alert usa-alert--error&quot;&gt;
+      <div id="aria-c-7f3fe49b40131" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre>&lt;div role=&quot;alert&quot; aria-label=&quot;&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--error&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Error notice&lt;/h4&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Error notice&lt;/h4&gt;
     &lt;div&gt;
       &lt;p class=&quot;usa-alert__text&quot;&gt;This is an example error notice. Its a great way to highlight &lt;strong&gt;errors or dangerous issues&lt;/strong&gt;.&lt;/p&gt;
     &lt;/div&gt;
@@ -357,16 +379,16 @@
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
   <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Success</figcaption>
-    <div role="false" class="usa-alert cfa-alert usa-alert--success">
+    <figcaption class="margin-bottom-2">Success, green</figcaption>
+    <div role="status" aria-label="" aria-labelledby="" class="usa-alert cfa-alert usa-alert--success">
   <div class="usa-alert__body">
-    <h4 class="usa-alert__heading">Done! Your application has been submitted.</h4>
+    <h4 class="usa-alert__heading" id="">Done! Your application has been submitted.</h4>
     <div>
       <p class="usa-alert__text">You were recommended for expedited food assistance (SNAP).</p>
     </div>
   </div>
 </div>
-<div class="usa-alert cfa-alert usa-alert--success">
+<div class="usa-alert cfa-alert usa-alert--success" role="status">
   <div class="usa-alert__body">
     <h4 class="usa-alert__heading">Done! Your application has been submitted.</h4>
     <div>
@@ -378,20 +400,20 @@
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4776d45c62b91">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3a5cd9e50a3e6">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-4776d45c62b91" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block"><pre>&lt;div role=&quot;false&quot; class=&quot;usa-alert cfa-alert usa-alert--success&quot;&gt;
+      <div id="aria-c-3a5cd9e50a3e6" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre>&lt;div role=&quot;status&quot; aria-label=&quot;&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert cfa-alert usa-alert--success&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Done! Your application has been submitted.&lt;/h4&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Done! Your application has been submitted.&lt;/h4&gt;
     &lt;div&gt;
       &lt;p class=&quot;usa-alert__text&quot;&gt;You were recommended for expedited food assistance (SNAP).&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot;&gt;
+&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot; role=&quot;status&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Done! Your application has been submitted.&lt;/h4&gt;
     &lt;div&gt;
@@ -403,21 +425,21 @@
     </div>
   </figure>
 </div>
-<h3>Default</h3>
-<p>This is an example of what the component looks like by default, without the modifier, <code>.cfa-alert</code>. It includes a single, solid border on the left and an icon corresponding to the alert type (informational, warning, error, or success). The colors for each alert type are the same in the examples above. Additional variant modifiers for the alert can be found in the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.</p>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
   <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Informational alert</figcaption>
-    <div role="false" class="usa-alert false">
+    <figcaption class="margin-bottom-2">
+<p>This is an example of what the informational alert looks like without the modifier <code>.cfa-alert</code>. The colors for each alert variant are the same in the examples above. Additional variant modifiers for the alert can be found in the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.</p>
+</figcaption>
+    <div role="" aria-label="" aria-labelledby="" class="usa-alert usa-alert--info">
   <div class="usa-alert__body">
-    <h4 class="usa-alert__heading">Can we ask about your race and ethnicity?</h4>
+    <h4 class="usa-alert__heading" id="">Can we ask about your race and ethnicity?</h4>
     <div>
       <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
       <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.</p>
     </div>
   </div>
 </div>
-<div class="usa-alert">
+<div class="usa-alert usa-alert--info">
   <div class="usa-alert__body">
     <h4 class="usa-alert__heading">Can we ask about your race and ethnicity?</h4>
     <div>
@@ -430,21 +452,21 @@
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-0a488e0091f44">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4c7be21231fba">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-0a488e0091f44" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block"><pre>&lt;div role=&quot;false&quot; class=&quot;usa-alert false&quot;&gt;
+      <div id="aria-c-4c7be21231fba" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre>&lt;div role=&quot;&quot; aria-label=&quot;&quot; aria-labelledby=&quot;&quot; class=&quot;usa-alert usa-alert--info&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
+    &lt;h4 class=&quot;usa-alert__heading&quot; id=&quot;&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
     &lt;div&gt;
       &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
       &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;usa-alert&quot;&gt;
+&lt;div class=&quot;usa-alert usa-alert--info&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;h4 class=&quot;usa-alert__heading&quot;&gt;Can we ask about your race and ethnicity?&lt;/h4&gt;
     &lt;div&gt;
@@ -457,6 +479,15 @@
     </div>
   </figure>
 </div>
+<h2 id="guidance">Guidance</h2>
+<p><strong>Informational, gray</strong>. For non-urgent messages or context that is important to find but should not interrupt a user’s workflow. The HTML element may have the <code>role=&quot;region&quot;</code> attribute. If so, it must also have an <code>aria-labelledby</code> attribute that refers to the heading id. If it does not have a visible heading it must have an <code>aria-label</code> with the value of the label based on information inside the alert.</p>
+<p><strong>Warning, yellow</strong>. For temporary scenarios. They can be used outside the form card for extra emphasis.</p>
+<p><strong>Error, red</strong>. For urgent messages or application failure messages that are out of the user’s control. This is the least likely notice to appear. The HTML element should have <code>role=&quot;alert&quot;</code> attribute.</p>
+<p><strong>Success, green</strong>. For successful interactions such as a submitting an application. The HTML element should have the <code>role=&quot;status&quot;</code> attribute.</p>
+<p><strong>Attention and color</strong>. A notice that uses a tertiary background color, or color that appears in roughly 5% of the color palette, will draw more attention. Also consider choosing combinations that are distinguishable across a broad spectrum of color blindness such as blue against orange, where orange is the emphasis color (<a href="https://www.tableau.com/blog/examining-data-viz-rules-dont-use-red-green-together" target="_blank" rel="noopener nofollow" class="usa-link--external">source</a>).</p>
+<!-- DESIGN -->
+<h2 id="design-library">Design library</h2>
+<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/H8qVKsmn0dGFG03pomDBDI/Reorganize-components?type=design&node-id=5003-527" allowfullscreen></iframe>
 <!-- SOURCE -->
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
@@ -490,9 +521,9 @@
     <div class="code-block"><pre>&lt;!DOCTYPE html&gt;
 &lt;html th:lang=&quot;${#locale.language}&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
   &lt;body&gt;
-    &lt;div th:fragment=&quot;alert(modifier, role, heading, body, text)&quot; th:class=&quot;&#39;usa-alert &#39; + ${modifier}&quot; th:attr=&quot;role=${role}&quot;&gt;
+    &lt;div th:fragment=&quot;alert(modifier, role, heading, label, labelledBy, body, text)&quot; th:class=&quot;&#39;usa-alert &#39; + ${modifier}&quot; th:attr=&quot;role=${role},aria-label=${label},aria-labelledby=${labelledBy}&quot;&gt;
       &lt;div class=&quot;usa-alert__body&quot;&gt;
-        &lt;h4 class=&quot;usa-alert__heading&quot; th:if=&quot;${heading}&quot; th:text=&quot;${heading}&quot;&gt;Heading&lt;/h4&gt;
+        &lt;h4 class=&quot;usa-alert__heading&quot; th:if=&quot;${heading}&quot; th:text=&quot;${heading}&quot; th:attr=&quot;id=${labelledBy}&quot;&gt;Heading&lt;/h4&gt;
         &lt;div th:utext=&quot;${body}&quot;&gt;
           &lt;p class=&quot;usa-alert__text&quot; th:if=&quot;${text}&quot; th:text=&quot;${text}&quot;&gt;Text&lt;/p&gt;
         &lt;/div&gt;
@@ -507,7 +538,7 @@
       <strong>Template fragment inclusion</strong>
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
     </figcaption>
-    <div class="code-block"><pre>&lt;th:block th:replace=&quot;~{@codeforamerica/uswds-honeycrisp/packages/cfa-alert/cfa-alert.th :: alert(modifier,role,heading,body,text)}&quot; /&gt;</pre></div>
+    <div class="code-block"><pre>&lt;th:block th:replace=&quot;~{@codeforamerica/uswds-honeycrisp/packages/cfa-alert/cfa-alert.th :: alert(modifier,role,label,labelledBy,heading,body,text)}&quot; /&gt;</pre></div>
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
@@ -516,9 +547,9 @@
       <strong>ERB template partial</strong>
       <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
     </figcaption>
-    <div class="code-block"><pre>&lt;div class=&quot;usa-alert&lt;% if modifier %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&lt;% if role %&gt; role=&quot;&lt;%= role %&gt;&quot;&lt;% end %&gt;&gt;
+    <div class="code-block"><pre>&lt;div class=&quot;usa-alert&lt;% if modifier %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&lt;% if role %&gt; role=&quot;&lt;%= role %&gt;&quot;&lt;% end %&gt;&lt;% if label %&gt; aria-label=&quot;&lt;%= label %&gt;&quot;&lt;% end %&gt;&lt;% if labelledby %&gt; aria-labelledby=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
-    &lt;% if heading %&gt;&lt;h4 class=&quot;usa-alert__heading&quot;&gt;&lt;%= heading %&gt;&lt;/h4&gt;&lt;% end %&gt;
+    &lt;% if heading %&gt;&lt;h4 class=&quot;usa-alert__heading&quot;&lt;% if labelledby %&gt; id=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= heading %&gt;&lt;/h4&gt;&lt;% end %&gt;
     &lt;div&gt;
       &lt;% if body %&gt;
         &lt;%= body %&gt;
@@ -534,11 +565,9 @@
       <strong>Partial render</strong>
       <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
     </figcaption>
-    <div class="code-block"><pre>&lt;%= render &#39;@codeforamerica/uswds-honeycrisp/packages/cfa-alert/cfa-alert&#39;, modifier=&#39;modifier&#39;, role=&#39;role&#39;, heading=&#39;heading&#39;, body=&#39;body&#39;, text=&#39;text&#39; %&gt;</pre></div>
+    <div class="code-block"><pre>&lt;%= render &#39;@codeforamerica/uswds-honeycrisp/packages/cfa-alert/cfa-alert&#39;, modifier=&#39;modifier&#39;, role=&#39;role&#39;, label=&#39;label&#39;, labelledby=&#39;labelledby&#39;, heading=&#39;heading&#39;, body=&#39;body&#39;, text=&#39;text&#39; %&gt;</pre></div>
   </figure>
 </div>
-<h2 id="design-library">Design library</h2>
-<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/H8qVKsmn0dGFG03pomDBDI/Reorganize-components?type=design&node-id=5003-527" allowfullscreen></iframe>
 
         </main>
       </div>

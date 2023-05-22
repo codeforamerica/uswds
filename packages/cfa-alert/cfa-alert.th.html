@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
   <body>
-    <div th:fragment="alert(modifier, role, heading, body, text)" th:class="'usa-alert ' + ${modifier}" th:attr="role=${role}">
+    <div th:fragment="alert(modifier, role, heading, label, labelledBy, body, text)" th:class="'usa-alert ' + ${modifier}" th:attr="role=${role},aria-label=${label},aria-labelledby=${labelledBy}">
       <div class="usa-alert__body">
-        <h4 class="usa-alert__heading" th:if="${heading}" th:text="${heading}">Heading</h4>
+        <h4 class="usa-alert__heading" th:if="${heading}" th:text="${heading}" th:attr="id=${labelledBy}">Heading</h4>
 
         <div th:utext="${body}">
           <p class="usa-alert__text" th:if="${text}" th:text="${text}">Text</p>

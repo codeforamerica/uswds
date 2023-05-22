@@ -10,8 +10,8 @@
   <title>{{ package.nice }}</title>
 
   <link rel="stylesheet" href="{{ config.baseUrl }}uswds/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+  <link rel="stylesheet" href="{{ config.baseUrl }}highlight/styles/default.min.css">
+  <script type="text/javascript" src="{{ config.baseUrl }}highlight/highlight.min.js"></script>
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -223,11 +223,13 @@
                 <ul class="usa-sidenav__sublist">
                   <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
+                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
+
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
-                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-
                   <li class="usa-sidenav__item"><a href="#design-library">Design library</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
                 </ul>
                 {% endif %}
               </li>
