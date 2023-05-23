@@ -294,7 +294,7 @@ module.exports = function(eleventyConfig) {
     if (args[3]) {
       let th = unwrap(await fragmentInclude(name, context));
 
-      if (process.NODE_ENV != 'production') {
+      if (process.env.NODE_ENV != 'production') {
         let erb = await erbRender(name, context);
 
         rendered = th + erb;
@@ -307,7 +307,7 @@ module.exports = function(eleventyConfig) {
       // Template fragment inclusion testing
       let th = unwrap(await fragmentInclude(name, context, true));
 
-      if (process.NODE_ENV != 'production') {
+      if (process.env.NODE_ENV != 'production') {
         // ERB partial render testing
         let erb = await erbRender(name, context, true);
 
@@ -352,7 +352,7 @@ module.exports = function(eleventyConfig) {
    * @param   {String}   name     Name of the package
    * @param   {Boolean}  include  Pass true to return the inclusion demonstration instead of the template
    *
-   * @return  {String}        The template source escaped and wrapped in a code block
+   * @return  {String}            The template source escaped and wrapped in a code block
    */
   eleventyConfig.addShortcode('erb', async function(name, include = false) {
     let templatePath = getFile(name, 'erb')
