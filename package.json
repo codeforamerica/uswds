@@ -22,14 +22,18 @@
     "default": "npx @11ty/eleventy && npx gulp compile",
     "views": "npx @11ty/eleventy --serve",
     "uswds": "npx gulp watch",
-    "version": "npm run default && git add ."
+    "version": "npm run default && git add .",
+    "rollup": "rollup --config rollup.config.cjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
     "@uswds/compile": "^1.0.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
+    "rollup": "^3.23.0",
     "thymeleaf": "^0.21.0"
   },
   "dependencies": {
