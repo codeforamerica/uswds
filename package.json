@@ -23,7 +23,7 @@
     "views": "npx @11ty/eleventy --serve",
     "uswds": "npx gulp watch",
     "version": "npm run default && git add .",
-    "rollup": "rollup --config rollup.config.cjs"
+    "rollup": "npx rollup --config rollup.config.cjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
@@ -33,7 +33,6 @@
     "@uswds/compile": "^1.0.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
-    "rollup": "^3.23.0",
     "thymeleaf": "^0.21.0"
   },
   "dependencies": {
