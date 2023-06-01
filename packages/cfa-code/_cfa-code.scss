@@ -117,8 +117,12 @@ p code, li code, td code, dl code, dd code {
   color: var(--cfa-code-text-javascript) !important
 }
 
-.hljs-attr, .hljs-name {
+.hljs-tag, .hljs-attr, .hljs-name {
   color: var(--cfa-code-text) !important
+}
+
+.hljs-meta {
+  color: var(--cfa-code-text-comment) !important
 }
 
 .hljs-comment {

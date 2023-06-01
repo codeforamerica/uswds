@@ -3,6 +3,8 @@
  */
 
 const uswds = require('@uswds/compile');
+const package = require('./package.json');
+const execSync = require('child_process').execSync;
 
 /**
  * @uswds/compile settings
@@ -27,8 +29,8 @@ uswds.paths.dist.css = './dist/uswds/css';
  *
  * @param  {Function}  cb  Async callback passed from the previous Gulp pipe.
  */
-exports.copySetup = (cb) => {
-  console.log('[Design Tokens Test] copySetup is modified to prevent overwriting theme files.');
+exports.copySetup = cb => {
+  console.log(`[${package.name}] copySetup is modified to prevent overwriting theme files.`);
 
   cb();
 };
@@ -38,8 +40,8 @@ exports.copySetup = (cb) => {
  *
  * @param  {Function}  cb  Async callback passed from the previous Gulp pipe.
  */
-exports.copyAll = (cb) => {
-  console.log('[Design Tokens Test] copyAll is modified to prevent overwriting theme files.');
+exports.copyAll = cb => {
+  console.log(`[${package.name}] copyAll is modified to prevent overwriting theme files.`);
 
   // uswds.copyAssets();
   // or
@@ -51,12 +53,29 @@ exports.copyAll = (cb) => {
 };
 
 /**
+ * Execute npm script for rollup script
+ *
+ * @return  {String}  Exec sync stdout
+ */
+exports.compileJavaScript = () => {
+  try {
+    const stdout = execSync('npm run rollup');
+
+    console.log(stdout.toString());
+
+    return stdout;
+  } catch (err) {
+    console.log(`[${package.name}] Compile JavaScript failing: ${err}`);
+  }
+};
+
+/**
  * Prevent init from overwriting theme files.
  *
  * @param  {Function}  cb  Async callback passed from the previous Gulp pipe.
  */
-exports.init = (cb) => {
-  console.log('[Design Tokens Test] init is modified to prevent overwriting theme files.');
+exports.init = cb => {
+  console.log(`[${package.name}] init is modified to prevent overwriting theme files.`);
 
   uswds.compile();
 
@@ -64,15 +83,21 @@ exports.init = (cb) => {
 };
 
 /**
- * [compile description]
+ * Extend USWDS compile with custom JavaScript compile
  *
- * @var {[type]}
+ * @param  {Function}  cb  Async callback passed from the previous Gulp pipe.
  */
-exports.compile = uswds.compile;
+exports.compile = cb => {
+  uswds.compile();
+
+  exports.compileJavaScript();
+
+  cb();
+};
 
 /**
  * [watch description]
  *
- * @var {[type]}
+ * @var {Function}
  */
 exports.watch = uswds.watch;

@@ -118,21 +118,17 @@ in the form $setting: value,
   $theme-link-color: 'primary',
   $theme-link-visited-color: 'ink',
 
-  // Code
-  // $theme-color-code-text: 'mint-cool-80v',
-
   // 4. Typography
   // $theme-root-font-size: '',
   $theme-global-paragraph-styles: true,
   $theme-global-link-styles: true,
   $theme-global-content-styles: true,
+
   $theme-font-type-sans: 'system', // Match Honeycrisp codebase
   $theme-font-type-serif: false,
   $theme-font-role-heading: 'sans',
 
-  /**
-   * Custom monospaced font for code demonstration
-   */
+  // - Custom monospaced font for code demonstration
   $theme-typeface-tokens: (
     "jetbrains-mono": (
       "display-name": '"JetBrains Mono"',
@@ -156,6 +152,11 @@ in the form $setting: value,
   $theme-body-line-height: 4,
   $theme-h6-font-size: 'xs',
   $theme-small-font-size: 'xs',
+
+  $theme-text-measure-narrow: 'none',
+  $theme-text-measure: 'none',
+  $theme-text-measure-wide: 'none',
+
   $theme-lead-line-height: 4,
 
   // 5. Components
@@ -164,8 +165,8 @@ in the form $setting: value,
   // - Checkbox
   // - Form
   // - Alert
-  $theme-alert-bar-width: 0,
-  $theme-alert-padding-x: 1.5,
+  $theme-alert-padding-x: 2,
+  $theme-alert-padding-y: 2,
   // - Accordion
   $theme-accordion-border-width: 2px,
   $theme-accordion-border-color: 'gray-warm-20',
