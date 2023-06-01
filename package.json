@@ -1,21 +1,21 @@
 {
-  "name": "@codeforamerica/uswds-honeycrisp",
-  "nice": "USWDS Honeycrisp theme",
+  "name": "@codeforamerica/uswds",
+  "nice": "Code for America USWDS theme",
   "version": "0.0.0-11",
   "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codeforamerica/design-tokens-test.git"
+    "url": "https://github.com/codeforamerica/uswds.git"
   },
   "design": {
     "type": "figma",
     "url": "https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0"
   },
-  "homepage": "https://codeforamerica.github.io/design-tokens-test",
+  "homepage": "https://codeforamerica.github.io/uswds",
   "author": "dhirth@codeforamerica.org",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/codeforamerica/design-tokens-test/issues"
+    "url": "https://github.com/codeforamerica/uswds/issues"
   },
   "scripts": {
     "start": "npx concurrently 'npm run views' 'npm run uswds'",
