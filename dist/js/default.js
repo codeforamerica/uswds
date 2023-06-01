@@ -998,6 +998,8 @@ var Default = (function () {
 
   /**
    * Copy of @uswds/uswds/packages/uswds-core/src/js/start.js
+   *
+   * Likely, this script can be made into an ES module
    */
 
   window.uswdsPresent = true; // GLOBAL variable to indicate that the uswds.js has loaded in the DOM.
@@ -1008,16 +1010,11 @@ var Default = (function () {
    */
 
 
-  // require("./polyfills");
 
   const uswds = config;
-  // const uswds = require("./config");
 
   const components = components$1;
-  // const components = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/index');
-  // const components = require("./index");
   const svg4everybody = svg4everybodyExports;
-  // const svg4everybody = require("./polyfills/svg4everybody");
 
   uswds.components = components;
 
