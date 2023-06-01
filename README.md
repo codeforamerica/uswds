@@ -1,4 +1,4 @@
-# Design Tokens Test
+# Code for America USWDS theme
 
 This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.
 
@@ -45,7 +45,7 @@ npm install
 
 Run `npm start`[*](/#ref) to start development. `npx` is used to run development dependencies without including them in the package. When the commands are first run, it will ask whether to install the required package or not.
 
-<span id="ref">*</span>Serve the static demo site, compile 11ty view directory files when they change, and compile USWDS theme directory styles when they change.
+<small><span id="ref">*</span>Serve the static demo site, compile 11ty view directory files when they change, and compile USWDS theme directory styles when they change.</small>
 
 ### Commands
 
@@ -57,7 +57,7 @@ Compile USWDS with the custom theme.
 npx gulp@4.0.2 compile
 ```
 
-Watch USWDS theme styles and compile assets.
+Watch USWDS theme styles and compile assets into the distribution directory.
 
 ```
 npx gulp@4.0.2 watch
@@ -73,4 +73,10 @@ Serve the static demo and watch view files for changes.
 
 ```
 npx @11ty/eleventy@2.0.0 --serve
+```
+
+Concatenate JavaScript modules into the distribution directory.
+
+```
+npx @rollup@v3.23.0 --config rollup.config.cjs
 ```
