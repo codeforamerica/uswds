@@ -1,5 +1,5 @@
 {
-  "system": {
+  "System": {
     "red-cool-5": {
       "value": "#f8eff1",
       "type": "color"
@@ -2329,14 +2329,14 @@
       "description": "The color of the focus outline."
     }
   },
-  "proxy": {
+  "Proxy": {
     "ink": {
       "value": "{base-ink}",
       "type": "color",
       "description": "This proxy token makes sure that the system token maps correctly to the settings variable in Figma. For Figma only."
     }
   },
-  "theme": {
+  "Theme": {
     "focus-color": {
       "value": "{gold-30v}",
       "type": "color",
@@ -2623,8 +2623,10 @@
     "link-visited-color": {
       "value": "{ink}",
       "type": "color"
-    },
-    "focus": {
+    }
+  },
+  "Styles": {
+    "Focus": {
       "value": {
         "x": "0",
         "y": "0",
@@ -2639,9 +2641,10 @@
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "system",
-      "proxy",
-      "theme"
+      "System",
+      "Proxy",
+      "Theme",
+      "Styles"
     ]
   }
 }
