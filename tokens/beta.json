@@ -1,293 +1,4 @@
 {
-  "theme": {
-    "focus-color": {
-      "value": "{gold-30v}",
-      "type": "color",
-      "description": "The color of the focus outline."
-    },
-    "base-family": {
-      "value": "{gray-warm}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "base-lightest": {
-      "value": "{gray-warm-4}",
-      "type": "color"
-    },
-    "base-lighter": {
-      "value": "{gray-warm-10}",
-      "type": "color"
-    },
-    "base-light": {
-      "value": "{gray-warm-30}",
-      "type": "color"
-    },
-    "base": {
-      "value": "{gray-warm-50}",
-      "type": "color"
-    },
-    "base-dark": {
-      "value": "{gray-warm-60}",
-      "type": "color"
-    },
-    "base-darker": {
-      "value": "{gray-warm-70}",
-      "type": "color"
-    },
-    "base-darkest": {
-      "value": "{gray-warm-90}",
-      "type": "color"
-    },
-    "base-ink": {
-      "value": "{gray-warm-90}",
-      "type": "color"
-    },
-    "primary-family": {
-      "value": "{mint}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "primary-lightest": {
-      "value": "{mint-cool-5}",
-      "type": "color"
-    },
-    "primary-lighter": {
-      "value": "{mint-10}",
-      "type": "color"
-    },
-    "primary-light": {
-      "value": "{mint-30}",
-      "type": "color"
-    },
-    "primary": {
-      "value": "{mint-50}",
-      "type": "color"
-    },
-    "primary-vivid": {
-      "value": "{mint-40v}",
-      "type": "color"
-    },
-    "primary-dark": {
-      "value": "{mint-cool-70v}",
-      "type": "color"
-    },
-    "primary-darker": {
-      "value": "{mint-cool-80v}",
-      "type": "color"
-    },
-    "secondary-family": {
-      "value": "{magenta-vivid}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "secondary-lighter": {
-      "value": "{magenta-10v}",
-      "type": "color"
-    },
-    "secondary-light": {
-      "value": "{magenta-30v}",
-      "type": "color"
-    },
-    "secondary": {
-      "value": "{magenta-50v}",
-      "type": "color"
-    },
-    "secondary-vivid": {
-      "value": "{magenta-40v}",
-      "type": "color"
-    },
-    "secondary-dark": {
-      "value": "{magenta-60v}",
-      "type": "color"
-    },
-    "secondary-darker": {
-      "value": "{magenta-70v}",
-      "type": "color"
-    },
-    "accent-warm-family": {
-      "value": "{red-warm-vivid}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "accent-warm-lighter": {
-      "value": "{red-warm-10v}",
-      "type": "color"
-    },
-    "accent-warm-light": {
-      "value": "{red-warm-20v}",
-      "type": "color"
-    },
-    "accent-warm": {
-      "value": "{red-warm-30v}",
-      "type": "color"
-    },
-    "accent-warm-dark": {
-      "value": "{red-warm-50v}",
-      "type": "color"
-    },
-    "accent-warm-darker": {
-      "value": "{red-warm-60v}",
-      "type": "color"
-    },
-    "accent-cool-family": {
-      "value": "{green-cool-vivid}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "accent-cool-lighter": {
-      "value": "{green-cool-5v}",
-      "type": "color"
-    },
-    "accent-cool-light": {
-      "value": "{green-cool-20v}",
-      "type": "color"
-    },
-    "accent-cool": {
-      "value": "{green-cool-30v}",
-      "type": "color"
-    },
-    "accent-cool-dark": {
-      "value": "{green-cool-40v}",
-      "type": "color"
-    },
-    "accent-cool-darker": {
-      "value": "{green-cool-60v}",
-      "type": "color"
-    },
-    "error-family": {
-      "value": "{orange-warm-vivid}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "error-lighter": {
-      "value": "{orange-warm-10v}",
-      "type": "color"
-    },
-    "error-light": {
-      "value": "{orange-warm-30v}",
-      "type": "color"
-    },
-    "error": {
-      "value": "{orange-warm-50v}",
-      "type": "color"
-    },
-    "error-dark": {
-      "value": "{orange-warm-60v}",
-      "type": "color"
-    },
-    "error-darker": {
-      "value": "{orange-warm-70v}",
-      "type": "color"
-    },
-    "warning-family": {
-      "value": "{gold-vivid}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "warning-lighter": {
-      "value": "{gold-5v}",
-      "type": "color"
-    },
-    "warning-light": {
-      "value": "{gold-10v}",
-      "type": "color"
-    },
-    "warning": {
-      "value": "{gold-20v}",
-      "type": "color"
-    },
-    "warning-dark": {
-      "value": "{gold-30v}",
-      "type": "color"
-    },
-    "warning-darker": {
-      "value": "{gold-50v}",
-      "type": "color"
-    },
-    "success-family": {
-      "value": "{green-cool-vivid}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "success-lighter": {
-      "value": "{green-cool-5v}",
-      "type": "color"
-    },
-    "success-light": {
-      "value": "{green-cool-20v}",
-      "type": "color"
-    },
-    "success": {
-      "value": "{green-cool-40v}",
-      "type": "color"
-    },
-    "success-dark": {
-      "value": "{green-cool-50v}",
-      "type": "color"
-    },
-    "success-darker": {
-      "value": "{green-cool-60v}",
-      "type": "color"
-    },
-    "info-family": {
-      "value": "{gray-warm}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "info-lighter": {
-      "value": "{gray-warm-4}",
-      "type": "color"
-    },
-    "info-light": {
-      "value": "{gray-warm-20}",
-      "type": "color"
-    },
-    "info": {
-      "value": "{gray-warm-50}",
-      "type": "color"
-    },
-    "info-dark": {
-      "value": "{gray-warm-60}",
-      "type": "color"
-    },
-    "info-darker": {
-      "value": "{gray-warm-70}",
-      "type": "color"
-    },
-    "emergency": {
-      "value": "{orange-warm-50v}",
-      "type": "color"
-    },
-    "emergency-dark": {
-      "value": "{orange-warm-80v}",
-      "type": "color"
-    },
-    "disabled-family": {
-      "value": "{gray-warm}",
-      "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
-    },
-    "disabled-light": {
-      "value": "{gray-warm-10}",
-      "type": "color"
-    },
-    "disabled": {
-      "value": "{gray-warm-20}",
-      "type": "color"
-    },
-    "disabled-dark": {
-      "value": "{gray-warm-30}",
-      "type": "color"
-    },
-    "link-color": {
-      "value": "{primary}",
-      "type": "color"
-    },
-    "link-visited-color": {
-      "value": "{ink}",
-      "type": "color"
-    }
-  },
   "system": {
     "red-cool-5": {
       "value": "#f8eff1",
@@ -2582,10 +2293,40 @@
       "value": "{base-ink}",
       "type": "color"
     },
-    "base": {
+    "grid-base-spacing": {
       "value": "8px",
       "type": "spacing",
       "description": "USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens."
+    },
+    "grid-base-other": {
+      "value": "8px",
+      "type": "other",
+      "description": "USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens."
+    },
+    "grid-base-sizing": {
+      "value": "8px",
+      "type": "sizing",
+      "description": "USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens."
+    },
+    "grid-base-border-width": {
+      "value": "8px",
+      "type": "borderWidth",
+      "description": "USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens."
+    },
+    "grid-base-dimension": {
+      "value": "8px",
+      "type": "dimension",
+      "description": "USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens."
+    },
+    "focus-width": {
+      "value": "0.5",
+      "type": "sizing",
+      "description": "The width of the focus outline."
+    },
+    "focus-color": {
+      "value": "{blue-40v}",
+      "type": "color",
+      "description": "The color of the focus outline."
     }
   },
   "proxy": {
@@ -2595,12 +2336,312 @@
       "description": "This proxy token makes sure that the system token maps correctly to the settings variable in Figma. For Figma only."
     }
   },
+  "theme": {
+    "focus-color": {
+      "value": "{gold-30v}",
+      "type": "color",
+      "description": "The color of the focus outline."
+    },
+    "base-family": {
+      "value": "{gray-warm}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "base-lightest": {
+      "value": "{gray-warm-4}",
+      "type": "color"
+    },
+    "base-lighter": {
+      "value": "{gray-warm-10}",
+      "type": "color"
+    },
+    "base-light": {
+      "value": "{gray-warm-30}",
+      "type": "color"
+    },
+    "base": {
+      "value": "{gray-warm-50}",
+      "type": "color"
+    },
+    "base-dark": {
+      "value": "{gray-warm-60}",
+      "type": "color"
+    },
+    "base-darker": {
+      "value": "{gray-warm-70}",
+      "type": "color"
+    },
+    "base-darkest": {
+      "value": "{gray-warm-90}",
+      "type": "color"
+    },
+    "base-ink": {
+      "value": "{gray-warm-90}",
+      "type": "color"
+    },
+    "primary-family": {
+      "value": "{mint}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "primary-lightest": {
+      "value": "{mint-cool-5}",
+      "type": "color"
+    },
+    "primary-lighter": {
+      "value": "{mint-10}",
+      "type": "color"
+    },
+    "primary-light": {
+      "value": "{mint-30}",
+      "type": "color"
+    },
+    "primary": {
+      "value": "{mint-50}",
+      "type": "color"
+    },
+    "primary-vivid": {
+      "value": "{mint-40v}",
+      "type": "color"
+    },
+    "primary-dark": {
+      "value": "{mint-cool-70v}",
+      "type": "color"
+    },
+    "primary-darker": {
+      "value": "{mint-cool-80v}",
+      "type": "color"
+    },
+    "secondary-family": {
+      "value": "{magenta-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "secondary-lighter": {
+      "value": "{magenta-10v}",
+      "type": "color"
+    },
+    "secondary-light": {
+      "value": "{magenta-30v}",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "{magenta-50v}",
+      "type": "color"
+    },
+    "secondary-vivid": {
+      "value": "{magenta-40v}",
+      "type": "color"
+    },
+    "secondary-dark": {
+      "value": "{magenta-60v}",
+      "type": "color"
+    },
+    "secondary-darker": {
+      "value": "{magenta-70v}",
+      "type": "color"
+    },
+    "accent-warm-family": {
+      "value": "{red-warm-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "accent-warm-lighter": {
+      "value": "{red-warm-10v}",
+      "type": "color"
+    },
+    "accent-warm-light": {
+      "value": "{red-warm-20v}",
+      "type": "color"
+    },
+    "accent-warm": {
+      "value": "{red-warm-30v}",
+      "type": "color"
+    },
+    "accent-warm-dark": {
+      "value": "{red-warm-50v}",
+      "type": "color"
+    },
+    "accent-warm-darker": {
+      "value": "{red-warm-60v}",
+      "type": "color"
+    },
+    "accent-cool-family": {
+      "value": "{green-cool-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "accent-cool-lighter": {
+      "value": "{green-cool-5v}",
+      "type": "color"
+    },
+    "accent-cool-light": {
+      "value": "{green-cool-20v}",
+      "type": "color"
+    },
+    "accent-cool": {
+      "value": "{green-cool-30v}",
+      "type": "color"
+    },
+    "accent-cool-dark": {
+      "value": "{green-cool-40v}",
+      "type": "color"
+    },
+    "accent-cool-darker": {
+      "value": "{green-cool-60v}",
+      "type": "color"
+    },
+    "error-family": {
+      "value": "{orange-warm-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "error-lighter": {
+      "value": "{orange-warm-10v}",
+      "type": "color"
+    },
+    "error-light": {
+      "value": "{orange-warm-30v}",
+      "type": "color"
+    },
+    "error": {
+      "value": "{orange-warm-50v}",
+      "type": "color"
+    },
+    "error-dark": {
+      "value": "{orange-warm-60v}",
+      "type": "color"
+    },
+    "error-darker": {
+      "value": "{orange-warm-70v}",
+      "type": "color"
+    },
+    "warning-family": {
+      "value": "{gold-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "warning-lighter": {
+      "value": "{gold-5v}",
+      "type": "color"
+    },
+    "warning-light": {
+      "value": "{gold-10v}",
+      "type": "color"
+    },
+    "warning": {
+      "value": "{gold-20v}",
+      "type": "color"
+    },
+    "warning-dark": {
+      "value": "{gold-30v}",
+      "type": "color"
+    },
+    "warning-darker": {
+      "value": "{gold-50v}",
+      "type": "color"
+    },
+    "success-family": {
+      "value": "{green-cool-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "success-lighter": {
+      "value": "{green-cool-5v}",
+      "type": "color"
+    },
+    "success-light": {
+      "value": "{green-cool-20v}",
+      "type": "color"
+    },
+    "success": {
+      "value": "{green-cool-40v}",
+      "type": "color"
+    },
+    "success-dark": {
+      "value": "{green-cool-50v}",
+      "type": "color"
+    },
+    "success-darker": {
+      "value": "{green-cool-60v}",
+      "type": "color"
+    },
+    "info-family": {
+      "value": "{gray-warm}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "info-lighter": {
+      "value": "{gray-warm-4}",
+      "type": "color"
+    },
+    "info-light": {
+      "value": "{gray-warm-20}",
+      "type": "color"
+    },
+    "info": {
+      "value": "{gray-warm-50}",
+      "type": "color"
+    },
+    "info-dark": {
+      "value": "{gray-warm-60}",
+      "type": "color"
+    },
+    "info-darker": {
+      "value": "{gray-warm-70}",
+      "type": "color"
+    },
+    "emergency": {
+      "value": "{orange-warm-50v}",
+      "type": "color"
+    },
+    "emergency-dark": {
+      "value": "{orange-warm-80v}",
+      "type": "color"
+    },
+    "disabled-family": {
+      "value": "{gray-warm}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "disabled-light": {
+      "value": "{gray-warm-10}",
+      "type": "color"
+    },
+    "disabled": {
+      "value": "{gray-warm-20}",
+      "type": "color"
+    },
+    "disabled-dark": {
+      "value": "{gray-warm-30}",
+      "type": "color"
+    },
+    "link-color": {
+      "value": "{primary}",
+      "type": "color"
+    },
+    "link-visited-color": {
+      "value": "{ink}",
+      "type": "color"
+    },
+    "focus": {
+      "value": {
+        "x": "0",
+        "y": "0",
+        "blur": "0",
+        "spread": "{grid-base-sizing} * {focus-width}",
+        "color": "{focus-color}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "theme",
       "system",
-      "proxy"
+      "proxy",
+      "theme"
     ]
   }
 }
