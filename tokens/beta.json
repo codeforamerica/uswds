@@ -1,6 +1,294 @@
 {
-  "Theme": {},
-  "System": {
+  "theme": {
+    "focus-color": {
+      "value": "{gold-30v}",
+      "type": "color",
+      "description": "The color of the focus outline."
+    },
+    "base-family": {
+      "value": "{gray-warm}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "base-lightest": {
+      "value": "{gray-warm-4}",
+      "type": "color"
+    },
+    "base-lighter": {
+      "value": "{gray-warm-10}",
+      "type": "color"
+    },
+    "base-light": {
+      "value": "{gray-warm-30}",
+      "type": "color"
+    },
+    "base": {
+      "value": "{gray-warm-50}",
+      "type": "color"
+    },
+    "base-dark": {
+      "value": "{gray-warm-60}",
+      "type": "color"
+    },
+    "base-darker": {
+      "value": "{gray-warm-70}",
+      "type": "color"
+    },
+    "base-darkest": {
+      "value": "{gray-warm-90}",
+      "type": "color"
+    },
+    "base-ink": {
+      "value": "{gray-warm-90}",
+      "type": "color"
+    },
+    "primary-family": {
+      "value": "{mint}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "primary-lightest": {
+      "value": "{mint-cool-5}",
+      "type": "color"
+    },
+    "primary-lighter": {
+      "value": "{mint-10}",
+      "type": "color"
+    },
+    "primary-light": {
+      "value": "{mint-30}",
+      "type": "color"
+    },
+    "primary": {
+      "value": "{mint-50}",
+      "type": "color"
+    },
+    "primary-vivid": {
+      "value": "{mint-40v}",
+      "type": "color"
+    },
+    "primary-dark": {
+      "value": "{mint-cool-70v}",
+      "type": "color"
+    },
+    "primary-darker": {
+      "value": "{mint-cool-80v}",
+      "type": "color"
+    },
+    "secondary-family": {
+      "value": "{magenta-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "secondary-lighter": {
+      "value": "{magenta-10v}",
+      "type": "color"
+    },
+    "secondary-light": {
+      "value": "{magenta-30v}",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "{magenta-50v}",
+      "type": "color"
+    },
+    "secondary-vivid": {
+      "value": "{magenta-40v}",
+      "type": "color"
+    },
+    "secondary-dark": {
+      "value": "{magenta-60v}",
+      "type": "color"
+    },
+    "secondary-darker": {
+      "value": "{magenta-70v}",
+      "type": "color"
+    },
+    "accent-warm-family": {
+      "value": "{red-warm-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "accent-warm-lighter": {
+      "value": "{red-warm-10v}",
+      "type": "color"
+    },
+    "accent-warm-light": {
+      "value": "{red-warm-20v}",
+      "type": "color"
+    },
+    "accent-warm": {
+      "value": "{red-warm-30v}",
+      "type": "color"
+    },
+    "accent-warm-dark": {
+      "value": "{red-warm-50v}",
+      "type": "color"
+    },
+    "accent-warm-darker": {
+      "value": "{red-warm-60v}",
+      "type": "color"
+    },
+    "accent-cool-family": {
+      "value": "{green-cool-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "accent-cool-lighter": {
+      "value": "{green-cool-5v}",
+      "type": "color"
+    },
+    "accent-cool-light": {
+      "value": "{green-cool-20v}",
+      "type": "color"
+    },
+    "accent-cool": {
+      "value": "{green-cool-30v}",
+      "type": "color"
+    },
+    "accent-cool-dark": {
+      "value": "{green-cool-40v}",
+      "type": "color"
+    },
+    "accent-cool-darker": {
+      "value": "{green-cool-60v}",
+      "type": "color"
+    },
+    "error-family": {
+      "value": "{orange-warm-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "error-lighter": {
+      "value": "{orange-warm-10v}",
+      "type": "color"
+    },
+    "error-light": {
+      "value": "{orange-warm-30v}",
+      "type": "color"
+    },
+    "error": {
+      "value": "{orange-warm-50v}",
+      "type": "color"
+    },
+    "error-dark": {
+      "value": "{orange-warm-60v}",
+      "type": "color"
+    },
+    "error-darker": {
+      "value": "{orange-warm-70v}",
+      "type": "color"
+    },
+    "warning-family": {
+      "value": "{gold-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "warning-lighter": {
+      "value": "{gold-5v}",
+      "type": "color"
+    },
+    "warning-light": {
+      "value": "{gold-10v}",
+      "type": "color"
+    },
+    "warning": {
+      "value": "{gold-20v}",
+      "type": "color"
+    },
+    "warning-dark": {
+      "value": "{gold-30v}",
+      "type": "color"
+    },
+    "warning-darker": {
+      "value": "{gold-50v}",
+      "type": "color"
+    },
+    "success-family": {
+      "value": "{green-cool-vivid}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "success-lighter": {
+      "value": "{green-cool-5v}",
+      "type": "color"
+    },
+    "success-light": {
+      "value": "{green-cool-20v}",
+      "type": "color"
+    },
+    "success": {
+      "value": "{green-cool-40v}",
+      "type": "color"
+    },
+    "success-dark": {
+      "value": "{green-cool-50v}",
+      "type": "color"
+    },
+    "success-darker": {
+      "value": "{green-cool-60v}",
+      "type": "color"
+    },
+    "info-family": {
+      "value": "{gray-warm}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "info-lighter": {
+      "value": "{gray-warm-4}",
+      "type": "color"
+    },
+    "info-light": {
+      "value": "{gray-warm-20}",
+      "type": "color"
+    },
+    "info": {
+      "value": "{gray-warm-50}",
+      "type": "color"
+    },
+    "info-dark": {
+      "value": "{gray-warm-60}",
+      "type": "color"
+    },
+    "info-darker": {
+      "value": "{gray-warm-70}",
+      "type": "color"
+    },
+    "emergency": {
+      "value": "{orange-warm-50v}",
+      "type": "color"
+    },
+    "emergency-dark": {
+      "value": "{orange-warm-80v}",
+      "type": "color"
+    },
+    "disabled-family": {
+      "value": "{gray-warm}",
+      "type": "color",
+      "description": "Family tokens designate the color set and do not map to explicit values."
+    },
+    "disabled-light": {
+      "value": "{gray-warm-10}",
+      "type": "color"
+    },
+    "disabled": {
+      "value": "{gray-warm-20}",
+      "type": "color"
+    },
+    "disabled-dark": {
+      "value": "{gray-warm-30}",
+      "type": "color"
+    },
+    "link-color": {
+      "value": "{primary}",
+      "type": "color"
+    },
+    "link-visited-color": {
+      "value": "{ink}",
+      "type": "color"
+    }
+  },
+  "system": {
     "red-cool-5": {
       "value": "#f8eff1",
       "type": "color"
@@ -185,92 +473,92 @@
       "type": "color",
       "description": "1F1C18"
     },
-    "red-warm-vivid-5v": {
+    "red-warm-5v": {
       "value": "#fff5ee",
       "type": "color",
       "description": "FFF5EE"
     },
-    "red-warm-vivid-10v": {
+    "red-warm-10v": {
       "value": "#fce1d4",
       "type": "color",
       "description": "FCE1D4"
     },
-    "red-warm-vivid-20v": {
+    "red-warm-20v": {
       "value": "#f6bd9c",
       "type": "color",
       "description": "F6BD9C"
     },
-    "red-warm-vivid-30v": {
+    "red-warm-30v": {
       "value": "#f39268",
       "type": "color",
       "description": "F39268"
     },
-    "red-warm-vivid-40v": {
+    "red-warm-40v": {
       "value": "#ef5e25",
       "type": "color",
       "description": "EF5E25"
     },
-    "red-warm-vivid-50v": {
+    "red-warm-50v": {
       "value": "#d54309",
       "type": "color",
       "description": "D54309"
     },
-    "red-warm-vivid-60v": {
+    "red-warm-60v": {
       "value": "#9c3d10",
       "type": "color",
       "description": "9C3D10"
     },
-    "red-warm-vivid-70v": {
+    "red-warm-70v": {
       "value": "#63340f",
       "type": "color",
       "description": "63340F"
     },
-    "red-warm-vivid-80v": {
+    "red-warm-80v": {
       "value": "#3e2a1e",
       "type": "color",
       "description": "3E2A1E"
     },
-    "red-vivid-5v": {
+    "red-5v": {
       "value": "#fff3f2",
       "type": "color",
       "description": "FFF3F2"
     },
-    "red-vivid-10v": {
+    "red-10v": {
       "value": "#fde0db",
       "type": "color",
       "description": "FDE0DB"
     },
-    "red-vivid-20v": {
+    "red-20v": {
       "value": "#fdb8ae",
       "type": "color",
       "description": "FDB8AE"
     },
-    "red-vivid-30v": {
+    "red-30v": {
       "value": "#ff8d7b",
       "type": "color",
       "description": "FF8D7B"
     },
-    "red-vivid-40v": {
+    "red-40v": {
       "value": "#fb5a47",
       "type": "color",
       "description": "FB5A47"
     },
-    "red-vivid-50v": {
+    "red-50v": {
       "value": "#e52207",
       "type": "color",
       "description": "E52207"
     },
-    "red-vivid-60v": {
+    "red-60v": {
       "value": "#b50909",
       "type": "color",
       "description": "B50909"
     },
-    "red-vivid-70v": {
+    "red-70v": {
       "value": "#8b0a03",
       "type": "color",
       "description": "8B0A03"
     },
-    "red-vivid-80v": {
+    "red-80v": {
       "value": "#5c1111",
       "type": "color",
       "description": "5C1111"
@@ -325,47 +613,47 @@
       "type": "color",
       "description": "1C1615"
     },
-    "orange-warm-vivid-10v": {
+    "orange-warm-10v": {
       "value": "#ffe2d1",
       "type": "color",
       "description": "FFE2D1"
     },
-    "orange-warm-vivid-20v": {
+    "orange-warm-20v": {
       "value": "#fbbaa7",
       "type": "color",
       "description": "FBBAA7"
     },
-    "orange-warm-vivid-30v": {
+    "orange-warm-30v": {
       "value": "#fc906d",
       "type": "color",
       "description": "FC906D"
     },
-    "orange-warm-vivid-40v": {
+    "orange-warm-40v": {
       "value": "#ff580a",
       "type": "color",
       "description": "FF580A"
     },
-    "orange-warm-vivid-50v": {
+    "orange-warm-50v": {
       "value": "#cf4900",
       "type": "color",
       "description": "CF4900"
     },
-    "orange-warm-vivid-5v": {
+    "orange-warm-5v": {
       "value": "#fff3ea",
       "type": "color",
       "description": "FFF3EA"
     },
-    "orange-warm-vivid-60v": {
+    "orange-warm-60v": {
       "value": "#a72f10",
       "type": "color",
       "description": "A72F10"
     },
-    "orange-warm-vivid-70v": {
+    "orange-warm-70v": {
       "value": "#782312",
       "type": "color",
       "description": "782312"
     },
-    "orange-warm-vivid-80v": {
+    "orange-warm-80v": {
       "value": "#3d231d",
       "type": "color",
       "description": "3D231D"
@@ -420,47 +708,47 @@
       "type": "color",
       "description": "1B1614"
     },
-    "orange-vivid-5v": {
+    "orange-5v": {
       "value": "#fef2e4",
       "type": "color",
       "description": "FEF2E4"
     },
-    "orange-vivid-10v": {
+    "orange-10v": {
       "value": "#fce2c5",
       "type": "color",
       "description": "FCE2C5"
     },
-    "orange-vivid-20v": {
+    "orange-20v": {
       "value": "#ffbc78",
       "type": "color",
       "description": "FFBC78"
     },
-    "orange-vivid-30v": {
+    "orange-30v": {
       "value": "#fa9441",
       "type": "color",
       "description": "FA9441"
     },
-    "orange-vivid-40v": {
+    "orange-40v": {
       "value": "#e66f0e",
       "type": "color",
       "description": "E66F0E"
     },
-    "orange-vivid-50v": {
+    "orange-50v": {
       "value": "#c05600",
       "type": "color",
       "description": "C05600"
     },
-    "orange-vivid-60v": {
+    "orange-60v": {
       "value": "#8c471c",
       "type": "color",
       "description": "8C471C"
     },
-    "orange-vivid-70v": {
+    "orange-70v": {
       "value": "#5f3617",
       "type": "color",
       "description": "5F3617"
     },
-    "orange-vivid-80v": {
+    "orange-80v": {
       "value": "#352313",
       "type": "color",
       "description": "352313"
@@ -515,47 +803,47 @@
       "type": "color",
       "description": "191714"
     },
-    "gold-vivid-10v": {
+    "gold-10v": {
       "value": "#ffe396",
       "type": "color",
       "description": "FFE396"
     },
-    "gold-vivid-20v": {
+    "gold-20v": {
       "value": "#ffbe2e",
       "type": "color",
       "description": "FFBE2E"
     },
-    "gold-vivid-30v": {
+    "gold-30v": {
       "value": "#e5a000",
       "type": "color",
       "description": "E5A000"
     },
-    "gold-vivid-40v": {
+    "gold-40v": {
       "value": "#c2850c",
       "type": "color",
       "description": "C2850C"
     },
-    "gold-vivid-50v": {
+    "gold-50v": {
       "value": "#936f38",
       "type": "color",
       "description": "936F38"
     },
-    "gold-vivid-5v": {
+    "gold-5v": {
       "value": "#fef0c8",
       "type": "color",
       "description": "FEF0C8"
     },
-    "gold-vivid-60v": {
+    "gold-60v": {
       "value": "#7a591a",
       "type": "color",
       "description": "7A591A"
     },
-    "gold-vivid-70v": {
+    "gold-70v": {
       "value": "#5c410a",
       "type": "color",
       "description": "5C410A"
     },
-    "gold-vivid-80v": {
+    "gold-80v": {
       "value": "#3b2b15",
       "type": "color",
       "description": "3B2B15"
@@ -610,47 +898,47 @@
       "type": "color",
       "description": "1A1614"
     },
-    "yellow-vivid-10v": {
+    "yellow-10v": {
       "value": "#fee685",
       "type": "color",
       "description": "FEE685"
     },
-    "yellow-vivid-20v": {
+    "yellow-20v": {
       "value": "#face00",
       "type": "color",
       "description": "FACE00"
     },
-    "yellow-vivid-30v": {
+    "yellow-30v": {
       "value": "#ddaa01",
       "type": "color",
       "description": "DDAA01"
     },
-    "yellow-vivid-40v": {
+    "yellow-40v": {
       "value": "#b38c00",
       "type": "color",
       "description": "B38C00"
     },
-    "yellow-vivid-50v": {
+    "yellow-50v": {
       "value": "#947100",
       "type": "color",
       "description": "947100"
     },
-    "yellow-vivid-5v": {
+    "yellow-5v": {
       "value": "#fff5c2",
       "type": "color",
       "description": "FFF5C2"
     },
-    "yellow-vivid-60v": {
+    "yellow-60v": {
       "value": "#776017",
       "type": "color",
       "description": "776017"
     },
-    "yellow-vivid-70v": {
+    "yellow-70v": {
       "value": "#5c4809",
       "type": "color",
       "description": "5C4809"
     },
-    "yellow-vivid-80v": {
+    "yellow-80v": {
       "value": "#422d19",
       "type": "color",
       "description": "422D19"
@@ -705,47 +993,47 @@
       "type": "color",
       "description": "171712"
     },
-    "green-warm-vivid-5v": {
+    "green-warm-5v": {
       "value": "#f5fbc1",
       "type": "color",
       "description": "F5FBC1"
     },
-    "green-warm-vivid-10v": {
+    "green-warm-10v": {
       "value": "#e7f434",
       "type": "color",
       "description": "E7F434"
     },
-    "green-warm-vivid-20v": {
+    "green-warm-20v": {
       "value": "#c5d30a",
       "type": "color",
       "description": "C5D30A"
     },
-    "green-warm-vivid-30v": {
+    "green-warm-30v": {
       "value": "#a3b72c",
       "type": "color",
       "description": "A3B72C"
     },
-    "green-warm-vivid-40v": {
+    "green-warm-40v": {
       "value": "#7e9c1d",
       "type": "color",
       "description": "7E9C1D"
     },
-    "green-warm-vivid-50v": {
+    "green-warm-50v": {
       "value": "#6a7d00",
       "type": "color",
       "description": "6A7D00"
     },
-    "green-warm-vivid-60v": {
+    "green-warm-60v": {
       "value": "#5a6613",
       "type": "color",
       "description": "5A6613"
     },
-    "green-warm-vivid-70v": {
+    "green-warm-70v": {
       "value": "#4b4e10",
       "type": "color",
       "description": "4B4E10"
     },
-    "green-warm-vivid-80v": {
+    "green-warm-80v": {
       "value": "#38380b",
       "type": "color",
       "description": "38380B"
@@ -800,47 +1088,47 @@
       "type": "color",
       "description": "161814"
     },
-    "green-vivid-5v": {
+    "green-5v": {
       "value": "#ddf9c7",
       "type": "color",
       "description": "DDF9C7"
     },
-    "green-vivid-10v": {
+    "green-10v": {
       "value": "#c5ee93",
       "type": "color",
       "description": "C5EE93"
     },
-    "green-vivid-20v": {
+    "green-20v": {
       "value": "#98d035",
       "type": "color",
       "description": "98D035"
     },
-    "green-vivid-30v": {
+    "green-30v": {
       "value": "#7fb135",
       "type": "color",
       "description": "7FB135"
     },
-    "green-vivid-40v": {
+    "green-40v": {
       "value": "#719f2a",
       "type": "color",
       "description": "719F2A"
     },
-    "green-vivid-50v": {
+    "green-50v": {
       "value": "#538200",
       "type": "color",
       "description": "538200"
     },
-    "green-vivid-60v": {
+    "green-60v": {
       "value": "#466c04",
       "type": "color",
       "description": "466C04"
     },
-    "green-vivid-70v": {
+    "green-70v": {
       "value": "#2f4a0b",
       "type": "color",
       "description": "2F4A0B"
     },
-    "green-vivid-80v": {
+    "green-80v": {
       "value": "#243413",
       "type": "color",
       "description": "243413"
@@ -895,47 +1183,47 @@
       "type": "color",
       "description": "1A1F1A"
     },
-    "green-cool-vivid-5v": {
+    "green-cool-5v": {
       "value": "#e3f5e1",
       "type": "color",
       "description": "E3F5E1"
     },
-    "green-cool-vivid-10v": {
+    "green-cool-10v": {
       "value": "#b7f5bd",
       "type": "color",
       "description": "B7F5BD"
     },
-    "green-cool-vivid-20v": {
+    "green-cool-20v": {
       "value": "#70e17b",
       "type": "color",
       "description": "70E17B"
     },
-    "green-cool-vivid-30v": {
+    "green-cool-30v": {
       "value": "#21c834",
       "type": "color",
       "description": "21C834"
     },
-    "green-cool-vivid-40v": {
+    "green-cool-40v": {
       "value": "#00a91c",
       "type": "color",
       "description": "00A91C"
     },
-    "green-cool-vivid-50v": {
+    "green-cool-50v": {
       "value": "#008817",
       "type": "color",
       "description": "008817"
     },
-    "green-cool-vivid-60v": {
+    "green-cool-60v": {
       "value": "#216e1f",
       "type": "color",
       "description": "216E1F"
     },
-    "green-cool-vivid-70v": {
+    "green-cool-70v": {
       "value": "#154c21",
       "type": "color",
       "description": "154C21"
     },
-    "green-cool-vivid-80v": {
+    "green-cool-80v": {
       "value": "#19311e",
       "type": "color",
       "description": "19311E"
@@ -990,47 +1278,47 @@
       "type": "color",
       "description": "0D1A12"
     },
-    "mint-vivid-5v": {
+    "mint-5v": {
       "value": "#c9fbeb",
       "type": "color",
       "description": "C9FBEB"
     },
-    "mint-vivid-10v": {
+    "mint-10v": {
       "value": "#83fcd4",
       "type": "color",
       "description": "83FCD4"
     },
-    "mint-vivid-20v": {
+    "mint-20v": {
       "value": "#0ceda6",
       "type": "color",
       "description": "0CEDA6"
     },
-    "mint-vivid-30v": {
+    "mint-30v": {
       "value": "#04c585",
       "type": "color",
       "description": "04C585"
     },
-    "mint-vivid-40v": {
+    "mint-40v": {
       "value": "#00a871",
       "type": "color",
       "description": "00A871"
     },
-    "mint-vivid-50v": {
+    "mint-50v": {
       "value": "#008659",
       "type": "color",
       "description": "008659"
     },
-    "mint-vivid-60v": {
+    "mint-60v": {
       "value": "#146947",
       "type": "color",
       "description": "146947"
     },
-    "mint-vivid-70v": {
+    "mint-70v": {
       "value": "#0c4e29",
       "type": "color",
       "description": "0C4E29"
     },
-    "mint-vivid-80v": {
+    "mint-80v": {
       "value": "#0d351e",
       "type": "color",
       "description": "0D351E"
@@ -1085,47 +1373,47 @@
       "type": "color",
       "description": "111818"
     },
-    "mint-cool-vivid-20v": {
+    "mint-cool-20v": {
       "value": "#29e1cb",
       "type": "color",
       "description": "29E1CB"
     },
-    "mint-cool-vivid-50v": {
+    "mint-cool-50v": {
       "value": "#008480",
       "type": "color",
       "description": "008480"
     },
-    "mint-cool-vivid-5v": {
+    "mint-cool-5v": {
       "value": "#d5fbf3",
       "type": "color",
       "description": "D5FBF3"
     },
-    "mint-cool-vivid-60v": {
+    "mint-cool-60v": {
       "value": "#0f6460",
       "type": "color",
       "description": "0F6460"
     },
-    "mint-cool-vivid-70v": {
+    "mint-cool-70v": {
       "value": "#0b4b3f",
       "type": "color",
       "description": "0B4B3F"
     },
-    "mint-cool-vivid-80v": {
+    "mint-cool-80v": {
       "value": "#123131",
       "type": "color",
       "description": "123131"
     },
-    "mint-cool-vivid-10v": {
+    "mint-cool-10v": {
       "value": "#7efbe1",
       "type": "color",
       "description": "7EFBE1"
     },
-    "mint-cool-vivid-30v": {
+    "mint-cool-30v": {
       "value": "#1dc2ae",
       "type": "color",
       "description": "1DC2AE"
     },
-    "mint-cool-vivid-40v": {
+    "mint-cool-40v": {
       "value": "#00a398",
       "type": "color",
       "description": "00A398"
@@ -1180,47 +1468,47 @@
       "type": "color",
       "description": "111819"
     },
-    "cyan-vivid-5v": {
+    "cyan-5v": {
       "value": "#e5faff",
       "type": "color",
       "description": "E5FAFF"
     },
-    "cyan-vivid-10v": {
+    "cyan-10v": {
       "value": "#a8f2ff",
       "type": "color",
       "description": "A8F2FF"
     },
-    "cyan-vivid-20v": {
+    "cyan-20v": {
       "value": "#52daf2",
       "type": "color",
       "description": "52DAF2"
     },
-    "cyan-vivid-30v": {
+    "cyan-30v": {
       "value": "#00bde3",
       "type": "color",
       "description": "00BDE3"
     },
-    "cyan-vivid-40v": {
+    "cyan-40v": {
       "value": "#009ec1",
       "type": "color",
       "description": "009EC1"
     },
-    "cyan-vivid-50v": {
+    "cyan-50v": {
       "value": "#0081a1",
       "type": "color",
       "description": "0081A1"
     },
-    "cyan-vivid-60v": {
+    "cyan-60v": {
       "value": "#00687d",
       "type": "color",
       "description": "00687D"
     },
-    "cyan-vivid-70v": {
+    "cyan-70v": {
       "value": "#0e4f5c",
       "type": "color",
       "description": "0E4F5C"
     },
-    "cyan-vivid-80v": {
+    "cyan-80v": {
       "value": "#093b44",
       "type": "color",
       "description": "093B44"
@@ -1275,47 +1563,47 @@
       "type": "color",
       "description": "0F191C"
     },
-    "blue-cool-vivid-5v": {
+    "blue-cool-5v": {
       "value": "#e1f3f8",
       "type": "color",
       "description": "E1F3F8"
     },
-    "blue-cool-vivid-10v": {
+    "blue-cool-10v": {
       "value": "#c3ebfa",
       "type": "color",
       "description": "C3EBFA"
     },
-    "blue-cool-vivid-20v": {
+    "blue-cool-20v": {
       "value": "#97d4ea",
       "type": "color",
       "description": "97D4EA"
     },
-    "blue-cool-vivid-30v": {
+    "blue-cool-30v": {
       "value": "#59b9de",
       "type": "color",
       "description": "59B9DE"
     },
-    "blue-cool-vivid-40v": {
+    "blue-cool-40v": {
       "value": "#28a0cb",
       "type": "color",
       "description": "28A0CB"
     },
-    "blue-cool-vivid-50v": {
+    "blue-cool-50v": {
       "value": "#0d7ea2",
       "type": "color",
       "description": "0D7EA2"
     },
-    "blue-cool-vivid-60v": {
+    "blue-cool-60v": {
       "value": "#07648d",
       "type": "color",
       "description": "07648D"
     },
-    "blue-cool-vivid-70v": {
+    "blue-cool-70v": {
       "value": "#074b69",
       "type": "color",
       "description": "074B69"
     },
-    "blue-cool-vivid-80v": {
+    "blue-cool-80v": {
       "value": "#002d3f",
       "type": "color",
       "description": "002D3F"
@@ -1370,47 +1658,47 @@
       "type": "color",
       "description": "11181D"
     },
-    "blue-vivid-5v": {
+    "blue-5v": {
       "value": "#e8f5ff",
       "type": "color",
       "description": "E8F5FF"
     },
-    "blue-vivid-10v": {
+    "blue-10v": {
       "value": "#cfe8ff",
       "type": "color",
       "description": "CFE8FF"
     },
-    "blue-vivid-20v": {
+    "blue-20v": {
       "value": "#a1d3ff",
       "type": "color",
       "description": "A1D3FF"
     },
-    "blue-vivid-30v": {
+    "blue-30v": {
       "value": "#58b4ff",
       "type": "color",
       "description": "58B4FF"
     },
-    "blue-vivid-40v": {
+    "blue-40v": {
       "value": "#2491ff",
       "type": "color",
       "description": "2491FF"
     },
-    "blue-vivid-50v": {
+    "blue-50v": {
       "value": "#0076d6",
       "type": "color",
       "description": "0076D6"
     },
-    "blue-vivid-60v": {
+    "blue-60v": {
       "value": "#005ea2",
       "type": "color",
       "description": "005EA2"
     },
-    "blue-vivid-70v": {
+    "blue-70v": {
       "value": "#0b4778",
       "type": "color",
       "description": "0B4778"
     },
-    "blue-vivid-80v": {
+    "blue-80v": {
       "value": "#112f4e",
       "type": "color",
       "description": "112F4E"
@@ -1465,47 +1753,47 @@
       "type": "color",
       "description": "13171F"
     },
-    "blue-warm-vivid-5v": {
+    "blue-warm-5v": {
       "value": "#edf5ff",
       "type": "color",
       "description": "EDF5FF"
     },
-    "blue-warm-vivid-10v": {
+    "blue-warm-10v": {
       "value": "#d4e5ff",
       "type": "color",
       "description": "D4E5FF"
     },
-    "blue-warm-vivid-20v": {
+    "blue-warm-20v": {
       "value": "#adcdff",
       "type": "color",
       "description": "ADCDFF"
     },
-    "blue-warm-vivid-30v": {
+    "blue-warm-30v": {
       "value": "#81aefc",
       "type": "color",
       "description": "81AEFC"
     },
-    "blue-warm-vivid-40v": {
+    "blue-warm-40v": {
       "value": "#5994f6",
       "type": "color",
       "description": "5994F6"
     },
-    "blue-warm-vivid-50v": {
+    "blue-warm-50v": {
       "value": "#2672de",
       "type": "color",
       "description": "2672DE"
     },
-    "blue-warm-vivid-60v": {
+    "blue-warm-60v": {
       "value": "#0050d8",
       "type": "color",
       "description": "0050D8"
     },
-    "blue-warm-vivid-70v": {
+    "blue-warm-70v": {
       "value": "#1a4480",
       "type": "color",
       "description": "1A4480"
     },
-    "blue-warm-vivid-80v": {
+    "blue-warm-80v": {
       "value": "#162e51",
       "type": "color",
       "description": "162E51"
@@ -1560,47 +1848,47 @@
       "type": "color",
       "description": "151622"
     },
-    "indigo-cool-vivid-5v": {
+    "indigo-cool-5v": {
       "value": "#edf0ff",
       "type": "color",
       "description": "EDF0FF"
     },
-    "indigo-cool-vivid-10v": {
+    "indigo-cool-10v": {
       "value": "#dee5ff",
       "type": "color",
       "description": "DEE5FF"
     },
-    "indigo-cool-vivid-20v": {
+    "indigo-cool-20v": {
       "value": "#b8c8ff",
       "type": "color",
       "description": "B8C8FF"
     },
-    "indigo-cool-vivid-30v": {
+    "indigo-cool-30v": {
       "value": "#94adff",
       "type": "color",
       "description": "94ADFF"
     },
-    "indigo-cool-vivid-40v": {
+    "indigo-cool-40v": {
       "value": "#628ef4",
       "type": "color",
       "description": "628EF4"
     },
-    "indigo-cool-vivid-50v": {
+    "indigo-cool-50v": {
       "value": "#4866ff",
       "type": "color",
       "description": "4866FF"
     },
-    "indigo-cool-vivid-60v": {
+    "indigo-cool-60v": {
       "value": "#3e4ded",
       "type": "color",
       "description": "3E4DED"
     },
-    "indigo-cool-vivid-70v": {
+    "indigo-cool-70v": {
       "value": "#222fbf",
       "type": "color",
       "description": "222FBF"
     },
-    "indigo-cool-vivid-80v": {
+    "indigo-cool-80v": {
       "value": "#1b2b85",
       "type": "color",
       "description": "1B2B85"
@@ -1655,47 +1943,47 @@
       "type": "color",
       "description": "16171F"
     },
-    "indigo-vivid-5v": {
+    "indigo-5v": {
       "value": "#f0f0ff",
       "type": "color",
       "description": "F0F0FF"
     },
-    "indigo-vivid-10v": {
+    "indigo-10v": {
       "value": "#e0e0ff",
       "type": "color",
       "description": "E0E0FF"
     },
-    "indigo-vivid-20v": {
+    "indigo-20v": {
       "value": "#ccceff",
       "type": "color",
       "description": "CCCEFF"
     },
-    "indigo-vivid-30v": {
+    "indigo-30v": {
       "value": "#a3a7fa",
       "type": "color",
       "description": "A3A7FA"
     },
-    "indigo-vivid-40v": {
+    "indigo-40v": {
       "value": "#8289ff",
       "type": "color",
       "description": "8289FF"
     },
-    "indigo-vivid-50v": {
+    "indigo-50v": {
       "value": "#656bd7",
       "type": "color",
       "description": "656BD7"
     },
-    "indigo-vivid-60v": {
+    "indigo-60v": {
       "value": "#4a50c4",
       "type": "color",
       "description": "4A50C4"
     },
-    "indigo-vivid-70v": {
+    "indigo-70v": {
       "value": "#3333a3",
       "type": "color",
       "description": "3333A3"
     },
-    "indigo-vivid-80v": {
+    "indigo-80v": {
       "value": "#212463",
       "type": "color",
       "description": "212463"
@@ -1750,47 +2038,47 @@
       "type": "color",
       "description": "18161D"
     },
-    "indigo-warm-vivid-5v": {
+    "indigo-warm-5v": {
       "value": "#f5f2ff",
       "type": "color",
       "description": "F5F2FF"
     },
-    "indigo-warm-vivid-10v": {
+    "indigo-warm-10v": {
       "value": "#e4deff",
       "type": "color",
       "description": "E4DEFF"
     },
-    "indigo-warm-vivid-20v": {
+    "indigo-warm-20v": {
       "value": "#cfc4fd",
       "type": "color",
       "description": "CFC4FD"
     },
-    "indigo-warm-vivid-30v": {
+    "indigo-warm-30v": {
       "value": "#b69fff",
       "type": "color",
       "description": "B69FFF"
     },
-    "indigo-warm-vivid-40v": {
+    "indigo-warm-40v": {
       "value": "#967efb",
       "type": "color",
       "description": "967EFB"
     },
-    "indigo-warm-vivid-50v": {
+    "indigo-warm-50v": {
       "value": "#745fe9",
       "type": "color",
       "description": "745FE9"
     },
-    "indigo-warm-vivid-60v": {
+    "indigo-warm-60v": {
       "value": "#5942d2",
       "type": "color",
       "description": "5942D2"
     },
-    "indigo-warm-vivid-70v": {
+    "indigo-warm-70v": {
       "value": "#3d2c9d",
       "type": "color",
       "description": "3D2C9D"
     },
-    "indigo-warm-vivid-80v": {
+    "indigo-warm-80v": {
       "value": "#261f5b",
       "type": "color",
       "description": "261F5B"
@@ -1845,47 +2133,47 @@
       "type": "color",
       "description": "18161D"
     },
-    "violet-vivid-5v": {
+    "violet-5v": {
       "value": "#f7f2ff",
       "type": "color",
       "description": "F7F2FF"
     },
-    "violet-vivid-10v": {
+    "violet-10v": {
       "value": "#ede3ff",
       "type": "color",
       "description": "EDE3FF"
     },
-    "violet-vivid-20v": {
+    "violet-20v": {
       "value": "#d5bfff",
       "type": "color",
       "description": "D5BFFF"
     },
-    "violet-vivid-30v": {
+    "violet-30v": {
       "value": "#c39deb",
       "type": "color",
       "description": "C39DEB"
     },
-    "violet-vivid-40v": {
+    "violet-40v": {
       "value": "#ad79e9",
       "type": "color",
       "description": "AD79E9"
     },
-    "violet-vivid-50v": {
+    "violet-50v": {
       "value": "#9355dc",
       "type": "color",
       "description": "9355DC"
     },
-    "violet-vivid-60v": {
+    "violet-60v": {
       "value": "#783cb9",
       "type": "color",
       "description": "783CB9"
     },
-    "violet-vivid-70v": {
+    "violet-70v": {
       "value": "#54278f",
       "type": "color",
       "description": "54278F"
     },
-    "violet-vivid-80v": {
+    "violet-80v": {
       "value": "#39215e",
       "type": "color",
       "description": "39215E"
@@ -1940,47 +2228,47 @@
       "type": "color",
       "description": "1B151B"
     },
-    "violet-warm-vivid-5v": {
+    "violet-warm-5v": {
       "value": "#fef2ff",
       "type": "color",
       "description": "FEF2FF"
     },
-    "violet-warm-vivid-10v": {
+    "violet-warm-10v": {
       "value": "#fbdcff",
       "type": "color",
       "description": "FBDCFF"
     },
-    "violet-warm-vivid-20v": {
+    "violet-warm-20v": {
       "value": "#f4b2ff",
       "type": "color",
       "description": "F4B2FF"
     },
-    "violet-warm-vivid-30v": {
+    "violet-warm-30v": {
       "value": "#ee83ff",
       "type": "color",
       "description": "EE83FF"
     },
-    "violet-warm-vivid-40v": {
+    "violet-warm-40v": {
       "value": "#d85bef",
       "type": "color",
       "description": "D85BEF"
     },
-    "violet-warm-vivid-50v": {
+    "violet-warm-50v": {
       "value": "#be32d0",
       "type": "color",
       "description": "BE32D0"
     },
-    "violet-warm-vivid-60v": {
+    "violet-warm-60v": {
       "value": "#93348c",
       "type": "color",
       "description": "93348C"
     },
-    "violet-warm-vivid-70v": {
+    "violet-warm-70v": {
       "value": "#711e6c",
       "type": "color",
       "description": "711E6C"
     },
-    "violet-warm-vivid-80v": {
+    "violet-warm-80v": {
       "value": "#481441",
       "type": "color",
       "description": "481441"
@@ -2035,47 +2323,47 @@
       "type": "color",
       "description": "1B1617"
     },
-    "magenta-vivid-5v": {
+    "magenta-5v": {
       "value": "#fff2f5",
       "type": "color",
       "description": "FFF2F5"
     },
-    "magenta-vivid-10v": {
+    "magenta-10v": {
       "value": "#ffddea",
       "type": "color",
       "description": "FFDDEA"
     },
-    "magenta-vivid-20v": {
+    "magenta-20v": {
       "value": "#ffb4cf",
       "type": "color",
       "description": "FFB4CF"
     },
-    "magenta-vivid-30v": {
+    "magenta-30v": {
       "value": "#ff87b2",
       "type": "color",
       "description": "FF87B2"
     },
-    "magenta-vivid-40v": {
+    "magenta-40v": {
       "value": "#fd4496",
       "type": "color",
       "description": "FD4496"
     },
-    "magenta-vivid-50v": {
+    "magenta-50v": {
       "value": "#d72d79",
       "type": "color",
       "description": "D72D79"
     },
-    "magenta-vivid-60v": {
+    "magenta-60v": {
       "value": "#ab2165",
       "type": "color",
       "description": "AB2165"
     },
-    "magenta-vivid-70v": {
+    "magenta-70v": {
       "value": "#731f44",
       "type": "color",
       "description": "731F44"
     },
-    "magenta-vivid-80v": {
+    "magenta-80v": {
       "value": "#4f172e",
       "type": "color",
       "description": "4F172E"
@@ -2289,13 +2577,30 @@
       "value": "#171716",
       "type": "color",
       "description": "171716"
+    },
+    "ink": {
+      "value": "{base-ink}",
+      "type": "color"
+    },
+    "base": {
+      "value": "8px",
+      "type": "spacing",
+      "description": "USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens."
+    }
+  },
+  "proxy": {
+    "ink": {
+      "value": "{base-ink}",
+      "type": "color",
+      "description": "This proxy token makes sure that the system token maps correctly to the settings variable in Figma. For Figma only."
     }
   },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "Theme",
-      "System"
+      "theme",
+      "system",
+      "proxy"
     ]
   }
 }
