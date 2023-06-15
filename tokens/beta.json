@@ -2333,7 +2333,7 @@
     "ink": {
       "value": "{base-ink}",
       "type": "color",
-      "description": "This proxy token makes sure that the system token maps correctly to the settings variable in Figma. For Figma only."
+      "description": "This proxy token (the name) ensures that the system token (the value) maps correctly to the theme setting in Figma. If the token name and the setting variable were exactly the same this wouldn't be needed."
     }
   },
   "Theme": {
