@@ -24,7 +24,7 @@
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of customizing the component theme settings and loading the Sass stylesheet from the package. Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
   </figcaption>
-  <div class="code-block"><pre>@use 'uswds-core' with (
+  <div class="code-block"><pre class="language-scss">@use 'uswds-core' with (
   {{ theme }},
   // ... additional theme settings here ...
 );
@@ -42,7 +42,7 @@
     {% thymeleaf name %}
   </figure>
 
-  <figure class="margin-0 margin-bottom-3">
+  <figure class="margin-0">
     <figcaption class="margin-bottom-2">
       <strong>Template fragment inclusion</strong>
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
@@ -62,7 +62,7 @@
     {% erb name %}
   </figure>
 
-  <figure class="margin-0 margin-bottom-3">
+  <figure class="margin-0">
     <figcaption class="margin-bottom-2">
       <strong>Partial render</strong>
       <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>

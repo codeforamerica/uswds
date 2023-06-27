@@ -2,12 +2,10 @@
   <div class="usa-alert__body">
     <% if heading %><h4 class="usa-alert__heading"<% if labelledby %> id="<%= labelledby %>"<% end %>><%= heading %></h4><% end %>
 
-    <div>
-      <% if body %>
-        <%= body %>
-      <% else text %>
-        <p class="usa-alert__text"><%= text %></p>
-      <% end %>
-    </div>
+    <% if body %>
+      <div><%= body %></div>
+    <% else text %>
+      <div><p class="usa-alert__text"><%= text %></p></div>
+    <% end %>
   </div>
 </div>

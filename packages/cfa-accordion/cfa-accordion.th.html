@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="accordion(modifier, multiple, items)" th:class="'usa-accordion ' + ${modifier}" th:attr="data-allow-multiple=${multiple}" th:each="item: ${items}">
+      <h4 class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" th:attr="aria-expanded=${item.expanded},aria-controls=${item.controls}" th:text="${item.heading}">Heading</button>
+      </h4>
+
+      <div th:if="${item.body}" th:attr="id=${item.controls}" class="usa-accordion__content usa-prose" th:utext="${item.body}"></div>
+
+      <div th:if="${item.text}" th:attr="id=${item.controls}" class="usa-accordion__content usa-prose">
+        <p th:text="${item.text}">Text</p>
+      </div>
+    </div>
+  </body>
+</html>

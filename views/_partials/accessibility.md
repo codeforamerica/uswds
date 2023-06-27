@@ -1,11 +1,11 @@
 ## Accessibility {#accessibility}
 
-1. Existing Research
+1. Existing research references
 
-2. Manual Accessibility
+1. Manual accessibility tests
 
-3. Automated Accessibility
+1. Automated accessibility tests
 
-4. Basic Usability
+1. Basic usability tests
 
-5. Assistive Tech Usability
+1. Assistive tech usability tests

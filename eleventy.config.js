@@ -17,6 +17,8 @@ let CONFIG_ELEVENTY = config.eleventy;
 let CONFIG_MARKDOWN = config.markdown_it;
 let CONFIG_THYMELEAF = config.thymeleaf;
 
+let markdown = markdownIt(CONFIG_MARKDOWN);
+
 let ThymeleafTempate = new thymeleaf.TemplateEngine(CONFIG_THYMELEAF);
 
 /**
@@ -56,14 +58,52 @@ const escapeHtmlForFragment = (str) => {
 };
 
 /**
- * Processes the params passed as arguments to templates
+ * Processes the params passed as arguments to Thymeleaf templates
+ *
+ * @param   {Mixed}  param  The parameter to sanitize
+ *
+ * @return  {Mixed}         The sanitized parameter
+ */
+const sanitizeForTh = (param) => {
+  switch(typeof param) {
+    case 'string':
+      param = `'${escapeHtmlForFragment(param)}'`;
+
+      break;
+
+    case 'object':
+      param = '${' + JSON.stringify(param)
+        .replace(/\[/g, '{')
+        .replace(/\]/g, '}')
+        .replace(/"/g, '\'') + '}';
+
+      break;
+  }
+
+  return param;
+}
+
+/**
+ * Processes the params passed as arguments to Embedded Ruby templates
  *
  * @param   {Mixed}  param  The parameter
  *
  * @return  {Mixed}         The sanitized parameter
  */
-const sanitize = (param) => {
-  param = (typeof param === 'string') ? `'${escapeHtmlForFragment(param)}'` : param;
+const sanitizeForErb = (param) => {
+  switch(typeof param) {
+    case 'string':
+      param = `"${param.replace(/"/g, '\\"').replace(/'/g, '&#39;')}"`;
+
+      break;
+
+    case 'object':
+      param = JSON.stringify(param)
+        .replace(/":/g, '"=>')
+        .replace(/'/g, '&#39;');
+
+      break;
+  }
 
   return param;
 }
@@ -71,24 +111,27 @@ const sanitize = (param) => {
 /**
  * Wraps passed string a code block and performs transformations on the content for display
  *
- * @param   {String}  string  An HTML template string
+ * @param   {String}   string       An HTML template string
+ * @param   {String}   lang         The language of the code block
+ * @param   {Boolean}  beautifyStr  Wether to beautify the code block string or not
+ * @param   {Boolean}  escapeStr    Wether to escape the output string or not
  *
  * @return  {String}          The transformed template string wrapped in a code block
  */
-const block = (string, beautifyStr = true, escapeStr = true) => {
+const block = (string, lang = 'html', beautifyStr = true, escapeStr = true) => {
   string = (beautifyStr) ? beautify(string, CONFIG_BEAUTIFY) : string;
 
   string = (escapeStr) ? escapeHtml(string) : string;
 
-  return `<div class="code-block"><pre>${string}</pre></div>`;
+  return `<div class="code-block"><pre class="language-${lang}">${string}</pre></div>`;
 };
 
 /**
  * Removes the extra html, head, and body tags from a rendered Thymeleaf template
  *
- * @param   {String}  string  An HTML template string
+ * @param   {String}  str  An HTML template string
  *
- * @return  {String}          The template string with tags removed
+ * @return  {String}       The template string with tags removed
  */
 const unwrap = (str) => {
   return (typeof str === 'string') ? str
@@ -112,7 +155,7 @@ const unline = (string) => {
  * Resolves a package file path based on name and type
  *
  * @param   {String}          name  The name of the package to look for.
- * @param   {String}          name  The specific file type to look for. If not
+ * @param   {String}          type  The specific file type to look for. If not
  *                                  provided, the package base is returned.
  *
  * @return  {String/Boolean}        A fully resolved file path. If no file exists, false is returned
@@ -150,10 +193,24 @@ const getFile = (name, type = '') => {
 };
 
 /**
+ * Render markdown content to assign as a string in a context object
+ *
+ * @param   {String}  mrkdwn  The markdown string to render
+ *
+ * @return  {String}          Fully rendered markdown with quotes escaped and new lines removed
+ */
+const markdownRender = async(mrkdwn) => {
+  return markdown.render(mrkdwn)
+    .replace(/"/g, '\\"')
+    .replace(/\n/g, '');
+};
+
+/**
  * Render Ruby ERB template using a child process command execution
  *
- * @param   {String}  name     The name of the package to retrieve
- * @param   {Object}  context  JSON object with context to pass to the template
+ * @param   {String}   name     The name of the package to retrieve
+ * @param   {Object}   context  JSON object with context to pass to the template
+ * @param   {Boolean}  log      Wether to log status of the render
  *
  * @return  {String}           A rendered HTML string
  */
@@ -161,8 +218,7 @@ const erbRender = async (name, context, log = false) => {
   let rubyPath = getFile(name, 'erb');
 
   let vars = Object.keys(context).map(c => {
-    return `${c}=${(typeof context[c] === 'string') ?
-      `"${context[c].replace(/"/g, '\\"').replace(/'/g, '&#39;')}"` : context[c]}`.replace(/\n/g, '')
+    return `${c}=${sanitizeForErb(context[c])}`.replace(/\n/g, '').replace(/'/g, '\'');
   }).join('; ');
 
   let command = `(echo '<% ${vars} %>' && cat ${rubyPath}) | erb`;
@@ -182,27 +238,45 @@ const erbRender = async (name, context, log = false) => {
  * Retrieve a package Thymeleaf template fragment, pass context to it, render,
  * and return the rendered string
  *
- * @param   {String}  name     The name of the template
- * @param   {String}  context  The context to pass to the template
+ * @param   {String}   name     The name of the template
+ * @param   {String}   context  The context to pass to the template
+ * @param   {Boolean}  log      Wether to log status of the render
  *
  * @return  {String}           The rendered template
  */
 const fragmentInclude = async (name, context, log = false) => {
-  let templatePath = getFile(name, 'thymeleaf')
-    .replace(__dirname + '/', '').replace('.html', '');
+  // Fragment include method
+  // let templatePath = getFile(name, 'thymeleaf')
+  //   .replace(__dirname + '/', '').replace('.html', '');
 
-  let params = Object.keys(context).map(c => `${sanitize(context[c])}`.replace(/\n/g, '') ).join(', ');
+  // let params = Object.keys(context).map(c => `${sanitizeForTh(context[c])}`.replace(/\n/g, '') ).join(', ');
 
-  let include = `<th:block th:replace="~{${templatePath} :: ${name}(${params})}" />`;
+  // let include = `<th:block th:replace="~{${templatePath} :: ${name}(${params})}" />`;
+
+  // try {
+  //   let rendered = await ThymeleafTempate.process(include, {});
+
+  //   if (log) console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion passing`);
+
+  //   return rendered;
+  // } catch (err) {
+  //   console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion failing; \n ${include}`);
+  // }
+
+  // Direct render method
+  let templatePath = getFile(name, 'thymeleaf');
+
+  let template = fs.readFileSync(templatePath, 'utf-8');
 
   try {
-    let rendered = await ThymeleafTempate.process(include, {});
+    let rendered = await ThymeleafTempate.process(template, context);
 
-    if (log) console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion passing`);
+    if (log) console.log(`[${package.name}] Thymeleaf "${name}" fragment render passing`);
 
     return rendered;
   } catch (err) {
-    console.log(`[${package.name}] Thymeleaf "${name}" fragment inclusion failing; \n ${include}`);
+    console.log(`[${package.name}] Thymeleaf "${name}" fragment render failing;
+      \n ThymeleafTempate.process(${template}, ${context});`);
   }
 };
 
@@ -237,8 +311,6 @@ module.exports = function(eleventyConfig) {
   /**
    * Plugin configuration
    */
-
-  let markdown = markdownIt(CONFIG_MARKDOWN);
 
   eleventyConfig.setLibrary('md', markdown);
 
@@ -294,6 +366,9 @@ module.exports = function(eleventyConfig) {
     if (args[3]) {
       let th = unwrap(await fragmentInclude(name, context));
 
+      /**
+       * Test erb rendering for non-production environments
+       */
       if (process.env.NODE_ENV != 'production') {
         let erb = await erbRender(name, context);
 
@@ -302,7 +377,7 @@ module.exports = function(eleventyConfig) {
         rendered = th
       }
 
-      return block(rendered);
+      return block(rendered, 'html');
     } else {
       // Template fragment inclusion testing
       let th = unwrap(await fragmentInclude(name, context, true));
@@ -318,6 +393,10 @@ module.exports = function(eleventyConfig) {
 
       return beautify(rendered, CONFIG_BEAUTIFY);
     }
+  });
+
+  eleventyConfig.addShortcode('md', async function(mrkdwn) {
+    return markdownRender(mrkdwn);
   });
 
   /**
@@ -339,11 +418,11 @@ module.exports = function(eleventyConfig) {
       let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
 
       return block(`<th:block th:replace="~{${templatePath} :: ${name}(${
-          params.map(c => `${c.replace('${', '').replace('}', '')}`).join(',')
-        })}" />`, true);
+          params.map(c => `{{ ${c.replace('${', '').replace('}', '')} }}`).join(', ')
+        })}" />`, 'html', true);
     }
 
-    return block(template, false);
+    return block(template, 'html', false);
   });
 
   /**
@@ -363,18 +442,29 @@ module.exports = function(eleventyConfig) {
     let template = unline(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
     if (include) {
-      let params = [...new Set(template.match(/<%= [A-z$_.-][\w$]{0,} %>/g))];
+      let params = [
+        template.match(/<%= [A-z$_.-][\w$]{0,} %>/g),
+        template.match(/<% if [A-z$_.-][\w$]{0,} %>/g),
+        template.match(/<% [A-z$_.-][\w$]{0,}.each do/g)
+      ].filter(m => m).flat();
+
+      params = params.map(c => c.replace('<%= ', '')
+        .replace('<% if ', '')
+        .replace('<% ', '')
+        .replace(' %>', '')
+        .replace('.each do', '')
+      );
+
+      params = [...new Set(params)];
 
       return block(`<%= render '${templatePath}', ${
-          params.map(c => {
-            let attr = c.replace('<%= ', '').replace(' %>', '');
-
-            return `${attr}='${attr}'`;
+          params.map(attr => {
+            return `${attr}={{ ${attr} }}`;
           }).join(', ')
-        } %>`, true);
+        } %>`, 'ruby', true);
     }
 
-    return block(template, false);
+    return block(template, 'ruby', false);
   });
 
   /**

@@ -2,7 +2,7 @@
 tags: component
 title: Alert
 layout: default
-intro: '"Alerts (notices) appear when I need help or that something has changed... it may be time-sensitive."'
+intro: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
 url_uswds: https://designsystem.digital.gov/components/alert
 url_uswds_usage: '#using-the-alert-component-2'
 nice_uswds: Alert component
@@ -10,21 +10,28 @@ description_uswds: ''
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices
 nice_honeycrisp: Notice atom
 modifier_honeycrisp: .cfa-alert
+tokens: true
+styles: true
 description_honeycrisp: ''
 ---
 
-Notices distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if they're used sparingly and appear after a user interaction.
+<!-- INTRO -->
 
-## Details {#details}
+Alerts (notices) distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
 
-<ul class="usa-content-list">
-  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component</a></li>
-  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Notice atom</a></li>
-  <li><strong>Customization:</strong> <abbr title="{{ dictionary.tokens }}">Tokens</abbr> and <abbr title="{{ dictionary.styles }}">Styles</abbr></li>
-  <li><strong><abbr title="{{ dictionary.modifier }}">Modifier</abbr>:</strong> <code>.cfa-alert</code></li>
-</ul>
+<!-- DETAILS -->
 
-The **Alert** extends the <a href="https://designsystem.digital.gov/components/alert/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert</a> component. The visual appearance is modified using **design tokens** applied to the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Notice atom</a>. Further styling is applied using the **CSS modifier** `.cfa-alert` to add **styles** defined in a custom stylesheet.
+{% render 'details.md',
+  name: title,
+  url_uswds: url_uswds,
+  url_uswds_usage: url_uswds_usage,
+  nice_uswds: nice_uswds,
+  url_honeycrisp: url_honeycrisp,
+  nice_honeycrisp: nice_honeycrisp,
+  tokens: tokens,
+  styles: styles,
+  dictionary: dictionary,
+  modifier_honeycrisp: modifier_honeycrisp %}
 
 <!-- ACCESSIBILITY -->
 
@@ -94,7 +101,7 @@ You were recommended for expedited food assistance (SNAP). {.usa-alert__text}
 
 {% capture caption %}
 
-This is an example of what the informational alert looks like without the modifier <code>.cfa-alert</code>. The colors for each alert variant are the same in the examples above. Additional variant modifiers for the alert can be found in the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.
+This is an example of what the {{ nice_uswds }} looks like without the modifier <code>{{ modifier_honeycrisp }}</code>. The colors for each {{ nice_uswds }} variant are the same in the examples above. Additional variant modifiers for the {{ nice_uswds }} can be found in the <a href="{{ url_uswds }}{{ url_uswds_usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.
 
 {% endcapture %}
 
@@ -120,7 +127,7 @@ This is an example of what the informational alert looks like without the modifi
 
 <!-- DESIGN -->
 
-{% render 'figma.md', url: 'https://www.figma.com/file/H8qVKsmn0dGFG03pomDBDI/Reorganize-components?type=design&node-id=5003-527' %}
+{% render 'figma.md', url: 'https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5003-527&mode=design' %}
 
 <!-- SOURCE -->
 

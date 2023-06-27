@@ -18,6 +18,7 @@ in the form $setting: value,
   // 1. Settings
   $theme-show-compile-warnings: false,
   $theme-show-notifications: false,
+  // Focus
   $theme-focus-color: 'gold-30v',
 
   // 2. Spacing
@@ -27,6 +28,7 @@ in the form $setting: value,
 
   // 3. Color
   // $test-color-tokens: TRUE,
+  // - Base
   $theme-color-base-family: 'gray-warm',
   $theme-color-base-lightest: 'gray-warm-4', // affects accordion background
   $theme-color-base-lighter: 'gray-warm-10', // affects accordion button hover state

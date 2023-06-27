@@ -24,7 +24,7 @@
           pre.setAttribute('tabindex', '0');
         }
 
-        hljs.highlightBlock(pre);
+        hljs.highlightElement(pre);
       });
     });
   </script>
@@ -90,11 +90,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-fc668b1e4e4eb">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-65167811e5bc4">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-fc668b1e4e4eb" class="usa-nav__submenu">
+            <ul id="aria-c-65167811e5bc4" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -116,11 +116,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-3e4c0c1ca0e76">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-7068d2ee4f54e">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-3e4c0c1ca0e76" class="usa-nav__submenu">
+            <ul id="aria-c-7068d2ee4f54e" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -197,10 +197,295 @@
           <div class="usa-prose">
             <h1>Accordion</h1>
 
-            <p class="usa-intro"></p>
+            <p class="usa-intro">"An accordion helps me scan long pages by letting me show or hide information."</p>
           </div>
 
-          
+          <!-- INTRO -->
+<p>Accordions allow users to find information on a page by clicking content headings to expand or hide content beneath. They are always used to collapse multiple heading groups and are most useful for fitting content into a limited space.</p>
+<!-- DETAILS -->
+<h2 id="details">Details</h2>
+<ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/accordion" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Accordion component</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion" target="_blank" rel="noopener nofollow" class="usa-link--external">Accordion molecule</a></li>
+  <li>
+    <strong>Customization:</strong> <abbr title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Tokens</abbr>
+    and <abbr title="A custom stylesheet is used to modify the component's visual appearance.">Styles</abbr>
+  </li>
+  <li><strong><abbr title="The class name that applies extended style customization to modify the component's visual appearance.">Modifier</abbr>:</strong> <code>.cfa-accordion</code></li>
+</ul>
+<p>The <strong>Accordion</strong> extends the <a href="https://designsystem.digital.gov/components/accordion" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Accordion component</a>. The visual appearance is modified using <strong>design tokens</strong> applied to the <a href="https://designsystem.digital.gov/components/accordion#using-the-accordion-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Accordion component settings</a> from the <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Accordion molecule</a>. Further styling is applied using the <strong>CSS modifier</strong> <code>.cfa-alert</code> to add <strong>styles</strong> defined in a custom stylesheet.</p>
+<!-- ACCESSIBILITY -->
+<h2 id="accessibility">Accessibility</h2>
+<ol>
+<li>
+<p>Existing research references</p>
+</li>
+<li>
+<p>Manual accessibility tests</p>
+</li>
+<li>
+<p>Automated accessibility tests</p>
+</li>
+<li>
+<p>Basic usability tests</p>
+</li>
+<li>
+<p>Assistive tech usability tests</p>
+</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Bordered</figcaption>
+    <div data-allow-multiple="true" class="usa-accordion usa-accordion--bordered cfa-accordion">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-6bc2a82a0c72c">We'll ask you about</button>
+  </h4>
+  <div class="usa-accordion__content usa-prose" id="aria-c-6bc2a82a0c72c">
+    <ul>
+      <li>Personal information</li>
+      <li>People who live with you</li>
+      <li>Income</li>
+      <li>Expenses</li>
+      <li>Assets</li>
+    </ul>
+  </div>
+</div>
+<div data-allow-multiple="true" class="usa-accordion usa-accordion--bordered cfa-accordion">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-58145806008fe">Submitting an incomplete application (SNAP only)</button>
+  </h4>
+  <div class="usa-accordion__content usa-prose" id="aria-c-58145806008fe">
+    <p>If you are applying for food assistance (SNAP), you will have the choice to submit an incomplete application with only your name, address, and signature.</p>
+    <p>By choosing to submit an incomplete application, you may experience longer processing time and more communication with your county.</p>
+  </div>
+</div>
+<div data-allow-multiple="true" class="usa-accordion usa-accordion--bordered cfa-accordion">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3d1c281d95839">Adding documents</button>
+  </h4>
+  <div class="usa-accordion__content usa-prose" id="aria-c-3d1c281d95839">
+    <p>At the end of this application, you will have the option to add documents, like pay stubs, rent receipts, or medical bills.</p>
+    <p>You can use your phone to take photos of paper documents or select photos from your device.</p>
+    <p>You can always return to our homepage to add documents later, too.</p>
+  </div>
+</div>
+<div data-allow-multiple="true" class="usa-accordion usa-accordion--bordered cfa-accordion">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-af9725953ece">After you submit</button>
+  </h4>
+  <div class="usa-accordion__content usa-prose" id="aria-c-af9725953ece">
+    <p>Your application submission date is the earliest date your benefits can begin.</p>
+    <p>Most programs on this application, including food and cash assistance, require an interview after you submit. Look for a letter in the mail or a phone call from your county.</p>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-01a2bf2653f78">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-01a2bf2653f78" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div data-allow-multiple=&quot;true&quot; class=&quot;usa-accordion usa-accordion--bordered cfa-accordion&quot;&gt;
+  &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;aria-c-6bc2a82a0c72c&quot;&gt;We&#39;ll ask you about&lt;/button&gt;
+  &lt;/h4&gt;
+  &lt;div class=&quot;usa-accordion__content usa-prose&quot; id=&quot;aria-c-6bc2a82a0c72c&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Personal information&lt;/li&gt;
+      &lt;li&gt;People who live with you&lt;/li&gt;
+      &lt;li&gt;Income&lt;/li&gt;
+      &lt;li&gt;Expenses&lt;/li&gt;
+      &lt;li&gt;Assets&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-allow-multiple=&quot;true&quot; class=&quot;usa-accordion usa-accordion--bordered cfa-accordion&quot;&gt;
+  &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;aria-c-58145806008fe&quot;&gt;Submitting an incomplete application (SNAP only)&lt;/button&gt;
+  &lt;/h4&gt;
+  &lt;div class=&quot;usa-accordion__content usa-prose&quot; id=&quot;aria-c-58145806008fe&quot;&gt;
+    &lt;p&gt;If you are applying for food assistance (SNAP), you will have the choice to submit an incomplete application with only your name, address, and signature.&lt;/p&gt;
+    &lt;p&gt;By choosing to submit an incomplete application, you may experience longer processing time and more communication with your county.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-allow-multiple=&quot;true&quot; class=&quot;usa-accordion usa-accordion--bordered cfa-accordion&quot;&gt;
+  &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;aria-c-3d1c281d95839&quot;&gt;Adding documents&lt;/button&gt;
+  &lt;/h4&gt;
+  &lt;div class=&quot;usa-accordion__content usa-prose&quot; id=&quot;aria-c-3d1c281d95839&quot;&gt;
+    &lt;p&gt;At the end of this application, you will have the option to add documents, like pay stubs, rent receipts, or medical bills.&lt;/p&gt;
+    &lt;p&gt;You can use your phone to take photos of paper documents or select photos from your device.&lt;/p&gt;
+    &lt;p&gt;You can always return to our homepage to add documents later, too.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-allow-multiple=&quot;true&quot; class=&quot;usa-accordion usa-accordion--bordered cfa-accordion&quot;&gt;
+  &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;aria-c-af9725953ece&quot;&gt;After you submit&lt;/button&gt;
+  &lt;/h4&gt;
+  &lt;div class=&quot;usa-accordion__content usa-prose&quot; id=&quot;aria-c-af9725953ece&quot;&gt;
+    &lt;p&gt;Your application submission date is the earliest date your benefits can begin.&lt;/p&gt;
+    &lt;p&gt;Most programs on this application, including food and cash assistance, require an interview after you submit. Look for a letter in the mail or a phone call from your county.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+<p>This is an example of what the Accordion component looks like without the modifier <code>.cfa-accordion</code>. Additional variant modifiers for the Accordion component can be found in the <a href="https://designsystem.digital.gov/components/accordion#using-the-accordion-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.</p>
+</figcaption>
+    <div data-allow-multiple="true" class="usa-accordion ">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="aria-c-d6706cf08b42b">We'll ask you about</button>
+  </h4>
+  <div class="usa-accordion__content usa-prose" id="aria-c-d6706cf08b42b">
+    <ul>
+      <li>Personal information</li>
+      <li>People who live with you</li>
+      <li>Income</li>
+      <li>Expenses</li>
+      <li>Assets</li>
+    </ul>
+  </div>
+</div>
+<div data-allow-multiple="true" class="usa-accordion ">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-1228ad8bf42b">Submitting an incomplete application (SNAP only)</button>
+  </h4>
+  <div class="usa-accordion__content usa-prose" id="aria-c-1228ad8bf42b">
+    <p>If you are applying for food assistance (SNAP), you will have the choice to submit an incomplete application with only your name, address, and signature.</p>
+    <p>By choosing to submit an incomplete application, you may experience longer processing time and more communication with your county.</p>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-adea96d3646b">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-adea96d3646b" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block"><pre class="language-html">&lt;div data-allow-multiple=&quot;true&quot; class=&quot;usa-accordion &quot;&gt;
+  &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;aria-c-d6706cf08b42b&quot;&gt;We&#39;ll ask you about&lt;/button&gt;
+  &lt;/h4&gt;
+  &lt;div class=&quot;usa-accordion__content usa-prose&quot; id=&quot;aria-c-d6706cf08b42b&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Personal information&lt;/li&gt;
+      &lt;li&gt;People who live with you&lt;/li&gt;
+      &lt;li&gt;Income&lt;/li&gt;
+      &lt;li&gt;Expenses&lt;/li&gt;
+      &lt;li&gt;Assets&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-allow-multiple=&quot;true&quot; class=&quot;usa-accordion &quot;&gt;
+  &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;aria-c-1228ad8bf42b&quot;&gt;Submitting an incomplete application (SNAP only)&lt;/button&gt;
+  &lt;/h4&gt;
+  &lt;div class=&quot;usa-accordion__content usa-prose&quot; id=&quot;aria-c-1228ad8bf42b&quot;&gt;
+    &lt;p&gt;If you are applying for food assistance (SNAP), you will have the choice to submit an incomplete application with only your name, address, and signature.&lt;/p&gt;
+    &lt;p&gt;By choosing to submit an incomplete application, you may experience longer processing time and more communication with your county.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+      </div>
+    </div>
+  </figure>
+</div>
+<!-- DESIGN -->
+<h2 id="design-library">Design library</h2>
+<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=6133%3A1205&mode=design&t=za88mJcbenf6Hf6a-1" allowfullscreen></iframe>
+<!-- SOURCE -->
+<h2 id="source-and-usage">Source and usage</h2>
+<p class="usa-icon-list__item">
+  <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-accordion</code></span>
+</p>
+<p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
+<ul class="usa-content-list">
+  <li><strong>Sass stylesheet:</strong> <code>../_cfa-accordion.scss</code></li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>../cfa-accordion.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>../_cfa-accordion.html.erb</code></li>
+</ul>
+<figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
+  <figcaption class="margin-bottom-2">
+    <strong>Sass theme settings and stylesheet loading</strong>
+    <p>Below is a demonstration of customizing the component theme settings and loading the Sass stylesheet from the package. Refer to the <a href="https://designsystem.digital.gov/components/accordion/#using-the-accordion-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
+  </figcaption>
+  <div class="code-block"><pre class="language-scss">@use 'uswds-core' with (
+  $theme-accordion-border-width: 2px,
+  // ... additional theme settings here ...
+);
+@forward 'uswds';
+@forward '@codeforamerica/uswds/packages/cfa-accordion/_cfa-accordion.scss';</pre></div>
+</figure>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>Thymeleaf template fragment</strong>
+      <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html th:lang=&quot;${#locale.language}&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+  &lt;body&gt;
+    &lt;div th:fragment=&quot;accordion(modifier, multiple, items)&quot; th:class=&quot;&#39;usa-accordion &#39; + ${modifier}&quot; th:attr=&quot;data-allow-multiple=${multiple}&quot; th:each=&quot;item: ${items}&quot;&gt;
+      &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot; th:attr=&quot;aria-expanded=${item.expanded},aria-controls=${item.controls}&quot; th:text=&quot;${item.heading}&quot;&gt;Heading&lt;/button&gt;
+      &lt;/h4&gt;
+      &lt;div th:if=&quot;${item.body}&quot; th:attr=&quot;id=${item.controls}&quot; class=&quot;usa-accordion__content usa-prose&quot; th:utext=&quot;${item.body}&quot;&gt;&lt;/div&gt;
+      &lt;div th:if=&quot;${item.text}&quot; th:attr=&quot;id=${item.controls}&quot; class=&quot;usa-accordion__content usa-prose&quot;&gt;
+        &lt;p th:text=&quot;${item.text}&quot;&gt;Text&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Template fragment inclusion</strong>
+      <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-accordion/cfa-accordion.th :: accordion({{ modifier }}, {{ multiple }}, {{ items }})}&quot; /&gt;</pre></div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>ERB template partial</strong>
+      <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-ruby">&lt;div class=&quot;usa-accordion&lt;% if modifier %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&lt;% if multiple %&gt; data-allow-multiple&lt;% end %&gt;&gt;
+  &lt;% items.each do |item| %&gt;
+    &lt;h4 class=&quot;usa-accordion__heading&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;usa-accordion__button&quot;&lt;% if item[&#39;expanded&#39;] %&gt; aria-expanded=&quot;&lt;%= item[&#39;expanded&#39;] %&gt;&quot;&lt;% end %&gt;&lt;% if item[&#39;controls&#39;] %&gt; aria-controls=&quot;&lt;%= item[&#39;controls&#39;] %&gt;&quot;&lt;% end %&gt;&gt;
+        &lt;%= item[&#39;heading&#39;] %&gt;
+      &lt;/button&gt;
+    &lt;/h4&gt;
+    &lt;div class=&quot;usa-accordion__content usa-prose&quot;&lt;% if item[&#39;controls&#39;] %&gt; id=&quot;&lt;%= item[&#39;controls&#39;] %&gt;&quot;&lt;% end %&gt;&gt;
+      &lt;% if item[&#39;body&#39;] %&gt;
+        &lt;%= item[&#39;body&#39;] %&gt;
+      &lt;% else item[&#39;text&#39;] %&gt;
+        &lt;p&gt;&lt;%= item[&#39;text&#39;] %&gt;&lt;/p&gt;
+      &lt;% end %&gt;
+    &lt;/div&gt;
+  &lt;% end %&gt;
+&lt;/div&gt;</pre></div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Partial render</strong>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
+    </figcaption>
+    <div class="code-block"><pre class="language-ruby">&lt;%= render &#39;@codeforamerica/uswds/packages/cfa-accordion/cfa-accordion&#39;, modifier={{ modifier }}, multiple={{ multiple }}, items={{ items }} %&gt;</pre></div>
+  </figure>
+</div>
+
         </main>
       </div>
     </div>
