@@ -22,7 +22,7 @@
     "default": "npx @11ty/eleventy && npx gulp compile",
     "views": "npx @11ty/eleventy --serve",
     "uswds": "npx gulp watch",
-    "version": "npm run default && git add .",
+    "version": "NODE_ENV=production npm run default && git add .",
     "rollup": "npx rollup --config rollup.config.cjs",
     "preview": "NODE_ENV=production npm run views"
   },
