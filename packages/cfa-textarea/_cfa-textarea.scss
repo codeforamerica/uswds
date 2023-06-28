@@ -1,0 +1,14 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-input/cfa-input.scss';
+
+.cfa-textarea {
+  @include cfa-input.cfa-input();
+
+  height: units($theme-textarea-height);
+}
+
+.cfa-textarea:not(.usa-input--error):not(.usa-input--success),
+.cfa-textarea:not(.usa-textarea--error):not(.usa-textarea--success) {
+  @include cfa-input.cfa-input-border;
+}

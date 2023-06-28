@@ -1,0 +1,55 @@
+<footer class="usa-footer">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        {% for item in collections.primary %}
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          {% set url = item.url|split('/', 2) %}
+          <a class="usa-footer__primary-link" href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}">{{ item.data.title }}</a>
+        </li>
+        {% endfor %}
+
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>Design Library</span></a>
+        </li>
+
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v{{ package.version }}</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="usa-footer__secondary-section site-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class=" usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+          <div class="mobile-lg:grid-col-auto">
+            <a href="{{ config.baseUrl }}" title="{{ package.nice }}">
+              <svg width="380" height="85" xmlns="http://www.w3.org/2000/svg" role="img">
+                <title>{{ package.nice }}</title>
+                <use href="#logo">
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="usa-identifier site-identifier padding-0">
+  <section class="usa-identifier__section usa-identifier__section--masthead">
+    <div class="usa-identifier__container">
+      <section class="usa-identifier__identity">
+        <p class="usa-identifier__identity-domain">uswds.codeforamerica.org</p>
+
+        <p class="usa-identifier__identity-disclaimer">Learn more about Code for America by visiting <a href="https://codeforamerica.org" target="_blank" rel="noopener nofollow" class="usa-link--external">codeforamerica.org</a></p>
+      </section>
+    </div>
+  </section>
+</div>

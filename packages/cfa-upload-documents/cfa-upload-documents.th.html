@@ -1,0 +1,105 @@
+<div th:fragment="uploadDocuments(modifier, documentType)" class="cfa-form-card__content">
+  <div th:if="${documentType}">
+    <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${documentType.modifier}, ${documentType.id}, ${documentType.label}, ${documentType.hint}, ${documentType.error}, '', '', '', ${documentType.selectEl})}" />
+  </div>
+
+  <!--
+  id="dropzone-ubiFiles"                  data-js="dropzone"
+  id="document-upload-ubiFiles"           data-dropzone="uploads"
+  id="max-files-reached-ubiFiles"         data-dropzone="max-uploads"
+  id="max-files"                          data-dropzone="max-uploads-message"
+  id="drag-and-drop-box-ubiFiles"         data-dropzone="drag-and-drop-region"
+  id="upload-button-ubiFiles"             data-dropzone="upload-button"
+  id="upload-button-inner-ubiFiles"       data-dropzone="button"
+  id="number-of-uploaded-files-ubiFiles"  data-dropzone="uploads-number"
+  id="upload-doc-div-ubiFiles"
+  id="upload-doc-text-ubiFiles"
+  id="file-preview-template-ubiFiles"
+  -->
+
+  <div class="cfa-file-input" data-js="dropzone">
+    <div class="dropzone needsclick" data-dropzone="uploads">
+      <label class="usa-label cfa-label" id="aria-lb-label-RANDOM_ID">
+        <span>Add your files</span>
+
+        <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+      </label>
+
+      <div data-dropzone="max-uploads">
+        <div class="max-files spacing-below-35 display-none" data-dropzone="max-uploads-message">You have uploaded the maximum number of files. You will have the opportunity to share more later.</div>
+      </div>
+
+      <div class="usa-file-input__target" data-dropzone="drag-and-drop-region">
+        <div class="usa-file-input__instructions">
+          <p id="aria-lb-instructions-RANDOM_ID" aria-hidden="true">Drag your files here or <span class="usa-file-input__choose">choose from folder</span>. Accepted files include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB.</p>
+
+          <div class="dz-message" data-dropzone="upload-button">
+            <button class="usa-button cfa-button width-auto radius-pill margin-0" type="button" data-dropzone="button" aria-labelledby="aria-lb-label-RANDOM_ID" aria-describedby="aria-lb-instructions-RANDOM_ID">
+              <svg class="usa-icon margin-0 height-7 width-7" aria-hidden="true" focusable="false">
+                <use href="/uswds/img/sprite.svg#add"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid--item width-two-thirds">
+          <div class="body-gray" data-dropzone="uploads-number">
+            NUMBER_OF_UPLOADED_FILES
+          </div>
+        </div>
+      </div>
+
+      <div id="upload-doc-div-ubiFiles" class="spacing-below-25 hidden" >
+        <p id="upload-doc-text-ubiFiles" class="upload-doc-text">Uploaded documents</p>
+      </div>
+
+      <div id="file-preview-template-ubiFiles" class="file-preview-template">
+        <div class="preview-container">
+          PREVIEW_CONTAINER
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="hidden">
+
+  <a href="#">Or, use your phone instead</a>
+
+  <details>
+    <summary class="usa-button cfa-button usa-button--outline text-start margin-0 margin-bottom-2">View document list</summary>
+
+    <div class="border-2px bg-base-lightest padding-2 radius-md">
+      <p>
+        <b>Proof of Income</b>
+
+        <br>
+
+        Tax documents from 2020 or 2021 (such as Form 1040), or wage documents (such as pay stubs, W-2) for all adults in the household that earn income.
+      </p>
+
+      <p>
+        <b>Proof of Residency</b>
+
+        <br>
+
+        Current official document with your name and address such as a valid government ID, housing documents (rent receipts, lease, or mortgage statements), or a recent utility bill.
+      </p>
+
+      <p>
+        <b>Proof of Identity</b>
+
+        <br>
+
+        A government-issued photo ID such as a driver's license, identity card, passport or Social Security card.
+      </p>
+
+      <p>
+        <b>Types of files</b>
+
+        <br>
+
+        We accept .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB. The maximum number of files is 20.
+      </p>
+    </div>
+  </details>
+</div>

@@ -1,0 +1,49 @@
+<% items.each do |button| %>
+  <% if button['href'] %>
+    <a href="<%= button['href'] %>" class="usa-button<% if button['modifier'] %> <%= button['modifier'] %><% end %>"
+      <% if button['ariaDisabled'] %> aria-disabled="<%= button['ariaDisabled'] %>"<% end %>>
+      <% if button['check'] %><svg class="usa-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+        <path d="M3.5 9.42857L0 13L8 22L22 3.5L18 0L7.5 14L3.5 9.42857Z" fill="inherit"/>
+      </svg><% end %>
+
+      <% if button['cross'] %><svg class="usa-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+        <path d="M14.667 11.0009L22 3.66696L18.3335 0L11 7.33392L3.66696 0.00088L0 3.66696L7.33348 11L0 18.3339L3.6674 22L11.0004 14.667L18.3335 22L22 18.3339L14.667 11.0009Z" fill="inherit"/>
+      </svg><% end %>
+
+      <% if button['prefix'] %><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+        <use href="<%= button['prefix'] %>"></use>
+      </svg>
+
+      <% end %><span><%= button['label'] %></span><% if button['postfix'] %>
+
+      <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+        <use href="<%= button['postfix'] %>"></use>
+      </svg>
+      <% end %>
+    </a>
+  <% else %>
+    <button class="usa-button<% if button['modifier'] %> <%= button['modifier'] %><% end %>"
+      <% if button['type'] %> type="<%= button['type'] %>"<% end %>
+      <% if button['disabled'] %> disabled="<%= button['disabled'] %>"<% end %>
+      <% if button['ariaDisabled'] %> aria-disabled="<%= button['ariaDisabled'] %>"<% end %>>
+      <% if button['check'] %><svg class="usa-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+        <path d="M3.5 9.42857L0 13L8 22L22 3.5L18 0L7.5 14L3.5 9.42857Z" fill="inherit"/>
+      </svg><% end %>
+
+      <% if button['cross'] %><svg class="usa-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+        <path d="M14.667 11.0009L22 3.66696L18.3335 0L11 7.33392L3.66696 0.00088L0 3.66696L7.33348 11L0 18.3339L3.6674 22L11.0004 14.667L18.3335 22L22 18.3339L14.667 11.0009Z" fill="inherit"/>
+      </svg><% end %>
+
+      <% if button['prefix'] %><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+        <use href="<%= button['prefix'] %>"></use>
+      </svg>
+
+      <% end %><span><%= button['label'] %></span><% if button['postfix'] %>
+
+      <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+        <use href="<%= button['postfix'] %>"></use>
+      </svg>
+      <% end %>
+    </button>
+  <% end %>
+<% end %>

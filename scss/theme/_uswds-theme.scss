@@ -7,27 +7,31 @@ in the form $setting: value,
 ----------------------------------------
 */
 
-//
-//  @use 'uswds-core' with (
-//    $setting: value,
-//    $setting: value
-//  );
-//
-
 @use 'uswds-core' with (
   // 1. Settings
-  $theme-show-compile-warnings: false,
+  // $theme-show-compile-warnings: false,
+  $theme-show-compile-warnings: true,
   $theme-show-notifications: false,
+  // $theme-show-notifications: true,
+
   // Focus
   $theme-focus-color: 'gold-30v',
 
   // 2. Spacing
-  // $theme-border-radius-sm: 2px,
-  // $theme-border-radius-md: 0.5,
-  // $theme-border-radius-lg: 1,
+  $theme-border-radius-md: 1,
+  $theme-border-radius-lg: 2,
+  $theme-grid-container-max-width: 'desktop-lg',
+  // These are not within the spacing section but keeping them together
+  // helps with managing the max-width dimension consistently
+  $theme-banner-max-width: 'desktop-lg',
+  $theme-footer-max-width: 'desktop-lg',
+  $theme-header-max-width: 'desktop-lg',
+  $theme-identifier-max-width: 'desktop-lg',
+  $theme-in-page-nav-main-content-max-width: 'desktop-lg',
+  $theme-site-alert-max-width: 'desktop-lg',
 
   // 3. Color
-  // $test-color-tokens: TRUE,
+  // $test-color-tokens: true,
   // - Base
   $theme-color-base-family: 'gray-warm',
   $theme-color-base-lightest: 'gray-warm-4', // affects accordion background
@@ -107,8 +111,8 @@ in the form $setting: value,
   $theme-color-info-darker: 'gray-warm-70',
 
   // - Emergency
-  $theme-color-emergency: 'orange-warm-50v',
-  $theme-color-emergency-dark: 'orange-warm-80v',
+  $theme-color-emergency: 'orange-warm-30v',
+  $theme-color-emergency-dark: 'orange-warm-60v',
 
   // - Disabled
   $theme-color-disabled-family: 'gray-warm',
@@ -121,7 +125,6 @@ in the form $setting: value,
   $theme-link-visited-color: 'ink',
 
   // 4. Typography
-  // $theme-root-font-size: '',
   $theme-global-paragraph-styles: true,
   $theme-global-link-styles: true,
   $theme-global-content-styles: true,
@@ -145,7 +148,7 @@ in the form $setting: value,
   $theme-type-scale-2xs: 4,
   $theme-type-scale-xs: 5,     // h6?
   $theme-type-scale-sm: 6,     // h5, paragraphs?
-  // $theme-type-scale-md: 7,  // h4?
+  $theme-type-scale-md: 7,     // h4?
   // $theme-type-scale-lg: 9,  // h3
   // $theme-type-scale-xl: 12, // h2
   $theme-type-scale-2xl: 15,   // h1
@@ -162,17 +165,38 @@ in the form $setting: value,
   $theme-lead-line-height: 4,
 
   // 5. Components
+  // - Card
   // - Input
   // - Radio
   // - Checkbox
+  $theme-input-select-size: 3,
+  $theme-checkbox-border-radius: 0,
+  $theme-input-tile-border-radius: 0,
+  $theme-input-tile-border-width: 2px,
   // - Form
   // - Alert
   $theme-alert-padding-x: 2,
   $theme-alert-padding-y: 2,
+  $theme-alert-link-color: 'ink',
   // - Accordion
   $theme-accordion-border-width: 2px,
   $theme-accordion-border-color: 'gray-warm-20',
   // - Footer
   // - Button
   // - Header
+  $theme-header-logo-text-width: auto,
+
+  // 6. Utilities
+  $utilities-use-important: true,
+  $theme-utility-breakpoints: (
+    'mobile': true,
+    'mobile-lg': true,
+    'tablet': true,
+    'tablet-lg': true,
+    'desktop': true
+  ),
+  $text-align-manual-values: (
+    'start': start,
+    'end': end
+  )
 );

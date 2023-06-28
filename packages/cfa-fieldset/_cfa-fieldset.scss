@@ -1,0 +1,17 @@
+@use 'uswds-core' as *;
+
+// .cfa-fieldset {
+//   margin-top: units(7);
+// }
+
+.cfa-fieldset.usa-fieldset--error {
+  border-inline-start-color: color($theme-color-error);
+
+  padding-left: units(4) - units(0.5);
+  margin-left: units(-3);
+
+  @include at-media('tablet') {
+    // margin-left: (units(-4) - units(0.5))
+    margin-left: units(-4)
+  }
+}

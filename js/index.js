@@ -17,19 +17,28 @@ const uswds = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/c
 
 const components = require('./components');
 const svg4everybody = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills/svg4everybody');
+const MaskDollars = require('./mask-dollars.js');
+const MaskTel = require('./mask-tel.js');
+const MaskSSN = require('./mask-ssn.js');
+const FollowUpQuestion = require('../packages/cfa-follow-up-question/cfa-follow-up-question.js');
 
 uswds.components = components;
 
 const initComponents = () => {
   const target = document.body;
 
-  Object.keys(components).forEach((key) => {
+  Object.keys(components).forEach(key => {
     const behavior = components[key];
 
     behavior.on(target);
   });
 
   svg4everybody();
+
+  new MaskDollars();
+  new MaskTel();
+  new MaskSSN();
+  new FollowUpQuestion();
 };
 
 if (document.readyState === 'loading') {

@@ -1,0 +1,42 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+
+.cfa-file-input {
+  .usa-file-input__target {
+    @include u-border($theme-form-elements-border-width, dashed, $theme-color-primary);
+
+    cursor: pointer
+  }
+
+  .usa-file-input--drag {
+    .usa-file-input__input {
+      @include focus-outline
+    }
+
+    .usa-file-input__box {
+      background-color: color('primary-lightest')
+    }
+  }
+
+  .usa-file-input__preview,
+  .usa-file-input__preview-heading {
+    background-color: color('primary-lightest')
+  }
+
+  .usa-file-input--drag,
+  .usa-file-input__preview-heading {
+    .usa-file-input__choose {
+      color: color('ink')
+    }
+  }
+
+  .usa-file-input__target {
+    &.has-invalid-file {
+      @include u-border($theme-form-elements-border-width, dashed, $theme-color-error-dark)
+    }
+  }
+
+  .usa-file-input__accepted-files-message {
+    color: color($theme-color-error-dark)
+  }
+}

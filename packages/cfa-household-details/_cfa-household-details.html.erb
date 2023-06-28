@@ -1,0 +1,58 @@
+<div class="border-2px border-base-light padding-3 radius-md<% if defined?(modifier) %> <%= modifier %><% end %>">
+  <% if header.has_key?('heading') && header['heading']['text'] %><div>
+    <h3 class="font-body-xs margin-bottom-1 text-center<% if header['heading']['modifier'] %> <%= header['heading']['modifier'] %><% end %>"<% if header['heading']['id'] %> id="<%= header['heading']['id'] %>"<% end %>><%= header['heading']['text'] %></h3>
+  </div><% end %>
+
+  <% if header.has_key?('heading') && header['heading']['content'] %><div>
+    <%= header['heading']['content'] %>
+  </div><% end %>
+
+  <ul role="list"
+    <% if defined?(list) && list.has_key?('modifier') %>class="<%= list['modifier'] %>"<% end %>
+    <% if header.has_key?('heading') && header['heading']['id'] %>aria-describedby="<%= header['heading']['id'] %>"<% end %>>
+    <% household.each do |person| %><li class="margin-0 padding-y-2<% if defined?(list) && list.has_key?('item') && list['item']['modifier'] %> <%= list['item']['modifier'] %><% end %>">
+      <div class="margin-bottom-1">
+        <% if person['icon'] %><svg class="usa-icon margin-bottom-neg-2px" aria-hidden="true" focusable="false">
+          <use href="<%= person['icon'] %>"></use>
+        </svg><% end %>
+
+        <b><%= person['label'] %></b>
+      </div>
+
+      <% if person['details'] %><div>
+        <% person['details'].each do |detail| %><div
+          <% if detail['modifier'] %> class="<%= detail['modifier'] %>"<% end %>>
+          <div><%= detail['content'] %></div>
+
+          <% if detail['utility'] %><div>
+            <% if detail['utility']['edit'] %><a href="<%= detail['utility']['edit']['href'] %>" class="usa-button cfa-button cfa-button--primary usa-button--unstyled font-body-2xs width-auto"><%= detail['utility']['edit']['label'] %></a><% end %>
+
+            <% if detail['utility']['delete'] %><span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+            <a th:href="<%= detail['utility']['delete']['href'] %>" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs width-auto"><%= detail['utility']['delete']['label'] %></a><% end %>
+          </div><% end %>
+        </div><% end %>
+      </div><% end %>
+
+      <% if person['utility'] %><div class="margin-top-1" th:classappend="${person.utility.modifier}">
+        <% if person['utility']['edit'] %><a href="<%= person['utility']['edit']['href'] %>" class="usa-button cfa-button cfa-button--primary usa-button--unstyled font-body-2xs width-auto"><%= person['utility']['edit']['label'] %></a><% end %>
+
+        <% if person['utility']['delete'] %><span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+        <a th:href="<%= person['utility']['delete']['href'] %>" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs width-auto"><%= person['utility']['delete']['label'] %></a><% end %>
+      </div><% end %>
+    </li><% end %>
+
+    <% if defined?(summary) %><% summary.each do |sum| %><li class="border-top-1px border-base-light margin-top-neg-1px padding-top-2 mobile-lg:display-flex flex-justify">
+      <% if sum['label'] %><div
+        <% if sum['label']['modifier'] %> class="<%= sum['label']['modifier'] %>"<% end %>><b><%= sum['label']['text'] %></b></div><% end %>
+
+      <% if sum['value'] %><div
+        <% if sum['value']['modifier'] %> class="<%= sum['value']['modifier'] %>"<% end %>><%= sum['value']['text'] %></div><% end %>
+    </li><% end %><% end %>
+  </ul>
+
+  <% if defined?(add) %><div class="text-center padding-top-2">
+    <%= ERB.new(File.read('packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@add').result_with_hash({items: add}) %>
+  </div><% end %>
+</div>

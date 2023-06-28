@@ -1,0 +1,29 @@
+<fieldset th:fragment="memorableDate(modifier, id, fieldset, hint, required, error, month, day, year)" class="usa-fieldset" th:classappend="${fieldset.modifier}" th:attr="id=${id}">
+  <legend class="usa-legend" th:classappend="${fieldset.legend.modifier}" th:attr="tabindex=${fieldset.legend.tabindex}">
+    <span th:text="${fieldset.legend.text}">Legend</span>
+
+    <abbr th:if="${required}" title="required" class="usa-hint usa-hint--required" th:classappend="${fieldset.legend.modifierHint}">*</abbr>
+  </legend>
+
+  <div th:if="${fieldset.hint}" class="usa-hint" th:classappend="${fieldset.hint.modifier}" th:attr="id=${fieldset.hint.id}" th:text="${fieldset.hint.text}">Hint</div>
+
+  <span th:if="${fieldset.error}" class="usa-error-message" th:attr="id=${fieldset.error.id},role=${fieldset.error.role},aria-live=${fieldset.error.ariaLive}" th:text="${fieldset.error.text}">Message</span>
+
+  <div class="usa-memorable-date" th:classappend="${modifier}">
+    <div th:if="${month.selectEl}">
+      <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${month.modifier}, ${month.id}, ${month.label}, ${month.hint}, ${month.error}, '', '', '', ${month.selectEl})}" />
+    </div>
+
+    <div th:if="${month.input}">
+      <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${month.modifier}, ${month.id}, ${month.label}, ${month.hint}, ${month.error}, ${month.input}, '', '', '')}" />
+    </div>
+
+    <div th:if="${day.input}">
+      <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${day.modifier}, ${day.id}, ${day.label}, ${day.hint}, ${day.error}, ${day.input}, '', '', '')}" />
+    </div>
+
+    <div th:if="${year.input}">
+      <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${year.modifier}, ${year.id}, ${year.label}, ${year.hint}, ${year.error}, ${year.input}, '', '', '')}" />
+    </div>
+  </div>
+</fieldset>

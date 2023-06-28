@@ -1,0 +1,3 @@
+@use '../cfa-input-select/_cfa-input-select.scss' as *;
+
+@include theme-input-select('checkbox');

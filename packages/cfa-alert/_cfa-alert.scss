@@ -4,11 +4,24 @@
   border: 2px solid;
 
   .usa-alert__body {
-    padding: units($theme-alert-padding-x);
+    padding: units($theme-alert-padding-y) units($theme-alert-padding-x);
   }
 
   .usa-alert__body::before {
     display: none
+  }
+
+  a:not(.usa-button),
+  a:hover:not(.usa-button),
+  a:visited:not(.usa-button) {
+    color: color($theme-alert-link-color);
+  }
+}
+
+.cfa-site-alert {
+  .usa-alert__body {
+    @include grid-container($theme-site-alert-max-width );
+    @include add-responsive-site-margins;
   }
 }
 
@@ -26,4 +39,8 @@
 
 .usa-alert--success {
   border-color: color($theme-color-success-darker);
+}
+
+.usa-alert--emergency {
+  border-color: color($theme-color-emergency-dark);
 }

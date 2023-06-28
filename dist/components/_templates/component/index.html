@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>Code for America USWDS theme</title>
+
+  <link rel="stylesheet" href="/uswds/css/styles.css">
+  <link rel="stylesheet" href="/highlight/styles/default.min.css">
+  <script type="text/javascript" src="/highlight/highlight.min.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['ruby', 'html', 'javascript', 'css', 'sass']
+      });
+
+      document.querySelectorAll('pre').forEach(function(pre) {
+        if (!pre.hasAttribute('tabindex')) {
+          pre.setAttribute('tabindex', '0');
+        }
+
+        hljs.highlightElement(pre);
+      });
+    });
+  </script>
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
+
+  </head>
+
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <div class="usa-overlay"></div>
+
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="-logo">
+          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        </div>
+
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <button type="button" class="usa-nav__close">
+          <img src="/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+
+        <ul class="usa-nav__primary usa-accordion">
+                              <li class="usa-nav__primary-item">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d3c12ac3dd4bd">
+              <span>Components</span>
+            </button>
+
+            <ul id="aria-c-d3c12ac3dd4bd" class="usa-nav__submenu">
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/" ><span>Components</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/accordion/" ><span>Accordion</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/alert/" ><span>Alert</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/button/" ><span>Button</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/text-input/" ><span>Text input</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/components/typography/" ><span>Typography</span></a>
+                </li>
+                          </ul>
+          </li>
+                              <li class="usa-nav__primary-item">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-e95835a63a57c">
+              <span>Design tokens</span>
+            </button>
+
+            <ul id="aria-c-e95835a63a57c" class="usa-nav__submenu">
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/design-tokens/" ><span>Design tokens</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="/design-tokens/color/" ><span>Color</span></a>
+                </li>
+                          </ul>
+          </li>
+          
+          <li class="usa-nav__primary-item">
+            <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+          </li>
+
+          <li class="usa-nav__primary-item">
+            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+          </li>
+        </ul>
+
+        
+
+        
+      </nav>
+    </div>
+  </header>
+
+  <div class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+          <nav aria-label="Secondary navigation">
+            <ul class="usa-sidenav">
+              
+              
+                          </ul>
+          </nav>
+        </div>
+
+        <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
+          <div class="usa-prose">
+            <h1>Template</h1>
+
+            <p class="usa-intro"></p>
+          </div>
+
+          <!-- INTRO -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- DETAILS -->
+<h2 id="details">Details</h2>
+<ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Template component</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#" target="_blank" rel="noopener nofollow" class="usa-link--external">Template atom</a></li>
+  <li>
+    <strong>Customization:</strong> <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Design tokens <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="uswds/img/sprite.svg#info_outline"></use></svg></abbr>
+    and <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="uswds/img/sprite.svg#info_outline"></use></svg></abbr>
+  </li>
+  <li>
+    <details>
+      <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
+      <p>The <b>Template</b> extends the <a href="https://designsystem.digital.gov/components/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Template component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/#" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Template component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Template atom</a>.</p>
+    </details>
+  </li>
+</ul>
+<!-- EXAMPLES -->
+<h2 id="examples">Examples</h2>
+<!-- render 'figure.md', name: '', nice: '', body: body_default, context: context, caption: '' -->
+<!-- GUIDANCE -->
+<h2 id="guidance">Guidance</h2>
+<p>Refer to <a href="" target="_blank" rel="noopener nofollow" class="usa-link--external">guidance on the USWDS documentation site</a>.</p>
+<p><b>Additional references</b></p>
+<div class="font-body-3xs">
+<ol>
+<li><a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a></li>
+</ol>
+</div>
+<!-- ACCESSIBILITY -->
+<!-- <div class="usa-summary-box margin-y-6" role="region" aria-labelledby="accessibility">
+  <div class="usa-summary-box__body"> -->
+<h2 id="accessibility" class="margin-bottom-2">Accessibility</h2>
+<ul class="usa-icon-list">
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">Customization to the visual appearance of the Template has been verified for <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA contrast minimum success</a>.</div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">The Template examples pass manual audits (WCAG 2.1 AA using <a href="https://www.deque.com/axe/browser-extensions/" target="_blank" rel="noopener nofollow" class="usa-link--external">axe</a> or <a href="https://developer.chrome.com/docs/lighthouse/accessibility/" target="_blank" rel="noopener nofollow" class="usa-link--external">Lighthouse</a>).</div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">
+      The Template achieves <a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA resizing success</a>.
+      <div><em class="font-body-3xs">Resizing text up to 200% without loss of content or functionality.</em></div>
+    </div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">
+      The Template passes keyboard interaction tests.
+      <div><em class="font-body-3xs">No keyboard test has been created.</em></div>
+    </div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-green">
+  <svg class="usa-icon" role="img">
+    <title>Passes</title>
+    <use href="/uswds/img/sprite.svg#check_circle"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">
+      The Template passes screen reader interaction tests.
+<p></div></p>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">Guidance on ensuring Template accessibility has been provided in this documentation.</div>
+  </li>
+</ul>
+<p>Refer to <a href="https://designsystem.digital.gov/components/#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.</p>
+<!-- DESIGN -->
+<h2 id="design-library-component">Design library component</h2>
+<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System" allowfullscreen></iframe>
+<!-- SOURCE -->
+<!-- render 'source.md', name: '', nice: '', theme: '$theme-: ', usage: 'https://designsystem.digital.gov/components/#', config: config -->
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="usa-footer">
+    <div class="grid-container usa-footer__return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+
+    <div class="usa-footer__primary-section">
+      <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <ul class="grid-row grid-gap">
+                    <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" href="/components/">Components</a>
+          </li>
+                    <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" href="/design-tokens/">Design tokens</a>
+          </li>
+          
+          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>Design Library</span></a>
+          </li>
+
+          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="usa-footer__secondary-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class=" usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+            <div class="mobile-lg:grid-col-auto">
+              <img class="usa-footer__logo-img" src="/uswds/img/logo-img.png" alt=""/>
+            </div>
+
+            <div class="mobile-lg:grid-col-auto">
+              <p class="usa-footer__logo-heading">The USWDS Honeycrisp theme</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="usa-identifier padding-0">
+    <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+      <div class="usa-identifier__container">
+        <div class="usa-identifier__logos">
+          <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img" src="/uswds/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
+        </div>
+
+        <section class="usa-identifier__identity" aria-label="Agency description">
+          <p class="usa-identifier__identity-domain">codeforamerica.org</p>
+
+          <p class="usa-identifier__identity-disclaimer">An official website of <a href="https://codeforamerica.org">Code for America</a></p>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  
+  <script src="/js/default.js"></script>
+
+  </body>
+</html>

@@ -5,7 +5,7 @@
   "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codeforamerica/uswds.git"
+    "url": "https://github.com/codeforamerica/uswds"
   },
   "design": {
     "type": "figma",
@@ -22,7 +22,7 @@
     "default": "npx @11ty/eleventy && npx gulp compile",
     "views": "npx @11ty/eleventy --serve",
     "uswds": "npx gulp watch",
-    "version": "npm run default && git add .",
+    "version": "NODE_ENV=production npm run default && git add .",
     "rollup": "npx rollup --config rollup.config.cjs",
     "preview": "NODE_ENV=production npm run views"
   },
@@ -37,6 +37,8 @@
     "thymeleaf": "^0.21.0"
   },
   "dependencies": {
-    "@uswds/uswds": "^3.4.1"
+    "@uswds/uswds": "^3.5.0",
+    "cleave.js": "^1.6.0",
+    "dropzone": "^5.9.3"
   }
 }

@@ -1,0 +1,34 @@
+<div <% if defined?(inputGroup) && inputGroup['modifier'] %>class="<%= inputGroup['modifier'] %>"<% end %>>
+  <% if input['prefix'] %><div class="usa-input-prefix" aria-hidden="true">
+    <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+      <use href="<%= input['prefix'] %>"></use>
+    </svg>
+  </div><% end %>
+
+  <% if input['prefixText'] %><div class="usa-input-prefix" aria-hidden="true"><%= input['prefixText'] %></div><% end %>
+
+  <input class="usa-input<% if input['modifier'] %> <%= input['modifier'] %><% end %>"
+    <% if input['type'] %> type="<%= input['type'] %>"<% end %>
+    <% if input['id'] %> id="<%= input['id'] %>"<% end %>
+    <% if input['name'] %> name="<%= input['name'] %>"<% end %>
+    <% if input['aria-invalid'] %> aria-invalid="<%= input['ariaInvalid'] %>"<% end %>
+    <% if input['aria-describedby'] %> aria-describedby="<%= input['ariaDescribedby'] %>"<% end %>
+    <% if input['required'] %> required<% end %>
+    <% if input['pattern'] %> pattern="<%= input['pattern'] %>"<% end %>
+    <% if input['placeholder'] %> placeholder="<%= input['placeholder'] %>"<% end %>
+    <% if input['value'] %> value="<%= input['value'] %>"<% end %>
+    <% if input['inputmode'] %> inputmode="<%= input['inputmode'] %>"<% end %>
+    <% if input['maxlength'] %> maxlength="<%= input['maxlength'] %>"<% end %>
+    <% if input['autocapitalize'] %> autocapitalize="<%= input['autocapitalize'] %>"<% end %>
+    <% if input['autocorrect'] %> autocorrect="<%= input['autocorrect'] %>"<% end %>
+    <% if input['autocomplete'] %> autocomplete="<%= input['autocomplete'] %>"<% end %>
+    <% if input['js'] %> data-js="<%= input['js'] %>"<% end %>>
+
+  <% if input['posfix'] %><div class="usa-input-suffix" aria-hidden="true">
+    <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+      <use href="<%= input['posfix'] %>"></use>
+    </svg>
+  </div><% end %>
+
+  <% if input['postfixText'] %><div class="usa-input-suffix" aria-hidden="true"><%= input['postfixText'] %></div><% end %>
+</div>

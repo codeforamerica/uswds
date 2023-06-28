@@ -1,6 +1,5 @@
 @use 'uswds-core' as *;
-
-$theme-accordion-border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
 
 .cfa-accordion {
   .usa-accordion__button {
@@ -22,7 +21,21 @@ $theme-accordion-border: units($theme-accordion-border-width) solid color($theme
   }
 
   .usa-accordion__content {
-    background-color: color($theme-color-base-lightest);
+    @include set-text-and-bg(
+      $bg-color: $theme-color-base-lightest,
+      $preferred-text-color: 'ink',
+      $context: 'CfA Accordion'
+    );
+
+    a:not(.usa-button),
+    a:hover:not(.usa-button),
+    a:visited:not(.usa-button) {
+      @include set-link-from-bg(
+        $bg-color: $theme-color-base-lightest,
+        $preferred-link-color: $theme-color-primary-dark,
+        $context: 'CfA Accordion'
+      );
+    }
   }
 }
 

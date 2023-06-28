@@ -34,54 +34,55 @@ let ThymeleafTempate = new thymeleaf.TemplateEngine(CONFIG_THYMELEAF);
  */
 const escapeHtml = (str) => {
   return (typeof str === 'string') ?
-    str.replace(/&/g, '&amp;')
+    str//.replace(/&amp;#039;/g, '\'')
+      .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/'/g, '&#39;')
+      // .replace(/'/g, '&#39;')
       .replace(/"/g, '&quot;') : str;
 };
 
-/**
- * Replaces the HTML markup characters in a string with HTML entity counterparts
- *
- * @param   {String}  str  An HTML template string
- *
- * @return  {String}       The escaped template string
- */
-const escapeHtmlForFragment = (str) => {
-  return (typeof str === 'string') ?
-    str.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/'/g, '&\\#39;')
-      .replace(/"/g, '&quot;') : str;
-};
+// /**
+//  * Replaces the HTML markup characters in a string with HTML entity counterparts
+//  *
+//  * @param   {String}  str  An HTML template string
+//  *
+//  * @return  {String}       The escaped template string
+//  */
+// const escapeHtmlForFragment = (str) => {
+//   return (typeof str === 'string') ?
+//     str.replace(/&/g, '&amp;')
+//       .replace(/</g, '&lt;')
+//       .replace(/>/g, '&gt;')
+//       // .replace(/'/g, '&\\#39;')
+//       .replace(/"/g, '&quot;') : str;
+// };
 
-/**
- * Processes the params passed as arguments to Thymeleaf templates
- *
- * @param   {Mixed}  param  The parameter to sanitize
- *
- * @return  {Mixed}         The sanitized parameter
- */
-const sanitizeForTh = (param) => {
-  switch(typeof param) {
-    case 'string':
-      param = `'${escapeHtmlForFragment(param)}'`;
+// /**
+//  * Processes the params passed as arguments to Thymeleaf templates
+//  *
+//  * @param   {Mixed}  param  The parameter to sanitize
+//  *
+//  * @return  {Mixed}         The sanitized parameter
+//  */
+// const sanitizeForTh = (param) => {
+//   switch(typeof param) {
+//     case 'string':
+//       param = `'${escapeHtmlForFragment(param)}'`;
 
-      break;
+//       break;
 
-    case 'object':
-      param = '${' + JSON.stringify(param)
-        .replace(/\[/g, '{')
-        .replace(/\]/g, '}')
-        .replace(/"/g, '\'') + '}';
+//     case 'object':
+//       param = '${' + JSON.stringify(param)
+//         .replace(/\[/g, '{')
+//         .replace(/\]/g, '}')
+//         .replace(/"/g, '\'') + '}';
 
-      break;
-  }
+//       break;
+//   }
 
-  return param;
-}
+//   return param;
+// }
 
 /**
  * Processes the params passed as arguments to Embedded Ruby templates
@@ -93,14 +94,19 @@ const sanitizeForTh = (param) => {
 const sanitizeForErb = (param) => {
   switch(typeof param) {
     case 'string':
-      param = `"${param.replace(/"/g, '\\"').replace(/'/g, '&#39;')}"`;
+      param = `"${param
+        .replace(/"/g, '\\"')
+        // .replace(/'/g, '&#39;')
+        .replace(/'/g, '\'"\'"\'')
+      }"`;
 
       break;
 
     case 'object':
       param = JSON.stringify(param)
         .replace(/":/g, '"=>')
-        .replace(/'/g, '&#39;');
+        // .replace(/'/g, '&#39;');
+        .replace(/'/g, '\'"\'"\'');
 
       break;
   }
@@ -108,22 +114,47 @@ const sanitizeForErb = (param) => {
   return param;
 }
 
+// const sanitizeForErbNew = (param) => {
+//   switch(typeof param) {
+//     case 'string':
+//       param = `"${param
+//         .replace(/"/g, '\\"')
+//         // .replace(/'/g, '&#39;')
+//         .replace(/'/g, '\'"\'"\'')
+//       }"`;
+
+//       break;
+
+//     case 'object':
+//       param = JSON.stringify(param)
+//         // .replace(/":/g, '"=>')
+//         // .replace(/'/g, '&#39;');
+//         .replace(/'/g, '\'"\'"\'');
+
+//       break;
+//   }
+
+//   return param;
+// }
+
 /**
  * Wraps passed string a code block and performs transformations on the content for display
  *
- * @param   {String}   string       An HTML template string
+ * @param   {String}   str          An HTML template string
  * @param   {String}   lang         The language of the code block
  * @param   {Boolean}  beautifyStr  Wether to beautify the code block string or not
  * @param   {Boolean}  escapeStr    Wether to escape the output string or not
  *
  * @return  {String}          The transformed template string wrapped in a code block
  */
-const block = (string, lang = 'html', beautifyStr = true, escapeStr = true) => {
-  string = (beautifyStr) ? beautify(string, CONFIG_BEAUTIFY) : string;
+const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
+  str = (beautifyStr) ? beautify(str, CONFIG_BEAUTIFY) : str;
 
-  string = (escapeStr) ? escapeHtml(string) : string;
+  str = (escapeStr) ? escapeHtml(str) : str;
 
-  return `<div class="code-block"><pre class="language-${lang}">${string}</pre></div>`;
+  return `<div class="code-block">
+      <pre class="language-${lang}">${str}</pre>
+    </div>`;
 };
 
 /**
@@ -133,7 +164,7 @@ const block = (string, lang = 'html', beautifyStr = true, escapeStr = true) => {
  *
  * @return  {String}       The template string with tags removed
  */
-const unwrap = (str) => {
+const removeExtraHtml = (str) => {
   return (typeof str === 'string') ? str
     .replace('<!DOCTYPE html><html th:lang="${#locale.language}"><head></head><body>', '')
     .replace('<html><head></head><body>', '')
@@ -141,14 +172,38 @@ const unwrap = (str) => {
 };
 
 /**
- * Remove new lines groups from the template string if there are more than one
+ * Remove all empty HTML attributes from a string. TODO, update regex to only
+ * remove between carets. This is a stop gap solution for emulating null values
+ * passed to `th:attr` attributes in real Thymeleaf instances.
  *
- * @param   {String}  string  An HTML template string
+ * @param   {String}  str  The string to search and replace
  *
- * @return  {String}          The template string with new lines removed
+ * @return  {String}       The string with HTML attributes removed
  */
-const unline = (string) => {
-  return string.replace(/(\n){2,}/g, '\n');
+const removeEmptyAttr = (str) => {
+  return str.replace(/( [A-Za-z-]*)=""/g, '');
+}
+
+/**
+ * Replace escaped single quote Thymeleaf output in HTML attributes with a single quote.
+ *
+ * @param   {String}  str  The string to search and replace
+ *
+ * @return  {String}       The string with single quotes added
+ */
+const replaceSingleQuoteEscape = (str) => {
+  return str.replace(/&amp;#039;/g, '\''); // Fix strange single quote output
+}
+
+/**
+ * Remove new lines groups from the template string if there are more than one.
+ *
+ * @param   {String}  str  An HTML template string
+ *
+ * @return  {String}       The template string with new lines removed
+ */
+const removeNewLines = (str) => {
+  return str.replace(/(\n){2,}/g, '\n');
 };
 
 /**
@@ -178,6 +233,11 @@ const getFile = (name, type = '') => {
 
     case 'stylesheet':
       filename = `${filename}/_cfa-${name}.scss`;
+
+      break;
+
+    case 'javascript':
+      filename = `${filename}/cfa-${name}.js`;
 
       break;
   }
@@ -218,13 +278,22 @@ const erbRender = async (name, context, log = false) => {
   let rubyPath = getFile(name, 'erb');
 
   let vars = Object.keys(context).map(c => {
-    return `${c}=${sanitizeForErb(context[c])}`.replace(/\n/g, '').replace(/'/g, '\'');
+    return `${c}=${sanitizeForErb(context[c])}`.replace(/\n/g, '')//.replace(/'/g, '\'');
   }).join('; ');
+
+  // let hash = Object.keys(context).map(c => {
+  //   return `${c}: ${sanitizeForErbNew(context[c])}`.replace(/\n/g, '')//.replace(/'/g, '\'');
+  // }).join(', ');
+
+  // let erb = `puts ERB.new(File.read('${rubyPath}'), 0, 0, '@html').result_with_hash({${hash}})`;
+  // let commandNew = `ruby -rerb -e "${erb}"`;
 
   let command = `(echo '<% ${vars} %>' && cat ${rubyPath}) | erb`;
 
   try {
     const stdout = execSync(command);
+
+    // console.dir(execSync(commandNew));
 
     if (log) console.log(`[${package.name}] ERB "${name}" render passing`);
 
@@ -245,6 +314,11 @@ const erbRender = async (name, context, log = false) => {
  * @return  {String}           The rendered template
  */
 const fragmentInclude = async (name, context, log = false) => {
+  // let thReplace = getFile(name, 'thymeleaf')
+  //   .replace(__dirname + '/', '').replace('.html', '');
+
+  // console.dir(thReplace);
+
   // Fragment include method
   // let templatePath = getFile(name, 'thymeleaf')
   //   .replace(__dirname + '/', '').replace('.html', '');
@@ -292,13 +366,24 @@ const createId = function() {
 /**
  * Create a filename friendly string from supplied string
  *
- * @param   {String}  s  The string to transform into a slug
+ * @param   {String}  str  The string to transform into a slug
  *
- * @return  {String}     Returns filename friendly string
+ * @return  {String}       Returns filename friendly string
  */
-const createSlug = function(s) {
-  return s.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
+const createSlug = function(str) {
+  return str.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
     .replace(/\s+/g, '-').replace(/-+/g, '-');
+};
+
+/**
+ * Create a method name friendly string from supplied string
+ *
+ * @param   {String}  str  The string to transform into a slug
+ *
+ * @return  {String}       Returns method name friendly string
+ */
+const createCamelCase = function(str) {
+  return str.replace(/-([a-z])/g, g => g[1].toUpperCase());
 };
 
 /**
@@ -348,7 +433,8 @@ module.exports = function(eleventyConfig) {
    *
    * @param   {Array}  args  Accepts 0: Context body, 1: name as String,
    *                         2: context as JSON String, 3: wether to return
-   *                         rendered HTML or pre-rendered HTML in a code block
+   *                         rendered HTML (false) or pre-rendered HTML in a
+   *                         code block (true)
    *
    * @return  {String}       Rendered template or code block source preview
    */
@@ -364,7 +450,11 @@ module.exports = function(eleventyConfig) {
     }
 
     if (args[3]) {
-      let th = unwrap(await fragmentInclude(name, context));
+      let th = removeExtraHtml(await fragmentInclude(name, context));
+
+      th = removeEmptyAttr(th);
+
+      th = replaceSingleQuoteEscape(th);
 
       /**
        * Test erb rendering for non-production environments
@@ -372,7 +462,8 @@ module.exports = function(eleventyConfig) {
       if (process.env.NODE_ENV != 'production') {
         let erb = await erbRender(name, context);
 
-        rendered = th + erb;
+        rendered = `<div><div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>${th}</div>` +
+          `<div><br><div class="margin-bottom-2"><b>ERB Preview</b></div>${erb}</div>`;
       } else {
         rendered = th
       }
@@ -380,13 +471,18 @@ module.exports = function(eleventyConfig) {
       return block(rendered, 'html');
     } else {
       // Template fragment inclusion testing
-      let th = unwrap(await fragmentInclude(name, context, true));
+      let th = removeExtraHtml(await fragmentInclude(name, context));
+
+      th = removeEmptyAttr(th);
+
+      th = replaceSingleQuoteEscape(th);
 
       if (process.env.NODE_ENV != 'production') {
         // ERB partial render testing
-        let erb = await erbRender(name, context, true);
+        let erb = await erbRender(name, context);
 
-        rendered = th + erb;
+        rendered = `<div><div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>${th}</div>` +
+          `<div><br><div class="margin-bottom-2"><b>ERB Preview</b></div>${erb}</div>`;
       } else {
         rendered = th;
       }
@@ -412,13 +508,38 @@ module.exports = function(eleventyConfig) {
       .replace(__dirname, package.name)
       .replace('.html', '');
 
-    let template = unline(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
+    let template = removeNewLines(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
 
     if (include) {
-      let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
+      let params = [
+        template.match(/\$\{[A-z$_.-]{0,}}/g)
+      ].filter(m => m).flat();
 
-      return block(`<th:block th:replace="~{${templatePath} :: ${name}(${
-          params.map(c => `{{ ${c.replace('${', '').replace('}', '')} }}`).join(', ')
+      let iterationItems = [
+        template.match(/th:each="[A-z$_.-]{0,}/g)
+      ].filter(m => m).flat();
+
+      iterationItems = iterationItems.map(i => '${' + i.split('="')[1] + '}');
+
+      // Clean up params
+      params = params.map(c => {
+        if (c.includes('.')) {
+          c = `${c.split('.')[0]}}`;
+        }
+
+        // Remove iteration items
+        if (iterationItems.includes(c)) {
+          return false;
+        }
+
+        return c;
+      });
+
+      // Create a new set of unique params and filter out Booleans or falsey variables
+      params = [...new Set(params)].filter(Boolean);
+
+      return block(`<th:block th:replace="~{${templatePath} :: ${createCamelCase(name)}(${
+          params.join(', ')
         })}" />`, 'html', true);
     }
 
@@ -439,29 +560,54 @@ module.exports = function(eleventyConfig) {
       .replace('/_', '/')
       .replace('.html.erb', '');
 
-    let template = unline(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
+    let template = removeNewLines(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
     if (include) {
+      // Find params matching these patterns
       let params = [
-        template.match(/<%= [A-z$_.-][\w$]{0,} %>/g),
-        template.match(/<% if [A-z$_.-][\w$]{0,} %>/g),
-        template.match(/<% [A-z$_.-][\w$]{0,}.each do/g)
+        template.match(/<%= [A-z$_.-]{0,} %>/g),
+        template.match(/<% if [A-z$_.-]{0,} %>/g),
+        template.match(/<% if [A-z$_.'\-\[\]]{0,} %>/g),
+        template.match(/<% if defined\?\([A-z$_.-]{0,}\) %>/g),
+        template.match(/<% [A-z$_.-]{0,}.each do/g)
       ].filter(m => m).flat();
 
-      params = params.map(c => c.replace('<%= ', '')
-        .replace('<% if ', '')
-        .replace('<% ', '')
-        .replace(' %>', '')
-        .replace('.each do', '')
-      );
+      let iterationItems = [
+        template.match(/.each do \|[A-z]{0,}/g)
+      ].filter(m => m).flat();
 
-      params = [...new Set(params)];
+      iterationItems = iterationItems.map(i => i.split('|')[1]);
 
-      return block(`<%= render '${templatePath}', ${
+      // Clean what's not needed from param instances
+      params = params.map(c => {
+        c = c.replace('<%= ', '')
+          .replace('<% if ', '')
+          .replace('defined?(', '')
+          .replace('<% ', '')
+          .replace(') %>', '')
+          .replace(' %>', '')
+          .replace('.each do', '')
+
+        if (c.includes("['")) {
+          c = c.split("['")[0];
+        }
+
+        // Remove iteration items
+        if (iterationItems.includes(c)) {
+          return false;
+        }
+
+        return c;
+      });
+
+      // Create a set of unique params and filter out Booleans or falsey variables
+      params = [...new Set(params)].filter(Boolean);
+
+      return block(`<%= ERB.new(File.read('${templatePath}'), 0, 0, '@${createCamelCase(name)}').result_with_hash({${
           params.map(attr => {
-            return `${attr}={{ ${attr} }}`;
+            return `${attr}: ${attr}`;
           }).join(', ')
-        } %>`, 'ruby', true);
+        }}) %>`, 'ruby', true);
     }
 
     return block(template, 'ruby', false);

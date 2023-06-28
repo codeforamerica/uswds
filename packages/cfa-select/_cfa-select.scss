@@ -1,0 +1,31 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-input/cfa-input.scss';
+
+.cfa-select {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: 'ink',
+    $context: 'CfA Select'
+  );
+
+  @include add-background-svg('usa-icons/arrow_drop_down');
+
+  background-size: units(4);
+
+  // height: calc(units($theme-select-height) - $theme-form-elements-border-width);
+  height: units($theme-select-height);
+  font-weight: $theme-font-weight-bold;
+
+  padding-top: units($theme-form-elements-padding-y);
+  padding-bottom: units($theme-form-elements-padding-y);
+  padding-left: units($theme-form-elements-padding-x);
+
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+
+.cfa-select:not(.usa-input--error):not(.usa-input--success),
+.cfa-select:not(.usa-select--error):not(.usa-select--success) {
+  @include cfa-input.cfa-input-border();
+}

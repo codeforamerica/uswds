@@ -1,0 +1,84 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+
+.cfa-follow-up {
+  .cfa-hint {
+    color: color($theme-color-base-darker);
+  }
+}
+
+.cfa-follow-up__region {
+  @include set-text-and-bg($theme-color-base-lightest);
+  @include u-border-y($theme-form-elements-border-width, 'ink');
+
+  position: relative;
+  padding: units(3);
+  margin-left: -(units(3));
+  margin-right: -(units(3));
+  margin-bottom: units(0.5);
+
+  margin-top: units(4); // match cfa-form-card__content gap value
+
+  @include at-media('tablet') {
+    padding: units(4);
+    margin-left: -(units(4));
+    margin-right: -(units(4));
+
+    margin-top: units(3); // match cfa-form-card__content gap value
+  }
+
+  &:not([hidden]) {
+    display: grid;
+  }
+
+  gap: units(7); // match cfa-form-card__content gap value
+}
+
+.cfa-follow-up__region::before,
+.cfa-follow-up__region::after {
+  content: '';
+
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0px;
+
+  z-index: 10;
+}
+
+.cfa-follow-up__region::before {
+  border-bottom-width: $theme-input-select-width;
+  border-bottom-color: color('ink');
+
+  border-left-width: units(1.5);
+  border-right-width: units(1.5);
+
+  top: calc(#{-($theme-input-select-width)} - #{$theme-form-elements-border-width});
+
+  // padding + radio/check box padding - input border width
+  left: calc(#{units(6)} - #{$theme-form-elements-border-width});
+
+  @include at-media('tablet') {
+    left: calc(#{units(7)} - #{$theme-form-elements-border-width});
+  }
+}
+
+.cfa-follow-up__region::after {
+  border-bottom-width: calc(#{$theme-input-select-width} - #{$theme-form-elements-border-width});
+  border-bottom-color: color($theme-color-base-lightest);
+
+  border-left-width: calc(#{units(1.5)} - #{$theme-form-elements-border-width});
+  border-right-width: calc(#{units(1.5)} - #{$theme-form-elements-border-width});
+
+  top: calc(#{-($theme-input-select-width)} + #{$theme-form-elements-border-width});
+
+  left: units(6);
+
+  @include at-media('tablet') {
+    left: units(7);
+  }
+}

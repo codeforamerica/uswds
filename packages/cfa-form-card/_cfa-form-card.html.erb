@@ -1,0 +1,201 @@
+<main class="cfa-form-card<% if defined?(modifier) %> <%= modifier %><% end %>"
+  <% if defined?(id) %> id="<%= id %>"<% end %>
+  <% if defined?(ariaLabel) %> aria-label="<%= ariaLabel %>"<% end %>>
+  <form class="usa-form<% if defined?(form) && form['modifier'] %> <%= form['modifier'] %><% end %>">
+    <% if defined?(graphic) %><svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
+      <use href="<%= graphic %>"></use>
+    </svg><% end %>
+
+    <% if defined?(fieldset) %><fieldset class="usa-fieldset<% if fieldset['modifier'] %> <%= fieldset['modifier'] %><% end %>">
+      <% if header.has_key?('heading') && header['heading']['text'] %><legend class="cfa-form-card__heading">
+        <h1 <% if header['heading']['id'] %> id="<%= header['heading']['id'] %>"<% end %>><%= header['heading']['text'] %></h1>
+      </legend><% end %>
+
+      <% if header.has_key?('heading') && header['heading']['content'] %><legend class="cfa-form-card__heading">
+        <%= header['heading']['content'] %>
+      </legend><% end %>
+
+      <% if header.has_key?('helpMessage') && header['helpMessage']['text'] %><div class="cfa-form-card__help-message">
+        <p><%= header['helpMessage']['text'] %></p>
+      </div><% end %>
+
+      <% if header.has_key?('helpMessage') && header['helpMessage']['content'] %><div class="cfa-form-card__help-message">
+        <%= header['helpMessage']['content'] %>
+      </div><% end %>
+
+      <% if header['alert'] %><div>
+        <%= ERB.new(File.read('packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert')
+          .result_with_hash({
+            modifier: (header['alert']['modifier'] if header['alert']['modifier']),
+            role: (header['alert']['role'] if header['alert']['role']),
+            heading: (header['alert']['heading'] if header['alert']['heading']),
+            label: (header['alert']['label'] if header['alert']['label']),
+            labelledBy: (header['alert']['labelledBy'] if header['alert']['labelledBy']),
+            body: (header['alert']['body'] if header['alert']['body']),
+            text: (header['alert']['text'] if header['alert']['text'])
+          }.compact) %>
+      </div><% end %>
+
+      <div class="cfa-form-card__content">
+        <% fieldset['formGroups'].each do |formGroup| %><div>
+          <% if formGroup['input'] %>
+          <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              label: (formGroup['label'] if formGroup['label']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              error: (formGroup['error'] if formGroup['error']),
+              input: formGroup['input'],
+              inputGroup: (formGroup['inputGroup'] if formGroup['inputGroup'])
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['textarea'] %>
+          <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              label: (formGroup['label'] if formGroup['label']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              error: (formGroup['error'] if formGroup['error']),
+              textarea: formGroup['textarea']
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['selectEl'] %>
+          <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              label: (formGroup['label'] if formGroup['label']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              error: (formGroup['error'] if formGroup['error']),
+              selectEl: formGroup['selectEl']
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['options'] %><div class="cfa-form-card__input-select-group">
+            <%= ERB.new(File.read('packages/cfa-input-select/_cfa-input-select.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+              .result_with_hash({
+                options: (formGroup['options'] if formGroup['options']),
+                required: (formGroup['required'] if formGroup['required'])
+              }.compact) %>
+          </div><% end %>
+        </div><% end %>
+      </div>
+    </fieldset>
+
+    <% else %>
+
+    <div>
+      <% if header.has_key?('heading') && header['heading']['text'] %><div class="cfa-form-card__heading">
+        <h1 <% if header['heading']['id'] %> id="<%= header['heading']['id'] %>"<% end %>><%= header['heading']['text'] %></h1>
+      </div><% end %>
+
+      <% if header.has_key?('heading') && header['heading']['content'] %><div class="cfa-form-card__heading">
+        <%= header['heading']['content'] %>
+      </div><% end %>
+
+      <% if header.has_key?('helpMessage') && header['helpMessage']['text'] %><div class="cfa-form-card__help-message">
+        <p><%= header['helpMessage']['text'] %></p>
+      </div><% end %>
+
+      <% if header.has_key?('helpMessage') && header['helpMessage']['content'] %><div class="cfa-form-card__help-message">
+        <%= header['helpMessage']['content'] %>
+      </div><% end %>
+
+      <% if defined?(content) %><div class="cfa-form-card__content">
+        <%= content %>
+      </div><% end %>
+
+      <% if defined?(formGroups) %><div class="cfa-form-card__content">
+        <% formGroups.each do |formGroup| %><div>
+          <% if formGroup['input'] %>
+          <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              label: (formGroup['label'] if formGroup['label']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              error: (formGroup['error'] if formGroup['error']),
+              input: formGroup['input'],
+              inputGroup: (formGroup['inputGroup'] if formGroup['inputGroup'])
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['textarea'] %>
+          <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              label: (formGroup['label'] if formGroup['label']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              error: (formGroup['error'] if formGroup['error']),
+              textarea: formGroup['textarea']
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['selectEl'] %>
+          <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              label: (formGroup['label'] if formGroup['label']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              error: (formGroup['error'] if formGroup['error']),
+              selectEl: formGroup['selectEl']
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['memorableDate'] %>
+          <%= ERB.new(File.read('packages/cfa-memorable-date/_cfa-memorable-date.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              fieldset: (formGroup['fieldset'] if formGroup['fieldset']),
+              required: (formGroup['required'] if formGroup['required']),
+              error: (formGroup['error'] if formGroup['error']),
+              month: (formGroup['month'] if formGroup['month']),
+              day: (formGroup['day'] if formGroup['day']),
+              year: (formGroup['year'] if formGroup['year'])
+            }.compact) %>
+          <% end %>
+
+          <% if formGroup['options'] %>
+          <%= ERB.new(File.read('packages/cfa-fieldset/_cfa-fieldset.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              modifier: (formGroup['modifier'] if formGroup['modifier']),
+              id: (formGroup['id'] if formGroup['id']),
+              legend: (formGroup['legend'] if formGroup['legend']),
+              hint: (formGroup['hint'] if formGroup['hint']),
+              required: (formGroup['required'] if formGroup['required']),
+              error: (formGroup['error'] if formGroup['error']),
+              options: (formGroup['options'] if formGroup['options'])
+            }.compact) %>
+          <% end %>
+        </div><% end %>
+      </div><% end %>
+    </div>
+
+    <% end %>
+
+    <% if defined?(footer) %><div class="cfa-form-card__footer">
+      <% if footer.has_key?('submit') %><div>
+        <%= ERB.new(File.read('packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@submit').result_with_hash({items: footer['submit']}) %>
+      </div><% end %>
+
+      <% if footer.has_key?('skip') %><div>
+        <%= ERB.new(File.read('packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@skip').result_with_hash({items: footer['skip']}) %>
+      </div><% end %>
+
+      <% if footer.has_key?('group') %><div>
+        <%= ERB.new(File.read('packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@group').result_with_hash({items: footer['group']}) %>
+      </div><% end %>
+
+      <% if footer.has_key?('subtleText') %><div>
+        <%= footer['subtleText'] %>
+      </div><% end %>
+    </div><% end %>
+  </form>
+</main>

@@ -1,0 +1,19 @@
+<div th:fragment="input(input, inputGroup)" th:if="${input}" th:class="${inputGroup.modifier}">
+  <div th:if="${input.prefix}" class="usa-input-prefix" aria-hidden="true">
+    <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+      <use href="${input.prefix}"></use>
+    </svg>
+  </div>
+
+  <div th:if="${input.prefixText}" class="usa-input-prefix" aria-hidden="true" th:text="${input.prefixText}">$</div>
+
+  <input class="usa-input" th:classappend="${input.modifier}" th:attr="type=${input.type},id=${input.id},name=${input.name},aria-invalid=${input.ariaInvalid},aria-describedby=${input.ariaDescribedby},required=${input.required},pattern=${input.pattern},placeholder=${input.placeholder},value=${input.value},inputmode=${input.inputmode},maxlength=${input.maxlength},autocapitalize=${input.autocapitalize},autocorrect=${input.autocorrect},autocomplete=${input.autocomplete},accept=${input.accept},multiple=${input.multiple},data-js=${input.js}">
+
+  <div th:if="${input.postfix}" class="usa-input-suffix" aria-hidden="true">
+    <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+      <use href="${input.prefix}"></use>
+    </svg>
+  </div>
+
+  <div th:if="${input.postfixText}" class="usa-input-suffix" aria-hidden="true" th:text="${input.postfixText}">.00</div>
+</div>

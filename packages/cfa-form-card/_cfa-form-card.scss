@@ -1,0 +1,73 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+
+.cfa-form-card {
+  @include set-text-and-bg('white');
+  @include u-border($theme-card-border-width, $theme-card-border-color);
+  @include u-radius($theme-card-border-radius);
+
+  padding: units(7) units(3);
+  // margin-left: -(units(0.5));
+  // margin-right: -(units(0.5));
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: units(0.5);
+
+
+  @include at-media('tablet') {
+    max-width: units('tablet');
+    padding: units(7) units(4);
+  }
+}
+
+.cfa-form-card__graphic {
+  width: units(10);
+  height: units(9);
+
+  display: block;
+  margin-bottom: units(1);
+}
+
+.cfa-form-card__heading {
+  overflow: hidden;
+
+  h1, h2, h3, h4, h5, h6 {
+    @include u-font('sans', 'xl');
+    @include u-text('bold');
+
+    margin-bottom: 0;
+  }
+}
+
+.cfa-form-card__help-message {
+  margin-top: units(3);
+}
+
+.cfa-form-card__header-alert {
+  margin-top: units(3);
+}
+
+.cfa-form-card__content {
+  display: grid;
+  gap: units(7);
+
+  margin-top: units(7);
+}
+
+.cfa-form-card__input-select-group {
+  .cfa-radio:first-child .usa-radio__label,
+  .cfa-checkbox:first-child .usa-checkbox__label {
+    margin-top: 0
+  }
+}
+
+.cfa-form-card__footer {
+  margin-top: units(7);
+
+  display: grid;
+  gap: units(4);
+}
+
+.usa-button.cfa-form-card__footer-first-button {
+  margin-top: 0;
+}

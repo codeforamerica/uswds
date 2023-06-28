@@ -3,6 +3,7 @@
  */
 
 const uswds = require('@uswds/compile');
+const { series } = require("gulp");
 const package = require('./package.json');
 const execSync = require('child_process').execSync;
 
@@ -100,4 +101,7 @@ exports.compile = cb => {
  *
  * @var {Function}
  */
+
+// console.dir(uswds.watch);
 exports.watch = uswds.watch;
+// series(exports.watch, buildS/ass, watchSass);

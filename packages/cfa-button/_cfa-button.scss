@@ -1,32 +1,71 @@
 @use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-transition/cfa-transition' as *;
 
-$theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
+/**
+ * Match closest size of small CfA buttons
+ */
 
-.usa-button:not(.usa-button--unstyled) {
-  padding: units(1.5) units(2);
+.cfa-button:not(.usa-button--unstyled) {
+  padding: units(2) units(2.5);
+
+  @include cfa-transition;
 
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
 }
 
-.usa-button--big:not(.usa-button--unstyled) {
+/**
+ * Add icon support not present in the USWDS
+ */
+
+.cfa-button > .usa-icon {
+  margin-bottom: -0.2rem;
+  pointer-events: none;
+
+  &:first-child {
+    margin-inline-end: units(0.5);
+  }
+
+  &:last-child {
+    margin-inline-start: units(0.5);
+  }
+}
+
+/**
+ * Match closest size of default CfA buttons
+ */
+
+.cfa-button.usa-button--big:not(.usa-button--unstyled) {
+  font-size: font-size($theme-button-font-family, 'lg');
   border-radius: radius($theme-border-radius-lg);
-  font-size: font-size($theme-button-font-family, 'md');
   padding: units(2.5) units(4);
 }
 
-.usa-button:not([disabled]):focus,
-.usa-button:not([disabled]).usa-focus {
+/**
+ * CfA focus styles (no gap)
+ */
+
+.cfa-button:not([disabled]):focus,
+.cfa-button:not([disabled]).usa-focus {
   outline-offset: 0;
 }
 
-.usa-button--outline:not(.usa-button--unstyled):not([disabled]) {
+/**
+ * Outline button (CfA secondary)
+ */
+
+.cfa-button.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: 'ink',
+    $context: 'CfA Button'
+  );
+
+  box-shadow: $theme-button-stroke color('ink');
+
   -moz-osx-font-smoothing: auto;
    -webkit-font-smoothing: auto;
-
-  // background-color: color('transparent');
-  box-shadow: $theme-button-stroke color('ink');
-  color: color('ink');
 
   &:visited {
     color: color('ink');
@@ -34,15 +73,174 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 
   &:hover,
   &.usa-button--hover {
-    // background-color: color('transparent');
+    @include set-text-and-bg(
+      $bg-color: 'base-lightest',
+      $preferred-text-color: 'ink',
+      $context: 'CfA Button'
+    );
+
     box-shadow: $theme-button-stroke color('ink');
-    color: color('ink');
   }
 
   &:active,
   &.usa-button--active {
-    // background-color: color('transparent');
+    @include set-text-and-bg(
+      $bg-color: 'base-lightest',
+      $preferred-text-color: 'ink',
+      $context: 'CfA Button'
+    );
+
     box-shadow: $theme-button-stroke color('ink');
-    color: color('ink');
   }
+}
+
+/**
+ * Disabled styling
+ */
+
+.cfa-button[disabled],
+.cfa-button[aria-disabled=true] {
+  @include set-text-and-bg(
+    $bg-color: 'base-lighter',
+    $preferred-text-color: 'base-darker',
+    $context: 'CfA Button'
+  );
+
+  &:hover,
+  &:focus {
+    @include set-text-and-bg(
+      $bg-color: 'base-lighter',
+      $preferred-text-color: 'base-darker',
+      $context: 'CfA Button'
+    );
+  }
+}
+
+.cfa-button.usa-button--outline[disabled],
+.cfa-button.usa-button--outline[aria-disabled=true] {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: 'base-dark',
+    $context: 'CfA Button'
+  );
+
+  &:hover,
+  &:focus {
+    @include set-text-and-bg(
+      $bg-color: $theme-body-background-color,
+      $preferred-text-color: 'base-dark',
+      $context: 'CfA Button'
+    );
+  }
+}
+
+/**
+ * CfA danger button
+ */
+
+.cfa-button--danger:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: 'error',
+    $preferred-text-color: $theme-body-background-color,
+    $context: 'CfA Button'
+  );
+
+  &:hover,
+  &.usa-button--hover {
+    @include set-text-and-bg(
+      $bg-color: 'error-dark',
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
+    );
+  }
+
+  &:active,
+  &.usa-button--active {
+    @include set-text-and-bg(
+      $bg-color: $theme-color-error-dark,
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
+    );
+  }
+}
+
+.cfa-button--danger.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: $theme-color-error,
+    $context: 'CfA Button'
+  );
+
+  &:hover,
+  &.usa-button--hover {
+    @include set-text-and-bg(
+      $bg-color:  $theme-color-error,
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
+    );
+  }
+
+  &:active,
+  &.usa-button--active {
+    @include set-text-and-bg(
+      $bg-color:  $theme-color-error,
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
+    );
+  }
+}
+
+.cfa-button--danger.usa-button--unstyled {
+  color: color($theme-color-error);
+
+  &:hover {
+    color: color($theme-color-error-darker);
+  }
+}
+
+/**
+ * CfA Yes or No
+ **/
+
+.cfa-button--no {
+  > svg {
+    fill: color($theme-color-error);
+  }
+}
+
+.cfa-button--yes {
+  > svg {
+    fill: color($theme-color-success-darker);
+  }
+}
+
+/**
+ * Buttons with sub labels
+ */
+
+.cfa-button--sub-label:not(.usa-button--unstyled) {
+  display: flex;
+  text-align: start;
+  align-items: center;
+
+  padding-top: units(1);
+  padding-bottom: units(1);
+
+  > .usa-icon {
+    &:first-child {
+      margin-inline-end: units(1);
+    }
+
+    &:last-child {
+      margin-inline-start: units(1);
+    }
+  }
+}
+
+.cfa-button__sub-label {
+  @include u-font($theme-button-font-family, '2xs');
+  @include u-text('normal');
+
+  display: block;
+  padding-top: units(1px);
 }

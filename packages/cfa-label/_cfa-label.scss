@@ -1,0 +1,6 @@
+@use 'uswds-core' as *;
+
+.cfa-label {
+  font-weight: $theme-font-weight-bold;
+  cursor: pointer;
+}

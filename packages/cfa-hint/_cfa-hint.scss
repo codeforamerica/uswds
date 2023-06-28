@@ -1,0 +1,9 @@
+@use 'uswds-core' as *;
+
+.cfa-hint {
+
+}
+
+.cfa-hint.usa-hint--required[title] {
+  text-decoration: none;
+}

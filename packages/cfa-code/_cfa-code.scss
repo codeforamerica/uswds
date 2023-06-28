@@ -14,7 +14,7 @@
   border-radius: 3px;
 }
 
-code, pre {
+code, pre, .code {
   @include u-font('mono', '2xs');
   @include u-line-height('mono', 6);
 
@@ -32,14 +32,18 @@ code, pre {
   text-overflow: ellipsis;
 }
 
-p code, li code, td code, dl code, dd code {
-  font-size: 80%;
+p code, li code, td code, dl code, dd code,
+p .code, li .code, td .code, dl .code, dd .code {
+  font-size: 80% !important;
   line-height: inherit;
 
   border-radius: 3px;
   padding: 0.1em 0.4em 0.2em;
   margin: 0;
   display: inline;
+}
+
+p code, li code, td code, dl code, dd code {
   white-space: nowrap;
 }
 
@@ -97,7 +101,8 @@ code, .code, .code-block, pre, .hljs {
     -webkit-font-smoothing: var(--cfa-code-webkit-font-smoothing);
 }
 
-p code, li code, td code, dl code, dd code {
+p code, li code, td code, dl code, dd code,
+p .code, li .code, td .code, dl .code, dd .code {
   color: var(--cfa-code-text-code) !important;
   background-color: var(--cfa-code-text-code-background) !important;
 
@@ -130,7 +135,8 @@ p code, li code, td code, dl code, dd code {
 }
 
 .hljs-keyword, .hljs-attribute, .hljs-selector-tag,
-.hljs-meta-keyword, .hljs-doctag, .hljs-name, .hljs-built_in {
+.hljs-meta-keyword, .hljs-doctag, .hljs-name, .hljs-built_in,
+.hljs-section, .hljs-title {
   color: var(--cfa-code-text-keyword) !important
 }
 
