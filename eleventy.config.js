@@ -133,7 +133,7 @@ const block = (string, lang = 'html', beautifyStr = true, escapeStr = true) => {
  *
  * @return  {String}       The template string with tags removed
  */
-const unwrap = (str) => {
+const removeExtraHtml = (str) => {
   return (typeof str === 'string') ? str
     .replace('<!DOCTYPE html><html th:lang="${#locale.language}"><head></head><body>', '')
     .replace('<html><head></head><body>', '')
@@ -141,14 +141,27 @@ const unwrap = (str) => {
 };
 
 /**
- * Remove new lines groups from the template string if there are more than one
+ * Remove all empty HTML attributes from a string. TODO, update regex to only
+ * remove between carets. This is a stop gap solution for emulating null values
+ * passed to `th:attr` attributes in real Thymeleaf instances.
  *
- * @param   {String}  string  An HTML template string
+ * @param   {String}  str  The string to search and replace
  *
- * @return  {String}          The template string with new lines removed
+ * @return  {String}       The string with HTML attributes removed
  */
-const unline = (string) => {
-  return string.replace(/(\n){2,}/g, '\n');
+const removeEmptyAttr = (str) => {
+  return str.replace(/( [A-Za-z-]*)=""/g, '');
+}
+
+/**
+ * Remove new lines groups from the template string if there are more than one.
+ *
+ * @param   {String}  str  An HTML template string
+ *
+ * @return  {String}       The template string with new lines removed
+ */
+const removeNewLines = (str) => {
+  return str.replace(/(\n){2,}/g, '\n');
 };
 
 /**
@@ -348,7 +361,8 @@ module.exports = function(eleventyConfig) {
    *
    * @param   {Array}  args  Accepts 0: Context body, 1: name as String,
    *                         2: context as JSON String, 3: wether to return
-   *                         rendered HTML or pre-rendered HTML in a code block
+   *                         rendered HTML (false) or pre-rendered HTML in a
+   *                         code block (true)
    *
    * @return  {String}       Rendered template or code block source preview
    */
@@ -364,7 +378,9 @@ module.exports = function(eleventyConfig) {
     }
 
     if (args[3]) {
-      let th = unwrap(await fragmentInclude(name, context));
+      let th = removeExtraHtml(await fragmentInclude(name, context));
+
+      th = removeEmptyAttr(th);
 
       /**
        * Test erb rendering for non-production environments
@@ -372,7 +388,7 @@ module.exports = function(eleventyConfig) {
       if (process.env.NODE_ENV != 'production') {
         let erb = await erbRender(name, context);
 
-        rendered = th + erb;
+        rendered = th + `<div><br><figcaption><b>ERB Preview</b></figcaption><br>${erb}</div>`;
       } else {
         rendered = th
       }
@@ -380,13 +396,15 @@ module.exports = function(eleventyConfig) {
       return block(rendered, 'html');
     } else {
       // Template fragment inclusion testing
-      let th = unwrap(await fragmentInclude(name, context, true));
+      let th = removeExtraHtml(await fragmentInclude(name, context, true));
+
+      th = removeEmptyAttr(th);
 
       if (process.env.NODE_ENV != 'production') {
         // ERB partial render testing
         let erb = await erbRender(name, context, true);
 
-        rendered = th + erb;
+        rendered = th + `<div><br><figcaption><b>ERB Preview</b></figcaption><br>${erb}</div>`;
       } else {
         rendered = th;
       }
@@ -412,7 +430,7 @@ module.exports = function(eleventyConfig) {
       .replace(__dirname, package.name)
       .replace('.html', '');
 
-    let template = unline(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
+    let template = removeNewLines(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
 
     if (include) {
       let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
@@ -439,7 +457,7 @@ module.exports = function(eleventyConfig) {
       .replace('/_', '/')
       .replace('.html.erb', '');
 
-    let template = unline(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
+    let template = removeNewLines(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
     if (include) {
       let params = [

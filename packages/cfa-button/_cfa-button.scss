@@ -2,25 +2,39 @@
 
 $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 
-.usa-button:not(.usa-button--unstyled) {
+.cfa-button:not(.usa-button--unstyled) {
   padding: units(1.5) units(2);
 
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
 }
 
-.usa-button--big:not(.usa-button--unstyled) {
+// Overrides for icon support not present in the USWDS
+.cfa-button > .usa-icon {
+  margin-bottom: -0.2rem;
+  pointer-events: none;
+
+  &:first-child {
+    margin-inline-end: units(0.5);
+  }
+
+  &:last-child {
+    margin-inline-start: units(0.5);
+  }
+}
+
+.cfa-button.usa-button--big:not(.usa-button--unstyled) {
   border-radius: radius($theme-border-radius-lg);
-  font-size: font-size($theme-button-font-family, 'md');
+  font-size: font-size($theme-button-font-family, 'lg');
   padding: units(2.5) units(4);
 }
 
-.usa-button:not([disabled]):focus,
-.usa-button:not([disabled]).usa-focus {
+.cfa-button:not([disabled]):focus,
+.cfa-button:not([disabled]).usa-focus {
   outline-offset: 0;
 }
 
-.usa-button--outline:not(.usa-button--unstyled):not([disabled]) {
+.cfa-button.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
   -moz-osx-font-smoothing: auto;
    -webkit-font-smoothing: auto;
 
@@ -45,4 +59,9 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
     box-shadow: $theme-button-stroke color('ink');
     color: color('ink');
   }
+}
+
+.cfa-button[disabled],
+.cfa-button[aria-disabled=true] {
+  color: color('ink');
 }

@@ -4,6 +4,7 @@ title: Accordion
 layout: default
 intro: '"An accordion helps me scan long pages by letting me show or hide information."'
 url_uswds: https://designsystem.digital.gov/components/accordion
+url_uswds_guidance: '#guidance'
 url_uswds_usage: '#using-the-accordion-component-2'
 nice_uswds: Accordion component
 description_uswds: ''

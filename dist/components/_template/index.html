@@ -55,11 +55,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-62a8decd941ea">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-bbc1b8a9cf027">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-62a8decd941ea" class="usa-nav__submenu">
+            <ul id="aria-c-bbc1b8a9cf027" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="/components/" ><span>Components</span></a>
                 </li>
@@ -73,7 +73,7 @@
                                     <a href="/components/button/" ><span>Button</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
-                                    <a href="/components/_template/" ><span>Template</span></a>
+                                    <a href="/components/_template/" aria-current="page"><span>Template</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
                                     <a href="/components/text-input/" ><span>Text input</span></a>
@@ -84,13 +84,13 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-1851db445b87d">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-7b46875b59d28">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-1851db445b87d" class="usa-nav__submenu">
+            <ul id="aria-c-7b46875b59d28" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
-                                    <a href="/design-tokens/" aria-current="page"><span>Design tokens</span></a>
+                                    <a href="/design-tokens/" ><span>Design tokens</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
                                     <a href="/design-tokens/color/" ><span>Color</span></a>
@@ -120,10 +120,26 @@
         <div class="usa-layout-docs__sidenav desktop:grid-col-3">
           <nav aria-label="Secondary navigation">
             <ul class="usa-sidenav">
-              
                                           
+              
                             <li class="usa-sidenav__item is-current">
-                                <a href="/design-tokens/" class="usa-current" aria-current="page">Design tokens</a>
+                                <a href="/components/" >Components</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/accordion/" >Accordion</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/alert/" >Alert</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/button/" >Button</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/_template/" class="usa-current" aria-current="page">Template</a>
 
                                 <ul class="usa-sidenav__sublist">
                   <li class="usa-sidenav__item"><a href="#details">Details</a></li>
@@ -138,7 +154,11 @@
                 </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
-                                <a href="/design-tokens/color/" >Color</a>
+                                <a href="/components/text-input/" >Text input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="/components/typography/" >Typography</a>
 
                               </li>
                           </ul>
@@ -147,12 +167,59 @@
 
         <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
           <div class="usa-prose">
-            <h1>Design tokens</h1>
+            <h1>Template</h1>
 
             <p class="usa-intro"></p>
           </div>
 
-          
+          <!-- INTRO -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- DETAILS -->
+<h2 id="details">Details</h2>
+<ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Template component</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#" target="_blank" rel="noopener nofollow" class="usa-link--external">Template atom</a></li>
+  <li>
+    <strong>Customization:</strong> <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Design tokens 
+<svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use xlink:href="/uswds/img/sprite.svg#info_outline"></use></svg>
+</abbr>
+    and <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles 
+<svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use xlink:href="/uswds/img/sprite.svg#info_outline"></use></svg>
+</abbr>
+  </li>
+</ul>
+<p>The <strong>Template</strong> extends the <a href="https://designsystem.digital.gov/components/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Template component</a>. The visual appearance is modified using <strong>design tokens</strong> applied to the <a href="https://designsystem.digital.gov/components/#" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Template component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Template atom</a>.</p>
+<!-- ACCESSIBILITY -->
+<h2 id="accessibility">Accessibility</h2>
+<ol>
+<li>
+<p>Existing research references</p>
+</li>
+<li>
+<p>Manual accessibility tests</p>
+</li>
+<li>
+<p>Automated accessibility tests</p>
+</li>
+<li>
+<p>Basic usability tests</p>
+</li>
+<li>
+<p>Assistive tech usability tests</p>
+</li>
+</ol>
+<!-- EXAMPLES -->
+<h2 id="examples">Examples</h2>
+<!-- render 'figure.md', name: '', nice: '', body: body_default, context: context, caption: '' -->
+<!-- GUIDANCE -->
+<h2 id="guidance">Guidance</h2>
+<p>Refer to <a href="https://designsystem.digital.gov/components/" target="_blank" rel="noopener nofollow" class="usa-link--external">additional guidance on the USWDS documentation site</a>.</p>
+<!-- DESIGN -->
+<h2 id="design-library">Design library</h2>
+<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System" allowfullscreen></iframe>
+<!-- SOURCE -->
+<!-- render 'source.md', name: '', nice: '', theme: '$theme-: ', usage: 'https://designsystem.digital.gov/components/alert/#using-the-alert-component-2', config: config -->
+
         </main>
       </div>
     </div>

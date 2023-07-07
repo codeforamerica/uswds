@@ -4,6 +4,7 @@ title: Alert
 layout: default
 intro: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
 url_uswds: https://designsystem.digital.gov/components/alert
+url_uswds_guidance: '#guidance'
 url_uswds_usage: '#using-the-alert-component-2'
 nice_uswds: Alert component
 description_uswds: ''
@@ -124,6 +125,8 @@ This is an example of what the {{ nice_uswds }} looks like without the modifier 
 **Success, green**. For successful interactions such as a submitting an application. The HTML element should have the `role="status"` attribute.
 
 **Attention and color**. A notice that uses a tertiary background color, or color that appears in roughly 5% of the color palette, will draw more attention. Also consider choosing combinations that are distinguishable across a broad spectrum of color blindness such as blue against orange, where orange is the emphasis color (<a href="https://www.tableau.com/blog/examining-data-viz-rules-dont-use-red-green-together" target="_blank" rel="noopener nofollow" class="usa-link--external">source</a>).
+
+Refer to <a href="{{ url_uswds }}{{ url_uswds_guidance }}" target="_blank" rel="noopener nofollow" class="usa-link--external">additional guidance on the USWDS documentation site</a>.
 
 <!-- DESIGN -->
 
