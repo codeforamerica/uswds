@@ -16,8 +16,10 @@ in the form $setting: value,
 
 @use 'uswds-core' with (
   // 1. Settings
-  $theme-show-compile-warnings: false,
+  // $theme-show-compile-warnings: false,
+  $theme-show-compile-warnings: true,
   $theme-show-notifications: false,
+  // $theme-show-notifications: true,
   // Focus
   $theme-focus-color: 'gold-30v',
 
@@ -27,7 +29,7 @@ in the form $setting: value,
   // $theme-border-radius-lg: 1,
 
   // 3. Color
-  // $test-color-tokens: TRUE,
+  // $test-color-tokens: true,
   // - Base
   $theme-color-base-family: 'gray-warm',
   $theme-color-base-lightest: 'gray-warm-4', // affects accordion background

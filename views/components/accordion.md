@@ -142,4 +142,5 @@ This is an example of what the {{ nice_uswds }} looks like without the modifier 
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: 'https://designsystem.digital.gov/components/accordion/#using-the-accordion-component-2', config: config %}
+{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
+{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: usage, config: config %}

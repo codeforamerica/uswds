@@ -12,7 +12,6 @@ nice_honeycrisp: Template atom
 modifier_honeycrisp: false
 tokens: true
 styles: true
-description_honeycrisp: ''
 ---
 
 <!-- INTRO -->
@@ -65,4 +64,4 @@ Refer to <a href="{{ url_uswds }}{{ url_uswds_guidance }}" target="_blank" rel="
 
 <!-- SOURCE -->
 
-<!-- render 'source.md', name: '{{ name }}', nice: '{{ nice }}', theme: '$theme-{{ setting }}: {{ value }}', usage: 'https://designsystem.digital.gov/components/alert/#using-the-alert-component-2', config: config -->
+<!-- render 'source.md', name: '{{ name }}', nice: '{{ nice }}', theme: '$theme-{{ setting }}: {{ value }}', usage: '{{ url_uswds }}{{ url_uswds_usage }}', config: config -->

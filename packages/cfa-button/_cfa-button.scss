@@ -2,14 +2,23 @@
 
 $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 
+/**
+ * Match closest size of small CfA buttons
+ */
+
 .cfa-button:not(.usa-button--unstyled) {
-  padding: units(1.5) units(2);
+  padding: units(2) units(2.5);
+
+  transition: 0.1s ease-out all;
 
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
 }
 
-// Overrides for icon support not present in the USWDS
+/**
+ * Add icon support not present in the USWDS
+ */
+
 .cfa-button > .usa-icon {
   margin-bottom: -0.2rem;
   pointer-events: none;
@@ -23,24 +32,39 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
   }
 }
 
+/**
+ * Match closest size of default CfA buttons
+ */
+
 .cfa-button.usa-button--big:not(.usa-button--unstyled) {
-  border-radius: radius($theme-border-radius-lg);
   font-size: font-size($theme-button-font-family, 'lg');
+  border-radius: radius($theme-border-radius-lg);
   padding: units(2.5) units(4);
 }
+
+/**
+ * CfA focus styles (no gap)
+ */
 
 .cfa-button:not([disabled]):focus,
 .cfa-button:not([disabled]).usa-focus {
   outline-offset: 0;
 }
 
+/**
+ * Outline button (CfA secondary)
+ */
+
 .cfa-button.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: 'ink'
+  );
+
+  box-shadow: $theme-button-stroke color('ink');
+
   -moz-osx-font-smoothing: auto;
    -webkit-font-smoothing: auto;
-
-  // background-color: color('transparent');
-  box-shadow: $theme-button-stroke color('ink');
-  color: color('ink');
 
   &:visited {
     color: color('ink');
@@ -48,20 +72,115 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 
   &:hover,
   &.usa-button--hover {
-    // background-color: color('transparent');
+    @include set-text-and-bg(
+      $bg-color: 'base-lightest',
+      $preferred-text-color: 'ink'
+    );
+
     box-shadow: $theme-button-stroke color('ink');
-    color: color('ink');
   }
 
   &:active,
   &.usa-button--active {
-    // background-color: color('transparent');
+    @include set-text-and-bg(
+      $bg-color: 'base-lightest',
+      $preferred-text-color: 'ink'
+    );
+
     box-shadow: $theme-button-stroke color('ink');
-    color: color('ink');
   }
 }
 
+/**
+ * Disabled styling
+ */
+
 .cfa-button[disabled],
 .cfa-button[aria-disabled=true] {
-  color: color('ink');
+  @include set-text-and-bg(
+    $bg-color: 'base-lighter',
+    $preferred-text-color: 'base-darker'
+  );
+
+  &:hover,
+  &:focus {
+    @include set-text-and-bg(
+      $bg-color: 'base-lighter',
+      $preferred-text-color: 'base-darker'
+    );
+  }
+}
+
+.cfa-button.usa-button--outline[disabled],
+.cfa-button.usa-button--outline[aria-disabled=true] {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: 'base-dark'
+  );
+
+  &:hover,
+  &:focus {
+    @include set-text-and-bg(
+      $bg-color: $theme-body-background-color,
+      $preferred-text-color: 'base-dark'
+    );
+  }
+}
+
+/**
+ * CfA danger button
+ */
+
+.cfa-button--danger:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: 'error',
+    $preferred-text-color: $theme-body-background-color
+  );
+
+  &:hover,
+  &.usa-button--hover {
+    @include set-text-and-bg(
+      $bg-color: 'error-dark',
+      $preferred-text-color: $theme-body-background-color
+    );
+  }
+
+  &:active,
+  &.usa-button--active {
+    @include set-text-and-bg(
+      $bg-color: $theme-color-error-dark,
+      $preferred-text-color: $theme-body-background-color
+    );
+  }
+}
+
+.cfa-button--danger.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: $theme-color-error
+  );
+
+  &:hover,
+  &.usa-button--hover {
+    @include set-text-and-bg(
+      $bg-color:  $theme-color-error,
+      $preferred-text-color: $theme-body-background-color
+    );
+  }
+
+  &:active,
+  &.usa-button--active {
+    @include set-text-and-bg(
+      $bg-color:  $theme-color-error,
+      $preferred-text-color: $theme-body-background-color
+    );
+  }
+}
+
+.cfa-button--danger.usa-button--unstyled {
+  color: color($theme-color-error);
+
+  &:hover {
+    color: color($theme-color-error-darker);
+  }
 }

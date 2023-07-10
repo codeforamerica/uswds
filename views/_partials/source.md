@@ -22,13 +22,13 @@
 <figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
   <figcaption class="margin-bottom-2">
     <strong>Sass theme settings and stylesheet loading</strong>
-    <p>Below is a demonstration of customizing the component theme settings and loading the Sass stylesheet from the package. Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
+    <p>Below is a demonstration of{% if theme %} customizing the component theme settings and{% endif %} loading the Sass stylesheet from the package. Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
   </figcaption>
-  <div class="code-block"><pre class="language-scss">@use 'uswds-core' with (
+  <div class="code-block"><pre class="language-scss">{% if theme %}@use 'uswds-core' with (
   {{ theme }},
   // ... additional theme settings here ...
 );
-@forward 'uswds';
+{% endif %}@forward 'uswds';
 @forward '{{ stylesheet }}';</pre></div>
 </figure>
 
