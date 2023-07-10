@@ -4,13 +4,13 @@
     <% if button['disabled'] %> disabled="<%= button['disabled'] %>"<% end %>
     <% if button['ariaDisabled'] %> aria-disabled="<%= button['ariaDisabled'] %>"<% end %>>
     <% if button['prefix'] %><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-      <use href="/uswds/img/sprite.svg#<%= button['prefix'] %>"></use>
+      <use href="<%= button['prefix'] %>"></use>
     </svg>
 
     <% end %><span><%= button['label'] %></span><% if button['postfix'] %>
 
     <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-      <use href="/uswds/img/sprite.svg#<%= button['postfix'] %>"></use>
+      <use href="<%= button['postfix'] %>"></use>
     </svg>
     <% end %>
   </button>

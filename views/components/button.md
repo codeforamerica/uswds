@@ -32,7 +32,8 @@ Buttons allow users to trigger actions. They are styled consistently according t
   tokens: tokens,
   styles: styles,
   dictionary: dictionary,
-  modifier_honeycrisp: modifier_honeycrisp %}
+  modifier_honeycrisp: modifier_honeycrisp,
+  config: config %}
 
 <!-- EXAMPLES -->
 
@@ -140,22 +141,22 @@ Buttons allow users to trigger actions. They are styled consistently according t
       "label": "Button",
       "modifier": "cfa-button",
       "type": "button",
-      "prefix": "translate"
+      "prefix": "{{ config.baseUrl }}uswds/img/sprite.svg#translate"
     },
     {
       "label": "Button",
       "modifier": "cfa-button",
-      "postfix": "arrow_forward"
+      "postfix": "{{ config.baseUrl }}uswds/img/sprite.svg#arrow_forward"
     },
     {
       "label": "Button",
       "modifier": "cfa-button usa-button--big",
-      "prefix": "translate"
+      "prefix": "{{ config.baseUrl }}uswds/img/sprite.svg#translate"
     },
     {
       "label": "Button",
       "modifier": "cfa-button usa-button--big",
-      "postfix": "arrow_forward"
+      "postfix": "{{ config.baseUrl }}uswds/img/sprite.svg#arrow_forward"
     }
   ]
 }{% endcapture %}
@@ -288,7 +289,8 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
   keyboard_test: keyboard_test,
   resize_passes: true,
   guidance_passes: true,
-  additional: additional %}
+  additional: additional,
+  config: config %}
 
 <!-- DESIGN -->
 

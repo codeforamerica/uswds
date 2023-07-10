@@ -1,8 +1,8 @@
 ## Details {#details}
 
-{% capture icon_info %}<svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="/uswds/img/sprite.svg#info_outline"></use></svg>{% endcapture %}
+{% capture icon_info %}<svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="{{ config.baseUrl }}uswds/img/sprite.svg#info_outline"></use></svg>{% endcapture %}
 
-{% capture icon_details %}<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="/uswds/img/sprite.svg#arrow_drop_down"></use></svg>{% endcapture %}
+{% capture icon_details %}<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="{{ config.baseUrl }}uswds/img/sprite.svg#arrow_drop_down"></use></svg>{% endcapture %}
 
 <ul class="usa-content-list">
   {% if url_uswds %}<li><strong>Extends:</strong> <a href="{{ url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }}</a></li>{% endif %}

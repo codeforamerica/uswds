@@ -1,13 +1,13 @@
 <span th:fragment="button(items)" th:each="button: ${items}">
   <button class="usa-button" th:classappend="${button.modifier}" th:attr="type=${button.type},disabled=${button.disabled},aria-disabled=${button.ariaDisabled}">
     <svg th:if="${button.prefix}" class="usa-icon" aria-hidden="true" focusable="false" role="img">
-      <use th:href="'/uswds/img/sprite.svg#' + ${button.prefix}"></use>
+      <use th:href="${button.prefix}"></use>
     </svg>
 
     <span th:text="${button.label}">Label</span>
 
     <svg th:if="${button.postfix}" class="usa-icon" aria-hidden="true" focusable="false" role="img">
-      <use th:href="'/uswds/img/sprite.svg#' + ${button.postfix}"></use>
+      <use th:href="${button.postfix}"></use>
     </svg>
   </button>
 </span>

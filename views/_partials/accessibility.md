@@ -4,7 +4,7 @@
 <div class="usa-icon-list__icon text-green">
   <svg class="usa-icon" role="img">
     <title>Passes</title>
-    <use href="/uswds/img/sprite.svg#check_circle"></use>
+    <use href="{{ config.baseUrl }}uswds/img/sprite.svg#check_circle"></use>
   </svg>
 </div>
 {% endcapture %}
@@ -13,7 +13,7 @@
 <div class="usa-icon-list__icon text-base">
   <svg class="usa-icon" role="img">
     <title>Unchecked</title>
-    <use href="/uswds/img/sprite.svg#radio_button_unchecked"></use>
+    <use href="{{ config.baseUrl }}uswds/img/sprite.svg#radio_button_unchecked"></use>
   </svg>
 </div>
 {% endcapture %}
