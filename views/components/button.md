@@ -4,7 +4,7 @@ title: Button
 layout: default
 intro: '"I use buttons to find important links or submit online applications"'
 url_uswds: https://designsystem.digital.gov/components/button
-url_uswds_guidance: '#guidance'
+url_uswds_guidance: 'https://designsystem.digital.gov/components/button#guidance'
 url_uswds_usage: '#using-the-button-component-2'
 nice_uswds: Button component
 description_uswds: ''
@@ -242,42 +242,73 @@ Buttons allow users to trigger actions. They are styled consistently according t
 
 {% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: caption %}
 
+{% capture context %}{
+  "items": [
+    {
+      "label": "Internal Link",
+      "modifier": "cfa-button usa-button--outline",
+      "href": "#",
+      "postfix": "{{ config.baseUrl }}uswds/img/sprite.svg#arrow_forward"
+    },
+    {
+      "label": "External Link",
+      "modifier": "cfa-button usa-button--outline",
+      "href": "#",
+      "postfix": "{{ config.baseUrl }}uswds/img/sprite.svg#launch"
+    },
+    {
+      "label": "ARIA Disabled",
+      "modifier": "cfa-button usa-button--outline",
+      "href": "#",
+      "postfix": "{{ config.baseUrl }}uswds/img/sprite.svg#launch",
+      "ariaDisabled": "true"
+    }
+  ]
+}{% endcapture %}
+<!-- <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+        <use xlink:href="/assets/img/sprite.svg#launch"></use>
+      </svg> -->
+{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Link button' %}
+
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
 
 **Type attribute**. If the button is a `<button>` element the type attribute should be explicitly set to “button,” “reset,” or “submit.” Without the type attribute, button elements are set to the “submit” type in forms by default.
 
-**Links as buttons**. Links may be styled as buttons. However, [screen readers read links and buttons differently<sup><strong>1</strong></sup>](#ref-1). A consistent button variant should be used to distinguish between buttons that invoke actions and links. Consider using an icon for buttons styled as links, such as directional arrows for onsite links, and an external icon for links that go offsite.
+**Links as buttons**. Links may be styled as buttons however screen readers will distinguish between links and buttons differently regardless of how they are styled. Normally, links can only be invoked by the keyboard using the Enter key. However, the USWDS will open links styled as buttons when users press the Space key with JavaScript. A consistent button variant should still be used to distinguish between buttons that open link and buttons that invoke actions. Consider using an icon for buttons styled as links, such as directional arrows for onsite links, and an external icon for links that go offsite.
 
-**Labels**. Buttons should always include a text label but may also include an icon prefix or postfix on either side of the label. Buttons with an icon but without text labels are discouraged. The icon and text label combination is the most certain way of communicating the icon's meaning. Refer to [guidance from Nielson Norman Group on “Icon Usability.”<sup><strong>2</strong></sup>](#ref-2).
+**Labels**. Buttons should always include a text label but may also include an icon prefix or postfix on either side of the label. Buttons with an icon but without text labels are discouraged. The icon and text label combination is the most certain way of communicating the icon's meaning.
 
-**Button role**. Buttons should be written using the `<button>` element. However, if a button is a different element styled as a button and performs an action, the role attribute should be set to `role=”button”`. Refer to the best practices for buttons and ARIA in the [MDN documentation for the ARIA “button” role<sup><strong>3</strong></sup>](#ref-3).
+**Button role**. Buttons should be written using the `<button>` element. However, if a button is a different element styled as a button and performs an action, the role attribute should be set to `role=”button”`.
 
-**Disabling buttons**. To achieve the effect of disabling the button for everyone but provide context to screen readers as to why it's disabled, use the following pattern.
+**Disabling buttons**. To achieve the effect of disabling buttons or links styled as buttons but provide context to screen readers as to why it's disabled, use the following pattern.
 
-* Use the ARIA disabled attribute `aria-disabled=”true”` over the `disabled` attribute.
-* Prevent events such as form submissions and clicks on the button (using JavaScript).
+* Use the ARIA disabled attribute `aria-disabled=”true”` instead of the `disabled` attribute.
+* Prevent events such as form submissions and clicks on the button using JavaScript.
 * Provide an `aria-describedby` attribute that points to an element’s id with text indicating why the button is disabled.
 
-Refer to <a href="{{ url_uswds }}{{ url_uswds_guidance }}" target="_blank" rel="noopener nofollow" class="usa-link--external">additional guidance on the USWDS documentation site</a>.
+{% capture ref_add %}
+1. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>&lt;button&gt;: The Button element</cite> | developer.mozilla.org</a>
+1. <a href="https://www.nngroup.com/articles/icon-usability" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Icon Usability</cite> | nngroup.com</a>
+1. <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>ARIA: button role</cite> | Accessibility | developer.mozilla.org</a>
+1. <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>aria-disabled</cite> | Accessibility | developer.mozilla.org</a>
+1. <a href="https://css-tricks.com/making-disabled-buttons-more-inclusive" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Making Disabled Buttons More Inclusive</cite> | css-tricks.com</a>
+1. <a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Button</cite> | GOV.UK Design System</a>
+1. <a href="https://design.va.gov/components/button/" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Button</cite> | VA.gov Design System</a>
+1. <a href="https://nycopportunity.github.io/standard/buttons" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Buttons</cite> | Opportunity Standard</a>
+{% endcapture %}
 
-**References**
-
-1. <a href="https://designsystem.digital.gov/components/button/#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">Accessibility | "Button" | designsystem.digital.gov</a> {#ref-1}
-1. <a href="https://www.nngroup.com/articles/icon-usability" target="_blank" rel="noopener nofollow" class="usa-link--external">"Icon Usability" | nngroup.com</a> {#ref-2}
-1. <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" target="_blank" rel="noopener nofollow" class="usa-link--external">"ARIA: button role" | Accessibility | developer.mozilla.org</a> {#ref-3}
-1. <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled target=" target="_blank" rel="noopener nofollow" class="usa-link--external">"aria-disabled" | Accessibility | developer.mozilla.org</a> {#ref-4}
-1. <a href="https://css-tricks.com/making-disabled-buttons-more-inclusive target=" target="_blank" rel="noopener nofollow" class="usa-link--external">"Making Disabled Buttons More Inclusive" | css-tricks.com</a> {#ref-5}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_add: ref_add %}
 
 <!-- ACCESSIBILITY -->
 
 {% capture additional %}
-1. Vertical padding (top and bottom) on the standard Button has been increased to `2` <a href="https://designsystem.digital.gov/design-tokens/spacing-units/" target="_blank" rel="noopener nofollow" class="usa-link--external">spacing units</a> to achieve <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AAA target size success</a> requirements.
+1. Vertical padding (top and bottom) on the smallest Button size has been increased to `2` <a href="https://designsystem.digital.gov/design-tokens/spacing-units/" target="_blank" rel="noopener nofollow" class="usa-link--external">spacing units</a> to achieve <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AAA target size success</a> requirements.
 {% endcapture %}
 
 {% capture keyboard_test %}
-When navigating to any button using the keyboard, a <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible" target="_blank" rel="noopener nofollow" class="usa-link--external">visible focus indicator (WCAG 2.1 AA success)</a> is present and they are identified as buttons. They can be activated using the space bar.
+When navigating to any button using the keyboard, a <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible" target="_blank" rel="noopener nofollow" class="usa-link--external">visible focus indicator (WCAG 2.1 AA success)</a> is present. Buttons and links styled as buttons can be activated using the space bar.
 {% endcapture %}
 
 {% render 'accessibility.md'

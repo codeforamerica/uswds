@@ -39,6 +39,12 @@ i.e.
   text-align: middle;
 }
 
+.site-cite {
+  padding: 2px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 :root {
   --cfa-spacing-DEFAULT: #{units(2)};
 

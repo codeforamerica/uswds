@@ -722,7 +722,7 @@ var Default = (function () {
     return value;
   };
 
-  var behavior$3 = function behavior(events, props) {
+  var behavior$4 = function behavior(events, props) {
     const listeners = Object.keys(events)
       .reduce(function(memo, type) {
         var listeners = getListeners(type, events[type]);
@@ -752,7 +752,7 @@ var Default = (function () {
   };
 
   const assign = objectAssign;
-  const Behavior = behavior$3;
+  const Behavior = behavior$4;
 
   /**
    * @name sequence
@@ -776,7 +776,7 @@ var Default = (function () {
    * @param {object?} props
    * @return {receptor.behavior}
    */
-  var behavior$2 = (events, props) =>
+  var behavior$3 = (events, props) =>
     Behavior(
       events,
       assign(
@@ -851,7 +851,7 @@ var Default = (function () {
   };
 
   const select$1 = select$2;
-  const behavior$1 = behavior$2;
+  const behavior$2 = behavior$3;
   const toggle = toggle$1;
   const isElementInViewport$1 = isInViewport;
   const { CLICK } = events;
@@ -883,7 +883,7 @@ var Default = (function () {
    * state will be toggled (from false to true, and vice-versa).
    * @return {boolean} the resulting state
    */
-  const toggleButton = (button, expanded) => {
+  const toggleButton$1 = (button, expanded) => {
     const accordion = button.closest(ACCORDION);
     let safeExpanded = expanded;
 
@@ -909,19 +909,19 @@ var Default = (function () {
    * @param {HTMLButtonElement} button
    * @return {boolean} true
    */
-  const showButton = (button) => toggleButton(button, true);
+  const showButton = (button) => toggleButton$1(button, true);
 
   /**
    * @param {HTMLButtonElement} button
    * @return {boolean} false
    */
-  const hideButton = (button) => toggleButton(button, false);
+  const hideButton = (button) => toggleButton$1(button, false);
 
-  const accordion$1 = behavior$1(
+  const accordion$1 = behavior$2(
     {
       [CLICK]: {
         [BUTTON]() {
-          toggleButton(this);
+          toggleButton$1(this);
 
           if (this.getAttribute(EXPANDED) === "true") {
             // We were just expanded, but if another accordion was also just
@@ -936,19 +936,207 @@ var Default = (function () {
       init(root) {
         select$1(BUTTON, root).forEach((button) => {
           const expanded = button.getAttribute(EXPANDED) === "true";
-          toggleButton(button, expanded);
+          toggleButton$1(button, expanded);
         });
       },
       ACCORDION,
       BUTTON,
       show: showButton,
       hide: hideButton,
-      toggle: toggleButton,
+      toggle: toggleButton$1,
       getButtons: getAccordionButtons,
     }
   );
 
-  var src$1 = accordion$1;
+  var src$2 = accordion$1;
+
+  var keymap$1 = {exports: {}};
+
+  var keyboardeventKeyPolyfill = {exports: {}};
+
+  /* global define, KeyboardEvent, module */
+
+  (function (module, exports) {
+  	(function () {
+
+  	  var keyboardeventKeyPolyfill = {
+  	    polyfill: polyfill,
+  	    keys: {
+  	      3: 'Cancel',
+  	      6: 'Help',
+  	      8: 'Backspace',
+  	      9: 'Tab',
+  	      12: 'Clear',
+  	      13: 'Enter',
+  	      16: 'Shift',
+  	      17: 'Control',
+  	      18: 'Alt',
+  	      19: 'Pause',
+  	      20: 'CapsLock',
+  	      27: 'Escape',
+  	      28: 'Convert',
+  	      29: 'NonConvert',
+  	      30: 'Accept',
+  	      31: 'ModeChange',
+  	      32: ' ',
+  	      33: 'PageUp',
+  	      34: 'PageDown',
+  	      35: 'End',
+  	      36: 'Home',
+  	      37: 'ArrowLeft',
+  	      38: 'ArrowUp',
+  	      39: 'ArrowRight',
+  	      40: 'ArrowDown',
+  	      41: 'Select',
+  	      42: 'Print',
+  	      43: 'Execute',
+  	      44: 'PrintScreen',
+  	      45: 'Insert',
+  	      46: 'Delete',
+  	      48: ['0', ')'],
+  	      49: ['1', '!'],
+  	      50: ['2', '@'],
+  	      51: ['3', '#'],
+  	      52: ['4', '$'],
+  	      53: ['5', '%'],
+  	      54: ['6', '^'],
+  	      55: ['7', '&'],
+  	      56: ['8', '*'],
+  	      57: ['9', '('],
+  	      91: 'OS',
+  	      93: 'ContextMenu',
+  	      144: 'NumLock',
+  	      145: 'ScrollLock',
+  	      181: 'VolumeMute',
+  	      182: 'VolumeDown',
+  	      183: 'VolumeUp',
+  	      186: [';', ':'],
+  	      187: ['=', '+'],
+  	      188: [',', '<'],
+  	      189: ['-', '_'],
+  	      190: ['.', '>'],
+  	      191: ['/', '?'],
+  	      192: ['`', '~'],
+  	      219: ['[', '{'],
+  	      220: ['\\', '|'],
+  	      221: [']', '}'],
+  	      222: ["'", '"'],
+  	      224: 'Meta',
+  	      225: 'AltGraph',
+  	      246: 'Attn',
+  	      247: 'CrSel',
+  	      248: 'ExSel',
+  	      249: 'EraseEof',
+  	      250: 'Play',
+  	      251: 'ZoomOut'
+  	    }
+  	  };
+
+  	  // Function keys (F1-24).
+  	  var i;
+  	  for (i = 1; i < 25; i++) {
+  	    keyboardeventKeyPolyfill.keys[111 + i] = 'F' + i;
+  	  }
+
+  	  // Printable ASCII characters.
+  	  var letter = '';
+  	  for (i = 65; i < 91; i++) {
+  	    letter = String.fromCharCode(i);
+  	    keyboardeventKeyPolyfill.keys[i] = [letter.toLowerCase(), letter.toUpperCase()];
+  	  }
+
+  	  function polyfill () {
+  	    if (!('KeyboardEvent' in window) ||
+  	        'key' in KeyboardEvent.prototype) {
+  	      return false;
+  	    }
+
+  	    // Polyfill `key` on `KeyboardEvent`.
+  	    var proto = {
+  	      get: function (x) {
+  	        var key = keyboardeventKeyPolyfill.keys[this.which || this.keyCode];
+
+  	        if (Array.isArray(key)) {
+  	          key = key[+this.shiftKey];
+  	        }
+
+  	        return key;
+  	      }
+  	    };
+  	    Object.defineProperty(KeyboardEvent.prototype, 'key', proto);
+  	    return proto;
+  	  }
+
+  	  {
+  	    module.exports = keyboardeventKeyPolyfill;
+  	  }
+
+  	})(); 
+  } (keyboardeventKeyPolyfill));
+
+  // these are the only relevant modifiers supported on all platforms,
+  // according to MDN:
+  // <https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState>
+  const MODIFIERS = {
+    'Alt':      'altKey',
+    'Control':  'ctrlKey',
+    'Ctrl':     'ctrlKey',
+    'Shift':    'shiftKey'
+  };
+
+  const MODIFIER_SEPARATOR = '+';
+
+  const getEventKey = function(event, hasModifiers) {
+    var key = event.key;
+    if (hasModifiers) {
+      for (var modifier in MODIFIERS) {
+        if (event[MODIFIERS[modifier]] === true) {
+          key = [modifier, key].join(MODIFIER_SEPARATOR);
+        }
+      }
+    }
+    return key;
+  };
+
+  keymap$1.exports = function keymap(keys) {
+    const hasModifiers = Object.keys(keys).some(function(key) {
+      return key.indexOf(MODIFIER_SEPARATOR) > -1;
+    });
+    return function(event) {
+      var key = getEventKey(event, hasModifiers);
+      return [key, key.toLowerCase()]
+        .reduce(function(result, _key) {
+          if (_key in keys) {
+            result = keys[key].call(this, event);
+          }
+          return result;
+        }, undefined);
+    };
+  };
+
+  keymap$1.exports.MODIFIERS = MODIFIERS;
+
+  var keymapExports = keymap$1.exports;
+
+  const keymap = keymapExports;
+  const behavior$1 = behavior$3;
+
+  const ANCHOR_BUTTON = `a[class*="usa-button"]`;
+
+  const toggleButton = (event) => {
+    event.preventDefault();
+    event.target.click();
+  };
+
+  const anchorButton = behavior$1({
+    keydown: {
+      [ANCHOR_BUTTON]: keymap({
+        " ": toggleButton,
+      }),
+    },
+  });
+
+  var src$1 = anchorButton;
 
   const select = select$2;
   /**
@@ -983,7 +1171,7 @@ var Default = (function () {
 
   // Tooltips
   const selectOrMatches = selectOrMatches$1;
-  const behavior = behavior$2;
+  const behavior = behavior$3;
   const { prefix: PREFIX } = config;
   const isElementInViewport = isInViewport;
 
@@ -1378,8 +1566,9 @@ var Default = (function () {
 
   var src = tooltip$1;
 
-  const accordion = src$1;
+  const accordion = src$2;
   // const banner = require('../node_modules/@uswds/uswds/packages/usa-banner/src/index');
+  const button = src$1;
   // const characterCount = require('../node_modules/@uswds/uswds/packages/usa-character-count/src/index');
   // const comboBox = require('../node_modules/@uswds/uswds/packages/usa-combo-box/src/index');
   // const datePicker = require('../node_modules/@uswds/uswds/packages/usa-date-picker/src/index');
@@ -1388,7 +1577,6 @@ var Default = (function () {
   // const footer = require('../node_modules/@uswds/uswds/packages/usa-footer/src/index');
   // const inPageNavigation = require('../node_modules/@uswds/uswds/packages/usa-in-page-navigation/src/index');
   // const inputMask = require('../node_modules/@uswds/uswds/packages/usa-input-mask/src/index');
-  // const inputPrefixSuffix = require('../node_modules/@uswds/uswds/packages/usa-input-prefix-suffix/src/index');
   // const languageSelector = require('../node_modules/@uswds/uswds/packages/usa-language-selector/src/index');
   // const modal = require('../node_modules/@uswds/uswds/packages/usa-modal/src/index');
   // const navigation = require('../node_modules/@uswds/uswds/packages/usa-header/src/index');
@@ -1403,6 +1591,7 @@ var Default = (function () {
   var components$1 = {
     accordion,
     // banner,
+    button,
     // characterCount,
     // comboBox,
     // datePicker,
@@ -1411,7 +1600,6 @@ var Default = (function () {
     // footer,
     // inPageNavigation,
     // inputMask,
-    // inputPrefixSuffix,
     // languageSelector,
     // modal,
     // navigation,
