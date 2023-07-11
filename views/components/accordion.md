@@ -4,16 +4,16 @@ title: Accordion
 layout: default
 intro: '"An accordion helps me scan long pages by letting me show or hide information."'
 url_uswds: https://designsystem.digital.gov/components/accordion
-url_uswds_guidance: '#guidance'
+url_uswds_guidance: 'https://designsystem.digital.gov/components/accordion#guidance'
 url_uswds_usage: '#using-the-accordion-component-2'
 nice_uswds: Accordion component
 description_uswds: ''
 url_honeycrisp: 'https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion'
 nice_honeycrisp: Accordion molecule
 modifier_honeycrisp: .cfa-accordion
+design_honeycrisp: https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A536%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
 tokens: true
 styles: true
-description_honeycrisp: ''
 ---
 
 <!-- INTRO -->
@@ -32,11 +32,8 @@ Accordions allow users to find information on a page by clicking content heading
   tokens: tokens,
   styles: styles,
   dictionary: dictionary,
-  modifier_honeycrisp: modifier_honeycrisp %}
-
-<!-- ACCESSIBILITY -->
-
-{% render 'accessibility.md' %}
+  modifier_honeycrisp: modifier_honeycrisp,
+  config: config %}
 
 ## Examples {#examples}
 
@@ -47,6 +44,8 @@ Accordions allow users to find information on a page by clicking content heading
 * Income
 * Expenses
 * Assets
+
+[Learn more about how we protect your personal information](#).
 
 {% endcapture %}
 
@@ -109,36 +108,37 @@ Most programs on this application, including food and cash assistance, require a
 
 {% render 'figure.md', name: 'accordion', nice: 'Bordered', body: body_default, context: context, caption: 'Bordered' %}
 
-{% capture context %}{
-  "modifier": "",
-  "multiple": true,
-  "items": [
-    {
-      "expanded": true,
-      "controls": "aria-c-{% createId %}",
-      "heading": "We'll ask you about",
-      "body": "{% md body_accordion_1 %}"
-    },
-    {
-      "expanded": false,
-      "controls": "aria-c-{% createId %}",
-      "heading": "Submitting an incomplete application (SNAP only)",
-      "body": "{% md body_accordion_2 %}"
-    }
-  ]
-}{% endcapture %}
+<!-- GUIDANCE -->
 
-{% capture caption %}
+## Guidance {#guidance}
 
-This is an example of what the {{ nice_uswds }} looks like without the modifier <code>{{ modifier_honeycrisp }}</code>. Additional variant modifiers for the {{ nice_uswds }} can be found in the <a href="{{ url_uswds }}{{ url_uswds_usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a>.
+**Heading order**. It is a best practice to ensure the accordion heading level does not skip and is in order with other page headings. However, this does not contribute to accessible success criteria.
 
+{% capture ref_additional %}
+1. <a href="https://dequeuniversity.com/rules/axe/4.7/heading-order?application=AxeEdge" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Heading levels should only increase by one</cite> | dequeuniversity.com</a>
 {% endcapture %}
 
-{% render 'figure.md', name: 'accordion', nice: 'Borderless', body: body_default, context: context, caption: caption %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+
+<!-- ACCESSIBILITY -->
+
+{% render 'accessibility.md'
+  nice: title,
+  url_uswds: url_uswds,
+  theme_passes: true,
+  audit_passes: true,
+  keyboard_passes: false,
+  keyboard_test: 'No keyboard test has been created.',
+  resize_passes: true,
+  screen_reader_passes: false,
+  screen_reader_test: 'No screen reader test has been created.',
+  guidance_passes: true,
+  additional: false,
+  config: config %}
 
 <!-- DESIGN -->
 
-{% render 'figma.md', url: 'https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=6133%3A1205&mode=design&t=za88mJcbenf6Hf6a-1' %}
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
 

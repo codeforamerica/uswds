@@ -10,6 +10,12 @@
   .usa-alert__body::before {
     display: none
   }
+
+  a:not(.usa-button),
+  a:hover:not(.usa-button),
+  a:visited:not(.usa-button) {
+    color: color($theme-alert-link-color);
+  }
 }
 
 .usa-alert--info {
@@ -26,4 +32,8 @@
 
 .usa-alert--success {
   border-color: color($theme-color-success-darker);
+}
+
+.usa-alert--emergency {
+  border-color: color($theme-color-emergency-dark);
 }

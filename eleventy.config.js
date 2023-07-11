@@ -388,8 +388,8 @@ module.exports = function(eleventyConfig) {
       if (process.env.NODE_ENV != 'production') {
         let erb = await erbRender(name, context);
 
-        rendered = `<div><figcaption><b>Thymeleaf Preview</b></figcaption><br>${th}</div>` +
-          `<div><br><figcaption><b>ERB Preview</b></figcaption><br>${erb}</div>`;
+        rendered = `<div><figcaption class="margin-bottom-2"><b>Thymeleaf Preview</b></figcaption>${th}</div>` +
+          `<div><br><figcaption class="margin-bottom-2"><b>ERB Preview</b></figcaption>${erb}</div>`;
       } else {
         rendered = th
       }
@@ -405,8 +405,8 @@ module.exports = function(eleventyConfig) {
         // ERB partial render testing
         let erb = await erbRender(name, context, true);
 
-        rendered = `<div><figcaption><b>Thymeleaf Preview</b></figcaption><br>${th}</div>` +
-          `<div><br><figcaption><b>ERB Preview</b></figcaption><br>${erb}</div>`;
+        rendered = `<div><figcaption class="margin-bottom-2"><b>Thymeleaf Preview</b></figcaption>${th}</div>` +
+          `<div><br><figcaption class="margin-bottom-2"><b>ERB Preview</b></figcaption>${erb}</div>`;
       } else {
         rendered = th;
       }

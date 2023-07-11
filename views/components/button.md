@@ -288,7 +288,7 @@ Buttons allow users to trigger actions. They are styled consistently according t
 * Prevent events such as form submissions and clicks on the button using JavaScript.
 * Provide an `aria-describedby` attribute that points to an element’s id with text indicating why the button is disabled.
 
-{% capture ref_add %}
+{% capture ref_additional %}
 1. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>&lt;button&gt;: The Button element</cite> | developer.mozilla.org</a>
 1. <a href="https://www.nngroup.com/articles/icon-usability" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Icon Usability</cite> | nngroup.com</a>
 1. <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>ARIA: button role</cite> | Accessibility | developer.mozilla.org</a>
@@ -299,7 +299,7 @@ Buttons allow users to trigger actions. They are styled consistently according t
 1. <a href="https://nycopportunity.github.io/standard/buttons" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Buttons</cite> | Opportunity Standard</a>
 {% endcapture %}
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_add: ref_add %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
 
 <!-- ACCESSIBILITY -->
 
@@ -319,6 +319,7 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
   keyboard_passes: true,
   keyboard_test: keyboard_test,
   resize_passes: true,
+  screen_reader_passes: 'No screen reader test has been created.',
   guidance_passes: true,
   additional: additional,
   config: config %}

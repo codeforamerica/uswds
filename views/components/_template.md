@@ -1,5 +1,5 @@
 ---
-tags: component
+tags:
 title: Template
 layout: default
 intro:
@@ -32,10 +32,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   dictionary: dictionary,
   modifier_honeycrisp: modifier_honeycrisp %}
 
-<!-- ACCESSIBILITY -->
-
-{% render 'accessibility.md' %}
-
 <!-- EXAMPLES -->
 
 ## Examples {#examples}
@@ -56,7 +52,27 @@ Default Body
 
 ## Guidance {#guidance}
 
-Refer to <a href="{{ url_uswds }}{{ url_uswds_guidance }}" target="_blank" rel="noopener nofollow" class="usa-link--external">additional guidance on the USWDS documentation site</a>.
+{% capture ref_additional %}
+1. <a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a>
+{% endcapture %}
+
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+
+<!-- ACCESSIBILITY -->
+
+{% render 'accessibility.md'
+  nice: title,
+  url_uswds: url_uswds,
+  theme_passes: false,
+  audit_passes: false,
+  keyboard_passes: false,
+  keyboard_test: 'No keyboard test has been created.',
+  resize_passes: false,
+  screen_reader_passes: false,
+  screen_reader_tests: 'No screen reader test has been created.',
+  guidance_passes: false,
+  additional: false,
+  config: config %}
 
 <!-- DESIGN -->
 

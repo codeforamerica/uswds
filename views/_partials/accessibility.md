@@ -43,7 +43,7 @@
   <li class="usa-icon-list__item">
     {% if screen_reader_passes %}{{ passes }}{% else %}{{ unchecked }}{% endif %}<div class="usa-icon-list__content">
       The {{ nice }} passes screen reader interaction tests.
-      {% if screen_reader_test %}<div><em class="font-body-3xs"><em>{{ screen_reader_test }}</em></div>{% endif %}
+      {% if screen_reader_test %}<div><em class="font-body-3xs">{{ screen_reader_test }}</em></div>{% endif %}
     </div>
   </li>
   <li class="usa-icon-list__item">
@@ -51,11 +51,12 @@
   </li>
 </ul>
 
+{% if additional %}
+
 **Additional items**
 
 {{ additional }}
 
-Refer to <a href="{{ url_uswds }}#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.
+{% endif %}
 
-  <!-- </div>
-</div> -->
+Refer to <a href="{{ url_uswds }}#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.

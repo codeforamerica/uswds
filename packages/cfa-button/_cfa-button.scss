@@ -58,7 +58,8 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 .cfa-button.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
   @include set-text-and-bg(
     $bg-color: $theme-body-background-color,
-    $preferred-text-color: 'ink'
+    $preferred-text-color: 'ink',
+    $context: 'CfA Button'
   );
 
   box-shadow: $theme-button-stroke color('ink');
@@ -74,7 +75,8 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
   &.usa-button--hover {
     @include set-text-and-bg(
       $bg-color: 'base-lightest',
-      $preferred-text-color: 'ink'
+      $preferred-text-color: 'ink',
+      $context: 'CfA Button'
     );
 
     box-shadow: $theme-button-stroke color('ink');
@@ -84,7 +86,8 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
   &.usa-button--active {
     @include set-text-and-bg(
       $bg-color: 'base-lightest',
-      $preferred-text-color: 'ink'
+      $preferred-text-color: 'ink',
+      $context: 'CfA Button'
     );
 
     box-shadow: $theme-button-stroke color('ink');
@@ -99,14 +102,16 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 .cfa-button[aria-disabled=true] {
   @include set-text-and-bg(
     $bg-color: 'base-lighter',
-    $preferred-text-color: 'base-darker'
+    $preferred-text-color: 'base-darker',
+    $context: 'CfA Button'
   );
 
   &:hover,
   &:focus {
     @include set-text-and-bg(
       $bg-color: 'base-lighter',
-      $preferred-text-color: 'base-darker'
+      $preferred-text-color: 'base-darker',
+      $context: 'CfA Button'
     );
   }
 }
@@ -115,14 +120,16 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 .cfa-button.usa-button--outline[aria-disabled=true] {
   @include set-text-and-bg(
     $bg-color: $theme-body-background-color,
-    $preferred-text-color: 'base-dark'
+    $preferred-text-color: 'base-dark',
+    $context: 'CfA Button'
   );
 
   &:hover,
   &:focus {
     @include set-text-and-bg(
       $bg-color: $theme-body-background-color,
-      $preferred-text-color: 'base-dark'
+      $preferred-text-color: 'base-dark',
+      $context: 'CfA Button'
     );
   }
 }
@@ -134,14 +141,16 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 .cfa-button--danger:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
   @include set-text-and-bg(
     $bg-color: 'error',
-    $preferred-text-color: $theme-body-background-color
+    $preferred-text-color: $theme-body-background-color,
+    $context: 'CfA Button'
   );
 
   &:hover,
   &.usa-button--hover {
     @include set-text-and-bg(
       $bg-color: 'error-dark',
-      $preferred-text-color: $theme-body-background-color
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
     );
   }
 
@@ -149,7 +158,8 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
   &.usa-button--active {
     @include set-text-and-bg(
       $bg-color: $theme-color-error-dark,
-      $preferred-text-color: $theme-body-background-color
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
     );
   }
 }
@@ -157,14 +167,16 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
 .cfa-button--danger.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
   @include set-text-and-bg(
     $bg-color: $theme-body-background-color,
-    $preferred-text-color: $theme-color-error
+    $preferred-text-color: $theme-color-error,
+    $context: 'CfA Button'
   );
 
   &:hover,
   &.usa-button--hover {
     @include set-text-and-bg(
       $bg-color:  $theme-color-error,
-      $preferred-text-color: $theme-body-background-color
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
     );
   }
 
@@ -172,7 +184,8 @@ $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
   &.usa-button--active {
     @include set-text-and-bg(
       $bg-color:  $theme-color-error,
-      $preferred-text-color: $theme-body-background-color
+      $preferred-text-color: $theme-body-background-color,
+      $context: 'CfA Button'
     );
   }
 }

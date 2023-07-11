@@ -1,10 +1,10 @@
 <div class="usa-accordion<% if modifier %> <%= modifier %><% end %>"<% if multiple %> data-allow-multiple<% end %>>
   <% items.each do |item| %>
-    <h4 class="usa-accordion__heading">
+    <h3 class="usa-accordion__heading">
       <button type="button" class="usa-accordion__button"<% if item['expanded'] %> aria-expanded="<%= item['expanded'] %>"<% end %><% if item['controls'] %> aria-controls="<%= item['controls'] %>"<% end %>>
         <%= item['heading'] %>
       </button>
-    </h4>
+    </h3>
 
     <div class="usa-accordion__content usa-prose"<% if item['controls'] %> id="<%= item['controls'] %>"<% end %>>
       <% if item['body'] %>
