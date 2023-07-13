@@ -1,4 +1,4 @@
-<div th:fragment="accordion(modifier, multiple, items)" th:class="'usa-accordion ' + ${modifier}" th:attr="data-allow-multiple=${multiple}" th:each="item: ${items}">
+<div th:fragment="accordion(modifier, multiple, items)" class="usa-accordion" th:classappend="${modifier}" th:attr="data-allow-multiple=${multiple}" th:each="item: ${items}">
   <h3 class="usa-accordion__heading">
     <button type="button" class="usa-accordion__button" th:attr="aria-expanded=${item.expanded},aria-controls=${item.controls}" th:text="${item.heading}">Heading</button>
   </h3>

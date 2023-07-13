@@ -1,0 +1,36 @@
+@use 'uswds-core' as *;
+
+// 5. Components
+// - Input
+$theme-input-height: 8;
+$theme-input-padding-y: 2;
+$theme-input-padding-x: 2.5;
+$theme-textarea-height: 15;
+
+@mixin cfa-input() {
+  @include set-text-and-bg(
+    $bg-color: $theme-color-base-lightest,
+    $preferred-text-color: 'ink',
+    $context: 'CfA Input'
+  );
+
+  font-weight: $theme-font-weight-bold;
+  box-shadow: inset 0px units($theme-input-state-border-width) 0px color($theme-color-base-lighter);
+
+  padding: units($theme-input-padding-y) units($theme-input-padding-x);
+}
+
+@mixin cfa-input-border() {
+  @include u-border(2px, 'ink');
+}
+
+// - Radio
+// - Checkbox
+// - Form
+// - Alert
+// - Accordion
+$theme-accordion-border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
+// - Footer
+// - Button
+$theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
+// - Header

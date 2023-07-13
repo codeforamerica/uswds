@@ -1,0 +1,33 @@
+<div th:fragment="formGroup(modifier, id, label, hint, input, error)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
+  <label class="usa-label" th:classappend="${label.modifier}" th:attr="for=${label.for},tabindex=${label.tabindex}">
+    <span th:text="${label.text}">Label</span>
+    <abbr th:if="${input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${textarea.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+  </label>
+
+  <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:text="${hint.text}">Hint</div>
+
+  <span th:if="${error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
+
+  <div th:if="${input}" th:class="${inputGroup.modifier}">
+    <div th:if="${input.prefix}" class="usa-input-prefix" aria-hidden="true">
+      <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+        <use href="${input.prefix}"></use>
+      </svg>
+    </div>
+
+    <div th:if="${input.prefixText}" class="usa-input-prefix" aria-hidden="true" th:text="${input.prefixText}">$</div>
+
+    <input class="usa-input" th:classappend="${input.modifier}" th:attr="type=${input.type},id=${input.id},name=${input.name},aria-invalid=${input.ariaInvalid},aria-describedby=${input.ariaDescribedby},required=${input.required},pattern=${input.pattern},placeholder=${input.placeholder},value=${input.value},inputmode=${input.inputmode},maxlength=${input.maxlength},data-js=${input.js}">
+
+    <div th:if="${input.postfix}" class="usa-input-suffix" aria-hidden="true">
+      <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+        <use href="${input.prefix}"></use>
+      </svg>
+    </div>
+
+    <div th:if="${input.postfixText}" class="usa-input-suffix" aria-hidden="true" th:text="${input.postfixText}">.00</div>
+  </div>
+
+  <textarea th:if="${textarea}" class="usa-textarea" th:classappend="${textarea.modifier}" th:attr="id=${textarea.id},name=${textarea.name},aria-invalid=${textarea.ariaInvalid},aria-describedby=${textarea.ariaDescribedby},required=${textarea.required},pattern=${textarea.pattern},placeholder=${textarea.placeholder},value=${textarea.value},inputmode=${textarea.inputmode},maxlength=${textarea.maxlength}"></textarea>
+</div>

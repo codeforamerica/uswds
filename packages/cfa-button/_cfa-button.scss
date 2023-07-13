@@ -1,6 +1,5 @@
 @use 'uswds-core' as *;
-
-$theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
 
 /**
  * Match closest size of small CfA buttons

@@ -1,0 +1,60 @@
+<div class="usa-form-group<% if defined?(modifier) %> <%= modifier %><% end %>"
+  <% if defined?(id) %> id="<%= id %>"<% end %>>
+  <label class="usa-label<% if label['modifier'] %> <%= label['modifier'] %><% end %>"<% if label['for'] %> for="<%= label['for'] %>"<% end %><% if label['tabindex'] %> tabindex="<%= label['tabindex'] %>"<% end %>>
+    <span><%= label['text'] %></span>
+    <% if defined?(input) && input['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+    <% if defined?(textarea) && textarea['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+  </label>
+
+  <% if defined?(hint) %><div class="usa-hint<% if hint['modifier'] %> <%= hint['modifier'] %><% end %>"<% if hint['id'] %> id="<%= hint['id'] %>"<% end %>><%= hint['text'] %></div><% end %>
+
+  <% if defined?(error) %><span class="usa-error-message"<% if error['id'] %> id="<%= error['id'] %>"<% end %><% if error['role'] %> role="<%= error['role'] %>"<% end %><% if error['ariaLive'] %> aria-live="<%= error['ariaLive'] %>"<% end %>><%= error['text'] %></span><% end %>
+
+  <% if defined?(input) %>
+  <div <% if defined?(inputGroup) && inputGroup['modifier'] %>class="<%= inputGroup['modifier'] %>"<% end %>>
+    <% if input['prefix'] %><div class="usa-input-prefix" aria-hidden="true">
+      <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+        <use href="<%= input['prefix'] %>"></use>
+      </svg>
+    </div><% end %>
+
+    <% if input['prefixText'] %><div class="usa-input-prefix" aria-hidden="true"><%= input['prefixText'] %></div><% end %>
+
+    <input class="usa-input<% if input['modifier'] %> <%= input['modifier'] %><% end %>"
+      <% if input['type'] %> type="<%= input['type'] %>"<% end %>
+      <% if input['id'] %> id="<%= input['id'] %>"<% end %>
+      <% if input['name'] %> name="<%= input['name'] %>"<% end %>
+      <% if input['aria-invalid'] %> aria-invalid="<%= input['ariaInvalid'] %>"<% end %>
+      <% if input['aria-describedby'] %> aria-describedby="<%= input['ariaDescribedby'] %>"<% end %>
+      <% if input['required'] %> required<% end %>
+      <% if input['pattern'] %> pattern="<%= input['pattern'] %>"<% end %>
+      <% if input['placeholder'] %> placeholder="<%= input['placeholder'] %>"<% end %>
+      <% if input['value'] %> value="<%= input['value'] %>"<% end %>
+      <% if input['inputmode'] %> inputmode="<%= input['inputmode'] %>"<% end %>
+      <% if input['maxlength'] %> maxlength="<%= input['maxlength'] %>"<% end %>
+      <% if input['js'] %> data-js="<%= input['js'] %>"<% end %>>
+
+    <% if input['posfix'] %><div class="usa-input-suffix" aria-hidden="true">
+      <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+        <use href="<%= input['posfix'] %>"></use>
+      </svg>
+    </div><% end %>
+
+    <% if input['postfixText'] %><div class="usa-input-suffix" aria-hidden="true"><%= input['postfixText'] %></div><% end %>
+  </div>
+  <% end %>
+
+  <% if defined?(textarea) %>
+  <textarea class="usa-textarea<% if textarea['modifier'] %> <%= textarea['modifier'] %><% end %>"
+    <% if textarea['id'] %> id="<%= textarea['id'] %>"<% end %>
+    <% if textarea['name'] %> name="<%= textarea['name'] %>"<% end %>
+    <% if textarea['aria-invalid'] %> aria-invalid="<%= textarea['ariaInvalid'] %>"<% end %>
+    <% if textarea['aria-describedby'] %> aria-describedby="<%= textarea['ariaDescribedby'] %>"<% end %>
+    <% if textarea['required'] %> required<% end %>
+    <% if textarea['pattern'] %> pattern="<%= textarea['pattern'] %>"<% end %>
+    <% if textarea['placeholder'] %> placeholder="<%= textarea['placeholder'] %>"<% end %>
+    <% if textarea['value'] %> value="<%= textarea['value'] %>"<% end %>
+    <% if textarea['inputmode'] %> inputmode="<%= textarea['inputmode'] %>"<% end %>
+    <% if textarea['maxlength'] %> maxlength="<%= textarea['maxlength'] %>"<% end %>></textarea>
+  <% end %>
+</div>

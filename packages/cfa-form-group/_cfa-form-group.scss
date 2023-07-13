@@ -1,6 +1,6 @@
 @use 'uswds-core' as *;
 
-.usa-form-group--error {
+.cfa-form-group.usa-form-group--error {
   padding-left: units(4);
 
   @include at-media('desktop') {

@@ -13,12 +13,14 @@
     {% if tokens and styles %}and {% endif %}{% if styles %}<abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="{{ dictionary.styles }}">Styles {{ icon_info }}</abbr>{% endif %}
   </li>
   {% endif %}
-  {% if modifier_honeycrisp %}<li><strong><abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="{{ dictionary.modifier }}">Modifier {{ icon_info }}:</abbr></strong> <code>{{ modifier_honeycrisp }}</code></li>{% endif %}
+  {% if modifier_honeycrisp %}<li><strong><abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="{{ dictionary.modifier }}">Modifier {{ icon_info }}:</abbr></strong> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %}</li>{% endif %}
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details{{ icon_details }}</summary>
-      <p>The <b>{{ name }}</b> extends the <a href="{{ url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }}</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="{{ url_uswds }}{{ url_uswds_usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }} settings</a> from the <a href="{{ url_honeycrisp }}" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp {{ nice_honeycrisp }}</a>.{% if modifier_honeycrisp %} Further styling is applied using the <b>CSS modifier</b> `.cfa-alert` to add <b>styles</b> defined in a custom stylesheet.{% endif %}</p>
+      {% if details_custom %}{{ details_custom }}{% else %}
+      <p>{% if url_uswds %}The <b>{{ name }}</b> extends the <a href="{{ url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }}</a>. {% endif %}The visual appearance is modified using <b>design tokens</b> {% if url_uswds %}applied to the <a href="{{ url_uswds }}{{ url_uswds_usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }} settings</a> {% endif %}from the <a href="{{ url_honeycrisp }}" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp {{ nice_honeycrisp }}</a>.{% if modifier_honeycrisp %} Further customization is applied using the <b>CSS modifier(s)</b> <code>{{ modifier_honeycrisp }}</code> to add <b>styles</b> defined in a custom stylesheet.{% endif %}</p>{% endif %}
     </details>
   </li>
 </ul>
+
 

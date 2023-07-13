@@ -437,6 +437,8 @@ module.exports = function(eleventyConfig) {
     if (include) {
       let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
 
+      name = name.replace(/-([a-z])/g, g => g[1].toUpperCase());
+
       return block(`<th:block th:replace="~{${templatePath} :: ${name}(${
           params.map(c => `{{ ${c.replace('${', '').replace('}', '')} }}`).join(', ')
         })}" />`, 'html', true);

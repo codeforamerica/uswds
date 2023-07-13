@@ -17,6 +17,9 @@ const uswds = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/c
 
 const components = require('./components');
 const svg4everybody = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills/svg4everybody');
+const MaskDollars = require('./mask-dollars.js');
+const MaskTel = require('./mask-tel.js');
+const MaskSSN = require('./mask-ssn.js');
 
 uswds.components = components;
 
@@ -30,6 +33,10 @@ const initComponents = () => {
   });
 
   svg4everybody();
+
+  new MaskDollars();
+  new MaskTel();
+  new MaskSSN();
 };
 
 if (document.readyState === 'loading') {

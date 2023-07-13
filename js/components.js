@@ -18,7 +18,6 @@ const button = require('../node_modules/@uswds/uswds/packages/usa-button/src/ind
 // const table = require('../node_modules/@uswds/uswds/packages/usa-table/src/index');
 // const timePicker = require('../node_modules/@uswds/uswds/packages/usa-time-picker/src/index');
 const tooltip = require('../node_modules/@uswds/uswds/packages/usa-tooltip/src/index');
-// const validator = require('../node_modules/@uswds/uswds/packages/usa-validation/src/index');
 
 module.exports = {
   accordion,

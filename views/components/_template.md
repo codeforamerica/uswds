@@ -3,8 +3,8 @@ tags:
 title: Template
 layout: default
 intro:
-url_uswds: https://designsystem.digital.gov/components/
-url_uswds_usage: '#'
+url_uswds:
+url_uswds_usage:
 nice_uswds: Template component
 description_uswds: ''
 url_honeycrisp: 'http://honeycrisp.herokuapp.com/cfa/styleguide#'
@@ -29,14 +29,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   nice_honeycrisp: nice_honeycrisp,
   tokens: tokens,
   styles: styles,
+  modifier_honeycrisp: modifier_honeycrisp,
   dictionary: dictionary,
-  modifier_honeycrisp: modifier_honeycrisp %}
+  config: config %}
 
 <!-- EXAMPLES -->
 
 ## Examples {#examples}
 
-{% capture body_default %}
+{% capture body %}
 
 Default Body
 
@@ -46,7 +47,7 @@ Default Body
   "modifier": "cfa-"
 }{% endcapture %}
 
-<!-- render 'figure.md', name: '{{ name }}', nice: '{{ nice }}', body: body_default, context: context, caption: '{{ caption }}' -->
+<!-- render 'figure.md', name: '{{ name }}', nice: title, body: body, context: context, caption: '{{ caption }}' -->
 
 <!-- GUIDANCE -->
 
@@ -80,4 +81,5 @@ Default Body
 
 <!-- SOURCE -->
 
-<!-- render 'source.md', name: '{{ name }}', nice: '{{ nice }}', theme: '$theme-{{ setting }}: {{ value }}', usage: '{{ url_uswds }}{{ url_uswds_usage }}', config: config -->
+{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
+<!-- render 'source.md', name: '{{ name }}', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: usage, config: config -->

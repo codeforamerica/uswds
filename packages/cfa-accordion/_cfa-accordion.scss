@@ -1,6 +1,5 @@
 @use 'uswds-core' as *;
-
-$theme-accordion-border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
 
 .cfa-accordion {
   .usa-accordion__button {

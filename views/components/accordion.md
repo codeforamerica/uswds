@@ -10,7 +10,7 @@ nice_uswds: Accordion component
 description_uswds: ''
 url_honeycrisp: 'https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion'
 nice_honeycrisp: Accordion molecule
-modifier_honeycrisp: .cfa-accordion
+modifier_honeycrisp: .cfa-accordion .usa-accordion--bordered
 design_honeycrisp: https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A536%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
 tokens: true
 styles: true
@@ -76,7 +76,7 @@ Most programs on this application, including food and cash assistance, require a
 {% endcapture %}
 
 {% capture context %}{
-  "modifier": "usa-accordion--bordered cfa-accordion",
+  "modifier": "cfa-accordion usa-accordion--bordered",
   "multiple": true,
   "items": [
     {
@@ -143,4 +143,4 @@ Most programs on this application, including food and cash assistance, require a
 <!-- SOURCE -->
 
 {% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: usage, config: config %}
+{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: usage, javascript: 'enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.', config: config %}

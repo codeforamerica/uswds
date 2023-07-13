@@ -7,7 +7,6 @@ url_uswds: https://designsystem.digital.gov/components/button
 url_uswds_guidance: 'https://designsystem.digital.gov/components/button#guidance'
 url_uswds_usage: '#using-the-button-component-2'
 nice_uswds: Button component
-description_uswds: ''
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons
 nice_honeycrisp: Button atom
 modifier_honeycrisp: .cfa-button
@@ -265,9 +264,7 @@ Buttons allow users to trigger actions. They are styled consistently according t
     }
   ]
 }{% endcapture %}
-<!-- <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-        <use xlink:href="/assets/img/sprite.svg#launch"></use>
-      </svg> -->
+
 {% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Link button' %}
 
 <!-- GUIDANCE -->
@@ -276,7 +273,7 @@ Buttons allow users to trigger actions. They are styled consistently according t
 
 **Type attribute**. If the button is a `<button>` element the type attribute should be explicitly set to “button,” “reset,” or “submit.” Without the type attribute, button elements are set to the “submit” type in forms by default.
 
-**Links as buttons**. Links may be styled as buttons however screen readers will distinguish between links and buttons differently regardless of how they are styled. Normally, links can only be invoked by the keyboard using the Enter key. However, the USWDS will open links styled as buttons when users press the Space key with JavaScript. A consistent button variant should still be used to distinguish between buttons that open link and buttons that invoke actions. Consider using an icon for buttons styled as links, such as directional arrows for onsite links, and an external icon for links that go offsite.
+**Links as buttons**. Links may be styled as buttons. However, screen readers will distinguish between links and buttons differently regardless of how they are styled. Normally, the keyboard can only invoke links using the Enter key. However, when users press the Space key, the USWDS will open links styled as buttons (with JavaScript). A consistent button variant should still be used to distinguish between buttons that open links and buttons that invoke actions. Consider using an icon for buttons styled as links, such as directional arrows for onsite links, and an external icon for links that go offsite.
 
 **Labels**. Buttons should always include a text label but may also include an icon prefix or postfix on either side of the label. Buttons with an icon but without text labels are discouraged. The icon and text label combination is the most certain way of communicating the icon's meaning.
 
@@ -331,4 +328,4 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
 <!-- SOURCE -->
 
 {% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'button', nice: 'Button', theme: false, usage: usage, config: config %}
+{% render 'source.md', name: 'button', nice: title, usage: usage, javascript: 'enables links that are styled as buttons to be invoked using the space bar.', config: config %}
