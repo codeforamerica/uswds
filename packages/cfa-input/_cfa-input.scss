@@ -8,5 +8,5 @@
 }
 
 .cfa-input:not(.usa-input--error):not(.usa-input--success) {
-  @include cfa-input-border();
+  @include cfa-form-elements-border();
 }

@@ -9,5 +9,5 @@
 
 .cfa-textarea:not(.usa-input--error):not(.usa-input--success),
 .cfa-textarea:not(.usa-textarea--error):not(.usa-textarea--success) {
-  @include cfa-input-border();
+  @include cfa-form-elements-border();
 }

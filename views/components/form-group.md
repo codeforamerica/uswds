@@ -8,7 +8,7 @@ url_uswds_usage:
 nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
-modifier_honeycrisp: ['.cfa-form-group', '.cfa-label', '.cfa-hint', '.cfa-input-group', '.cfa-input', '.cfa-textarea']
+modifier_honeycrisp: ['.cfa-form-group', '.cfa-label', '.cfa-hint', '.cfa-input-group', '.cfa-input', '.cfa-textarea', '.cfa-select']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A530%26mode%3Ddesign%26t%3DhXwkxQAW233Fykey-1
 tokens: true
 styles: true
@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} includes the <a href="https://designsystem.digital.gov/components/text-input/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Text Input component</a>, <a href="https://designsystem.digital.gov/components/input-prefix-suffix/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Input Prefix or Suffix (Postfix) component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint, and textarea). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
+The {{ title }} includes the <a href="https://designsystem.digital.gov/components/text-input/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Text Input component</a>, <a href="https://designsystem.digital.gov/components/input-prefix-suffix/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Input Prefix or Suffix (Postfix) component</a>, <a href="https://designsystem.digital.gov/components/select/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Select component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint, and textarea). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -77,6 +77,11 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "hint": {
     "text": "Legally as it appears on your I.D."
   },
+  "error": {
+    "text": "This field is required.",
+    "id": "error-message-{{ id }}",
+    "role": "alert"
+  },
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
@@ -85,11 +90,6 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
     "required": "true",
     "ariaInvalid": "true",
     "ariaDescribedby": "error-message-{{ id }}"
-  },
-  "error": {
-    "text": "This field is required.",
-    "id": "error-message-{{ id }}",
-    "role": "alert"
   }
 }{% endcapture %}
 
@@ -272,6 +272,124 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 {% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with input mask (SSN)' %}
 
+{% capture id %}{% createId %}{% endcapture %}
+
+{% capture context %}{
+  "modifier": "cfa-form-group",
+  "id": "form-group-{{ id }}",
+  "label": {
+    "text": "What type of income have you had most recently?",
+    "for": "select-{{ id }}",
+    "modifier": "cfa-label",
+    "modifierHint": "cfa-hint"
+  },
+  "hint": {
+    "text": "Answer the best you can. You will be able to include additional types of income."
+  },
+  "selectEl": {
+    "modifier": "cfa-select",
+    "id": "select-{{ id }}",
+    "name": "select[{{ id }}]",
+    "required": "true",
+    "default": {
+      "label": "Click to select an income type",
+      "selected": "true"
+    },
+    "options": [
+      {
+        "label": "---",
+        "disabled": "true"
+      },
+      {
+        "value": "wages",
+        "label": "wages, salaries, tips"
+      },
+      {
+        "value": "self-employment",
+        "label": "self-employment income"
+      },
+      {
+        "value": "unemployment",
+        "label": "unemployment benefits"
+      },
+      {
+        "value": "cash-assistance",
+        "label": "Cash Assistance grant"
+      },
+      {
+        "value": "child-support",
+        "label": "child support (received)"
+      },
+      {
+        "value": "disability-medicaid",
+        "label": "disability-related Medicaid"
+      },
+      {
+        "value": "supplemental-security-income",
+        "label": "Supplemental Security Income (SSI)"
+      },
+      {
+        "value": "social-security-dependent",
+        "label": "Social Security Dependent Benefits"
+      },
+      {
+        "value": "social-security-disability",
+        "label": "Social Security Disability Benefits"
+      },
+      {
+        "value": "social-security-survivor",
+        "label": "Social Security Survivor’s Benefits"
+      },
+      {
+        "value": "social-security-retirement",
+        "label": "Social Security Retirement Benefits"
+      },
+      {
+        "value": "state-disability",
+        "label": "State Disability Benefits"
+      },
+      {
+        "value": "veteran",
+        "label": "Veteran’s Pension or Benefits"
+      },
+      {
+        "value": "pension",
+        "label": "Government or Private Pension"
+      },
+      {
+        "value": "deferred-comp",
+        "label": "Withdrawals from Deferred Compensation (IRA, Keogh, etc.)"
+      },
+      {
+        "value": "workers-comp",
+        "label": "Worker’s Compensation"
+      },
+      {
+        "value": "alimony",
+        "label": "alimony (received)"
+      },
+      {
+        "value": "boarder",
+        "label": "boarder or lodger"
+      },
+      {
+        "value": "gifts",
+        "label": "gifts/contributions (received)"
+      },
+      {
+        "value": "rental",
+        "label": "rental income"
+      },
+      {
+        "value": "investment",
+        "label": "investment income (interest, dividends, and profit from selling stocks)"
+      }
+    ]
+  }
+}{% endcapture %}
+
+{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with select' %}
+
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
@@ -309,10 +427,12 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_input %}{% getFile 'input' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_input_group %}{% getFile 'input-group' 'stylesheet' %}{% endcapture %}
+  {% capture stylesheet_select %}{% getFile 'select' 'stylesheet' %}{% endcapture %}
 
   <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
   <li>Text Input: <code>..{{ stylesheet_input | replace: packages, '' }}</code></li>
   <li>Input Prefix or Suffix: <code>..{{ stylesheet_input_group | replace: packages, '' }}</code></li>
+  <li>Select: <code>..{{ stylesheet_select | replace: packages, '' }}</code></li>
 {% endcapture %}
 
 {% render 'source.md', name: 'form-group', nice: title, javascript: 'provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.', stylesheets: stylesheets, config: config %}

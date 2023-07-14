@@ -1,8 +1,12 @@
-<div th:fragment="formGroup(modifier, id, label, hint, input, error)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
+<div th:fragment="formGroup(modifier, id, label, hint, error, input, textarea, selectEl)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
   <label class="usa-label" th:classappend="${label.modifier}" th:attr="for=${label.for},tabindex=${label.tabindex}">
     <span th:text="${label.text}">Label</span>
+
     <abbr th:if="${input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+
     <abbr th:if="${textarea.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+
+    <abbr th:if="${selectEl.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
   </label>
 
   <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:text="${hint.text}">Hint</div>
@@ -30,4 +34,10 @@
   </div>
 
   <textarea th:if="${textarea}" class="usa-textarea" th:classappend="${textarea.modifier}" th:attr="id=${textarea.id},name=${textarea.name},aria-invalid=${textarea.ariaInvalid},aria-describedby=${textarea.ariaDescribedby},required=${textarea.required},pattern=${textarea.pattern},placeholder=${textarea.placeholder},value=${textarea.value},inputmode=${textarea.inputmode},maxlength=${textarea.maxlength}"></textarea>
+
+  <select th:if="${selectEl}" class="usa-select" th:classappend="${selectEl.modifier}" th:attr="id=${selectEl.id},name=${selectEl.name},aria-invalid=${selectEl.ariaInvalid},aria-describedby=${selectEl.ariaDescribedby},required=${selectEl.required}">
+    <option th:if="${selectEl.default}" th:attr="value=${selectEl.default.value},selected=${selectEl.default.selected}" th:text="${selectEl.default.label}">Label</option>
+
+    <option th:each="option: ${selectEl.options}" th:attr="value=${option.value},selected=${option.selected},disabled=${option.disabled}" th:text="${option.label}">Label</option>
+  </select>
 </div>

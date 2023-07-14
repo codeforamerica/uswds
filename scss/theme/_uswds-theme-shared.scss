@@ -2,10 +2,18 @@
 
 // 5. Components
 // - Input
+$theme-form-elements-padding-y: 2;
+$theme-form-elements-padding-x: 2.5;
+$theme-form-elements-border-width: 2px;
 $theme-input-height: 8;
-$theme-input-padding-y: 2;
-$theme-input-padding-x: 2.5;
 $theme-textarea-height: 15;
+$theme-select-height: 8;
+$theme-input-select-margin-right: 1.5; // Checkbox and Radio inputs
+// $theme-input-select-size: 2.5;
+
+@mixin cfa-form-elements-border() {
+  @include u-border($theme-form-elements-border-width, 'ink');
+}
 
 @mixin cfa-input() {
   @include set-text-and-bg(
@@ -17,11 +25,10 @@ $theme-textarea-height: 15;
   font-weight: $theme-font-weight-bold;
   box-shadow: inset 0px units($theme-input-state-border-width) 0px color($theme-color-base-lighter);
 
-  padding: units($theme-input-padding-y) units($theme-input-padding-x);
-}
+  padding: units($theme-form-elements-padding-y) units($theme-form-elements-padding-x);
 
-@mixin cfa-input-border() {
-  @include u-border(2px, 'ink');
+  cursor: pointer;
+  text-overflow: ellipsis;
 }
 
 // - Radio

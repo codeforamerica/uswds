@@ -167,8 +167,12 @@ in the form $setting: value,
 
   // 5. Components
   // - Input
+  $theme-input-select-size: 3,
   // - Radio
   // - Checkbox
+  $theme-checkbox-border-radius: 0,
+  $theme-input-tile-border-radius: 0,
+  $theme-input-tile-border-width: 2px,
   // - Form
   // - Alert
   $theme-alert-padding-x: 2,

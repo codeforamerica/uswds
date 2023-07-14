@@ -2,8 +2,12 @@
   <% if defined?(id) %> id="<%= id %>"<% end %>>
   <label class="usa-label<% if label['modifier'] %> <%= label['modifier'] %><% end %>"<% if label['for'] %> for="<%= label['for'] %>"<% end %><% if label['tabindex'] %> tabindex="<%= label['tabindex'] %>"<% end %>>
     <span><%= label['text'] %></span>
+
     <% if defined?(input) && input['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+
     <% if defined?(textarea) && textarea['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+
+    <% if defined?(selectEl) && selectEl['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
   </label>
 
   <% if defined?(hint) %><div class="usa-hint<% if hint['modifier'] %> <%= hint['modifier'] %><% end %>"<% if hint['id'] %> id="<%= hint['id'] %>"<% end %>><%= hint['text'] %></div><% end %>
@@ -56,5 +60,28 @@
     <% if textarea['value'] %> value="<%= textarea['value'] %>"<% end %>
     <% if textarea['inputmode'] %> inputmode="<%= textarea['inputmode'] %>"<% end %>
     <% if textarea['maxlength'] %> maxlength="<%= textarea['maxlength'] %>"<% end %>></textarea>
+  <% end %>
+
+  <% if defined?(selectEl) %>
+  <select class="usa-select<% if selectEl['modifier'] %> <%= selectEl['modifier'] %><% end %>"
+    <% if selectEl['id'] %> id="<%= selectEl['id'] %>"<% end %>
+    <% if selectEl['name'] %> name="<%= selectEl['name'] %>"<% end %>
+    <% if selectEl['ariaInvalid'] %> aria-invalid="<%= selectEl['ariaInvalid'] %>"<% end %>
+    <% if selectEl['ariaDescribedby'] %> aria-describedby="<%= selectEl['ariaDescribedby'] %>"<% end %>
+    <% if selectEl['required'] %> required="<%= selectEl['required'] %>"<% end %>>
+    <% if selectEl['default'] %><option
+      <% if selectEl['default']['value'] %> value="<%= selectEl['default']['value'] %>"<% end %>
+      <% if selectEl['default']['selected'] %> selected="<%= selectEl['default']['selected'] %>"<% end %>>
+      <%= selectEl['default']['label'] %></option>
+    <% end %>
+
+    <% selectEl['options'].each do |option| %>
+      <option
+        <% if option['value'] %> value="<%= option['value'] %>"<% end %>
+        <% if option['selected'] %> selected="<%= option['selected'] %>"<% end %>
+        <% if option['disabled'] %> disabled="<%= option['disabled'] %>"<% end %>>
+        <%= option['label'] %></option>
+    <% end %>
+  </select>
   <% end %>
 </div>

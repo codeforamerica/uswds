@@ -1,0 +1,27 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+
+.cfa-checkbox__input {
+  // Checkboxes and radios with tap-friendly targets
+  &--tile {
+    @include format-label {
+      padding: units(2) units(2);
+      padding-left: units(7); // 5 + 3
+
+      &::before {
+        // left: units(5) - units($theme-input-select-margin-right) - units($theme-input-select-size);
+        left: units(3);
+      }
+    }
+  }
+}
+
+.cfa-checkbox__label {
+  &::before {
+    width: units(2);
+    height: units(2);
+
+    top: 0;
+    margin-top: calc(#{units(2)} + 3px);
+  }
+}
