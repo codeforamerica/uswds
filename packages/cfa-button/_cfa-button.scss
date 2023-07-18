@@ -8,7 +8,7 @@
 .cfa-button:not(.usa-button--unstyled) {
   padding: units(2) units(2.5);
 
-  transition: 0.1s ease-out all;
+  @include theme-transition;
 
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;

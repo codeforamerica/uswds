@@ -9,44 +9,13 @@
 
   <span th:if="${error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
 
-  <div class="usa-checkbox">
-    <input class="usa-checkbox__input usa-checkbox__input--tile cfa-checkbox__input--tile"
-      id="check-historical-truth-2"
-      type="checkbox"
-      name="historical-figures-2"
-      value="sojourner-truth"
-      checked="checked"
-    />
-    <label class="usa-checkbox__label cfa-checkbox__label" for="check-historical-truth-2">
-      Sojourner Truth
-      <span class="usa-checkbox__label-description">
-        This is optional text that can be used to describe the label in more
-        detail.</span>
-      </label>
-  </div>
+  <div th:each="option: ${options}" th:class="'usa-' + ${option.type} + ' ' + ${option.modifier}">
+    <input th:class="'usa-' + ${option.type} + '__input ' + ${option.input.modifier}" th:attr="type=${option.type},id=${option.id},name=${option.name},aria-invalid=${option.ariaInvalid},aria-describedby=${option.ariaDescribedby},value=${option.value},checked=${option.checked},required=${required}" />
 
-  <div class="usa-checkbox">
-    <input class="usa-checkbox__input usa-checkbox__input--tile cfa-checkbox__input--tile"
-      id="check-historical-truth-2"
-      type="checkbox"
-      name="historical-figures-2"
-      value="sojourner-truth"
-      checked="checked" />
+    <label th:class="'usa-' + ${option.type} + '__label'" th:attr="for=${option.id}">
+      <span th:if="${option.label}" th:text="${option.label}">Label</span>
 
-    <label class="usa-checkbox__label cfa-checkbox__label" for="check-historical-truth-2">Sojourner Truth</label>
-  </div>
-
-  <div class="usa-radio">
-    <input
-      class="usa-radio__input usa-radio__input--tile"
-      id="historical-truth-2"
-      type="radio"
-      name="historical-figures-2"
-      value="sojourner-truth"
-      checked="checked"
-    />
-    <label class="usa-radio__label" for="historical-truth-2"
-      >Sojourner Truth</label
-    >
+      <span th:if="${option.description}" th:class="'usa-' + ${option.type} + '__label-description'" th:utext="${option.description}">Description</span>
+    </label>
   </div>
 </fieldset>

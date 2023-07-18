@@ -1,4 +1,8 @@
+{% if ref_main %}
+
 Refer to <a href="{{ ref_main }}" target="_blank" rel="noopener nofollow" class="usa-link--external">guidance on the USWDS documentation site</a>.
+
+{% endif %}
 
 {% if ref_additional %}
 

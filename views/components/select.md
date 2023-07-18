@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   "selectEl": {
     "modifier": "cfa-select",
     "id": "select-{{ id }}",
-    "name": "select[{{ id }}]",
+    "name": "select['{{ id }}']",
     "required": "true",
     "default": {
       "label": "Click to select an income type",
@@ -183,7 +183,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- DESIGN -->
 
-{% render 'figma.md', url: 'https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System' %}
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
 

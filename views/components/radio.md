@@ -1,15 +1,16 @@
 ---
 tags: component
-title: Fieldset
+title: Radio
 layout: default
 intro:
-url_uswds:
-url_uswds_usage:
-nice_uswds:
+url_uswds: https://designsystem.digital.gov/components/radio-buttons
+url_uswds_guidance: https://designsystem.digital.gov/components/radio-buttons#guidance
+url_uswds_usage: '#using-the-radio-buttons-component-2'
+nice_uswds: Radio button
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
 modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A530%26mode%3Ddesign%26t%3DhXwkxQAW233Fykey-1
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1
 tokens: true
 styles: true
 ---
@@ -37,68 +38,6 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   <!-- EXAMPLES -->
 
 ## Examples {#examples}
-
-{% capture id %}{% createId %}{% endcapture %}
-
-{% capture context %}{
-  "modifier": "cfa-fieldset",
-  "legend": {
-    "text": "Do any of the following situations apply to you?",
-    "modifier": "cfa-legend",
-    "modifierHint": "cfa-hint"
-  },
-  "hint": {
-    "text": "Please check all that apply."
-  },
-  "options": [
-    {
-      "modifier": "cfa-checkbox",
-      "id": "checkbox-{% createId %}",
-      "name": "checkbox['{{ id }}']",
-      "type": "checkbox",
-      "value": "in-foster-care",
-      "label": "In foster care",
-      "input": {
-        "modifier": "usa-checkbox__input--tile"
-      }
-    },
-    {
-      "modifier": "cfa-checkbox",
-      "id": "checkbox-{% createId %}",
-      "name": "checkbox['{{ id }}']",
-      "type": "checkbox",
-      "value": "unhoused-homeless",
-      "label": "Unhoused/homeless",
-      "input": {
-        "modifier": "usa-checkbox__input--tile"
-      }
-    },
-    {
-      "modifier": "cfa-checkbox",
-      "id": "checkbox-{% createId %}",
-      "name": "checkbox['{{ id }}']",
-      "type": "checkbox",
-      "value": "child-of-migrant-worker",
-      "label": "Child of migrant worker",
-      "input": {
-        "modifier": "usa-checkbox__input--tile"
-      }
-    },
-    {
-      "modifier": "cfa-checkbox",
-      "id": "checkbox-{% createId %}",
-      "name": "checkbox['{{ id }}']",
-      "type": "checkbox",
-      "value": "runaway-from-home",
-      "label": "Runaway from home",
-      "input": {
-        "modifier": "usa-checkbox__input--tile"
-      }
-    }
-  ]
-}{% endcapture %}
-
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with checkbox options.' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -187,16 +126,20 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 ## Guidance {#guidance}
 
-**Fieldsets vs. form groups**. Form questions with checkbox and radio components always use the fieldset component to group available options and a nested `legend` element. Other form element components, text inputs, text areas, and selects, will use the <a href="{{ config.baseUrl }}components/form-group">form group component</a>.
+**Fieldsets**. Form questions with radio components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options and a nested `legend` element as the question label.
 
-**Checkbox options**. Refer to <a href="{{ config.baseUrl }}components/checkbox">checkbox documentation</a>.
+{% capture ref_additional %}
+1. <a href="https://design-system.service.gov.uk/components/radios" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Radios</cite> | GOV.UK Design System</a>
+1. <a href="https://design.va.gov/components/form/radio-button" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Radio Button</cite> | VA.gov Design System</a>
+{% endcapture %}
 
-**Radio options**. Refer to <a href="{{ config.baseUrl }}components/radio">radio documentation</a>.
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
 
 <!-- ACCESSIBILITY -->
 
 {% render 'accessibility.md'
   nice: title,
+  url_uswds: url_uswds,
   theme_passes: false,
   audit_passes: false,
   keyboard_passes: false,
@@ -210,33 +153,9 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 <!-- DESIGN -->
 
-<!-- render 'figma.md', url: design_honeycrisp -->
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
 
-{% capture stylesheets %}
-  {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-  {% capture stylesheet_legend %}{% getFile 'legend' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_checkbox %}{% getFile 'checkbox' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_radio %}{% getFile 'radio' 'stylesheet' %}{% endcapture %}
-
-  <li>Legend: <code>..{{ stylesheet_legend | replace: packages, '' }}</code></li>
-  <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
-  <li>Checkbox: <code>..{{ stylesheet_checkbox | replace: packages, '' }}</code></li>
-  <li>Radio: <code>..{{ stylesheet_radio | replace: packages, '' }}</code></li>
-{% endcapture %}
-
-{% capture stylesheets_import %}
-@forward '{{ stylesheet_legend }}'
-@forward '{{ stylesheet_hint }}'
-@forward '{{ stylesheet_checkbox }}'
-@forward '{{ stylesheet_radio }}'
-{% endcapture %}
-
-{% render 'source.md',
-  name: 'fieldset',
-  nice: title,
-  stylesheets: stylesheets,
-  stylesheets_import: stylesheets_import
-  config: config %}
+{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
+{% render 'source.md', name: 'radio', nice: title, usage: usage, theme: '$theme-input-select-size: 3', config: config %}

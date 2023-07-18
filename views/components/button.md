@@ -4,7 +4,7 @@ title: Button
 layout: default
 intro: '"I use buttons to find important links or submit online applications"'
 url_uswds: https://designsystem.digital.gov/components/button
-url_uswds_guidance: 'https://designsystem.digital.gov/components/button#guidance'
+url_uswds_guidance: https://designsystem.digital.gov/components/button#guidance
 url_uswds_usage: '#using-the-button-component-2'
 nice_uswds: Button component
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons
@@ -28,10 +28,10 @@ Buttons allow users to trigger actions. They are styled consistently according t
   nice_uswds: nice_uswds,
   url_honeycrisp: url_honeycrisp,
   nice_honeycrisp: nice_honeycrisp,
+  modifier_honeycrisp: modifier_honeycrisp,
   tokens: tokens,
   styles: styles,
   dictionary: dictionary,
-  modifier_honeycrisp: modifier_honeycrisp,
   config: config %}
 
 <!-- EXAMPLES -->

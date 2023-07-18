@@ -34,54 +34,55 @@ let ThymeleafTempate = new thymeleaf.TemplateEngine(CONFIG_THYMELEAF);
  */
 const escapeHtml = (str) => {
   return (typeof str === 'string') ?
-    str.replace(/&/g, '&amp;')
+    str//.replace(/&amp;#039;/g, '\'')
+      .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/'/g, '&#39;')
+      // .replace(/'/g, '&#39;')
       .replace(/"/g, '&quot;') : str;
 };
 
-/**
- * Replaces the HTML markup characters in a string with HTML entity counterparts
- *
- * @param   {String}  str  An HTML template string
- *
- * @return  {String}       The escaped template string
- */
-const escapeHtmlForFragment = (str) => {
-  return (typeof str === 'string') ?
-    str.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/'/g, '&\\#39;')
-      .replace(/"/g, '&quot;') : str;
-};
+// /**
+//  * Replaces the HTML markup characters in a string with HTML entity counterparts
+//  *
+//  * @param   {String}  str  An HTML template string
+//  *
+//  * @return  {String}       The escaped template string
+//  */
+// const escapeHtmlForFragment = (str) => {
+//   return (typeof str === 'string') ?
+//     str.replace(/&/g, '&amp;')
+//       .replace(/</g, '&lt;')
+//       .replace(/>/g, '&gt;')
+//       // .replace(/'/g, '&\\#39;')
+//       .replace(/"/g, '&quot;') : str;
+// };
 
-/**
- * Processes the params passed as arguments to Thymeleaf templates
- *
- * @param   {Mixed}  param  The parameter to sanitize
- *
- * @return  {Mixed}         The sanitized parameter
- */
-const sanitizeForTh = (param) => {
-  switch(typeof param) {
-    case 'string':
-      param = `'${escapeHtmlForFragment(param)}'`;
+// /**
+//  * Processes the params passed as arguments to Thymeleaf templates
+//  *
+//  * @param   {Mixed}  param  The parameter to sanitize
+//  *
+//  * @return  {Mixed}         The sanitized parameter
+//  */
+// const sanitizeForTh = (param) => {
+//   switch(typeof param) {
+//     case 'string':
+//       param = `'${escapeHtmlForFragment(param)}'`;
 
-      break;
+//       break;
 
-    case 'object':
-      param = '${' + JSON.stringify(param)
-        .replace(/\[/g, '{')
-        .replace(/\]/g, '}')
-        .replace(/"/g, '\'') + '}';
+//     case 'object':
+//       param = '${' + JSON.stringify(param)
+//         .replace(/\[/g, '{')
+//         .replace(/\]/g, '}')
+//         .replace(/"/g, '\'') + '}';
 
-      break;
-  }
+//       break;
+//   }
 
-  return param;
-}
+//   return param;
+// }
 
 /**
  * Processes the params passed as arguments to Embedded Ruby templates
@@ -93,14 +94,19 @@ const sanitizeForTh = (param) => {
 const sanitizeForErb = (param) => {
   switch(typeof param) {
     case 'string':
-      param = `"${param.replace(/"/g, '\\"').replace(/'/g, '&#39;')}"`;
+      param = `"${param
+        .replace(/"/g, '\\"')
+        // .replace(/'/g, '&#39;')
+        .replace(/'/g, '\'"\'"\'')
+      }"`;
 
       break;
 
     case 'object':
       param = JSON.stringify(param)
         .replace(/":/g, '"=>')
-        .replace(/'/g, '&#39;');
+        // .replace(/'/g, '&#39;');
+        .replace(/'/g, '\'"\'"\'');
 
       break;
   }
@@ -111,19 +117,21 @@ const sanitizeForErb = (param) => {
 /**
  * Wraps passed string a code block and performs transformations on the content for display
  *
- * @param   {String}   string       An HTML template string
+ * @param   {String}   str          An HTML template string
  * @param   {String}   lang         The language of the code block
  * @param   {Boolean}  beautifyStr  Wether to beautify the code block string or not
  * @param   {Boolean}  escapeStr    Wether to escape the output string or not
  *
  * @return  {String}          The transformed template string wrapped in a code block
  */
-const block = (string, lang = 'html', beautifyStr = true, escapeStr = true) => {
-  string = (beautifyStr) ? beautify(string, CONFIG_BEAUTIFY) : string;
+const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
+  str = (beautifyStr) ? beautify(str, CONFIG_BEAUTIFY) : str;
 
-  string = (escapeStr) ? escapeHtml(string) : string;
+  str = (escapeStr) ? escapeHtml(str) : str;
 
-  return `<div class="code-block"><pre class="language-${lang}">${string}</pre></div>`;
+  return `<div class="code-block">
+      <pre class="language-${lang}">${str}</pre>
+    </div>`;
 };
 
 /**
@@ -151,6 +159,17 @@ const removeExtraHtml = (str) => {
  */
 const removeEmptyAttr = (str) => {
   return str.replace(/( [A-Za-z-]*)=""/g, '');
+}
+
+/**
+ * Replace escaped single quote Thymeleaf output in HTML attributes with a single quote.
+ *
+ * @param   {String}  str  The string to search and replace
+ *
+ * @return  {String}       The string with single quotes added
+ */
+const replaceSingleQuoteEscape = (str) => {
+  return str.replace(/&amp;#039;/g, '\''); // Fix strange single quote output
 }
 
 /**
@@ -231,7 +250,7 @@ const erbRender = async (name, context, log = false) => {
   let rubyPath = getFile(name, 'erb');
 
   let vars = Object.keys(context).map(c => {
-    return `${c}=${sanitizeForErb(context[c])}`.replace(/\n/g, '').replace(/'/g, '\'');
+    return `${c}=${sanitizeForErb(context[c])}`.replace(/\n/g, '')//.replace(/'/g, '\'');
   }).join('; ');
 
   let command = `(echo '<% ${vars} %>' && cat ${rubyPath}) | erb`;
@@ -382,6 +401,8 @@ module.exports = function(eleventyConfig) {
 
       th = removeEmptyAttr(th);
 
+      th = replaceSingleQuoteEscape(th);
+
       /**
        * Test erb rendering for non-production environments
        */
@@ -400,6 +421,8 @@ module.exports = function(eleventyConfig) {
       let th = removeExtraHtml(await fragmentInclude(name, context, true));
 
       th = removeEmptyAttr(th);
+
+      th = replaceSingleQuoteEscape(th);
 
       if (process.env.NODE_ENV != 'production') {
         // ERB partial render testing

@@ -59,4 +59,8 @@
 
 {% endif %}
 
+{% if url_uswds %}
+
 Refer to <a href="{{ url_uswds }}#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.
+
+{% endif %}

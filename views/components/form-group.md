@@ -55,7 +55,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
-    "name": "input[{{ id }}]",
+    "name": "input['{{ id }}']",
     "type": "text",
     "required": "true"
   }
@@ -85,7 +85,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
-    "name": "input[{{ id }}]",
+    "name": "input['{{ id }}']",
     "type": "text",
     "required": "true",
     "ariaInvalid": "true",
@@ -112,7 +112,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
-    "name": "input[{{ id }}]",
+    "name": "input['{{ id }}']",
     "type": "text"
   }
 }{% endcapture %}
@@ -132,7 +132,8 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   },
   "textarea": {
     "modifier": "cfa-textarea",
-    "id": "textarea-{{ id }}"
+    "id": "textarea-{{ id }}",
+    "name": "textarea['{{ id }}']"
   }
 }{% endcapture %}
 
@@ -152,6 +153,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "textarea": {
     "modifier": "cfa-textarea",
     "id": "textarea-{{ id }}",
+    "name": "textarea['{{ id }}']",
     "required": "true"
   }
 }{% endcapture %}
@@ -178,6 +180,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input text-right",
     "id": "input-{{ id }}",
+    "name": "input['{{ id }}']",
     "type": "text",
     "prefixText": "$",
     "placeholder": "0.00",
@@ -208,6 +211,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input text-right",
     "id": "input-{{ id }}",
+    "name": "input['{{ id }}']",
     "type": "text",
     "postfixText": "%",
     "inputmode": "decimal"
@@ -236,6 +240,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
+    "name": "input['{{ id }}']",
     "type": "tel",
     "pattern": "([0-9]{3}) [0-9]{3}-[0-9]{4}",
     "prefixText": "+1",
@@ -263,6 +268,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
+    "name": "input['{{ id }}']",
     "type": "text",
     "pattern": "[0-9]{3}-[0-9]{2}-[0-9]{4}",
     "inputmode": "numeric",
@@ -289,7 +295,7 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   "selectEl": {
     "modifier": "cfa-select",
     "id": "select-{{ id }}",
-    "name": "select[{{ id }}]",
+    "name": "select['{{ id }}']",
     "required": "true",
     "default": {
       "label": "Click to select an income type",
@@ -394,17 +400,18 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 ## Guidance {#guidance}
 
-{% capture ref_additional %}
-1. <a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a>
-{% endcapture %}
+**Fieldsets vs. form groups**. Form questions with text inputs, text areas, and selects always use the form group component to wrap inputs with an associated `label` element. Other form element components, checkbox and radio components, will use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a>.
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+<!-- **Text inputs**. Refer to <a href="{{ config.baseUrl }}components/text-input">text input documentation</a>. -->
+
+<!-- **Textareas**. Refer to <a href="{{ config.baseUrl }}components/textarea">textarea documentation</a>. -->
+
+<!-- **Select**. Refer to <a href="{{ config.baseUrl }}components/select">select documentation</a>. -->
 
 <!-- ACCESSIBILITY -->
 
 {% render 'accessibility.md'
   nice: title,
-  url_uswds: url_uswds,
   theme_passes: false,
   audit_passes: false,
   keyboard_passes: false,
@@ -418,21 +425,37 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 <!-- DESIGN -->
 
-{% render 'figma.md', url: 'https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System' %}
+<!-- render 'figma.md', url: design_honeycrisp -->
 
 <!-- SOURCE -->
 
 {% capture stylesheets %}
   {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
+  {% capture stylesheet_label %}{% getFile 'label' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_input %}{% getFile 'input' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_input_group %}{% getFile 'input-group' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_select %}{% getFile 'select' 'stylesheet' %}{% endcapture %}
 
+  <li>Label: <code>..{{ stylesheet_label | replace: packages, '' }}</code></li>
   <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
   <li>Text Input: <code>..{{ stylesheet_input | replace: packages, '' }}</code></li>
   <li>Input Prefix or Suffix: <code>..{{ stylesheet_input_group | replace: packages, '' }}</code></li>
   <li>Select: <code>..{{ stylesheet_select | replace: packages, '' }}</code></li>
 {% endcapture %}
 
-{% render 'source.md', name: 'form-group', nice: title, javascript: 'provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.', stylesheets: stylesheets, config: config %}
+{% capture stylesheets_import %}
+@forward '{{ stylesheet_label }}'
+@forward '{{ stylesheet_hint }}'
+@forward '{{ stylesheet_input }}'
+@forward '{{ stylesheet_input_group }}'
+@forward '{{ stylesheet_select }}'
+{% endcapture %}
+
+{% render 'source.md',
+  name: 'form-group',
+  nice: title,
+  javascript: 'provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.',
+  stylesheets: stylesheets,
+  stylesheets_import: stylesheets_import,
+  config: config %}
