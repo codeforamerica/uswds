@@ -4,10 +4,9 @@ title: Accordion
 layout: default
 intro: '"An accordion helps me scan long pages by letting me show or hide information."'
 url_uswds: https://designsystem.digital.gov/components/accordion
-url_uswds_guidance: 'https://designsystem.digital.gov/components/accordion#guidance'
-url_uswds_usage: '#using-the-accordion-component-2'
+url_uswds_guidance: https://designsystem.digital.gov/components/accordion/#guidance
+url_uswds_usage: https://designsystem.digital.gov/components/accordion/#using-the-accordion-component-2
 nice_uswds: Accordion component
-description_uswds: ''
 url_honeycrisp: 'https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion'
 nice_honeycrisp: Accordion molecule
 modifier_honeycrisp: .cfa-accordion .usa-accordion--bordered
@@ -142,5 +141,4 @@ Most programs on this application, including food and cash assistance, require a
 
 <!-- SOURCE -->
 
-{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: usage, javascript: 'enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.', config: config %}
+{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: url_uswds_usage, javascript: 'enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.', config: config %}

@@ -4,12 +4,13 @@ title: Fieldset
 layout: default
 intro:
 url_uswds:
+url_uswds_guidance:
 url_uswds_usage:
 nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
 modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A530%26mode%3Ddesign%26t%3DhXwkxQAW233Fykey-1
+design_honeycrisp:
 tokens: true
 styles: true
 ---
@@ -21,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} includes the <a href="https://designsystem.digital.gov/components/checkbox/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component</a>, <a href="https://designsystem.digital.gov/components/radio-buttons/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Radio Button component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
+The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">checkbox component</a>, <a href="{{ config.baseUrl }}/components/radio">radio component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -218,20 +219,17 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
   {% capture stylesheet_legend %}{% getFile 'legend' 'stylesheet' %}{% endcapture %}
   {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_checkbox %}{% getFile 'checkbox' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_radio %}{% getFile 'radio' 'stylesheet' %}{% endcapture %}
+  {% capture stylesheet_input_select %}{% getFile 'input-select' 'stylesheet' %}{% endcapture %}
 
   <li>Legend: <code>..{{ stylesheet_legend | replace: packages, '' }}</code></li>
   <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
-  <li>Checkbox: <code>..{{ stylesheet_checkbox | replace: packages, '' }}</code></li>
-  <li>Radio: <code>..{{ stylesheet_radio | replace: packages, '' }}</code></li>
+  <li>Checkbox and Radio: <code>..{{ stylesheet_input_select | replace: packages, '' }}</code></li>
 {% endcapture %}
 
 {% capture stylesheets_import %}
 @forward '{{ stylesheet_legend }}'
 @forward '{{ stylesheet_hint }}'
-@forward '{{ stylesheet_checkbox }}'
-@forward '{{ stylesheet_radio }}'
+@forward '{{ stylesheet_input_select }}'
 {% endcapture %}
 
 {% render 'source.md',

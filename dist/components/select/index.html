@@ -55,11 +55,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-84be470710162">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-5fd0ddb85c208">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-84be470710162" class="usa-nav__submenu">
+            <ul id="aria-c-5fd0ddb85c208" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -88,6 +88,9 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/select/" aria-current="page"><span>Select</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/input/" ><span>Text Input</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
@@ -96,11 +99,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-14119a461fe93">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-bc0a1e00ce92c">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-14119a461fe93" class="usa-nav__submenu">
+            <ul id="aria-c-bc0a1e00ce92c" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -182,6 +185,10 @@
                 </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/input/" >Text Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
 
                               </li>
@@ -205,97 +212,85 @@
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
-  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#" target="_blank" rel="noopener nofollow" class="usa-link--external">Template atom</a></li>
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/select" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Select component</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form element atom</a></li>
   <li>
-    <strong>Customization:</strong> <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Design tokens <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
-    and <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
+    <strong>Customization:</strong> 
+    <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
   </li>
+  <li><strong><abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="The class name that applies extended style customization to modify the component's visual appearance.">Modifier <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg>:</abbr></strong> <code>.cfa-select</code></li>
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p><p>The visual appearance is modified using <b>design tokens</b> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Template atom</a>.</p>
+<p><p>The <b>Select</b> extends the <a href="https://designsystem.digital.gov/components/select" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Select component</a>.  Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-select</code> to add <b>styles</b> defined in a custom stylesheet.</p>
 </details></p>
   </li>
 </ul>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form group with select</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-f1a51fb89318e">
-  <label class="usa-label cfa-label" for="select-f1a51fb89318e">
-    <span>What type of income have you had most recently?</span>
-    <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
-  </label>
-  <div class="usa-hint">Answer the best you can. You will be able to include additional types of income.</div>
-  <select class="usa-select cfa-select" id="select-f1a51fb89318e" name="select['f1a51fb89318e']" required="true">
-    <option selected="true">Click to select an income type</option>
-    <option disabled="true">---</option>
-    <option value="wages">wages, salaries, tips</option>
-    <option value="self-employment">self-employment income</option>
-    <option value="unemployment">unemployment benefits</option>
-    <option value="cash-assistance">Cash Assistance grant</option>
-    <option value="child-support">child support (received)</option>
-    <option value="disability-medicaid">disability-related Medicaid</option>
-    <option value="supplemental-security-income">Supplemental Security Income (SSI)</option>
-    <option value="social-security-dependent">Social Security Dependent Benefits</option>
-    <option value="social-security-disability">Social Security Disability Benefits</option>
-    <option value="social-security-survivor">Social Security Survivor’s Benefits</option>
-    <option value="social-security-retirement">Social Security Retirement Benefits</option>
-    <option value="state-disability">State Disability Benefits</option>
-    <option value="veteran">Veteran’s Pension or Benefits</option>
-    <option value="pension">Government or Private Pension</option>
-    <option value="deferred-comp">Withdrawals from Deferred Compensation (IRA, Keogh, etc.)</option>
-    <option value="workers-comp">Worker’s Compensation</option>
-    <option value="alimony">alimony (received)</option>
-    <option value="boarder">boarder or lodger</option>
-    <option value="gifts">gifts/contributions (received)</option>
-    <option value="rental">rental income</option>
-    <option value="investment">investment income (interest, dividends, and profit from selling stocks)</option>
-  </select>
-</div>
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Select</figcaption>
+    <select class="usa-select cfa-select" id="select-46242e4f607c4" name="select['46242e4f607c4']" required="true">
+  <option selected="true">Click to select an income type</option>
+  <option disabled="true">---</option>
+  <option value="wages">wages, salaries, tips</option>
+  <option value="self-employment">self-employment income</option>
+  <option value="unemployment">unemployment benefits</option>
+  <option value="cash-assistance">Cash Assistance grant</option>
+  <option value="child-support">child support (received)</option>
+  <option value="disability-medicaid">disability-related Medicaid</option>
+  <option value="supplemental-security-income">Supplemental Security Income (SSI)</option>
+  <option value="social-security-dependent">Social Security Dependent Benefits</option>
+  <option value="social-security-disability">Social Security Disability Benefits</option>
+  <option value="social-security-survivor">Social Security Survivor’s Benefits</option>
+  <option value="social-security-retirement">Social Security Retirement Benefits</option>
+  <option value="state-disability">State Disability Benefits</option>
+  <option value="veteran">Veteran’s Pension or Benefits</option>
+  <option value="pension">Government or Private Pension</option>
+  <option value="deferred-comp">Withdrawals from Deferred Compensation (IRA, Keogh, etc.)</option>
+  <option value="workers-comp">Worker’s Compensation</option>
+  <option value="alimony">alimony (received)</option>
+  <option value="boarder">boarder or lodger</option>
+  <option value="gifts">gifts/contributions (received)</option>
+  <option value="rental">rental income</option>
+  <option value="investment">investment income (interest, dividends, and profit from selling stocks)</option>
+</select>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-dad14d9ec6077">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-2a637059a2db7">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-dad14d9ec6077" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-2a637059a2db7" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-f1a51fb89318e&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-f1a51fb89318e&quot;&gt;
-    &lt;span&gt;What type of income have you had most recently?&lt;/span&gt;
-    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can. You will be able to include additional types of income.&lt;/div&gt;
-  &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-f1a51fb89318e&quot; name=&quot;select['f1a51fb89318e']&quot; required=&quot;true&quot;&gt;
-    &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
-    &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
-    &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
-    &lt;option value=&quot;self-employment&quot;&gt;self-employment income&lt;/option&gt;
-    &lt;option value=&quot;unemployment&quot;&gt;unemployment benefits&lt;/option&gt;
-    &lt;option value=&quot;cash-assistance&quot;&gt;Cash Assistance grant&lt;/option&gt;
-    &lt;option value=&quot;child-support&quot;&gt;child support (received)&lt;/option&gt;
-    &lt;option value=&quot;disability-medicaid&quot;&gt;disability-related Medicaid&lt;/option&gt;
-    &lt;option value=&quot;supplemental-security-income&quot;&gt;Supplemental Security Income (SSI)&lt;/option&gt;
-    &lt;option value=&quot;social-security-dependent&quot;&gt;Social Security Dependent Benefits&lt;/option&gt;
-    &lt;option value=&quot;social-security-disability&quot;&gt;Social Security Disability Benefits&lt;/option&gt;
-    &lt;option value=&quot;social-security-survivor&quot;&gt;Social Security Survivor’s Benefits&lt;/option&gt;
-    &lt;option value=&quot;social-security-retirement&quot;&gt;Social Security Retirement Benefits&lt;/option&gt;
-    &lt;option value=&quot;state-disability&quot;&gt;State Disability Benefits&lt;/option&gt;
-    &lt;option value=&quot;veteran&quot;&gt;Veteran’s Pension or Benefits&lt;/option&gt;
-    &lt;option value=&quot;pension&quot;&gt;Government or Private Pension&lt;/option&gt;
-    &lt;option value=&quot;deferred-comp&quot;&gt;Withdrawals from Deferred Compensation (IRA, Keogh, etc.)&lt;/option&gt;
-    &lt;option value=&quot;workers-comp&quot;&gt;Worker’s Compensation&lt;/option&gt;
-    &lt;option value=&quot;alimony&quot;&gt;alimony (received)&lt;/option&gt;
-    &lt;option value=&quot;boarder&quot;&gt;boarder or lodger&lt;/option&gt;
-    &lt;option value=&quot;gifts&quot;&gt;gifts/contributions (received)&lt;/option&gt;
-    &lt;option value=&quot;rental&quot;&gt;rental income&lt;/option&gt;
-    &lt;option value=&quot;investment&quot;&gt;investment income (interest, dividends, and profit from selling stocks)&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html">&lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-46242e4f607c4&quot; name=&quot;select['46242e4f607c4']&quot; required=&quot;true&quot;&gt;
+  &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
+  &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
+  &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
+  &lt;option value=&quot;self-employment&quot;&gt;self-employment income&lt;/option&gt;
+  &lt;option value=&quot;unemployment&quot;&gt;unemployment benefits&lt;/option&gt;
+  &lt;option value=&quot;cash-assistance&quot;&gt;Cash Assistance grant&lt;/option&gt;
+  &lt;option value=&quot;child-support&quot;&gt;child support (received)&lt;/option&gt;
+  &lt;option value=&quot;disability-medicaid&quot;&gt;disability-related Medicaid&lt;/option&gt;
+  &lt;option value=&quot;supplemental-security-income&quot;&gt;Supplemental Security Income (SSI)&lt;/option&gt;
+  &lt;option value=&quot;social-security-dependent&quot;&gt;Social Security Dependent Benefits&lt;/option&gt;
+  &lt;option value=&quot;social-security-disability&quot;&gt;Social Security Disability Benefits&lt;/option&gt;
+  &lt;option value=&quot;social-security-survivor&quot;&gt;Social Security Survivor’s Benefits&lt;/option&gt;
+  &lt;option value=&quot;social-security-retirement&quot;&gt;Social Security Retirement Benefits&lt;/option&gt;
+  &lt;option value=&quot;state-disability&quot;&gt;State Disability Benefits&lt;/option&gt;
+  &lt;option value=&quot;veteran&quot;&gt;Veteran’s Pension or Benefits&lt;/option&gt;
+  &lt;option value=&quot;pension&quot;&gt;Government or Private Pension&lt;/option&gt;
+  &lt;option value=&quot;deferred-comp&quot;&gt;Withdrawals from Deferred Compensation (IRA, Keogh, etc.)&lt;/option&gt;
+  &lt;option value=&quot;workers-comp&quot;&gt;Worker’s Compensation&lt;/option&gt;
+  &lt;option value=&quot;alimony&quot;&gt;alimony (received)&lt;/option&gt;
+  &lt;option value=&quot;boarder&quot;&gt;boarder or lodger&lt;/option&gt;
+  &lt;option value=&quot;gifts&quot;&gt;gifts/contributions (received)&lt;/option&gt;
+  &lt;option value=&quot;rental&quot;&gt;rental income&lt;/option&gt;
+  &lt;option value=&quot;investment&quot;&gt;investment income (interest, dividends, and profit from selling stocks)&lt;/option&gt;
+&lt;/select&gt;</pre>
     </div>
       </div>
     </div>
@@ -303,10 +298,13 @@
 </div>
 <!-- GUIDANCE -->
 <h2 id="guidance">Guidance</h2>
+<p><strong>Form groups</strong>. Form questions with select components always use the <a href="https://codeforamerica.github.io/uswds/dist/components/form-group">form group component</a> to wrap the select with a visible <code>label</code> element.</p>
+<p>Refer to <a href="https://designsystem.digital.gov/components/select#guidance" target="_blank" rel="noopener nofollow" class="usa-link--external">guidance on the USWDS documentation site</a>.</p>
 <p><b>Additional references</b></p>
 <div class="font-body-3xs">
 <ol>
-<li><a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a></li>
+<li><a href="https://design-system.service.gov.uk/components/select" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Select</cite> | GOV.UK Design System</a></li>
+<li><a href="https://design.va.gov/components/form/select" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Select</cite> | VA.gov Design System</a></li>
 </ol>
 </div>
 <!-- ACCESSIBILITY -->
@@ -377,11 +375,99 @@
 <div class="usa-icon-list__content">Guidance on ensuring Select accessibility has been provided in this documentation.</div>
   </li>
 </ul>
+<p>Refer to <a href="https://designsystem.digital.gov/components/select#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.</p>
 <!-- DESIGN -->
 <h2 id="design-library-component">Design library component</h2>
-<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=" allowfullscreen></iframe>
+<iframe tabindex="0" class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A844%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1" allowfullscreen></iframe>
 <!-- SOURCE -->
-<!-- render 'source.md', name: '', nice: title, theme: '$theme-: ', usage: usage, config: config -->
+<h2 id="source-and-usage">Source and usage</h2>
+<p class="usa-icon-list__item">
+  <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-select</code></span>
+</p>
+<p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
+<ul class="usa-content-list">
+  <li>
+    <strong>Sass stylesheet:</strong> <code>./_cfa-select.scss</code>
+  </li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-select.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-select.html.erb</code></li>
+</ul>
+<figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
+  <figcaption class="margin-bottom-2">
+    <strong>Sass theme settings and stylesheet loading</strong>
+    <p>Below is a demonstration of customizing the component theme settings and importing the Sass stylesheet from the package. Refer to the <a href="https://designsystem.digital.gov/components/select" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
+  </figcaption>
+  <div class="code-block"><pre class="language-scss">@use 'uswds-core' with (
+  $theme-{{ setting }}: {{ value }},
+  // ... additional theme settings here ...
+);
+@forward 'uswds';
+@forward '@codeforamerica/uswds/packages/cfa-select/_cfa-select.scss';
+</pre></div>
+</figure>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>Thymeleaf template fragment</strong>
+      <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-html">&lt;select th:fragment=&quot;select(selectEl)&quot; class=&quot;usa-select&quot; th:classappend=&quot;${selectEl.modifier}&quot; th:attr=&quot;id=${selectEl.id},name=${selectEl.name},aria-invalid=${selectEl.ariaInvalid},aria-describedby=${selectEl.ariaDescribedby},required=${selectEl.required}&quot;&gt;
+  &lt;option th:if=&quot;${selectEl.default}&quot; th:attr=&quot;value=${selectEl.default.value},selected=${selectEl.default.selected}&quot; th:text=&quot;${selectEl.default.label}&quot;&gt;Label&lt;/option&gt;
+  &lt;option th:each=&quot;option: ${selectEl.options}&quot; th:attr=&quot;value=${option.value},selected=${option.selected},disabled=${option.disabled}&quot; th:text=&quot;${option.label}&quot;&gt;Label&lt;/option&gt;
+&lt;/select&gt;</pre>
+    </div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Template fragment inclusion</strong>
+      <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-select/cfa-select.th :: select()}&quot; /&gt;</pre>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>ERB template partial</strong>
+      <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-ruby">&lt;select class=&quot;usa-select&lt;% if selectEl['modifier'] %&gt; &lt;%= selectEl['modifier'] %&gt;&lt;% end %&gt;&quot;
+  &lt;% if selectEl['id'] %&gt; id=&quot;&lt;%= selectEl['id'] %&gt;&quot;&lt;% end %&gt;
+  &lt;% if selectEl['name'] %&gt; name=&quot;&lt;%= selectEl['name'] %&gt;&quot;&lt;% end %&gt;
+  &lt;% if selectEl['ariaInvalid'] %&gt; aria-invalid=&quot;&lt;%= selectEl['ariaInvalid'] %&gt;&quot;&lt;% end %&gt;
+  &lt;% if selectEl['ariaDescribedby'] %&gt; aria-describedby=&quot;&lt;%= selectEl['ariaDescribedby'] %&gt;&quot;&lt;% end %&gt;
+  &lt;% if selectEl['required'] %&gt; required=&quot;&lt;%= selectEl['required'] %&gt;&quot;&lt;% end %&gt;&gt;
+  &lt;% if selectEl['default'] %&gt;&lt;option
+    &lt;% if selectEl['default']['value'] %&gt; value=&quot;&lt;%= selectEl['default']['value'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if selectEl['default']['selected'] %&gt; selected=&quot;&lt;%= selectEl['default']['selected'] %&gt;&quot;&lt;% end %&gt;&gt;
+    &lt;%= selectEl['default']['label'] %&gt;
+  &lt;/option&gt;
+  &lt;% end %&gt;
+  &lt;% selectEl['options'].each do |option| %&gt;
+  &lt;option
+    &lt;% if option['value'] %&gt; value=&quot;&lt;%= option['value'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['selected'] %&gt; selected=&quot;&lt;%= option['selected'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['disabled'] %&gt; disabled=&quot;&lt;%= option['disabled'] %&gt;&quot;&lt;% end %&gt;&gt;
+    &lt;%= option['label'] %&gt;&lt;/option&gt;
+  &lt;% end %&gt;
+&lt;/select&gt;</pre>
+    </div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Partial render</strong>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-ruby">&lt;%= render '@codeforamerica/uswds/packages/cfa-select/cfa-select',  %&gt;</pre>
+    </div>
+  </figure>
+</div>
 
         </main>
       </div>

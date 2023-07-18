@@ -4,10 +4,9 @@ title: Alert
 layout: default
 intro: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
 url_uswds: https://designsystem.digital.gov/components/alert
-url_uswds_guidance: https://designsystem.digital.gov/components/alert#guidance
-url_uswds_usage: '#using-the-alert-component-2'
+url_uswds_guidance: https://designsystem.digital.gov/components/alert/#guidance
+url_uswds_usage: https://designsystem.digital.gov/components/alert/#using-the-alert-component-2
 nice_uswds: Alert component
-description_uswds: ''
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices
 nice_honeycrisp: Notice atom
 modifier_honeycrisp: .cfa-alert

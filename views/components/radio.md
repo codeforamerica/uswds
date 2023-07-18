@@ -5,10 +5,10 @@ layout: default
 intro:
 url_uswds: https://designsystem.digital.gov/components/radio-buttons
 url_uswds_guidance: https://designsystem.digital.gov/components/radio-buttons#guidance
-url_uswds_usage: '#using-the-radio-buttons-component-2'
+url_uswds_usage: https://designsystem.digital.gov/components/radio-buttons#using-the-radio-buttons-component-2
 nice_uswds: Radio button
-url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
-nice_honeycrisp: Form group molecule
+url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
+nice_honeycrisp: Form element atom
 modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1
 tokens: true
@@ -21,17 +21,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- DETAILS -->
 
-{% capture details_custom %}
-The {{ title }} includes the <a href="https://designsystem.digital.gov/components/checkbox/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component</a>, <a href="https://designsystem.digital.gov/components/radio-buttons/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Radio Button component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
-
 {% render 'details.md',
   name: title,
+  url_uswds: url_uswds,
+  url_uswds_usage: url_uswds_usage,
+  nice_uswds: nice_uswds,
   url_honeycrisp: url_honeycrisp,
   nice_honeycrisp: nice_honeycrisp,
+  modifier_honeycrisp: modifier_honeycrisp,
   tokens: tokens,
   styles: styles,
-  modifier_honeycrisp: modifier_honeycrisp,
-  details_custom: details_custom,
   dictionary: dictionary,
   config: config %}
 
@@ -42,23 +41,14 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 {% capture id %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-fieldset",
-  "legend": {
-    "text": "What type of school are you enrolled in?",
-    "modifier": "cfa-legend",
-    "modifierHint": "cfa-hint"
-  },
-  "hint": {
-    "text": "Please choose one of the following."
-  },
   "options": [
     {
       "modifier": "cfa-radio",
       "id": "radio-{% createId %}",
       "name": "radio['{{ id }}']",
       "type": "radio",
-      "value": "virtual-school",
-      "label": "Virtual school",
+      "value": "option-a",
+      "label": "Option A",
       "input": {
         "modifier": "usa-radio__input--tile"
       }
@@ -68,8 +58,8 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
       "id": "radio-{% createId %}",
       "name": "radio['{{ id }}']",
       "type": "radio",
-      "value": "homeschool",
-      "label": "Homeschool",
+      "value": "option-b",
+      "label": "Option B",
       "input": {
         "modifier": "usa-radio__input--tile"
       }
@@ -77,30 +67,20 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with radio options.' %}
+{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Radios' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-fieldset",
-  "legend": {
-    "text": "Please confirm your address.",
-    "modifier": "cfa-legend",
-    "modifierHint": "cfa-hint"
-  },
-  "hint": {
-    "text": "We updated the address you entered. If correct, please use the suggested address."
-  },
   "options": [
     {
       "modifier": "cfa-radio",
       "id": "radio-{% createId %}",
       "name": "radio['{{ id }}']",
       "type": "radio",
-      "value": "suggested-address",
-      "label": "Suggested address",
-      "description": "4918 Webster St., Apt 2 <br> Oakland, CA <br> 94609",
-      "checked": "true",
+      "value": "option-a",
+      "label": "Option A",
+      "description": "Option description",
       "input": {
         "modifier": "usa-radio__input--tile"
       }
@@ -110,9 +90,9 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
       "id": "radio-{% createId %}",
       "name": "radio['{{ id }}']",
       "type": "radio",
-      "value": "address-you-entered",
-      "label": "Address you entered",
-      "description": "4918 Webster Street <br> Apt 2 <br> Oakland, CA <br> 94609",
+      "value": "option-b",
+      "label": "Option B",
+      "description": "Option description",
       "input": {
         "modifier": "usa-radio__input--tile"
       }
@@ -120,13 +100,13 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with radio options.' %}
+{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Radios with descriptions' %}
 
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
 
-**Fieldsets**. Form questions with radio components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options and a nested `legend` element as the question label.
+**Fieldsets**. Form questions with radio components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options with a visible `legend` element.
 
 {% capture ref_additional %}
 1. <a href="https://design-system.service.gov.uk/components/radios" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Radios</cite> | GOV.UK Design System</a>
@@ -157,5 +137,4 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 <!-- SOURCE -->
 
-{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'radio', nice: title, usage: usage, theme: '$theme-input-select-size: 3', config: config %}
+{% render 'source.md', name: 'input-select', nice: title, usage: url_uswds_usage, theme: '$theme-input-select-size: 3', config: config %}

@@ -277,6 +277,11 @@ const erbRender = async (name, context, log = false) => {
  * @return  {String}           The rendered template
  */
 const fragmentInclude = async (name, context, log = false) => {
+  // let thReplace = getFile(name, 'thymeleaf')
+  //   .replace(__dirname + '/', '').replace('.html', '');
+
+  // console.dir(thReplace);
+
   // Fragment include method
   // let templatePath = getFile(name, 'thymeleaf')
   //   .replace(__dirname + '/', '').replace('.html', '');

@@ -10,23 +10,5 @@
 
   <% if defined?(error) %><span class="usa-error-message"<% if error['id'] %> id="<%= error['id'] %>"<% end %><% if error['role'] %> role="<%= error['role'] %>"<% end %><% if error['ariaLive'] %> aria-live="<%= error['ariaLive'] %>"<% end %>><%= error['text'] %></span><% end %>
 
-  <% options.each do |option| %>
-  <div class="usa-<%= option['type'] %><% if option['modifier'] %> <%= option['modifier'] %><% end %>">
-    <input class="usa-<%= option['type'] %>__input<% if option['input']['modifier'] %> <%= option['input']['modifier'] %><% end %>"
-      <% if option['type'] %> type="<%= option['type'] %>"<% end %>
-      <% if option['id'] %> id="<%= option['id'] %>"<% end %>
-      <% if option['name'] %> name="<%= option['name'] %>"<% end %>
-      <% if option['ariaInvalid'] %> aria-invalid="<%= option['ariaInvalid'] %>"<% end %>
-      <% if option['ariaDescribedby'] %> aria-describedby="<%= option['ariaDescribedby'] %>"<% end %>
-      <% if option['value'] %> value="<%= option['value'] %>"<% end %>
-      <% if option['checked'] %> checked="<%= option['checked'] %>"<% end %>
-      <% if defined?(required) %>required<% end %> />
-
-    <label class="usa-<%= option['type'] %>__label"<% if option['id'] %> for="<%= option['id'] %>"<% end %>>
-      <% if option['label'] %><span><%= option['label'] %></span><% end %>
-
-      <% if option['description'] %><span class="usa-<%= option['type'] %>__label-description"><%= option['description'] %></span><% end %>
-    </label>
-  </div>
-  <% end %>
+  <%= ERB.new(File.read('packages/cfa-input-select/_cfa-input-select.html.erb'), 0, 0, '@html').result(binding) %>
 </fieldset>

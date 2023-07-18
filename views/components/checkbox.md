@@ -5,7 +5,7 @@ layout: default
 intro:
 url_uswds: https://designsystem.digital.gov/components/checkbox
 url_uswds_guidance: https://designsystem.digital.gov/components/checkbox#guidance
-url_uswds_usage: '#using-the-checkbox-component-2'
+url_uswds_usage: https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2
 nice_uswds: Checkbox component
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
 nice_honeycrisp: Form element atom
@@ -41,23 +41,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% capture id %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-fieldset",
-  "legend": {
-    "text": "Do any of the following situations apply to you?",
-    "modifier": "cfa-legend",
-    "modifierHint": "cfa-hint"
-  },
-  "hint": {
-    "text": "Please check all that apply."
-  },
   "options": [
     {
       "modifier": "cfa-checkbox",
       "id": "checkbox-{% createId %}",
       "name": "checkbox['{{ id }}']",
       "type": "checkbox",
-      "value": "in-foster-care",
-      "label": "In foster care",
+      "value": "option-a",
+      "label": "Option A",
       "input": {
         "modifier": "usa-checkbox__input--tile"
       }
@@ -67,30 +58,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       "id": "checkbox-{% createId %}",
       "name": "checkbox['{{ id }}']",
       "type": "checkbox",
-      "value": "unhoused-homeless",
-      "label": "Unhoused/homeless",
-      "input": {
-        "modifier": "usa-checkbox__input--tile"
-      }
-    },
-    {
-      "modifier": "cfa-checkbox",
-      "id": "checkbox-{% createId %}",
-      "name": "checkbox['{{ id }}']",
-      "type": "checkbox",
-      "value": "child-of-migrant-worker",
-      "label": "Child of migrant worker",
-      "input": {
-        "modifier": "usa-checkbox__input--tile"
-      }
-    },
-    {
-      "modifier": "cfa-checkbox",
-      "id": "checkbox-{% createId %}",
-      "name": "checkbox['{{ id }}']",
-      "type": "checkbox",
-      "value": "runaway-from-home",
-      "label": "Runaway from home",
+      "value": "option-b",
+      "label": "Option B",
       "input": {
         "modifier": "usa-checkbox__input--tile"
       }
@@ -98,13 +67,46 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with checkbox options.' %}
+{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Checkboxes' %}
+
+{% capture id %}{% createId %}{% endcapture %}
+
+{% capture context %}{
+  "options": [
+    {
+      "modifier": "cfa-checkbox",
+      "id": "checkbox-{% createId %}",
+      "name": "checkbox['{{ id }}']",
+      "type": "checkbox",
+      "value": "option-a",
+      "label": "Option A",
+      "description": "Option description",
+      "input": {
+        "modifier": "usa-checkbox__input--tile"
+      }
+    },
+    {
+      "modifier": "cfa-checkbox",
+      "id": "checkbox-{% createId %}",
+      "name": "checkbox['{{ id }}']",
+      "type": "checkbox",
+      "value": "option-b",
+      "label": "Option B",
+      "description": "Option description",
+      "input": {
+        "modifier": "usa-checkbox__input--tile"
+      }
+    }
+  ]
+}{% endcapture %}
+
+{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Checkboxes with descriptions' %}
 
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
 
-**Fieldsets**. Form questions with checkbox components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options and a nested `legend` element as the question label.
+**Fieldsets**. Form questions with checkbox components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options with a visible `legend` element.
 
 {% capture ref_additional %}
 1. <a href="https://design-system.service.gov.uk/components/checkboxes" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Checkboxes</cite> | GOV.UK Design System</a>
@@ -135,5 +137,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'checkbox', nice: title, usage: usage, theme: '$theme-input-select-size: 3', config: config %}
+{% render 'source.md', name: 'input-select', nice: title, usage: url_uswds_usage, theme: '$theme-input-select-size: 3', config: config %}

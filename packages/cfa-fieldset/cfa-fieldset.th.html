@@ -9,13 +9,5 @@
 
   <span th:if="${error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
 
-  <div th:each="option: ${options}" th:class="'usa-' + ${option.type} + ' ' + ${option.modifier}">
-    <input th:class="'usa-' + ${option.type} + '__input ' + ${option.input.modifier}" th:attr="type=${option.type},id=${option.id},name=${option.name},aria-invalid=${option.ariaInvalid},aria-describedby=${option.ariaDescribedby},value=${option.value},checked=${option.checked},required=${required}" />
-
-    <label th:class="'usa-' + ${option.type} + '__label'" th:attr="for=${option.id}">
-      <span th:if="${option.label}" th:text="${option.label}">Label</span>
-
-      <span th:if="${option.description}" th:class="'usa-' + ${option.type} + '__label-description'" th:utext="${option.description}">Description</span>
-    </label>
-  </div>
+  <th:block th:replace="~{packages/cfa-input-select/cfa-input-select.th :: inputSelect(${options}, ${required})}" />
 </fieldset>

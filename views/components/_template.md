@@ -4,12 +4,13 @@ title: Template
 layout: default
 intro:
 url_uswds:
+url_uswds_guidance:
 url_uswds_usage:
 nice_uswds: Template component
-description_uswds: ''
 url_honeycrisp: 'http://honeycrisp.herokuapp.com/cfa/styleguide#'
 nice_honeycrisp: Template atom
 modifier_honeycrisp: false
+design_honeycrisp:
 tokens: true
 styles: true
 ---

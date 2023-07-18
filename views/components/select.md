@@ -3,14 +3,15 @@ tags: component
 title: Select
 layout: default
 intro:
-url_uswds:
-url_uswds_usage:
-nice_uswds: Template component
-description_uswds: ''
-url_honeycrisp: 'http://honeycrisp.herokuapp.com/cfa/styleguide#'
-nice_honeycrisp: Template atom
-modifier_honeycrisp: false
-tokens: true
+url_uswds: https://designsystem.digital.gov/components/select
+url_uswds_guidance: https://designsystem.digital.gov/components/select#guidance
+url_uswds_usage: https://designsystem.digital.gov/components/select#using-the-select-component-2
+nice_uswds: Select component
+url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
+nice_honeycrisp: Form element atom
+modifier_honeycrisp: ['.cfa-select']
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A844%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
+# tokens: true
 styles: true
 ---
 
@@ -40,17 +41,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% capture id %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-form-group",
-  "id": "form-group-{{ id }}",
-  "label": {
-    "text": "What type of income have you had most recently?",
-    "for": "select-{{ id }}",
-    "modifier": "cfa-label",
-    "modifierHint": "cfa-hint"
-  },
-  "hint": {
-    "text": "Answer the best you can. You will be able to include additional types of income."
-  },
   "selectEl": {
     "modifier": "cfa-select",
     "id": "select-{{ id }}",
@@ -153,14 +143,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with select' %}
+{% render 'figure.md', name: 'select', nice: title, body: body, context: context, caption: 'Select' %}
 
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
 
+**Form groups**. Form questions with select components always use the <a href="{{ config.baseUrl }}components/form-group">form group component</a> to wrap the select with a visible `label` element.
+
 {% capture ref_additional %}
-1. <a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a>
+1. <a href="https://design-system.service.gov.uk/components/select" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Select</cite> | GOV.UK Design System</a>
+1. <a href="https://design.va.gov/components/form/select" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Select</cite> | VA.gov Design System</a>
 {% endcapture %}
 
 {% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
@@ -187,5 +180,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-<!-- render 'source.md', name: '{{ name }}', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: usage, config: config -->
+{% render 'source.md', name: 'select', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: url_uswds, config: config %}

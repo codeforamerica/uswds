@@ -1,7 +1,7 @@
 {% capture ID %}{% createId %}{% endcapture %}
 
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     {% if caption %}<figcaption class="margin-bottom-2">{{ caption }}</figcaption>{% endif %}
     {% package name context %}{{ body }}{% endpackage %}
   </figure>

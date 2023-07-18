@@ -4,13 +4,13 @@ title: Button
 layout: default
 intro: '"I use buttons to find important links or submit online applications"'
 url_uswds: https://designsystem.digital.gov/components/button
-url_uswds_guidance: https://designsystem.digital.gov/components/button#guidance
-url_uswds_usage: '#using-the-button-component-2'
+url_uswds_guidance: https://designsystem.digital.gov/components/button/#guidance
+url_uswds_usage: https://designsystem.digital.gov/components/button/#using-the-button-component-2
 nice_uswds: Button component
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons
 nice_honeycrisp: Button atom
 modifier_honeycrisp: .cfa-button
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A530%26mode%3Ddesign%26t%3DhXwkxQAW233Fykey-1
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A1490%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
 tokens: true
 styles: true
 ---
@@ -327,5 +327,4 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
 
 <!-- SOURCE -->
 
-{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'button', nice: title, usage: usage, javascript: 'enables links that are styled as buttons to be invoked using the space bar.', config: config %}
+{% render 'source.md', name: 'button', nice: title, usage: url_uswds_usage, javascript: 'enables links that are styled as buttons to be invoked using the space bar.', config: config %}

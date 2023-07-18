@@ -55,11 +55,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-ee44fddd5c4e7">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-604358c4279dc">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-ee44fddd5c4e7" class="usa-nav__submenu">
+            <ul id="aria-c-604358c4279dc" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -88,6 +88,9 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/select/" ><span>Select</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/input/" ><span>Text Input</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
@@ -96,11 +99,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d885c9fffaacb">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-e3bdd4fcb337f">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-d885c9fffaacb" class="usa-nav__submenu">
+            <ul id="aria-c-e3bdd4fcb337f" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -182,6 +185,10 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/input/" >Text Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
 
                               </li>
@@ -205,7 +212,8 @@
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
-  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form group molecule</a></li>
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/radio-buttons" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Radio button</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form element atom</a></li>
   <li>
     <strong>Customization:</strong> <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Design tokens <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
     and <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
@@ -214,133 +222,95 @@
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p>The Radio includes the <a href="https://designsystem.digital.gov/components/checkbox/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component</a>, <a href="https://designsystem.digital.gov/components/radio-buttons/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Radio Button component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form group molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-legend</code>, <code>.cfa-hint</code>, <code>.cfa-checkbox</code>, <code>.cfa-radio</code> to add <b>styles</b> defined in custom stylesheets.
+<p><p>The <b>Radio</b> extends the <a href="https://designsystem.digital.gov/components/radio-buttons" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Radio button</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/radio-buttons#using-the-radio-buttons-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Radio button settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Form element atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-legend</code>, <code>.cfa-hint</code>, <code>.cfa-checkbox</code>, <code>.cfa-radio</code> to add <b>styles</b> defined in a custom stylesheet.</p>
 </details></p>
   </li>
 </ul>
   <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Fieldset with radio options.</figcaption>
-    <fieldset class="usa-fieldset cfa-fieldset">
-  <legend class="usa-legend cfa-legend">
-    <span>What type of school are you enrolled in?</span>
-  </legend>
-  <div class="usa-hint">Please choose one of the following.</div>
-  <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-5d32ae6e631c7" name="radio['7d3c9fec7b875']" value="virtual-school" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-5d32ae6e631c7" class="usa-radio__label">
-      <span>Virtual school</span>
-    </label>
-  </div>
-  <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-8c889d590d799" name="radio['7d3c9fec7b875']" value="homeschool" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-8c889d590d799" class="usa-radio__label">
-      <span>Homeschool</span>
-    </label>
-  </div>
-</fieldset>
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Radios</figcaption>
+    <div class="usa-radio cfa-radio">
+  <input type="radio" id="radio-fc6919270c6e2" name="radio['71b6879f28b13']" value="option-a" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-fc6919270c6e2" class="usa-radio__label">
+    <span>Option A</span>
+  </label>
+</div>
+<div class="usa-radio cfa-radio">
+  <input type="radio" id="radio-f7ad0ef4e5ad3" name="radio['71b6879f28b13']" value="option-b" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-f7ad0ef4e5ad3" class="usa-radio__label">
+    <span>Option B</span>
+  </label>
+</div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-b76448cdbc26">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a611d15bab86a">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-b76448cdbc26" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a611d15bab86a" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
-  &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
-    &lt;span&gt;What type of school are you enrolled in?&lt;/span&gt;
-  &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint&quot;&gt;Please choose one of the following.&lt;/div&gt;
-  &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-5d32ae6e631c7&quot; name=&quot;radio['7d3c9fec7b875']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-5d32ae6e631c7&quot; class=&quot;usa-radio__label&quot;&gt;
-      &lt;span&gt;Virtual school&lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-8c889d590d799&quot; name=&quot;radio['7d3c9fec7b875']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-8c889d590d799&quot; class=&quot;usa-radio__label&quot;&gt;
-      &lt;span&gt;Homeschool&lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-&lt;/fieldset&gt;</pre>
+      <pre class="language-html">&lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-fc6919270c6e2&quot; name=&quot;radio['71b6879f28b13']&quot; value=&quot;option-a&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-fc6919270c6e2&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;span&gt;Option A&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-f7ad0ef4e5ad3&quot; name=&quot;radio['71b6879f28b13']&quot; value=&quot;option-b&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-f7ad0ef4e5ad3&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;span&gt;Option B&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
     </div>
       </div>
     </div>
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Fieldset with radio options.</figcaption>
-    <fieldset class="usa-fieldset cfa-fieldset">
-  <legend class="usa-legend cfa-legend">
-    <span>Please confirm your address.</span>
-  </legend>
-  <div class="usa-hint">We updated the address you entered. If correct, please use the suggested address.</div>
-  <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-259dd2081feee" name="radio['96f67d5a356a2']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-259dd2081feee" class="usa-radio__label">
-      <span>Suggested address</span>
-      <span class="usa-radio__label-description">4918 Webster St., Apt 2
-        <br> Oakland, CA
-        <br> 94609
-      </span>
-    </label>
-  </div>
-  <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-0161f56414071" name="radio['96f67d5a356a2']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-0161f56414071" class="usa-radio__label">
-      <span>Address you entered</span>
-      <span class="usa-radio__label-description">4918 Webster Street
-        <br> Apt 2
-        <br> Oakland, CA
-        <br> 94609
-      </span>
-    </label>
-  </div>
-</fieldset>
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Radios with descriptions</figcaption>
+    <div class="usa-radio cfa-radio">
+  <input type="radio" id="radio-12b5975e1eac9" name="radio['1bab4e942f739']" value="option-a" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-12b5975e1eac9" class="usa-radio__label">
+    <span>Option A</span>
+    <span class="usa-radio__label-description">Option description</span>
+  </label>
+</div>
+<div class="usa-radio cfa-radio">
+  <input type="radio" id="radio-21021050399a2" name="radio['1bab4e942f739']" value="option-b" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-21021050399a2" class="usa-radio__label">
+    <span>Option B</span>
+    <span class="usa-radio__label-description">Option description</span>
+  </label>
+</div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ce77fbd5179d8">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-409630e6435c7">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-ce77fbd5179d8" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-409630e6435c7" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
-  &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
-    &lt;span&gt;Please confirm your address.&lt;/span&gt;
-  &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint&quot;&gt;We updated the address you entered. If correct, please use the suggested address.&lt;/div&gt;
-  &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-259dd2081feee&quot; name=&quot;radio['96f67d5a356a2']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-259dd2081feee&quot; class=&quot;usa-radio__label&quot;&gt;
-      &lt;span&gt;Suggested address&lt;/span&gt;
-      &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
-        &lt;br&gt; Oakland, CA
-        &lt;br&gt; 94609
-      &lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-0161f56414071&quot; name=&quot;radio['96f67d5a356a2']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-0161f56414071&quot; class=&quot;usa-radio__label&quot;&gt;
-      &lt;span&gt;Address you entered&lt;/span&gt;
-      &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
-        &lt;br&gt; Apt 2
-        &lt;br&gt; Oakland, CA
-        &lt;br&gt; 94609
-      &lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-&lt;/fieldset&gt;</pre>
+      <pre class="language-html">&lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-12b5975e1eac9&quot; name=&quot;radio['1bab4e942f739']&quot; value=&quot;option-a&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-12b5975e1eac9&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;span&gt;Option A&lt;/span&gt;
+    &lt;span class=&quot;usa-radio__label-description&quot;&gt;Option description&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-21021050399a2&quot; name=&quot;radio['1bab4e942f739']&quot; value=&quot;option-b&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-21021050399a2&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;span&gt;Option B&lt;/span&gt;
+    &lt;span class=&quot;usa-radio__label-description&quot;&gt;Option description&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
     </div>
       </div>
     </div>
@@ -348,7 +318,7 @@
 </div>
 <!-- GUIDANCE -->
 <h2 id="guidance">Guidance</h2>
-<p><strong>Fieldsets</strong>. Form questions with radio components always use the <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset">fieldset component</a> to group available options and a nested <code>legend</code> element as the question label.</p>
+<p><strong>Fieldsets</strong>. Form questions with radio components always use the <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset">fieldset component</a> to group available options with a visible <code>legend</code> element.</p>
 <p>Refer to <a href="https://designsystem.digital.gov/components/radio-buttons#guidance" target="_blank" rel="noopener nofollow" class="usa-link--external">guidance on the USWDS documentation site</a>.</p>
 <p><b>Additional references</b></p>
 <div class="font-body-3xs">
@@ -428,18 +398,20 @@
 <p>Refer to <a href="https://designsystem.digital.gov/components/radio-buttons#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.</p>
 <!-- DESIGN -->
 <h2 id="design-library-component">Design library component</h2>
-<iframe class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1" allowfullscreen></iframe>
+<iframe tabindex="0" class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1" allowfullscreen></iframe>
 <!-- SOURCE -->
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-radio</code></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-input-select</code></span>
 </p>
 <p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
   <li>
-    <strong>Sass stylesheet:</strong> <code>./_cfa-radio.scss</code>
+    <strong>Sass stylesheet:</strong> <code>./_cfa-input-select.scss</code>
   </li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-input-select.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-input-select.html.erb</code></li>
 </ul>
 <figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
   <figcaption class="margin-bottom-2">
@@ -451,9 +423,71 @@
   // ... additional theme settings here ...
 );
 @forward 'uswds';
-@forward '@codeforamerica/uswds/packages/cfa-radio/_cfa-radio.scss';
+@forward '@codeforamerica/uswds/packages/cfa-input-select/_cfa-input-select.scss';
 </pre></div>
 </figure>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>Thymeleaf template fragment</strong>
+      <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-html">&lt;div th:fragment=&quot;inputSelect(options, required)&quot; th:each=&quot;option: ${options}&quot; th:class=&quot;'usa-' + ${option.type} + ' ' + ${option.modifier}&quot;&gt;
+  &lt;input th:class=&quot;'usa-' + ${option.type} + '__input ' + ${option.input.modifier}&quot; th:attr=&quot;type=${option.type},id=${option.id},name=${option.name},aria-invalid=${option.ariaInvalid},aria-describedby=${option.ariaDescribedby},value=${option.value},checked=${option.checked},required=${required}&quot; /&gt;
+  &lt;label th:class=&quot;'usa-' + ${option.type} + '__label'&quot; th:attr=&quot;for=${option.id}&quot;&gt;
+    &lt;span th:if=&quot;${option.label}&quot; th:text=&quot;${option.label}&quot;&gt;Label&lt;/span&gt;
+    &lt;span th:if=&quot;${option.description}&quot; th:class=&quot;'usa-' + ${option.type} + '__label-description'&quot; th:utext=&quot;${option.description}&quot;&gt;Description&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+    </div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Template fragment inclusion</strong>
+      <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-input-select/cfa-input-select.th :: inputSelect({{ options }}, {{ required }})}&quot; /&gt;</pre>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>ERB template partial</strong>
+      <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-ruby">&lt;% options.each do |option| %&gt;
+&lt;div class=&quot;usa-&lt;%= option['type'] %&gt;&lt;% if option['modifier'] %&gt; &lt;%= option['modifier'] %&gt;&lt;% end %&gt;&quot;&gt;
+  &lt;input class=&quot;usa-&lt;%= option['type'] %&gt;__input&lt;% if option['input']['modifier'] %&gt; &lt;%= option['input']['modifier'] %&gt;&lt;% end %&gt;&quot;
+    &lt;% if option['type'] %&gt; type=&quot;&lt;%= option['type'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['id'] %&gt; id=&quot;&lt;%= option['id'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['name'] %&gt; name=&quot;&lt;%= option['name'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['ariaInvalid'] %&gt; aria-invalid=&quot;&lt;%= option['ariaInvalid'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['ariaDescribedby'] %&gt; aria-describedby=&quot;&lt;%= option['ariaDescribedby'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['value'] %&gt; value=&quot;&lt;%= option['value'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if option['checked'] %&gt; checked=&quot;&lt;%= option['checked'] %&gt;&quot;&lt;% end %&gt;
+    &lt;% if defined?(required) %&gt;required&lt;% end %&gt; /&gt;
+  &lt;label class=&quot;usa-&lt;%= option['type'] %&gt;__label&quot;&lt;% if option['id'] %&gt; for=&quot;&lt;%= option['id'] %&gt;&quot;&lt;% end %&gt;&gt;
+    &lt;% if option['label'] %&gt;&lt;span&gt;&lt;%= option['label'] %&gt;&lt;/span&gt;&lt;% end %&gt;
+    &lt;% if option['description'] %&gt;&lt;span class=&quot;usa-&lt;%= option['type'] %&gt;__label-description&quot;&gt;&lt;%= option['description'] %&gt;&lt;/span&gt;&lt;% end %&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;% end %&gt;</pre>
+    </div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Partial render</strong>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-ruby">&lt;%= render '@codeforamerica/uswds/packages/cfa-input-select/cfa-input-select', options={{ options }} %&gt;</pre>
+    </div>
+  </figure>
+</div>
 
         </main>
       </div>

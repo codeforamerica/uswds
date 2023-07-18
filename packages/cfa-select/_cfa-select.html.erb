@@ -1,0 +1,21 @@
+<select class="usa-select<% if selectEl['modifier'] %> <%= selectEl['modifier'] %><% end %>"
+  <% if selectEl['id'] %> id="<%= selectEl['id'] %>"<% end %>
+  <% if selectEl['name'] %> name="<%= selectEl['name'] %>"<% end %>
+  <% if selectEl['ariaInvalid'] %> aria-invalid="<%= selectEl['ariaInvalid'] %>"<% end %>
+  <% if selectEl['ariaDescribedby'] %> aria-describedby="<%= selectEl['ariaDescribedby'] %>"<% end %>
+  <% if selectEl['required'] %> required="<%= selectEl['required'] %>"<% end %>>
+  <% if selectEl['default'] %><option
+    <% if selectEl['default']['value'] %> value="<%= selectEl['default']['value'] %>"<% end %>
+    <% if selectEl['default']['selected'] %> selected="<%= selectEl['default']['selected'] %>"<% end %>>
+    <%= selectEl['default']['label'] %>
+  </option>
+  <% end %>
+
+  <% selectEl['options'].each do |option| %>
+  <option
+    <% if option['value'] %> value="<%= option['value'] %>"<% end %>
+    <% if option['selected'] %> selected="<%= option['selected'] %>"<% end %>
+    <% if option['disabled'] %> disabled="<%= option['disabled'] %>"<% end %>>
+    <%= option['label'] %></option>
+  <% end %>
+</select>

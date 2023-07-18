@@ -1,0 +1,5 @@
+<select th:fragment="select(selectEl)" class="usa-select" th:classappend="${selectEl.modifier}" th:attr="id=${selectEl.id},name=${selectEl.name},aria-invalid=${selectEl.ariaInvalid},aria-describedby=${selectEl.ariaDescribedby},required=${selectEl.required}">
+  <option th:if="${selectEl.default}" th:attr="value=${selectEl.default.value},selected=${selectEl.default.selected}" th:text="${selectEl.default.label}">Label</option>
+
+  <option th:each="option: ${selectEl.options}" th:attr="value=${option.value},selected=${option.selected},disabled=${option.disabled}" th:text="${option.label}">Label</option>
+</select>

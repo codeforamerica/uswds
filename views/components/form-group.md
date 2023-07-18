@@ -4,12 +4,13 @@ title: Form Group
 layout: default
 intro:
 url_uswds:
+url_uswds_guidance:
 url_uswds_usage:
 nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
 modifier_honeycrisp: ['.cfa-form-group', '.cfa-label', '.cfa-hint', '.cfa-input-group', '.cfa-input', '.cfa-textarea', '.cfa-select']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A530%26mode%3Ddesign%26t%3DhXwkxQAW233Fykey-1
+design_honeycrisp:
 tokens: true
 styles: true
 ---
@@ -21,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} includes the <a href="https://designsystem.digital.gov/components/text-input/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Text Input component</a>, <a href="https://designsystem.digital.gov/components/input-prefix-suffix/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Input Prefix or Suffix (Postfix) component</a>, <a href="https://designsystem.digital.gov/components/select/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Select component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint, and textarea). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
+The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text input component</a>, <a href="{{ config.baseUrl }}components/textarea">textarea component</a>, <a href="{{ config.baseUrl }}components/select">select component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -113,11 +114,11 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
-    "type": "text"
+    "type": "email"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with text input' %}
+{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with email input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -262,9 +263,6 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
     "modifier": "cfa-label",
     "modifierHint": "cfa-hint"
   },
-  "inputGroup": {
-    "modifier": "usa-input-group cfa-input-group"
-  },
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
@@ -402,11 +400,11 @@ The {{ title }} includes the <a href="https://designsystem.digital.gov/component
 
 **Fieldsets vs. form groups**. Form questions with text inputs, text areas, and selects always use the form group component to wrap inputs with an associated `label` element. Other form element components, checkbox and radio components, will use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a>.
 
-<!-- **Text inputs**. Refer to <a href="{{ config.baseUrl }}components/text-input">text input documentation</a>. -->
+**Text inputs**. Refer to <a href="{{ config.baseUrl }}components/input">text input documentation</a>.
 
-<!-- **Textareas**. Refer to <a href="{{ config.baseUrl }}components/textarea">textarea documentation</a>. -->
+**Textareas**. Refer to <a href="{{ config.baseUrl }}components/textarea">textarea documentation</a>.
 
-<!-- **Select**. Refer to <a href="{{ config.baseUrl }}components/select">select documentation</a>. -->
+**Select**. Refer to <a href="{{ config.baseUrl }}components/select">select documentation</a>.
 
 <!-- ACCESSIBILITY -->
 

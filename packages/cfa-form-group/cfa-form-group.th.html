@@ -1,4 +1,4 @@
-<div th:fragment="formGroup(modifier, id, label, hint, error, input, textarea, selectEl)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
+<div th:fragment="formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
   <label class="usa-label" th:classappend="${label.modifier}" th:attr="for=${label.for},tabindex=${label.tabindex}">
     <span th:text="${label.text}">Label</span>
 
@@ -13,31 +13,15 @@
 
   <span th:if="${error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
 
-  <div th:if="${input}" th:class="${inputGroup.modifier}">
-    <div th:if="${input.prefix}" class="usa-input-prefix" aria-hidden="true">
-      <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-        <use href="${input.prefix}"></use>
-      </svg>
-    </div>
-
-    <div th:if="${input.prefixText}" class="usa-input-prefix" aria-hidden="true" th:text="${input.prefixText}">$</div>
-
-    <input class="usa-input" th:classappend="${input.modifier}" th:attr="type=${input.type},id=${input.id},name=${input.name},aria-invalid=${input.ariaInvalid},aria-describedby=${input.ariaDescribedby},required=${input.required},pattern=${input.pattern},placeholder=${input.placeholder},value=${input.value},inputmode=${input.inputmode},maxlength=${input.maxlength},data-js=${input.js}">
-
-    <div th:if="${input.postfix}" class="usa-input-suffix" aria-hidden="true">
-      <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-        <use href="${input.prefix}"></use>
-      </svg>
-    </div>
-
-    <div th:if="${input.postfixText}" class="usa-input-suffix" aria-hidden="true" th:text="${input.postfixText}">.00</div>
+  <div th:if="${input}">
+    <th:block th:replace="~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}" />
   </div>
 
-  <textarea th:if="${textarea}" class="usa-textarea" th:classappend="${textarea.modifier}" th:attr="id=${textarea.id},name=${textarea.name},aria-invalid=${textarea.ariaInvalid},aria-describedby=${textarea.ariaDescribedby},required=${textarea.required},pattern=${textarea.pattern},placeholder=${textarea.placeholder},value=${textarea.value},inputmode=${textarea.inputmode},maxlength=${textarea.maxlength}"></textarea>
+  <div th:if="${textarea}">
+    <th:block th:replace="~{packages/cfa-textarea/cfa-textarea.th :: textarea(${textarea})}" />
+  </div>
 
-  <select th:if="${selectEl}" class="usa-select" th:classappend="${selectEl.modifier}" th:attr="id=${selectEl.id},name=${selectEl.name},aria-invalid=${selectEl.ariaInvalid},aria-describedby=${selectEl.ariaDescribedby},required=${selectEl.required}">
-    <option th:if="${selectEl.default}" th:attr="value=${selectEl.default.value},selected=${selectEl.default.selected}" th:text="${selectEl.default.label}">Label</option>
-
-    <option th:each="option: ${selectEl.options}" th:attr="value=${option.value},selected=${option.selected},disabled=${option.disabled}" th:text="${option.label}">Label</option>
-  </select>
+  <div th:if="${selectEl}">
+    <th:block th:replace="~{packages/cfa-select/cfa-select.th :: select(${selectEl})}" />
+  </div>
 </div>

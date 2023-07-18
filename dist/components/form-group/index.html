@@ -55,11 +55,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-3c4d3c332acc6">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-b3a7c997bc7ef">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-3c4d3c332acc6" class="usa-nav__submenu">
+            <ul id="aria-c-b3a7c997bc7ef" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -88,6 +88,9 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/select/" ><span>Select</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/input/" ><span>Text Input</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
@@ -96,11 +99,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-fa600cb7ba3cd">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-dd927c9aef05c">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-fa600cb7ba3cd" class="usa-nav__submenu">
+            <ul id="aria-c-dd927c9aef05c" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -182,6 +185,10 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/input/" >Text Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
 
                               </li>
@@ -214,43 +221,47 @@
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p>The Form Group includes the <a href="https://designsystem.digital.gov/components/text-input/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Text Input component</a>, <a href="https://designsystem.digital.gov/components/input-prefix-suffix/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Input Prefix or Suffix (Postfix) component</a>, <a href="https://designsystem.digital.gov/components/select/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Select component</a>, and other components that do not have dedicated documentation in the USWDS (label, hint, and textarea). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form group molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-form-group</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-input-group</code>, <code>.cfa-input</code>, <code>.cfa-textarea</code>, <code>.cfa-select</code> to add <b>styles</b> defined in custom stylesheets.
+<p>The Form Group includes the <a href="https://codeforamerica.github.io/uswds/dist/components/input">text input component</a>, <a href="https://codeforamerica.github.io/uswds/dist/components/textarea">textarea component</a>, <a href="https://codeforamerica.github.io/uswds/dist/components/select">select component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form group molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-form-group</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-input-group</code>, <code>.cfa-input</code>, <code>.cfa-textarea</code>, <code>.cfa-select</code> to add <b>styles</b> defined in custom stylesheets.
 </details></p>
   </li>
 </ul>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with text input</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-b160a508ad135">
-  <label class="usa-label cfa-label" for="input-b160a508ad135">
+    <div class="usa-form-group cfa-form-group" id="form-group-f02699bee84ee">
+  <label class="usa-label cfa-label" for="input-f02699bee84ee">
     <span>What is your first name?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div class="usa-hint">Legally as it appears on your I.D.</div>
   <div>
-    <input class="usa-input cfa-input" type="text" id="input-b160a508ad135" name="input['b160a508ad135']" required="true">
+    <div>
+      <input class="usa-input cfa-input" type="text" id="input-f02699bee84ee" name="input['f02699bee84ee']" required="true">
+    </div>
   </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-84d3ea84d455">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-dfb055c648e77">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-84d3ea84d455" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-dfb055c648e77" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b160a508ad135&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-b160a508ad135&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-f02699bee84ee&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-f02699bee84ee&quot;&gt;
     &lt;span&gt;What is your first name?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
   &lt;div&gt;
-    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-b160a508ad135&quot; name=&quot;input['b160a508ad135']&quot; required=&quot;true&quot;&gt;
+    &lt;div&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-f02699bee84ee&quot; name=&quot;input['f02699bee84ee']&quot; required=&quot;true&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -259,38 +270,42 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Invalid form group</figcaption>
-    <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-2f6d9635bd868">
-  <label class="usa-label cfa-label" for="input-2f6d9635bd868">
+    <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-53d4a4f884fef">
+  <label class="usa-label cfa-label" for="input-53d4a4f884fef">
     <span>What is your first name?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div class="usa-hint">Legally as it appears on your I.D.</div>
-  <span class="usa-error-message" id="error-message-2f6d9635bd868" role="alert">This field is required.</span>
+  <span class="usa-error-message" id="error-message-53d4a4f884fef" role="alert">This field is required.</span>
   <div>
-    <input class="usa-input cfa-input" type="text" id="input-2f6d9635bd868" name="input['2f6d9635bd868']" aria-invalid="true" aria-describedby="error-message-2f6d9635bd868" required="true">
+    <div>
+      <input class="usa-input cfa-input" type="text" id="input-53d4a4f884fef" name="input['53d4a4f884fef']" aria-invalid="true" aria-describedby="error-message-53d4a4f884fef" required="true">
+    </div>
   </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-2f36ab091104d">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-20a4695981bc8">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-2f36ab091104d" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-20a4695981bc8" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-2f6d9635bd868&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2f6d9635bd868&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-53d4a4f884fef&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-53d4a4f884fef&quot;&gt;
     &lt;span&gt;What is your first name?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-2f6d9635bd868&quot; role=&quot;alert&quot;&gt;This field is required.&lt;/span&gt;
+  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-53d4a4f884fef&quot; role=&quot;alert&quot;&gt;This field is required.&lt;/span&gt;
   &lt;div&gt;
-    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2f6d9635bd868&quot; name=&quot;input['2f6d9635bd868']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-2f6d9635bd868&quot; required=&quot;true&quot;&gt;
+    &lt;div&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-53d4a4f884fef&quot; name=&quot;input['53d4a4f884fef']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-53d4a4f884fef&quot; required=&quot;true&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -299,34 +314,38 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form group with text input</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-f4b7afe9d925e">
-  <label class="usa-label cfa-label" for="input-f4b7afe9d925e">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Form group with email input</figcaption>
+    <div class="usa-form-group cfa-form-group" id="form-group-5a2a9c52b4d08">
+  <label class="usa-label cfa-label" for="input-5a2a9c52b4d08">
     <span>What is your email address?</span>
   </label>
   <div class="usa-hint">Legally as it appears on your I.D.</div>
   <div>
-    <input class="usa-input cfa-input" type="text" id="input-f4b7afe9d925e" name="input['f4b7afe9d925e']">
+    <div>
+      <input class="usa-input cfa-input" type="email" id="input-5a2a9c52b4d08" name="input['5a2a9c52b4d08']">
+    </div>
   </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4e540b2baac46">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c8b47b6475667">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-4e540b2baac46" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-c8b47b6475667" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-f4b7afe9d925e&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-f4b7afe9d925e&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-5a2a9c52b4d08&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-5a2a9c52b4d08&quot;&gt;
     &lt;span&gt;What is your email address?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
   &lt;div&gt;
-    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-f4b7afe9d925e&quot; name=&quot;input['f4b7afe9d925e']&quot;&gt;
+    &lt;div&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;email&quot; id=&quot;input-5a2a9c52b4d08&quot; name=&quot;input['5a2a9c52b4d08']&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -335,29 +354,33 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with textarea</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-b9fca0063eb34">
-  <label class="usa-label cfa-label" for="textarea-b9fca0063eb34">
+    <div class="usa-form-group cfa-form-group" id="form-group-c8d3a8b49a0df">
+  <label class="usa-label cfa-label" for="textarea-c8d3a8b49a0df">
     <span>Please describe in as much detail as possible.</span>
   </label>
-  <textarea class="usa-textarea cfa-textarea" id="textarea-b9fca0063eb34" name="textarea['b9fca0063eb34']"></textarea>
+  <div>
+    <textarea class="usa-textarea cfa-textarea" id="textarea-c8d3a8b49a0df" name="textarea['c8d3a8b49a0df']"></textarea>
+  </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a4038aa756b4e">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a53de74ab4693">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-a4038aa756b4e" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a53de74ab4693" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b9fca0063eb34&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-b9fca0063eb34&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-c8d3a8b49a0df&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-c8d3a8b49a0df&quot;&gt;
     &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
   &lt;/label&gt;
-  &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-b9fca0063eb34&quot; name=&quot;textarea['b9fca0063eb34']&quot;&gt;&lt;/textarea&gt;
+  &lt;div&gt;
+    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-c8d3a8b49a0df&quot; name=&quot;textarea['c8d3a8b49a0df']&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
       </div>
@@ -365,68 +388,34 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with textarea</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-98544b0b56def">
-  <label class="usa-label cfa-label" for="textarea-98544b0b56def">
+    <div class="usa-form-group cfa-form-group" id="form-group-b089bfbacf8d3">
+  <label class="usa-label cfa-label" for="textarea-b089bfbacf8d3">
     <span>Please describe in as much detail as possible.</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
-  <textarea class="usa-textarea cfa-textarea" id="textarea-98544b0b56def" name="textarea['98544b0b56def']" required="true"></textarea>
+  <div>
+    <textarea class="usa-textarea cfa-textarea" id="textarea-b089bfbacf8d3" name="textarea['b089bfbacf8d3']" required="true"></textarea>
+  </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-e5760bb243a82">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-23bbd66c1f08d">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-e5760bb243a82" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-23bbd66c1f08d" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-98544b0b56def&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-98544b0b56def&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b089bfbacf8d3&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-b089bfbacf8d3&quot;&gt;
     &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
-  &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-98544b0b56def&quot; name=&quot;textarea['98544b0b56def']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
-    </div>
-      </div>
-    </div>
-  </figure>
-</div>
-<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form group with prefix and mask (U.S. Dollars)</figcaption>
-    <div class="usa-form-group cfa-form-group" id="6b4cc3b3e4223">
-  <label class="usa-label cfa-label" for="input-57c88055d5fc8">
-    <span>How much does your household currently have in savings?</span>
-  </label>
-  <div class="usa-hint">Answer the best you can.</div>
-  <div class="usa-input-group cfa-input-group">
-    <div class="usa-input-prefix" aria-hidden="true">$</div>
-    <input class="usa-input cfa-input text-right" type="text" id="input-57c88055d5fc8" name="input['57c88055d5fc8']" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
-  </div>
-</div>
-  </figure>
-  <figure class="margin-0">
-    <div class="usa-accordion cfa-accordion">
-      <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ac7f8521f7b13">
-          View HTML
-        </button>
-      </figcaption>
-      <div id="aria-c-ac7f8521f7b13" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;6b4cc3b3e4223&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-57c88055d5fc8&quot;&gt;
-    &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
-  &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-    &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;$&lt;/div&gt;
-    &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-57c88055d5fc8&quot; name=&quot;input['57c88055d5fc8']&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
+  &lt;div&gt;
+    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-b089bfbacf8d3&quot; name=&quot;textarea['b089bfbacf8d3']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -435,36 +424,82 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Form group with prefix and mask (U.S. Dollars)</figcaption>
+    <div class="usa-form-group cfa-form-group" id="9f0ef1eecab42">
+  <label class="usa-label cfa-label" for="input-4bd049b1c4d3e">
+    <span>How much does your household currently have in savings?</span>
+  </label>
+  <div class="usa-hint">Answer the best you can.</div>
+  <div>
+    <div class="usa-input-group cfa-input-group">
+      <div class="usa-input-prefix" aria-hidden="true">$</div>
+      <input class="usa-input cfa-input text-right" type="text" id="input-4bd049b1c4d3e" name="input['4bd049b1c4d3e']" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
+    </div>
+  </div>
+</div>
+  </figure>
+  <figure class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <figcaption class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c4173a2193d06">
+          View HTML
+        </button>
+      </figcaption>
+      <div id="aria-c-c4173a2193d06" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block">
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;9f0ef1eecab42&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4bd049b1c4d3e&quot;&gt;
+    &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
+      &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;$&lt;/div&gt;
+      &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-4bd049b1c4d3e&quot; name=&quot;input['4bd049b1c4d3e']&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+      </div>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with postfix</figcaption>
-    <div class="usa-form-group cfa-form-group" id="a8454fa4d9c7">
-  <label class="usa-label cfa-label" for="input-d6561422ca62">
+    <div class="usa-form-group cfa-form-group" id="56f9382c911b9">
+  <label class="usa-label cfa-label" for="input-84a6afbf7e939">
     <span>What percentage of your monthly income do you spend on monthly expenses?</span>
   </label>
   <div class="usa-hint">Answer the best you can.</div>
-  <div class="usa-input-group cfa-input-group">
-    <input class="usa-input cfa-input text-right" type="text" id="input-d6561422ca62" name="input['d6561422ca62']" inputmode="decimal">
-    <div class="usa-input-suffix" aria-hidden="true">%</div>
+  <div>
+    <div class="usa-input-group cfa-input-group">
+      <input class="usa-input cfa-input text-right" type="text" id="input-84a6afbf7e939" name="input['84a6afbf7e939']" inputmode="decimal">
+      <div class="usa-input-suffix" aria-hidden="true">%</div>
+    </div>
   </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-22ebb6b9f1a43">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-32bcf7c1c612d">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-22ebb6b9f1a43" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-32bcf7c1c612d" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;a8454fa4d9c7&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d6561422ca62&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;56f9382c911b9&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-84a6afbf7e939&quot;&gt;
     &lt;span&gt;What percentage of your monthly income do you spend on monthly expenses?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
-  &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-    &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-d6561422ca62&quot; name=&quot;input['d6561422ca62']&quot; inputmode=&quot;decimal&quot;&gt;
-    &lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;%&lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-84a6afbf7e939&quot; name=&quot;input['84a6afbf7e939']&quot; inputmode=&quot;decimal&quot;&gt;
+      &lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;%&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -473,36 +508,40 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with prefix and input mask (U.S. Phone)</figcaption>
-    <div class="usa-form-group cfa-form-group" id="902141ccf74fe">
-  <label class="usa-label cfa-label" for="input-54b16bbc3faff">
+    <div class="usa-form-group cfa-form-group" id="13486fd20ee4b">
+  <label class="usa-label cfa-label" for="input-c8f397596cd53">
     <span>How much does your household currently have in savings?</span>
   </label>
   <div class="usa-hint">Answer the best you can.</div>
-  <div class="usa-input-group cfa-input-group">
-    <div class="usa-input-prefix" aria-hidden="true">+1</div>
-    <input class="usa-input cfa-input" type="tel" id="input-54b16bbc3faff" name="input['54b16bbc3faff']" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" inputmode="tel" data-js="mask-tel">
+  <div>
+    <div class="usa-input-group cfa-input-group">
+      <div class="usa-input-prefix" aria-hidden="true">+1</div>
+      <input class="usa-input cfa-input" type="tel" id="input-c8f397596cd53" name="input['c8f397596cd53']" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" inputmode="tel" data-js="mask-tel">
+    </div>
   </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4d701713c0be1">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a24854f3e7834">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-4d701713c0be1" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a24854f3e7834" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;902141ccf74fe&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-54b16bbc3faff&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;13486fd20ee4b&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-c8f397596cd53&quot;&gt;
     &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
-  &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-    &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;+1&lt;/div&gt;
-    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-54b16bbc3faff&quot; name=&quot;input['54b16bbc3faff']&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
+      &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;+1&lt;/div&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-c8f397596cd53&quot; name=&quot;input['c8f397596cd53']&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -511,32 +550,36 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with input mask (SSN)</figcaption>
-    <div class="usa-form-group cfa-form-group" id="ca6f4ff1a0b5c">
-  <label class="usa-label cfa-label" for="input-7fcf1b453c464">
+    <div class="usa-form-group cfa-form-group" id="7b7cd26b7932f">
+  <label class="usa-label cfa-label" for="input-ec8838bb10b66">
     <span>What is your social security number?</span>
   </label>
-  <div class="usa-input-group cfa-input-group">
-    <input class="usa-input cfa-input" type="text" id="input-7fcf1b453c464" name="input['7fcf1b453c464']" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" inputmode="numeric" data-js="mask-ssn">
+  <div>
+    <div>
+      <input class="usa-input cfa-input" type="text" id="input-ec8838bb10b66" name="input['ec8838bb10b66']" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" inputmode="numeric" data-js="mask-ssn">
+    </div>
   </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-42cc0beed80b7">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-929cb40ad02a7">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-42cc0beed80b7" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-929cb40ad02a7" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;ca6f4ff1a0b5c&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-7fcf1b453c464&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;7b7cd26b7932f&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ec8838bb10b66&quot;&gt;
     &lt;span&gt;What is your social security number?&lt;/span&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-7fcf1b453c464&quot; name=&quot;input['7fcf1b453c464']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-ec8838bb10b66&quot; name=&quot;input['ec8838bb10b66']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -545,81 +588,85 @@
   </figure>
 </div>
 <div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  <figure tabindex="0" class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with select</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-7fe789ee89136">
-  <label class="usa-label cfa-label" for="select-7fe789ee89136">
+    <div class="usa-form-group cfa-form-group" id="form-group-707ca533396f">
+  <label class="usa-label cfa-label" for="select-707ca533396f">
     <span>What type of income have you had most recently?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div class="usa-hint">Answer the best you can. You will be able to include additional types of income.</div>
-  <select class="usa-select cfa-select" id="select-7fe789ee89136" name="select['7fe789ee89136']" required="true">
-    <option selected="true">Click to select an income type</option>
-    <option disabled="true">---</option>
-    <option value="wages">wages, salaries, tips</option>
-    <option value="self-employment">self-employment income</option>
-    <option value="unemployment">unemployment benefits</option>
-    <option value="cash-assistance">Cash Assistance grant</option>
-    <option value="child-support">child support (received)</option>
-    <option value="disability-medicaid">disability-related Medicaid</option>
-    <option value="supplemental-security-income">Supplemental Security Income (SSI)</option>
-    <option value="social-security-dependent">Social Security Dependent Benefits</option>
-    <option value="social-security-disability">Social Security Disability Benefits</option>
-    <option value="social-security-survivor">Social Security Survivor’s Benefits</option>
-    <option value="social-security-retirement">Social Security Retirement Benefits</option>
-    <option value="state-disability">State Disability Benefits</option>
-    <option value="veteran">Veteran’s Pension or Benefits</option>
-    <option value="pension">Government or Private Pension</option>
-    <option value="deferred-comp">Withdrawals from Deferred Compensation (IRA, Keogh, etc.)</option>
-    <option value="workers-comp">Worker’s Compensation</option>
-    <option value="alimony">alimony (received)</option>
-    <option value="boarder">boarder or lodger</option>
-    <option value="gifts">gifts/contributions (received)</option>
-    <option value="rental">rental income</option>
-    <option value="investment">investment income (interest, dividends, and profit from selling stocks)</option>
-  </select>
+  <div>
+    <select class="usa-select cfa-select" id="select-707ca533396f" name="select['707ca533396f']" required="true">
+      <option selected="true">Click to select an income type</option>
+      <option disabled="true">---</option>
+      <option value="wages">wages, salaries, tips</option>
+      <option value="self-employment">self-employment income</option>
+      <option value="unemployment">unemployment benefits</option>
+      <option value="cash-assistance">Cash Assistance grant</option>
+      <option value="child-support">child support (received)</option>
+      <option value="disability-medicaid">disability-related Medicaid</option>
+      <option value="supplemental-security-income">Supplemental Security Income (SSI)</option>
+      <option value="social-security-dependent">Social Security Dependent Benefits</option>
+      <option value="social-security-disability">Social Security Disability Benefits</option>
+      <option value="social-security-survivor">Social Security Survivor’s Benefits</option>
+      <option value="social-security-retirement">Social Security Retirement Benefits</option>
+      <option value="state-disability">State Disability Benefits</option>
+      <option value="veteran">Veteran’s Pension or Benefits</option>
+      <option value="pension">Government or Private Pension</option>
+      <option value="deferred-comp">Withdrawals from Deferred Compensation (IRA, Keogh, etc.)</option>
+      <option value="workers-comp">Worker’s Compensation</option>
+      <option value="alimony">alimony (received)</option>
+      <option value="boarder">boarder or lodger</option>
+      <option value="gifts">gifts/contributions (received)</option>
+      <option value="rental">rental income</option>
+      <option value="investment">investment income (interest, dividends, and profit from selling stocks)</option>
+    </select>
+  </div>
 </div>
   </figure>
   <figure class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ae2ac32602bf5">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-7ffc033a38c6d">
           View HTML
         </button>
       </figcaption>
-      <div id="aria-c-ae2ac32602bf5" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-7ffc033a38c6d" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-7fe789ee89136&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-7fe789ee89136&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-707ca533396f&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-707ca533396f&quot;&gt;
     &lt;span&gt;What type of income have you had most recently?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can. You will be able to include additional types of income.&lt;/div&gt;
-  &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-7fe789ee89136&quot; name=&quot;select['7fe789ee89136']&quot; required=&quot;true&quot;&gt;
-    &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
-    &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
-    &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
-    &lt;option value=&quot;self-employment&quot;&gt;self-employment income&lt;/option&gt;
-    &lt;option value=&quot;unemployment&quot;&gt;unemployment benefits&lt;/option&gt;
-    &lt;option value=&quot;cash-assistance&quot;&gt;Cash Assistance grant&lt;/option&gt;
-    &lt;option value=&quot;child-support&quot;&gt;child support (received)&lt;/option&gt;
-    &lt;option value=&quot;disability-medicaid&quot;&gt;disability-related Medicaid&lt;/option&gt;
-    &lt;option value=&quot;supplemental-security-income&quot;&gt;Supplemental Security Income (SSI)&lt;/option&gt;
-    &lt;option value=&quot;social-security-dependent&quot;&gt;Social Security Dependent Benefits&lt;/option&gt;
-    &lt;option value=&quot;social-security-disability&quot;&gt;Social Security Disability Benefits&lt;/option&gt;
-    &lt;option value=&quot;social-security-survivor&quot;&gt;Social Security Survivor’s Benefits&lt;/option&gt;
-    &lt;option value=&quot;social-security-retirement&quot;&gt;Social Security Retirement Benefits&lt;/option&gt;
-    &lt;option value=&quot;state-disability&quot;&gt;State Disability Benefits&lt;/option&gt;
-    &lt;option value=&quot;veteran&quot;&gt;Veteran’s Pension or Benefits&lt;/option&gt;
-    &lt;option value=&quot;pension&quot;&gt;Government or Private Pension&lt;/option&gt;
-    &lt;option value=&quot;deferred-comp&quot;&gt;Withdrawals from Deferred Compensation (IRA, Keogh, etc.)&lt;/option&gt;
-    &lt;option value=&quot;workers-comp&quot;&gt;Worker’s Compensation&lt;/option&gt;
-    &lt;option value=&quot;alimony&quot;&gt;alimony (received)&lt;/option&gt;
-    &lt;option value=&quot;boarder&quot;&gt;boarder or lodger&lt;/option&gt;
-    &lt;option value=&quot;gifts&quot;&gt;gifts/contributions (received)&lt;/option&gt;
-    &lt;option value=&quot;rental&quot;&gt;rental income&lt;/option&gt;
-    &lt;option value=&quot;investment&quot;&gt;investment income (interest, dividends, and profit from selling stocks)&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;div&gt;
+    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-707ca533396f&quot; name=&quot;select['707ca533396f']&quot; required=&quot;true&quot;&gt;
+      &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
+      &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
+      &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
+      &lt;option value=&quot;self-employment&quot;&gt;self-employment income&lt;/option&gt;
+      &lt;option value=&quot;unemployment&quot;&gt;unemployment benefits&lt;/option&gt;
+      &lt;option value=&quot;cash-assistance&quot;&gt;Cash Assistance grant&lt;/option&gt;
+      &lt;option value=&quot;child-support&quot;&gt;child support (received)&lt;/option&gt;
+      &lt;option value=&quot;disability-medicaid&quot;&gt;disability-related Medicaid&lt;/option&gt;
+      &lt;option value=&quot;supplemental-security-income&quot;&gt;Supplemental Security Income (SSI)&lt;/option&gt;
+      &lt;option value=&quot;social-security-dependent&quot;&gt;Social Security Dependent Benefits&lt;/option&gt;
+      &lt;option value=&quot;social-security-disability&quot;&gt;Social Security Disability Benefits&lt;/option&gt;
+      &lt;option value=&quot;social-security-survivor&quot;&gt;Social Security Survivor’s Benefits&lt;/option&gt;
+      &lt;option value=&quot;social-security-retirement&quot;&gt;Social Security Retirement Benefits&lt;/option&gt;
+      &lt;option value=&quot;state-disability&quot;&gt;State Disability Benefits&lt;/option&gt;
+      &lt;option value=&quot;veteran&quot;&gt;Veteran’s Pension or Benefits&lt;/option&gt;
+      &lt;option value=&quot;pension&quot;&gt;Government or Private Pension&lt;/option&gt;
+      &lt;option value=&quot;deferred-comp&quot;&gt;Withdrawals from Deferred Compensation (IRA, Keogh, etc.)&lt;/option&gt;
+      &lt;option value=&quot;workers-comp&quot;&gt;Worker’s Compensation&lt;/option&gt;
+      &lt;option value=&quot;alimony&quot;&gt;alimony (received)&lt;/option&gt;
+      &lt;option value=&quot;boarder&quot;&gt;boarder or lodger&lt;/option&gt;
+      &lt;option value=&quot;gifts&quot;&gt;gifts/contributions (received)&lt;/option&gt;
+      &lt;option value=&quot;rental&quot;&gt;rental income&lt;/option&gt;
+      &lt;option value=&quot;investment&quot;&gt;investment income (interest, dividends, and profit from selling stocks)&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
       </div>
@@ -629,9 +676,9 @@
 <!-- GUIDANCE -->
 <h2 id="guidance">Guidance</h2>
 <p><strong>Fieldsets vs. form groups</strong>. Form questions with text inputs, text areas, and selects always use the form group component to wrap inputs with an associated <code>label</code> element. Other form element components, checkbox and radio components, will use the <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset">fieldset component</a>.</p>
-<!-- **Text inputs**. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/text-input">text input documentation</a>. -->
-<!-- **Textareas**. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/textarea">textarea documentation</a>. -->
-<!-- **Select**. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/select">select documentation</a>. -->
+<p><strong>Text inputs</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/input">text input documentation</a>.</p>
+<p><strong>Textareas</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/textarea">textarea documentation</a>.</p>
+<p><strong>Select</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/select">select documentation</a>.</p>
 <!-- ACCESSIBILITY -->
 <!-- <div class="usa-summary-box margin-y-6" role="region" aria-labelledby="accessibility">
   <div class="usa-summary-box__body"> -->
@@ -746,7 +793,7 @@
       <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
     </figcaption>
     <div class="code-block">
-      <pre class="language-html">&lt;div th:fragment=&quot;formGroup(modifier, id, label, hint, error, input, textarea, selectEl)&quot; class=&quot;usa-form-group&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
+      <pre class="language-html">&lt;div th:fragment=&quot;formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)&quot; class=&quot;usa-form-group&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
   &lt;label class=&quot;usa-label&quot; th:classappend=&quot;${label.modifier}&quot; th:attr=&quot;for=${label.for},tabindex=${label.tabindex}&quot;&gt;
     &lt;span th:text=&quot;${label.text}&quot;&gt;Label&lt;/span&gt;
     &lt;abbr th:if=&quot;${input.required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${label.modifierHint}&quot;&gt;*&lt;/abbr&gt;
@@ -755,26 +802,15 @@
   &lt;/label&gt;
   &lt;div th:if=&quot;${hint}&quot; class=&quot;usa-hint&quot; th:classappend=&quot;${hint.modifier}&quot; th:attr=&quot;id=${hint.id}&quot; th:text=&quot;${hint.text}&quot;&gt;Hint&lt;/div&gt;
   &lt;span th:if=&quot;${error}&quot; class=&quot;usa-error-message&quot; th:attr=&quot;id=${error.id},role=${error.role},aria-live=${error.ariaLive}&quot; th:text=&quot;${error.text}&quot;&gt;Message&lt;/span&gt;
-  &lt;div th:if=&quot;${input}&quot; th:class=&quot;${inputGroup.modifier}&quot;&gt;
-    &lt;div th:if=&quot;${input.prefix}&quot; class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;
-      &lt;svg aria-hidden=&quot;true&quot; role=&quot;img&quot; focusable=&quot;false&quot; class=&quot;usa-icon&quot;&gt;
-        &lt;use href=&quot;${input.prefix}&quot;&gt;&lt;/use&gt;
-      &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;div th:if=&quot;${input.prefixText}&quot; class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot; th:text=&quot;${input.prefixText}&quot;&gt;$&lt;/div&gt;
-    &lt;input class=&quot;usa-input&quot; th:classappend=&quot;${input.modifier}&quot; th:attr=&quot;type=${input.type},id=${input.id},name=${input.name},aria-invalid=${input.ariaInvalid},aria-describedby=${input.ariaDescribedby},required=${input.required},pattern=${input.pattern},placeholder=${input.placeholder},value=${input.value},inputmode=${input.inputmode},maxlength=${input.maxlength},data-js=${input.js}&quot;&gt;
-    &lt;div th:if=&quot;${input.postfix}&quot; class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;
-      &lt;svg aria-hidden=&quot;true&quot; role=&quot;img&quot; focusable=&quot;false&quot; class=&quot;usa-icon&quot;&gt;
-        &lt;use href=&quot;${input.prefix}&quot;&gt;&lt;/use&gt;
-      &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;div th:if=&quot;${input.postfixText}&quot; class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot; th:text=&quot;${input.postfixText}&quot;&gt;.00&lt;/div&gt;
+  &lt;div th:if=&quot;${input}&quot;&gt;
+    &lt;th:block th:replace=&quot;~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}&quot; /&gt;
   &lt;/div&gt;
-  &lt;textarea th:if=&quot;${textarea}&quot; class=&quot;usa-textarea&quot; th:classappend=&quot;${textarea.modifier}&quot; th:attr=&quot;id=${textarea.id},name=${textarea.name},aria-invalid=${textarea.ariaInvalid},aria-describedby=${textarea.ariaDescribedby},required=${textarea.required},pattern=${textarea.pattern},placeholder=${textarea.placeholder},value=${textarea.value},inputmode=${textarea.inputmode},maxlength=${textarea.maxlength}&quot;&gt;&lt;/textarea&gt;
-  &lt;select th:if=&quot;${selectEl}&quot; class=&quot;usa-select&quot; th:classappend=&quot;${selectEl.modifier}&quot; th:attr=&quot;id=${selectEl.id},name=${selectEl.name},aria-invalid=${selectEl.ariaInvalid},aria-describedby=${selectEl.ariaDescribedby},required=${selectEl.required}&quot;&gt;
-    &lt;option th:if=&quot;${selectEl.default}&quot; th:attr=&quot;value=${selectEl.default.value},selected=${selectEl.default.selected}&quot; th:text=&quot;${selectEl.default.label}&quot;&gt;Label&lt;/option&gt;
-    &lt;option th:each=&quot;option: ${selectEl.options}&quot; th:attr=&quot;value=${option.value},selected=${option.selected},disabled=${option.disabled}&quot; th:text=&quot;${option.label}&quot;&gt;Label&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;div th:if=&quot;${textarea}&quot;&gt;
+    &lt;th:block th:replace=&quot;~{packages/cfa-textarea/cfa-textarea.th :: textarea(${textarea})}&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div th:if=&quot;${selectEl}&quot;&gt;
+    &lt;th:block th:replace=&quot;~{packages/cfa-select/cfa-select.th :: select(${selectEl})}&quot; /&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
     </div>
@@ -785,7 +821,7 @@
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
     </figcaption>
     <div class="code-block">
-      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group.th :: formGroup({{ modifier }}, {{ id }}, {{ hint }}, {{ error }}, {{ input }}, {{ textarea }}, {{ selectEl }})}&quot; /&gt;</pre>
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group.th :: formGroup({{ modifier }}, {{ id }}, {{ hint }}, {{ error }}, {{ input }}, {{ inputGroup }}, {{ textarea }}, {{ selectEl }})}&quot; /&gt;</pre>
     </div>
   </figure>
 </div>
@@ -807,67 +843,13 @@
   &lt;% if defined?(hint) %&gt;&lt;div class=&quot;usa-hint&lt;% if hint['modifier'] %&gt; &lt;%= hint['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if hint['id'] %&gt; id=&quot;&lt;%= hint['id'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= hint['text'] %&gt;&lt;/div&gt;&lt;% end %&gt;
   &lt;% if defined?(error) %&gt;&lt;span class=&quot;usa-error-message&quot;&lt;% if error['id'] %&gt; id=&quot;&lt;%= error['id'] %&gt;&quot;&lt;% end %&gt;&lt;% if error['role'] %&gt; role=&quot;&lt;%= error['role'] %&gt;&quot;&lt;% end %&gt;&lt;% if error['ariaLive'] %&gt; aria-live=&quot;&lt;%= error['ariaLive'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= error['text'] %&gt;&lt;/span&gt;&lt;% end %&gt;
   &lt;% if defined?(input) %&gt;
-  &lt;div &lt;% if defined?(inputGroup) &amp;&amp; inputGroup['modifier'] %&gt;class=&quot;&lt;%= inputGroup['modifier'] %&gt;&quot;&lt;% end %&gt;&gt;
-    &lt;% if input['prefix'] %&gt;&lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;
-      &lt;svg aria-hidden=&quot;true&quot; role=&quot;img&quot; focusable=&quot;false&quot; class=&quot;usa-icon&quot;&gt;
-        &lt;use href=&quot;&lt;%= input['prefix'] %&gt;&quot;&gt;&lt;/use&gt;
-      &lt;/svg&gt;
-    &lt;/div&gt;&lt;% end %&gt;
-    &lt;% if input['prefixText'] %&gt;&lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;&lt;%= input['prefixText'] %&gt;&lt;/div&gt;&lt;% end %&gt;
-    &lt;input class=&quot;usa-input&lt;% if input['modifier'] %&gt; &lt;%= input['modifier'] %&gt;&lt;% end %&gt;&quot;
-      &lt;% if input['type'] %&gt; type=&quot;&lt;%= input['type'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['id'] %&gt; id=&quot;&lt;%= input['id'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['name'] %&gt; name=&quot;&lt;%= input['name'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['aria-invalid'] %&gt; aria-invalid=&quot;&lt;%= input['ariaInvalid'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['aria-describedby'] %&gt; aria-describedby=&quot;&lt;%= input['ariaDescribedby'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['required'] %&gt; required&lt;% end %&gt;
-      &lt;% if input['pattern'] %&gt; pattern=&quot;&lt;%= input['pattern'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['placeholder'] %&gt; placeholder=&quot;&lt;%= input['placeholder'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['value'] %&gt; value=&quot;&lt;%= input['value'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['inputmode'] %&gt; inputmode=&quot;&lt;%= input['inputmode'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['maxlength'] %&gt; maxlength=&quot;&lt;%= input['maxlength'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if input['js'] %&gt; data-js=&quot;&lt;%= input['js'] %&gt;&quot;&lt;% end %&gt;&gt;
-    &lt;% if input['posfix'] %&gt;&lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;
-      &lt;svg aria-hidden=&quot;true&quot; role=&quot;img&quot; focusable=&quot;false&quot; class=&quot;usa-icon&quot;&gt;
-        &lt;use href=&quot;&lt;%= input['posfix'] %&gt;&quot;&gt;&lt;/use&gt;
-      &lt;/svg&gt;
-    &lt;/div&gt;&lt;% end %&gt;
-    &lt;% if input['postfixText'] %&gt;&lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;&lt;%= input['postfixText'] %&gt;&lt;/div&gt;&lt;% end %&gt;
-  &lt;/div&gt;
+  &lt;%= ERB.new(File.read('packages/cfa-input/_cfa-input.html.erb'), 0, 0, '@html').result(binding) %&gt;
   &lt;% end %&gt;
   &lt;% if defined?(textarea) %&gt;
-  &lt;textarea class=&quot;usa-textarea&lt;% if textarea['modifier'] %&gt; &lt;%= textarea['modifier'] %&gt;&lt;% end %&gt;&quot;
-    &lt;% if textarea['id'] %&gt; id=&quot;&lt;%= textarea['id'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['name'] %&gt; name=&quot;&lt;%= textarea['name'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['aria-invalid'] %&gt; aria-invalid=&quot;&lt;%= textarea['ariaInvalid'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['aria-describedby'] %&gt; aria-describedby=&quot;&lt;%= textarea['ariaDescribedby'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['required'] %&gt; required&lt;% end %&gt;
-    &lt;% if textarea['pattern'] %&gt; pattern=&quot;&lt;%= textarea['pattern'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['placeholder'] %&gt; placeholder=&quot;&lt;%= textarea['placeholder'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['value'] %&gt; value=&quot;&lt;%= textarea['value'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['inputmode'] %&gt; inputmode=&quot;&lt;%= textarea['inputmode'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if textarea['maxlength'] %&gt; maxlength=&quot;&lt;%= textarea['maxlength'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;/textarea&gt;
+  &lt;%= ERB.new(File.read('packages/cfa-textarea/_cfa-textarea.html.erb'), 0, 0, '@html').result(binding) %&gt;
   &lt;% end %&gt;
   &lt;% if defined?(selectEl) %&gt;
-  &lt;select class=&quot;usa-select&lt;% if selectEl['modifier'] %&gt; &lt;%= selectEl['modifier'] %&gt;&lt;% end %&gt;&quot;
-    &lt;% if selectEl['id'] %&gt; id=&quot;&lt;%= selectEl['id'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if selectEl['name'] %&gt; name=&quot;&lt;%= selectEl['name'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if selectEl['ariaInvalid'] %&gt; aria-invalid=&quot;&lt;%= selectEl['ariaInvalid'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if selectEl['ariaDescribedby'] %&gt; aria-describedby=&quot;&lt;%= selectEl['ariaDescribedby'] %&gt;&quot;&lt;% end %&gt;
-    &lt;% if selectEl['required'] %&gt; required=&quot;&lt;%= selectEl['required'] %&gt;&quot;&lt;% end %&gt;&gt;
-    &lt;% if selectEl['default'] %&gt;&lt;option
-      &lt;% if selectEl['default']['value'] %&gt; value=&quot;&lt;%= selectEl['default']['value'] %&gt;&quot;&lt;% end %&gt;
-      &lt;% if selectEl['default']['selected'] %&gt; selected=&quot;&lt;%= selectEl['default']['selected'] %&gt;&quot;&lt;% end %&gt;&gt;
-      &lt;%= selectEl['default']['label'] %&gt;&lt;/option&gt;
-    &lt;% end %&gt;
-    &lt;% selectEl['options'].each do |option| %&gt;
-      &lt;option
-        &lt;% if option['value'] %&gt; value=&quot;&lt;%= option['value'] %&gt;&quot;&lt;% end %&gt;
-        &lt;% if option['selected'] %&gt; selected=&quot;&lt;%= option['selected'] %&gt;&quot;&lt;% end %&gt;
-        &lt;% if option['disabled'] %&gt; disabled=&quot;&lt;%= option['disabled'] %&gt;&quot;&lt;% end %&gt;&gt;
-        &lt;%= option['label'] %&gt;&lt;/option&gt;
-    &lt;% end %&gt;
-  &lt;/select&gt;
+  &lt;%= ERB.new(File.read('packages/cfa-select/_cfa-select.html.erb'), 0, 0, '@html').result(binding) %&gt;
   &lt;% end %&gt;
 &lt;/div&gt;</pre>
     </div>
