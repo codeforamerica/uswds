@@ -55,11 +55,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f68c762aad88a">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-00d14403f77fa">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-f68c762aad88a" class="usa-nav__submenu">
+            <ul id="aria-c-00d14403f77fa" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -99,11 +99,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-84071b9d02ad9">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-b9c33bfa43eda">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-84071b9d02ad9" class="usa-nav__submenu">
+            <ul id="aria-c-b9c33bfa43eda" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -228,26 +228,26 @@
 </ul>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
-<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure tabindex="0" class="margin-0 margin-bottom-3">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
+  <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Textarea</figcaption>
-    <textarea class="usa-textarea cfa-textarea" id="textarea-467e5a547264d"></textarea>
-  </figure>
-  <figure class="margin-0">
+    <textarea class="usa-textarea cfa-textarea" id="textarea-8a81a5911149c"></textarea>
+  </div>
+  <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
-      <figcaption class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-71d38c3b9d205">
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4e1efc1c6653b">
           View HTML
         </button>
-      </figcaption>
-      <div id="aria-c-71d38c3b9d205" class="usa-accordion__content overflow-visible padding-0">
+      </div>
+      <div id="aria-c-4e1efc1c6653b" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-467e5a547264d&quot;&gt;&lt;/textarea&gt;</pre>
+      <pre class="language-html">&lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-8a81a5911149c&quot;&gt;&lt;/textarea&gt;</pre>
     </div>
       </div>
     </div>
-  </figure>
-</div>
+  </div>
+</figure>
 <!-- GUIDANCE -->
 <h2 id="guidance">Guidance</h2>
 <p><strong>Form groups</strong>. Form questions with textarea components always use the <a href="https://codeforamerica.github.io/uswds/dist/components/form-group">form group component</a> to wrap the textarea with a visible <code>label</code> element.</p>
@@ -345,7 +345,7 @@
   <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-textarea.th.html</code></li>
   <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-textarea.html.erb</code></li>
 </ul>
-<figure class="border border-base-lighter margin-bottom-3 padding-3 radius-lg margin-0 margin-bottom-3">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" aria-label="Sass">
   <figcaption class="margin-bottom-2">
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of importing the Sass stylesheet from the package. Refer to the <a href="https://designsystem.digital.gov/components/text-input/#using-the-text-input-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
@@ -354,8 +354,8 @@
 @forward '@codeforamerica/uswds/packages/cfa-textarea/_cfa-textarea.scss';
 </pre></div>
 </figure>
-<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Thymeleaf">
+  <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
       <strong>Thymeleaf template fragment</strong>
       <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
@@ -363,19 +363,19 @@
     <div class="code-block">
       <pre class="language-html">&lt;textarea th:fragment=&quot;textarea(textarea)&quot; th:if=&quot;${textarea}&quot; class=&quot;usa-textarea&quot; th:classappend=&quot;${textarea.modifier}&quot; th:attr=&quot;id=${textarea.id},name=${textarea.name},aria-invalid=${textarea.ariaInvalid},aria-describedby=${textarea.ariaDescribedby},required=${textarea.required},pattern=${textarea.pattern},placeholder=${textarea.placeholder},value=${textarea.value},inputmode=${textarea.inputmode},maxlength=${textarea.maxlength}&quot;&gt;&lt;/textarea&gt;</pre>
     </div>
-  </figure>
-  <figure class="margin-0">
-    <figcaption class="margin-bottom-2">
+  </div>
+  <div class="margin-0">
+    <div class="margin-bottom-2">
       <strong>Template fragment inclusion</strong>
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
-    </figcaption>
+    </div>
     <div class="code-block">
       <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-textarea/cfa-textarea.th :: textarea({{ textarea }})}&quot; /&gt;</pre>
     </div>
-  </figure>
-</div>
-<div class="border border-base-lighter margin-bottom-3 padding-3 radius-lg">
-  <figure class="margin-0 margin-bottom-3">
+  </div>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Embedded Ruby">
+  <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
       <strong>ERB template partial</strong>
       <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
@@ -393,17 +393,17 @@
   &lt;% if textarea['inputmode'] %&gt; inputmode=&quot;&lt;%= textarea['inputmode'] %&gt;&quot;&lt;% end %&gt;
   &lt;% if textarea['maxlength'] %&gt; maxlength=&quot;&lt;%= textarea['maxlength'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;/textarea&gt;</pre>
     </div>
-  </figure>
-  <figure class="margin-0">
-    <figcaption class="margin-bottom-2">
+  </div>
+  <div class="margin-0">
+    <div class="margin-bottom-2">
       <strong>Partial render</strong>
       <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
-    </figcaption>
+    </div>
     <div class="code-block">
       <pre class="language-ruby">&lt;%= render '@codeforamerica/uswds/packages/cfa-textarea/cfa-textarea',  %&gt;</pre>
     </div>
-  </figure>
-</div>
+  </div>
+</figure>
 
         </main>
       </div>
