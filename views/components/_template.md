@@ -58,7 +58,7 @@ Default Body
 1. <a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a>
 {% endcapture %}
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config %}
 
 <!-- ACCESSIBILITY -->
 

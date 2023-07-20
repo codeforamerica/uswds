@@ -296,7 +296,7 @@ Buttons allow users to trigger actions. They are styled consistently according t
 1. <a href="https://nycopportunity.github.io/standard/buttons" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Buttons</cite> | Opportunity Standard</a>
 {% endcapture %}
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config %}
 
 <!-- ACCESSIBILITY -->
 

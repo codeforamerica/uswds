@@ -209,7 +209,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 1. <a href="https://design.va.gov/components/form/memorable-date" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Memorable date</cite> | VA.gov Design System</a>
 {% endcapture %}
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config %}
 
 <!-- ACCESSIBILITY -->
 

@@ -150,7 +150,7 @@ Additional context and followup information including [a link](#). {.usa-alert__
 1. <a href="https://www.tableau.com/blog/examining-data-viz-rules-dont-use-red-green-together" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>5 Tips on Designing Colorblind-Friendly Visualizations</cite> | tableau.com</a>
 {% endcapture %}
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config %}
 
 <!-- ACCESSIBILITY -->
 

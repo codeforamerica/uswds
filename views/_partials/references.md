@@ -6,7 +6,7 @@ Refer to additional guidance on the USWDS documentation site.
   <span>USWDS documentation site</span>
 
   <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-    <use href="/uswds/img/sprite.svg#launch"></use>
+    <use href="{{ config.baseUrl }}uswds/img/sprite.svg#launch"></use>
   </svg>
 </a>
 

@@ -117,7 +117,7 @@ Most programs on this application, including food and cash assistance, require a
 1. <a href="https://dequeuniversity.com/rules/axe/4.7/heading-order?application=AxeEdge" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Heading levels should only increase by one</cite> | dequeuniversity.com</a>
 {% endcapture %}
 
-{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional %}
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config %}
 
 <!-- ACCESSIBILITY -->
 
