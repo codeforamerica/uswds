@@ -130,7 +130,8 @@ p code, li code, td code, dl code, dd code {
 }
 
 .hljs-keyword, .hljs-attribute, .hljs-selector-tag,
-.hljs-meta-keyword, .hljs-doctag, .hljs-name, .hljs-built_in {
+.hljs-meta-keyword, .hljs-doctag, .hljs-name, .hljs-built_in,
+.hljs-section, .hljs-title {
   color: var(--cfa-code-text-keyword) !important
 }
 

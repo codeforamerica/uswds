@@ -15,14 +15,18 @@
   <% if defined?(error) %><span class="usa-error-message"<% if error['id'] %> id="<%= error['id'] %>"<% end %><% if error['role'] %> role="<%= error['role'] %>"<% end %><% if error['ariaLive'] %> aria-live="<%= error['ariaLive'] %>"<% end %>><%= error['text'] %></span><% end %>
 
   <% if defined?(input) %>
-  <%= ERB.new(File.read('packages/cfa-input/_cfa-input.html.erb'), 0, 0, '@html').result(binding) %>
+    <%= ERB.new(File.read('packages/cfa-input/_cfa-input.html.erb'), 0, 0, '@input')
+      .result_with_hash({
+        input: input,
+        inputGroup: (inputGroup if defined?(inputGroup))
+      }.compact) %>
   <% end %>
 
   <% if defined?(textarea) %>
-  <%= ERB.new(File.read('packages/cfa-textarea/_cfa-textarea.html.erb'), 0, 0, '@html').result(binding) %>
+    <%= ERB.new(File.read('packages/cfa-textarea/_cfa-textarea.html.erb'), 0, 0, '@textarea').result_with_hash({textarea: textarea}) %>
   <% end %>
 
   <% if defined?(selectEl) %>
-  <%= ERB.new(File.read('packages/cfa-select/_cfa-select.html.erb'), 0, 0, '@html').result(binding) %>
+    <%= ERB.new(File.read('packages/cfa-select/_cfa-select.html.erb'), 0, 0, '@select').result_with_hash({selectEl: selectEl}) %>
   <% end %>
 </div>

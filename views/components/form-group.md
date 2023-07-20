@@ -1,6 +1,6 @@
 ---
 tags: component
-title: Form Group
+title: Form group
 layout: default
 intro:
 url_uswds:

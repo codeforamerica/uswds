@@ -1,16 +1,16 @@
 ---
 tags: component
-title: Text Input
+title: Text input
 layout: default
 intro:
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2
-nice_uswds: Text input
-url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
-nice_honeycrisp: Form element atom
+nice_uswds: Text input component
+# url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
+# nice_honeycrisp: Form element atom
 modifier_honeycrisp: ['.cfa-input', '.cfa-input-group']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A550%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A851%26mode%3Ddesign%26t%3D3z8wksZDJXdQbrxT-1
 # tokens: true
 styles: true
 ---

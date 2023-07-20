@@ -1,0 +1,62 @@
+<fieldset class="usa-fieldset<% if fieldset['modifier'] %> <%= fieldset['modifier'] %><% end %>"
+  <% if fieldset['id'] %> id="<%= fieldset['id'] %>"<% end %>>
+  <legend class="usa-legend<% if fieldset['legend']['modifier'] %> <%= fieldset['legend']['modifier'] %><% end %>"<% if fieldset['legend']['for'] %> for="<%= fieldset['legend']['for'] %>"<% end %><% if fieldset['legend']['tabindex'] %> tabindex="<%= fieldset['legend']['tabindex'] %>"<% end %>>
+    <span><%= fieldset['legend']['text'] %></span>
+
+    <% if fieldset['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if fieldset['legend']['modifierHint'] %> <%= fieldset['legend']['modifierHint'] %><% end %>">*</abbr><% end %>
+  </legend>
+
+  <% if fieldset['hint'] %><div class="usa-hint<% if fieldset['hint']['modifier'] %> <%= fieldset['hint']['modifier'] %><% end %>"<% if fieldset['hint']['id'] %> id="<%= fieldset['hint']['id'] %>"<% end %>><%= fieldset['hint']['text'] %></div><% end %>
+
+  <% if fieldset['error'] %><span class="usa-error-message"<% if fieldset['error']['id'] %> id="<%= fieldset['error']['id'] %>"<% end %><% if fieldset['error']['role'] %> role="<%= fieldset['error']['role'] %>"<% end %><% if fieldset['error']['ariaLive'] %> aria-live="<%= fieldset['error']['ariaLive'] %>"<% end %>><%= fieldset['error']['text'] %></span><% end %>
+
+  <div class="usa-memorable-date<% if defined?(modifier) %> <%= modifier %><% end %>">
+    <% if month['selectEl'] %><div>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@month')
+        .result_with_hash({
+          modifier: (month['modifier'] if month['modifier']),
+          id: (month['id'] if month['id']),
+          label: (month['label'] if month['label']),
+          hint: (month['hint'] if month['hint']),
+          error: (month['error'] if month['error']),
+          selectEl: month['selectEl']
+        }.compact) %>
+    </div><% end %>
+
+    <% if month['input'] %><div>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@month')
+        .result_with_hash({
+          modifier: (month['modifier'] if month['modifier']),
+          id: (month['id'] if month['id']),
+          label: (month['label'] if month['label']),
+          hint: (month['hint'] if month['hint']),
+          error: (month['error'] if month['error']),
+          input: month['input']
+        }.compact) %>
+    </div><% end %>
+
+    <% if day['input'] %><div>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@day')
+        .result_with_hash({
+          modifier: (day['modifier'] if day['modifier']),
+          id: (day['id'] if day['id']),
+          label: (day['label'] if day['label']),
+          hint: (day['hint'] if day['hint']),
+          error: (day['error'] if day['error']),
+          input: day['input']
+        }.compact) %>
+    </div><% end %>
+
+    <% if year['input'] %><div>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@year')
+        .result_with_hash({
+          modifier: (year['modifier'] if year['modifier']),
+          id: (year['id'] if year['id']),
+          label: (year['label'] if year['label']),
+          hint: (year['hint'] if year['hint']),
+          error: (year['error'] if year['error']),
+          input: year['input']
+        }.compact) %>
+    </div><% end %>
+  </div>
+</fieldset>

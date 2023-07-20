@@ -12,7 +12,8 @@
 
   background-size: units(4);
 
-  height: calc(units($theme-select-height) - $theme-form-elements-border-width);
+  // height: calc(units($theme-select-height) - $theme-form-elements-border-width);
+  height: units($theme-select-height);
   font-weight: $theme-font-weight-bold;
 
   padding-top: units($theme-form-elements-padding-y);

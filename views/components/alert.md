@@ -145,7 +145,7 @@ Additional context and followup information including [a link](#). {.usa-alert__
 **Attention and color**. A notice that uses a tertiary background color, or color that appears in roughly 5% of the color palette, will draw more attention. Also consider choosing combinations that are distinguishable across a broad spectrum of color blindness such as blue against orange, where orange is the emphasis color.
 
 {% capture ref_additional %}
-1. <a href="https://designsystem.digital.gov/components/site-alert/" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Site Alert</cite> | designsystem.digital.gov</a>
+1. <a href="https://designsystem.digital.gov/components/site-alert/" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Site Alert</cite> | U.S. Web Design System (USWDS)</a>
 1. <a href="https://dequeuniversity.com/rules/axe/4.7/heading-order?application=AxeEdge" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Heading levels should only increase by one</cite> | dequeuniversity.com</a>
 1. <a href="https://www.tableau.com/blog/examining-data-viz-rules-dont-use-red-green-together" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>5 Tips on Designing Colorblind-Friendly Visualizations</cite> | tableau.com</a>
 {% endcapture %}

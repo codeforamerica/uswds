@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>Code for America USWDS theme</title>
+
+  <link rel="stylesheet" href="https://codeforamerica.github.io/uswds/dist/uswds/css/styles.css">
+  <link rel="stylesheet" href="https://codeforamerica.github.io/uswds/dist/highlight/styles/default.min.css">
+  <script type="text/javascript" src="https://codeforamerica.github.io/uswds/dist/highlight/highlight.min.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['ruby', 'html', 'javascript', 'css', 'sass']
+      });
+
+      document.querySelectorAll('pre').forEach(function(pre) {
+        if (!pre.hasAttribute('tabindex')) {
+          pre.setAttribute('tabindex', '0');
+        }
+
+        hljs.highlightElement(pre);
+      });
+    });
+  </script>
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
+
+  </head>
+
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <div class="usa-overlay"></div>
+
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="-logo">
+          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        </div>
+
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <button type="button" class="usa-nav__close">
+          <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+
+        <ul class="usa-nav__primary usa-accordion">
+                              <li class="usa-nav__primary-item">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-62efa9562764f">
+              <span>Components</span>
+            </button>
+
+            <ul id="aria-c-62efa9562764f" class="usa-nav__submenu">
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/accordion/" ><span>Accordion</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/alert/" ><span>Alert</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/button/" ><span>Button</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/checkbox/" ><span>Checkbox</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset/" ><span>Fieldset</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/form-group/" ><span>Form group</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/memorable-date/" aria-current="page"><span>Memorable date</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/radio/" ><span>Radio</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/select/" ><span>Select</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/input/" ><span>Text input</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
+                </li>
+                          </ul>
+          </li>
+                              <li class="usa-nav__primary-item">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-835630a803bfa">
+              <span>Design tokens</span>
+            </button>
+
+            <ul id="aria-c-835630a803bfa" class="usa-nav__submenu">
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/color/" ><span>Color</span></a>
+                </li>
+                          </ul>
+          </li>
+          
+          <li class="usa-nav__primary-item">
+            <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+          </li>
+
+          <li class="usa-nav__primary-item">
+            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+          </li>
+        </ul>
+
+        
+
+        
+      </nav>
+    </div>
+  </header>
+
+  <div class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+          <nav aria-label="Secondary navigation">
+            <ul class="usa-sidenav">
+                                          
+              
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/" >Components</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/accordion/" >Accordion</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/alert/" >Alert</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/button/" >Button</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/checkbox/" >Checkbox</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset/" >Fieldset</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/form-group/" >Form group</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/memorable-date/" class="usa-current" aria-current="page">Memorable date</a>
+
+                                <ul class="usa-sidenav__sublist">
+                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
+                </ul>
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/radio/" >Radio</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/select/" >Select</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/input/" >Text input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" >Typography</a>
+
+                              </li>
+                          </ul>
+          </nav>
+        </div>
+
+        <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
+          <div class="usa-prose">
+            <h1>Memorable date</h1>
+
+            <p class="usa-intro"></p>
+          </div>
+
+          <!-- INTRO -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- DETAILS -->
+<h2 id="details">Details</h2>
+<ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/text-input" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Memorable date component</a></li>
+  <li>
+    <strong>Customization:</strong> 
+    <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
+  </li>
+  <li><strong><abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="The class name that applies extended style customization to modify the component's visual appearance.">Modifier <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg>:</abbr></strong> <code>.cfa-memorable-date</code>, <code>.cfa-legend</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-select</code>, <code>.cfa-input</code></li>
+  <li>
+    <details>
+      <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
+<p><p>The <b>Memorable date</b> extends the <a href="https://designsystem.digital.gov/components/text-input" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Memorable date component</a>.  Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-memorable-date</code>, <code>.cfa-legend</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-select</code>, <code>.cfa-input</code> to add <b>styles</b> defined in a custom stylesheet.</p>
+</details></p>
+  </li>
+</ul>
+<!-- EXAMPLES -->
+<h2 id="examples">Examples</h2>
+<!-- <input
+  class="usa-input"
+  aria-describedby="mdHint"
+  id="date_of_birth_day"
+  name="date_of_birth_day"
+  maxlength="2"
+  pattern="[0-9]*"
+  inputmode="numeric"
+  value=""
+/> -->
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Memorable date</figcaption>
+    <fieldset class="usa-fieldset">
+  <legend class="usa-legend cfa-legend">
+    <span>What is your date of birth?</span>
+  </legend>
+  <div class="usa-hint" id="hint-1bab70d3e7b28">For example January / 1 / 2000</div>
+  <div class="usa-memorable-date cfa-memorable-date">
+    <div>
+      <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-1bab70d3e7b28">
+        <label class="usa-label cfa-label text-normal" for="month-1bab70d3e7b28">
+          <span>Month</span>
+          <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+        </label>
+        <div>
+          <select class="usa-select cfa-select" id="month-1bab70d3e7b28" name="month['1bab70d3e7b28']" aria-describedby="hint-1bab70d3e7b28" required="true">
+            <option selected="true">Click to select month</option>
+            <option disabled="true">---</option>
+            <option value="1">01 - January</option>
+            <option value="2">02 - February</option>
+            <option value="3">03 - March</option>
+            <option value="4">04 - April</option>
+            <option value="5">05 - May</option>
+            <option value="6">06 - June</option>
+            <option value="7">07 - July</option>
+            <option value="8">08 - August</option>
+            <option value="9">09 - September</option>
+            <option value="10">10 - October</option>
+            <option value="11">11 - November</option>
+            <option value="12">12 - December</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="usa-form-group usa-form-group--day" id="form-group-1bab70d3e7b28">
+        <label class="usa-label cfa-label text-normal" for="day-1bab70d3e7b28">
+          <span>Day</span>
+          <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+        </label>
+        <div>
+          <div>
+            <input class="usa-input cfa-input" type="text" id="day-1bab70d3e7b28" name="day['1bab70d3e7b28']" aria-describedby="hint-1bab70d3e7b28" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="usa-form-group usa-form-group--year" id="form-group-1bab70d3e7b28">
+        <label class="usa-label cfa-label text-normal" for="year-1bab70d3e7b28">
+          <span>Year</span>
+          <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+        </label>
+        <div>
+          <div>
+            <input class="usa-input cfa-input" type="text" id="year-1bab70d3e7b28" name="year['1bab70d3e7b28']" aria-describedby="hint-1bab70d3e7b28" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+  </div>
+  <div class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-5f7562c6f5cb5">
+          View HTML
+        </button>
+      </div>
+      <div id="aria-c-5f7562c6f5cb5" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block">
+      <pre class="language-html">&lt;fieldset class=&quot;usa-fieldset&quot;&gt;
+  &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
+    &lt;span&gt;What is your date of birth?&lt;/span&gt;
+  &lt;/legend&gt;
+  &lt;div class=&quot;usa-hint&quot; id=&quot;hint-1bab70d3e7b28&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
+  &lt;div class=&quot;usa-memorable-date cfa-memorable-date&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-1bab70d3e7b28&quot;&gt;
+        &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-1bab70d3e7b28&quot;&gt;
+          &lt;span&gt;Month&lt;/span&gt;
+          &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+        &lt;/label&gt;
+        &lt;div&gt;
+          &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-1bab70d3e7b28&quot; name=&quot;month['1bab70d3e7b28']&quot; aria-describedby=&quot;hint-1bab70d3e7b28&quot; required=&quot;true&quot;&gt;
+            &lt;option selected=&quot;true&quot;&gt;Click to select month&lt;/option&gt;
+            &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
+            &lt;option value=&quot;1&quot;&gt;01 - January&lt;/option&gt;
+            &lt;option value=&quot;2&quot;&gt;02 - February&lt;/option&gt;
+            &lt;option value=&quot;3&quot;&gt;03 - March&lt;/option&gt;
+            &lt;option value=&quot;4&quot;&gt;04 - April&lt;/option&gt;
+            &lt;option value=&quot;5&quot;&gt;05 - May&lt;/option&gt;
+            &lt;option value=&quot;6&quot;&gt;06 - June&lt;/option&gt;
+            &lt;option value=&quot;7&quot;&gt;07 - July&lt;/option&gt;
+            &lt;option value=&quot;8&quot;&gt;08 - August&lt;/option&gt;
+            &lt;option value=&quot;9&quot;&gt;09 - September&lt;/option&gt;
+            &lt;option value=&quot;10&quot;&gt;10 - October&lt;/option&gt;
+            &lt;option value=&quot;11&quot;&gt;11 - November&lt;/option&gt;
+            &lt;option value=&quot;12&quot;&gt;12 - December&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-1bab70d3e7b28&quot;&gt;
+        &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-1bab70d3e7b28&quot;&gt;
+          &lt;span&gt;Day&lt;/span&gt;
+          &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+        &lt;/label&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-1bab70d3e7b28&quot; name=&quot;day['1bab70d3e7b28']&quot; aria-describedby=&quot;hint-1bab70d3e7b28&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-1bab70d3e7b28&quot;&gt;
+        &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-1bab70d3e7b28&quot;&gt;
+          &lt;span&gt;Year&lt;/span&gt;
+          &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+        &lt;/label&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-1bab70d3e7b28&quot; name=&quot;year['1bab70d3e7b28']&quot; aria-describedby=&quot;hint-1bab70d3e7b28&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</pre>
+    </div>
+      </div>
+    </div>
+  </div>
+</figure>
+<!-- GUIDANCE -->
+<h2 id="guidance">Guidance</h2>
+<p><strong>Age</strong>. If you are looking to evaluate age consider asking for their age using a <a href="https://codeforamerica.github.io/uswds/dist/components/form-group">Form group with text input component</a> instead of date of birth using the memorable date component.</p>
+<p><strong>Month</strong>. A text input component as opposed to a select component for the month is supported.</p>
+<p><strong>Fieldsets vs. form groups</strong>. Form questions with multiple inputs including checkbox, radio, and memorable date components always use the fieldset component to group available options and a nested <code>legend</code> element. Other form element components with singular text inputs, text areas, and selects, will use the <a href="https://codeforamerica.github.io/uswds/dist/components/form-group">form group component</a>.</p>
+<p><strong>Fieldset</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset">fieldset documentation</a>.</p>
+<p><strong>Form group</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/form-group">form group documentation</a>.</p>
+<p><strong>Select</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/select">select documentation</a>.</p>
+<p><strong>Text input</strong>. Refer to <a href="https://codeforamerica.github.io/uswds/dist/components/text-input">text input documentation</a>.</p>
+<p>Refer to additional guidance on the USWDS documentation site.</p>
+<a class="usa-button cfa-button usa-button--outline" href="https://designsystem.digital.gov/components/text-input#guidance">
+  <span>USWDS documentation site</span>
+  <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+    <use href="/uswds/img/sprite.svg#launch"></use>
+  </svg>
+</a>
+<p><b>Additional references</b></p>
+<div class="font-body-3xs">
+<ol>
+<li><a href="https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Date of birth</cite> | U.S. Web Design System (USWDS)</a></li>
+<li><a href="https://design-system.service.gov.uk/components/date-input/" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Date input</cite> | GOV.UK Design System</a></li>
+<li><a href="https://design.va.gov/components/form/memorable-date" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Memorable date</cite> | VA.gov Design System</a></li>
+</ol>
+</div>
+<!-- ACCESSIBILITY -->
+<!-- <div class="usa-summary-box margin-y-6" role="region" aria-labelledby="accessibility">
+  <div class="usa-summary-box__body"> -->
+<h2 id="accessibility" class="margin-bottom-2">Accessibility</h2>
+<ul class="usa-icon-list">
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">Customization to the visual appearance of the Memorable date has been verified for <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA contrast minimum success</a>.</div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">The Memorable date examples pass manual audits (WCAG 2.1 AA using <a href="https://www.deque.com/axe/browser-extensions/" target="_blank" rel="noopener nofollow" class="usa-link--external">axe</a> or <a href="https://developer.chrome.com/docs/lighthouse/accessibility/" target="_blank" rel="noopener nofollow" class="usa-link--external">Lighthouse</a>).</div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">
+      The Memorable date achieves <a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA resizing success</a>.
+      <div><em class="font-body-3xs">Resizing text up to 200% without loss of content or functionality.</em></div>
+    </div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">
+      The Memorable date passes keyboard interaction tests.
+      <div><em class="font-body-3xs">No keyboard test has been created.</em></div>
+    </div>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">
+      The Memorable date passes screen reader interaction tests.
+<p></div></p>
+  </li>
+  <li class="usa-icon-list__item">
+<div class="usa-icon-list__icon text-base">
+  <svg class="usa-icon" role="img">
+    <title>Unchecked</title>
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#radio_button_unchecked"></use>
+  </svg>
+</div>
+<div class="usa-icon-list__content">Guidance on ensuring Memorable date accessibility has been provided in this documentation.</div>
+  </li>
+</ul>
+<p>Refer to <a href="https://designsystem.digital.gov/components/text-input#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.</p>
+<!-- DESIGN -->
+<h2 id="design-library-component">Design library component</h2>
+<iframe tabindex="0" class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A851%26mode%3Ddesign%26t%3DGH49ArJ6HONOroNF-1" allowfullscreen></iframe>
+<!-- SOURCE -->
+<h2 id="source-and-usage">Source and usage</h2>
+<p class="usa-icon-list__item">
+  <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-memorable-date</code></span>
+</p>
+<p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
+<ul class="usa-content-list">
+  <li>
+    <strong>Sass stylesheet:</strong> <code>./_cfa-memorable-date.scss</code>
+    <div class="font-body-3xs"><em>Additional required stylesheets from other packages:</em><ul class="font-body-3xs">
+  <li>Legend: <code>../cfa-legend/_cfa-legend.scss</code></li>
+  <li>Label: <code>../cfa-label/_cfa-label.scss</code></li>
+  <li>Hint: <code>../cfa-hint/_cfa-hint.scss</code></li>
+  <li>Select: <code>../cfa-select/_cfa-select.scss</code></li>
+  <li>Text Input: <code>../cfa-input/_cfa-input.scss</code></li>
+</ul></div>
+  </li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-memorable-date.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-memorable-date.html.erb</code></li>
+</ul>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" aria-label="Sass">
+  <figcaption class="margin-bottom-2">
+    <strong>Sass theme settings and stylesheet loading</strong>
+    <p>Below is a demonstration of importing Sass stylesheets from the package. Refer to the <a href="https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.</p>
+  </figcaption>
+  <div class="code-block"><pre class="language-scss">@forward 'uswds';
+@forward '@codeforamerica/uswds/packages/cfa-memorable-date/_cfa-memorable-date.scss';
+<p>@forward '@codeforamerica/uswds/packages/cfa-legend/_cfa-legend.scss'
+@forward '@codeforamerica/uswds/packages/cfa-label/_cfa-label.scss'
+@forward '@codeforamerica/uswds/packages/cfa-hint/_cfa-hint.scss'
+@forward '@codeforamerica/uswds/packages/cfa-select/_cfa-select.scss'
+@forward '@codeforamerica/uswds/packages/cfa-input/_cfa-input.scss'
+</pre></div></p>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Thymeleaf">
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>Thymeleaf template fragment</strong>
+      <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-html">&lt;fieldset th:fragment=&quot;memorableDate(modifier, id, legend, hint, required, error, month, day, year)&quot; class=&quot;usa-fieldset&quot; th:classappend=&quot;${fieldset.modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
+  &lt;legend class=&quot;usa-legend&quot; th:classappend=&quot;${fieldset.legend.modifier}&quot; th:attr=&quot;tabindex=${fieldset.legend.tabindex}&quot;&gt;
+    &lt;span th:text=&quot;${fieldset.legend.text}&quot;&gt;Legend&lt;/span&gt;
+    &lt;abbr th:if=&quot;${required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${fieldset.legend.modifierHint}&quot;&gt;*&lt;/abbr&gt;
+  &lt;/legend&gt;
+  &lt;div th:if=&quot;${fieldset.hint}&quot; class=&quot;usa-hint&quot; th:classappend=&quot;${fieldset.hint.modifier}&quot; th:attr=&quot;id=${fieldset.hint.id}&quot; th:text=&quot;${fieldset.hint.text}&quot;&gt;Hint&lt;/div&gt;
+  &lt;span th:if=&quot;${fieldset.error}&quot; class=&quot;usa-error-message&quot; th:attr=&quot;id=${fieldset.error.id},role=${fieldset.error.role},aria-live=${fieldset.error.ariaLive}&quot; th:text=&quot;${fieldset.error.text}&quot;&gt;Message&lt;/span&gt;
+  &lt;div class=&quot;usa-memorable-date&quot; th:classappend=&quot;${modifier}&quot;&gt;
+    &lt;div th:if=&quot;${month.selectEl}&quot;&gt;
+      &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${month.modifier}, ${month.id}, ${month.label}, ${month.hint}, ${month.error}, '', '', '', ${month.selectEl})}&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div th:if=&quot;${month.input}&quot;&gt;
+      &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${month.modifier}, ${month.id}, ${month.label}, ${month.hint}, ${month.error}, ${month.input}, '', '', '')}&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div th:if=&quot;${day.input}&quot;&gt;
+      &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${day.modifier}, ${day.id}, ${day.label}, ${day.hint}, ${day.error}, ${day.input}, '', '', '')}&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div th:if=&quot;${year.input}&quot;&gt;
+      &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${year.modifier}, ${year.id}, ${year.label}, ${year.hint}, ${year.error}, ${year.input}, '', '', '')}&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</pre>
+    </div>
+  </div>
+  <div class="margin-0">
+    <div class="margin-bottom-2">
+      <strong>Template fragment inclusion</strong>
+      <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
+    </div>
+    <div class="code-block">
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${id}, ${required}, ${modifier})}&quot; /&gt;</pre>
+    </div>
+  </div>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Embedded Ruby">
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>ERB template partial</strong>
+      <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
+    </figcaption>
+    <div class="code-block">
+      <pre class="language-ruby">&lt;fieldset class=&quot;usa-fieldset&lt;% if fieldset['modifier'] %&gt; &lt;%= fieldset['modifier'] %&gt;&lt;% end %&gt;&quot;
+  &lt;% if fieldset['id'] %&gt; id=&quot;&lt;%= fieldset['id'] %&gt;&quot;&lt;% end %&gt;&gt;
+  &lt;legend class=&quot;usa-legend&lt;% if fieldset['legend']['modifier'] %&gt; &lt;%= fieldset['legend']['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if fieldset['legend']['for'] %&gt; for=&quot;&lt;%= fieldset['legend']['for'] %&gt;&quot;&lt;% end %&gt;&lt;% if fieldset['legend']['tabindex'] %&gt; tabindex=&quot;&lt;%= fieldset['legend']['tabindex'] %&gt;&quot;&lt;% end %&gt;&gt;
+    &lt;span&gt;&lt;%= fieldset['legend']['text'] %&gt;&lt;/span&gt;
+    &lt;% if fieldset['required'] %&gt;&lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&lt;% if fieldset['legend']['modifierHint'] %&gt; &lt;%= fieldset['legend']['modifierHint'] %&gt;&lt;% end %&gt;&quot;&gt;*&lt;/abbr&gt;&lt;% end %&gt;
+  &lt;/legend&gt;
+  &lt;% if fieldset['hint'] %&gt;&lt;div class=&quot;usa-hint&lt;% if fieldset['hint']['modifier'] %&gt; &lt;%= fieldset['hint']['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if fieldset['hint']['id'] %&gt; id=&quot;&lt;%= fieldset['hint']['id'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= fieldset['hint']['text'] %&gt;&lt;/div&gt;&lt;% end %&gt;
+  &lt;% if fieldset['error'] %&gt;&lt;span class=&quot;usa-error-message&quot;&lt;% if fieldset['error']['id'] %&gt; id=&quot;&lt;%= fieldset['error']['id'] %&gt;&quot;&lt;% end %&gt;&lt;% if fieldset['error']['role'] %&gt; role=&quot;&lt;%= fieldset['error']['role'] %&gt;&quot;&lt;% end %&gt;&lt;% if fieldset['error']['ariaLive'] %&gt; aria-live=&quot;&lt;%= fieldset['error']['ariaLive'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= fieldset['error']['text'] %&gt;&lt;/span&gt;&lt;% end %&gt;
+  &lt;div class=&quot;usa-memorable-date&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+    &lt;% if month['selectEl'] %&gt;&lt;div&gt;
+      &lt;%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@month')
+        .result_with_hash({
+          modifier: (month['modifier'] if month['modifier']),
+          id: (month['id'] if month['id']),
+          label: (month['label'] if month['label']),
+          hint: (month['hint'] if month['hint']),
+          error: (month['error'] if month['error']),
+          selectEl: month['selectEl']
+        }.compact) %&gt;
+    &lt;/div&gt;&lt;% end %&gt;
+    &lt;% if month['input'] %&gt;&lt;div&gt;
+      &lt;%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@month')
+        .result_with_hash({
+          modifier: (month['modifier'] if month['modifier']),
+          id: (month['id'] if month['id']),
+          label: (month['label'] if month['label']),
+          hint: (month['hint'] if month['hint']),
+          error: (month['error'] if month['error']),
+          input: month['input']
+        }.compact) %&gt;
+    &lt;/div&gt;&lt;% end %&gt;
+    &lt;% if day['input'] %&gt;&lt;div&gt;
+      &lt;%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@day')
+        .result_with_hash({
+          modifier: (day['modifier'] if day['modifier']),
+          id: (day['id'] if day['id']),
+          label: (day['label'] if day['label']),
+          hint: (day['hint'] if day['hint']),
+          error: (day['error'] if day['error']),
+          input: day['input']
+        }.compact) %&gt;
+    &lt;/div&gt;&lt;% end %&gt;
+    &lt;% if year['input'] %&gt;&lt;div&gt;
+      &lt;%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, '@year')
+        .result_with_hash({
+          modifier: (year['modifier'] if year['modifier']),
+          id: (year['id'] if year['id']),
+          label: (year['label'] if year['label']),
+          hint: (year['hint'] if year['hint']),
+          error: (year['error'] if year['error']),
+          input: year['input']
+        }.compact) %&gt;
+    &lt;/div&gt;&lt;% end %&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</pre>
+    </div>
+  </div>
+  <div class="margin-0">
+    <div class="margin-bottom-2">
+      <strong>Partial render</strong>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
+    </div>
+    <div class="code-block">
+      <pre class="language-ruby">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-memorable-date/cfa-memorable-date'), 0, 0, '@memorableDate').result_with_hash({modifier: modifier, fieldset: fieldset, month: month, day: day, year: year}) %&gt;</pre>
+    </div>
+  </div>
+</figure>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="usa-footer">
+    <div class="grid-container usa-footer__return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+
+    <div class="usa-footer__primary-section">
+      <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <ul class="grid-row grid-gap">
+                    <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" href="https://codeforamerica.github.io/uswds/dist/components/">Components</a>
+          </li>
+                    <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" href="https://codeforamerica.github.io/uswds/dist/design-tokens/">Design tokens</a>
+          </li>
+          
+          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>Design Library</span></a>
+          </li>
+
+          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="usa-footer__secondary-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class=" usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+            <div class="mobile-lg:grid-col-auto">
+              <img class="usa-footer__logo-img" src="https://codeforamerica.github.io/uswds/dist/uswds/img/logo-img.png" alt=""/>
+            </div>
+
+            <div class="mobile-lg:grid-col-auto">
+              <p class="usa-footer__logo-heading">The USWDS Honeycrisp theme</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="usa-identifier padding-0">
+    <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+      <div class="usa-identifier__container">
+        <div class="usa-identifier__logos">
+          <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img" src="https://codeforamerica.github.io/uswds/dist/uswds/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
+        </div>
+
+        <section class="usa-identifier__identity" aria-label="Agency description">
+          <p class="usa-identifier__identity-domain">codeforamerica.org</p>
+
+          <p class="usa-identifier__identity-disclaimer">An official website of <a href="https://codeforamerica.org">Code for America</a></p>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  
+  <script src="https://codeforamerica.github.io/uswds/dist/js/default.js"></script>
+
+  </body>
+</html>

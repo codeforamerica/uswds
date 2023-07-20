@@ -72,7 +72,7 @@
   <div class="margin-0">
     <div class="margin-bottom-2">
       <strong>Partial render</strong>
-      <p>Below is an example of how to include the partial in a view from the package directory using the Rails <code>render</code> method. Replace the argument values using your variables or context.</p>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
     </div>
     {% erb name true %}
   </div>

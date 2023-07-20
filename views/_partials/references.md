@@ -1,6 +1,14 @@
 {% if ref_main %}
 
-Refer to <a href="{{ ref_main }}" target="_blank" rel="noopener nofollow" class="usa-link--external">guidance on the USWDS documentation site</a>.
+Refer to additional guidance on the USWDS documentation site.
+
+<a class="usa-button cfa-button usa-button--outline" href="{{ ref_main }}">
+  <span>USWDS documentation site</span>
+
+  <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+    <use href="/uswds/img/sprite.svg#launch"></use>
+  </svg>
+</a>
 
 {% endif %}
 

@@ -114,6 +114,29 @@ const sanitizeForErb = (param) => {
   return param;
 }
 
+// const sanitizeForErbNew = (param) => {
+//   switch(typeof param) {
+//     case 'string':
+//       param = `"${param
+//         .replace(/"/g, '\\"')
+//         // .replace(/'/g, '&#39;')
+//         .replace(/'/g, '\'"\'"\'')
+//       }"`;
+
+//       break;
+
+//     case 'object':
+//       param = JSON.stringify(param)
+//         // .replace(/":/g, '"=>')
+//         // .replace(/'/g, '&#39;');
+//         .replace(/'/g, '\'"\'"\'');
+
+//       break;
+//   }
+
+//   return param;
+// }
+
 /**
  * Wraps passed string a code block and performs transformations on the content for display
  *
@@ -253,10 +276,19 @@ const erbRender = async (name, context, log = false) => {
     return `${c}=${sanitizeForErb(context[c])}`.replace(/\n/g, '')//.replace(/'/g, '\'');
   }).join('; ');
 
+  // let hash = Object.keys(context).map(c => {
+  //   return `${c}: ${sanitizeForErbNew(context[c])}`.replace(/\n/g, '')//.replace(/'/g, '\'');
+  // }).join(', ');
+
+  // let erb = `puts ERB.new(File.read('${rubyPath}'), 0, 0, '@html').result_with_hash({${hash}})`;
+  // let commandNew = `ruby -rerb -e "${erb}"`;
+
   let command = `(echo '<% ${vars} %>' && cat ${rubyPath}) | erb`;
 
   try {
     const stdout = execSync(command);
+
+    // console.dir(execSync(commandNew));
 
     if (log) console.log(`[${package.name}] ERB "${name}" render passing`);
 
@@ -329,13 +361,24 @@ const createId = function() {
 /**
  * Create a filename friendly string from supplied string
  *
- * @param   {String}  s  The string to transform into a slug
+ * @param   {String}  str  The string to transform into a slug
  *
- * @return  {String}     Returns filename friendly string
+ * @return  {String}       Returns filename friendly string
  */
-const createSlug = function(s) {
-  return s.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
+const createSlug = function(str) {
+  return str.toLowerCase().replace(/[^0-9a-zA-Z - _]+/g, '')
     .replace(/\s+/g, '-').replace(/-+/g, '-');
+};
+
+/**
+ * Create a method name friendly string from supplied string
+ *
+ * @param   {String}  str  The string to transform into a slug
+ *
+ * @return  {String}       Returns method name friendly string
+ */
+const createCamelCase = function(str) {
+  return str.replace(/-([a-z])/g, g => g[1].toUpperCase());
 };
 
 /**
@@ -465,10 +508,8 @@ module.exports = function(eleventyConfig) {
     if (include) {
       let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
 
-      name = name.replace(/-([a-z])/g, g => g[1].toUpperCase());
-
-      return block(`<th:block th:replace="~{${templatePath} :: ${name}(${
-          params.map(c => `{{ ${c.replace('${', '').replace('}', '')} }}`).join(', ')
+      return block(`<th:block th:replace="~{${templatePath} :: ${createCamelCase(name)}(${
+          params.join(', ')
         })}" />`, 'html', true);
     }
 
@@ -492,26 +533,39 @@ module.exports = function(eleventyConfig) {
     let template = removeNewLines(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
     if (include) {
+      // Find params matching these patterns
       let params = [
         template.match(/<%= [A-z$_.-][\w$]{0,} %>/g),
         template.match(/<% if [A-z$_.-][\w$]{0,} %>/g),
+        template.match(/<% if [A-z$_.'\-\[\]]{0,}[\w$]{0,} %>/g),
+        template.match(/<% if defined\?\([A-z$_.-][\w$]{0,}\) %>/g),
         template.match(/<% [A-z$_.-][\w$]{0,}.each do/g)
       ].filter(m => m).flat();
 
-      params = params.map(c => c.replace('<%= ', '')
-        .replace('<% if ', '')
-        .replace('<% ', '')
-        .replace(' %>', '')
-        .replace('.each do', '')
-      );
+      // Clean what's not needed from param instances
+      params = params.map(c => {
+        c = c.replace('<%= ', '')
+          .replace('<% if ', '')
+          .replace('defined?(', '')
+          .replace('<% ', '')
+          .replace(') %>', '')
+          .replace(' %>', '')
+          .replace('.each do', '')
+
+        if (c.includes("['")) {
+          c = c.split("['")[0];
+        }
+
+        return c;
+      });
 
       params = [...new Set(params)];
 
-      return block(`<%= render '${templatePath}', ${
+      return block(`<%= ERB.new(File.read('${templatePath}'), 0, 0, '@${createCamelCase(name)}').result_with_hash({${
           params.map(attr => {
-            return `${attr}={{ ${attr} }}`;
+            return `${attr}: ${attr}`;
           }).join(', ')
-        } %>`, 'ruby', true);
+        }}) %>`, 'ruby', true);
     }
 
     return block(template, 'ruby', false);
