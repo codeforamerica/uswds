@@ -25,8 +25,8 @@ in the form $setting: value,
 
   // 2. Spacing
   // $theme-border-radius-sm: 2px,
-  // $theme-border-radius-md: 0.5,
-  // $theme-border-radius-lg: 1,
+  $theme-border-radius-md: 1,
+  $theme-border-radius-lg: 2,
 
   // 3. Color
   // $test-color-tokens: true,
@@ -166,6 +166,10 @@ in the form $setting: value,
   $theme-lead-line-height: 4,
 
   // 5. Components
+  // - Card
+  // $theme-card-border-width:
+  // $theme-card-border-color:
+  // $theme-card-border-radius:
   // - Input
 
   // - Radio

@@ -1,9 +1,15 @@
 @use 'uswds-core' as *;
 
-.cfa-form-group.usa-form-group--error {
-  padding-left: units(4);
+.cfa-form-group {
+  // margin-top: units(7);
+  margin-top: revert;
+}
 
-  @include at-media('desktop') {
-    margin-left: (units(-4) - units(0.5))
+.cfa-form-group.usa-form-group--error {
+  padding-left: units(4) - units(0.5);
+
+  @include at-media('tablet'){
+    // margin-left: (units(-4) - units(0.5))
+    margin-left: units(-4)
   }
 }

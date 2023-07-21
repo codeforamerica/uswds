@@ -79,7 +79,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "text": "Legally as it appears on your I.D."
   },
   "error": {
-    "text": "This field is required.",
+    "text": "This field is required",
     "id": "error-message-{{ id }}",
     "role": "alert"
   },

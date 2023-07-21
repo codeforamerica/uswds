@@ -1,18 +1,43 @@
 @use 'uswds-core' as *;
 
 .cfa-memorable-date {
-  // Support months that include a text input...
-  .usa-form-group--day input,
-  .usa-form-group--month input {
-    width: units(9);
+  display: revert;
+
+  .usa-form-group--month,
+  .usa-form-group--month,
+  .usa-form-group--day,
+  .usa-form-group--year {
+    width: auto
   }
 
-  // ...and support months that include a select
-  // .usa-form-group--month select {
-  //   width: units(card-lg);
-  // }
-
+  .usa-form-group--month select,
+  .usa-form-group--month input,
+  .usa-form-group--day input,
   .usa-form-group--year input {
-    width: 6rem; // non-standard spacing unit
+    width: 100%
+  }
+
+  @include at-media('tablet') {
+    display: flex;
+
+    .usa-form-group--month select {
+      // width: initial;
+      width: units(card-lg)
+    }
+
+    // Support months that include a text input...
+    .usa-form-group--month input,
+    .usa-form-group--day input {
+      width: units(9);
+    }
+
+    // ...and support months that include a select
+    // .usa-form-group--month select {
+    //   width: units(card-lg);
+    // }
+
+    .usa-form-group--year input {
+      width: 6rem; // non-standard spacing unit
+    }
   }
 }

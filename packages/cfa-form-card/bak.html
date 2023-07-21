@@ -1,0 +1,39 @@
+<!-- <div th:each="formGroup: ${formGroups}">
+        <div th:if="${formGroup.input}">
+          <div th:unless="${formGroup.inputGroup}">
+            <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, '', '', '')}" />
+          </div>
+
+          <div th:if="${formGroup.inputGroup}">
+            <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, '', '')}" />
+          </div>
+        </div>
+
+        <div th:if="${formGroup.textarea}">
+          <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', ${formGroup.textarea}, '')}" />
+        </div>
+
+        <div th:if="${formGroup.selectEl}">
+          <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', '', ${formGroup.selectEl})}" />
+        </div>
+      </div> -->
+
+      <div></div>
+
+      <label class="usa-label cfa-label" for="email">Email address</label>
+
+      <input class="usa-input cfa-input" id="email" name="email" type="email" autocapitalize="off" autocorrect="off" required />
+
+      <label class="usa-label cfa-label" for="password-sign-in">Password</label>
+
+      <input class="usa-input cfa-input" id="password-sign-in" name="password" type="password" required />
+
+      <button title="Toggle password" type="button" class="usa-show-password" aria-controls="password-sign-in" data-show-text="Show password" data-hide-text="Hide password">
+        Show password
+      </button>
+
+      <input class="usa-button" type="submit" value="Sign in" />
+
+      <p>
+        <a href="javascript:void()" title="Forgot password">Forgot password?</a>
+      </p>

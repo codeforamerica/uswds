@@ -1,0 +1,43 @@
+<main th:fragment="formCard(modifier, id, form, graphic, heading, formGroups, footer)" th:classappend="${modifier}" th:attr="id=${id}">
+  <form class="usa-form" th:classappend="${form.modifier}">
+    <svg th:if="${graphic}" class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
+      <use th:href="${graphic.href}"></use>
+    </svg>
+
+    <header class="cfa-form-card__header" class="usa-legend usa-legend--large" th:classappend="${heading.modifier}" th:utext="${heading.text}" th:attr="tabindex=${heading.tabindex}">
+      Heading
+    </header>
+
+    <div th:each="formGroup: ${formGroups}">
+      <div th:if="${formGroup.input}">
+        <div th:unless="${formGroup.inputGroup}">
+          <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, '', '', '')}" />
+        </div>
+
+        <div th:if="${formGroup.inputGroup}">
+          <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, '', '')}" />
+        </div>
+      </div>
+
+      <div th:if="${formGroup.textarea}">
+        <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', ${formGroup.textarea}, '')}" />
+      </div>
+
+      <div th:if="${formGroup.selectEl}">
+        <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', '', ${formGroup.selectEl})}" />
+      </div>
+
+      <div th:if="${formGroup.memorableDate}">
+        <th:block th:replace="~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.modifier}, ${formGroup.id}, ${formGroup.fieldset}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.month},  ${formGroup.day},  ${formGroup.year})}" />
+      </div>
+
+      <div th:if="${formGroup.options}">
+        <th:block th:replace="~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${formGroup.modifier}, ${formGroup.id}, ${formGroup.legend}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.options})}" />
+      </div>
+
+      <div th:if="${formGroup.footer}" class="cfa-form-card__footer">
+        <th:block th:replace="~{packages/cfa-button/cfa-button.th :: button(${formGroup.footer.submit})}" />
+      </div>
+    </div>
+  </form>
+</main>
