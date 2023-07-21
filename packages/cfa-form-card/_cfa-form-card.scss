@@ -7,13 +7,18 @@
   @include u-radius($theme-card-border-radius);
 
   padding: units(7) units(3);
-  margin-left: -(units(0.5));
-  margin-right: -(units(0.5));
+  // margin-left: -(units(0.5));
+  // margin-right: -(units(0.5));
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: units(0.5);
 
+
   @include at-media('tablet') {
-    margin-left: 0;
-    margin-right: 0;
+    max-width: units('tablet');
+
+    // margin-left: 0;
+    // margin-right: 0;
     padding: units(7) units(4);
   }
 }
@@ -127,10 +132,10 @@
   text-align: center;
 }
 
-.cfa-form-card--transition p {
-  margin-left: auto;
-  margin-right: auto;
-}
+// .cfa-form-card--transition p {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 .cfa-form-card--transition .button:first-of-type,
 .cfa-form-card--transition
