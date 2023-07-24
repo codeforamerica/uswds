@@ -2,11 +2,12 @@
 
 .cfa-form {
   @include at-media('mobile-lg') {
-    max-width: revert;
+    max-width: revert
   }
 
   .cfa-fieldset,
-  .cfa-form-group {
-    margin-top: units(7);
+  .cfa-form-group,
+  .cfa-button {
+    margin-top: revert
   }
 }

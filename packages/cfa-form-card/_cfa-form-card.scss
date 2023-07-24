@@ -44,19 +44,32 @@
 }
 
 .cfa-form-card__header {
-  @include u-font('sans', 'xl');
-  @include u-text('bold');
+  display: grid;
+  gap: units(3);
 
   margin-bottom: units(7);
 }
 
-.cfa-form-card__header--with-icon {
-  position: relative;
+.cfa-form-card__header-heading {
+  h1, h2, h3, h4, h5, h6 {
+    @include u-font('sans', 'xl');
+    @include u-text('bold');
 
-  @include at-media('tablet') {
-    padding-right: units(7);
+    // margin-bottom: units(3);
   }
 }
+
+.cfa-form-card__header-alert {
+  // margin-top: units(3);
+}
+
+// .cfa-form-card__header--with-icon {
+//   position: relative;
+
+//   @include at-media('tablet') {
+//     padding-right: units(7);
+//   }
+// }
 
 // @media screen and (min-width: 601px) {
 //   .cfa-form-card__header--with-icon {
@@ -64,17 +77,17 @@
 //   }
 // }
 
-.cfa-form-card__icon {
-  float: right;
-  margin-left: units(0.5);
+// .cfa-form-card__icon {
+//   float: right;
+//   margin-left: units(0.5);
 
-  @include at-media('tablet') {
-    position: absolute;
-    right: units(4);
-    margin-left: 0;
-    float: none;
-  }
-}
+//   @include at-media('tablet') {
+//     position: absolute;
+//     right: units(4);
+//     margin-left: 0;
+//     float: none;
+//   }
+// }
 
 // @media screen and (min-width: 601px) {
 //   .cfa-form-card__icon {
@@ -85,19 +98,24 @@
 //   }
 // }
 
-.cfa-form-card__title {
-  font-size: 2.7rem;
-  margin-top: 0;
-  margin-bottom: 0;
-}
+// .cfa-form-card__title {
+//   font-size: 2.7rem;
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
 
-.cfa-form-card__title + .text--help,
-.cfa-form-card__title + .statistic-card__label,
-.data-table .cfa-form-card__title + th,
-.cfa-form-card__title + .summary-table__label,
-.cfa-form-card__title + .text--small {
-  margin-top: 2.5rem;
-  margin-bottom: 0;
+// .cfa-form-card__title + .text--help,
+// .cfa-form-card__title + .statistic-card__label,
+// .data-table .cfa-form-card__title + th,
+// .cfa-form-card__title + .summary-table__label,
+// .cfa-form-card__title + .text--small {
+//   margin-top: 2.5rem;
+//   margin-bottom: 0;
+// }
+
+.cfa-form-card__contents {
+  display: grid;
+  gap: units(7);
 }
 
 .cfa-form-card__footer {
@@ -113,6 +131,13 @@
   //   padding-left: 3.5rem;
   //   padding-right: 3.5rem;
   // }
+
+  display: grid;
+  gap: units(4);
+}
+
+.usa-button.cfa-form-card__footer-first-button {
+  margin-top: 0;
 }
 
 // @media screen and (min-width: 601px) {
@@ -124,38 +149,37 @@
 //   }
 // }
 
-.cfa-form-card__footer .cfa-button {
-  margin-top: revert;
-}
+// .cfa-form-card__footer .cfa-button {
+//   margin-top: revert;
+// }
 
-.cfa-form-card--transition {
-  text-align: center;
-}
+// .cfa-form-card--transition {
+//   text-align: center;
+// }
 
 // .cfa-form-card--transition p {
 //   margin-left: auto;
 //   margin-right: auto;
 // }
 
-.cfa-form-card--transition .button:first-of-type,
-.cfa-form-card--transition
-.incrementer__subtract:first-of-type,
-.cfa-form-card--transition .incrementer__add:first-of-type,
-.cfa-form-card--transition .searchbar__button:first-of-type {
-  margin-left: units(15);
-}
+// .cfa-form-card--transition .button:first-of-type,
+// .cfa-form-card--transition .incrementer__subtract:first-of-type,
+// .cfa-form-card--transition .incrementer__add:first-of-type,
+// .cfa-form-card--transition .searchbar__button:first-of-type {
+//   margin-left: units(15);
+// }
 
-.cfa-form-card--transition .text-input-group-container {
-  display: inline-block;
-}
+// .cfa-form-card--transition .text-input-group-container {
+//   display: inline-block;
+// }
 
-.cfa-form-card--transition .text-input {
-  margin: 0 auto;
-}
+// .cfa-form-card--transition .text-input {
+//   margin: 0 auto;
+// }
 
-.cfa-form-card--transition .cfa-form-card__content .list--bulleted,
-.cfa-form-card--transition .cfa-form-card__content .media-box {
-  max-width: 25em;
-  text-align: left;
-  margin: 0 auto;
-}
+// .cfa-form-card--transition .cfa-form-card__content .list--bulleted,
+// .cfa-form-card--transition .cfa-form-card__content .media-box {
+//   max-width: 25em;
+//   text-align: left;
+//   margin: 0 auto;
+// }

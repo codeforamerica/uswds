@@ -19,6 +19,9 @@
     <% if input['value'] %> value="<%= input['value'] %>"<% end %>
     <% if input['inputmode'] %> inputmode="<%= input['inputmode'] %>"<% end %>
     <% if input['maxlength'] %> maxlength="<%= input['maxlength'] %>"<% end %>
+    <% if input['autocapitalize'] %> autocapitalize="<%= input['autocapitalize'] %>"<% end %>
+    <% if input['autocorrect'] %> autocorrect="<%= input['autocorrect'] %>"<% end %>
+    <% if input['autocomplete'] %> autocomplete="<%= input['autocomplete'] %>"<% end %>
     <% if input['js'] %> data-js="<%= input['js'] %>"<% end %>>
 
   <% if input['posfix'] %><div class="usa-input-suffix" aria-hidden="true">

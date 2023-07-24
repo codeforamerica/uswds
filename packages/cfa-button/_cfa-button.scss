@@ -196,3 +196,19 @@
     color: color($theme-color-error-darker);
   }
 }
+
+/**
+ * CfA Yes or No
+ **/
+
+.cfa-button--no {
+  > svg {
+    fill: color($theme-color-error);
+  }
+}
+
+.cfa-button--yes {
+  > svg {
+    fill: color($theme-color-success-darker);
+  }
+}

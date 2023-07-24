@@ -7,8 +7,9 @@
 
 .cfa-form-group.usa-form-group--error {
   padding-left: units(4) - units(0.5);
+  margin-left: units(-3);
 
-  @include at-media('tablet'){
+  @include at-media('tablet') {
     // margin-left: (units(-4) - units(0.5))
     margin-left: units(-4)
   }

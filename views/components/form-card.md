@@ -38,6 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Examples {#examples}
 
+{% capture id_alert_label %}{% createId %}{% endcapture %}
 {% capture id_first_name %}{% createId %}{% endcapture %}
 {% capture id_last_name %}{% createId %}{% endcapture %}
 {% capture id_birthday %}{% createId %}{% endcapture %}
@@ -53,8 +54,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     "modifier": "usa-icon--size-9",
     "href": "{{ config.baseUrl }}uswds/img/sprite.svg#person"
   },
-  "heading": {
-    "text": "Tell us about yourself"
+  "header": {
+    "headingText": "Tell us about yourself",
+    "helpMessageText": "My help message text."
   },
   "formGroups": [
     {
@@ -287,19 +289,142 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           }
         }
       ]
-    },
-    {
-      "footer": {
-        "submit": [
-          {
-            "label": "Continue",
-            "modifier": "cfa-button usa-button--big",
-            "type": "submit"
-          }
-        ]
-      }
     }
-  ]
+  ],
+  "footer": {
+    "submit": [
+      {
+        "label": "Continue",
+        "modifier": "cfa-form-card__footer-first-button cfa-button usa-button--big",
+        "type": "submit"
+      }
+    ],
+    "skip": [
+      {
+        "label": "Skip",
+        "modifier": "cfa-button usa-button--big usa-button--outline",
+        "href": "#"
+      }
+    ],
+    "group": [
+      {
+        "label": "Yes",
+        "check": true,
+        "modifier": "cfa-button cfa-button--yes usa-button--big usa-button--outline",
+        "href": "#"
+      },
+      {
+        "label": "No",
+        "cross": true,
+        "modifier": "cfa-button cfa-button--no usa-button--big usa-button--outline ",
+        "href": "#"
+      }
+    ],
+    "subtleText": "<p>My subtle text. <a href=\"#\">My subtle text link</a>.</p>"
+  }
 }{% endcapture %}
 
 {% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card' %}
+
+
+{% capture id_alert_label %}{% createId %}{% endcapture %}
+{% capture id_first_name %}{% createId %}{% endcapture %}
+{% capture id_last_name %}{% createId %}{% endcapture %}
+{% capture id_birthday %}{% createId %}{% endcapture %}
+{% capture id_gender %}{% createId %}{% endcapture %}
+{% capture id_residency_within_year %}{% createId %}{% endcapture %}
+
+{% capture context %}{
+  "modifier": "cfa-form-card",
+  "form": {
+    "modifier": "cfa-form"
+  },
+  "header": {
+    "headingId": "aria-lb-{{ id_alert_label }}",
+    "headingText": "Confirm your address",
+    "helpMessageText": "My help message text.",
+    "alert": {
+      "modifier": "cfa-form-card__header-alert cfa-alert usa-alert--warning",
+      "role": "region",
+      "labelledBy": "aria-lb-{{ id_alert_label }}",
+      "text": "We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href=\"#\">Alternatively, click here to look up your county information</a>."
+    }
+  },
+  "fieldset": {
+    "modifier": "cfa-fieldset",
+    "legend": {
+      "text": "Please confirm your address.",
+      "modifier": "cfa-legend",
+      "modifierHint": "cfa-hint"
+    },
+    "hint": {
+      "text": "We updated the address you entered. If correct, please use the suggested address."
+    },
+    "options": [
+      {
+        "modifier": "cfa-radio",
+        "id": "radio-{% createId %}",
+        "name": "radio['{{ id }}']",
+        "type": "radio",
+        "value": "suggested-address",
+        "label": "Suggested address",
+        "description": "4918 Webster St., Apt 2 <br> Oakland, CA <br> 94609",
+        "checked": "true",
+        "input": {
+          "modifier": "usa-radio__input--tile"
+        }
+      },
+      {
+        "modifier": "cfa-radio",
+        "id": "radio-{% createId %}",
+        "name": "radio['{{ id }}']",
+        "type": "radio",
+        "value": "address-you-entered",
+        "label": "Address you entered",
+        "description": "4918 Webster Street <br> Apt 2 <br> Oakland, CA <br> 94609",
+        "input": {
+          "modifier": "usa-radio__input--tile"
+        }
+      }
+    ]
+  },
+  "footer": {
+    "submit": [
+      {
+        "label": "Continue",
+        "modifier": "cfa-form-card__footer-first-button cfa-button usa-button--big",
+        "type": "submit"
+      }
+    ]
+  }
+}{% endcapture %}
+
+{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card' %}
+
+
+## Guidance {#guidance}
+
+
+
+<!-- ACCESSIBILITY -->
+
+{% render 'accessibility.md'
+  nice: title,
+  theme_passes: false,
+  audit_passes: false,
+  keyboard_passes: false,
+  keyboard_test: 'No keyboard test has been created.',
+  resize_passes: false,
+  screen_reader_passes: false,
+  screen_reader_tests: 'No screen reader test has been created.',
+  guidance_passes: false,
+  additional: false,
+  config: config %}
+
+<!-- DESIGN -->
+
+<!-- render 'figma.md', url: design_honeycrisp -->
+
+<!-- SOURCE -->
+
+{% render 'source.md', name: 'form-card', nice: title, config: config %}
