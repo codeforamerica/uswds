@@ -8,18 +8,21 @@ url_uswds_guidance: https://designsystem.digital.gov/components/form
 url_uswds_usage: https://designsystem.digital.gov/components/form
 nice_uswds: Form
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#organisms-form_card_1
-nice_honeycrisp: Form card
-modifier_honeycrisp: false
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A521%26mode%3Ddesign%26t%3DGH49ArJ6HONOroNF-1
+nice_honeycrisp: Form card organism
+modifier_honeycrisp: ['.cfa-form-card', '.cfa-form', '.cfa-form-card__graphic', '.cfa-form-card__heading', '.cfa-form-card__help-message', '.cfa-form-card__header-alert', '.cfa-form-card__content', '.cfa-form-card__input-select-group', '.cfa-form-card__footer']
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A521%26mode%3Ddesign%26t%3DvzQiHaQRkv72JvWh-1
 # tokens: true
 styles: true
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections.
 
 <!-- DETAILS -->
+
+{% capture details_custom %}
+The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }}</a>. It includes the <a href="{{ config.baseUrl }}components/alert/">alert component</a>, <a href="{{ config.baseUrl }}components/form-group/">form group component</a>, <a href="{{ config.baseUrl }}/components/fieldset">fieldset component</a>, <a href="{{ config.baseUrl }}/components/button">button component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in a custom stylesheet.{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -31,6 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   tokens: tokens,
   styles: styles,
   modifier_honeycrisp: modifier_honeycrisp,
+  details_custom: details_custom,
   dictionary: dictionary,
   config: config %}
 
@@ -298,8 +302,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         "modifier": "cfa-form-card__footer-first-button cfa-button usa-button--big",
         "type": "submit"
       }
-    ],
-    "subtleText": "<p>My subtle text. <a href=\"#\">My subtle text link</a>.</p>"
+    ]
   }
 }{% endcapture %}
 
@@ -569,6 +572,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Guidance {#guidance}
 
+The form card contains three major sections or slots that can be customized with additional content or components described below.
+
+**Header**. This is the first section of the card that contains the following elements.
+  * **Heading**. The overall question of the card that the form fields relate to.
+  * **Help message**. Additional text that explains the question heading in further detail.
+  * **Alert**. Including additional text in an alert helps emphasize the importance of the information being asked for in the card or provides the applicant with time-sensitive information.
+
+**Content**. This is the main body of the form card that may contain any of the following types of content.
+  * **Process expectations**. Expectations can be set for how long it takes an application to complete, the major steps of the application, or breakdowns of service offerings.
+  * **Form element components**. Any form group component includes text inputs, text areas, selects, checkboxes, or radios.
+  * **Detailed examples**. These may be sample answers, illustrations for hard-to-find information, or alternatives.
+  * **Informational summaries**. These may include next-step summaries that set clear expectations for application submission follow-up.
+
+**Footer**. This is the last section of the card that may contain any of the following elements in this order.
+
+  1. **Continue button**. This primary element allows a user to submit the information asked for in a form card or progress to the next form card.
+  1. **Skip button**. This gives the applicant time and flexibility in providing the information asked for in the form card.
+  1. **Yes or no buttons**. Form cards with yes or no questions prevent applicants from answering irrelevant questions.
+  1. **Subtle link**. This type of link enables applicants to take alternative actions with their applications that are allowed but discouraged.
+  1. **Subtle text**. This type of text is used to reassure applicants to build trust, whether it's a note to remind them that we are securely protecting their personal information or a small alert to inform them that information has been sent to them.
+
+**Form groups vs. Fieldsets**. The header and content sections may use a `fieldset` with a `legend` element for the heading when the form card contains form element components.
+
+  * Form cards, with a combination of text inputs, text areas, selects, and checkbox group or radio group, will use the form group markup.
+  * All other form cards may use the `fieldset` and `legend` markup.
+    * Form cards with single text input, text area, select, checkbox group or radio group.
+    * Form cards with multiple text inputs, text areas, or selects will use the fieldset markup.
+
 {% capture ref_additional %}
 1. <a href="https://designsystem.digital.gov/patterns/complete-a-complex-form/progress-easily" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Complete a complex form, Progress easily</cite> | U.S. Web Design System (USWDS)</a>
 1. <a href="https://designsystem.digital.gov/templates/form-templates" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Form Templates</cite> | U.S. Web Design System (USWDS)</a>
@@ -597,8 +628,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- DESIGN -->
 
-<!-- render 'figma.md', url: design_honeycrisp -->
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'form-card', nice: title, config: config %}
+{% capture stylesheets %}
+  {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
+  {% capture stylesheet_form %}{% getFile 'form' 'stylesheet' %}{% endcapture %}
+
+  <li>Form: <code>..{{ stylesheet_form | replace: packages, '' }}</code></li>
+{% endcapture %}
+
+{% capture stylesheets_import %}
+@forward '{{ stylesheet_form }}'
+{% endcapture %}
+
+{% render 'source.md', name: 'form-card', nice: title, stylesheets: stylesheets, stylesheets_import: stylesheets_import, config: config %}
