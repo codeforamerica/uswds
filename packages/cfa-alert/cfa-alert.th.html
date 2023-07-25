@@ -2,7 +2,9 @@
   <div class="usa-alert__body">
     <h3 class="usa-alert__heading" th:if="${heading}" th:text="${heading}" th:attr="id=${labelledBy}">Heading</h3>
 
-    <div th:if="${body}" th:utext="${body}"></div>
+    <div th:if="${body}" th:utext="${body}">
+      <p>Body</p>
+    </div>
 
     <p class="usa-alert__text" th:if="${text}" th:utext="${text}">Text</p>
   </div>

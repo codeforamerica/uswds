@@ -55,11 +55,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-353ddafdf0f1">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f637085fd3c31">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-353ddafdf0f1" class="usa-nav__submenu">
+            <ul id="aria-c-f637085fd3c31" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -105,11 +105,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-70f27c758fe7c">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-3e490fd579485">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-70f27c758fe7c" class="usa-nav__submenu">
+            <ul id="aria-c-3e490fd579485" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -226,15 +226,16 @@
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/form" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Form</a></li>
   <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#organisms-form_card_1" target="_blank" rel="noopener nofollow" class="usa-link--external">Form card</a></li>
   <li>
-    <strong>Customization:</strong> <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Design tokens <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
-    and <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
+    <strong>Customization:</strong> 
+    <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
   </li>
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p><p>The visual appearance is modified using <b>design tokens</b> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#organisms-form_card_1" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Form card</a>.</p>
+<p><p>The <b>Form card</b> extends the <a href="https://designsystem.digital.gov/components/form" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Form</a>. </p>
 </details></p>
   </li>
 </ul>
@@ -242,158 +243,155 @@
 <h2 id="examples">Examples</h2>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card</figcaption>
-    <main class=" cfa-form-card">
+    <figcaption class="margin-bottom-2">Form card with multiple form groups and fieldsets</figcaption>
+    <main class="cfa-form-card">
   <form class="usa-form cfa-form">
     <svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#person"></use>
     </svg>
-    <header class="cfa-form-card__header">
-      <div class="cfa-form-card__header-heading">
+    <div>
+      <div class="cfa-form-card__heading">
         <h1>Tell us about yourself</h1>
       </div>
-      <div class="cfa-form-card__header-help-message">
-        <p>My help message text.</p>
-      </div>
-    </header>
-    <div class="cfa-form-card__contents">
-      <div>
+      <div class="cfa-form-card__content">
         <div>
           <div>
-            <div class="usa-form-group cfa-form-group" id="form-group-485899fd4f7e3">
-              <label class="usa-label cfa-label" for="input-485899fd4f7e3">
-                <span>What is your first name?</span>
-                <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
-              </label>
-              <div class="usa-hint">Legally as it appears on your I.D.</div>
-              <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-e5176e7ed7e52">
+                <label class="usa-label cfa-label" for="input-e5176e7ed7e52">
+                  <span>What is your first name?</span>
+                  <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+                </label>
+                <div class="usa-hint">Legally as it appears on your I.D.</div>
                 <div>
-                  <input class="usa-input cfa-input" type="text" id="input-485899fd4f7e3" name="input['485899fd4f7e3']" required="true">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-9787535119081">
-              <label class="usa-label cfa-label" for="input-9787535119081">
-                <span>What is your last name?</span>
-                <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
-              </label>
-              <div class="usa-hint">Legally as it appears on your I.D.</div>
-              <span class="usa-error-message" id="error-message-" role="alert">This field is required</span>
-              <div>
-                <div>
-                  <input class="usa-input cfa-input" type="text" id="input-9787535119081" name="input['9787535119081']" required="true">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <fieldset class="usa-fieldset cfa-fieldset">
-            <legend class="usa-legend cfa-legend">
-              <span>What is your date of birth?</span>
-            </legend>
-            <div class="usa-hint" id="hint-1e436d833991c">For example January / 1 / 2000</div>
-            <div class="usa-memorable-date cfa-memorable-date">
-              <div>
-                <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-1e436d833991c">
-                  <label class="usa-label cfa-label text-normal" for="month-1e436d833991c">
-                    <span>Month</span>
-                    <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
-                  </label>
                   <div>
-                    <select class="usa-select cfa-select" id="month-1e436d833991c" name="month['1e436d833991c']" aria-describedby="hint-1e436d833991c" required="true">
-                      <option selected="true">Click to select month</option>
-                      <option disabled="true">---</option>
-                      <option value="1">01 - January</option>
-                      <option value="2">02 - February</option>
-                      <option value="3">03 - March</option>
-                      <option value="4">04 - April</option>
-                      <option value="5">05 - May</option>
-                      <option value="6">06 - June</option>
-                      <option value="7">07 - July</option>
-                      <option value="8">08 - August</option>
-                      <option value="9">09 - September</option>
-                      <option value="10">10 - October</option>
-                      <option value="11">11 - November</option>
-                      <option value="12">12 - December</option>
-                    </select>
+                    <input class="usa-input cfa-input" type="text" id="input-e5176e7ed7e52" name="input['e5176e7ed7e52']" required="true">
                   </div>
                 </div>
               </div>
-              <div>
-                <div class="usa-form-group usa-form-group--day" id="form-group-1e436d833991c">
-                  <label class="usa-label cfa-label text-normal" for="day-1e436d833991c">
-                    <span>Day</span>
-                    <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
-                  </label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-619f79d49e52">
+                <label class="usa-label cfa-label" for="input-619f79d49e52">
+                  <span>What is your last name?</span>
+                  <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+                </label>
+                <div class="usa-hint">Legally as it appears on your I.D.</div>
+                <span class="usa-error-message" id="error-message-6ec77b7dae05b" role="alert">This field is required</span>
+                <div>
                   <div>
+                    <input class="usa-input cfa-input" type="text" id="input-619f79d49e52" name="input['619f79d49e52']" required="true">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <fieldset class="usa-fieldset cfa-fieldset">
+              <legend class="usa-legend cfa-legend">
+                <span>What is your date of birth?</span>
+              </legend>
+              <div class="usa-hint" id="hint-eb08dcdf01125">For example January / 1 / 2000</div>
+              <div class="usa-memorable-date cfa-memorable-date">
+                <div>
+                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-eb08dcdf01125">
+                    <label class="usa-label cfa-label text-normal" for="month-eb08dcdf01125">
+                      <span>Month</span>
+                      <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+                    </label>
                     <div>
-                      <input class="usa-input cfa-input" type="text" id="day-1e436d833991c" name="day['1e436d833991c']" aria-describedby="hint-1e436d833991c" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                      <select class="usa-select cfa-select" id="month-eb08dcdf01125" name="month['eb08dcdf01125']" aria-describedby="hint-eb08dcdf01125" required="true">
+                        <option selected="true">Click to select month</option>
+                        <option disabled="true">---</option>
+                        <option value="1">01 - January</option>
+                        <option value="2">02 - February</option>
+                        <option value="3">03 - March</option>
+                        <option value="4">04 - April</option>
+                        <option value="5">05 - May</option>
+                        <option value="6">06 - June</option>
+                        <option value="7">07 - July</option>
+                        <option value="8">08 - August</option>
+                        <option value="9">09 - September</option>
+                        <option value="10">10 - October</option>
+                        <option value="11">11 - November</option>
+                        <option value="12">12 - December</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="usa-form-group usa-form-group--day" id="form-group-eb08dcdf01125">
+                    <label class="usa-label cfa-label text-normal" for="day-eb08dcdf01125">
+                      <span>Day</span>
+                      <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+                    </label>
+                    <div>
+                      <div>
+                        <input class="usa-input cfa-input" type="text" id="day-eb08dcdf01125" name="day['eb08dcdf01125']" aria-describedby="hint-eb08dcdf01125" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="usa-form-group usa-form-group--year" id="form-group-eb08dcdf01125">
+                    <label class="usa-label cfa-label text-normal" for="year-eb08dcdf01125">
+                      <span>Year</span>
+                      <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+                    </label>
+                    <div>
+                      <div>
+                        <input class="usa-input cfa-input" type="text" id="year-eb08dcdf01125" name="year['eb08dcdf01125']" aria-describedby="hint-eb08dcdf01125" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <div class="usa-form-group usa-form-group--year" id="form-group-1e436d833991c">
-                  <label class="usa-label cfa-label text-normal" for="year-1e436d833991c">
-                    <span>Year</span>
-                    <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
-                  </label>
-                  <div>
-                    <div>
-                      <input class="usa-input cfa-input" type="text" id="year-1e436d833991c" name="year['1e436d833991c']" aria-describedby="hint-1e436d833991c" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
         </div>
-      </div>
-      <div>
         <div>
           <div>
-            <div class="usa-form-group cfa-form-group" id="form-group-ceb5568ee2597">
-              <label class="usa-label cfa-label" for="input-ceb5568ee2597">
-                <span>Which gender do you identify with?</span>
-              </label>
-              <div class="usa-hint">For example, man, woman, or non-binary.</div>
-              <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-385fc565904a3">
+                <label class="usa-label cfa-label" for="input-385fc565904a3">
+                  <span>Which gender do you identify with?</span>
+                </label>
+                <div class="usa-hint">For example, man, woman, or non-binary.</div>
                 <div>
-                  <input class="usa-input cfa-input" type="text" id="input-ceb5568ee2597" name="input['ceb5568ee2597']">
+                  <div>
+                    <input class="usa-input cfa-input" type="text" id="input-385fc565904a3" name="input['385fc565904a3']">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div>
         <div>
-          <fieldset class="usa-fieldset cfa-fieldset">
-            <legend class="usa-legend cfa-legend">
-              <span>Did you move to the state within the last year?</span>
-            </legend>
-            <div class="usa-radio cfa-radio">
-              <input type="radio" id="radio-4f69ca3d2af1e" name="radio['9f49cc9f7f3fb']" value="yes" class="usa-radio__input usa-radio__input--tile">
-              <label for="radio-4f69ca3d2af1e" class="usa-radio__label">
-                <span>Yes</span>
-              </label>
-            </div>
-            <div class="usa-radio cfa-radio">
-              <input type="radio" id="radio-83bd58a73a6c" name="radio['9f49cc9f7f3fb']" value="no" class="usa-radio__input usa-radio__input--tile">
-              <label for="radio-83bd58a73a6c" class="usa-radio__label">
-                <span>No</span>
-              </label>
-            </div>
-          </fieldset>
+          <div>
+            <fieldset class="usa-fieldset cfa-fieldset">
+              <legend class="usa-legend cfa-legend">
+                <span>Did you move to the state within the last year?</span>
+              </legend>
+              <div class="usa-radio cfa-radio">
+                <input type="radio" id="radio-e0568f5ca19cd" name="radio['7659a34a1da6a']" value="yes" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-e0568f5ca19cd" class="usa-radio__label">
+                  <span>Yes</span>
+                </label>
+              </div>
+              <div class="usa-radio cfa-radio">
+                <input type="radio" id="radio-485521bcb48d2" name="radio['7659a34a1da6a']" value="no" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-485521bcb48d2" class="usa-radio__label">
+                  <span>No</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
         </div>
       </div>
     </div>
@@ -406,12 +404,646 @@
         </span>
       </div>
       <div>
+        <p>My subtle text. <a href="#">My subtle text link</a>.</p>
+      </div>
+    </div>
+  </form>
+</main>
+  </div>
+  <div class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c9882ac317a06">
+          View HTML
+        </button>
+      </div>
+      <div id="aria-c-c9882ac317a06" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block">
+      <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
+  &lt;form class=&quot;usa-form cfa-form&quot;&gt;
+    &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#person&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1&gt;Tell us about yourself&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-e5176e7ed7e52&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-e5176e7ed7e52&quot;&gt;
+                  &lt;span&gt;What is your first name?&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-e5176e7ed7e52&quot; name=&quot;input['e5176e7ed7e52']&quot; required=&quot;true&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-619f79d49e52&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-619f79d49e52&quot;&gt;
+                  &lt;span&gt;What is your last name?&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-6ec77b7dae05b&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-619f79d49e52&quot; name=&quot;input['619f79d49e52']&quot; required=&quot;true&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+              &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
+                &lt;span&gt;What is your date of birth?&lt;/span&gt;
+              &lt;/legend&gt;
+              &lt;div class=&quot;usa-hint&quot; id=&quot;hint-eb08dcdf01125&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
+              &lt;div class=&quot;usa-memorable-date cfa-memorable-date&quot;&gt;
+                &lt;div&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-eb08dcdf01125&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-eb08dcdf01125&quot;&gt;
+                      &lt;span&gt;Month&lt;/span&gt;
+                      &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+                    &lt;/label&gt;
+                    &lt;div&gt;
+                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-eb08dcdf01125&quot; name=&quot;month['eb08dcdf01125']&quot; aria-describedby=&quot;hint-eb08dcdf01125&quot; required=&quot;true&quot;&gt;
+                        &lt;option selected=&quot;true&quot;&gt;Click to select month&lt;/option&gt;
+                        &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
+                        &lt;option value=&quot;1&quot;&gt;01 - January&lt;/option&gt;
+                        &lt;option value=&quot;2&quot;&gt;02 - February&lt;/option&gt;
+                        &lt;option value=&quot;3&quot;&gt;03 - March&lt;/option&gt;
+                        &lt;option value=&quot;4&quot;&gt;04 - April&lt;/option&gt;
+                        &lt;option value=&quot;5&quot;&gt;05 - May&lt;/option&gt;
+                        &lt;option value=&quot;6&quot;&gt;06 - June&lt;/option&gt;
+                        &lt;option value=&quot;7&quot;&gt;07 - July&lt;/option&gt;
+                        &lt;option value=&quot;8&quot;&gt;08 - August&lt;/option&gt;
+                        &lt;option value=&quot;9&quot;&gt;09 - September&lt;/option&gt;
+                        &lt;option value=&quot;10&quot;&gt;10 - October&lt;/option&gt;
+                        &lt;option value=&quot;11&quot;&gt;11 - November&lt;/option&gt;
+                        &lt;option value=&quot;12&quot;&gt;12 - December&lt;/option&gt;
+                      &lt;/select&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-eb08dcdf01125&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-eb08dcdf01125&quot;&gt;
+                      &lt;span&gt;Day&lt;/span&gt;
+                      &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+                    &lt;/label&gt;
+                    &lt;div&gt;
+                      &lt;div&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-eb08dcdf01125&quot; name=&quot;day['eb08dcdf01125']&quot; aria-describedby=&quot;hint-eb08dcdf01125&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-eb08dcdf01125&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-eb08dcdf01125&quot;&gt;
+                      &lt;span&gt;Year&lt;/span&gt;
+                      &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+                    &lt;/label&gt;
+                    &lt;div&gt;
+                      &lt;div&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-eb08dcdf01125&quot; name=&quot;year['eb08dcdf01125']&quot; aria-describedby=&quot;hint-eb08dcdf01125&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/fieldset&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-385fc565904a3&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-385fc565904a3&quot;&gt;
+                  &lt;span&gt;Which gender do you identify with?&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;div class=&quot;usa-hint&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-385fc565904a3&quot; name=&quot;input['385fc565904a3']&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+              &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
+                &lt;span&gt;Did you move to the state within the last year?&lt;/span&gt;
+              &lt;/legend&gt;
+              &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-e0568f5ca19cd&quot; name=&quot;radio['7659a34a1da6a']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-e0568f5ca19cd&quot; class=&quot;usa-radio__label&quot;&gt;
+                  &lt;span&gt;Yes&lt;/span&gt;
+                &lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-485521bcb48d2&quot; name=&quot;radio['7659a34a1da6a']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-485521bcb48d2&quot; class=&quot;usa-radio__label&quot;&gt;
+                  &lt;span&gt;No&lt;/span&gt;
+                &lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/fieldset&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cfa-form-card__footer&quot;&gt;
+      &lt;div&gt;
+        &lt;span&gt;
+          &lt;button class=&quot;usa-button cfa-form-card__footer-first-button cfa-button usa-button--big&quot; type=&quot;submit&quot;&gt;
+            &lt;span&gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;p&gt;My subtle text. &lt;a href=&quot;#&quot;&gt;My subtle text link&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/main&gt;</pre>
+    </div>
+      </div>
+    </div>
+  </div>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Form card with single question and multi-part text input fieldset</figcaption>
+    <main class="cfa-form-card">
+  <form class="usa-form cfa-form">
+    <svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
+      <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#home"></use>
+    </svg>
+    <fieldset class="usa-fieldset cfa-fieldset">
+      <legend class="cfa-form-card__heading">
+        <h1>Where are you currently living?</h1>
+      </legend>
+      <div class="cfa-form-card__content">
+        <div>
+          <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-7edd42ea6fbad">
+                <label class="usa-label cfa-label" for="input-7edd42ea6fbad">
+                  <span>Street address</span>
+                  <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+                </label>
+                <div>
+                  <div>
+                    <input class="usa-input cfa-input" type="text" id="input-7edd42ea6fbad" name="input['7edd42ea6fbad']" required="true" autocomplete="address-line1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-0d656963b58a9">
+                <label class="usa-label cfa-label" for="input-0d656963b58a9">
+                  <span>Street address line 2</span>
+                  <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+                </label>
+                <div>
+                  <div>
+                    <input class="usa-input cfa-input" type="text" id="input-0d656963b58a9" name="input['0d656963b58a9']" required="true" autocomplete="address-line2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-0d0472fd78c15">
+                <label class="usa-label cfa-label" for="input-0d0472fd78c15">
+                  <span>City</span>
+                  <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+                </label>
+                <div>
+                  <div>
+                    <input class="usa-input cfa-input" type="text" id="input-0d0472fd78c15" name="input['0d0472fd78c15']" required="true" autocomplete="address-level2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-ab9d5b57f881f">
+                <label class="usa-label cfa-label" for="input-ab9d5b57f881f">
+                  <span>State, territory, or military post</span>
+                  <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+                </label>
+                <div>
+                  <div>
+                    <input class="usa-input cfa-input usa-input--sm" type="text" id="input-ab9d5b57f881f" name="input['ab9d5b57f881f']" required="true" maxlength="2" autocomplete="address-level1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div class="usa-form-group cfa-form-group" id="form-group-c64002c1b2f01">
+                <label class="usa-label cfa-label" for="input-c64002c1b2f01">
+                  <span>ZIP code</span>
+                  <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+                </label>
+                <div>
+                  <div>
+                    <input class="usa-input cfa-input usa-input--md" type="text" id="input-c64002c1b2f01" name="input['c64002c1b2f01']" required="true" pattern="[\d]{5}(-[\d]{4})?" autocomplete="postal-code">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="cfa-form-card__footer">
+      <div>
         <span>
-          <a class="usa-button cfa-button usa-button--big usa-button--outline" href="#">
-            <span>Skip</span>
+          <button class="usa-button cfa-form-card__footer-first-button cfa-button usa-button--big" type="submit">
+            <span>Continue</span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </form>
+</main>
+  </div>
+  <div class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-b302c5bdbf55e">
+          View HTML
+        </button>
+      </div>
+      <div id="aria-c-b302c5bdbf55e" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block">
+      <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
+  &lt;form class=&quot;usa-form cfa-form&quot;&gt;
+    &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#home&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+      &lt;legend class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1&gt;Where are you currently living?&lt;/h1&gt;
+      &lt;/legend&gt;
+      &lt;div class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-7edd42ea6fbad&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-7edd42ea6fbad&quot;&gt;
+                  &lt;span&gt;Street address&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-7edd42ea6fbad&quot; name=&quot;input['7edd42ea6fbad']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-0d656963b58a9&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-0d656963b58a9&quot;&gt;
+                  &lt;span&gt;Street address line 2&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-0d656963b58a9&quot; name=&quot;input['0d656963b58a9']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-0d0472fd78c15&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-0d0472fd78c15&quot;&gt;
+                  &lt;span&gt;City&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-0d0472fd78c15&quot; name=&quot;input['0d0472fd78c15']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-ab9d5b57f881f&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ab9d5b57f881f&quot;&gt;
+                  &lt;span&gt;State, territory, or military post&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-ab9d5b57f881f&quot; name=&quot;input['ab9d5b57f881f']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-c64002c1b2f01&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-c64002c1b2f01&quot;&gt;
+                  &lt;span&gt;ZIP code&lt;/span&gt;
+                  &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
+                &lt;/label&gt;
+                &lt;div&gt;
+                  &lt;div&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-c64002c1b2f01&quot; name=&quot;input['c64002c1b2f01']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;cfa-form-card__footer&quot;&gt;
+      &lt;div&gt;
+        &lt;span&gt;
+          &lt;button class=&quot;usa-button cfa-form-card__footer-first-button cfa-button usa-button--big&quot; type=&quot;submit&quot;&gt;
+            &lt;span&gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/main&gt;</pre>
+    </div>
+      </div>
+    </div>
+  </div>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Form card with single question, alert, and radios fieldset</figcaption>
+    <main class="cfa-form-card">
+  <form class="usa-form cfa-form">
+    <fieldset class="usa-fieldset cfa-fieldset">
+      <legend class="cfa-form-card__heading">
+        <h1 id="aria-lb-345d62377ff71">Confirm your address</h1>
+      </legend>
+      <div>
+        <div class="usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning" role="region" aria-labelledby="aria-lb-345d62377ff71">
+          <div class="usa-alert__body">
+            <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href="#">Alternatively, click here to look up your county information</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cfa-form-card__content">
+        <div>
+          <div class="cfa-form-card__input-select-group">
+            <div class="usa-radio cfa-radio">
+              <input type="radio" id="radio-74e3f1b8bd181" name="radio['9ce04bd3456c4']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
+              <label for="radio-74e3f1b8bd181" class="usa-radio__label">
+                <span>Suggested address</span>
+                <span class="usa-radio__label-description">4918 Webster St., Apt 2
+                  <br> Oakland, CA
+                  <br> 94609
+                </span>
+              </label>
+            </div>
+            <div class="usa-radio cfa-radio">
+              <input type="radio" id="radio-c9f589129675b" name="radio['9ce04bd3456c4']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
+              <label for="radio-c9f589129675b" class="usa-radio__label">
+                <span>Address you entered</span>
+                <span class="usa-radio__label-description">4918 Webster Street
+                  <br> Apt 2
+                  <br> Oakland, CA
+                  <br> 94609
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="cfa-form-card__footer">
+      <div>
+        <span>
+          <button class="usa-button cfa-form-card__footer-first-button cfa-button usa-button--big" type="submit">
+            <span>Continue</span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </form>
+</main>
+  </div>
+  <div class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-2530e5304d864">
+          View HTML
+        </button>
+      </div>
+      <div id="aria-c-2530e5304d864" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block">
+      <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
+  &lt;form class=&quot;usa-form cfa-form&quot;&gt;
+    &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+      &lt;legend class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1 id=&quot;aria-lb-345d62377ff71&quot;&gt;Confirm your address&lt;/h1&gt;
+      &lt;/legend&gt;
+      &lt;div&gt;
+        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-345d62377ff71&quot;&gt;
+          &lt;div class=&quot;usa-alert__body&quot;&gt;
+            &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. &lt;a href=&quot;#&quot;&gt;Alternatively, click here to look up your county information&lt;/a&gt;.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;div&gt;
+          &lt;div class=&quot;cfa-form-card__input-select-group&quot;&gt;
+            &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-74e3f1b8bd181&quot; name=&quot;radio['9ce04bd3456c4']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-74e3f1b8bd181&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;span&gt;Suggested address&lt;/span&gt;
+                &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
+                  &lt;br&gt; Oakland, CA
+                  &lt;br&gt; 94609
+                &lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-c9f589129675b&quot; name=&quot;radio['9ce04bd3456c4']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-c9f589129675b&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;span&gt;Address you entered&lt;/span&gt;
+                &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
+                  &lt;br&gt; Apt 2
+                  &lt;br&gt; Oakland, CA
+                  &lt;br&gt; 94609
+                &lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;cfa-form-card__footer&quot;&gt;
+      &lt;div&gt;
+        &lt;span&gt;
+          &lt;button class=&quot;usa-button cfa-form-card__footer-first-button cfa-button usa-button--big&quot; type=&quot;submit&quot;&gt;
+            &lt;span&gt;Continue&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/main&gt;</pre>
+    </div>
+      </div>
+    </div>
+  </div>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Form card with single question, continue, and skip links</figcaption>
+    <main class="cfa-form-card">
+  <form class="usa-form cfa-form">
+    <svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
+      <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#phone"></use>
+    </svg>
+    <div>
+      <div class="cfa-form-card__heading">
+        <h1>Are you sure you want to leave your phone number blank?</h1>
+      </div>
+      <div class="cfa-form-card__content">
+        <p>A caseworker may need to contact you by phone about your application. If you don't have a phone number, you can enter a friend or family member's phone number instead.</p>
+      </div>
+    </div>
+    <div class="cfa-form-card__footer">
+      <div>
+        <span>
+          <a class="usa-button cfa-form-card__footer-first-button cfa-button usa-button--big" href="#">
+            <span>Add a phone number</span>
           </a>
         </span>
       </div>
+      <div>
+        <span>
+          <a class="usa-button cfa-button usa-button--big usa-button--outline" href="#">
+            <span>Continue without it</span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </form>
+</main>
+  </div>
+  <div class="margin-0">
+    <div class="usa-accordion cfa-accordion">
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-460fed5595ee3">
+          View HTML
+        </button>
+      </div>
+      <div id="aria-c-460fed5595ee3" class="usa-accordion__content overflow-visible padding-0">
+        <div class="code-block">
+      <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
+  &lt;form class=&quot;usa-form cfa-form&quot;&gt;
+    &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#phone&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1&gt;Are you sure you want to leave your phone number blank?&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;p&gt;A caseworker may need to contact you by phone about your application. If you don't have a phone number, you can enter a friend or family member's phone number instead.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cfa-form-card__footer&quot;&gt;
+      &lt;div&gt;
+        &lt;span&gt;
+          &lt;a class=&quot;usa-button cfa-form-card__footer-first-button cfa-button usa-button--big&quot; href=&quot;#&quot;&gt;
+            &lt;span&gt;Add a phone number&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;span&gt;
+          &lt;a class=&quot;usa-button cfa-button usa-button--big usa-button--outline&quot; href=&quot;#&quot;&gt;
+            &lt;span&gt;Continue without it&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/main&gt;</pre>
+    </div>
+      </div>
+    </div>
+  </div>
+</figure>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
+  <div class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">Form card with single question, yes, and no links</figcaption>
+    <main class="cfa-form-card">
+  <form class="usa-form cfa-form">
+    <div>
+      <div class="cfa-form-card__heading">
+        <h1>Do you live with any of these people?</h1>
+      </div>
+      <div class="cfa-form-card__content">
+        <ul>
+          <li>Your spouse</li>
+          <li>Your children</li>
+          <li>Other family members</li>
+          <li>Your domestic partner</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cfa-form-card__footer">
       <div>
         <span>
           <a class="usa-button cfa-button cfa-button--yes usa-button--big usa-button--outline" href="#">
@@ -430,9 +1062,6 @@
           </a>
         </span>
       </div>
-      <div>
-        <p>My subtle text. <a href="#">My subtle text link</a>.</p>
-      </div>
     </div>
   </form>
 </main>
@@ -440,181 +1069,28 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-478ee516b4238">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-24aaca8f2be6c">
           View HTML
         </button>
       </div>
-      <div id="aria-c-478ee516b4238" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-24aaca8f2be6c" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;main class=&quot; cfa-form-card&quot;&gt;
+      <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
-    &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
-      &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#person&quot;&gt;&lt;/use&gt;
-    &lt;/svg&gt;
-    &lt;header class=&quot;cfa-form-card__header&quot;&gt;
-      &lt;div class=&quot;cfa-form-card__header-heading&quot;&gt;
-        &lt;h1&gt;Tell us about yourself&lt;/h1&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1&gt;Do you live with any of these people?&lt;/h1&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;cfa-form-card__header-help-message&quot;&gt;
-        &lt;p&gt;My help message text.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;cfa-form-card__contents&quot;&gt;
-      &lt;div&gt;
-        &lt;div&gt;
-          &lt;div&gt;
-            &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-485899fd4f7e3&quot;&gt;
-              &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-485899fd4f7e3&quot;&gt;
-                &lt;span&gt;What is your first name?&lt;/span&gt;
-                &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-              &lt;/label&gt;
-              &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-              &lt;div&gt;
-                &lt;div&gt;
-                  &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-485899fd4f7e3&quot; name=&quot;input['485899fd4f7e3']&quot; required=&quot;true&quot;&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;div&gt;
-          &lt;div&gt;
-            &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-9787535119081&quot;&gt;
-              &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-9787535119081&quot;&gt;
-                &lt;span&gt;What is your last name?&lt;/span&gt;
-                &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-              &lt;/label&gt;
-              &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-              &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
-              &lt;div&gt;
-                &lt;div&gt;
-                  &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-9787535119081&quot; name=&quot;input['9787535119081']&quot; required=&quot;true&quot;&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;div&gt;
-          &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
-            &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
-              &lt;span&gt;What is your date of birth?&lt;/span&gt;
-            &lt;/legend&gt;
-            &lt;div class=&quot;usa-hint&quot; id=&quot;hint-1e436d833991c&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
-            &lt;div class=&quot;usa-memorable-date cfa-memorable-date&quot;&gt;
-              &lt;div&gt;
-                &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-1e436d833991c&quot;&gt;
-                  &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-1e436d833991c&quot;&gt;
-                    &lt;span&gt;Month&lt;/span&gt;
-                    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-                  &lt;/label&gt;
-                  &lt;div&gt;
-                    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-1e436d833991c&quot; name=&quot;month['1e436d833991c']&quot; aria-describedby=&quot;hint-1e436d833991c&quot; required=&quot;true&quot;&gt;
-                      &lt;option selected=&quot;true&quot;&gt;Click to select month&lt;/option&gt;
-                      &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
-                      &lt;option value=&quot;1&quot;&gt;01 - January&lt;/option&gt;
-                      &lt;option value=&quot;2&quot;&gt;02 - February&lt;/option&gt;
-                      &lt;option value=&quot;3&quot;&gt;03 - March&lt;/option&gt;
-                      &lt;option value=&quot;4&quot;&gt;04 - April&lt;/option&gt;
-                      &lt;option value=&quot;5&quot;&gt;05 - May&lt;/option&gt;
-                      &lt;option value=&quot;6&quot;&gt;06 - June&lt;/option&gt;
-                      &lt;option value=&quot;7&quot;&gt;07 - July&lt;/option&gt;
-                      &lt;option value=&quot;8&quot;&gt;08 - August&lt;/option&gt;
-                      &lt;option value=&quot;9&quot;&gt;09 - September&lt;/option&gt;
-                      &lt;option value=&quot;10&quot;&gt;10 - October&lt;/option&gt;
-                      &lt;option value=&quot;11&quot;&gt;11 - November&lt;/option&gt;
-                      &lt;option value=&quot;12&quot;&gt;12 - December&lt;/option&gt;
-                    &lt;/select&gt;
-                  &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div&gt;
-                &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-1e436d833991c&quot;&gt;
-                  &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-1e436d833991c&quot;&gt;
-                    &lt;span&gt;Day&lt;/span&gt;
-                    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-                  &lt;/label&gt;
-                  &lt;div&gt;
-                    &lt;div&gt;
-                      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-1e436d833991c&quot; name=&quot;day['1e436d833991c']&quot; aria-describedby=&quot;hint-1e436d833991c&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div&gt;
-                &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-1e436d833991c&quot;&gt;
-                  &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-1e436d833991c&quot;&gt;
-                    &lt;span&gt;Year&lt;/span&gt;
-                    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-                  &lt;/label&gt;
-                  &lt;div&gt;
-                    &lt;div&gt;
-                      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-1e436d833991c&quot; name=&quot;year['1e436d833991c']&quot; aria-describedby=&quot;hint-1e436d833991c&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;div&gt;
-          &lt;div&gt;
-            &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-ceb5568ee2597&quot;&gt;
-              &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ceb5568ee2597&quot;&gt;
-                &lt;span&gt;Which gender do you identify with?&lt;/span&gt;
-              &lt;/label&gt;
-              &lt;div class=&quot;usa-hint&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
-              &lt;div&gt;
-                &lt;div&gt;
-                  &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-ceb5568ee2597&quot; name=&quot;input['ceb5568ee2597']&quot;&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;div&gt;
-          &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
-            &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
-              &lt;span&gt;Did you move to the state within the last year?&lt;/span&gt;
-            &lt;/legend&gt;
-            &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-4f69ca3d2af1e&quot; name=&quot;radio['9f49cc9f7f3fb']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-4f69ca3d2af1e&quot; class=&quot;usa-radio__label&quot;&gt;
-                &lt;span&gt;Yes&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-83bd58a73a6c&quot; name=&quot;radio['9f49cc9f7f3fb']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-83bd58a73a6c&quot; class=&quot;usa-radio__label&quot;&gt;
-                &lt;span&gt;No&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-        &lt;/div&gt;
+      &lt;div class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Your spouse&lt;/li&gt;
+          &lt;li&gt;Your children&lt;/li&gt;
+          &lt;li&gt;Other family members&lt;/li&gt;
+          &lt;li&gt;Your domestic partner&lt;/li&gt;
+        &lt;/ul&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;cfa-form-card__footer&quot;&gt;
-      &lt;div&gt;
-        &lt;span&gt;
-          &lt;button class=&quot;usa-button cfa-form-card__footer-first-button cfa-button usa-button--big&quot; type=&quot;submit&quot;&gt;
-            &lt;span&gt;Continue&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;span&gt;
-          &lt;a class=&quot;usa-button cfa-button usa-button--big usa-button--outline&quot; href=&quot;#&quot;&gt;
-            &lt;span&gt;Skip&lt;/span&gt;
-          &lt;/a&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
       &lt;div&gt;
         &lt;span&gt;
           &lt;a class=&quot;usa-button cfa-button cfa-button--yes usa-button--big usa-button--outline&quot; href=&quot;#&quot;&gt;
@@ -633,87 +1109,6 @@
           &lt;/a&gt;
         &lt;/span&gt;
       &lt;/div&gt;
-      &lt;div&gt;
-        &lt;p&gt;My subtle text. &lt;a href=&quot;#&quot;&gt;My subtle text link&lt;/a&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-&lt;/main&gt;</pre>
-    </div>
-      </div>
-    </div>
-  </div>
-</figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card</figcaption>
-    <main class=" cfa-form-card">
-  <form class="usa-form cfa-form">
-    <header class="cfa-form-card__header">
-      <div class="cfa-form-card__header-heading">
-        <h1 id="aria-lb-99854abb6d2a">Confirm your address</h1>
-      </div>
-      <div class="cfa-form-card__header-help-message">
-        <p>My help message text.</p>
-      </div>
-      <div>
-        <div class="usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning" role="region" aria-labelledby="aria-lb-99854abb6d2a">
-          <div class="usa-alert__body">
-            <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href="#">Alternatively, click here to look up your county information</a>.</p>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="cfa-form-card__contents">
-    </div>
-    <div class="cfa-form-card__footer">
-      <div>
-        <span>
-          <button class="usa-button cfa-form-card__footer-first-button cfa-button usa-button--big" type="submit">
-            <span>Continue</span>
-          </button>
-        </span>
-      </div>
-    </div>
-  </form>
-</main>
-  </div>
-  <div class="margin-0">
-    <div class="usa-accordion cfa-accordion">
-      <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a709f9e923998">
-          View HTML
-        </button>
-      </div>
-      <div id="aria-c-a709f9e923998" class="usa-accordion__content overflow-visible padding-0">
-        <div class="code-block">
-      <pre class="language-html">&lt;main class=&quot; cfa-form-card&quot;&gt;
-  &lt;form class=&quot;usa-form cfa-form&quot;&gt;
-    &lt;header class=&quot;cfa-form-card__header&quot;&gt;
-      &lt;div class=&quot;cfa-form-card__header-heading&quot;&gt;
-        &lt;h1 id=&quot;aria-lb-99854abb6d2a&quot;&gt;Confirm your address&lt;/h1&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;cfa-form-card__header-help-message&quot;&gt;
-        &lt;p&gt;My help message text.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-99854abb6d2a&quot;&gt;
-          &lt;div class=&quot;usa-alert__body&quot;&gt;
-            &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. &lt;a href=&quot;#&quot;&gt;Alternatively, click here to look up your county information&lt;/a&gt;.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;cfa-form-card__contents&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;cfa-form-card__footer&quot;&gt;
-      &lt;div&gt;
-        &lt;span&gt;
-          &lt;button class=&quot;usa-button cfa-form-card__footer-first-button cfa-button usa-button--big&quot; type=&quot;submit&quot;&gt;
-            &lt;span&gt;Continue&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/form&gt;
 &lt;/main&gt;</pre>
@@ -723,6 +1118,24 @@
   </div>
 </figure>
 <h2 id="guidance">Guidance</h2>
+<p>Refer to additional guidance on the USWDS documentation site.</p>
+<a class="usa-button cfa-button usa-button--outline" href="https://designsystem.digital.gov/components/form">
+  <span>USWDS documentation site</span>
+  <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+    <use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#launch"></use>
+  </svg>
+</a>
+<p><b>Additional references</b></p>
+<div class="font-body-3xs">
+<ol>
+<li><a href="https://designsystem.digital.gov/patterns/complete-a-complex-form/progress-easily" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Complete a complex form, Progress easily</cite> | U.S. Web Design System (USWDS)</a></li>
+<li><a href="https://designsystem.digital.gov/templates/form-templates" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Form Templates</cite> | U.S. Web Design System (USWDS)</a></li>
+<li><a href="https://designsystem.digital.gov/templates/authentication-pages" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Authentication Pages</cite> | U.S. Web Design System (USWDS)</a></li>
+<li><a href="https://design.va.gov/templates/forms" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Form</cite> | VA.gov Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/patterns/question-pages" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Question Pages</cite> | GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/get-started/labels-legends-headings" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Making labels and legends headings</cite> | GOV.UK Design System</a></li>
+</ol>
+</div>
 <!-- ACCESSIBILITY -->
 <!-- <div class="usa-summary-box margin-y-6" role="region" aria-labelledby="accessibility">
   <div class="usa-summary-box__body"> -->
@@ -823,52 +1236,93 @@
       <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
     </figcaption>
     <div class="code-block">
-      <pre class="language-html">&lt;main th:fragment=&quot;formCard(modifier, id, form, graphic, header, formGroups, fieldset, footer)&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
+      <pre class="language-html">&lt;main th:fragment=&quot;formCard(modifier, id, form, graphic, header, content, formGroups, fieldset, footer)&quot; class=&quot;cfa-form-card&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id},aria-label=${ariaLabel}&quot;&gt;
   &lt;form class=&quot;usa-form&quot; th:classappend=&quot;${form.modifier}&quot;&gt;
     &lt;svg th:if=&quot;${graphic}&quot; class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use th:href=&quot;${graphic.href}&quot;&gt;&lt;/use&gt;
     &lt;/svg&gt;
-    &lt;header th:if=&quot;${header}&quot; class=&quot;cfa-form-card__header&quot; th:classappend=&quot;${header.modifier}&quot;&gt;
-      &lt;div th:if=&quot;${header.headingText}&quot; class=&quot;cfa-form-card__header-heading&quot;&gt;
-        &lt;h1 th:attr=&quot;id=${header.headingId}&quot; th:text=&quot;${header.headingText}&quot;&gt;Heading&lt;/h1&gt;
+    &lt;div th:unless=&quot;${fieldset}&quot;&gt;
+      &lt;div th:if=&quot;${header.heading.text}&quot; class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1 th:attr=&quot;id=${header.heading.id}&quot; th:text=&quot;${header.heading.text}&quot;&gt;Heading&lt;/h1&gt;
       &lt;/div&gt;
-      &lt;div th:if=&quot;${header.heading}&quot; class=&quot;cfa-form-card__header-heading&quot; th:utext=&quot;${header.heading}&quot;&gt;
+      &lt;div th:if=&quot;${header.heading.content}&quot; class=&quot;cfa-form-card__heading&quot; th:utext=&quot;${header.heading.content}&quot;&gt;
         &lt;h1&gt;Heading&lt;/h1&gt;
       &lt;/div&gt;
-      &lt;div th:if=&quot;${header.helpMessageText}&quot; class=&quot;cfa-form-card__header-help-message&quot;&gt;
-        &lt;p th:text=&quot;${header.helpMessageText}&quot;&gt;Help message.&lt;/p&gt;
+      &lt;div th:if=&quot;${header.helpMessage.text}&quot; class=&quot;cfa-form-card__help-message&quot;&gt;
+        &lt;p th:text=&quot;${header.helpMessage.text}&quot;&gt;Help message.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div th:if=&quot;${header.helpMessage}&quot; class=&quot;cfa-form-card__header-help-message&quot; th:utext=&quot;${header.helpMessage}&quot;&gt;
+      &lt;div th:if=&quot;${header.helpMessage.content}&quot; class=&quot;cfa-form-card__help-message&quot; th:utext=&quot;${header.helpMessage.content}&quot;&gt;
         &lt;p&gt;Help message.&lt;/p&gt;
       &lt;/div&gt;
       &lt;div th:if=&quot;${header.alert}&quot;&gt;
         &lt;th:block th:replace=&quot;~{packages/cfa-alert/cfa-alert.th :: alert(${header.alert.modifier}, ${header.alert.role}, ${header.alert.heading}, ${header.alert.label}, ${header.alert.labelledBy}, ${header.alert.body}, ${header.alert.text})}&quot;&gt;&lt;/th:block&gt;
       &lt;/div&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;cfa-form-card__contents&quot;&gt;
-      &lt;div th:each=&quot;formGroup: ${formGroups}&quot;&gt;
-        &lt;div th:if=&quot;${formGroup.input}&quot;&gt;
-          &lt;div th:unless=&quot;${formGroup.inputGroup}&quot;&gt;
-            &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, '', '', '')}&quot; /&gt;
+      &lt;div th:if=&quot;${content}&quot; class=&quot;cfa-form-card__content&quot; th:utext=&quot;${content}&quot;&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div th:if=&quot;${formGroups}&quot; class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;div th:each=&quot;formGroup: ${formGroups}&quot;&gt;
+          &lt;div th:if=&quot;${formGroup.input}&quot;&gt;
+            &lt;div th:unless=&quot;${formGroup.inputGroup}&quot;&gt;
+              &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, '', '', '')}&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div th:if=&quot;${formGroup.inputGroup}&quot;&gt;
+              &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, '', '')}&quot; /&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-          &lt;div th:if=&quot;${formGroup.inputGroup}&quot;&gt;
-            &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, '', '')}&quot; /&gt;
+          &lt;div th:if=&quot;${formGroup.textarea}&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', ${formGroup.textarea}, '')}&quot; /&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div th:if=&quot;${formGroup.textarea}&quot;&gt;
-          &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', ${formGroup.textarea}, '')}&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div th:if=&quot;${formGroup.selectEl}&quot;&gt;
-          &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', '', ${formGroup.selectEl})}&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div th:if=&quot;${formGroup.memorableDate}&quot;&gt;
-          &lt;th:block th:replace=&quot;~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.modifier}, ${formGroup.id}, ${formGroup.fieldset}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.month},  ${formGroup.day},  ${formGroup.year})}&quot; /&gt;
-        &lt;/div&gt;
-        &lt;div th:if=&quot;${formGroup.options}&quot;&gt;
-          &lt;th:block th:replace=&quot;~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${formGroup.modifier}, ${formGroup.id}, ${formGroup.legend}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.options})}&quot; /&gt;
+          &lt;div th:if=&quot;${formGroup.selectEl}&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', '', ${formGroup.selectEl})}&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div th:if=&quot;${formGroup.memorableDate}&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.modifier}, ${formGroup.id}, ${formGroup.fieldset}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.month},  ${formGroup.day},  ${formGroup.year})}&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div th:if=&quot;${formGroup.options}&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${formGroup.modifier}, ${formGroup.id}, ${formGroup.legend}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.options})}&quot; /&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+    &lt;fieldset th:if=&quot;${fieldset}&quot; class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+      &lt;legend th:if=&quot;${header.heading.text}&quot; class=&quot;cfa-form-card__heading&quot;&gt;
+        &lt;h1 th:attr=&quot;id=${header.heading.id}&quot; th:text=&quot;${header.heading.text}&quot;&gt;Heading&lt;/h1&gt;
+      &lt;/legend&gt;
+      &lt;div th:if=&quot;${header.heading.content}&quot; class=&quot;cfa-form-card__heading&quot; th:utext=&quot;${header.heading.content}&quot;&gt;
+        &lt;h1&gt;Heading&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div th:if=&quot;${header.helpMessage.text}&quot; class=&quot;cfa-form-card__help-message&quot;&gt;
+        &lt;p th:text=&quot;${header.helpMessage.text}&quot;&gt;Help message.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div th:if=&quot;${header.helpMessage.content}&quot; class=&quot;cfa-form-card__help-message&quot; th:utext=&quot;${header.helpMessage.content}&quot;&gt;
+        &lt;p&gt;Help message.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div th:if=&quot;${header.alert}&quot;&gt;
+        &lt;th:block th:replace=&quot;~{packages/cfa-alert/cfa-alert.th :: alert(${header.alert.modifier}, ${header.alert.role}, ${header.alert.heading}, ${header.alert.label}, ${header.alert.labelledBy}, ${header.alert.body}, ${header.alert.text})}&quot;&gt;&lt;/th:block&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;cfa-form-card__content&quot;&gt;
+        &lt;div th:each=&quot;formGroup: ${fieldset.formGroups}&quot;&gt;
+          &lt;div th:if=&quot;${formGroup.input}&quot;&gt;
+            &lt;div th:unless=&quot;${formGroup.inputGroup}&quot;&gt;
+              &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, '', '', '')}&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div th:if=&quot;${formGroup.inputGroup}&quot;&gt;
+              &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, '', '')}&quot; /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div th:if=&quot;${formGroup.textarea}&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', ${formGroup.textarea}, '')}&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div th:if=&quot;${formGroup.selectEl}&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', '', ${formGroup.selectEl})}&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div th:if=&quot;${formGroup.options}&quot; class=&quot;cfa-form-card__input-select-group&quot;&gt;
+            &lt;th:block th:replace=&quot;~{packages/cfa-input-select/cfa-input-select.th :: inputSelect(${formGroup.options}, ${formGroup.required})}&quot; /&gt;
+          &lt;div&gt;
+        &lt;/div&gt;
+      &lt;div&gt;
+    &lt;/fieldset&gt;
     &lt;div th:if=&quot;${footer}&quot; class=&quot;cfa-form-card__footer&quot;&gt;
       &lt;div th:if=&quot;${footer.submit}&quot;&gt;
         &lt;th:block th:replace=&quot;~{packages/cfa-button/cfa-button.th :: button(${footer.submit})}&quot; /&gt;
@@ -893,7 +1347,7 @@
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
     </div>
     <div class="code-block">
-      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card.th :: formCard(${modifier}, ${id}, ${graphic}, ${header}, ${formGroups}, ${footer})}&quot; /&gt;</pre>
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card.th :: formCard(${modifier}, ${id}, ${ariaLabel}, ${graphic}, ${fieldset}, ${content}, ${formGroups}, ${footer})}&quot; /&gt;</pre>
     </div>
   </div>
 </figure>

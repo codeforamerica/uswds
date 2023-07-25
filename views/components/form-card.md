@@ -3,15 +3,15 @@ tags: component
 title: Form card
 layout: default
 intro:
-url_uswds:
-url_uswds_guidance:
-url_uswds_usage:
-nice_uswds:
+url_uswds: https://designsystem.digital.gov/components/form
+url_uswds_guidance: https://designsystem.digital.gov/components/form
+url_uswds_usage: https://designsystem.digital.gov/components/form
+nice_uswds: Form
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#organisms-form_card_1
 nice_honeycrisp: Form card
 modifier_honeycrisp: false
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A521%26mode%3Ddesign%26t%3DGH49ArJ6HONOroNF-1
-tokens: true
+# tokens: true
 styles: true
 ---
 
@@ -38,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Examples {#examples}
 
-{% capture id_alert_label %}{% createId %}{% endcapture %}
+{% capture id %}{% createId %}{% endcapture %}
 {% capture id_first_name %}{% createId %}{% endcapture %}
 {% capture id_last_name %}{% createId %}{% endcapture %}
 {% capture id_birthday %}{% createId %}{% endcapture %}
@@ -46,7 +46,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% capture id_residency_within_year %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-form-card",
   "form": {
     "modifier": "cfa-form"
   },
@@ -55,8 +54,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     "href": "{{ config.baseUrl }}uswds/img/sprite.svg#person"
   },
   "header": {
-    "headingText": "Tell us about yourself",
-    "helpMessageText": "My help message text."
+    "heading": {
+      "text": "Tell us about yourself"
+    }
   },
   "formGroups": [
     {
@@ -299,91 +299,119 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         "type": "submit"
       }
     ],
-    "skip": [
-      {
-        "label": "Skip",
-        "modifier": "cfa-button usa-button--big usa-button--outline",
-        "href": "#"
-      }
-    ],
-    "group": [
-      {
-        "label": "Yes",
-        "check": true,
-        "modifier": "cfa-button cfa-button--yes usa-button--big usa-button--outline",
-        "href": "#"
-      },
-      {
-        "label": "No",
-        "cross": true,
-        "modifier": "cfa-button cfa-button--no usa-button--big usa-button--outline ",
-        "href": "#"
-      }
-    ],
     "subtleText": "<p>My subtle text. <a href=\"#\">My subtle text link</a>.</p>"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card' %}
+{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with multiple form groups and fieldsets' %}
 
-
-{% capture id_alert_label %}{% createId %}{% endcapture %}
-{% capture id_first_name %}{% createId %}{% endcapture %}
-{% capture id_last_name %}{% createId %}{% endcapture %}
-{% capture id_birthday %}{% createId %}{% endcapture %}
-{% capture id_gender %}{% createId %}{% endcapture %}
-{% capture id_residency_within_year %}{% createId %}{% endcapture %}
+{% capture id %}{% createId %}{% endcapture %}
+{% capture id_street_address_line_1 %}{% createId %}{% endcapture %}
+{% capture id_street_address_line_2 %}{% createId %}{% endcapture %}
+{% capture id_city %}{% createId %}{% endcapture %}
+{% capture id_state %}{% createId %}{% endcapture %}
+{% capture id_zip_code %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-form-card",
   "form": {
     "modifier": "cfa-form"
   },
+  "graphic": {
+    "modifier": "usa-icon--size-9",
+    "href": "{{ config.baseUrl }}uswds/img/sprite.svg#home"
+  },
   "header": {
-    "headingId": "aria-lb-{{ id_alert_label }}",
-    "headingText": "Confirm your address",
-    "helpMessageText": "My help message text.",
-    "alert": {
-      "modifier": "cfa-form-card__header-alert cfa-alert usa-alert--warning",
-      "role": "region",
-      "labelledBy": "aria-lb-{{ id_alert_label }}",
-      "text": "We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href=\"#\">Alternatively, click here to look up your county information</a>."
+    "heading": {
+      "text": "Where are you currently living?"
     }
   },
   "fieldset": {
-    "modifier": "cfa-fieldset",
-    "legend": {
-      "text": "Please confirm your address.",
-      "modifier": "cfa-legend",
-      "modifierHint": "cfa-hint"
-    },
-    "hint": {
-      "text": "We updated the address you entered. If correct, please use the suggested address."
-    },
-    "options": [
+    "formGroups": [
       {
-        "modifier": "cfa-radio",
-        "id": "radio-{% createId %}",
-        "name": "radio['{{ id }}']",
-        "type": "radio",
-        "value": "suggested-address",
-        "label": "Suggested address",
-        "description": "4918 Webster St., Apt 2 <br> Oakland, CA <br> 94609",
-        "checked": "true",
+        "modifier": "cfa-form-group",
+        "id": "form-group-{{ id_street_address_line_1 }}",
+        "label": {
+          "text": "Street address",
+          "for": "input-{{ id_street_address_line_1 }}",
+          "modifier": "cfa-label"
+        },
         "input": {
-          "modifier": "usa-radio__input--tile"
+          "modifier": "cfa-input",
+          "id": "input-{{ id_street_address_line_1 }}",
+          "name": "input['{{ id_street_address_line_1 }}']",
+          "type": "text",
+          "required": "true",
+          "autocomplete": "address-line1"
         }
       },
       {
-        "modifier": "cfa-radio",
-        "id": "radio-{% createId %}",
-        "name": "radio['{{ id }}']",
-        "type": "radio",
-        "value": "address-you-entered",
-        "label": "Address you entered",
-        "description": "4918 Webster Street <br> Apt 2 <br> Oakland, CA <br> 94609",
+        "modifier": "cfa-form-group",
+        "id": "form-group-{{ id_street_address_line_2 }}",
+        "label": {
+          "text": "Street address line 2",
+          "for": "input-{{ id_street_address_line_2 }}",
+          "modifier": "cfa-label"
+        },
         "input": {
-          "modifier": "usa-radio__input--tile"
+          "modifier": "cfa-input",
+          "id": "input-{{ id_street_address_line_2 }}",
+          "name": "input['{{ id_street_address_line_2 }}']",
+          "type": "text",
+          "required": "true",
+          "autocomplete": "address-line2"
+        }
+      },
+      {
+        "modifier": "cfa-form-group",
+        "id": "form-group-{{ id_city }}",
+        "label": {
+          "text": "City",
+          "for": "input-{{ id_city }}",
+          "modifier": "cfa-label"
+        },
+        "input": {
+          "modifier": "cfa-input",
+          "id": "input-{{ id_city }}",
+          "name": "input['{{ id_city }}']",
+          "type": "text",
+          "required": "true",
+          "autocomplete": "address-level2"
+        }
+      },
+      {
+        "modifier": "cfa-form-group",
+        "id": "form-group-{{ id_state }}",
+        "label": {
+          "text": "State, territory, or military post",
+          "for": "input-{{ id_state }}",
+          "modifier": "cfa-label"
+        },
+        "input": {
+          "modifier": "cfa-input usa-input--sm",
+          "id": "input-{{ id_state }}",
+          "name": "input['{{ id_state }}']",
+          "type": "text",
+          "required": "true",
+          "maxlength": "2",
+          "autocomplete": "address-level1"
+        }
+      },
+      {
+        "modifier": "cfa-form-group",
+        "id": "form-group-{{ id_zip_code }}",
+        "label": {
+          "text": "ZIP code",
+          "for": "input-{{ id_zip_code }}",
+          "modifier": "cfa-label"
+        },
+        "input": {
+          "modifier": "cfa-input usa-input--md",
+          "id": "input-{{ id_zip_code }}",
+          "name": "input['{{ id_zip_code }}']",
+          "type": "text",
+          "required": "true",
+          "pattern": "[\\d]{5}(-[\\d]{4})?",
+          "autocomplete": "postal-code"
         }
       }
     ]
@@ -399,12 +427,158 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card' %}
+{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question and multi-part text input fieldset' %}
 
+{% capture id %}{% createId %}{% endcapture %}
+{% capture id_alert_label %}{% createId %}{% endcapture %}
+
+{% capture context %}{
+  "form": {
+    "modifier": "cfa-form"
+  },
+  "header": {
+    "heading": {
+      "id": "aria-lb-{{ id_alert_label }}",
+      "text": "Confirm your address"
+    },
+    "alert": {
+      "modifier": "cfa-form-card__header-alert cfa-alert usa-alert--warning",
+      "role": "region",
+      "labelledBy": "aria-lb-{{ id_alert_label }}",
+      "text": "We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href=\"#\">Alternatively, click here to look up your county information</a>."
+    }
+  },
+  "fieldset": {
+    "formGroups": [
+      {
+        "options": [
+          {
+            "modifier": "cfa-radio",
+            "id": "radio-{% createId %}",
+            "name": "radio['{{ id }}']",
+            "type": "radio",
+            "value": "suggested-address",
+            "label": "Suggested address",
+            "description": "4918 Webster St., Apt 2 <br> Oakland, CA <br> 94609",
+            "checked": "true",
+            "input": {
+              "modifier": "usa-radio__input--tile"
+            }
+          },
+          {
+            "modifier": "cfa-radio",
+            "id": "radio-{% createId %}",
+            "name": "radio['{{ id }}']",
+            "type": "radio",
+            "value": "address-you-entered",
+            "label": "Address you entered",
+            "description": "4918 Webster Street <br> Apt 2 <br> Oakland, CA <br> 94609",
+            "input": {
+              "modifier": "usa-radio__input--tile"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "submit": [
+      {
+        "label": "Continue",
+        "modifier": "cfa-form-card__footer-first-button cfa-button usa-button--big",
+        "type": "submit"
+      }
+    ]
+  }
+}{% endcapture %}
+
+{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question, alert, and radios fieldset' %}
+
+{% capture context %}{
+  "form": {
+    "modifier": "cfa-form"
+  },
+  "graphic": {
+    "modifier": "usa-icon--size-9",
+    "href": "{{ config.baseUrl }}uswds/img/sprite.svg#phone"
+  },
+  "header": {
+    "heading": {
+      "text": "Are you sure you want to leave your phone number blank?"
+    }
+  },
+  "content": "<p>A caseworker may need to contact you by phone about your application. If you don't have a phone number, you can enter a friend or family member's phone number instead.</p>",
+  "footer": {
+    "submit": [
+      {
+        "label": "Add a phone number",
+        "modifier": "cfa-form-card__footer-first-button cfa-button usa-button--big",
+        "href": "#"
+      }
+    ],
+    "skip": [
+      {
+        "label": "Continue without it",
+        "modifier": "cfa-button usa-button--big usa-button--outline",
+        "href": "#"
+      }
+    ]
+  }
+}{% endcapture %}
+
+{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question, continue, and skip links' %}
+
+{% capture help_message_content %}
+
+* Your spouse
+* Your children
+* Other family members
+* Your domestic partner
+
+{% endcapture %}
+
+{% capture context %}{
+  "form": {
+    "modifier": "cfa-form"
+  },
+  "header": {
+    "heading": {
+      "text": "Do you live with any of these people?"
+    }
+  },
+  "content": "{% md help_message_content %}",
+  "footer": {
+    "group": [
+      {
+        "label": "Yes",
+        "check": true,
+        "modifier": "cfa-button cfa-button--yes usa-button--big usa-button--outline",
+        "href": "#"
+      },
+      {
+        "label": "No",
+        "cross": true,
+        "modifier": "cfa-button cfa-button--no usa-button--big usa-button--outline ",
+        "href": "#"
+      }
+    ]
+  }
+}{% endcapture %}
+
+{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question, yes, and no links' %}
 
 ## Guidance {#guidance}
 
+{% capture ref_additional %}
+1. <a href="https://designsystem.digital.gov/patterns/complete-a-complex-form/progress-easily" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Complete a complex form, Progress easily</cite> | U.S. Web Design System (USWDS)</a>
+1. <a href="https://designsystem.digital.gov/templates/form-templates" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Form Templates</cite> | U.S. Web Design System (USWDS)</a>
+1. <a href="https://designsystem.digital.gov/templates/authentication-pages" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Authentication Pages</cite> | U.S. Web Design System (USWDS)</a>
+1. <a href="https://design.va.gov/templates/forms" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Templates, Form</cite> | VA.gov Design System</a>
+1. <a href="https://design-system.service.gov.uk/patterns/question-pages" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Question Pages</cite> | GOV.UK Design System</a>
+1. <a href="https://design-system.service.gov.uk/get-started/labels-legends-headings" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Making labels and legends headings</cite> | GOV.UK Design System</a>
+{% endcapture %}
 
+{% render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config %}
 
 <!-- ACCESSIBILITY -->
 

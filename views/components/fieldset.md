@@ -188,7 +188,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
 
 ## Guidance {#guidance}
 
-**Fieldsets vs. form groups**. Form questions with multiple inputs including checkbox, radio, and memorable date components always use the fieldset component to group available options and a nested `legend` element. Other form element components with singular text inputs, text areas, and selects, will use the <a href="{{ config.baseUrl }}components/form-group">form group component</a>.
+**Fieldsets vs. form groups**. Form questions with multiple form elements, such as multi-part text inputs, checkboxes, or radios may use the fieldset component to group themselves with a single question (or `legend` element). Use the <a href="{{ config.baseUrl }}components/form-group">form group component</a> to associate one form element with one question such as a text input, text area, or select.
 
 **Checkbox options**. Refer to <a href="{{ config.baseUrl }}components/checkbox">checkbox documentation</a>.
 
