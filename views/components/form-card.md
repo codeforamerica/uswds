@@ -53,10 +53,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   "form": {
     "modifier": "cfa-form"
   },
-  "graphic": {
-    "modifier": "usa-icon--size-9",
-    "href": "{{ config.baseUrl }}uswds/img/sprite.svg#person"
-  },
+  "graphic": "{{ config.baseUrl }}uswds/img/sprite.svg#person",
   "header": {
     "heading": {
       "text": "Tell us about yourself"
@@ -319,16 +316,14 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   "form": {
     "modifier": "cfa-form"
   },
-  "graphic": {
-    "modifier": "usa-icon--size-9",
-    "href": "{{ config.baseUrl }}uswds/img/sprite.svg#home"
-  },
+  "graphic": "{{ config.baseUrl }}uswds/img/sprite.svg#home",
   "header": {
     "heading": {
       "text": "Where are you currently living?"
     }
   },
   "fieldset": {
+    "modifier": "cfa-fieldset",
     "formGroups": [
       {
         "modifier": "cfa-form-group",
@@ -452,6 +447,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
     }
   },
   "fieldset": {
+    "modifier": "cfa-fieldset",
     "formGroups": [
       {
         "options": [
@@ -501,10 +497,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   "form": {
     "modifier": "cfa-form"
   },
-  "graphic": {
-    "modifier": "usa-icon--size-9",
-    "href": "{{ config.baseUrl }}uswds/img/sprite.svg#phone"
-  },
+  "graphic": "{{ config.baseUrl }}uswds/img/sprite.svg#phone",
   "header": {
     "heading": {
       "text": "Are you sure you want to leave your phone number blank?"

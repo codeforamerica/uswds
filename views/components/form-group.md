@@ -398,7 +398,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
 
 ## Guidance {#guidance}
 
-**Form groups vs. Fieldsets**. Form questions with one form element, such as a text input, text area, or select, may use the form group component to associate the form element with a  question (or `label` element). Use the<a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to associate multiple form elements with the same question, such as multi-part text inputs, checkboxes, or radios.
+**Form groups vs. Fieldsets**. Form questions with one form element, such as a text input, text area, or select, may use the form group component to associate the form element with a  question (or `label` element). Use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to associate multiple form elements with the same question, such as multi-part text inputs, checkboxes, or radios.
 
 **Text inputs**. Refer to <a href="{{ config.baseUrl }}components/input">text input documentation</a>.
 
