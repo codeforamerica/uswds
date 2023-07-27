@@ -456,4 +456,5 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   javascript: 'provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.',
   stylesheets: stylesheets,
   stylesheets_import: stylesheets_import,
-  config: config %}
+  config: config,
+  pckg: package %}

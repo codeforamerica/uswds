@@ -39,27 +39,33 @@
   <div class="usa-overlay"></div>
 
   <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container">
+    <div class="usa-nav-container flex-align-center">
       <div class="usa-navbar">
-        <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        <div class="usa-logo margin-y-2">
+          <a href="https://codeforamerica.github.io/uswds/dist/" title="Code for America USWDS theme" aria-hidden="true">
+            <img src="https://codeforamerica.github.io/uswds/dist/svg/logo.svg" role="img" alt="Code for America USWDS theme" class="display-none desktop:display-block" />
+          </a>
+
+          <em class="usa-logo__text desktop:display-none">
+            <a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a>
+          </em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
         <button type="button" class="usa-nav__close">
           <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c68c9dcc4b77a">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f31f4fa2ec2df">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-c68c9dcc4b77a" class="usa-nav__submenu">
+            <ul id="aria-c-f31f4fa2ec2df" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -100,16 +106,19 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" ><span>Toolbar</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
                 </li>
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d1cee182296ce">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-3ab1cec195b5a">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-d1cee182296ce" class="usa-nav__submenu">
+            <ul id="aria-c-3ab1cec195b5a" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -124,7 +133,7 @@
           </li>
 
           <li class="usa-nav__primary-item">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
 
@@ -155,7 +164,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/alert/" class="usa-current" aria-current="page">Alert</a>
 
                                 <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
@@ -164,7 +173,7 @@
                   <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                </ul>
+                                  </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/button/" >Button</a>
@@ -204,6 +213,10 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" >Toolbar</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -249,7 +262,7 @@
     <div class="usa-alert cfa-alert usa-alert--info" role="region">
   <div class="usa-alert__body">
     <div>
-      <h3 class="usa-alert__heading" id="aria-lb-cc03d5b7e3183">Can we ask about your race and identity?</h3>
+      <h3 class="usa-alert__heading" id="aria-lb-366047cf9faca">Can we ask about your race and identity?</h3>
       <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
       <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented. <a href="#">Learn more about how we protect your personal information</a>.</p>
     </div>
@@ -259,16 +272,16 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c055d99192603">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-46f81ee997ad4">
           View HTML
         </button>
       </div>
-      <div id="aria-c-c055d99192603" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-46f81ee997ad4" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot; role=&quot;region&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-cc03d5b7e3183&quot;&gt;Can we ask about your race and identity?&lt;/h3&gt;
+      &lt;h3 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-366047cf9faca&quot;&gt;Can we ask about your race and identity?&lt;/h3&gt;
       &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
       &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented. &lt;a href=&quot;#&quot;&gt;Learn more about how we protect your personal information&lt;/a&gt;.&lt;/p&gt;
     &lt;/div&gt;
@@ -296,11 +309,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-5ecb30b403a66">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-25e610ce9b73f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-5ecb30b403a66" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-25e610ce9b73f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot; role=&quot;status&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
@@ -332,11 +345,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-918bbc1e2a34c">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3cdcfabf858a3">
           View HTML
         </button>
       </div>
-      <div id="aria-c-918bbc1e2a34c" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-3cdcfabf858a3" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
@@ -368,11 +381,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f6ec5e73596ab">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-db987d854536c">
           View HTML
         </button>
       </div>
-      <div id="aria-c-f6ec5e73596ab" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-db987d854536c" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-alert cfa-alert usa-alert--error&quot; role=&quot;alert&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
@@ -404,11 +417,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-8acbcddb58387">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-9fd80ef139f4b">
           View HTML
         </button>
       </div>
-      <div id="aria-c-8acbcddb58387" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-9fd80ef139f4b" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-alert cfa-alert usa-alert--emergency&quot; role=&quot;status&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
@@ -518,7 +531,7 @@
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-alert</code></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-alert" target="_blank" class="usa-link--external bg-base-lightest padding-2px padding-x-05 radius-sm font-mono-xs">@codeforamerica/uswds/packages/cfa-alert</a></span>
 </p>
 <p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
@@ -624,7 +637,7 @@
           </li>
 
           <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
       </nav>

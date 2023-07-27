@@ -39,27 +39,33 @@
   <div class="usa-overlay"></div>
 
   <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container">
+    <div class="usa-nav-container flex-align-center">
       <div class="usa-navbar">
-        <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        <div class="usa-logo margin-y-2">
+          <a href="https://codeforamerica.github.io/uswds/dist/" title="Code for America USWDS theme" aria-hidden="true">
+            <img src="https://codeforamerica.github.io/uswds/dist/svg/logo.svg" role="img" alt="Code for America USWDS theme" class="display-none desktop:display-block" />
+          </a>
+
+          <em class="usa-logo__text desktop:display-none">
+            <a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a>
+          </em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
         <button type="button" class="usa-nav__close">
           <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-7e10cf397a3b2">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-787deb015063d">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-7e10cf397a3b2" class="usa-nav__submenu">
+            <ul id="aria-c-787deb015063d" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -100,16 +106,19 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" ><span>Toolbar</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
                 </li>
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-372e731bfff6e">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-2aed9640d2831">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-372e731bfff6e" class="usa-nav__submenu">
+            <ul id="aria-c-2aed9640d2831" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -124,7 +133,7 @@
           </li>
 
           <li class="usa-nav__primary-item">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
 
@@ -175,7 +184,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/form-group/" class="usa-current" aria-current="page">Form group</a>
 
                                 <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
@@ -184,7 +193,7 @@
                   <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                </ul>
+                                  </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/memorable-date/" >Memorable date</a>
@@ -204,6 +213,10 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" >Toolbar</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -244,15 +257,15 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with text input</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-def06d2814bc7">
-  <label class="usa-label cfa-label" for="input-def06d2814bc7">
+    <div class="usa-form-group cfa-form-group" id="form-group-9fcf0b3fab527">
+  <label class="usa-label cfa-label" for="input-9fcf0b3fab527">
     <span>What is your first name?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div class="usa-hint">Legally as it appears on your I.D.</div>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="text" id="input-def06d2814bc7" name="input['def06d2814bc7']" required="true">
+      <input class="usa-input cfa-input" type="text" id="input-9fcf0b3fab527" name="input['9fcf0b3fab527']" required="true">
     </div>
   </div>
 </div>
@@ -260,21 +273,21 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f15a995d49137">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-21fccafaefcb1">
           View HTML
         </button>
       </div>
-      <div id="aria-c-f15a995d49137" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-21fccafaefcb1" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-def06d2814bc7&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-def06d2814bc7&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-9fcf0b3fab527&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-9fcf0b3fab527&quot;&gt;
     &lt;span&gt;What is your first name?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-def06d2814bc7&quot; name=&quot;input['def06d2814bc7']&quot; required=&quot;true&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-9fcf0b3fab527&quot; name=&quot;input['9fcf0b3fab527']&quot; required=&quot;true&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -286,16 +299,16 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Invalid form group</figcaption>
-    <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-386a802f80c76">
-  <label class="usa-label cfa-label" for="input-386a802f80c76">
+    <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-bd317e0605c1a">
+  <label class="usa-label cfa-label" for="input-bd317e0605c1a">
     <span>What is your first name?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div class="usa-hint">Legally as it appears on your I.D.</div>
-  <span class="usa-error-message" id="error-message-386a802f80c76" role="alert">This field is required</span>
+  <span class="usa-error-message" id="error-message-bd317e0605c1a" role="alert">This field is required</span>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="text" id="input-386a802f80c76" name="input['386a802f80c76']" aria-invalid="true" aria-describedby="error-message-386a802f80c76" required="true">
+      <input class="usa-input cfa-input" type="text" id="input-bd317e0605c1a" name="input['bd317e0605c1a']" aria-invalid="true" aria-describedby="error-message-bd317e0605c1a" required="true">
     </div>
   </div>
 </div>
@@ -303,22 +316,22 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a151bed0c3866">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-20683d794b8f9">
           View HTML
         </button>
       </div>
-      <div id="aria-c-a151bed0c3866" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-20683d794b8f9" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-386a802f80c76&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-386a802f80c76&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-bd317e0605c1a&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-bd317e0605c1a&quot;&gt;
     &lt;span&gt;What is your first name?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-386a802f80c76&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
+  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-bd317e0605c1a&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-386a802f80c76&quot; name=&quot;input['386a802f80c76']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-386a802f80c76&quot; required=&quot;true&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-bd317e0605c1a&quot; name=&quot;input['bd317e0605c1a']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-bd317e0605c1a&quot; required=&quot;true&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -330,14 +343,14 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with email input</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-474b37bce08be">
-  <label class="usa-label cfa-label" for="input-474b37bce08be">
+    <div class="usa-form-group cfa-form-group" id="form-group-52019b9eb12c8">
+  <label class="usa-label cfa-label" for="input-52019b9eb12c8">
     <span>What is your email address?</span>
   </label>
   <div class="usa-hint">Legally as it appears on your I.D.</div>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="email" id="input-474b37bce08be" name="input['474b37bce08be']">
+      <input class="usa-input cfa-input" type="email" id="input-52019b9eb12c8" name="input['52019b9eb12c8']">
     </div>
   </div>
 </div>
@@ -345,20 +358,20 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-d53dc6664e782">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-1a454cd059a62">
           View HTML
         </button>
       </div>
-      <div id="aria-c-d53dc6664e782" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-1a454cd059a62" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-474b37bce08be&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-474b37bce08be&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-52019b9eb12c8&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-52019b9eb12c8&quot;&gt;
     &lt;span&gt;What is your email address?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;email&quot; id=&quot;input-474b37bce08be&quot; name=&quot;input['474b37bce08be']&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;email&quot; id=&quot;input-52019b9eb12c8&quot; name=&quot;input['52019b9eb12c8']&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -370,30 +383,30 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with textarea</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-f9b78cd78268">
-  <label class="usa-label cfa-label" for="textarea-f9b78cd78268">
+    <div class="usa-form-group cfa-form-group" id="form-group-d90b45229f6c9">
+  <label class="usa-label cfa-label" for="textarea-d90b45229f6c9">
     <span>Please describe in as much detail as possible.</span>
   </label>
   <div>
-    <textarea class="usa-textarea cfa-textarea" id="textarea-f9b78cd78268" name="textarea['f9b78cd78268']"></textarea>
+    <textarea class="usa-textarea cfa-textarea" id="textarea-d90b45229f6c9" name="textarea['d90b45229f6c9']"></textarea>
   </div>
 </div>
   </div>
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-dfb9d7e667165">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-79033d749aaa2">
           View HTML
         </button>
       </div>
-      <div id="aria-c-dfb9d7e667165" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-79033d749aaa2" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-f9b78cd78268&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-f9b78cd78268&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-d90b45229f6c9&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-d90b45229f6c9&quot;&gt;
     &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
   &lt;/label&gt;
   &lt;div&gt;
-    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-f9b78cd78268&quot; name=&quot;textarea['f9b78cd78268']&quot;&gt;&lt;/textarea&gt;
+    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-d90b45229f6c9&quot; name=&quot;textarea['d90b45229f6c9']&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -404,32 +417,32 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with textarea</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-eaf54d99f60b3">
-  <label class="usa-label cfa-label" for="textarea-eaf54d99f60b3">
+    <div class="usa-form-group cfa-form-group" id="form-group-74963fa93c2fc">
+  <label class="usa-label cfa-label" for="textarea-74963fa93c2fc">
     <span>Please describe in as much detail as possible.</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div>
-    <textarea class="usa-textarea cfa-textarea" id="textarea-eaf54d99f60b3" name="textarea['eaf54d99f60b3']" required="true"></textarea>
+    <textarea class="usa-textarea cfa-textarea" id="textarea-74963fa93c2fc" name="textarea['74963fa93c2fc']" required="true"></textarea>
   </div>
 </div>
   </div>
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-aafadf3f6cbfb">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-cb04438d228f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-aafadf3f6cbfb" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-cb04438d228f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-eaf54d99f60b3&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-eaf54d99f60b3&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-74963fa93c2fc&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-74963fa93c2fc&quot;&gt;
     &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div&gt;
-    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-eaf54d99f60b3&quot; name=&quot;textarea['eaf54d99f60b3']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
+    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-74963fa93c2fc&quot; name=&quot;textarea['74963fa93c2fc']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
     </div>
@@ -440,15 +453,15 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with prefix and mask (U.S. Dollars)</figcaption>
-    <div class="usa-form-group cfa-form-group" id="a3479f44fd223">
-  <label class="usa-label cfa-label" for="input-abc3d1d798c6b">
+    <div class="usa-form-group cfa-form-group" id="2a612c825dad7">
+  <label class="usa-label cfa-label" for="input-a04b8c3fb35fc">
     <span>How much does your household currently have in savings?</span>
   </label>
   <div class="usa-hint">Answer the best you can.</div>
   <div>
     <div class="usa-input-group cfa-input-group">
       <div class="usa-input-prefix" aria-hidden="true">$</div>
-      <input class="usa-input cfa-input text-right" type="text" id="input-abc3d1d798c6b" name="input['abc3d1d798c6b']" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
+      <input class="usa-input cfa-input text-right" type="text" id="input-a04b8c3fb35fc" name="input['a04b8c3fb35fc']" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
     </div>
   </div>
 </div>
@@ -456,21 +469,21 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-912175334a7f9">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-7c2f51ec0b689">
           View HTML
         </button>
       </div>
-      <div id="aria-c-912175334a7f9" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-7c2f51ec0b689" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;a3479f44fd223&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-abc3d1d798c6b&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;2a612c825dad7&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-a04b8c3fb35fc&quot;&gt;
     &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
       &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;$&lt;/div&gt;
-      &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-abc3d1d798c6b&quot; name=&quot;input['abc3d1d798c6b']&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-a04b8c3fb35fc&quot; name=&quot;input['a04b8c3fb35fc']&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -482,14 +495,14 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with postfix</figcaption>
-    <div class="usa-form-group cfa-form-group" id="ee52c5adcc8fb">
-  <label class="usa-label cfa-label" for="input-a995eb37e630a">
+    <div class="usa-form-group cfa-form-group" id="f3c730b419fd1">
+  <label class="usa-label cfa-label" for="input-d5e4cb07553aa">
     <span>What percentage of your monthly income do you spend on monthly expenses?</span>
   </label>
   <div class="usa-hint">Answer the best you can.</div>
   <div>
     <div class="usa-input-group cfa-input-group">
-      <input class="usa-input cfa-input text-right" type="text" id="input-a995eb37e630a" name="input['a995eb37e630a']" inputmode="decimal">
+      <input class="usa-input cfa-input text-right" type="text" id="input-d5e4cb07553aa" name="input['d5e4cb07553aa']" inputmode="decimal">
       <div class="usa-input-suffix" aria-hidden="true">%</div>
     </div>
   </div>
@@ -498,20 +511,20 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-305bca2042be2">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a7eb57d34829f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-305bca2042be2" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a7eb57d34829f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;ee52c5adcc8fb&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-a995eb37e630a&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;f3c730b419fd1&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d5e4cb07553aa&quot;&gt;
     &lt;span&gt;What percentage of your monthly income do you spend on monthly expenses?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-      &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-a995eb37e630a&quot; name=&quot;input['a995eb37e630a']&quot; inputmode=&quot;decimal&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input text-right&quot; type=&quot;text&quot; id=&quot;input-d5e4cb07553aa&quot; name=&quot;input['d5e4cb07553aa']&quot; inputmode=&quot;decimal&quot;&gt;
       &lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;%&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -524,15 +537,15 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with prefix and input mask (U.S. Phone)</figcaption>
-    <div class="usa-form-group cfa-form-group" id="020aa7888ac09">
-  <label class="usa-label cfa-label" for="input-f6146efb35058">
+    <div class="usa-form-group cfa-form-group" id="939df27c376ac">
+  <label class="usa-label cfa-label" for="input-0a6d460a439ee">
     <span>How much does your household currently have in savings?</span>
   </label>
   <div class="usa-hint">Answer the best you can.</div>
   <div>
     <div class="usa-input-group cfa-input-group">
       <div class="usa-input-prefix" aria-hidden="true">+1</div>
-      <input class="usa-input cfa-input" type="tel" id="input-f6146efb35058" name="input['f6146efb35058']" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" inputmode="tel" data-js="mask-tel">
+      <input class="usa-input cfa-input" type="tel" id="input-0a6d460a439ee" name="input['0a6d460a439ee']" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" inputmode="tel" data-js="mask-tel">
     </div>
   </div>
 </div>
@@ -540,21 +553,21 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f910da1a1cd2c">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-bc05d64bea5dc">
           View HTML
         </button>
       </div>
-      <div id="aria-c-f910da1a1cd2c" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-bc05d64bea5dc" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;020aa7888ac09&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-f6146efb35058&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;939df27c376ac&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-0a6d460a439ee&quot;&gt;
     &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can.&lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
       &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;+1&lt;/div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-f6146efb35058&quot; name=&quot;input['f6146efb35058']&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-0a6d460a439ee&quot; name=&quot;input['0a6d460a439ee']&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -566,13 +579,13 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with input mask (SSN)</figcaption>
-    <div class="usa-form-group cfa-form-group" id="a5b897769bb02">
-  <label class="usa-label cfa-label" for="input-e7e59a39ff343">
+    <div class="usa-form-group cfa-form-group" id="9b410db8eabff">
+  <label class="usa-label cfa-label" for="input-fb31a7a95328f">
     <span>What is your social security number?</span>
   </label>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="text" id="input-e7e59a39ff343" name="input['e7e59a39ff343']" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" inputmode="numeric" data-js="mask-ssn">
+      <input class="usa-input cfa-input" type="text" id="input-fb31a7a95328f" name="input['fb31a7a95328f']" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" inputmode="numeric" data-js="mask-ssn">
     </div>
   </div>
 </div>
@@ -580,19 +593,19 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-05efae8f65058">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-996633f22d53f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-05efae8f65058" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-996633f22d53f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;a5b897769bb02&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-e7e59a39ff343&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;9b410db8eabff&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-fb31a7a95328f&quot;&gt;
     &lt;span&gt;What is your social security number?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-e7e59a39ff343&quot; name=&quot;input['e7e59a39ff343']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-fb31a7a95328f&quot; name=&quot;input['fb31a7a95328f']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -604,14 +617,14 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Form group with select</figcaption>
-    <div class="usa-form-group cfa-form-group" id="form-group-afe0b21f6fb79">
-  <label class="usa-label cfa-label" for="select-afe0b21f6fb79">
+    <div class="usa-form-group cfa-form-group" id="form-group-636150c28cdf7">
+  <label class="usa-label cfa-label" for="select-636150c28cdf7">
     <span>What type of income have you had most recently?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div class="usa-hint">Answer the best you can. You will be able to include additional types of income.</div>
   <div>
-    <select class="usa-select cfa-select" id="select-afe0b21f6fb79" name="select['afe0b21f6fb79']" required="true">
+    <select class="usa-select cfa-select" id="select-636150c28cdf7" name="select['636150c28cdf7']" required="true">
       <option selected="true">Click to select an income type</option>
       <option disabled="true">---</option>
       <option value="wages">wages, salaries, tips</option>
@@ -642,20 +655,20 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-5ac969e18c40b">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-bd4f788e90cd4">
           View HTML
         </button>
       </div>
-      <div id="aria-c-5ac969e18c40b" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-bd4f788e90cd4" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
-      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-afe0b21f6fb79&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-afe0b21f6fb79&quot;&gt;
+      <pre class="language-html">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-636150c28cdf7&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-636150c28cdf7&quot;&gt;
     &lt;span&gt;What type of income have you had most recently?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Answer the best you can. You will be able to include additional types of income.&lt;/div&gt;
   &lt;div&gt;
-    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-afe0b21f6fb79&quot; name=&quot;select['afe0b21f6fb79']&quot; required=&quot;true&quot;&gt;
+    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-636150c28cdf7&quot; name=&quot;select['636150c28cdf7']&quot; required=&quot;true&quot;&gt;
       &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
       &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
       &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
@@ -767,7 +780,7 @@
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-form-group</code></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-form-group" target="_blank" class="usa-link--external bg-base-lightest padding-2px padding-x-05 radius-sm font-mono-xs">@codeforamerica/uswds/packages/cfa-form-group</a></span>
 </p>
 <p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
@@ -908,7 +921,7 @@
           </li>
 
           <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
       </nav>

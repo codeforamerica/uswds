@@ -523,7 +523,7 @@ var Default = (function () {
 	 *   in. If not provided, it defaults to the document.
 	 * @return {HTMLElement[]} - An array of DOM nodes or an empty array.
 	 */
-	var select$2 = (selector, context) => {
+	var select$4 = (selector, context) => {
 	  if (typeof selector !== "string") {
 	    return [];
 	  }
@@ -701,7 +701,7 @@ var Default = (function () {
 	  return compose(delegates);
 	};
 
-	const assign$1 = objectAssign;
+	const assign$2 = objectAssign;
 	const delegate = delegate$2;
 	const delegateAll = delegateAll$1;
 
@@ -736,7 +736,7 @@ var Default = (function () {
 
 	  if (type.indexOf(SPACE) > -1) {
 	    return type.split(SPACE).map(function(_type) {
-	      return assign$1({type: _type}, listener);
+	      return assign$2({type: _type}, listener);
 	    });
 	  } else {
 	    listener.type = type;
@@ -750,14 +750,14 @@ var Default = (function () {
 	  return value;
 	};
 
-	var behavior$4 = function behavior(events, props) {
+	var behavior$6 = function behavior(events, props) {
 	  const listeners = Object.keys(events)
 	    .reduce(function(memo, type) {
 	      var listeners = getListeners(type, events[type]);
 	      return memo.concat(listeners);
 	    }, []);
 
-	  return assign$1({
+	  return assign$2({
 	    add: function addBehavior(element) {
 	      listeners.forEach(function(listener) {
 	        element.addEventListener(
@@ -779,8 +779,8 @@ var Default = (function () {
 	  }, props);
 	};
 
-	const assign = objectAssign;
-	const Behavior = behavior$4;
+	const assign$1 = objectAssign;
+	const Behavior = behavior$6;
 
 	/**
 	 * @name sequence
@@ -804,10 +804,10 @@ var Default = (function () {
 	 * @param {object?} props
 	 * @return {receptor.behavior}
 	 */
-	var behavior$3 = (events, props) =>
+	var behavior$5 = (events, props) =>
 	  Behavior(
 	    events,
-	    assign(
+	    assign$1(
 	      {
 	        on: sequence("init", "add"),
 	        off: sequence("teardown", "remove"),
@@ -820,7 +820,7 @@ var Default = (function () {
 	const CONTROLS = "aria-controls";
 	const HIDDEN = "hidden";
 
-	var toggle$1 = (button, expanded) => {
+	var toggle$2 = (button, expanded) => {
 	  let safeExpanded = expanded;
 
 	  if (typeof safeExpanded !== "boolean") {
@@ -878,15 +878,15 @@ var Default = (function () {
 	  CLICK: "click",
 	};
 
-	const select$1 = select$2;
-	const behavior$2 = behavior$3;
-	const toggle = toggle$1;
+	const select$3 = select$4;
+	const behavior$4 = behavior$5;
+	const toggle$1 = toggle$2;
 	const isElementInViewport$1 = isInViewport;
-	const { CLICK } = events;
-	const { prefix: PREFIX$1 } = config;
+	const { CLICK: CLICK$1 } = events;
+	const { prefix: PREFIX$2 } = config;
 
-	const ACCORDION = `.${PREFIX$1}-accordion, .${PREFIX$1}-accordion--bordered`;
-	const BUTTON = `.${PREFIX$1}-accordion__button[aria-controls]`;
+	const ACCORDION = `.${PREFIX$2}-accordion, .${PREFIX$2}-accordion--bordered`;
+	const BUTTON = `.${PREFIX$2}-accordion__button[aria-controls]`;
 	const EXPANDED = "aria-expanded";
 	const MULTISELECTABLE = "data-allow-multiple";
 
@@ -897,7 +897,7 @@ var Default = (function () {
 	 * @return {array<HTMLButtonElement>}
 	 */
 	const getAccordionButtons = (accordion) => {
-	  const buttons = select$1(BUTTON, accordion);
+	  const buttons = select$3(BUTTON, accordion);
 
 	  return buttons.filter((button) => button.closest(ACCORDION) === accordion);
 	};
@@ -919,7 +919,7 @@ var Default = (function () {
 	    throw new Error(`${BUTTON} is missing outer ${ACCORDION}`);
 	  }
 
-	  safeExpanded = toggle(button, expanded);
+	  safeExpanded = toggle$1(button, expanded);
 
 	  // XXX multiselectable is opt-in, to preserve legacy behavior
 	  const multiselectable = accordion.hasAttribute(MULTISELECTABLE);
@@ -927,7 +927,7 @@ var Default = (function () {
 	  if (safeExpanded && !multiselectable) {
 	    getAccordionButtons(accordion).forEach((other) => {
 	      if (other !== button) {
-	        toggle(other, false);
+	        toggle$1(other, false);
 	      }
 	    });
 	  }
@@ -945,9 +945,9 @@ var Default = (function () {
 	 */
 	const hideButton = (button) => toggleButton$1(button, false);
 
-	const accordion$1 = behavior$2(
+	const accordion$2 = behavior$4(
 	  {
-	    [CLICK]: {
+	    [CLICK$1]: {
 	      [BUTTON]() {
 	        toggleButton$1(this);
 
@@ -962,7 +962,7 @@ var Default = (function () {
 	  },
 	  {
 	    init(root) {
-	      select$1(BUTTON, root).forEach((button) => {
+	      select$3(BUTTON, root).forEach((button) => {
 	        const expanded = button.getAttribute(EXPANDED) === "true";
 	        toggleButton$1(button, expanded);
 	      });
@@ -976,9 +976,9 @@ var Default = (function () {
 	  }
 	);
 
-	var src$2 = accordion$1;
+	var src$3 = accordion$2;
 
-	var keymap$1 = {exports: {}};
+	var keymap$3 = {exports: {}};
 
 	var keyboardeventKeyPolyfill = {exports: {}};
 
@@ -1126,7 +1126,7 @@ var Default = (function () {
 	  return key;
 	};
 
-	keymap$1.exports = function keymap(keys) {
+	keymap$3.exports = function keymap(keys) {
 	  const hasModifiers = Object.keys(keys).some(function(key) {
 	    return key.indexOf(MODIFIER_SEPARATOR) > -1;
 	  });
@@ -1142,12 +1142,12 @@ var Default = (function () {
 	  };
 	};
 
-	keymap$1.exports.MODIFIERS = MODIFIERS;
+	keymap$3.exports.MODIFIERS = MODIFIERS;
 
-	var keymapExports = keymap$1.exports;
+	var keymapExports = keymap$3.exports;
 
-	const keymap = keymapExports;
-	const behavior$1 = behavior$3;
+	const keymap$2 = keymapExports;
+	const behavior$3 = behavior$5;
 
 	const ANCHOR_BUTTON = `a[class*="usa-button"]`;
 
@@ -1156,17 +1156,383 @@ var Default = (function () {
 	  event.target.click();
 	};
 
-	const anchorButton = behavior$1({
+	const anchorButton = behavior$3({
 	  keydown: {
-	    [ANCHOR_BUTTON]: keymap({
+	    [ANCHOR_BUTTON]: keymap$2({
 	      " ": toggleButton,
 	    }),
 	  },
 	});
 
-	var src$1 = anchorButton;
+	var src$2 = anchorButton;
 
-	const select = select$2;
+	var ignore = function ignore(element, fn) {
+	  return function ignorance(e) {
+	    if (element !== e.target && !element.contains(e.target)) {
+	      return fn.call(this, e);
+	    }
+	  };
+	};
+
+	var receptor = {
+	  behavior:     behavior$6,
+	  delegate:     delegate$2,
+	  delegateAll:  delegateAll$1,
+	  ignore:       ignore,
+	  keymap:       keymapExports,
+	};
+
+	var activeElement$1 = (htmlDocument = document) => htmlDocument.activeElement;
+
+	const assign = objectAssign;
+	const { keymap: keymap$1 } = receptor;
+	const behavior$2 = behavior$5;
+	const select$2 = select$4;
+	const activeElement = activeElement$1;
+
+	const FOCUSABLE =
+	  'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+
+	const tabHandler = (context) => {
+	  const focusableElements = select$2(FOCUSABLE, context);
+	  const firstTabStop = focusableElements[0];
+	  const lastTabStop = focusableElements[focusableElements.length - 1];
+
+	  // Special rules for when the user is tabbing forward from the last focusable element,
+	  // or when tabbing backwards from the first focusable element
+	  function tabAhead(event) {
+	    if (activeElement() === lastTabStop) {
+	      event.preventDefault();
+	      firstTabStop.focus();
+	    }
+	  }
+
+	  function tabBack(event) {
+	    if (activeElement() === firstTabStop) {
+	      event.preventDefault();
+	      lastTabStop.focus();
+	    }
+	    // This checks if you want to set the initial focus to a container
+	    // instead of an element within, and the user tabs back.
+	    // Then we set the focus to the first
+	    else if (!focusableElements.includes(activeElement())) {
+	      event.preventDefault();
+	      firstTabStop.focus();
+	    }
+	  }
+
+	  return {
+	    firstTabStop,
+	    lastTabStop,
+	    tabAhead,
+	    tabBack,
+	  };
+	};
+
+	var focusTrap = (context, additionalKeyBindings = {}) => {
+	  const tabEventHandler = tabHandler(context);
+	  const bindings = additionalKeyBindings;
+	  const { Esc, Escape } = bindings;
+
+	  if (Escape && !Esc) bindings.Esc = Escape;
+
+	  //  TODO: In the future, loop over additional keybindings and pass an array
+	  // of functions, if necessary, to the map keys. Then people implementing
+	  // the focus trap could pass callbacks to fire when tabbing
+	  const keyMappings = keymap$1(
+	    assign(
+	      {
+	        Tab: tabEventHandler.tabAhead,
+	        "Shift+Tab": tabEventHandler.tabBack,
+	      },
+	      additionalKeyBindings
+	    )
+	  );
+
+	  const focusTrap = behavior$2(
+	    {
+	      keydown: keyMappings,
+	    },
+	    {
+	      init() {
+	        // TODO: is this desireable behavior? Should the trap always do this by default or should
+	        // the component getting decorated handle this?
+	        if (tabEventHandler.firstTabStop) {
+	          tabEventHandler.firstTabStop.focus();
+	        }
+	      },
+	      update(isActive) {
+	        if (isActive) {
+	          this.on();
+	        } else {
+	          this.off();
+	        }
+	      },
+	    }
+	  );
+
+	  return focusTrap;
+	};
+
+	var scrollbarWidth = function getScrollbarWidth() {
+	  // Creating invisible container
+	  const outer = document.createElement("div");
+	  outer.style.visibility = "hidden";
+	  outer.style.overflow = "scroll"; // forcing scrollbar to appear
+	  outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+	  document.body.appendChild(outer);
+
+	  // Creating inner element and placing it in the container
+	  const inner = document.createElement("div");
+	  outer.appendChild(inner);
+
+	  // Calculating difference between container's full width and the child width
+	  const scrollbarWidth = `${outer.offsetWidth - inner.offsetWidth}px`;
+
+	  // Removing temporary elements from the DOM
+	  outer.parentNode.removeChild(outer);
+
+	  return scrollbarWidth;
+	};
+
+	const keymap = keymapExports;
+	const behavior$1 = behavior$5;
+	const select$1 = select$4;
+	const toggle = toggle$2;
+	const FocusTrap = focusTrap;
+	const accordion$1 = src$3;
+	const ScrollBarWidth = scrollbarWidth;
+
+	const { CLICK } = events;
+	const { prefix: PREFIX$1 } = config;
+
+	const BODY = "body";
+	const HEADER = `.${PREFIX$1}-header`;
+	const NAV = `.${PREFIX$1}-nav`;
+	const NAV_CONTAINER = `.${PREFIX$1}-nav-container`;
+	const NAV_PRIMARY = `.${PREFIX$1}-nav__primary`;
+	const NAV_PRIMARY_ITEM = `.${PREFIX$1}-nav__primary-item`;
+	const NAV_CONTROL = `button.${PREFIX$1}-nav__link`;
+	const NAV_LINKS = `${NAV} a`;
+	const NON_NAV_HIDDEN_ATTRIBUTE = `data-nav-hidden`;
+	const OPENERS = `.${PREFIX$1}-menu-btn`;
+	const CLOSE_BUTTON = `.${PREFIX$1}-nav__close`;
+	const OVERLAY = `.${PREFIX$1}-overlay`;
+	const CLOSERS = `${CLOSE_BUTTON}, .${PREFIX$1}-overlay`;
+	const TOGGLES = [NAV, OVERLAY].join(", ");
+	const NON_NAV_ELEMENTS = `body *:not(${HEADER}, ${NAV_CONTAINER}, ${NAV}, ${NAV} *):not([aria-hidden])`;
+	const NON_NAV_HIDDEN = `[${NON_NAV_HIDDEN_ATTRIBUTE}]`;
+
+	const ACTIVE_CLASS = "usa-js-mobile-nav--active";
+	const VISIBLE_CLASS$1 = "is-visible";
+
+	let navigation$1;
+	let navActive;
+	let nonNavElements;
+
+	const isActive = () => document.body.classList.contains(ACTIVE_CLASS);
+	const SCROLLBAR_WIDTH = ScrollBarWidth();
+	const INITIAL_PADDING = window
+	  .getComputedStyle(document.body)
+	  .getPropertyValue("padding-right");
+	const TEMPORARY_PADDING = `${
+  parseInt(INITIAL_PADDING.replace(/px/, ""), 10) +
+  parseInt(SCROLLBAR_WIDTH.replace(/px/, ""), 10)
+}px`;
+
+	const hideNonNavItems = () => {
+	  const headerParent = document.querySelector(`${HEADER}`).parentNode;
+	  nonNavElements = document.querySelectorAll(NON_NAV_ELEMENTS);
+
+	  nonNavElements.forEach((nonNavElement) => {
+	    if (nonNavElement !== headerParent) {
+	      nonNavElement.setAttribute("aria-hidden", true);
+	      nonNavElement.setAttribute(NON_NAV_HIDDEN_ATTRIBUTE, "");
+	    }
+	  });
+	};
+
+	const showNonNavItems = () => {
+	  nonNavElements = document.querySelectorAll(NON_NAV_HIDDEN);
+
+	  if (!nonNavElements) {
+	    return;
+	  }
+
+	  // Remove aria-hidden from non-header elements
+	  nonNavElements.forEach((nonNavElement) => {
+	    nonNavElement.removeAttribute("aria-hidden");
+	    nonNavElement.removeAttribute(NON_NAV_HIDDEN_ATTRIBUTE);
+	  });
+	};
+
+	// Toggle all non-header elements #3527.
+	const toggleNonNavItems = (active) => {
+	  if (active) {
+	    hideNonNavItems();
+	  } else {
+	    showNonNavItems();
+	  }
+	};
+
+	const toggleNav = (active) => {
+	  const { body } = document;
+	  const safeActive = typeof active === "boolean" ? active : !isActive();
+
+	  body.classList.toggle(ACTIVE_CLASS, safeActive);
+
+	  select$1(TOGGLES).forEach((el) =>
+	    el.classList.toggle(VISIBLE_CLASS$1, safeActive)
+	  );
+
+	  navigation$1.focusTrap.update(safeActive);
+
+	  const closeButton = body.querySelector(CLOSE_BUTTON);
+	  const menuButton = document.querySelector(OPENERS);
+
+	  body.style.paddingRight =
+	    body.style.paddingRight === TEMPORARY_PADDING
+	      ? INITIAL_PADDING
+	      : TEMPORARY_PADDING;
+
+	  toggleNonNavItems(safeActive);
+
+	  if (safeActive && closeButton) {
+	    // The mobile nav was just activated. Focus on the close button, which is
+	    // just before all the nav elements in the tab order.
+	    closeButton.focus();
+	  } else if (
+	    !safeActive &&
+	    menuButton &&
+	    getComputedStyle(menuButton).display !== "none"
+	  ) {
+	    // The mobile nav was just deactivated. We don't want the focus to
+	    // disappear into the void, so focus on the menu button if it's
+	    // visible (this may have been what the user was just focused on,
+	    // if they triggered the mobile nav by mistake).
+	    menuButton.focus();
+	  }
+
+	  return safeActive;
+	};
+
+	const resize = () => {
+	  const closer = document.body.querySelector(CLOSE_BUTTON);
+
+	  if (isActive() && closer && closer.getBoundingClientRect().width === 0) {
+	    // When the mobile nav is active, and the close box isn't visible,
+	    // we know the user's viewport has been resized to be larger.
+	    // Let's make the page state consistent by deactivating the mobile nav.
+	    navigation$1.toggleNav.call(closer, false);
+	  }
+	};
+
+	const onMenuClose = () => navigation$1.toggleNav.call(navigation$1, false);
+
+	const hideActiveNavDropdown = () => {
+	  if (!navActive) {
+	    return;
+	  }
+
+	  toggle(navActive, false);
+	  navActive = null;
+	};
+
+	const focusNavButton = (event) => {
+	  const parentNavItem = event.target.closest(NAV_PRIMARY_ITEM);
+
+	  // Only shift focus if within dropdown
+	  if (!event.target.matches(NAV_CONTROL)) {
+	    const navControl = parentNavItem.querySelector(NAV_CONTROL);
+	    if (navControl) {
+	      navControl.focus();
+	    }
+	  }
+	};
+
+	const handleEscape = (event) => {
+	  hideActiveNavDropdown();
+	  focusNavButton(event);
+	};
+
+	navigation$1 = behavior$1(
+	  {
+	    [CLICK]: {
+	      [NAV_CONTROL]() {
+	        // If another nav is open, close it
+	        if (navActive !== this) {
+	          hideActiveNavDropdown();
+	        }
+	        // store a reference to the last clicked nav link element, so we
+	        // can hide the dropdown if another element on the page is clicked
+	        if (!navActive) {
+	          navActive = this;
+	          toggle(navActive, true);
+	        }
+
+	        // Do this so the event handler on the body doesn't fire
+	        return false;
+	      },
+	      [BODY]: hideActiveNavDropdown,
+	      [OPENERS]: toggleNav,
+	      [CLOSERS]: toggleNav,
+	      [NAV_LINKS]() {
+	        // A navigation link has been clicked! We want to collapse any
+	        // hierarchical navigation UI it's a part of, so that the user
+	        // can focus on whatever they've just selected.
+
+	        // Some navigation links are inside accordions; when they're
+	        // clicked, we want to collapse those accordions.
+	        const acc = this.closest(accordion$1.ACCORDION);
+
+	        if (acc) {
+	          accordion$1.getButtons(acc).forEach((btn) => accordion$1.hide(btn));
+	        }
+
+	        // If the mobile navigation menu is active, we want to hide it.
+	        if (isActive()) {
+	          navigation$1.toggleNav.call(navigation$1, false);
+	        }
+	      },
+	    },
+	    keydown: {
+	      [NAV_PRIMARY]: keymap({ Escape: handleEscape }),
+	    },
+	    focusout: {
+	      [NAV_PRIMARY](event) {
+	        const nav = event.target.closest(NAV_PRIMARY);
+
+	        if (!nav.contains(event.relatedTarget)) {
+	          hideActiveNavDropdown();
+	        }
+	      },
+	    },
+	  },
+	  {
+	    init(root) {
+	      const trapContainer = root.matches(NAV) ? root : root.querySelector(NAV);
+
+	      if (trapContainer) {
+	        navigation$1.focusTrap = FocusTrap(trapContainer, {
+	          Escape: onMenuClose,
+	        });
+	      }
+
+	      resize();
+	      window.addEventListener("resize", resize, false);
+	    },
+	    teardown() {
+	      window.removeEventListener("resize", resize, false);
+	      navActive = false;
+	    },
+	    focusTrap: null,
+	    toggleNav,
+	  }
+	);
+
+	var src$1 = navigation$1;
+
+	const select = select$4;
 	/**
 	 * @name isElement
 	 * @desc returns whether or not the given argument is a DOM element.
@@ -1199,7 +1565,7 @@ var Default = (function () {
 
 	// Tooltips
 	const selectOrMatches = selectOrMatches$1;
-	const behavior = behavior$3;
+	const behavior = behavior$5;
 	const { prefix: PREFIX } = config;
 	const isElementInViewport = isInViewport;
 
@@ -1594,9 +1960,9 @@ var Default = (function () {
 
 	var src = tooltip$1;
 
-	const accordion = src$2;
+	const accordion = src$3;
 	// const banner = require('../node_modules/@uswds/uswds/packages/usa-banner/src/index');
-	const button = src$1;
+	const button = src$2;
 	// const characterCount = require('../node_modules/@uswds/uswds/packages/usa-character-count/src/index');
 	// const comboBox = require('../node_modules/@uswds/uswds/packages/usa-combo-box/src/index');
 	// const datePicker = require('../node_modules/@uswds/uswds/packages/usa-date-picker/src/index');
@@ -1607,7 +1973,7 @@ var Default = (function () {
 	// const inputMask = require('../node_modules/@uswds/uswds/packages/usa-input-mask/src/index');
 	// const languageSelector = require('../node_modules/@uswds/uswds/packages/usa-language-selector/src/index');
 	// const modal = require('../node_modules/@uswds/uswds/packages/usa-modal/src/index');
-	// const navigation = require('../node_modules/@uswds/uswds/packages/usa-header/src/index');
+	const navigation = src$1;
 	// const password = require('../node_modules/@uswds/uswds/packages/_usa-password/src/index');
 	// const search = require('../node_modules/@uswds/uswds/packages/usa-search/src/index');
 	// const skipnav = require('../node_modules/@uswds/uswds/packages/usa-skipnav/src/index');
@@ -1629,7 +1995,7 @@ var Default = (function () {
 	  // inputMask,
 	  // languageSelector,
 	  // modal,
-	  // navigation,
+	  navigation,
 	  // password,
 	  // search,
 	  // skipnav,

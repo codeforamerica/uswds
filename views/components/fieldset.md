@@ -232,9 +232,4 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
 @forward '{{ stylesheet_input_select }}'
 {% endcapture %}
 
-{% render 'source.md',
-  name: 'fieldset',
-  nice: title,
-  stylesheets: stylesheets,
-  stylesheets_import: stylesheets_import
-  config: config %}
+{% render 'source.md', name: 'fieldset', nice: title, stylesheets: stylesheets, stylesheets_import: stylesheets_import, config: config, pckg: package %}

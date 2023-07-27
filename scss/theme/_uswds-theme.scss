@@ -28,6 +28,18 @@ in the form $setting: value,
   $theme-border-radius-md: 1,
   $theme-border-radius-lg: 2,
 
+  $theme-grid-container-max-width: 'desktop-lg',
+  // $theme-site-margins-breakpoint: 'desktop',
+  // $theme-site-margins-width: 4,
+  // $theme-site-margins-mobile-width: 2,
+
+  $theme-banner-max-width: 'desktop-lg',
+  $theme-footer-max-width: 'desktop-lg',
+  $theme-header-max-width: 'desktop-lg',
+  $theme-identifier-max-width: 'desktop-lg',
+  $theme-in-page-nav-main-content-max-width: 'desktop-lg',
+  $theme-site-alert-max-width: 'desktop-lg',
+
   // 3. Color
   // $test-color-tokens: true,
   // - Base
@@ -159,6 +171,10 @@ in the form $setting: value,
   $theme-h6-font-size: 'xs',
   $theme-small-font-size: 'xs',
 
+  // $theme-text-measure-narrow: 1,
+  // $theme-text-measure: 4,
+  // $theme-text-measure-wide: 6,
+
   $theme-text-measure-narrow: 'none',
   $theme-text-measure: 'none',
   $theme-text-measure-wide: 'none',
@@ -194,6 +210,7 @@ in the form $setting: value,
   // - Footer
   // - Button
   // - Header
+  $theme-header-logo-text-width: auto,
 
   // 6. Utilities
   $utilities-use-important: true

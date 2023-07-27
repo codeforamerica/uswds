@@ -84,4 +84,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'textarea', nice: title, usage: url_uswds_usage, config: config %}
+{% render 'source.md', name: 'textarea', nice: title, usage: url_uswds_usage, config: config, pckg: package %}

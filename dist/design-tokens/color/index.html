@@ -39,27 +39,33 @@
   <div class="usa-overlay"></div>
 
   <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container">
+    <div class="usa-nav-container flex-align-center">
       <div class="usa-navbar">
-        <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        <div class="usa-logo margin-y-2">
+          <a href="https://codeforamerica.github.io/uswds/dist/" title="Code for America USWDS theme" aria-hidden="true">
+            <img src="https://codeforamerica.github.io/uswds/dist/svg/logo.svg" role="img" alt="Code for America USWDS theme" class="display-none desktop:display-block" />
+          </a>
+
+          <em class="usa-logo__text desktop:display-none">
+            <a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a>
+          </em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
         <button type="button" class="usa-nav__close">
           <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-7ad692a4138d7">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-ceb97e83cf7cf">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-7ad692a4138d7" class="usa-nav__submenu">
+            <ul id="aria-c-ceb97e83cf7cf" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -100,16 +106,19 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" ><span>Toolbar</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
                 </li>
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-6976811b61882">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d13123e35e18b">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-6976811b61882" class="usa-nav__submenu">
+            <ul id="aria-c-d13123e35e18b" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -124,7 +133,7 @@
           </li>
 
           <li class="usa-nav__primary-item">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
 
@@ -151,7 +160,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/color/" class="usa-current" aria-current="page">Color</a>
 
                                 <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
@@ -160,7 +169,7 @@
                   <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                </ul>
+                                  </ul>
                               </li>
                           </ul>
           </nav>
@@ -199,7 +208,7 @@
           </li>
 
           <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
       </nav>

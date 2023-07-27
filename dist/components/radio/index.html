@@ -39,27 +39,33 @@
   <div class="usa-overlay"></div>
 
   <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container">
+    <div class="usa-nav-container flex-align-center">
       <div class="usa-navbar">
-        <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        <div class="usa-logo margin-y-2">
+          <a href="https://codeforamerica.github.io/uswds/dist/" title="Code for America USWDS theme" aria-hidden="true">
+            <img src="https://codeforamerica.github.io/uswds/dist/svg/logo.svg" role="img" alt="Code for America USWDS theme" class="display-none desktop:display-block" />
+          </a>
+
+          <em class="usa-logo__text desktop:display-none">
+            <a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a>
+          </em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
         <button type="button" class="usa-nav__close">
           <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-36bfec02972ba">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-66d556688a04d">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-36bfec02972ba" class="usa-nav__submenu">
+            <ul id="aria-c-66d556688a04d" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -100,16 +106,19 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" ><span>Toolbar</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
                 </li>
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-35cca6cecabb2">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-7df604639dc49">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-35cca6cecabb2" class="usa-nav__submenu">
+            <ul id="aria-c-7df604639dc49" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -124,7 +133,7 @@
           </li>
 
           <li class="usa-nav__primary-item">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
 
@@ -183,7 +192,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/radio/" class="usa-current" aria-current="page">Radio</a>
 
                                 <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
@@ -192,7 +201,7 @@
                   <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                </ul>
+                                  </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/select/" >Select</a>
@@ -204,6 +213,10 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" >Toolbar</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -246,14 +259,14 @@
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Radios</figcaption>
     <div class="usa-radio cfa-radio">
-  <input type="radio" id="radio-0e706454a681" name="radio['5dbd59e6e6051']" value="option-a" class="usa-radio__input usa-radio__input--tile">
-  <label for="radio-0e706454a681" class="usa-radio__label">
+  <input type="radio" id="radio-108f4a81944ce" name="radio['ed0a3c6648f62']" value="option-a" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-108f4a81944ce" class="usa-radio__label">
     <span>Option A</span>
   </label>
 </div>
 <div class="usa-radio cfa-radio">
-  <input type="radio" id="radio-d34bcf010db6a" name="radio['5dbd59e6e6051']" value="option-b" class="usa-radio__input usa-radio__input--tile">
-  <label for="radio-d34bcf010db6a" class="usa-radio__label">
+  <input type="radio" id="radio-db00f44d0bf8d" name="radio['ed0a3c6648f62']" value="option-b" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-db00f44d0bf8d" class="usa-radio__label">
     <span>Option B</span>
   </label>
 </div>
@@ -261,21 +274,21 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ab4f18ece9ba2">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a9a090c45e97f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-ab4f18ece9ba2" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a9a090c45e97f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;radio-0e706454a681&quot; name=&quot;radio['5dbd59e6e6051']&quot; value=&quot;option-a&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-  &lt;label for=&quot;radio-0e706454a681&quot; class=&quot;usa-radio__label&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-108f4a81944ce&quot; name=&quot;radio['ed0a3c6648f62']&quot; value=&quot;option-a&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-108f4a81944ce&quot; class=&quot;usa-radio__label&quot;&gt;
     &lt;span&gt;Option A&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;radio-d34bcf010db6a&quot; name=&quot;radio['5dbd59e6e6051']&quot; value=&quot;option-b&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-  &lt;label for=&quot;radio-d34bcf010db6a&quot; class=&quot;usa-radio__label&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-db00f44d0bf8d&quot; name=&quot;radio['ed0a3c6648f62']&quot; value=&quot;option-b&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-db00f44d0bf8d&quot; class=&quot;usa-radio__label&quot;&gt;
     &lt;span&gt;Option B&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;</pre>
@@ -288,15 +301,15 @@
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Radios with descriptions</figcaption>
     <div class="usa-radio cfa-radio">
-  <input type="radio" id="radio-2a52ac3c4e22" name="radio['9f3abfce7ca81']" value="option-a" class="usa-radio__input usa-radio__input--tile">
-  <label for="radio-2a52ac3c4e22" class="usa-radio__label">
+  <input type="radio" id="radio-d75596a24283d" name="radio['2fd404bae8b29']" value="option-a" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-d75596a24283d" class="usa-radio__label">
     <span>Option A</span>
     <span class="usa-radio__label-description">Option description</span>
   </label>
 </div>
 <div class="usa-radio cfa-radio">
-  <input type="radio" id="radio-c4c7cae35f075" name="radio['9f3abfce7ca81']" value="option-b" class="usa-radio__input usa-radio__input--tile">
-  <label for="radio-c4c7cae35f075" class="usa-radio__label">
+  <input type="radio" id="radio-47251f7f49e22" name="radio['2fd404bae8b29']" value="option-b" class="usa-radio__input usa-radio__input--tile">
+  <label for="radio-47251f7f49e22" class="usa-radio__label">
     <span>Option B</span>
     <span class="usa-radio__label-description">Option description</span>
   </label>
@@ -305,22 +318,22 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-51ff137ed405b">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-765b6fcc575c7">
           View HTML
         </button>
       </div>
-      <div id="aria-c-51ff137ed405b" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-765b6fcc575c7" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;radio-2a52ac3c4e22&quot; name=&quot;radio['9f3abfce7ca81']&quot; value=&quot;option-a&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-  &lt;label for=&quot;radio-2a52ac3c4e22&quot; class=&quot;usa-radio__label&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-d75596a24283d&quot; name=&quot;radio['2fd404bae8b29']&quot; value=&quot;option-a&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-d75596a24283d&quot; class=&quot;usa-radio__label&quot;&gt;
     &lt;span&gt;Option A&lt;/span&gt;
     &lt;span class=&quot;usa-radio__label-description&quot;&gt;Option description&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-  &lt;input type=&quot;radio&quot; id=&quot;radio-c4c7cae35f075&quot; name=&quot;radio['9f3abfce7ca81']&quot; value=&quot;option-b&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-  &lt;label for=&quot;radio-c4c7cae35f075&quot; class=&quot;usa-radio__label&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;radio-47251f7f49e22&quot; name=&quot;radio['2fd404bae8b29']&quot; value=&quot;option-b&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+  &lt;label for=&quot;radio-47251f7f49e22&quot; class=&quot;usa-radio__label&quot;&gt;
     &lt;span&gt;Option B&lt;/span&gt;
     &lt;span class=&quot;usa-radio__label-description&quot;&gt;Option description&lt;/span&gt;
   &lt;/label&gt;
@@ -423,7 +436,7 @@
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-input-select</code></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-input-select" target="_blank" class="usa-link--external bg-base-lightest padding-2px padding-x-05 radius-sm font-mono-xs">@codeforamerica/uswds/packages/cfa-input-select</a></span>
 </p>
 <p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
@@ -534,7 +547,7 @@
           </li>
 
           <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
       </nav>

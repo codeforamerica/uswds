@@ -87,135 +87,18 @@
             <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
           </li>
         </ul>
-
-        {# <ul class="usa-nav__primary usa-accordion">
-          <li class="usa-nav__primary-item">
-            {% set ID = createId() %}
-            <button type="button" class="usa-accordion__button usa-nav__link{% if 'component' in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
-              <span>Components</span>
-            </button>
-
-            <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
-              {% for item in collections.component %}
-                <li class="usa-nav__submenu-item">
-                  {% set url = item.url|split('/', 2) %}
-                  <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-
-          <li class="usa-nav__primary-item">
-            {% set ID = createId() %}
-            <button type="button" class="usa-accordion__button usa-nav__link{% if 'design_token' in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
-              <span>Design tokens</span>
-            </button>
-
-            <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
-              {% for item in collections.design_token %}
-                <li class="usa-nav__submenu-item">
-                  {% set url = item.url|split('/', 2) %}
-                  <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-
-          <li class="usa-nav__primary-item">
-            <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
-          </li>
-
-          <li class="usa-nav__primary-item">
-            <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
-          </li>
-        </ul> #}
-
-        {# <section aria-label="Search component">
-          <form class="usa-search usa-search--small" role="search">
-            <label class="usa-sr-only" for="search-field">Search</label>
-
-            <input class="usa-input" id="search-field" type="search" name="search"/>
-
-            <button class="usa-button" type="submit">
-              <img
-                src="{{ config.baseUrl }}uswds/img/usa-icons-bg/search--white.svg"
-                class="usa-search__submit-icon"
-                alt="Search"
-              />
-            </button>
-          </form>
-        </section> #}
       </nav>
     </div>
   </header>
 
-  <div class="usa-section">
-    <div class="grid-container">
-      <div class="grid-row grid-gap">
-        <div class="usa-layout-docs__sidenav desktop:grid-col-3">
-          <nav aria-label="Secondary navigation">
-            <ul class="usa-sidenav">
-              {% if 'component' in tags %}
-              {% set sidenav = {
-                type: 'component',
-                items: collections.componentByAlpha
-              } %}
-              {% endif %}
-
-              {% if 'design_token' in tags %}
-              {% set sidenav = {
-                type: 'design_token',
-                items: collections.design_tokenByAlpha
-              } %}
-              {% endif %}
-
-              {% for item in sidenav.items %}
-              <li class="usa-sidenav__item is-current">
-                {% set url = item.url|split('/', 2) %}
-                <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}class="usa-current" aria-current="page"{% endif %}>{{ item.data.title }}</a>
-
-                {% if item.url == page.url %}
-                <ul class="usa-sidenav__sublist">
-                  {% if sublist %}
-                  {% for item in sublist %}
-                    <li class="usa-sidenav__item"><a href="#{{ item.anchor }}">{{ item.title }}</a></li>
-                  {% endfor %}
-                  {% else %}
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                  {% endif %}
-                </ul>
-                {% endif %}
-              </li>
-              {% endfor %}
-            </ul>
-          </nav>
-        </div>
-
-        <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
-          <div class="usa-prose">
-            <h1>{{ title }}</h1>
-
-            <p class="usa-intro">{{ intro }}</p>
-          </div>
-
-          {{ content|raw }}
-        </main>
-      </div>
-    </div>
-  </div>
+  <main id="main-content" class="bg-primary overflow-hidden">
+    {{ content|raw }}
+  </main>
 
   <footer class="usa-footer">
-    <div class="grid-container usa-footer__return-to-top">
+    {# <div class="grid-container usa-footer__return-to-top">
       <a href="#">Return to top</a>
-    </div>
+    </div> #}
 
     <div class="usa-footer__primary-section">
       <nav class="usa-footer__nav" aria-label="Footer navigation">

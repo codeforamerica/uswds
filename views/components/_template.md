@@ -83,4 +83,4 @@ Default Body
 <!-- SOURCE -->
 
 {% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-<!-- render 'source.md', name: '{{ name }}', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: usage, config: config -->
+<!-- render 'source.md', name: '{{ name }}', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: usage, config: config, pckg: package -->

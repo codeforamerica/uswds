@@ -137,4 +137,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'input-select', nice: title, usage: url_uswds_usage, theme: '$theme-input-select-size: 3', config: config %}
+{% render 'source.md', name: 'input-select', nice: title, usage: url_uswds_usage, theme: '$theme-input-select-size: 3', config: config, pckg: package %}

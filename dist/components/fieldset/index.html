@@ -39,27 +39,33 @@
   <div class="usa-overlay"></div>
 
   <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container">
+    <div class="usa-nav-container flex-align-center">
       <div class="usa-navbar">
-        <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        <div class="usa-logo margin-y-2">
+          <a href="https://codeforamerica.github.io/uswds/dist/" title="Code for America USWDS theme" aria-hidden="true">
+            <img src="https://codeforamerica.github.io/uswds/dist/svg/logo.svg" role="img" alt="Code for America USWDS theme" class="display-none desktop:display-block" />
+          </a>
+
+          <em class="usa-logo__text desktop:display-none">
+            <a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a>
+          </em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
         <button type="button" class="usa-nav__close">
           <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-266cb9ed20e1c">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-8a2c9f0d97a4c">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-266cb9ed20e1c" class="usa-nav__submenu">
+            <ul id="aria-c-8a2c9f0d97a4c" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -100,16 +106,19 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" ><span>Toolbar</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
                 </li>
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c4c11a27dccaf">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-72f93992ccfdf">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-c4c11a27dccaf" class="usa-nav__submenu">
+            <ul id="aria-c-72f93992ccfdf" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -124,7 +133,7 @@
           </li>
 
           <li class="usa-nav__primary-item">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
 
@@ -167,7 +176,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset/" class="usa-current" aria-current="page">Fieldset</a>
 
                                 <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
@@ -176,7 +185,7 @@
                   <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                </ul>
+                                  </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/form-card/" >Form card</a>
@@ -204,6 +213,10 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" >Toolbar</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -250,26 +263,26 @@
   </legend>
   <div class="usa-hint">Please check all that apply.</div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-e54ca688c223c" name="checkbox['2fa2935f914e3']" value="in-foster-care" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-e54ca688c223c" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-9475ec3f30eb1" name="checkbox['43a248701d473']" value="in-foster-care" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-9475ec3f30eb1" class="usa-checkbox__label">
       <span>In foster care</span>
     </label>
   </div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-b7e454fa1408c" name="checkbox['2fa2935f914e3']" value="unhoused-homeless" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-b7e454fa1408c" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-e7b90460dd97c" name="checkbox['43a248701d473']" value="unhoused-homeless" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-e7b90460dd97c" class="usa-checkbox__label">
       <span>Unhoused/homeless</span>
     </label>
   </div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-3110c6c7703b9" name="checkbox['2fa2935f914e3']" value="child-of-migrant-worker" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-3110c6c7703b9" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-ceda6f7a2d7df" name="checkbox['43a248701d473']" value="child-of-migrant-worker" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-ceda6f7a2d7df" class="usa-checkbox__label">
       <span>Child of migrant worker</span>
     </label>
   </div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-f1b402ee81a74" name="checkbox['2fa2935f914e3']" value="runaway-from-home" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-f1b402ee81a74" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-802ce1529f3d9" name="checkbox['43a248701d473']" value="runaway-from-home" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-802ce1529f3d9" class="usa-checkbox__label">
       <span>Runaway from home</span>
     </label>
   </div>
@@ -278,11 +291,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-0081fb804abf8">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-87818992ee41c">
           View HTML
         </button>
       </div>
-      <div id="aria-c-0081fb804abf8" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-87818992ee41c" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
@@ -290,26 +303,26 @@
   &lt;/legend&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Please check all that apply.&lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-e54ca688c223c&quot; name=&quot;checkbox['2fa2935f914e3']&quot; value=&quot;in-foster-care&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-e54ca688c223c&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-9475ec3f30eb1&quot; name=&quot;checkbox['43a248701d473']&quot; value=&quot;in-foster-care&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-9475ec3f30eb1&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;In foster care&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-b7e454fa1408c&quot; name=&quot;checkbox['2fa2935f914e3']&quot; value=&quot;unhoused-homeless&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-b7e454fa1408c&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-e7b90460dd97c&quot; name=&quot;checkbox['43a248701d473']&quot; value=&quot;unhoused-homeless&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-e7b90460dd97c&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Unhoused/homeless&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-3110c6c7703b9&quot; name=&quot;checkbox['2fa2935f914e3']&quot; value=&quot;child-of-migrant-worker&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-3110c6c7703b9&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-ceda6f7a2d7df&quot; name=&quot;checkbox['43a248701d473']&quot; value=&quot;child-of-migrant-worker&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-ceda6f7a2d7df&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Child of migrant worker&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-f1b402ee81a74&quot; name=&quot;checkbox['2fa2935f914e3']&quot; value=&quot;runaway-from-home&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-f1b402ee81a74&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-802ce1529f3d9&quot; name=&quot;checkbox['43a248701d473']&quot; value=&quot;runaway-from-home&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-802ce1529f3d9&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Runaway from home&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
@@ -328,14 +341,14 @@
   </legend>
   <div class="usa-hint">Please choose one of the following.</div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-7c9abaf6d51ac" name="radio['0771cfec889c3']" value="virtual-school" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-7c9abaf6d51ac" class="usa-radio__label">
+    <input type="radio" id="radio-03dbe2e0d376e" name="radio['f433e9e73d05a']" value="virtual-school" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-03dbe2e0d376e" class="usa-radio__label">
       <span>Virtual school</span>
     </label>
   </div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-0aba60e2a2502" name="radio['0771cfec889c3']" value="homeschool" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-0aba60e2a2502" class="usa-radio__label">
+    <input type="radio" id="radio-14f789c63ff26" name="radio['f433e9e73d05a']" value="homeschool" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-14f789c63ff26" class="usa-radio__label">
       <span>Homeschool</span>
     </label>
   </div>
@@ -344,11 +357,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-96a289c104d18">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4f873eb156bc">
           View HTML
         </button>
       </div>
-      <div id="aria-c-96a289c104d18" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-4f873eb156bc" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
@@ -356,14 +369,14 @@
   &lt;/legend&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;Please choose one of the following.&lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-7c9abaf6d51ac&quot; name=&quot;radio['0771cfec889c3']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-7c9abaf6d51ac&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-03dbe2e0d376e&quot; name=&quot;radio['f433e9e73d05a']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-03dbe2e0d376e&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Virtual school&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-0aba60e2a2502&quot; name=&quot;radio['0771cfec889c3']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-0aba60e2a2502&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-14f789c63ff26&quot; name=&quot;radio['f433e9e73d05a']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-14f789c63ff26&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Homeschool&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
@@ -382,8 +395,8 @@
   </legend>
   <div class="usa-hint">We updated the address you entered. If correct, please use the suggested address.</div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-48ac74f4e8a" name="radio['a47ab470c426f']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-48ac74f4e8a" class="usa-radio__label">
+    <input type="radio" id="radio-17fbf90c2444e" name="radio['de6ead0a3c6fa']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-17fbf90c2444e" class="usa-radio__label">
       <span>Suggested address</span>
       <span class="usa-radio__label-description">4918 Webster St., Apt 2
         <br> Oakland, CA
@@ -392,8 +405,8 @@
     </label>
   </div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-cbf4444e45e56" name="radio['a47ab470c426f']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-cbf4444e45e56" class="usa-radio__label">
+    <input type="radio" id="radio-c35ea8159731b" name="radio['de6ead0a3c6fa']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-c35ea8159731b" class="usa-radio__label">
       <span>Address you entered</span>
       <span class="usa-radio__label-description">4918 Webster Street
         <br> Apt 2
@@ -407,11 +420,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-810e5204ac464">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c3440a2fc262a">
           View HTML
         </button>
       </div>
-      <div id="aria-c-810e5204ac464" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-c3440a2fc262a" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
@@ -419,8 +432,8 @@
   &lt;/legend&gt;
   &lt;div class=&quot;usa-hint&quot;&gt;We updated the address you entered. If correct, please use the suggested address.&lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-48ac74f4e8a&quot; name=&quot;radio['a47ab470c426f']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-48ac74f4e8a&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-17fbf90c2444e&quot; name=&quot;radio['de6ead0a3c6fa']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-17fbf90c2444e&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Suggested address&lt;/span&gt;
       &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
         &lt;br&gt; Oakland, CA
@@ -429,8 +442,8 @@
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-cbf4444e45e56&quot; name=&quot;radio['a47ab470c426f']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-cbf4444e45e56&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-c35ea8159731b&quot; name=&quot;radio['de6ead0a3c6fa']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-c35ea8159731b&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Address you entered&lt;/span&gt;
       &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
         &lt;br&gt; Apt 2
@@ -524,7 +537,7 @@
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-fieldset</code></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-fieldset" target="_blank" class="usa-link--external bg-base-lightest padding-2px padding-x-05 radius-sm font-mono-xs">@codeforamerica/uswds/packages/cfa-fieldset</a></span>
 </p>
 <p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
@@ -636,7 +649,7 @@
           </li>
 
           <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
       </nav>

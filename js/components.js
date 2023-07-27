@@ -11,7 +11,7 @@ const button = require('../node_modules/@uswds/uswds/packages/usa-button/src/ind
 // const inputMask = require('../node_modules/@uswds/uswds/packages/usa-input-mask/src/index');
 // const languageSelector = require('../node_modules/@uswds/uswds/packages/usa-language-selector/src/index');
 // const modal = require('../node_modules/@uswds/uswds/packages/usa-modal/src/index');
-// const navigation = require('../node_modules/@uswds/uswds/packages/usa-header/src/index');
+const navigation = require('../node_modules/@uswds/uswds/packages/usa-header/src/index');
 // const password = require('../node_modules/@uswds/uswds/packages/_usa-password/src/index');
 // const search = require('../node_modules/@uswds/uswds/packages/usa-search/src/index');
 // const skipnav = require('../node_modules/@uswds/uswds/packages/usa-skipnav/src/index');
@@ -33,7 +33,7 @@ module.exports = {
   // inputMask,
   // languageSelector,
   // modal,
-  // navigation,
+  navigation,
   // password,
   // search,
   // skipnav,

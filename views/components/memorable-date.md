@@ -262,4 +262,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   usage: url_uswds_usage,
   stylesheets: stylesheets,
   stylesheets_import: stylesheets_import,
-  config: config %}
+  config: config,
+  pckg: package %}

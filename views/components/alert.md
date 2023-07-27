@@ -174,4 +174,4 @@ Additional context and followup information including [a link](#). {.usa-alert__
 <!-- SOURCE -->
 
 {% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-{% render 'source.md', name: 'alert', nice: title, theme: '$theme-alert-padding-x: 2', usage: usage, config: config %}
+{% render 'source.md', name: 'alert', nice: title, theme: '$theme-alert-padding-x: 2', usage: usage, config: config, pckg: package %}

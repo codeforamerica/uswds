@@ -39,27 +39,33 @@
   <div class="usa-overlay"></div>
 
   <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container">
+    <div class="usa-nav-container flex-align-center">
       <div class="usa-navbar">
-        <div class="usa-logo" id="-logo">
-          <em class="usa-logo__text"><a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a></em>
+        <div class="usa-logo margin-y-2">
+          <a href="https://codeforamerica.github.io/uswds/dist/" title="Code for America USWDS theme" aria-hidden="true">
+            <img src="https://codeforamerica.github.io/uswds/dist/svg/logo.svg" role="img" alt="Code for America USWDS theme" class="display-none desktop:display-block" />
+          </a>
+
+          <em class="usa-logo__text desktop:display-none">
+            <a href="/" title="Code for America USWDS theme">Code for America USWDS theme</a>
+          </em>
         </div>
 
         <button type="button" class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav">
+      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
         <button type="button" class="usa-nav__close">
           <img src="https://codeforamerica.github.io/uswds/dist/uswds/img/usa-icons/close.svg" role="img" alt="Close" />
         </button>
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-53e25c35b989">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-86c362b115191">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-53e25c35b989" class="usa-nav__submenu">
+            <ul id="aria-c-86c362b115191" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -100,16 +106,19 @@
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" ><span>Textarea</span></a>
                 </li>
                               <li class="usa-nav__submenu-item">
+                                    <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" ><span>Toolbar</span></a>
+                </li>
+                              <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/typography/" ><span>Typography</span></a>
                 </li>
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-64163e01b446b">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-a4f8751f511bb">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-64163e01b446b" class="usa-nav__submenu">
+            <ul id="aria-c-a4f8751f511bb" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -124,7 +133,7 @@
           </li>
 
           <li class="usa-nav__primary-item">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
 
@@ -171,7 +180,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/form-card/" class="usa-current" aria-current="page">Form card</a>
 
                                 <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
 
@@ -180,7 +189,7 @@
                   <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                </ul>
+                                  </ul>
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/form-group/" >Form group</a>
@@ -204,6 +213,10 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/textarea/" >Textarea</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/toolbar/" >Toolbar</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -258,15 +271,15 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-061251a295f67">
-                <label class="usa-label cfa-label" for="input-061251a295f67">
+              <div class="usa-form-group cfa-form-group" id="form-group-8b0d56b4b68a4">
+                <label class="usa-label cfa-label" for="input-8b0d56b4b68a4">
                   <span>What is your first name?</span>
                   <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                 </label>
                 <div class="usa-hint">Legally as it appears on your I.D.</div>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-061251a295f67" name="input['061251a295f67']" required="true">
+                    <input class="usa-input cfa-input" type="text" id="input-8b0d56b4b68a4" name="input['8b0d56b4b68a4']" required="true">
                   </div>
                 </div>
               </div>
@@ -276,16 +289,16 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-f7c6a0f88a38d">
-                <label class="usa-label cfa-label" for="input-f7c6a0f88a38d">
+              <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-8ebac91a9ef6b">
+                <label class="usa-label cfa-label" for="input-8ebac91a9ef6b">
                   <span>What is your last name?</span>
                   <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                 </label>
                 <div class="usa-hint">Legally as it appears on your I.D.</div>
-                <span class="usa-error-message" id="error-message-8d91a8f170131" role="alert">This field is required</span>
+                <span class="usa-error-message" id="error-message-88f8e52cb3895" role="alert">This field is required</span>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-f7c6a0f88a38d" name="input['f7c6a0f88a38d']" required="true">
+                    <input class="usa-input cfa-input" type="text" id="input-8ebac91a9ef6b" name="input['8ebac91a9ef6b']" required="true">
                   </div>
                 </div>
               </div>
@@ -298,16 +311,16 @@
               <legend class="usa-legend cfa-legend">
                 <span>What is your date of birth?</span>
               </legend>
-              <div class="usa-hint" id="hint-26eb99ae7e204">For example January / 1 / 2000</div>
+              <div class="usa-hint" id="hint-c959ef99dce59">For example January / 1 / 2000</div>
               <div class="usa-memorable-date cfa-memorable-date">
                 <div>
-                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-26eb99ae7e204">
-                    <label class="usa-label cfa-label text-normal" for="month-26eb99ae7e204">
+                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-c959ef99dce59">
+                    <label class="usa-label cfa-label text-normal" for="month-c959ef99dce59">
                       <span>Month</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
-                      <select class="usa-select cfa-select" id="month-26eb99ae7e204" name="month['26eb99ae7e204']" aria-describedby="hint-26eb99ae7e204" required="true">
+                      <select class="usa-select cfa-select" id="month-c959ef99dce59" name="month['c959ef99dce59']" aria-describedby="hint-c959ef99dce59" required="true">
                         <option selected="true">Click to select month</option>
                         <option disabled="true">---</option>
                         <option value="1">01 - January</option>
@@ -327,27 +340,27 @@
                   </div>
                 </div>
                 <div>
-                  <div class="usa-form-group usa-form-group--day" id="form-group-26eb99ae7e204">
-                    <label class="usa-label cfa-label text-normal" for="day-26eb99ae7e204">
+                  <div class="usa-form-group usa-form-group--day" id="form-group-c959ef99dce59">
+                    <label class="usa-label cfa-label text-normal" for="day-c959ef99dce59">
                       <span>Day</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
                       <div>
-                        <input class="usa-input cfa-input" type="text" id="day-26eb99ae7e204" name="day['26eb99ae7e204']" aria-describedby="hint-26eb99ae7e204" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        <input class="usa-input cfa-input" type="text" id="day-c959ef99dce59" name="day['c959ef99dce59']" aria-describedby="hint-c959ef99dce59" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
                       </div>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <div class="usa-form-group usa-form-group--year" id="form-group-26eb99ae7e204">
-                    <label class="usa-label cfa-label text-normal" for="year-26eb99ae7e204">
+                  <div class="usa-form-group usa-form-group--year" id="form-group-c959ef99dce59">
+                    <label class="usa-label cfa-label text-normal" for="year-c959ef99dce59">
                       <span>Year</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
                       <div>
-                        <input class="usa-input cfa-input" type="text" id="year-26eb99ae7e204" name="year['26eb99ae7e204']" aria-describedby="hint-26eb99ae7e204" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                        <input class="usa-input cfa-input" type="text" id="year-c959ef99dce59" name="year['c959ef99dce59']" aria-describedby="hint-c959ef99dce59" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
                       </div>
                     </div>
                   </div>
@@ -359,14 +372,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-b78a1ccd4e9a">
-                <label class="usa-label cfa-label" for="input-b78a1ccd4e9a">
+              <div class="usa-form-group cfa-form-group" id="form-group-c66621030a488">
+                <label class="usa-label cfa-label" for="input-c66621030a488">
                   <span>Which gender do you identify with?</span>
                 </label>
                 <div class="usa-hint">For example, man, woman, or non-binary.</div>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-b78a1ccd4e9a" name="input['b78a1ccd4e9a']">
+                    <input class="usa-input cfa-input" type="text" id="input-c66621030a488" name="input['c66621030a488']">
                   </div>
                 </div>
               </div>
@@ -380,14 +393,14 @@
                 <span>Did you move to the state within the last year?</span>
               </legend>
               <div class="usa-radio cfa-radio">
-                <input type="radio" id="radio-17a3d6af418d2" name="radio['f7892ccdd1c26']" value="yes" class="usa-radio__input usa-radio__input--tile">
-                <label for="radio-17a3d6af418d2" class="usa-radio__label">
+                <input type="radio" id="radio-be25ce5cd5e3b" name="radio['562956b22d3f']" value="yes" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-be25ce5cd5e3b" class="usa-radio__label">
                   <span>Yes</span>
                 </label>
               </div>
               <div class="usa-radio cfa-radio">
-                <input type="radio" id="radio-2458cb88e483f" name="radio['f7892ccdd1c26']" value="no" class="usa-radio__input usa-radio__input--tile">
-                <label for="radio-2458cb88e483f" class="usa-radio__label">
+                <input type="radio" id="radio-a20b0a940fcca" name="radio['562956b22d3f']" value="no" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-a20b0a940fcca" class="usa-radio__label">
                   <span>No</span>
                 </label>
               </div>
@@ -411,11 +424,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3071ae071555a">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ef3581e636962">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3071ae071555a" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-ef3581e636962" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
@@ -430,15 +443,15 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-061251a295f67&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-061251a295f67&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-8b0d56b4b68a4&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-8b0d56b4b68a4&quot;&gt;
                   &lt;span&gt;What is your first name?&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-061251a295f67&quot; name=&quot;input['061251a295f67']&quot; required=&quot;true&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-8b0d56b4b68a4&quot; name=&quot;input['8b0d56b4b68a4']&quot; required=&quot;true&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -448,16 +461,16 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-f7c6a0f88a38d&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-f7c6a0f88a38d&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-8ebac91a9ef6b&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-8ebac91a9ef6b&quot;&gt;
                   &lt;span&gt;What is your last name?&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div class=&quot;usa-hint&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-8d91a8f170131&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
+                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-88f8e52cb3895&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-f7c6a0f88a38d&quot; name=&quot;input['f7c6a0f88a38d']&quot; required=&quot;true&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-8ebac91a9ef6b&quot; name=&quot;input['8ebac91a9ef6b']&quot; required=&quot;true&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -470,16 +483,16 @@
               &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
                 &lt;span&gt;What is your date of birth?&lt;/span&gt;
               &lt;/legend&gt;
-              &lt;div class=&quot;usa-hint&quot; id=&quot;hint-26eb99ae7e204&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
+              &lt;div class=&quot;usa-hint&quot; id=&quot;hint-c959ef99dce59&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
               &lt;div class=&quot;usa-memorable-date cfa-memorable-date&quot;&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-26eb99ae7e204&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-26eb99ae7e204&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-c959ef99dce59&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-c959ef99dce59&quot;&gt;
                       &lt;span&gt;Month&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
-                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-26eb99ae7e204&quot; name=&quot;month['26eb99ae7e204']&quot; aria-describedby=&quot;hint-26eb99ae7e204&quot; required=&quot;true&quot;&gt;
+                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-c959ef99dce59&quot; name=&quot;month['c959ef99dce59']&quot; aria-describedby=&quot;hint-c959ef99dce59&quot; required=&quot;true&quot;&gt;
                         &lt;option selected=&quot;true&quot;&gt;Click to select month&lt;/option&gt;
                         &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
                         &lt;option value=&quot;1&quot;&gt;01 - January&lt;/option&gt;
@@ -499,27 +512,27 @@
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-26eb99ae7e204&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-26eb99ae7e204&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-c959ef99dce59&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-c959ef99dce59&quot;&gt;
                       &lt;span&gt;Day&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
                       &lt;div&gt;
-                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-26eb99ae7e204&quot; name=&quot;day['26eb99ae7e204']&quot; aria-describedby=&quot;hint-26eb99ae7e204&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-c959ef99dce59&quot; name=&quot;day['c959ef99dce59']&quot; aria-describedby=&quot;hint-c959ef99dce59&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-26eb99ae7e204&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-26eb99ae7e204&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-c959ef99dce59&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-c959ef99dce59&quot;&gt;
                       &lt;span&gt;Year&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
                       &lt;div&gt;
-                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-26eb99ae7e204&quot; name=&quot;year['26eb99ae7e204']&quot; aria-describedby=&quot;hint-26eb99ae7e204&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-c959ef99dce59&quot; name=&quot;year['c959ef99dce59']&quot; aria-describedby=&quot;hint-c959ef99dce59&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -531,14 +544,14 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b78a1ccd4e9a&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-b78a1ccd4e9a&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-c66621030a488&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-c66621030a488&quot;&gt;
                   &lt;span&gt;Which gender do you identify with?&lt;/span&gt;
                 &lt;/label&gt;
                 &lt;div class=&quot;usa-hint&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-b78a1ccd4e9a&quot; name=&quot;input['b78a1ccd4e9a']&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-c66621030a488&quot; name=&quot;input['c66621030a488']&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -552,14 +565,14 @@
                 &lt;span&gt;Did you move to the state within the last year?&lt;/span&gt;
               &lt;/legend&gt;
               &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;radio-17a3d6af418d2&quot; name=&quot;radio['f7892ccdd1c26']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-                &lt;label for=&quot;radio-17a3d6af418d2&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-be25ce5cd5e3b&quot; name=&quot;radio['562956b22d3f']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-be25ce5cd5e3b&quot; class=&quot;usa-radio__label&quot;&gt;
                   &lt;span&gt;Yes&lt;/span&gt;
                 &lt;/label&gt;
               &lt;/div&gt;
               &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;radio-2458cb88e483f&quot; name=&quot;radio['f7892ccdd1c26']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-                &lt;label for=&quot;radio-2458cb88e483f&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-a20b0a940fcca&quot; name=&quot;radio['562956b22d3f']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-a20b0a940fcca&quot; class=&quot;usa-radio__label&quot;&gt;
                   &lt;span&gt;No&lt;/span&gt;
                 &lt;/label&gt;
               &lt;/div&gt;
@@ -600,14 +613,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-358c608c7147d">
-                <label class="usa-label cfa-label" for="input-358c608c7147d">
+              <div class="usa-form-group cfa-form-group" id="form-group-fcf12fbd2774b">
+                <label class="usa-label cfa-label" for="input-fcf12fbd2774b">
                   <span>Street address</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-358c608c7147d" name="input['358c608c7147d']" required="true" autocomplete="address-line1">
+                    <input class="usa-input cfa-input" type="text" id="input-fcf12fbd2774b" name="input['fcf12fbd2774b']" required="true" autocomplete="address-line1">
                   </div>
                 </div>
               </div>
@@ -617,14 +630,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-d94a195e062ca">
-                <label class="usa-label cfa-label" for="input-d94a195e062ca">
+              <div class="usa-form-group cfa-form-group" id="form-group-9f62115d88461">
+                <label class="usa-label cfa-label" for="input-9f62115d88461">
                   <span>Street address line 2</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-d94a195e062ca" name="input['d94a195e062ca']" required="true" autocomplete="address-line2">
+                    <input class="usa-input cfa-input" type="text" id="input-9f62115d88461" name="input['9f62115d88461']" required="true" autocomplete="address-line2">
                   </div>
                 </div>
               </div>
@@ -634,14 +647,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-83c118de0e2eb">
-                <label class="usa-label cfa-label" for="input-83c118de0e2eb">
+              <div class="usa-form-group cfa-form-group" id="form-group-85f7d7ccc9b18">
+                <label class="usa-label cfa-label" for="input-85f7d7ccc9b18">
                   <span>City</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-83c118de0e2eb" name="input['83c118de0e2eb']" required="true" autocomplete="address-level2">
+                    <input class="usa-input cfa-input" type="text" id="input-85f7d7ccc9b18" name="input['85f7d7ccc9b18']" required="true" autocomplete="address-level2">
                   </div>
                 </div>
               </div>
@@ -651,14 +664,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-8ea9f7a845b69">
-                <label class="usa-label cfa-label" for="input-8ea9f7a845b69">
+              <div class="usa-form-group cfa-form-group" id="form-group-273a347b5fff">
+                <label class="usa-label cfa-label" for="input-273a347b5fff">
                   <span>State, territory, or military post</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input usa-input--sm" type="text" id="input-8ea9f7a845b69" name="input['8ea9f7a845b69']" required="true" maxlength="2" autocomplete="address-level1">
+                    <input class="usa-input cfa-input usa-input--sm" type="text" id="input-273a347b5fff" name="input['273a347b5fff']" required="true" maxlength="2" autocomplete="address-level1">
                   </div>
                 </div>
               </div>
@@ -668,14 +681,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-bf876365df15">
-                <label class="usa-label cfa-label" for="input-bf876365df15">
+              <div class="usa-form-group cfa-form-group" id="form-group-38d2a5343e2fd">
+                <label class="usa-label cfa-label" for="input-38d2a5343e2fd">
                   <span>ZIP code</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input usa-input--md" type="text" id="input-bf876365df15" name="input['bf876365df15']" required="true" pattern="[\d]{5}(-[\d]{4})?" autocomplete="postal-code">
+                    <input class="usa-input cfa-input usa-input--md" type="text" id="input-38d2a5343e2fd" name="input['38d2a5343e2fd']" required="true" pattern="[\d]{5}(-[\d]{4})?" autocomplete="postal-code">
                   </div>
                 </div>
               </div>
@@ -699,11 +712,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-7ef52c9fb741d">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-83fecf382ca31">
           View HTML
         </button>
       </div>
-      <div id="aria-c-7ef52c9fb741d" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-83fecf382ca31" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
@@ -718,14 +731,14 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-358c608c7147d&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-358c608c7147d&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-fcf12fbd2774b&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-fcf12fbd2774b&quot;&gt;
                   &lt;span&gt;Street address&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-358c608c7147d&quot; name=&quot;input['358c608c7147d']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-fcf12fbd2774b&quot; name=&quot;input['fcf12fbd2774b']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -735,14 +748,14 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-d94a195e062ca&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d94a195e062ca&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-9f62115d88461&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-9f62115d88461&quot;&gt;
                   &lt;span&gt;Street address line 2&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-d94a195e062ca&quot; name=&quot;input['d94a195e062ca']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-9f62115d88461&quot; name=&quot;input['9f62115d88461']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -752,14 +765,14 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-83c118de0e2eb&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-83c118de0e2eb&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-85f7d7ccc9b18&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-85f7d7ccc9b18&quot;&gt;
                   &lt;span&gt;City&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-83c118de0e2eb&quot; name=&quot;input['83c118de0e2eb']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-85f7d7ccc9b18&quot; name=&quot;input['85f7d7ccc9b18']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -769,14 +782,14 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-8ea9f7a845b69&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-8ea9f7a845b69&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-273a347b5fff&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-273a347b5fff&quot;&gt;
                   &lt;span&gt;State, territory, or military post&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-8ea9f7a845b69&quot; name=&quot;input['8ea9f7a845b69']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-273a347b5fff&quot; name=&quot;input['273a347b5fff']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -786,14 +799,14 @@
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-bf876365df15&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-bf876365df15&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-38d2a5343e2fd&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-38d2a5343e2fd&quot;&gt;
                   &lt;span&gt;ZIP code&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-bf876365df15&quot; name=&quot;input['bf876365df15']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-38d2a5343e2fd&quot; name=&quot;input['38d2a5343e2fd']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -825,10 +838,10 @@
   <form class="usa-form cfa-form">
     <fieldset class="usa-fieldset cfa-fieldset">
       <legend class="cfa-form-card__heading">
-        <h1 id="aria-lb-7024b80e1f312">Confirm your address</h1>
+        <h1 id="aria-lb-5cb6da490adfa">Confirm your address</h1>
       </legend>
       <div>
-        <div class="usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning" role="region" aria-labelledby="aria-lb-7024b80e1f312">
+        <div class="usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning" role="region" aria-labelledby="aria-lb-5cb6da490adfa">
           <div class="usa-alert__body">
             <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href="#">Alternatively, click here to look up your county information</a>.</p>
           </div>
@@ -838,8 +851,8 @@
         <div>
           <div class="cfa-form-card__input-select-group">
             <div class="usa-radio cfa-radio">
-              <input type="radio" id="radio-a9a43ba0bd11b" name="radio['09de379158319']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
-              <label for="radio-a9a43ba0bd11b" class="usa-radio__label">
+              <input type="radio" id="radio-84d1924754ba4" name="radio['fbcd4681c2e27']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
+              <label for="radio-84d1924754ba4" class="usa-radio__label">
                 <span>Suggested address</span>
                 <span class="usa-radio__label-description">4918 Webster St., Apt 2
                   <br> Oakland, CA
@@ -848,8 +861,8 @@
               </label>
             </div>
             <div class="usa-radio cfa-radio">
-              <input type="radio" id="radio-729a6956350c2" name="radio['09de379158319']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
-              <label for="radio-729a6956350c2" class="usa-radio__label">
+              <input type="radio" id="radio-142263988a8f" name="radio['fbcd4681c2e27']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
+              <label for="radio-142263988a8f" class="usa-radio__label">
                 <span>Address you entered</span>
                 <span class="usa-radio__label-description">4918 Webster Street
                   <br> Apt 2
@@ -877,20 +890,20 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-34f3e1df9bbd5">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-492387b3a07c2">
           View HTML
         </button>
       </div>
-      <div id="aria-c-34f3e1df9bbd5" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-492387b3a07c2" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
       &lt;legend class=&quot;cfa-form-card__heading&quot;&gt;
-        &lt;h1 id=&quot;aria-lb-7024b80e1f312&quot;&gt;Confirm your address&lt;/h1&gt;
+        &lt;h1 id=&quot;aria-lb-5cb6da490adfa&quot;&gt;Confirm your address&lt;/h1&gt;
       &lt;/legend&gt;
       &lt;div&gt;
-        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-7024b80e1f312&quot;&gt;
+        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-5cb6da490adfa&quot;&gt;
           &lt;div class=&quot;usa-alert__body&quot;&gt;
             &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. &lt;a href=&quot;#&quot;&gt;Alternatively, click here to look up your county information&lt;/a&gt;.&lt;/p&gt;
           &lt;/div&gt;
@@ -900,8 +913,8 @@
         &lt;div&gt;
           &lt;div class=&quot;cfa-form-card__input-select-group&quot;&gt;
             &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-a9a43ba0bd11b&quot; name=&quot;radio['09de379158319']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-a9a43ba0bd11b&quot; class=&quot;usa-radio__label&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-84d1924754ba4&quot; name=&quot;radio['fbcd4681c2e27']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-84d1924754ba4&quot; class=&quot;usa-radio__label&quot;&gt;
                 &lt;span&gt;Suggested address&lt;/span&gt;
                 &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
                   &lt;br&gt; Oakland, CA
@@ -910,8 +923,8 @@
               &lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-729a6956350c2&quot; name=&quot;radio['09de379158319']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-729a6956350c2&quot; class=&quot;usa-radio__label&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-142263988a8f&quot; name=&quot;radio['fbcd4681c2e27']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-142263988a8f&quot; class=&quot;usa-radio__label&quot;&gt;
                 &lt;span&gt;Address you entered&lt;/span&gt;
                 &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
                   &lt;br&gt; Apt 2
@@ -978,11 +991,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-d750632273912">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-807dedbaf84e">
           View HTML
         </button>
       </div>
-      <div id="aria-c-d750632273912" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-807dedbaf84e" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
@@ -1064,11 +1077,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-799e6f347b385">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-103a4bb2c88a6">
           View HTML
         </button>
       </div>
-      <div id="aria-c-799e6f347b385" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-103a4bb2c88a6" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
@@ -1238,7 +1251,7 @@
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <code>@codeforamerica/uswds/packages/cfa-form-card</code></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-form-card" target="_blank" class="usa-link--external bg-base-lightest padding-2px padding-x-05 radius-sm font-mono-xs">@codeforamerica/uswds/packages/cfa-form-card</a></span>
 </p>
 <p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
@@ -1614,7 +1627,7 @@
           </li>
 
           <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="https://github.com/codeforamerica/uswds.git" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
+            <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-12</span></a>
           </li>
         </ul>
       </nav>

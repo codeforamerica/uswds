@@ -141,4 +141,4 @@ Most programs on this application, including food and cash assistance, require a
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: url_uswds_usage, javascript: 'enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.', config: config %}
+{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: url_uswds_usage, javascript: 'enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.', config: config, pckg: package %}
