@@ -63,11 +63,11 @@
 
         <ul class="usa-nav__primary usa-accordion">
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-37781527ee7fa">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-e53871068b6e3">
               <span>Components</span>
             </button>
 
-            <ul id="aria-c-37781527ee7fa" class="usa-nav__submenu">
+            <ul id="aria-c-e53871068b6e3" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
                 </li>
@@ -116,11 +116,11 @@
                           </ul>
           </li>
                               <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-4fe72f996fdab">
+            <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-24621002caa15">
               <span>Design tokens</span>
             </button>
 
-            <ul id="aria-c-4fe72f996fdab" class="usa-nav__submenu">
+            <ul id="aria-c-24621002caa15" class="usa-nav__submenu">
                               <li class="usa-nav__submenu-item">
                                     <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
                 </li>
@@ -306,11 +306,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-41804355b9a15">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-73c61c273e0e7">
           View HTML
         </button>
       </div>
-      <div id="aria-c-41804355b9a15" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-73c61c273e0e7" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;header&gt;
   &lt;div class=&quot;grid-container display-flex flex-justify flex-align-center tablet:padding-y-2&quot;&gt;
@@ -459,12 +459,12 @@
     <div class="code-block">
       <pre class="language-html">&lt;!-- in production environments the skip nav link would be embedded above the main header --&gt;
 &lt;!-- &lt;a class=&quot;usa-skipnav&quot; href=&quot;#main-content&quot;&gt;Skip to main content&lt;/a&gt; --&gt;
-&lt;header th:fragment=&quot;toolbar(modifier, container, start, home, logo, alert)&quot; th:class=&quot;${modifier}&quot;&gt;
+&lt;header th:fragment=&quot;toolbar(modifier, container, startEl, home, logo, endEl, alert)&quot; th:class=&quot;${modifier}&quot;&gt;
   &lt;div class=&quot;grid-container display-flex flex-justify flex-align-center&quot; th:classappend=&quot;${container.modifier}&quot;&gt;
-    &lt;div th:if=&quot;${start}&quot; th:replace=&quot;${start}&quot;&gt;
+    &lt;div th:if=&quot;${startEl}&quot; th:replace=&quot;${startEl}&quot;&gt;
       Toolbar start contents
     &lt;/div&gt;
-    &lt;div th:unless=&quot;${start}&quot; th:classappend=&quot;${startModifier}&quot;&gt;
+    &lt;div th:unless=&quot;${startEl}&quot; th:classappend=&quot;${startElModifier}&quot;&gt;
       &lt;a th:href=&quot;${home.href}&quot; th:class=&quot;${home.modifier}&quot;&gt;
         &lt;svg th:if=&quot;${logo.default}&quot; th:attr=&quot;style=${logo.default.style}&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;display-block tablet:display-none&quot; role=&quot;img&quot; aria-hidden=&quot;true&quot;&gt;
           &lt;use th:href=&quot;${logo.default.href}&quot;&gt;
@@ -472,13 +472,13 @@
         &lt;svg th:if=&quot;${logo.tablet}&quot; th:attr=&quot;style=${logo.tablet.style}&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;display-none tablet:display-block&quot; role=&quot;img&quot; aria-hidden=&quot;true&quot;&gt;
           &lt;use th:href=&quot;${logo.tablet.href}&quot;&gt;
         &lt;/svg&gt;
-        &lt;span th:if=&quot;${logo.alt}&quot; th:class=&quot;${logo.alt.modifier}&quot; th:text=&quot;${logo.alt.text}&quot;&gt;Code for America&lt;/span&gt;
+        &lt;span th:if=&quot;${logo.alt}&quot; th:class=&quot;${logo.alt.modifier}&quot; th:text=&quot;${logo.alt.text}&quot;&gt;Logo text&lt;/span&gt;
       &lt;/a&gt;
     &lt;/div&gt;
-    &lt;div th:if=&quot;${end}&quot; th:replace=&quot;${end}&quot;&gt;
+    &lt;div th:if=&quot;${endEl}&quot; th:replace=&quot;${endEl}&quot;&gt;
       Toolbar end contents
     &lt;/div&gt;
-    &lt;div th:unless=&quot;${end}&quot; class=&quot;display-flex&quot; th:classappend=&quot;${endModifier}&quot;&gt;
+    &lt;div th:unless=&quot;${endEl}&quot; class=&quot;display-flex&quot; th:classappend=&quot;${endElModifier}&quot;&gt;
       &lt;button th:if=&quot;${chat}&quot; class=&quot;usa-button cfa-button usa-button--primary flex-1&quot;&gt;
         &lt;svg class=&quot;usa-icon display-none mobile-lg:display-inline-block&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
           &lt;use th:href=&quot;${chat}&quot;&gt;&lt;/use&gt;
@@ -517,7 +517,7 @@
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
     </div>
     <div class="code-block">
-      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-toolbar/cfa-toolbar.th :: toolbar(${modifier}, ${start}, ${startModifier}, ${end}, ${endModifier}, ${chat}, ${languageSelector}, ${alert})}&quot; /&gt;</pre>
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-toolbar/cfa-toolbar.th :: toolbar(${modifier}, ${startEl}, ${startElModifier}, ${endEl}, ${endElModifier}, ${chat}, ${languageSelector}, ${alert})}&quot; /&gt;</pre>
     </div>
   </div>
 </figure>
@@ -528,7 +528,69 @@
       <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
     </figcaption>
     <div class="code-block">
-      <pre class="language-ruby"></pre>
+      <pre class="language-ruby">&lt;!-- in production environments the skip nav link would be embedded above the main header --&gt;
+&lt;!-- &lt;a class=&quot;usa-skipnav&quot; href=&quot;#main-content&quot;&gt;Skip to main content&lt;/a&gt; --&gt;
+&lt;header&lt;% if defined?(modifier) %&gt; class=&quot;&lt;%= modifier %&gt;&quot;&lt;% end %&gt;&gt;
+  &lt;div class=&quot;grid-container display-flex flex-justify flex-align-center&lt;% if container['modifier'] %&gt; &lt;%= container['modifier'] %&gt;&lt;% end %&gt;&quot;&gt;
+    &lt;% if defined?(startEl) %&gt;
+      &lt;%= startEl %&gt;
+    &lt;% else %&gt;
+    &lt;div&lt;% if defined?(startElModifier) %&gt; class=&quot;&lt;%= startElModifier %&gt;&quot;&lt;% end %&gt;&gt;
+      &lt;a href=&quot;&lt;%= home['href'] %&gt;&quot;&lt;% if home['modifier'] %&gt; class=&quot;&lt;%= home['modifier'] %&gt;&quot;&lt;% end %&gt;&gt;
+        &lt;% if logo['default'] %&gt;&lt;svg&lt;% if logo['default']['style'] %&gt; style=&quot;&lt;%= logo['default']['style'] %&gt;&quot;&lt;% end %&gt; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;display-block tablet:display-none&quot; role=&quot;img&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;use href=&quot;&lt;%= logo['default']['href'] %&gt;&quot;&gt;
+        &lt;/svg&gt;&lt;% end %&gt;
+        &lt;% if logo['tablet'] %&gt;&lt;svg&lt;% if logo['tablet']['style'] %&gt; style=&quot;&lt;%= logo['tablet']['style'] %&gt;&quot;&lt;% end %&gt; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;display-none tablet:display-block&quot; role=&quot;img&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;use href=&quot;&lt;%= logo['tablet']['href'] %&gt;&quot;&gt;
+        &lt;/svg&gt;&lt;% end %&gt;
+        &lt;% if logo['alt'] %&gt;&lt;span&lt;% if logo['alt'].has_key?('modifier') %&gt; class=&quot;&lt;%= logo['alt']['modifier'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= logo['alt']['text'] %&gt;&lt;/span&gt;&lt;% end %&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;% end %&gt;
+    &lt;% if defined?(endEl) %&gt;
+      &lt;%= endEl %&gt;
+    &lt;% else %&gt;
+    &lt;div class=&quot;display-flex&lt;% if defined?(endElModifier) %&gt; &lt;%= endElModifier %&gt;&lt;% end %&gt;&quot;&gt;
+      &lt;% if defined?(chat) %&gt;&lt;button class=&quot;usa-button cfa-button usa-button--primary flex-1&quot;&gt;
+        &lt;svg class=&quot;usa-icon display-none mobile-lg:display-inline-block&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+          &lt;use href=&quot;&lt;%= chat %&gt;&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;Chat&lt;/span&gt;
+      &lt;/button&gt;&lt;% end %&gt;
+      &lt;% if defined?(languageSelector) %&gt;&lt;div class=&quot;display-flex flex-align-center&quot;&gt;
+        &lt;button class=&quot;usa-button cfa-button usa-button--outline cfa-button--sub-label flex-auto margin-0 desktop:display-none&quot;&gt;
+          &lt;svg class=&quot;usa-icon display-none mobile-lg:display-inline-block&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;use href=&quot;&lt;%= languageSelector %&gt;&quot;&gt;&lt;/use&gt;
+          &lt;/svg&gt;
+          &lt;span&gt;
+            Translate &lt;span class=&quot;usa-sr-only&quot;&gt; to &lt;/span&gt;
+            &lt;small class=&quot;cfa-button__sub-label&quot;&gt;
+              &lt;span lang=&quot;en&quot;&gt;English&lt;/span&gt;,
+              &lt;span lang=&quot;es&quot;&gt;Español&lt;/span&gt;
+            &lt;/small&gt;
+          &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;nav aria-label=&quot;Translate&quot; class=&quot;display-none desktop:display-inline-block&quot;&gt;
+          &lt;a lang=&quot;en&quot; href=&quot;?lang=en&quot; class=&quot;margin-left-1&lt;% if defined?(links) &amp;&amp; links['modifier'] %&gt; &lt;%= links['modifier'] %&gt;&lt;% end %&gt;&quot;&gt;English&lt;/a&gt;
+          &lt;a lang=&quot;es&quot; href=&quot;?lang=es&quot; class=&quot;margin-left-1&lt;% if defined?(links) &amp;&amp; links['modifier'] %&gt; &lt;%= links['modifier'] %&gt;&lt;% end %&gt;&quot;&gt;Español&lt;/a&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;&lt;% end %&gt;
+    &lt;/div&gt;
+    &lt;% end %&gt;
+  &lt;/div&gt;
+  &lt;% if defined?(alert) %&gt;&lt;div&gt;
+    &lt;%= ERB.new(File.read('packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert')
+      .result_with_hash({
+        modifier: (alert['modifier'] if alert['modifier']),
+        role: (alert['role'] if alert['role']),
+        heading: (alert['heading'] if alert['heading']),
+        label: (alert['label'] if alert['label']),
+        labelledBy: (alert['labelledBy'] if alert['labelledBy']),
+        body: (alert['body'] if alert['body']),
+        text: (alert['text'] if alert['text'])
+      }.compact) %&gt;
+  &lt;/div&gt;&lt;% end %&gt;
+&lt;/header&gt;</pre>
     </div>
   </div>
   <div class="margin-0">
@@ -537,7 +599,7 @@
       <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
     </div>
     <div class="code-block">
-      <pre class="language-ruby">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-toolbar/cfa-toolbar'), 0, 0, '@toolbar').result_with_hash({}) %&gt;</pre>
+      <pre class="language-ruby">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-toolbar/cfa-toolbar'), 0, 0, '@toolbar').result_with_hash({modifier: modifier, startEl: startEl, startElModifier: startElModifier, endEl: endEl, endElModifier: endElModifier, chat: chat, languageSelector: languageSelector, container: container, home: home, logo: logo, alert: alert}) %&gt;</pre>
     </div>
   </div>
 </figure>
