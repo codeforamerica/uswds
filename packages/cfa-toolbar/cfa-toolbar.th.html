@@ -28,7 +28,7 @@
     <div th:unless="${end}" class="display-flex" th:classappend="${endModifier}">
       <button th:if="${chat}" class="usa-button cfa-button usa-button--primary flex-1">
         <svg class="usa-icon display-none mobile-lg:display-inline-block" aria-hidden="true" focusable="false" role="img">
-          <use href="/uswds/img/sprite.svg#chat"></use>
+          <use th:href="${chat}"></use>
         </svg>
 
         <span>Chat</span>
@@ -37,12 +37,12 @@
       <div th:if="${languageSelector}" class="display-flex flex-align-center">
         <button class="usa-button cfa-button usa-button--outline cfa-button--sub-label flex-auto margin-0 desktop:display-none">
           <svg class="usa-icon display-none mobile-lg:display-inline-block" aria-hidden="true" focusable="false" role="img">
-            <use href="/uswds/img/sprite.svg#translate"></use>
+            <use th:href="${languageSelector}"></use>
           </svg>
 
           <span>
             Translate <span class="usa-sr-only"> to </span>
-            <small class="cfa-button__sub-label display-none mobile:display-block">
+            <small class="cfa-button__sub-label">
               <span lang="en">English</span>,
               <span lang="es">Español</span>
             </small>

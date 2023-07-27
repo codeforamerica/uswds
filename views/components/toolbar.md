@@ -59,8 +59,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       "style": "width: 161px; height: 49px"
     }
   },
-  "chat": true,
-  "languageSelector": true,
+  "chat": "{{ config.baseUrl }}uswds/img/sprite.svg#chat",
+  "languageSelector": "{{ config.baseUrl }}uswds/img/sprite.svg#translate",
   "alert": {
     "modifier": "cfa-alert cfa-site-alert usa-alert--info margin-0 border-top-0 border-x-0",
     "role": "status",
