@@ -466,7 +466,7 @@ module.exports = function(eleventyConfig) {
       return block(rendered, 'html');
     } else {
       // Template fragment inclusion testing
-      let th = removeExtraHtml(await fragmentInclude(name, context, true));
+      let th = removeExtraHtml(await fragmentInclude(name, context));
 
       th = removeEmptyAttr(th);
 
@@ -474,7 +474,7 @@ module.exports = function(eleventyConfig) {
 
       if (process.env.NODE_ENV != 'production') {
         // ERB partial render testing
-        let erb = await erbRender(name, context, true);
+        let erb = await erbRender(name, context);
 
         rendered = `<div><figcaption class="margin-bottom-2"><b>Thymeleaf Preview</b></figcaption>${th}</div>` +
           `<div><br><figcaption class="margin-bottom-2"><b>ERB Preview</b></figcaption>${erb}</div>`;

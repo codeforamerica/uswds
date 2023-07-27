@@ -212,3 +212,34 @@
     fill: color($theme-color-success-darker);
   }
 }
+
+/**
+ * Buttons with sub labels
+ */
+
+.cfa-button--sub-label:not(.usa-button--unstyled) {
+  display: flex;
+  text-align: start;
+  align-items: center;
+
+  padding-top: units(1);
+  padding-bottom: units(1);
+
+  > .usa-icon {
+    &:first-child {
+      margin-inline-end: units(1);
+    }
+
+    &:last-child {
+      margin-inline-start: units(1);
+    }
+  }
+}
+
+.cfa-button__sub-label {
+  @include u-font($theme-button-font-family, '2xs');
+  @include u-text('normal');
+
+  display: block;
+  padding-top: units(1px);
+}

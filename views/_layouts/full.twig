@@ -44,7 +44,9 @@
       <div class="usa-navbar">
         <div class="usa-logo margin-y-2">
           <a href="{{ config.baseUrl }}" title="{{ package.nice }}" aria-hidden="true">
-            <img src="{{ config.baseUrl }}svg/logo.svg" role="img" alt="{{ package.nice }}" class="display-none desktop:display-block" />
+            <svg aria-hidden="true" width="380" height="85" xmlns="http://www.w3.org/2000/svg" class="display-none desktop:display-block maxw-full">
+              <use href="#logo">
+            </svg>
           </a>
 
           <em class="usa-logo__text desktop:display-none">
@@ -158,5 +160,7 @@
   <script src="{{ config.baseUrl }}js/default.js"></script>
 
   {% block scripts %}{% endblock %}
+
+  {% include '../../dist/svg/svgs.svg' %}
 </body>
 </html>

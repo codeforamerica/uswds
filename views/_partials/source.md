@@ -10,21 +10,22 @@
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="{{ config.baseUrl }}uswds/img/sprite.svg#folder_open"></use></svg></span>
   <span class="usa-icon-list__content"><strong>Package:</strong> <a href="{{ pckg.repository.url }}{{ package | replace: pckg.name, '/tree/main' }}" target="_blank" class="usa-link--external bg-base-lightest padding-2px padding-x-05 radius-sm font-mono-xs">{{ package }}</a></span>
 </p>
-{% endfor %}
 
 {{ config.dictionary.package }} Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.
+{% endfor %}
 
 <ul class="usa-content-list">
-  <li>
+  {% if sass != false %}<li>
     {% for i in stylesheet %}<strong>Sass stylesheet:</strong> <code>.{{ stylesheet | replace: package, '' }}</code>
     {% endfor %}{% if stylesheets %}<div class="font-body-3xs"><em>Additional required stylesheets from other packages:</em><ul class="font-body-3xs">{{ stylesheets }}</ul></div>{% endif %}
-  </li>
+  </li>{% endif %}
   {% for i in thymeleaf %}<li><strong>Thymeleaf template fragment:</strong> <code>.{{ thymeleaf | replace: package, '' }}</code></li>{% endfor %}
   {% for i in erb %}<li><strong>Embedded Ruby (ERB) partial template:</strong> <code>.{{ erb | replace: package, '' }}</code></li>{% endfor %}
   {% if javascript %}<li><strong>JavaScript</strong> {{ javascript }} Guidance on individual module loading will added. Currently, there is one script that imports all modules. The source is located at
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>{% endif %}
 </ul>
 
+{% if sass != false %}
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" aria-label="Sass">
   <figcaption class="margin-bottom-2">
     <strong>Sass theme settings and stylesheet loading</strong>
@@ -38,6 +39,7 @@
 {% for i in stylesheet %}@forward '{{ stylesheet }}';{% endfor %}
 {% if stylesheets_import %}{{ stylesheets_import }}{% endif %}</pre></div>
 </figure>
+{% endif %}
 
 {% for i in thymeleaf %}
 <figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Thymeleaf">

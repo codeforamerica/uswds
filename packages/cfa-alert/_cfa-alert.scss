@@ -4,7 +4,7 @@
   border: 2px solid;
 
   .usa-alert__body {
-    padding: units($theme-alert-padding-x);
+    padding: units($theme-alert-padding-y) units($theme-alert-padding-x);
   }
 
   .usa-alert__body::before {
@@ -15,6 +15,13 @@
   a:hover:not(.usa-button),
   a:visited:not(.usa-button) {
     color: color($theme-alert-link-color);
+  }
+}
+
+.cfa-site-alert {
+  .usa-alert__body {
+    @include grid-container($theme-site-alert-max-width );
+    @include add-responsive-site-margins;
   }
 }
 

@@ -3,11 +3,11 @@ tags:
 title: Template
 layout: default
 intro:
-url_uswds:
-url_uswds_guidance:
-url_uswds_usage:
+url_uswds: https://designsystem.digital.gov/components/template
+url_uswds_guidance: https://designsystem.digital.gov/components/template/#guidance
+url_uswds_usage: https://designsystem.digital.gov/components/template/#using-the-template-component-2
 nice_uswds: Template component
-url_honeycrisp: 'http://honeycrisp.herokuapp.com/cfa/styleguide#'
+url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#template
 nice_honeycrisp: Template atom
 modifier_honeycrisp: false
 design_honeycrisp:
@@ -78,9 +78,8 @@ Default Body
 
 <!-- DESIGN -->
 
-{% render 'figma.md', url: 'https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System' %}
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
 
-{% capture usage %}{{ url_uswds }}{{ url_uswds_usage }}{% endcapture %}
-<!-- render 'source.md', name: '{{ name }}', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: usage, config: config, pckg: package -->
+{% render 'source.md', name: 'name', nice: title, theme: '$theme-setting: value', usage: usage, config: config, pckg: package %}

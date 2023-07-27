@@ -6,10 +6,12 @@ intro:
 
 <section class="usa-section margin-y-8">
   <div class="grid-container">
-    <div class="usa-prose text-center desktop:width-tablet-lg margin-x-auto padding-y-8 padding-x-2 tablet:padding-x-8 radius-lg bg-white">
+    <div class="usa-prose text-center tablet-lg:width-tablet-lg margin-x-auto padding-y-8 padding-x-2 tablet:padding-x-8 radius-lg bg-white">
       <h1>
         <span class="usa-sr-only">{{ package.nice }}</span>
-        <img src="{{ config.baseUrl }}svg/logo.svg" role="img" alt="{{ package.nice }}" aria-hidden="true" width="573" height="128" />
+        <svg aria-hidden="true" width="573" height="128" xmlns="http://www.w3.org/2000/svg" class="maxw-full">
+          <use href="#logo">
+        </svg>
       </h1>
       <p class="usa-intro">{{ package.description }}</p>
       <div>

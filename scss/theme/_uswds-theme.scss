@@ -213,5 +213,25 @@ in the form $setting: value,
   $theme-header-logo-text-width: auto,
 
   // 6. Utilities
-  $utilities-use-important: true
+  $utilities-use-important: true,
+  $theme-utility-breakpoints: (
+    // 160px:
+    // "card": false,
+    // 240px:
+    // "card-lg": false,
+    // 320px:
+    "mobile": true,
+    // 480px:
+    "mobile-lg": true,
+    // 640px:
+    "tablet": true,
+    // 880px:
+    "tablet-lg": true,
+    // 1024px:
+    "desktop": true,
+    // // 1200px:
+    // "desktop-lg": false,
+    // // 1400px:
+    // "widescreen": false
+  )
 );

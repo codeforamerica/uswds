@@ -1,0 +1,63 @@
+<!-- in production environments the skip nav link would be embedded above the main header -->
+<!-- <a class="usa-skipnav" href="#main-content">Skip to main content</a> -->
+
+<header th:fragment="toolbar(modifier, container, start, home, logo, alert)" th:class="${modifier}">
+  <div class="grid-container display-flex flex-justify flex-align-center" th:classappend="${container.modifier}">
+    <div th:if="${start}" th:replace="${start}">
+      Toolbar start contents
+    </div>
+
+    <div th:unless="${start}" th:classappend="${startModifier}">
+      <a th:href="${home.href}" th:class="${home.modifier}">
+        <svg th:if="${logo.default}" th:attr="style=${logo.default.style}" xmlns="http://www.w3.org/2000/svg" class="display-block tablet:display-none" role="img" aria-hidden="true">
+          <use th:href="${logo.default.href}">
+        </svg>
+
+        <svg th:if="${logo.tablet}" th:attr="style=${logo.tablet.style}" xmlns="http://www.w3.org/2000/svg" class="display-none tablet:display-block" role="img" aria-hidden="true">
+          <use th:href="${logo.tablet.href}">
+        </svg>
+
+        <span th:if="${logo.alt}" th:class="${logo.alt.modifier}" th:text="${logo.alt.text}">Code for America</span>
+      </a>
+    </div>
+
+    <div th:if="${end}" th:replace="${end}">
+      Toolbar end contents
+    </div>
+
+    <div th:unless="${end}" class="display-flex" th:classappend="${endModifier}">
+      <button th:if="${chat}" class="usa-button cfa-button usa-button--primary flex-1">
+        <svg class="usa-icon display-none mobile-lg:display-inline-block" aria-hidden="true" focusable="false" role="img">
+          <use href="/uswds/img/sprite.svg#chat"></use>
+        </svg>
+
+        <span>Chat</span>
+      </button>
+
+      <div th:if="${languageSelector}" class="display-flex flex-align-center">
+        <button class="usa-button cfa-button usa-button--outline cfa-button--sub-label flex-auto margin-0 desktop:display-none">
+          <svg class="usa-icon display-none mobile-lg:display-inline-block" aria-hidden="true" focusable="false" role="img">
+            <use href="/uswds/img/sprite.svg#translate"></use>
+          </svg>
+
+          <span>
+            Translate <span class="usa-sr-only"> to </span>
+            <small class="cfa-button__sub-label display-none mobile:display-block">
+              <span lang="en">English</span>,
+              <span lang="es">Español</span>
+            </small>
+          </span>
+        </button>
+
+        <nav aria-label="Translate" class="display-none desktop:display-inline-block">
+          <a lang="en" href="?lang=en" class="margin-left-1" th:classappend="${links.modifier}">English</a>
+          <a lang="es" href="?lang=es" class="margin-left-1" th:classappend="${links.modifier}">Español</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div th:if="${alert}">
+    <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${alert.modifier}, ${alert.role}, ${alert.heading}, ${alert.label}, ${alert.labelledBy}, ${alert.body}, ${alert.text})}"></th:block>
+  </div>
+</header>
