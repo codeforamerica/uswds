@@ -21,16 +21,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- DETAILS -->
 
+{% capture details_custom %}
+The {{ title }} is a custom component created using <a href="https://designsystem.digital.gov/utilities" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS CSS Utilities</a>.{% endcapture %}
+
 {% render 'details.md',
   name: title,
-  url_uswds: url_uswds,
-  url_uswds_usage: url_uswds_usage,
-  nice_uswds: nice_uswds,
   url_honeycrisp: url_honeycrisp,
   nice_honeycrisp: nice_honeycrisp,
+  details_custom: details_custom,
   tokens: tokens,
   styles: styles,
-  modifier_honeycrisp: modifier_honeycrisp,
   dictionary: dictionary,
   config: config %}
 
