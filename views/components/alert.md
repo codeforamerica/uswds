@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Alerts (notices) distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
+Alerts distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
 
 <!-- DETAILS -->
 

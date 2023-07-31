@@ -2,7 +2,7 @@
 tags: component
 title: Checkbox
 layout: default
-intro:
+intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds: https://designsystem.digital.gov/components/checkbox
 url_uswds_guidance: https://designsystem.digital.gov/components/checkbox#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2

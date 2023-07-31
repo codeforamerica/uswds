@@ -2,7 +2,7 @@
 tags:
 title: Template
 layout: default
-intro:
+intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds: https://designsystem.digital.gov/components/template
 url_uswds_guidance: https://designsystem.digital.gov/components/template/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/template/#using-the-template-component-2

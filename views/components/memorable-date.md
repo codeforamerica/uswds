@@ -2,7 +2,7 @@
 tags: component
 title: Memorable date
 layout: default
-intro:
+intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2
