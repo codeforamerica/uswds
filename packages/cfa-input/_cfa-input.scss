@@ -10,3 +10,13 @@
 .cfa-input:not(.usa-input--error):not(.usa-input--success) {
   @include cfa-form-elements-border();
 }
+
+.cfa-input[type='date'] {
+  // Places calendar icon at the beginning for chrome/edge
+  flex-direction: row-reverse;
+  gap: units(0.5)
+}
+
+.cfa-input::-webkit-date-and-time-value {
+  text-align: start;
+}

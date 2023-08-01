@@ -235,6 +235,11 @@ const getFile = (name, type = '') => {
       filename = `${filename}/_cfa-${name}.scss`;
 
       break;
+
+    case 'javascript':
+      filename = `${filename}/cfa-${name}.js`;
+
+      break;
   }
 
   let resolved = path.join(__dirname, filename);

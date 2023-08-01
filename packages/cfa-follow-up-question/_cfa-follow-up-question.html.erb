@@ -1,0 +1,85 @@
+<div class="cfa-follow-up<% if defined?(modifier) %> <%= modifier %><% end %>">
+  <% if defined?(fieldset) %><div>
+  <%= ERB.new(File.read('packages/cfa-fieldset/_cfa-fieldset.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+    .result_with_hash({
+      modifier: (fieldset['modifier'] if fieldset['modifier']),
+      id: (fieldset['id'] if fieldset['id']),
+      legend: (fieldset['legend'] if fieldset['legend']),
+      hint: (fieldset['hint'] if fieldset['hint']),
+      required: (fieldset['required'] if fieldset['required']),
+      error: (fieldset['error'] if fieldset['error']),
+      options: (fieldset['options'] if fieldset['options'])
+    }.compact) %>
+  </div><% end %>
+
+  <% if region['formGroups'] %><div class="cfa-follow-up__region<% if region['modifier'] %> <%= region['modifier'] %><% end %>"
+    <% if region['id'] %> id="<%= region['id'] %>"<% end %>
+    <% if region['role'] %> role="<%= region['role'] %>"<% end %>
+    <% if region['ariaLabel'] %> aria-label="<%= region['ariaLabel'] %>"<% end %>>
+    <% region['formGroups'].each do |formGroup| %><div>
+      <% if formGroup['input'] %>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+        .result_with_hash({
+          modifier: (formGroup['modifier'] if formGroup['modifier']),
+          id: (formGroup['id'] if formGroup['id']),
+          label: (formGroup['label'] if formGroup['label']),
+          hint: (formGroup['hint'] if formGroup['hint']),
+          error: (formGroup['error'] if formGroup['error']),
+          input: formGroup['input'],
+          inputGroup: (formGroup['inputGroup'] if formGroup['inputGroup'])
+        }.compact) %>
+      <% end %>
+
+      <% if formGroup['textarea'] %>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+        .result_with_hash({
+          modifier: (formGroup['modifier'] if formGroup['modifier']),
+          id: (formGroup['id'] if formGroup['id']),
+          label: (formGroup['label'] if formGroup['label']),
+          hint: (formGroup['hint'] if formGroup['hint']),
+          error: (formGroup['error'] if formGroup['error']),
+          textarea: formGroup['textarea']
+        }.compact) %>
+      <% end %>
+
+      <% if formGroup['selectEl'] %>
+      <%= ERB.new(File.read('packages/cfa-form-group/_cfa-form-group.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+        .result_with_hash({
+          modifier: (formGroup['modifier'] if formGroup['modifier']),
+          id: (formGroup['id'] if formGroup['id']),
+          label: (formGroup['label'] if formGroup['label']),
+          hint: (formGroup['hint'] if formGroup['hint']),
+          error: (formGroup['error'] if formGroup['error']),
+          selectEl: formGroup['selectEl']
+        }.compact) %>
+      <% end %>
+
+      <% if formGroup['memorableDate'] %>
+      <%= ERB.new(File.read('packages/cfa-memorable-date/_cfa-memorable-date.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+        .result_with_hash({
+          modifier: (formGroup['modifier'] if formGroup['modifier']),
+          id: (formGroup['id'] if formGroup['id']),
+          fieldset: (formGroup['fieldset'] if formGroup['fieldset']),
+          required: (formGroup['required'] if formGroup['required']),
+          error: (formGroup['error'] if formGroup['error']),
+          month: (formGroup['month'] if formGroup['month']),
+          day: (formGroup['day'] if formGroup['day']),
+          year: (formGroup['year'] if formGroup['year'])
+        }.compact) %>
+      <% end %>
+
+      <% if formGroup['options'] %>
+      <%= ERB.new(File.read('packages/cfa-fieldset/_cfa-fieldset.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+        .result_with_hash({
+          modifier: (formGroup['modifier'] if formGroup['modifier']),
+          id: (formGroup['id'] if formGroup['id']),
+          legend: (formGroup['legend'] if formGroup['legend']),
+          hint: (formGroup['hint'] if formGroup['hint']),
+          required: (formGroup['required'] if formGroup['required']),
+          error: (formGroup['error'] if formGroup['error']),
+          options: (formGroup['options'] if formGroup['options'])
+        }.compact) %>
+      <% end %>
+    </div><% end %>
+  </div><% end %>
+</div>

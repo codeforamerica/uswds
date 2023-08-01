@@ -22,7 +22,8 @@ Form cards enable users to easily progress through complex forms by providing a 
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }}</a>. It includes the <a href="{{ config.baseUrl }}components/alert/">alert component</a>, <a href="{{ config.baseUrl }}components/form-group/">form group component</a>, <a href="{{ config.baseUrl }}/components/fieldset">fieldset component</a>, <a href="{{ config.baseUrl }}/components/button">button component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in a custom stylesheet.{% endcapture %}
+The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ nice_uswds }}</a>. It includes the <a href="{{ config.baseUrl }}components/alert/">alert component</a>, <a href="{{ config.baseUrl }}components/form-group/">form group component</a>, <a href="{{ config.baseUrl }}/components/fieldset">fieldset component</a>, <a href="{{ config.baseUrl }}/components/button">button component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in a custom stylesheet.
+{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -70,12 +71,15 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifierHint": "cfa-hint"
       },
       "hint": {
-        "text": "Legally as it appears on your I.D."
+        "text": "Legally as it appears on your I.D.",
+        "modifier": "cfa-hint",
+        "id": "hint-{{ id_first_name }}"
       },
       "input": {
         "modifier": "cfa-input",
         "id": "input-{{ id_first_name }}",
         "name": "input['{{ id_first_name }}']",
+        "ariaDescribedby": "hint-{{ id_first_name }}",
         "type": "text",
         "required": "true"
       }
@@ -90,7 +94,9 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifierHint": "cfa-hint"
       },
       "hint": {
-        "text": "Legally as it appears on your I.D."
+        "text": "Legally as it appears on your I.D.",
+        "modifier": "cfa-hint",
+        "id": "hint-{{ id_last_name }}"
       },
       "error": {
         "text": "This field is required",
@@ -101,6 +107,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-input",
         "id": "input-{{ id_last_name }}",
         "name": "input['{{ id_last_name }}']",
+        "ariaDescribedby": "hint-{{ id_last_name }}",
         "type": "text",
         "required": "true"
       }
@@ -112,7 +119,8 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-fieldset",
         "hint": {
           "text": "For example January / 1 / 2000",
-          "id": "hint-{{ id_birthday }}"
+          "id": "hint-{{ id_birthday }}",
+          "modifier": "cfa-hint"
         },
         "legend": {
           "text": "What is your date of birth?",
@@ -250,12 +258,15 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifierHint": "cfa-hint"
       },
       "hint": {
-        "text": "For example, man, woman, or non-binary."
+        "text": "For example, man, woman, or non-binary.",
+        "modifier": "cfa-hint",
+        "id": "hint-{{ id_gender }}"
       },
       "input": {
         "modifier": "cfa-input",
         "id": "input-{{ id_gender }}",
         "name": "input['{{ id_gender }}']",
+        "ariaDescribedby": "hint-{{ id_gender }}",
         "type": "text"
       }
     },

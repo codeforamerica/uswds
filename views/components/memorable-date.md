@@ -43,7 +43,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   "fieldset": {
     "hint": {
       "text": "For example January / 1 / 2000",
-      "id": "hint-{{ id }}"
+      "id": "hint-{{ id }}",
+      "modifier": "cfa-hint"
     },
     "legend": {
       "text": "What is your date of birth?",

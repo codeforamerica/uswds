@@ -33,6 +33,10 @@ $theme-select-height: 8;
 
   cursor: pointer;
   text-overflow: ellipsis;
+
+  &[type='date'] {
+    flex-direction: row-reverse;
+  }
 }
 
 // - Radio
@@ -45,80 +49,6 @@ $theme-input-select-height: units(2);
 $theme-input-select-padding-x: units(3);
 $theme-input-select-padding-y: units(2);
 $theme-input-select-gap: units(2);
-
-// @mixin theme-input-select($input-select-type: 'checkbox') {
-//   .cfa-#{$input-select-type} {
-//     .usa-#{$input-select-type}__input--tile {
-//       @include format-label {
-//         @include theme-transition;
-
-//         font-weight: $theme-font-weight-bold;
-
-//         padding: $theme-input-select-padding-y $theme-input-select-padding-x;
-//         padding-left: $theme-input-select-padding-x + $theme-input-select-width + $theme-input-select-gap;
-
-//         margin-top: $theme-input-select-margin;
-
-//         &::before {
-//           width: $theme-input-select-width;
-//           height: $theme-input-select-height;
-
-//           top: 0;
-//           left: 0;
-
-//           margin-top: calc(#{$theme-input-select-padding-y} + 3px);
-//           margin-left: $theme-input-select-padding-x;
-//         }
-
-//         .usa-#{$input-select-type}__label-description {
-//           font-weight: $theme-font-weight-normal;
-//         }
-//       }
-
-//       &:focus {
-//         @include format-label {
-//           @include focus-outline($width: null, $style: null, $color: null, $offset: 0);
-//         }
-
-//         @include format-input {
-//           @include focus-outline($width: null, $style: null, $color: null, $offset: units(2px));
-//         }
-//       }
-//     }
-//   }
-
-//   // Colors
-//   .cfa-#{$input-select-type} {
-//     .usa-#{$input-select-type}__input--tile:not(:checked):not([disabled]) {
-//       @include format-label {
-//         @include set-text-and-bg(
-//           $bg-color: $theme-body-background-color,
-//           $preferred-text-color: 'ink',
-//           $context: 'CfA #{string.to-upper-case($input-select-type)}'
-//         );
-
-//         border-color: color('ink');
-
-//         &:hover {
-//           @include set-text-and-bg(
-//             $bg-color: 'base-lightest',
-//             $preferred-text-color: 'ink',
-//             $context: 'CfA #{string.to-upper-case($input-select-type)}'
-//           );
-//         }
-//       }
-//     }
-
-//     .usa-#{$input-select-type}__input--tile {
-//       &:disabled,
-//       &[aria-disabled="true"] {
-//         @include format-label {
-//           border-color: color($theme-color-disabled);
-//         }
-//       }
-//     }
-//   }
-// }
 
 // - Form
 // - Alert

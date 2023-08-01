@@ -40,5 +40,5 @@ module.exports = {
   // table,
   // timePicker,
   tooltip,
-  // validator,
+  // validator
 };

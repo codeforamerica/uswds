@@ -1,6 +1,6 @@
 {% capture ID %}{% createId %}{% endcapture %}
 
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" {% if label %}aria-label="{{ label }}"{% endif %}>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" {% if label %}aria-label="{{ label }}"{% endif %}>
   <div class="margin-0 margin-bottom-3">
     {% if caption %}<figcaption class="margin-bottom-2">{{ caption }}</figcaption>{% endif %}
     {% package name context %}{{ body }}{% endpackage %}

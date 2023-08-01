@@ -49,7 +49,9 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Please check all that apply."
+    "text": "Please check all that apply.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "options": [
     {
@@ -111,7 +113,9 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Please choose one of the following."
+    "text": "Please choose one of the following.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "options": [
     {
@@ -151,7 +155,9 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "We updated the address you entered. If correct, please use the suggested address."
+    "text": "We updated the address you entered. If correct, please use the suggested address.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "options": [
     {

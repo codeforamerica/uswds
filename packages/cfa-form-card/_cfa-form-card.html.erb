@@ -162,16 +162,6 @@
             }.compact) %>
           <% end %>
 
-          <div th:if="${formGroup.options}">
-            <th:block th:replace="~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(
-              ${formGroup.modifier},
-              ${formGroup.id},
-              ${formGroup.legend},
-              ${formGroup.hint},
-              ${formGroup.required},
-              ${formGroup.error},
-              ${formGroup.options})}" />
-          </div>
           <% if formGroup['options'] %>
           <%= ERB.new(File.read('packages/cfa-fieldset/_cfa-fieldset.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
             .result_with_hash({

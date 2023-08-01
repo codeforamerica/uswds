@@ -51,12 +51,15 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Legally as it appears on your I.D."
+    "text": "Legally as it appears on your I.D.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "type": "text",
     "required": "true"
   }
@@ -76,7 +79,9 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Legally as it appears on your I.D."
+    "text": "Legally as it appears on your I.D.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "error": {
     "text": "This field is required",
@@ -87,6 +92,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "type": "text",
     "required": "true",
     "ariaInvalid": "true",
@@ -108,12 +114,15 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Legally as it appears on your I.D."
+    "text": "Legally as it appears on your I.D.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "input": {
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "type": "email"
   }
 }{% endcapture %}
@@ -173,7 +182,9 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Answer the best you can."
+    "text": "Answer the best you can.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "inputGroup": {
     "modifier": "usa-input-group cfa-input-group"
@@ -182,6 +193,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "cfa-input text-right",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "type": "text",
     "prefixText": "$",
     "placeholder": "0.00",
@@ -204,7 +216,9 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Answer the best you can."
+    "text": "Answer the best you can.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "inputGroup": {
     "modifier": "usa-input-group cfa-input-group"
@@ -213,6 +227,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "cfa-input text-right",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "type": "text",
     "postfixText": "%",
     "inputmode": "decimal"
@@ -227,13 +242,15 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   "modifier": "cfa-form-group",
   "id": "{% createId %}",
   "label": {
-    "text": "How much does your household currently have in savings?",
+    "text": "What's your phone number?",
     "for": "input-{{ id }}",
     "modifier": "cfa-label",
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Answer the best you can."
+    "text": "We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "inputGroup": {
     "modifier": "usa-input-group cfa-input-group"
@@ -242,6 +259,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "type": "tel",
     "pattern": "([0-9]{3}) [0-9]{3}-[0-9]{4}",
     "prefixText": "+1",
@@ -288,12 +306,15 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifierHint": "cfa-hint"
   },
   "hint": {
-    "text": "Answer the best you can. You will be able to include additional types of income."
+    "text": "Answer the best you can. You will be able to include additional types of income.",
+    "modifier": "cfa-hint",
+    "id": "hint-{{ id }}"
   },
   "selectEl": {
     "modifier": "cfa-select",
     "id": "select-{{ id }}",
     "name": "select['{{ id }}']",
+    "ariaDescribedby": "hint-{{ id }}",
     "required": "true",
     "default": {
       "label": "Click to select an income type",
