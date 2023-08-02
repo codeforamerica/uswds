@@ -11,7 +11,7 @@ url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-follow_
 nice_honeycrisp: Follow-up question molecule
 modifier_honeycrisp: .cfa-follow-up-question .cfa-follow-up-question__region
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A872%26mode%3Ddesign%26t%3DQEm097LeMZdJHFUX-1
-tokens: false
+tokens: true
 styles: true
 ---
 
