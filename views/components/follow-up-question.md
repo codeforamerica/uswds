@@ -8,7 +8,7 @@ url_uswds_guidance:
 url_uswds_usage:
 nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-follow_up_question
-nice_honeycrisp: Follow up question
+nice_honeycrisp: Follow-up question molecule
 modifier_honeycrisp: .cfa-follow-up-question .cfa-follow-up-question__region
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A872%26mode%3Ddesign%26t%3DQEm097LeMZdJHFUX-1
 tokens: false
@@ -34,6 +34,10 @@ The {{ title }} is a custom component. It includes the <a href="{{ config.baseUr
   details_custom: details_custom,
   dictionary: dictionary,
   config: config %}
+
+<!-- EXAMPLES -->
+
+## Examples {#examples}
 
 {% capture id_income_less %}{% createId %}{% endcapture %}
 {% capture id_region %}{% createId %}{% endcapture %}
@@ -117,7 +121,7 @@ The {{ title }} is a custom component. It includes the <a href="{{ config.baseUr
 
 ## Guidance {#guidance}
 
-**Usage**. The {{ title }} component should be used sparingly to avoid the risk of users accidentally missing questions contained in the follow up region. Alternatively, use a <a href="{{ config.baseUrl }}components/form-card">form card with a single question, yes, and no links</a> instead.
+**Usage**. The {{ title }} component should be used sparingly to avoid the risk of users accidentally missing questions contained in the follow-up region. Alternatively, use a <a href="{{ config.baseUrl }}components/form-card">form card with a single question, yes, and no links</a> instead.
 
 **ARIA attributes**. The `aria-expanded` attribute is not included in this component because it is currently an invalid attribute for radio elements.
 

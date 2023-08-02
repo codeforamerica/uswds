@@ -35,126 +35,13 @@
 </head>
 
 <body>
-  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-
-  <div class="usa-overlay"></div>
-
-  <header class="usa-header usa-header--basic">
-    <div class="usa-nav-container flex-align-center">
-      <div class="usa-navbar">
-        <div class="usa-logo margin-y-2">
-          <a href="{{ config.baseUrl }}" title="{{ package.nice }}" aria-hidden="true">
-            <svg aria-hidden="true" tabindex="-1" width="380" height="85" xmlns="http://www.w3.org/2000/svg" class="display-none desktop:display-block maxw-full">
-              <use href="#logo">
-            </svg>
-          </a>
-
-          <em class="usa-logo__text desktop:display-none">
-            <a href="/" title="{{ package.nice }}">{{ package.nice }}</a>
-          </em>
-        </div>
-
-        <button type="button" class="usa-menu-btn">Menu</button>
-      </div>
-
-      <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
-        <button type="button" class="usa-nav__close">
-          <img src="{{ config.baseUrl }}uswds/img/usa-icons/close.svg" role="img" alt="Close" />
-        </button>
-
-        <ul class="usa-nav__primary usa-accordion">
-          {% for item in collections.primary %}
-          {% set ID = createId() %}
-          <li class="usa-nav__primary-item">
-            <button type="button" class="usa-accordion__button usa-nav__link{% if item.data.collection in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
-              <span>{{ item.data.title }}</span>
-            </button>
-
-            <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
-              {% for item in collections[item.data.collection] %}
-                <li class="usa-nav__submenu-item">
-                  {% set url = item.url|split('/', 2) %}
-                  <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-          {% endfor %}
-
-          <li class="usa-nav__primary-item">
-            <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
-          </li>
-
-          <li class="usa-nav__primary-item">
-            <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  {% include '../_partials/header.twig' %}
 
   <main id="main-content" class="bg-primary overflow-hidden">
     {{ content|raw }}
   </main>
 
-  <footer class="usa-footer">
-    {# <div class="grid-container usa-footer__return-to-top">
-      <a href="#">Return to top</a>
-    </div> #}
-
-    <div class="usa-footer__primary-section">
-      <nav class="usa-footer__nav" aria-label="Footer navigation">
-        <ul class="grid-row grid-gap">
-          {% for item in collections.primary %}
-          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            {% set url = item.url|split('/', 2) %}
-            <a class="usa-footer__primary-link" href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}">{{ item.data.title }}</a>
-          </li>
-          {% endfor %}
-
-          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>Design Library</span></a>
-          </li>
-
-          <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-            <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v{{ package.version }}</span></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="usa-footer__secondary-section">
-      <div class="grid-container">
-        <div class="grid-row grid-gap">
-          <div class=" usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-            <div class="mobile-lg:grid-col-auto">
-              <img class="usa-footer__logo-img" src="{{ config.baseUrl }}uswds/img/logo-img.png" alt=""/>
-            </div>
-
-            <div class="mobile-lg:grid-col-auto">
-              <p class="usa-footer__logo-heading">The USWDS Honeycrisp theme</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <div class="usa-identifier padding-0">
-    <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-      <div class="usa-identifier__container">
-        <div class="usa-identifier__logos">
-          <a href="javascript:void(0)" class="usa-identifier__logo"><img class="usa-identifier__logo-img" src="{{ config.baseUrl }}uswds/img/circle-gray-20.svg" alt="&lt;Parent agency&gt; logo" role="img" /></a>
-        </div>
-
-        <section class="usa-identifier__identity" aria-label="Agency description">
-          <p class="usa-identifier__identity-domain">codeforamerica.org</p>
-
-          <p class="usa-identifier__identity-disclaimer">An official website of <a href="https://codeforamerica.org">Code for America</a></p>
-        </section>
-      </div>
-    </section>
-  </div>
+  {% include '../_partials/footer.twig' %}
 
   {# <script src="{{ config.baseUrl }}uswds/js/uswds.js"></script> #}
   <script src="{{ config.baseUrl }}js/default.js"></script>

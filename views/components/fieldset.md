@@ -35,7 +35,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
   dictionary: dictionary,
   config: config %}
 
-  <!-- EXAMPLES -->
+<!-- EXAMPLES -->
 
 ## Examples {#examples}
 
