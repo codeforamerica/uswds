@@ -1,5 +1,6 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-input/cfa-input.scss';
 
 .cfa-select {
   @include set-text-and-bg(
@@ -26,5 +27,5 @@
 
 .cfa-select:not(.usa-input--error):not(.usa-input--success),
 .cfa-select:not(.usa-select--error):not(.usa-select--success) {
-  @include cfa-form-elements-border();
+  @include cfa-input.cfa-input-border();
 }

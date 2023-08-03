@@ -1,0 +1,40 @@
+<footer class="usa-footer usa-footer--slim<% if defined?(modifier) %> <%= modifier %><% end %>">
+  <% if defined?(returnToTop) %><div class="grid-container usa-footer__return-to-top">
+    <a href="<%= returnToTop %>">Return to top</a>
+  </div><% end %>
+
+  <% if defined?(navigation) %><div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div>
+        <nav class="usa-footer__nav padding-0"<% if navigation['label'] %> aria-label="<%= navigation['label'] %>"<% end %>>
+          <ul class="grid-row grid-gap">
+            <% navigation['items'].each do |item| %><li class="tablet:grid-col-auto margin-0 usa-footer__primary-content">
+              <a class="usa-footer__primary-link<% if item['modifier'] %> <%= item['modifier'] %><% end %>"
+                <% if item['href'] %>href="<%= item['href'] %>"<% end %>
+                <% if item['rel'] %>rel="<%= item['rel'] %>"<% end %>
+                <% if item['target'] %>target="<%= item['target'] %>"<% end %>><%= item['label'] %></a>
+            </li><% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div><% end %>
+
+  <% if defined?(logo) %><div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo">
+        <a href="<%= home['href'] %>"<% if home['modifier'] %> class="<%= home['modifier'] %>"<% end %>>
+          <% if logo['default'] %><svg<% if logo['default']['style'] %> style="<%= logo['default']['style'] %>"<% end %> xmlns="http://www.w3.org/2000/svg" class="display-block tablet:display-none" role="img" aria-hidden="true">
+            <use href="<%= logo['default']['href'] %>">
+          </svg><% end %>
+
+          <% if logo['tablet'] %><svg<% if logo['tablet']['style'] %> style="<%= logo['tablet']['style'] %>"<% end %> xmlns="http://www.w3.org/2000/svg" class="display-none tablet:display-block" role="img" aria-hidden="true">
+            <use href="<%= logo['tablet']['href'] %>">
+          </svg><% end %>
+
+          <% if logo['alt'] %><span<% if logo['alt'].has_key?('modifier') %> class="<%= logo['alt']['modifier'] %>"<% end %>><%= logo['alt']['text'] %></span><% end %>
+        </a>
+      </div>
+    </div>
+  </div><% end %>
+</footer>

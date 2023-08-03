@@ -1,12 +1,13 @@
 @use 'sass:string';
 @use 'uswds-core' as *;
 @use 'uswds-theme-shared' as *;
+@use '../cfa-transition/cfa-transition' as *;
 
 @mixin theme-input-select($input-select-type: 'checkbox') {
   .cfa-#{$input-select-type} {
     .usa-#{$input-select-type}__input--tile {
       @include format-label {
-        @include theme-transition;
+        @include cfa-transition;
 
         font-weight: $theme-font-weight-bold;
 

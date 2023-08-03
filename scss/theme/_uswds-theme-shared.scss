@@ -1,49 +1,21 @@
 @use 'uswds-core' as *;
 
-@mixin theme-transition() {
-  transition: 0.1s ease-out background, color, border, box-shadow, transform, stroke, stroke-dashoffset, fill;
-}
-
 // 5. Components
-// - Input
 $theme-form-elements-padding-y: 2;
 $theme-form-elements-padding-x: 2.5;
 $theme-form-elements-border-width: 2px;
+
+// - Input
 $theme-input-height: 8;
+
+// - Textarea
 $theme-textarea-height: 15;
+
+// - Select
 $theme-select-height: 8;
-// $theme-input-select-margin-right: 1.5; // Checkbox and Radio inputs
-// $theme-input-select-size: 2.5;
 
-@mixin cfa-form-elements-border() {
-  @include u-border($theme-form-elements-border-width, 'ink');
-}
-
-@mixin cfa-input() {
-  @include set-text-and-bg(
-    $bg-color: $theme-color-base-lightest,
-    $preferred-text-color: 'ink',
-    $context: 'CfA Input'
-  );
-
-  font-weight: $theme-font-weight-bold;
-  box-shadow: inset 0px units($theme-input-state-border-width) 0px color($theme-color-base-lighter);
-
-  padding: units($theme-form-elements-padding-y) units($theme-form-elements-padding-x);
-
-  cursor: pointer;
-  text-overflow: ellipsis;
-
-  &[type='date'] {
-    flex-direction: row-reverse;
-  }
-}
-
-// - Radio
-// - Checkbox
-
+// - Radio and Checkbox
 $theme-input-select-margin: units(1.5);
-
 $theme-input-select-width: units(2);
 $theme-input-select-height: units(2);
 $theme-input-select-padding-x: units(3);
@@ -51,10 +23,15 @@ $theme-input-select-padding-y: units(2);
 $theme-input-select-gap: units(2);
 
 // - Form
+
 // - Alert
+
 // - Accordion
 $theme-accordion-border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
+
 // - Footer
+
 // - Button
 $theme-button-stroke: inset 0 0 0 units($theme-button-stroke-width);
+
 // - Header

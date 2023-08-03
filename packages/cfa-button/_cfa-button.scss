@@ -1,5 +1,6 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-transition/cfa-transition' as *;
 
 /**
  * Match closest size of small CfA buttons
@@ -8,7 +9,7 @@
 .cfa-button:not(.usa-button--unstyled) {
   padding: units(2) units(2.5);
 
-  @include theme-transition;
+  @include cfa-transition;
 
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;

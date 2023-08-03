@@ -3,7 +3,7 @@
     <a th:href="${returnToTop}">Return to top</a>
   </div>
 
-  <div th:if="${navigation.items}" class="usa-footer__primary-section">
+  <div th:if="${navigation}" class="usa-footer__primary-section">
     <div class="usa-footer__primary-container grid-row">
       <div>
         <nav class="usa-footer__nav padding-0" aria-label="${navigation.label}">
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="usa-footer__secondary-section">
+  <div th:if="${logo}" class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="usa-footer__logo">
         <a th:href="${home.href}" th:class="${home.modifier}">
@@ -33,43 +33,5 @@
         </a>
       </div>
     </div>
-  </div>
-
-  <div class="usa-identifier">
-    <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-      <div class="usa-identifier__container">
-        <div class="usa-identifier__identity">
-          <p class="usa-identifier__identity-domain">domain.gov</p>
-
-          <p class="usa-identifier__identity-disclaimer">
-            This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
-      <div class="usa-identifier__container">
-        <ul class="add-list-reset">
-          <li class="usa-identifier__required-links-item">
-            <a href="https://codeforamerica.org" class="usa-identifier__required-link usa-link usa-link--external">About Code for America</a>
-          </li>
-
-          <li class="usa-identifier__required-links-item">
-            <a href="https://codeforamerica.org/about-us/diversity-equity-inclusion" class="usa-identifier__required-link usa-link usa-link--external">Diversity, Equity, & Inclusion</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="U.S. government information and services">
-      <div class="usa-identifier__container">
-        <div class="usa-identifier__usagov-description">
-          Looking for government information and services?
-        </div>
-
-        <a href="#" class="usa-link">Visit domain.gov</a>
-      </div>
-    </section>
   </div>
 </footer>

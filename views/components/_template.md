@@ -82,4 +82,4 @@ Default Body
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'name', nice: title, theme: '$theme-setting: value', usage: usage, config: config, pckg: package %}
+<!-- render 'source.md', name: 'name', nice: title, theme: '$theme-setting: value', usage: usage, config: config, pckg: package -->

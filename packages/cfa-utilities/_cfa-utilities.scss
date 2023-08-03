@@ -1,0 +1,10 @@
+
+
+@mixin cfa-font-smooth() {
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+}
+
+.cfa-font-smooth {
+  @include cfa-font-smooth;
+}

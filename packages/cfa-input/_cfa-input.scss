@@ -1,6 +1,30 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
 
+@mixin cfa-input-border() {
+  @include u-border($theme-form-elements-border-width, 'ink');
+}
+
+@mixin cfa-input {
+  @include set-text-and-bg(
+    $bg-color: $theme-color-base-lightest,
+    $preferred-text-color: 'ink',
+    $context: 'CfA Input'
+  );
+
+  font-weight: $theme-font-weight-bold;
+  box-shadow: inset 0px units($theme-input-state-border-width) 0px color($theme-color-base-lighter);
+
+  padding: units($theme-form-elements-padding-y) units($theme-form-elements-padding-x);
+
+  cursor: pointer;
+  text-overflow: ellipsis;
+
+  &[type='date'] {
+    flex-direction: row-reverse;
+  }
+}
+
 .cfa-input {
   @include cfa-input();
 
@@ -8,7 +32,7 @@
 }
 
 .cfa-input:not(.usa-input--error):not(.usa-input--success) {
-  @include cfa-form-elements-border();
+  @include cfa-input-border();
 }
 
 .cfa-input[type='date'] {
