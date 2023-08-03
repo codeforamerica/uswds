@@ -1,0 +1,35 @@
+<div class="usa-identifier<% if defined?(modifier) %> <%= modifier %><% end %>">
+  <% if defined?(identity) %><section class="usa-identifier__section usa-identifier__section--masthead"<% if identity['ariaLabel'] %> aria-label="<%= identity['ariaLabel'] %>"<% end %>>
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__identity">
+        <% if identity['domain'] %><p class="usa-identifier__identity-domain"><%= identity['domain'] %></p><% end %>
+
+        <% if identity['disclaimer'] %><p class="usa-identifier__identity-disclaimer"><%= identity['disclaimer'] %></p><% end %>
+      </div>
+    </div>
+  </section><% end %>
+
+  <% if defined?(requiredLinks) %><nav class="usa-identifier__section usa-identifier__section--required-links"<% if requiredLinks['ariaLabel'] %> aria-label="<%= requiredLinks['ariaLabel'] %>"<% end %>>
+    <div class="usa-identifier__container">
+      <ul class="add-list-reset">
+        <% requiredLinks['items'].each do |item| %><li class="usa-identifier__required-links-item">
+          <a class="usa-identifier__required-link usa-link usa-link--external<% if item['modifier'] %> <%= item['modifier'] %><% end %>"
+            <% if item['href'] %>href="<%= item['href'] %>"<% end %>
+            <% if item['rel'] %>rel="<%= item['rel'] %>"<% end %>
+            <% if item['target'] %>target="<%= item['target'] %>"<% end %>><%= item['label'] %></a>
+        </li><% end %>
+      </ul>
+    </div>
+  </nav><% end %>
+
+  <% if defined?(governmentSection) %><section class="usa-identifier__section usa-identifier__section--usagov"<% if governmentSection['ariaLabel'] %> aria-label="<%= governmentSection['ariaLabel'] %>"<% end %>>
+    <div class="usa-identifier__container">
+      <% if governmentSection['description'] %><div class="usa-identifier__usagov-description"><%= governmentSection['description'] %></div><% end %>
+
+      <% if governmentSection['link'] %><a class="usa-link<% if governmentSection['link']['modifier'] %> <%= governmentSection['link']['modifier'] %><% end %>"
+        <% if governmentSection['link']['href'] %>href="<%= governmentSection['link']['href'] %>"<% end %>
+        <% if governmentSection['link']['rel'] %>rel="<%= governmentSection['link']['rel'] %>"<% end %>
+        <% if governmentSection['link']['target'] %>target="<%= governmentSection['link']['target'] %>"<% end %>><%= governmentSection['link']['label'] %></a><% end %>
+    </div>
+  </section><% end %>
+</div>

@@ -23,10 +23,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% render 'details.md',
   name: title,
+  url_uswds: url_uswds,
+  url_uswds_usage: url_uswds_usage,
+  nice_uswds: nice_uswds,
   url_honeycrisp: url_honeycrisp,
   nice_honeycrisp: nice_honeycrisp,
   tokens: tokens,
   styles: styles,
+  modifier_honeycrisp: modifier_honeycrisp,
   dictionary: dictionary,
   config: config %}
 

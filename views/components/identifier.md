@@ -23,10 +23,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% render 'details.md',
   name: title,
+  url_uswds: url_uswds,
+  url_uswds_usage: url_uswds_usage,
+  nice_uswds: nice_uswds,
   url_honeycrisp: url_honeycrisp,
   nice_honeycrisp: nice_honeycrisp,
   tokens: tokens,
   styles: styles,
+  modifier_honeycrisp: modifier_honeycrisp,
   dictionary: dictionary,
   config: config %}
 
@@ -36,41 +40,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture context %}{
   "modifier": "cfa-font-smooth",
-  "identifier": {
-    "identity": {
-      "ariaLabel": "Agency identifier",
-      "domain": "domain.gov",
-      "disclaimer": "This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America."
-    },
-    "requiredLinks": {
-      "ariaLabel": "Important links",
-      "items": [
-        {
-          "label": "About Code for America",
-          "href": "https://codeforamerica.org",
-          "target": "_blank",
-          "rel": "noopener nofollow",
-          "modifier": "usa-link--external"
-        },
-        {
-          "label": "Diversity, Equity, & Inclusion",
-          "href": "https://codeforamerica.org/about-us/diversity-equity-inclusion",
-          "target": "_blank",
-          "rel": "noopener nofollow",
-          "modifier": "usa-link--external"
-        }
-      ]
-    },
-    "governmentSection": {
-      "ariaLabel": "Domain.gov government information and services",
-      "descriptions": "Looking for government information and services?",
-      "link": {
-        "label": "Visit domain.gov",
-        "href": "#",
+  "identity": {
+    "ariaLabel": "Agency identifier",
+    "domain": "domain.gov",
+    "disclaimer": "This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America."
+  },
+  "requiredLinks": {
+    "ariaLabel": "Important links",
+    "items": [
+      {
+        "label": "About Code for America",
+        "href": "https://codeforamerica.org",
+        "target": "_blank",
+        "rel": "noopener nofollow",
+        "modifier": "usa-link--external"
+      },
+      {
+        "label": "Diversity, Equity, & Inclusion",
+        "href": "https://codeforamerica.org/about-us/diversity-equity-inclusion",
         "target": "_blank",
         "rel": "noopener nofollow",
         "modifier": "usa-link--external"
       }
+    ]
+  },
+  "governmentSection": {
+    "ariaLabel": "Domain.gov government information and services",
+    "description": "Looking for government information and services?",
+    "link": {
+      "label": "Visit domain.gov",
+      "href": "https://get.gov",
+      "target": "_blank",
+      "rel": "noopener nofollow",
+      "modifier": "usa-link--external"
     }
   }
 }{% endcapture %}

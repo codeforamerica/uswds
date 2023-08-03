@@ -6,7 +6,7 @@
   <% if defined?(navigation) %><div class="usa-footer__primary-section">
     <div class="usa-footer__primary-container grid-row">
       <div>
-        <nav class="usa-footer__nav padding-0"<% if navigation['label'] %> aria-label="<%= navigation['label'] %>"<% end %>>
+        <nav class="usa-footer__nav padding-0"<% if navigation['ariaLabel'] %> aria-label="<%= navigation['ariaLabel'] %>"<% end %>>
           <ul class="grid-row grid-gap">
             <% navigation['items'].each do |item| %><li class="tablet:grid-col-auto margin-0 usa-footer__primary-content">
               <a class="usa-footer__primary-link<% if item['modifier'] %> <%= item['modifier'] %><% end %>"

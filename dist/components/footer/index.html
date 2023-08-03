@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-e53ae7c4720a4">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d01b6c8079dd4">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-e53ae7c4720a4" class="usa-nav__submenu">
+          <ul id="aria-c-d01b6c8079dd4" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -125,11 +125,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-54d9caffa11a8">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-e0d105e8b3981">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-54d9caffa11a8" class="usa-nav__submenu">
+          <ul id="aria-c-e0d105e8b3981" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -261,10 +261,11 @@
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/footer" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Footer</a></li>
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p><p></p>
+<p><p>The <b>Footer</b> extends the <a href="https://designsystem.digital.gov/components/footer" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Footer</a>. </p>
 </details></p>
   </li>
 </ul>
@@ -318,11 +319,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-67d4e13626e69">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-e4a93b3bc3ba4">
           View HTML
         </button>
       </div>
-      <div id="aria-c-67d4e13626e69" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-e4a93b3bc3ba4" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;footer class=&quot;usa-footer usa-footer--slim&quot;&gt;
   &lt;div class=&quot;grid-container usa-footer__return-to-top&quot;&gt;
@@ -526,7 +527,7 @@
   &lt;% if defined?(navigation) %&gt;&lt;div class=&quot;usa-footer__primary-section&quot;&gt;
     &lt;div class=&quot;usa-footer__primary-container grid-row&quot;&gt;
       &lt;div&gt;
-        &lt;nav class=&quot;usa-footer__nav padding-0&quot;&lt;% if navigation['label'] %&gt; aria-label=&quot;&lt;%= navigation['label'] %&gt;&quot;&lt;% end %&gt;&gt;
+        &lt;nav class=&quot;usa-footer__nav padding-0&quot;&lt;% if navigation['ariaLabel'] %&gt; aria-label=&quot;&lt;%= navigation['ariaLabel'] %&gt;&quot;&lt;% end %&gt;&gt;
           &lt;ul class=&quot;grid-row grid-gap&quot;&gt;
             &lt;% navigation['items'].each do |item| %&gt;&lt;li class=&quot;tablet:grid-col-auto margin-0 usa-footer__primary-content&quot;&gt;
               &lt;a class=&quot;usa-footer__primary-link&lt;% if item['modifier'] %&gt; &lt;%= item['modifier'] %&gt;&lt;% end %&gt;&quot;

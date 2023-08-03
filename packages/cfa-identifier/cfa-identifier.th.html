@@ -1,37 +1,29 @@
-<div class="usa-identifier cfa-font-smooth">
-  <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+<div th:fragment="identifier(modifier, identity, requiredLinks, governmentSection)" class="usa-identifier" th:classappend="${modifier}">
+  <section th:if="${identity}" class="usa-identifier__section usa-identifier__section--masthead" th:attr="aria-label=${idenitity.ariaLabel}">
     <div class="usa-identifier__container">
       <div class="usa-identifier__identity">
-        <p class="usa-identifier__identity-domain">domain.gov</p>
+        <p th:if="${identity.domain}" class="usa-identifier__identity-domain" th:text="${identity.domain}">domain.gov</p>
 
-        <p class="usa-identifier__identity-disclaimer">
-          This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.
-        </p>
+        <p th:if="${identity.disclaimer}" class="usa-identifier__identity-disclaimer" th:text="${identity.disclaimer}">Disclaimer</p>
       </div>
     </div>
   </section>
 
-  <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+  <nav th:if="${requiredLinks}" class="usa-identifier__section usa-identifier__section--required-links" th:attr="aria-label=${requiredLinks.ariaLabel}">
     <div class="usa-identifier__container">
       <ul class="add-list-reset">
-        <li class="usa-identifier__required-links-item">
-          <a href="https://codeforamerica.org" class="usa-identifier__required-link usa-link usa-link--external">About Code for America</a>
-        </li>
-
-        <li class="usa-identifier__required-links-item">
-          <a href="https://codeforamerica.org/about-us/diversity-equity-inclusion" class="usa-identifier__required-link usa-link usa-link--external">Diversity, Equity, & Inclusion</a>
+        <li th:each="item: ${requiredLinks.items}" class="usa-identifier__required-links-item">
+          <a class="usa-identifier__required-link usa-link usa-link--external" th:href="${item.href}" th:classappend="${item.modifier}" th:attr="rel=${item.rel},target=${item.target}" th:text="${item.label}">Label</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="U.S. government information and services">
+  <section th:if="${governmentSection}" class="usa-identifier__section usa-identifier__section--usagov" th:attr="aria-label=${governmentSection.ariaLabel}">
     <div class="usa-identifier__container">
-      <div class="usa-identifier__usagov-description">
-        Looking for government information and services?
-      </div>
+      <div th:if="${governmentSection.description}" class="usa-identifier__usagov-description" th:text="${governmentSection.description}">Description</div>
 
-      <a href="#" class="usa-link">Visit domain.gov</a>
+      <a th:if="${governmentSection.link}" class="usa-link" th:href="${governmentSection.link.href}" th:classappend="${governmentSection.link.modifier}" th:attr="rel=${governmentSection.link.rel},target=${governmentSection.link.target}" th:text="${governmentSection.link.label}">Visit domain.gov</a>
     </div>
   </section>
 </div>
