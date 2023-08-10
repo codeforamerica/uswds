@@ -6,7 +6,7 @@
   <div th:if="${navigation}" class="usa-footer__primary-section">
     <div class="usa-footer__primary-container grid-row">
       <div>
-        <nav class="usa-footer__nav padding-0" aria-label="${navigation.label}">
+        <nav class="usa-footer__nav padding-0" th:attr="aria-label=${navigation.ariaLabel}">
           <ul class="grid-row grid-gap">
             <li th:each="item: ${navigation.items}" class="tablet:grid-col-auto margin-0 usa-footer__primary-content">
               <a class="usa-footer__primary-link" th:href="${item.href}" th:classappend="${item.modifier}" th:attr="rel=${item.rel},target=${item.target}" th:text="${item.label}">Label</a>

@@ -6,7 +6,7 @@ intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
 url_uswds: https://designsystem.digital.gov/components/identifier
 url_uswds_guidance: https://designsystem.digital.gov/components/identifier/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/identifier/#using-the-footer-component-2
-nice_uswds: Identifier
+nice_uswds: Identifier, no logos
 url_honeycrisp:
 nice_honeycrisp:
 modifier_honeycrisp: false
@@ -77,7 +77,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'identifier', nice: title, body: body, context: context, caption: 'Identifier' %}
+{% render 'figure.md', name: 'identifier', nice: title, body: body, context: context, caption: nice_uswds %}
 
 <!-- GUIDANCE -->
 

@@ -86,7 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     "modifier": "usa-input-group cfa-input-group"
   },
   "input": {
-    "modifier": "cfa-input text-right",
+    "modifier": "cfa-input cfa-text-end",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
     "type": "text",
@@ -106,7 +106,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     "modifier": "usa-input-group cfa-input-group"
   },
   "input": {
-    "modifier": "cfa-input text-right",
+    "modifier": "cfa-input cfa-text-end",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
     "type": "text",

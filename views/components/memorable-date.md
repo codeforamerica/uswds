@@ -173,17 +173,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-<!-- <input
-  class="usa-input"
-  aria-describedby="mdHint"
-  id="date_of_birth_day"
-  name="date_of_birth_day"
-  maxlength="2"
-  pattern="[0-9]*"
-  inputmode="numeric"
-  value=""
-/> -->
-
 {% render 'figure.md', name: 'memorable-date', nice: title, body: body, context: context, caption: 'Memorable date' %}
 
 <!-- GUIDANCE -->

@@ -1,0 +1,53 @@
+<div th:fragment="householdDetails(modifier, header, household, summary, add)" class="border-2px border-base-light padding-3 radius-md" th:classappend="${modifier}">
+  <div th:if="${header.heading.text}">
+    <h3 class="font-body-xs margin-bottom-1 text-center" th:classappend="${header.heading.modifier}" th:attr="id=${header.heading.id}" th:text="${header.heading.text}">Heading</h3>
+  </div>
+
+  <div th:if="${header.heading.content}" th:utext="${header.heading.content}">
+    <h3>Heading</h3>
+  </div>
+
+  <ul class="add-list-reset" th:attr="aria-describedby=${header.heading.id}" role="list">
+    <li th:each="person: ${household}" class="margin-0 border-bottom-1px border-base-lighter padding-y-2">
+      <div class="margin-bottom-1">
+        <svg th:if="${person.icon}" class="usa-icon margin-bottom-neg-2px" aria-hidden="true" focusable="false">
+          <use th:href="${person.icon}"></use>
+        </svg>
+
+        <b th:text="${person.label}">Person</b>
+      </div>
+
+      <div th:if="${person.details}">
+        <div th:each="detail: ${person.details}" th:class="${detail.modifier}">
+          <div th:utext="${detail.content}">Content</div>
+
+          <div th:if="${detail.utility}">
+            <a th:href="${detail.utility.edit.href}" class="usa-button cfa-button cfa-button--primary usa-button--unstyled font-body-2xs width-auto" th:utext="${detail.utility.edit.label}">edit</a>
+
+            <span th:if="${detail.utility.delete}" class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+            <a th:if="${detail.utility.delete}" th:href="${detail.utility.delete.href}" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs width-auto" th:utext="${detail.utility.delete.label}">delete</a>
+          </div>
+        </div>
+      </div>
+
+      <div th:if="${person.utility}" class="margin-top-1" th:classappend="${person.utility.modifier}">
+        <a th:href="${person.utility.edit.href}" class="usa-button cfa-button cfa-button--primary usa-button--unstyled font-body-2xs width-auto" th:utext="${person.utility.edit.label}">edit</a>
+
+        <span th:if="${person.utility.delete}" class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+        <a th:if="${person.utility.delete}" th:href="${person.utility.delete.href}" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs width-auto" th:utext="${person.utility.delete.label}">delete</a>
+      </div>
+    </li>
+
+    <li th:if="${summary}" th:each="sum: ${summary}" class="border-top-1px border-base-light margin-top-neg-1px padding-top-2 mobile-lg:display-flex flex-justify">
+      <div th:class="${sum.label.modifier}"><b th:text="${sum.label.text}">Label</b></div>
+
+      <div th:class="${sum.value.modifier}" th:text="${sum.value.text}">Value</div>
+    </li>
+  </ul>
+
+  <div th:if="${add}" class="text-center padding-top-2">
+    <th:block th:replace="~{packages/cfa-button/cfa-button.th :: button(${add})}" />
+  </div>
+</div>

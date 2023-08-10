@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d59691b63a3df">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f812f3628f0c3">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-d59691b63a3df" class="usa-nav__submenu">
+          <ul id="aria-c-f812f3628f0c3" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -99,6 +99,9 @@
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/form-group/" ><span>Form group</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/household-details/" ><span>Household details</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/identifier/" aria-current="page"><span>Identifier</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
@@ -125,11 +128,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-52018488fc2b7">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-806dd54aaba1f">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-52018488fc2b7" class="usa-nav__submenu">
+          <ul id="aria-c-806dd54aaba1f" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -203,12 +206,18 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/household-details/" >Household details</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/identifier/" class="usa-current" aria-current="page">Identifier</a>
 
                                 <ul class="usa-sidenav__sublist">
                                     <li class="usa-sidenav__item"><a href="#details">Details</a></li>
 
                   <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#guidance">Guidance</a></li>
 
                   <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
 
@@ -261,11 +270,11 @@
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
-  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier</a></li>
+  <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier, no logos</a></li>
   <li>
     <details>
       <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p><p>The <b>Identifier</b> extends the <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier</a>. </p>
+<p><p>The <b>Identifier</b> extends the <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier, no logos</a>. </p>
 </details></p>
   </li>
 </ul>
@@ -273,7 +282,7 @@
 <h2 id="examples">Examples</h2>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Identifier</figcaption>
+    <figcaption class="margin-bottom-2">Identifier, no logos</figcaption>
     <div class="usa-identifier cfa-font-smooth">
   <section class="usa-identifier__section usa-identifier__section--masthead">
     <div class="usa-identifier__container">
@@ -306,11 +315,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-69fc8d33dd2ff">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-8aec2f9a1ac1">
           View HTML
         </button>
       </div>
-      <div id="aria-c-69fc8d33dd2ff" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-8aec2f9a1ac1" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-identifier cfa-font-smooth&quot;&gt;
   &lt;section class=&quot;usa-identifier__section usa-identifier__section--masthead&quot;&gt;
@@ -449,7 +458,7 @@
   &lt;div th:if=&quot;${navigation}&quot; class=&quot;usa-footer__primary-section&quot;&gt;
     &lt;div class=&quot;usa-footer__primary-container grid-row&quot;&gt;
       &lt;div&gt;
-        &lt;nav class=&quot;usa-footer__nav padding-0&quot; aria-label=&quot;${navigation.label}&quot;&gt;
+        &lt;nav class=&quot;usa-footer__nav padding-0&quot; th:attr=&quot;aria-label=${navigation.ariaLabel}&quot;&gt;
           &lt;ul class=&quot;grid-row grid-gap&quot;&gt;
             &lt;li th:each=&quot;item: ${navigation.items}&quot; class=&quot;tablet:grid-col-auto margin-0 usa-footer__primary-content&quot;&gt;
               &lt;a class=&quot;usa-footer__primary-link&quot; th:href=&quot;${item.href}&quot; th:classappend=&quot;${item.modifier}&quot; th:attr=&quot;rel=${item.rel},target=${item.target}&quot; th:text=&quot;${item.label}&quot;&gt;Label&lt;/a&gt;

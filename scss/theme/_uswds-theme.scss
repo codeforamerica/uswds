@@ -194,5 +194,9 @@ in the form $setting: value,
     'tablet': true,
     'tablet-lg': true,
     'desktop': true
+  ),
+  $text-align-manual-values: (
+    'start': start,
+    'end': end
   )
 );

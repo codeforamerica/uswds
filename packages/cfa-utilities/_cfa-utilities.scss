@@ -1,10 +1,64 @@
+@use "uswds-core/src/styles/settings" as *;
+@use "uswds-core/src/styles/functions" as *;
+@use "uswds-core/src/styles/mixins/utility-builder" as *;
+@use "uswds/packages/uswds-utilities/src/styles/functions/" as *;
 
+/** Mixins and variables **/
 
 @mixin cfa-font-smooth() {
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
 }
 
+$cfa-u-margin: (
+  margin-horizontal: (
+    base: 'margin',
+    modifiers: (
+      'inline-x': (
+        '-inline-start',
+        '-inline-end',
+      ),
+      'end': '-inline-end',
+      'start': '-inline-start'
+    ),
+    values: map-collect(get-palettes($margin-horizontal-palettes), $margin-manual-values),
+    settings: $margin-settings-complete,
+    property: 'margin',
+    type: 'utility',
+  )
+);
+
+$cfa-u-padding: (
+  padding-horizontal: (
+    base: 'padding',
+    modifiers: (
+      'inline-x': (
+        '-inline-start',
+        '-inline-end',
+      ),
+      'end': '-inline-end',
+      'start': '-inline-start'
+    ),
+    values: map-collect(get-palettes($padding-palettes), $padding-manual-values),
+    settings: $padding-settings-complete,
+    property: 'padding',
+    type: 'utility'
+  )
+);
+
+$cfa-utilities-package: map-collect(
+  $cfa-u-margin,
+  $cfa-u-padding
+);
+
+/** Render **/
+
 .cfa-font-smooth {
-  @include cfa-font-smooth;
+  @include cfa-font-smooth
 }
+
+.cfa-shrink-0 {
+  flex-shrink: 0
+}
+
+@include render-utilities-in($cfa-utilities-package);

@@ -100,7 +100,7 @@ The {{ title }} is a custom component. It includes the <a href="{{ config.baseUr
           "modifier": "usa-input-group cfa-input-group"
         },
         "input": {
-          "modifier": "cfa-input text-right",
+          "modifier": "cfa-input cfa-text-end",
           "id": "input-{{ id_income }}",
           "name": "input['{{ id_income }}']",
           "ariaDescribedby": "hint-{{ id_income }}",
