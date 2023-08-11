@@ -511,7 +511,31 @@ module.exports = function(eleventyConfig) {
     let template = removeNewLines(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
 
     if (include) {
-      let params = [...new Set(template.match(/\$\{[A-z$_.-][\w$]{0,}}/g))];
+      let params = [
+        template.match(/\$\{[A-z$_.-]{0,}}/g)
+      ].filter(m => m).flat();
+
+      let iterationItems = [
+        template.match(/th:each="[A-z$_.-]{0,}/g)
+      ].filter(m => m).flat();
+
+      iterationItems = iterationItems.map(i => '${' + i.split('="')[1] + '}');
+
+      // Clean up params
+      params = params.map(c => {
+        if (c.includes('.')) {
+          c = `${c.split('.')[0]}}`;
+        }
+
+        // Remove iteration items
+        if (iterationItems.includes(c)) {
+          return false;
+        }
+
+        return c;
+      });
+
+      params = [...new Set(params)].filter(Boolean);
 
       return block(`<th:block th:replace="~{${templatePath} :: ${createCamelCase(name)}(${
           params.join(', ')
@@ -540,12 +564,18 @@ module.exports = function(eleventyConfig) {
     if (include) {
       // Find params matching these patterns
       let params = [
-        template.match(/<%= [A-z$_.-][\w$]{0,} %>/g),
-        template.match(/<% if [A-z$_.-][\w$]{0,} %>/g),
-        template.match(/<% if [A-z$_.'\-\[\]]{0,}[\w$]{0,} %>/g),
-        template.match(/<% if defined\?\([A-z$_.-][\w$]{0,}\) %>/g),
-        template.match(/<% [A-z$_.-][\w$]{0,}.each do/g)
+        template.match(/<%= [A-z$_.-]{0,} %>/g),
+        template.match(/<% if [A-z$_.-]{0,} %>/g),
+        template.match(/<% if [A-z$_.'\-\[\]]{0,} %>/g),
+        template.match(/<% if defined\?\([A-z$_.-]{0,}\) %>/g),
+        template.match(/<% [A-z$_.-]{0,}.each do/g)
       ].filter(m => m).flat();
+
+      let iterationItems = [
+        template.match(/.each do \|[A-z]{0,}/g)
+      ].filter(m => m).flat();
+
+      iterationItems = iterationItems.map(i => i.split('|')[1]);
 
       // Clean what's not needed from param instances
       params = params.map(c => {
@@ -561,10 +591,15 @@ module.exports = function(eleventyConfig) {
           c = c.split("['")[0];
         }
 
+        // Remove iteration items
+        if (iterationItems.includes(c)) {
+          return false;
+        }
+
         return c;
       });
 
-      params = [...new Set(params)];
+      params = [...new Set(params)].filter(Boolean);
 
       return block(`<%= ERB.new(File.read('${templatePath}'), 0, 0, '@${createCamelCase(name)}').result_with_hash({${
           params.map(attr => {

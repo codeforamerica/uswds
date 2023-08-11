@@ -42,8 +42,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   "modifier": "cfa-font-smooth",
   "header": {
     "heading": {
-      "text": "Review household",
+      "text": "Review your household",
       "id": "aria-db-{% createId %}"
+    }
+  },
+  "list": {
+    "modifier": "add-list-reset",
+    "item": {
+      "modifier": "border-bottom-1px border-base-lighter"
     }
   },
   "household": [
@@ -92,8 +98,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   "modifier": "cfa-font-smooth",
   "header": {
     "heading": {
-      "text": "Your annual household income",
+      "text": "Your household income",
       "id": "aria-db-{% createId %}"
+    }
+  },
+  "list": {
+    "modifier": "add-list-reset",
+    "item": {
+      "modifier": "border-bottom-1px border-base-lighter"
     }
   },
   "household": [
@@ -103,7 +115,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       "details": [
         {
           "modifier": "text-end",
-          "content": "$29,500.00",
+          "content": "<i>Employer name</i> <br> $29,500.00 <br> (Annual)",
           "utility": {
             "edit": {
               "label": "edit income",
@@ -123,7 +135,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       "details": [
         {
           "modifier": "text-end",
-          "content": "$28,300.00",
+          "content": "<i>Employer name</i> <br> $28,300.00 <br> (Annual)",
           "utility": {
             "edit": {
               "label": "edit income",
@@ -160,15 +172,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'household-details', nice: title, body: body, context: context, caption: title %}
+{% render 'figure.md', name: 'household-details', nice: title, body: body, context: context, caption: 'Household details with annual income details' %}
 
 <!-- GUIDANCE -->
 
-## Guidance {#guidance}
+<!-- ## Guidance {#guidance}
 
-{% render 'references.md', ref_main: url_uswds_guidance, config: config %}
+<!-- render 'references.md', ref_main: url_uswds_guidance, config: config -->
 
 <!-- ACCESSIBILITY -->
+
+{% capture additional %}
+1. The `role="list"` attribute is added to the unordered list element to preserve the list role when the `add-list-reset` class is used to remove list styling.
+{% endcapture %}
 
 {% render 'accessibility.md'
   nice: title,
@@ -181,7 +197,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   screen_reader_passes: false,
   screen_reader_tests: 'No screen reader test has been created.',
   guidance_passes: false,
-  additional: false,
+  additional: additional,
   config: config %}
 
 <!-- DESIGN -->
@@ -190,4 +206,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'footer', nice: title, usage: usage, sass: false, config: config, pckg: package %}
+{% render 'source.md', name: 'household-details', nice: title, usage: usage, sass: false, config: config, pckg: package %}

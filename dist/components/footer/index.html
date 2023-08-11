@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f31acd387ece3">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-786b74c9a664d">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-f31acd387ece3" class="usa-nav__submenu">
+          <ul id="aria-c-786b74c9a664d" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -128,11 +128,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-019bd2e38315c">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-3af498acf90ee">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-019bd2e38315c" class="usa-nav__submenu">
+          <ul id="aria-c-3af498acf90ee" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -328,11 +328,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-dff84ccae30a6">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-61a39cb2f1017">
           View HTML
         </button>
       </div>
-      <div id="aria-c-dff84ccae30a6" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-61a39cb2f1017" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;footer class=&quot;usa-footer usa-footer--slim&quot;&gt;
   &lt;div class=&quot;grid-container usa-footer__return-to-top&quot;&gt;
@@ -518,7 +518,7 @@
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
     </div>
     <div class="code-block">
-      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-footer/cfa-footer.th :: footer(${modifier}, ${returnToTop}, ${navigation}, ${logo})}&quot; /&gt;</pre>
+      <pre class="language-html">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-footer/cfa-footer.th :: footer(${modifier}, ${returnToTop}, ${navigation}, ${logo}, ${home})}&quot; /&gt;</pre>
     </div>
   </div>
 </figure>
@@ -573,7 +573,7 @@
       <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
     </div>
     <div class="code-block">
-      <pre class="language-ruby">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-footer/cfa-footer'), 0, 0, '@footer').result_with_hash({modifier: modifier, returnToTop: returnToTop, navigation: navigation, item: item, home: home, logo: logo}) %&gt;</pre>
+      <pre class="language-ruby">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-footer/cfa-footer'), 0, 0, '@footer').result_with_hash({modifier: modifier, returnToTop: returnToTop, navigation: navigation, home: home, logo: logo}) %&gt;</pre>
     </div>
   </div>
 </figure>
