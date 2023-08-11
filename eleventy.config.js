@@ -535,6 +535,7 @@ module.exports = function(eleventyConfig) {
         return c;
       });
 
+      // Create a new set of unique params and filter out Booleans or falsey variables
       params = [...new Set(params)].filter(Boolean);
 
       return block(`<th:block th:replace="~{${templatePath} :: ${createCamelCase(name)}(${
@@ -599,6 +600,7 @@ module.exports = function(eleventyConfig) {
         return c;
       });
 
+      // Create a set of unique params and filter out Booleans or falsey variables
       params = [...new Set(params)].filter(Boolean);
 
       return block(`<%= ERB.new(File.read('${templatePath}'), 0, 0, '@${createCamelCase(name)}').result_with_hash({${

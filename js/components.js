@@ -5,7 +5,7 @@ const button = require('../node_modules/@uswds/uswds/packages/usa-button/src/ind
 // const comboBox = require('../node_modules/@uswds/uswds/packages/usa-combo-box/src/index');
 // const datePicker = require('../node_modules/@uswds/uswds/packages/usa-date-picker/src/index');
 // const dateRangePicker = require('../node_modules/@uswds/uswds/packages/usa-date-range-picker/src/index');
-// const fileInput = require('../node_modules/@uswds/uswds/packages/usa-file-input/src/index');
+const fileInput = require('../node_modules/@uswds/uswds/packages/usa-file-input/src/index');
 // const footer = require('../node_modules/@uswds/uswds/packages/usa-footer/src/index');
 // const inPageNavigation = require('../node_modules/@uswds/uswds/packages/usa-in-page-navigation/src/index');
 // const inputMask = require('../node_modules/@uswds/uswds/packages/usa-input-mask/src/index');
@@ -27,7 +27,7 @@ module.exports = {
   // comboBox,
   // datePicker,
   // dateRangePicker,
-  // fileInput,
+  fileInput,
   // footer,
   // inPageNavigation,
   // inputMask,

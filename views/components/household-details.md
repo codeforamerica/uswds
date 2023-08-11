@@ -39,7 +39,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Examples {#examples}
 
 {% capture context %}{
-  "modifier": "cfa-font-smooth",
   "header": {
     "heading": {
       "text": "Review your household",
@@ -95,7 +94,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% render 'figure.md', name: 'household-details', nice: title, body: body, context: context, caption: title %}
 
 {% capture context %}{
-  "modifier": "cfa-font-smooth",
   "header": {
     "heading": {
       "text": "Your household income",

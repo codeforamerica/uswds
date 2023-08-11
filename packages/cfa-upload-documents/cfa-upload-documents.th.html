@@ -1,0 +1,57 @@
+<div th:fragment="uploadDocuments(modifier, documentType)" class="cfa-form-card__content">
+  <div th:if="${documentType}">
+    <th:block th:replace="~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${documentType.modifier}, ${documentType.id}, ${documentType.label}, ${documentType.hint}, ${documentType.error}, '', '', '', ${documentType.selectEl})}" />
+  </div>
+
+  <div class="usa-form-group cfa-form-group">
+    <label class="usa-label cfa-label" for="file-input-specific">
+      Add your files
+    </label>
+
+    <span class="usa-hint cfa-hint" id="file-input-specific-hint">
+      Select .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB.
+    </span>
+
+    <input id="file-input-specific" class="usa-file-input" type="file" name="file-input-specific" aria-describedby="file-input-specific-hint" accept=".pdf,.txt" multiple="multiple" />
+  </div>
+
+  <a href="#">Or, use your phone instead</a>
+
+  <details>
+    <summary class="usa-button cfa-button usa-button--outline text-start margin-0 margin-bottom-2">View document list</summary>
+
+    <div class="border-2px bg-base-lightest padding-2 radius-md">
+      <p>
+        <b>Proof of Income</b>
+
+        <br>
+
+        Tax documents from 2020 or 2021 (such as Form 1040), or wage documents (such as pay stubs, W-2) for all adults in the household that earn income.
+      </p>
+
+      <p>
+        <b>Proof of Residency</b>
+
+        <br>
+
+        Current official document with your name and address such as a valid government ID, housing documents (rent receipts, lease, or mortgage statements), or a recent utility bill.
+      </p>
+
+      <p>
+        <b>Proof of Identity</b>
+
+        <br>
+
+        A government-issued photo ID such as a driver's license, identity card, passport or Social Security card.
+      </p>
+
+      <p>
+        <b>Types of files</b>
+
+        <br>
+
+        We accept .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB. The maximum number of files is 20.
+      </p>
+    </div>
+  </details>
+</div>
