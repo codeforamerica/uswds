@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d295da922df1b">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-98c94ca478d47">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-d295da922df1b" class="usa-nav__submenu">
+          <ul id="aria-c-98c94ca478d47" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -131,11 +131,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c8adbbfe79eff">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-299c290810ea6">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-c8adbbfe79eff" class="usa-nav__submenu">
+          <ul id="aria-c-299c290810ea6" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -291,13 +291,13 @@
     <figcaption class="margin-bottom-2">Upload documents</figcaption>
     <div class="cfa-form-card__content">
   <div>
-    <div class="usa-form-group cfa-form-group" id="form-group-216ed6c9782c2">
-      <label class="usa-label cfa-label" for="select-216ed6c9782c2">
+    <div class="usa-form-group cfa-form-group" id="form-group-1eacbad67c289">
+      <label class="usa-label cfa-label" for="select-1eacbad67c289">
         <span>What type of document is this?</span>
         <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
       </label>
       <div>
-        <select class="usa-select cfa-select" id="select-216ed6c9782c2" name="select['216ed6c9782c2']" aria-describedby="hint-216ed6c9782c2" required="true">
+        <select class="usa-select cfa-select" id="select-1eacbad67c289" name="select['1eacbad67c289']" aria-describedby="hint-1eacbad67c289" required="true">
           <option selected="true">Click to select a type</option>
           <option disabled="true">---</option>
           <option value="wages">wages, salaries, tips</option>
@@ -305,11 +305,52 @@
       </div>
     </div>
   </div>
-  <div class="usa-form-group cfa-form-group">
-    <label class="usa-label cfa-label" for="file-input-specific"> Add your files </label>
-    <span class="usa-hint cfa-hint" id="file-input-specific-hint"> Select .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB. </span>
-    <input id="file-input-specific" class="usa-file-input" type="file" name="file-input-specific" aria-describedby="file-input-specific-hint" accept=".pdf,.txt" multiple="multiple">
+  <!--
+  id="dropzone-ubiFiles"                  data-js="dropzone"
+  id="document-upload-ubiFiles"           data-dropzone="uploads"
+  id="max-files-reached-ubiFiles"         data-dropzone="max-uploads"
+  id="max-files"                          data-dropzone="max-uploads-message"
+  id="drag-and-drop-box-ubiFiles"         data-dropzone="drag-and-drop-region"
+  id="upload-button-ubiFiles"             data-dropzone="upload-button"
+  id="upload-button-inner-ubiFiles"       data-dropzone="button"
+  id="number-of-uploaded-files-ubiFiles"  data-dropzone="uploads-number"
+  id="upload-doc-div-ubiFiles"
+  id="upload-doc-text-ubiFiles"
+  id="file-preview-template-ubiFiles"
+  -->
+  <div class="cfa-file-input" data-js="dropzone">
+    <div class="dropzone needsclick" data-dropzone="uploads">
+      <label class="usa-label cfa-label" id="aria-lb-label-RANDOM_ID">
+        <span>Add your files</span>
+        <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
+      </label>
+      <div data-dropzone="max-uploads">
+        <div class="max-files spacing-below-35 display-none" data-dropzone="max-uploads-message">You have uploaded the maximum number of files. You will have the opportunity to share more later.</div>
+      </div>
+      <div class="usa-file-input__target" data-dropzone="drag-and-drop-region">
+        <div class="usa-file-input__instructions">
+          <p id="aria-lb-instructions-RANDOM_ID" aria-hidden="true">Drag your files here or <span class="usa-file-input__choose">choose from folder</span>. Accepted files include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB.</p>
+          <div class="dz-message" data-dropzone="upload-button">
+            <button class="usa-button cfa-button width-auto radius-pill margin-0" type="button" data-dropzone="button" aria-labelledby="aria-lb-label-RANDOM_ID" aria-describedby="aria-lb-instructions-RANDOM_ID">
+              <svg class="usa-icon margin-0 height-7 width-7" aria-hidden="true" focusable="false">
+                <use href="/uswds/img/sprite.svg#add"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="grid--item width-two-thirds">
+          <div class="body-gray" data-dropzone="uploads-number"> NUMBER_OF_UPLOADED_FILES </div>
+        </div>
+      </div>
+      <div id="upload-doc-div-ubiFiles" class="spacing-below-25 hidden">
+        <p id="upload-doc-text-ubiFiles" class="upload-doc-text">Uploaded documents</p>
+      </div>
+      <div id="file-preview-template-ubiFiles" class="file-preview-template">
+        <div class="preview-container"> PREVIEW_CONTAINER </div>
+      </div>
+    </div>
   </div>
+  <input type="hidden">
   <a href="#">Or, use your phone instead</a>
   <details>
     <summary class="usa-button cfa-button usa-button--outline text-start margin-0 margin-bottom-2">View document list</summary>
@@ -337,21 +378,21 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3625f12c5b916">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-552eb372176b9">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3625f12c5b916" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-552eb372176b9" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;cfa-form-card__content&quot;&gt;
   &lt;div&gt;
-    &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-216ed6c9782c2&quot;&gt;
-      &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-216ed6c9782c2&quot;&gt;
+    &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1eacbad67c289&quot;&gt;
+      &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-1eacbad67c289&quot;&gt;
         &lt;span&gt;What type of document is this?&lt;/span&gt;
         &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
       &lt;/label&gt;
       &lt;div&gt;
-        &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-216ed6c9782c2&quot; name=&quot;select['216ed6c9782c2']&quot; aria-describedby=&quot;hint-216ed6c9782c2&quot; required=&quot;true&quot;&gt;
+        &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-1eacbad67c289&quot; name=&quot;select['1eacbad67c289']&quot; aria-describedby=&quot;hint-1eacbad67c289&quot; required=&quot;true&quot;&gt;
           &lt;option selected=&quot;true&quot;&gt;Click to select a type&lt;/option&gt;
           &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
           &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
@@ -359,11 +400,52 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;usa-form-group cfa-form-group&quot;&gt;
-    &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;file-input-specific&quot;&gt; Add your files &lt;/label&gt;
-    &lt;span class=&quot;usa-hint cfa-hint&quot; id=&quot;file-input-specific-hint&quot;&gt; Select .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB. &lt;/span&gt;
-    &lt;input id=&quot;file-input-specific&quot; class=&quot;usa-file-input&quot; type=&quot;file&quot; name=&quot;file-input-specific&quot; aria-describedby=&quot;file-input-specific-hint&quot; accept=&quot;.pdf,.txt&quot; multiple=&quot;multiple&quot;&gt;
+  &lt;!--
+  id=&quot;dropzone-ubiFiles&quot;                  data-js=&quot;dropzone&quot;
+  id=&quot;document-upload-ubiFiles&quot;           data-dropzone=&quot;uploads&quot;
+  id=&quot;max-files-reached-ubiFiles&quot;         data-dropzone=&quot;max-uploads&quot;
+  id=&quot;max-files&quot;                          data-dropzone=&quot;max-uploads-message&quot;
+  id=&quot;drag-and-drop-box-ubiFiles&quot;         data-dropzone=&quot;drag-and-drop-region&quot;
+  id=&quot;upload-button-ubiFiles&quot;             data-dropzone=&quot;upload-button&quot;
+  id=&quot;upload-button-inner-ubiFiles&quot;       data-dropzone=&quot;button&quot;
+  id=&quot;number-of-uploaded-files-ubiFiles&quot;  data-dropzone=&quot;uploads-number&quot;
+  id=&quot;upload-doc-div-ubiFiles&quot;
+  id=&quot;upload-doc-text-ubiFiles&quot;
+  id=&quot;file-preview-template-ubiFiles&quot;
+  --&gt;
+  &lt;div class=&quot;cfa-file-input&quot; data-js=&quot;dropzone&quot;&gt;
+    &lt;div class=&quot;dropzone needsclick&quot; data-dropzone=&quot;uploads&quot;&gt;
+      &lt;label class=&quot;usa-label cfa-label&quot; id=&quot;aria-lb-label-RANDOM_ID&quot;&gt;
+        &lt;span&gt;Add your files&lt;/span&gt;
+        &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
+      &lt;/label&gt;
+      &lt;div data-dropzone=&quot;max-uploads&quot;&gt;
+        &lt;div class=&quot;max-files spacing-below-35 display-none&quot; data-dropzone=&quot;max-uploads-message&quot;&gt;You have uploaded the maximum number of files. You will have the opportunity to share more later.&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;usa-file-input__target&quot; data-dropzone=&quot;drag-and-drop-region&quot;&gt;
+        &lt;div class=&quot;usa-file-input__instructions&quot;&gt;
+          &lt;p id=&quot;aria-lb-instructions-RANDOM_ID&quot; aria-hidden=&quot;true&quot;&gt;Drag your files here or &lt;span class=&quot;usa-file-input__choose&quot;&gt;choose from folder&lt;/span&gt;. Accepted files include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB.&lt;/p&gt;
+          &lt;div class=&quot;dz-message&quot; data-dropzone=&quot;upload-button&quot;&gt;
+            &lt;button class=&quot;usa-button cfa-button width-auto radius-pill margin-0&quot; type=&quot;button&quot; data-dropzone=&quot;button&quot; aria-labelledby=&quot;aria-lb-label-RANDOM_ID&quot; aria-describedby=&quot;aria-lb-instructions-RANDOM_ID&quot;&gt;
+              &lt;svg class=&quot;usa-icon margin-0 height-7 width-7&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
+                &lt;use href=&quot;/uswds/img/sprite.svg#add&quot;&gt;&lt;/use&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;grid--item width-two-thirds&quot;&gt;
+          &lt;div class=&quot;body-gray&quot; data-dropzone=&quot;uploads-number&quot;&gt; NUMBER_OF_UPLOADED_FILES &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;upload-doc-div-ubiFiles&quot; class=&quot;spacing-below-25 hidden&quot;&gt;
+        &lt;p id=&quot;upload-doc-text-ubiFiles&quot; class=&quot;upload-doc-text&quot;&gt;Uploaded documents&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;file-preview-template-ubiFiles&quot; class=&quot;file-preview-template&quot;&gt;
+        &lt;div class=&quot;preview-container&quot;&gt; PREVIEW_CONTAINER &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
+  &lt;input type=&quot;hidden&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;Or, use your phone instead&lt;/a&gt;
   &lt;details&gt;
     &lt;summary class=&quot;usa-button cfa-button usa-button--outline text-start margin-0 margin-bottom-2&quot;&gt;View document list&lt;/summary&gt;

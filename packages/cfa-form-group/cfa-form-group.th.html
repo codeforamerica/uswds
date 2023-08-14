@@ -11,7 +11,7 @@
 
   <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:text="${hint.text}">Hint</div>
 
-  <span th:if="${error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
+  <span th:if="${error}" class="usa-error-message" th:classappend="${error.modifier}" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
 
   <div th:if="${input}">
     <th:block th:replace="~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}" />

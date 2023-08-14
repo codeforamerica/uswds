@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@uswds/uswds": "^3.5.0",
-    "cleave.js": "^1.6.0"
+    "cleave.js": "^1.6.0",
+    "dropzone": "^5.9.3"
   }
 }

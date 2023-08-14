@@ -1,11 +1,12 @@
 @use 'uswds-core' as *;
 
 .cfa-form-group {
-  // margin-top: units(7);
   margin-top: revert;
 }
 
 .cfa-form-group.usa-form-group--error {
+  border-inline-start-color: color($theme-color-error);
+
   padding-left: units(4) - units(0.5);
   margin-left: units(-3);
 

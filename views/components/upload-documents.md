@@ -39,6 +39,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Examples {#examples}
 
 {% capture id_document_type %}{% createId %}{% endcapture %}
+{% capture id_file_upload %}{% createId %}{% endcapture %}
 
 {% capture context %}{
   "modifier": "",
@@ -71,6 +72,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           "label": "wages, salaries, tips"
         }
       ]
+    }
+  },
+  "fileUpload": {
+    "modifier": "cfa-form-group cfa-file-input",
+    "id": "form-group-{{ id_file_upload }}",
+    "label": {
+      "text": "Add your files",
+      "for": "input-{{ id_file_upload }}",
+      "modifier": "cfa-label",
+      "modifierHint": "cfa-hint"
+    },
+    "hint": {
+      "text": "Select .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to 20MB.",
+      "modifier": "cfa-hint",
+      "id": "hint-{{ id_file_upload }}"
+    },
+    "input": {
+      "modifier": "usa-file-input cfa-input cfa-file-input__input",
+      "id": "input-{{ id_file_upload }}",
+      "name": "input['{{ id_file_upload }}']",
+      "ariaDescribedby": "hint-{{ id_file_upload }}",
+      "type": "file",
+      "accept": ".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp",
+      "multiple": "multiple",
+      "required": "true"
     }
   }
 }{% endcapture %}

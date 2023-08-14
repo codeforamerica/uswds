@@ -8,7 +8,7 @@
 
   <% if defined?(hint) %><div class="usa-hint<% if hint['modifier'] %> <%= hint['modifier'] %><% end %>"<% if hint['id'] %> id="<%= hint['id'] %>"<% end %>><%= hint['text'] %></div><% end %>
 
-  <% if defined?(error) %><span class="usa-error-message"<% if error['id'] %> id="<%= error['id'] %>"<% end %><% if error['role'] %> role="<%= error['role'] %>"<% end %><% if error['ariaLive'] %> aria-live="<%= error['ariaLive'] %>"<% end %>><%= error['text'] %></span><% end %>
+  <% if defined?(error) %><span class="usa-error-message<% if error['modifier'] %> <%= error['modifier'] %><% end %>"<% if error['id'] %> id="<%= error['id'] %>"<% end %><% if error['role'] %> role="<%= error['role'] %>"<% end %><% if error['ariaLive'] %> aria-live="<%= error['ariaLive'] %>"<% end %>><%= error['text'] %></span><% end %>
 
   <% if defined?(options) %>
     <%= ERB.new(File.read('packages/cfa-input-select/_cfa-input-select.html.erb'), 0, 0, '@inputSelect').result_with_hash({options: options, required: (required if defined?(required)) }.compact) %>
