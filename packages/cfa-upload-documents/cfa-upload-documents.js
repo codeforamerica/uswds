@@ -17,6 +17,8 @@ class UploadDocuments {
     this.dropzones = document.querySelectorAll(UploadDocuments.selector);
 
     for (let i = 0; i < this.dropzones.length; i++) {
+      console.dir(this.dropzones[i]);
+
       this.initDropzone(this.dropzones[i], this.dropzoneOptions)
         .on('addedfile', file => {
           this.addedFile(file);
@@ -41,9 +43,6 @@ class UploadDocuments {
     document.querySelector('body')
       .addEventListener('click', event => {
         if (event.target.matches('[data-dropzone="toggle-preview-state"]')) {
-          console.dir('click');
-          console.dir(event.target.closest('[data-dropzone="preview-template"]'));
-
           event.target.closest('[data-dropzone="preview-template"]')
             .className = event.target.dataset.dropzonePreviewState;
         }

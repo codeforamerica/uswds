@@ -159,4 +159,4 @@ The {{ title }} is a custom component. It includes the <a href="{{ config.baseUr
 
 {% capture javascript %}enables the expansion and collapse of the follow-up region. It also toggles the following attributes on child elements inside the follow-up region; tabindex on potentially focusable children and disabled attribute on form element children. The module can be found at <code>.{{ javascript_question | replace: package, '' }}</code>.{% endcapture %}
 
-{% render 'source.md', name: 'follow-up-question', nice: title, stylesheets: stylesheets, stylesheets_import: stylesheets_import, javascript: javascript, config: config, pckg: package %}
+{% render 'source.md', name: 'follow-up-question', nice: title, javascript: javascript, config: config, pckg: package %}
