@@ -190,7 +190,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "usa-input-group cfa-input-group"
   },
   "input": {
-    "modifier": "cfa-input cfa-text-end",
+    "modifier": "cfa-input text-end",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
     "ariaDescribedby": "hint-{{ id }}",
@@ -224,7 +224,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "usa-input-group cfa-input-group"
   },
   "input": {
-    "modifier": "cfa-input cfa-text-end",
+    "modifier": "cfa-input text-end",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
     "ariaDescribedby": "hint-{{ id }}",

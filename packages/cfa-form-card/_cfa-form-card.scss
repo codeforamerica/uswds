@@ -52,6 +52,14 @@
   gap: units(7);
 
   margin-top: units(7);
+
+  > * {
+    // This is a reset that necessary to prevent grid cells auto wrapping
+    // their contents natural width IF they are displayed as flex.
+    // If this broad declaration causes a problem, it can be removed but the
+    // property will need to be set on form groups individually.
+    min-width: 0;
+  }
 }
 
 .cfa-form-card__input-select-group {
