@@ -26,21 +26,21 @@
 }
 
 .usa-alert--info {
-  border-color: color($theme-color-info-light);
+  border-color: color('info-light');
 }
 
 .usa-alert--warning {
-  border-color: color($theme-color-warning);
+  border-color: color('warning');
 }
 
 .usa-alert--error {
-  border-color: color($theme-color-error);
+  border-color: color('error');
 }
 
 .usa-alert--success {
-  border-color: color($theme-color-success-darker);
+  border-color: color('success-darker');
 }
 
 .usa-alert--emergency {
-  border-color: color($theme-color-emergency-dark);
+  border-color: color('emergency-dark');
 }

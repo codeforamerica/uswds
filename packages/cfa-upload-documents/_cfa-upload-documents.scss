@@ -1,0 +1,192 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-transition/cfa-transition' as *;
+
+.dropzone__preview-header {
+  @include u-text('bold');
+  @include u-margin-bottom(2);
+  @include u-padding-bottom(1);
+  @include u-border-bottom(1px);
+
+  display: block;
+}
+
+.dropzone__preview {
+  @include u-margin-bottom(2);
+
+  &.dz-image-preview {
+    .dropzone__img {
+      opacity: 0;
+    }
+
+    .dropzone__icon-error,
+    .dropzone__error-message {
+      display: none;
+    }
+  }
+
+  &.dz-processing {
+    .dropzone__icon-error,
+    .dropzone__error-message {
+      display: none;
+    }
+
+    .dropzone__progress-bar {
+      width: 0;
+    }
+
+    .dropzone__img {
+      opacity: 0;
+    }
+  }
+
+  &.dz-complete {
+    .dropzone__icon-error,
+    .dropzone__error-message {
+      display: none;
+    }
+  }
+
+  &.dz-processing.dz-complete {
+    .dropzone__progress-bar {
+      width: 100%;
+    }
+  }
+
+  &.dz-complete.dz-error {
+    @include u-border-left(0.5, 'error-dark');
+
+    position: relative;
+
+    padding-left: units(4) - units(0.5);
+    margin-left: units(-3);
+
+    @include at-media('tablet') {
+      margin-left: units(-4)
+    }
+
+    .dropzone__thumbnail {
+      @include u-border('error');
+      background-color: color('error-lighter');
+    }
+
+    .dropzone__icon-error,
+    .dropzone__error-message {
+      display: block;
+    }
+
+    .dropzone__img,
+    .dropzone__progress {
+      display: none;
+    }
+  }
+
+  &.dz-complete.dz-success {
+    .dropzone__thumbnail {
+      @include u-border('success-darker');
+
+      background-color: color('success-lighter');
+    }
+
+    .dropzone__filename {
+      color: color('ink');
+    }
+
+    .dropzone__img {
+      opacity: 1;
+    }
+
+    .dropzone__progress {
+      @include u-border('success-darker');
+    }
+
+    .dropzone__progress-bar {
+      background: color('success-darker');
+    }
+  }
+}
+
+.dropzone__details {
+  display: flex;
+}
+
+.dropzone__thumbnail {
+  @include u-radius('lg');
+  @include u-border(2px, 'info-light', 'solid');
+
+  background-color: color('info-lighter');
+
+  margin-inline-end: units(2);
+  flex-shrink: 0;
+
+  box-sizing: content-box;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color, border-color 300ms ease-in-out;
+}
+
+.dropzone__progress {
+  @include u-border(2px, 'info-dark', 'solid');
+
+  border-radius: units(1);
+  height: units(1);
+
+  width: 80%;
+  overflow: hidden;
+
+  pointer-events: none;
+  -webkit-transform: scale(1);
+}
+
+.dropzone__progress-bar {
+  background: color('info-dark');
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+
+  transition: width 300ms ease-in-out;
+}
+
+.dropzone__img {
+  @include u-radius('lg');
+
+  position: absolute;
+  transition: opacity 100ms ease-in-out;
+  transition-delay: 400ms;
+}
+
+.dropzone__icon-error {
+  color: color('error-dark');
+  width: units(4);
+  height: units(4);
+}
+
+.dropzone__file {
+  min-width: 0;
+}
+
+.dropzone__filename {
+  @include u-font($theme-body-font-family, 'sm');
+  @include u-text('bold');
+
+  color: color('base');
+
+  display: flex;
+}
+
+.dropzone__filename-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropzone__filename-ext {
+  flex-shrink: 0;
+}

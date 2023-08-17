@@ -21,6 +21,7 @@ const MaskDollars = require('./mask-dollars.js');
 const MaskTel = require('./mask-tel.js');
 const MaskSSN = require('./mask-ssn.js');
 const FollowUpQuestion = require('../packages/cfa-follow-up-question/cfa-follow-up-question.js');
+const UploadDocuments = require('../packages/cfa-upload-documents/cfa-upload-documents.js');
 
 uswds.components = components;
 
@@ -39,6 +40,7 @@ const initComponents = () => {
   new MaskTel();
   new MaskSSN();
   new FollowUpQuestion();
+  new UploadDocuments();
 };
 
 if (document.readyState === 'loading') {
