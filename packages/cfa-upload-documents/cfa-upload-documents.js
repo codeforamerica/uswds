@@ -3,9 +3,18 @@ import { Dropzone } from 'dropzone';
 Dropzone.autoDiscover = false;
 
 /**
+ * A utility class for the Dropzone library
+ *
  * Compatible with @dropzone v5.9.3
  */
 class UploadDocuments {
+  /**
+   * Constructor
+   *
+   * @param   {Object}  s  Optional settings configuration that will be processed and passed to Dropzone
+   *
+   * @return  {Object}     Instance of UploadDocuments
+   */
   constructor(s = {}) {
     this.dropzoneOptions = s.dropzoneOptions ?
       Object.assign(UploadDocuments.dropzoneOptions, s.dropzoneOptions) : UploadDocuments.dropzoneOptions;
@@ -17,26 +26,13 @@ class UploadDocuments {
     this.dropzones = document.querySelectorAll(UploadDocuments.selector);
 
     for (let i = 0; i < this.dropzones.length; i++) {
-      console.dir(this.dropzones[i]);
+      let dz = this.configDropzone(this.dropzones[i], this.dropzoneOptions)
 
-      this.initDropzone(this.dropzones[i], this.dropzoneOptions)
-        .on('addedfile', file => {
-          this.addedFile(file);
-        });
+      this.init(dz);
     }
 
     /**
-     * Add drag event listeners to drag and drop regions for toggling classes and aria messaging
-     */
-
-    this.dragRegions = document.querySelectorAll(UploadDocuments.selectors.dragRegion);
-
-    for (let i = 0; i < this.dragRegions.length; i++) {
-      this.addDragEvents(this.dragRegions[i]);
-    }
-
-    /**
-     * [description]
+     * Event handlers for development
      */
 
     // if (process.env.NODE_ENV === 'development') {
@@ -56,12 +52,12 @@ class UploadDocuments {
    * Set Dropzone options, relevant to the template, and initialize Dropzone.
    * @source https://github.com/dropzone/dropzone/blob/main/src/options.js
    *
-   * @param   {[type]}  region   [region description]
-   * @param   {[type]}  options  [options description]
+   * @param   {Element}  region   A Dropzone element to extract configuration from and pass to the Dropzone class
+   * @param   {Object}   options  Options to pass to configure and pass to the Dropzone class
    *
-   * @return  {[type]}           [return description]
+   * @return  {Object}            Instance of UploadDocuments
    */
-  initDropzone(region, options) {
+  configDropzone(region, options) {
     let input = region.querySelector(UploadDocuments.selectors.input);
     let previewsContainer = region.querySelector(UploadDocuments.selectors.previewsContainer);
     let previewTemplate = region.querySelector(UploadDocuments.selectors.previewTemplate);
@@ -83,7 +79,8 @@ class UploadDocuments {
      */
 
     for (let i = 0; i < dict.length; i++) {
-      let key = `dict${dict[i].dataset['dropzoneDict']}`;
+      let d = dict[i].dataset['dropzoneDict'];
+      let key = `dict${d.charAt(0).toUpperCase() + d.slice(1)}`;
       let value = dict[i].innerText;
 
       if (value != '') {
@@ -91,43 +88,149 @@ class UploadDocuments {
       }
     }
 
+    /**
+     * Events
+     */
+
+    options.dragover = event => {
+      this.dragover(event);
+    };
+
+    options.dragleave = event => {
+      this.dragleave(event);
+    };
+
+    options.drop = event => {
+      this.drop(event);
+    };
+
+    /** */
+
     return new Dropzone(region, options);
   }
 
   /**
-   * [addDragEvents description]
+   * An init function for Dropzone. This is not the same as Dropzone's provided
+   * init event handler. However, this handler does trigger after Dropzone is
+   * initialized.
    *
-   * @param   {[type]}  region  [region description]
+   * @param   {Object}  dz  Instance of Dropzone
    *
-   * @return  {[type]}          [return description]
+   * @return  {Object}      Instance of UploadDocuments
    */
-  addDragEvents(region) {
-    region.addEventListener('dragover', event => {
-      event.target.classList.add(UploadDocuments.classes.dragOver);
+  init(dz) {
+    console.dir(dz);
+
+    this.maxFiles(dz)
+      .swapFallback(dz);
+
+    dz.on('addedfile', file => {
+      this.addedfile(file, dz);
     });
 
-    region.addEventListener('dragleave', event => {
-      event.target.classList.remove(UploadDocuments.classes.dragOver);
-    });
-
-    region.addEventListener('drop', event => {
-      event.target.classList.remove(UploadDocuments.classes.dragOver);
+    dz.on('removedfile', file => {
+      this.maxFiles(dz);
     });
 
     return this;
   }
 
   /**
-   * [addedFile description]
+   * Swaps attributes on the fallback file input with attributes on the hidden
+   * Dropzone file input. This makes the presentation of the Dropzone element
+   * compatible with the default USWDS File Input component.
    *
-   * @param   {[type]}  file  [file description]
+   * @param   {Object}  dz  Initialized Dropzone instance
    *
-   * @return  {[type]}        [return description]
+   * @return  {Object}      Instance of UploadDocuments
    */
-  addedFile(file) {
-    console.dir(file);
+  swapFallback(dz) {
+    let fallback = dz.element.querySelector(UploadDocuments.selectors.fallback);
 
-    this.formatFilename(file);
+    for (let i = 0; i < UploadDocuments.fallbackAttrs.length; i++) {
+      let attr = UploadDocuments.fallbackAttrs[i];
+      let value = fallback.getAttribute(attr);
+
+      if (value) dz.hiddenFileInput.setAttribute(attr, value);
+    }
+
+    fallback.remove();
+
+    for (let i = 0; i < UploadDocuments.removeAttrs.length; i++) {
+      let attr = UploadDocuments.removeAttrs[i];
+
+      dz.hiddenFileInput.removeAttribute(attr);
+    }
+
+    return this;
+  }
+
+  /**
+   * Event handler for the dragover event on the Dropzone region
+   *
+   * @param   {Object}  event  Dragover event
+   *
+   * @return  {Object}         Instance of UploadDocuments
+   */
+  dragover(event) {
+    if (event.srcElement.matches(UploadDocuments.selectors.dragRegion)) {
+      event.srcElement.classList.add(UploadDocuments.classes.dragOver);
+    }
+
+    return this;
+  }
+
+  /**
+   * Event handler for the dragleave event on the Dropzone region
+   *
+   * @param   {Object}  event  Dragleave event
+   *
+   * @return  {Object}         Instance of UploadDocuments
+   */
+  dragleave(event) {
+    if (event.srcElement.matches(UploadDocuments.selectors.dragRegion)) {
+      event.srcElement.classList.remove(UploadDocuments.classes.dragOver);
+    }
+
+    return this;
+  }
+
+  /**
+   * Event handler for the drop event on the Dropzone region
+   *
+   * @param   {Object}  event  Drop event
+   *
+   * @return  {Object}         Instance of UploadDocuments
+   */
+  drop(event) {
+    this.dragleave(event);
+
+    /**
+     * Shift focus to the uploads header with additional information
+     */
+
+    let header = event.srcElement.closest(UploadDocuments.selector)
+      .querySelector(UploadDocuments.selectors.uploadsHeader);
+
+    if (header) {
+      header.setAttribute('tabindex', '-1');
+      header.focus();
+    }
+
+    return this;
+  }
+
+  /**
+   * Event handler for added files
+   *
+   * @param   {Object}  file  Most recently added Dropzone file object
+   * @param   {Object}  dz    Instance of Dropzone
+   *
+   * @return  {Object}        Instance of UploadDocuments
+   */
+  addedfile(file, dz) {
+    this.formatFilename(file)
+      .maxFiles(dz);
 
     return this;
   }
@@ -135,9 +238,9 @@ class UploadDocuments {
   /**
    * Format the filename label so that the name overflow
    *
-   * @param   {[type]}  file  [file description]
+   * @param   {Object}  file  Most recently added Dropzone file object
    *
-   * @return  {[type]}        [return description]
+   * @return  {Object}        Instance of UploadDocuments
    */
   formatFilename(file) {
     let nameElement = file.previewElement.querySelector('[data-dz-name]');
@@ -162,32 +265,59 @@ class UploadDocuments {
     return this;
   }
 
-  // toggleMaxFilesMessage(state) {
-  //   if (state === 'on') {
-  //     $(document.getElementById("max-files")).addClass("display-flex").removeClass("display-none");
-  //   } else {
-  //     $(document.getElementById("max-files")).addClass("display-none").removeClass("display-flex");
-  //   }
+  /**
+   * Assert if max files have been reached and toggle messaging and other relevant events
+   *
+   * @param   {Object}  dz  Instance of Dropzone
+   *
+   * @return  {Object}      Instance of UploadDocuments
+   */
+  maxFiles(dz) {
+    let inputErrorMessage = document.querySelector(UploadDocuments.selectors.inputErrorMessage);
 
-  //   return this;
-  // }
+    if (inputErrorMessage.getAttribute('aria-hidden') === 'true' && dz.files.length >= dz.options.maxFiles) {
+      let inputErrorMessage = document.querySelector(UploadDocuments.selectors.inputErrorMessage);
+
+      inputErrorMessage.innerText = dz.options.dictMaxFilesExceeded;
+      inputErrorMessage.removeAttribute('aria-hidden');
+      inputErrorMessage.setAttribute('role', 'alert');
+      inputErrorMessage.setAttribute('aria-live', 'polite');
+    }
+
+    if (dz.files.length <= dz.options.maxFiles) {
+      let inputErrorMessage = document.querySelector(UploadDocuments.selectors.inputErrorMessage);
+
+      inputErrorMessage.innerText = '';
+      inputErrorMessage.setAttribute('aria-hidden', 'true');
+      inputErrorMessage.removeAttribute('role');
+      inputErrorMessage.removeAttribute('aria-live');
+    }
+
+    return this;
+  }
 }
 
-UploadDocuments.selector = '[data-js="dropzone"]';
+/** @type  {String}  The main selector for Upload Document components **/
+UploadDocuments.selector = '[data-js="upload-documents"]';
 
+/** @type  {Object}  A dictionary of selectors used by the utility class **/
 UploadDocuments.selectors = {
   'dragRegion': '[data-dropzone="drag-and-drop-region"]',
-  'input': '[data-dropzone="input"]',
+  'inputErrorMessage': '[data-dropzone="input-error-message"]',
+  'fallback': '[data-dropzone="fallback"]',
+  'uploadsHeader': '[data-dropzone="uploads-header"]',
   'previewsContainer': '[data-dropzone="previews-container"]',
   'previewTemplate': '[data-dropzone="preview-template"]',
   'hiddenInputContainer': '[data-dropzone="hidden-input-container"]',
   'dict': '[data-dropzone="dict"]'
 };
 
+/** @type  {Object}  A dictionary of classes used by the utility class **/
 UploadDocuments.classes = {
   'dragOver': 'usa-file-input--drag'
 };
 
+/** @type  {Object}  Default options to pass to the Dropzone library **/
 UploadDocuments.dropzoneOptions = {
   'url': 'https://app-46361.on-aptible.com/file-upload',
   'clickable': UploadDocuments.selectors.dragRegion,
@@ -197,6 +327,12 @@ UploadDocuments.dropzoneOptions = {
   'maxFiles': 20,
   'maxFilesize': 20
 };
+
+/** @type  {Array}  A list of attributes to swap from the fallback file input to the hidden Dropzone input **/
+UploadDocuments.fallbackAttrs = ['class', 'id', 'name', 'aria-labelledby', 'aria-describedby', 'multiple', 'accept'];
+
+/** @type  {Array}  A list of attributes remove from the hidden Dropzone input **/
+UploadDocuments.removeAttrs = ['tabindex', 'style'];
 
 export default UploadDocuments;
 

@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-576351b850bdd">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-4e29685352752">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-576351b850bdd" class="usa-nav__submenu">
+          <ul id="aria-c-4e29685352752" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -131,11 +131,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-920b0169148cc">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-4f7736e183186">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-920b0169148cc" class="usa-nav__submenu">
+          <ul id="aria-c-4f7736e183186" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -307,20 +307,20 @@
   class="dz-remove"                       data-dropzone="document-remove"
                                           data-dropzone="document-message"
   -->
-  <div class="usa-form-group cfa-form-group cfa-file-input" data-js="dropzone" id="dropzone-7981e7f169ed4">
+  <div class="usa-form-group cfa-form-group cfa-file-input" data-js="upload-documents" id="dropzone-d9abf74939c27">
     <div class="dropzone needsclick" data-dropzone="uploads">
-      <label class="usa-label cfa-label" for="input-7981e7f169ed4">
+      <label class="usa-label cfa-label" for="input-d9abf74939c27">
         <span>Add your files</span>
         <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
       </label>
       <!-- <div data-dropzone="max-uploads"> -->
-      <span class="usa-error-message" data-dropzone="input-error-message" id="error-message-7981e7f169ed4" role="alert">You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.</span>
+      <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" id="error-message-d9abf74939c27">You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.</span>
       <!-- </div> -->
       <div class="usa-file-input">
         <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
           <div class="usa-file-input__box"></div>
           <div class="usa-file-input__instructions">
-            <div class="usa-hint cfa-hint" aria-hidden="true" id="hint-7981e7f169ed4">Drag your files here or <span class="usa-file-input__choose">choose from folder</span>. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to <b>20 MB</b> and a maximum of <b>20 files</b> are allowed.</div>
+            <div class="usa-hint cfa-hint" aria-hidden="true" id="hint-d9abf74939c27">Drag your files here or <span class="usa-file-input__choose">choose from folder</span>. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to <b>20 MB</b> and a maximum of <b>20 files</b> are allowed.</div>
             <div class="dz-message" data-dropzone="upload-button">
               <button class="usa-button cfa-button circle-9 padding-0 margin-0" type="button" data-dropzone="button" aria-hidden="true" focusable="false" tabindex="-1">
                 <svg class="usa-icon square-7 margin-bottom-neg-2px" aria-hidden="true" focusable="false" tabindex="-1">
@@ -329,16 +329,16 @@
               </button>
             </div>
           </div>
-          <input class="usa-file-input__input" type="file" data-dropzone="input" id="input-7981e7f169ed4" name="input['7981e7f169ed4']" aria-describedby="hint-7981e7f169ed4" accept=".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp" multiple="multiple">
+          <input class="usa-file-input__input" type="file" data-dropzone="fallback" id="input-d9abf74939c27" name="input['d9abf74939c27']" aria-describedby="hint-d9abf74939c27" accept=".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp" multiple="multiple">
           <div data-dropzone="hidden-input-container"></div>
         </div>
       </div>
     </div>
-    <label class="dropzone__preview-header" data-dropzone="uploads-header" id="aria-db-3048d769a5c08"> Your documents. <span data-dropzone="uploads-number">0</span>
+    <label class="dropzone__preview-header" data-dropzone="uploads-header" id="aria-db-b854f5ba4f88f"> Your documents. <span data-dropzone="uploads-number">0</span>
       <span data-dropzone="uploads-text">uploaded</span>
       <span>(<span>20 max</span>)</span>
     </label>
-    <ul class="add-list-reset preview-container" role="list" data-dropzone="previews-container" aria-describedby="aria-db-3048d769a5c08">
+    <ul class="add-list-reset preview-container" role="list" data-dropzone="previews-container" aria-describedby="aria-db-b854f5ba4f88f">
       <li class="dropzone__preview dz-image-preview" data-dropzone="preview-template">
         <div class="dropzone__details">
           <div class="dropzone__thumbnail width-8 height-8">
@@ -359,10 +359,10 @@
             </div>
             <span class="dropzone__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
               <!-- Dropzone will replace the contents of this element -->
-              <span data-dropzone="dict" data-dropzone-dict="FileTooBig">Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again.</span>
-              <span data-dropzone="dict" data-dropzone-dict="MaxFilesExceeded">Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.</span>
-              <span data-dropzone="dict" data-dropzone-dict="InvalidFileType">Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp.</span>
-              <span data-dropzone="dict" data-dropzone-dict="ResponseError">Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later.</span>
+              <span data-dropzone="dict" data-dropzone-dict="fileTooBig">Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again.</span>
+              <span data-dropzone="dict" data-dropzone-dict="maxFilesExceeded">Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.</span>
+              <span data-dropzone="dict" data-dropzone-dict="invalidFileType">Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp.</span>
+              <span data-dropzone="dict" data-dropzone-dict="responseError">Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later.</span>
             </span>
             <div>
               <span class="font-body-2xs" title="File size">
@@ -399,11 +399,11 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-1344fa38368a1">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4d35c78960474">
           View HTML
         </button>
       </div>
-      <div id="aria-c-1344fa38368a1" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-4d35c78960474" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;form&gt;
   &lt;!--
@@ -423,20 +423,20 @@
   class=&quot;dz-remove&quot;                       data-dropzone=&quot;document-remove&quot;
                                           data-dropzone=&quot;document-message&quot;
   --&gt;
-  &lt;div class=&quot;usa-form-group cfa-form-group cfa-file-input&quot; data-js=&quot;dropzone&quot; id=&quot;dropzone-7981e7f169ed4&quot;&gt;
+  &lt;div class=&quot;usa-form-group cfa-form-group cfa-file-input&quot; data-js=&quot;upload-documents&quot; id=&quot;dropzone-d9abf74939c27&quot;&gt;
     &lt;div class=&quot;dropzone needsclick&quot; data-dropzone=&quot;uploads&quot;&gt;
-      &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-7981e7f169ed4&quot;&gt;
+      &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d9abf74939c27&quot;&gt;
         &lt;span&gt;Add your files&lt;/span&gt;
         &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
       &lt;/label&gt;
       &lt;!-- &lt;div data-dropzone=&quot;max-uploads&quot;&gt; --&gt;
-      &lt;span class=&quot;usa-error-message&quot; data-dropzone=&quot;input-error-message&quot; id=&quot;error-message-7981e7f169ed4&quot; role=&quot;alert&quot;&gt;You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.&lt;/span&gt;
+      &lt;span class=&quot;usa-error-message&quot; aria-hidden=&quot;true&quot; data-dropzone=&quot;input-error-message&quot; id=&quot;error-message-d9abf74939c27&quot;&gt;You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.&lt;/span&gt;
       &lt;!-- &lt;/div&gt; --&gt;
       &lt;div class=&quot;usa-file-input&quot;&gt;
         &lt;div class=&quot;usa-file-input__target margin-bottom-3&quot; data-dropzone=&quot;drag-and-drop-region&quot;&gt;
           &lt;div class=&quot;usa-file-input__box&quot;&gt;&lt;/div&gt;
           &lt;div class=&quot;usa-file-input__instructions&quot;&gt;
-            &lt;div class=&quot;usa-hint cfa-hint&quot; aria-hidden=&quot;true&quot; id=&quot;hint-7981e7f169ed4&quot;&gt;Drag your files here or &lt;span class=&quot;usa-file-input__choose&quot;&gt;choose from folder&lt;/span&gt;. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to &lt;b&gt;20 MB&lt;/b&gt; and a maximum of &lt;b&gt;20 files&lt;/b&gt; are allowed.&lt;/div&gt;
+            &lt;div class=&quot;usa-hint cfa-hint&quot; aria-hidden=&quot;true&quot; id=&quot;hint-d9abf74939c27&quot;&gt;Drag your files here or &lt;span class=&quot;usa-file-input__choose&quot;&gt;choose from folder&lt;/span&gt;. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to &lt;b&gt;20 MB&lt;/b&gt; and a maximum of &lt;b&gt;20 files&lt;/b&gt; are allowed.&lt;/div&gt;
             &lt;div class=&quot;dz-message&quot; data-dropzone=&quot;upload-button&quot;&gt;
               &lt;button class=&quot;usa-button cfa-button circle-9 padding-0 margin-0&quot; type=&quot;button&quot; data-dropzone=&quot;button&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; tabindex=&quot;-1&quot;&gt;
                 &lt;svg class=&quot;usa-icon square-7 margin-bottom-neg-2px&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; tabindex=&quot;-1&quot;&gt;
@@ -445,16 +445,16 @@
               &lt;/button&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;input class=&quot;usa-file-input__input&quot; type=&quot;file&quot; data-dropzone=&quot;input&quot; id=&quot;input-7981e7f169ed4&quot; name=&quot;input['7981e7f169ed4']&quot; aria-describedby=&quot;hint-7981e7f169ed4&quot; accept=&quot;.jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp&quot; multiple=&quot;multiple&quot;&gt;
+          &lt;input class=&quot;usa-file-input__input&quot; type=&quot;file&quot; data-dropzone=&quot;fallback&quot; id=&quot;input-d9abf74939c27&quot; name=&quot;input['d9abf74939c27']&quot; aria-describedby=&quot;hint-d9abf74939c27&quot; accept=&quot;.jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp&quot; multiple=&quot;multiple&quot;&gt;
           &lt;div data-dropzone=&quot;hidden-input-container&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;label class=&quot;dropzone__preview-header&quot; data-dropzone=&quot;uploads-header&quot; id=&quot;aria-db-3048d769a5c08&quot;&gt; Your documents. &lt;span data-dropzone=&quot;uploads-number&quot;&gt;0&lt;/span&gt;
+    &lt;label class=&quot;dropzone__preview-header&quot; data-dropzone=&quot;uploads-header&quot; id=&quot;aria-db-b854f5ba4f88f&quot;&gt; Your documents. &lt;span data-dropzone=&quot;uploads-number&quot;&gt;0&lt;/span&gt;
       &lt;span data-dropzone=&quot;uploads-text&quot;&gt;uploaded&lt;/span&gt;
       &lt;span&gt;(&lt;span&gt;20 max&lt;/span&gt;)&lt;/span&gt;
     &lt;/label&gt;
-    &lt;ul class=&quot;add-list-reset preview-container&quot; role=&quot;list&quot; data-dropzone=&quot;previews-container&quot; aria-describedby=&quot;aria-db-3048d769a5c08&quot;&gt;
+    &lt;ul class=&quot;add-list-reset preview-container&quot; role=&quot;list&quot; data-dropzone=&quot;previews-container&quot; aria-describedby=&quot;aria-db-b854f5ba4f88f&quot;&gt;
       &lt;li class=&quot;dropzone__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot;&gt;
         &lt;div class=&quot;dropzone__details&quot;&gt;
           &lt;div class=&quot;dropzone__thumbnail width-8 height-8&quot;&gt;
@@ -475,10 +475,10 @@
             &lt;/div&gt;
             &lt;span class=&quot;dropzone__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt;
               &lt;!-- Dropzone will replace the contents of this element --&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;FileTooBig&quot;&gt;Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again.&lt;/span&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;MaxFilesExceeded&quot;&gt;Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.&lt;/span&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;InvalidFileType&quot;&gt;Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp.&lt;/span&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;ResponseError&quot;&gt;Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later.&lt;/span&gt;
+              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;fileTooBig&quot;&gt;Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again.&lt;/span&gt;
+              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;maxFilesExceeded&quot;&gt;Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.&lt;/span&gt;
+              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;invalidFileType&quot;&gt;Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp.&lt;/span&gt;
+              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;responseError&quot;&gt;Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later.&lt;/span&gt;
             &lt;/span&gt;
             &lt;div&gt;
               &lt;span class=&quot;font-body-2xs&quot; title=&quot;File size&quot;&gt;
@@ -639,14 +639,14 @@
   class=&quot;dz-remove&quot;                       data-dropzone=&quot;document-remove&quot;
                                           data-dropzone=&quot;document-message&quot;
   --&gt;
-  &lt;div class=&quot;usa-form-group cfa-form-group cfa-file-input&quot; data-js=&quot;dropzone&quot; th:attr=&quot;id=${id}&quot;&gt;
+  &lt;div class=&quot;usa-form-group cfa-form-group cfa-file-input&quot; data-js=&quot;upload-documents&quot; th:attr=&quot;id=${id}&quot;&gt;
     &lt;div class=&quot;dropzone needsclick&quot; data-dropzone=&quot;uploads&quot;&gt;
       &lt;label class=&quot;usa-label&quot; th:classappend=&quot;${fileInput.label.modifier}&quot; th:attr=&quot;for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}&quot;&gt;
         &lt;span th:text=&quot;${fileInput.label.text}&quot;&gt;Label&lt;/span&gt;
         &lt;abbr th:if=&quot;${fileInput.input.required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${fileInput.label.modifierHint}&quot;&gt;*&lt;/abbr&gt;
       &lt;/label&gt;
       &lt;!-- &lt;div data-dropzone=&quot;max-uploads&quot;&gt; --&gt;
-      &lt;span th:if=&quot;${fileInput.error}&quot; class=&quot;usa-error-message&quot; data-dropzone=&quot;input-error-message&quot; th:classappend=&quot;${fileInput.error.modifier}&quot; th:attr=&quot;id=${fileInput.error.id},role=${fileInput.error.role},aria-live=${fileInput.error.ariaLive}&quot; th:text=&quot;${fileInput.error.text}&quot;&gt;Message&lt;/span&gt;
+      &lt;span class=&quot;usa-error-message&quot; aria-hidden=&quot;true&quot; data-dropzone=&quot;input-error-message&quot; th:classappend=&quot;${fileInput.error.modifier}&quot; th:attr=&quot;id=${fileInput.error.id}&quot; th:text=&quot;${fileInput.error.text}&quot;&gt;Message&lt;/span&gt;
       &lt;!-- &lt;/div&gt; --&gt;
       &lt;div class=&quot;usa-file-input&quot;&gt;
         &lt;div class=&quot;usa-file-input__target margin-bottom-3&quot; data-dropzone=&quot;drag-and-drop-region&quot;&gt;
@@ -661,7 +661,7 @@
               &lt;/button&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;input class=&quot;usa-file-input__input&quot; type=&quot;file&quot; data-dropzone=&quot;input&quot; th:attr=&quot;id=${fileInput.input.id},name=${fileInput.input.name},aria-invalid=${fileInput.input.ariaInvalid},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple},data-js=${fileInput.input.js}&quot;&gt;
+          &lt;input class=&quot;usa-file-input__input&quot; type=&quot;file&quot; data-dropzone=&quot;fallback&quot; th:attr=&quot;id=${fileInput.input.id},name=${fileInput.input.name},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple}&quot;&gt;
           &lt;div data-dropzone=&quot;hidden-input-container&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -690,10 +690,7 @@
             &lt;/div&gt;
             &lt;span class=&quot;dropzone__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt;
               &lt;!-- Dropzone will replace the contents of this element --&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;FileTooBig&quot; th:text=&quot;${previewTemplate.error.fileTooBig}&quot;&gt;Message&lt;/span&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;MaxFilesExceeded&quot; th:text=&quot;${previewTemplate.error.maxFilesExceeded}&quot;&gt;Message&lt;/span&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;InvalidFileType&quot; th:text=&quot;${previewTemplate.error.invalidFileType}&quot;&gt;Message&lt;/span&gt;
-              &lt;span data-dropzone=&quot;dict&quot; data-dropzone-dict=&quot;ResponseError&quot; th:text=&quot;${previewTemplate.error.responseError}&quot;&gt;Message&lt;/span&gt;
+              &lt;span th:each=&quot;dict: ${previewTemplate.error.dict}&quot; th:text=&quot;${dict.string}&quot; data-dropzone=&quot;dict&quot; th:attr=&quot;data-dropzone-dict=${dict.key}&quot;&gt;String&lt;/span&gt;
             &lt;/span&gt;
             &lt;div&gt;
               &lt;span class=&quot;font-body-2xs&quot; title=&quot;File size&quot;&gt;

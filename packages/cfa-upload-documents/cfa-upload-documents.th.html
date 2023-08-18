@@ -17,7 +17,7 @@
                                           data-dropzone="document-message"
   -->
 
-  <div class="usa-form-group cfa-form-group cfa-file-input" data-js="dropzone" th:attr="id=${id}">
+  <div class="usa-form-group cfa-form-group cfa-file-input" data-js="upload-documents" th:attr="id=${id}">
     <div class="dropzone needsclick" data-dropzone="uploads">
       <label class="usa-label" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
         <span th:text="${fileInput.label.text}">Label</span>
@@ -26,7 +26,7 @@
       </label>
 
       <!-- <div data-dropzone="max-uploads"> -->
-      <span th:if="${fileInput.error}" class="usa-error-message" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id},role=${fileInput.error.role},aria-live=${fileInput.error.ariaLive}" th:text="${fileInput.error.text}">Message</span>
+      <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
       <!-- </div> -->
 
       <div class="usa-file-input">
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <input class="usa-file-input__input" type="file" data-dropzone="input" th:attr="id=${fileInput.input.id},name=${fileInput.input.name},aria-invalid=${fileInput.input.ariaInvalid},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple},data-js=${fileInput.input.js}">
+          <input class="usa-file-input__input" type="file" data-dropzone="fallback" th:attr="id=${fileInput.input.id},name=${fileInput.input.name},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple}">
 
           <div data-dropzone="hidden-input-container"></div>
         </div>
@@ -82,13 +82,7 @@
 
             <span class="dropzone__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
               <!-- Dropzone will replace the contents of this element -->
-              <span data-dropzone="dict" data-dropzone-dict="FileTooBig" th:text="${previewTemplate.error.fileTooBig}">Message</span>
-
-              <span data-dropzone="dict" data-dropzone-dict="MaxFilesExceeded" th:text="${previewTemplate.error.maxFilesExceeded}">Message</span>
-
-              <span data-dropzone="dict" data-dropzone-dict="InvalidFileType" th:text="${previewTemplate.error.invalidFileType}">Message</span>
-
-              <span data-dropzone="dict" data-dropzone-dict="ResponseError" th:text="${previewTemplate.error.responseError}">Message</span>
+              <span th:each="dict: ${previewTemplate.error.dict}" th:text="${dict.string}" data-dropzone="dict" th:attr="data-dropzone-dict=${dict.key}">String</span>
             </span>
 
             <div>

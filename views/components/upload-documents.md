@@ -116,10 +116,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     },
     "error": {
       "icon": "{{ config.baseUrl }}uswds/img/sprite.svg#warning",
-      "fileTooBig": "Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again.",
-      "maxFilesExceeded": "Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.",
-      "invalidFileType": "Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp.",
-      "responseError": "Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later."
+      "dict": [
+        {
+          "key": "fileTooBig",
+          "string": "Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again."
+        },
+        {
+          "key": "maxFilesExceeded",
+          "string": "Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later."
+        },
+        {
+          "key": "invalidFileType",
+          "string": "Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp."
+        },
+        {
+          "key": "responseError",
+          "string": "Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later."
+        }
+      ]
     }
   }
 }{% endcapture %}
