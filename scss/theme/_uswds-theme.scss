@@ -18,8 +18,10 @@ in the form $setting: value,
   $theme-focus-color: 'gold-30v',
 
   // 2. Spacing
+  $theme-border-radius-sm: 0.5,
   $theme-border-radius-md: 1,
   $theme-border-radius-lg: 2,
+
   $theme-grid-container-max-width: 'desktop-lg',
   // These are not within the spacing section but keeping them together
   // helps with managing the max-width dimension consistently

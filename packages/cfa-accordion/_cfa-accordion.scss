@@ -1,23 +1,24 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-links/cfa-links' as *;
 
 .cfa-accordion {
   .usa-accordion__button {
-    border-top-left-radius: radius($theme-border-radius-lg);
-    border-top-right-radius: radius($theme-border-radius-lg);
-    border-top-start-radius: radius($theme-border-radius-lg);
-    border-top-end-radius: radius($theme-border-radius-lg);
+    border-top-left-radius: radius('lg');
+    border-top-right-radius: radius('lg');
+    border-top-start-radius: radius('lg');
+    border-top-end-radius: radius('lg');
   }
 
   .usa-accordion__button[aria-expanded='false'] {
-    border-radius: radius($theme-border-radius-lg);
+    border-radius: radius('lg');
   }
 
   .usa-accordion__content {
-    border-bottom-left-radius: radius($theme-border-radius-lg);
-    border-bottom-right-radius: radius($theme-border-radius-lg);
-    border-bottom-start-radius: radius($theme-border-radius-lg);
-    border-bottom-end-radius: radius($theme-border-radius-lg);
+    border-bottom-left-radius: radius('lg');
+    border-bottom-right-radius: radius('lg');
+    border-bottom-start-radius: radius('lg');
+    border-bottom-end-radius: radius('lg');
   }
 
   .usa-accordion__content {
@@ -27,9 +28,7 @@
       $context: 'CfA Accordion'
     );
 
-    a:not(.usa-button),
-    a:hover:not(.usa-button),
-    a:visited:not(.usa-button) {
+    @include cfa-link-selectors {
       @include set-link-from-bg(
         $bg-color: $theme-color-base-lightest,
         $preferred-link-color: $theme-color-primary-dark,

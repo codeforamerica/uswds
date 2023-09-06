@@ -335,4 +335,3 @@ UploadDocuments.fallbackAttrs = ['class', 'id', 'name', 'aria-labelledby', 'aria
 UploadDocuments.removeAttrs = ['tabindex', 'style'];
 
 export default UploadDocuments;
-
