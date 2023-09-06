@@ -1,0 +1,9 @@
+//
+
+@mixin cfa-link-selectors() {
+  a:not(.usa-button),
+  a:hover:not(.usa-button),
+  a:visited:not(.usa-button) {
+    @content;
+  }
+}
