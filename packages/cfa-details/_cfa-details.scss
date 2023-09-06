@@ -1,18 +1,24 @@
 @use 'uswds-core' as *;
-@use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-links/cfa-links' as *;
+@use 'cfa-core' as *;
+@use '../cfa-links/_cfa-links.scss' as *;
+
+.cfa-details {
+  @include u-font('sans', $cfa-details-font-size);
+}
 
 .cfa-details__summary {
+  border: none;
+
   @include u-border-bottom($theme-button-stroke-width);
 
   @include set-text-and-bg(
-    $bg-color: 'primary-lightest',
-    $preferred-text-color: 'primary-darker',
+    $bg-color: $cfa-details-background-color,
+    $preferred-text-color: $cfa-details-text-color,
     $context: 'CfA Details'
   );
 
-  padding: units(0.5) units(1.5);
-  padding-inline-end: units(0.5);
+  padding: units(1.5);
+  padding-inline-end: units(1);
 
   cursor: pointer;
   display: inline-block;
@@ -21,6 +27,10 @@
   // Hide the default arrow on Safari
   &::-webkit-details-marker {
     display: none
+  }
+
+  > * {
+    pointer-events: none;
   }
 
   > .usa-icon {
@@ -42,31 +52,16 @@
 }
 
 .cfa-details__content {
-  @include u-radius('md');
-
-  border: $theme-accordion-border;
-  padding: units(1) units(1.5);
   margin-top: units(2);
-
-  @include set-text-and-bg(
-    $bg-color: $theme-color-base-lightest,
-    $preferred-text-color: 'ink',
-    $context: 'CfA Details'
-  );
-
-  @include cfa-link-selectors {
-    @include set-link-from-bg(
-      $bg-color: $theme-color-base-lightest,
-      $preferred-link-color: $theme-color-primary-dark,
-      $context: 'CfA Details'
-    );
-  }
 }
 
 .cfa-details {
-  &[open] {
-    .cfa-details__summary > .usa-icon {
-      transform: rotate(90deg)
-    }
+  .cfa-details__summary > .usa-icon {
+    transform: rotate(90deg)
+  }
+
+  &[open] .cfa-details__summary > .usa-icon,
+  .cfa-details__summary[aria-expanded='true'] > .usa-icon {
+    transform: rotate(-90deg)
   }
 }

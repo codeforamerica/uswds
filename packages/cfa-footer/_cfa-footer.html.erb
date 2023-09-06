@@ -37,4 +37,14 @@
       </div>
     </div>
   </div><% end %>
+
+  <% if defined?(identifier) %><div>
+  <%= ERB.new(File.read('packages/cfa-identifier/_cfa-identifier.html.erb'), 0, 0, '@identifier')
+    .result_with_hash({
+      modifier: (identifier['modifier'] if identifier['modifier']),
+      identity: (identifier['identity'] if identifier['identity']),
+      requiredLinks: (identifier['requiredLinks'] if identifier['requiredLinks']),
+      governmentSection: (identifier['governmentSection'] if identifier['governmentSection'])
+    }.compact) %>
+  </div><% end %>
 </footer>

@@ -1,14 +1,17 @@
-@use "uswds-core/src/styles/settings" as *;
-@use "uswds-core/src/styles/functions" as *;
-@use "uswds-core/src/styles/mixins/utility-builder" as *;
-@use "uswds/packages/uswds-utilities/src/styles/functions/" as *;
+@use 'uswds-core/src/styles/settings' as *;
+@use 'uswds-core/src/styles/functions' as *;
+@use 'uswds-core/src/styles/mixins/utility-builder' as *;
+@use 'uswds-utilities/src/styles/functions' as *;
 
-/** Mixins and variables **/
+// Mixins and variables
 
 @mixin cfa-font-smooth() {
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
 }
+
+// Add logical property utilities for margin, padding, and border.
+// Text alignment is added through the theme configuration.
 
 $cfa-u-margin: (
   margin-horizontal: (
@@ -21,7 +24,8 @@ $cfa-u-margin: (
       'end': '-inline-end',
       'start': '-inline-start'
     ),
-    values: map-collect(get-palettes($margin-horizontal-palettes), $margin-manual-values),
+    values: map-collect(get-palettes($margin-horizontal-palettes),
+      $margin-manual-values),
     settings: $margin-settings-complete,
     property: 'margin',
     type: 'utility',
@@ -39,19 +43,40 @@ $cfa-u-padding: (
       'end': '-inline-end',
       'start': '-inline-start'
     ),
-    values: map-collect(get-palettes($padding-palettes), $padding-manual-values),
+    values: map-collect(get-palettes($padding-palettes),
+      $padding-manual-values),
     settings: $padding-settings-complete,
     property: 'padding',
     type: 'utility'
   )
 );
 
-$cfa-utilities-package: map-collect(
-  $cfa-u-margin,
-  $cfa-u-padding
+$cfa-u-border-width: (
+  border-horizontal: (
+    base: 'border',
+    modifiers: (
+      'inline-x-width': (
+        '-inline-start-width',
+        '-inline-end-width',
+      ),
+      'end-width': '-inline-end-width',
+      'start-width': '-inline-start-width'
+    ),
+    values: map-collect(get-palettes($border-width-palettes),
+      $border-width-manual-values),
+    settings: $border-width-settings-complete,
+    property: 'border',
+    type: 'utility'
+  )
 );
 
-/** Render **/
+$cfa-utilities-package: map-collect(
+  $cfa-u-margin,
+  $cfa-u-padding,
+  $cfa-u-border-width
+);
+
+// Render
 
 .cfa-font-smooth {
   @include cfa-font-smooth

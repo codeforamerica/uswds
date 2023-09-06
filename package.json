@@ -1,7 +1,7 @@
 {
   "name": "@codeforamerica/uswds",
   "nice": "Code for America USWDS theme",
-  "version": "0.0.0-12",
+  "version": "0.0.0-28",
   "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
   "repository": {
     "type": "git",
@@ -11,34 +11,47 @@
     "type": "figma",
     "url": "https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0"
   },
-  "homepage": "https://codeforamerica.github.io/uswds/dist",
+  "homepage": "https://codeforamerica.github.io/uswds",
   "author": "dhirth@codeforamerica.org",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/codeforamerica/uswds/issues"
   },
   "scripts": {
-    "start": "npx concurrently 'npm run views' 'npm run uswds'",
-    "default": "npx @11ty/eleventy && npx gulp compile",
-    "views": "npx @11ty/eleventy --serve",
-    "uswds": "npx gulp watch",
-    "version": "NODE_ENV=production npm run default && git add .",
-    "rollup": "npx rollup --config rollup.config.cjs",
-    "preview": "NODE_ENV=production npm run views"
+    "start": "npm run default && npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
+    "default": "npx @11ty/eleventy && node styles.js && node scripts.js",
+    "views": "npx @11ty/eleventy --serve --ignore-initial",
+    "scripts": "npx chokidar-cli './{src,packages}/**/*.js' -c 'node scripts.js'",
+    "styles": "npx chokidar-cli './{src,packages}/**/*.scss' -c 'node styles.js'",
+    "production": "NODE_ENV=production npm run default",
+    "preview": "npm run production && npm run views",
+    "version": "npm run production && git add .",
+    "prepublishOnly": "git push && git push --tags",
+    "publish": "npx gh-pages -d dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@uswds/compile": "^1.0.0",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.2",
+    "highlight.js": "^11.9.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
     "thymeleaf": "^0.21.0"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-replace": "^5.0.2",
     "@uswds/uswds": "^3.5.0",
+    "autoprefixer": "^10.4.16",
     "cleave.js": "^1.6.0",
-    "dropzone": "^5.9.3"
+    "cssnano": "^6.0.1",
+    "dropzone": "^5.9.3",
+    "postcss": "^8.4.31",
+    "rollup": "^3.29.4",
+    "sass": "^1.69.5"
   }
 }

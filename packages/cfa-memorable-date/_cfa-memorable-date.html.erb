@@ -1,9 +1,8 @@
-<fieldset class="usa-fieldset<% if fieldset['modifier'] %> <%= fieldset['modifier'] %><% end %>"
-  <% if fieldset['id'] %> id="<%= fieldset['id'] %>"<% end %>>
+<fieldset class="usa-fieldset<% if fieldset['modifier'] %> <%= fieldset['modifier'] %><% end %>"<% if defined?(id) %> id="<%= id %>"<% end %>>
   <legend class="usa-legend<% if fieldset['legend']['modifier'] %> <%= fieldset['legend']['modifier'] %><% end %>"<% if fieldset['legend']['for'] %> for="<%= fieldset['legend']['for'] %>"<% end %><% if fieldset['legend']['tabindex'] %> tabindex="<%= fieldset['legend']['tabindex'] %>"<% end %>>
     <span><%= fieldset['legend']['text'] %></span>
 
-    <% if fieldset['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if fieldset['legend']['modifierHint'] %> <%= fieldset['legend']['modifierHint'] %><% end %>">*</abbr><% end %>
+    <% if defined?(required) %><abbr title="required" class="usa-hint usa-hint--required<% if fieldset['legend']['modifierHint'] %> <%= fieldset['legend']['modifierHint'] %><% end %>">*</abbr><% end %>
   </legend>
 
   <% if fieldset['hint'] %><div class="usa-hint<% if fieldset['hint']['modifier'] %> <%= fieldset['hint']['modifier'] %><% end %>"<% if fieldset['hint']['id'] %> id="<%= fieldset['hint']['id'] %>"<% end %>><%= fieldset['hint']['text'] %></div><% end %>

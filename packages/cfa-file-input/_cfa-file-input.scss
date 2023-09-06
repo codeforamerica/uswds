@@ -1,10 +1,10 @@
 @use 'uswds-core' as *;
-@use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-transition/cfa-transition' as *;
+@use 'cfa-core' as *;
+@use '../cfa-transition/_cfa-transition.scss' as *;
 
 .cfa-file-input {
   .usa-file-input__target {
-    @include u-border($theme-form-elements-border-width, dashed, $theme-color-primary);
+    @include u-border($cfa-form-elements-border-width, dashed, $theme-color-primary);
 
     cursor: pointer;
 
@@ -55,7 +55,7 @@
 
   .usa-file-input__target {
     &.has-invalid-file {
-      @include u-border($theme-form-elements-border-width, dashed, $theme-color-error-dark)
+      @include u-border($cfa-form-elements-border-width, dashed, $theme-color-error-dark)
     }
   }
 

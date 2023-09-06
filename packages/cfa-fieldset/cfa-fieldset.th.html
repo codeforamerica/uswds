@@ -1,4 +1,4 @@
-<fieldset th:fragment="fieldset(modifier, id, legend, hint, required, error, options)" class="usa-fieldset" th:classappend="${modifier}" th:attr="id=${id}">
+<fieldset th:fragment="fieldset(modifier, id, legend, required, hint, error, options)" class="usa-fieldset" th:classappend="${modifier}" th:attr="id=${id}">
   <legend class="usa-legend" th:classappend="${legend.modifier}" th:attr="tabindex=${legend.tabindex}">
     <span th:text="${legend.text}">Legend</span>
 

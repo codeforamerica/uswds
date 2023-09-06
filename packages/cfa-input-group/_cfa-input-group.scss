@@ -1,8 +1,8 @@
 @use 'uswds-core' as *;
-@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 
 .cfa-input-group {
-  height: units($theme-input-height);
+  height: units($cfa-input-height);
 }
 
 .cfa-input-group .usa-input-prefix,
@@ -10,12 +10,12 @@
   color: color('ink');
 
   font-weight: $theme-font-weight-bold;
-  padding: 0 units($theme-form-elements-padding-y);
+  padding: 0 units($cfa-form-elements-padding-y);
 }
 
 .cfa-input-group .usa-input-prefix + input {
   // @include u-padding-left($icon-offset);
-  @include u-padding-right($theme-form-elements-padding-x);
+  @include u-padding-right($cfa-form-elements-padding-x);
 }
 
 .cfa-input-group .usa-input-suffix {

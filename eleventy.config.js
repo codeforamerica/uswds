@@ -1,5 +1,5 @@
-const package = require('./package.json');
-const config = require('./config');
+const package = require(`${process.env.PWD}/package.json`);
+const config = require(`${process.env.PWD}/config`);
 
 const fs = require('fs');
 const path = require('path');
@@ -10,12 +10,23 @@ const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const beautify = require('js-beautify').html;
 const thymeleaf = require('thymeleaf');
+const hljs = require('highlight.js/lib/core');
 const execSync = require('child_process').execSync;
+
+for (let i = 0; i < config.hightlightJs.length; i++) {
+  let lang = config.hightlightJs[i];
+
+  hljs.registerLanguage(lang, require(`highlight.js/lib/languages/${lang}`));
+}
 
 let CONFIG_BEAUTIFY = config.beautify;
 let CONFIG_ELEVENTY = config.eleventy;
-let CONFIG_MARKDOWN = config.markdown_it;
-let CONFIG_THYMELEAF = config.thymeleaf;
+let CONFIG_MARKDOWN = config.markdownIt;
+
+let CONFIG_THYMELEAF = {
+  ...thymeleaf.STANDARD_CONFIGURATION,
+  ...config.thymeleaf
+};
 
 let markdown = markdownIt(CONFIG_MARKDOWN);
 
@@ -138,6 +149,18 @@ const sanitizeForErb = (param) => {
 // }
 
 /**
+ * Adds syntax highlighting blocks to a string containing HTML.
+ *
+ * @param   {String}  str   String containing HTML.
+ * @param   {String}  lang  The Highlight.js language syntax code.
+ *
+ * @return  {String}        HTML wrapped in Highlight.js HTML blocks.
+ */
+const highlight = (str, lang) => {
+  return hljs.highlight(str, {language: lang}).value;
+};
+
+/**
  * Wraps passed string a code block and performs transformations on the content for display
  *
  * @param   {String}   str          An HTML template string
@@ -148,12 +171,25 @@ const sanitizeForErb = (param) => {
  * @return  {String}          The transformed template string wrapped in a code block
  */
 const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
+  let id = `block-${createId()}`;
+
   str = (beautifyStr) ? beautify(str, CONFIG_BEAUTIFY) : str;
 
-  str = (escapeStr) ? escapeHtml(str) : str;
+  let highlighted = highlight(str, lang);
+
+  let escaped = (escapeStr) ? escapeHtml(str) : str;
 
   return `<div class="code-block">
-      <pre class="language-${lang}">${str}</pre>
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="${id}" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="${config.baseUrl}assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea hidden data-copy-target="${id}">${escaped}</textarea>
+      </div>
+      <pre class="language-${lang} padding-top-0">${highlighted}</pre>
     </div>`;
 };
 
@@ -216,7 +252,7 @@ const removeNewLines = (str) => {
  * @return  {String/Boolean}        A fully resolved file path. If no file exists, false is returned
  */
 const getFile = (name, type = '') => {
-  let filename = `packages/cfa-${name}`;
+  let filename = `${config.packages}/cfa-${name}`;
 
   switch (type) {
     case 'template':
@@ -242,7 +278,7 @@ const getFile = (name, type = '') => {
       break;
   }
 
-  let resolved = path.join(__dirname, filename);
+  let resolved = path.join(config.base, filename);
   let exists = fs.existsSync(resolved);
 
   if (false === exists) {
@@ -391,7 +427,15 @@ const createCamelCase = function(str) {
  */
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addWatchTarget('./**/*.{css,scss,js,twig,json}');
+  /**
+   * Set up watch targets and development server options from config
+   */
+
+  for (let w = 0; w < CONFIG_ELEVENTY.watchTargets.length; w++) {
+    eleventyConfig.addWatchTarget(CONFIG_ELEVENTY.watchTargets[w]);
+  }
+
+  eleventyConfig.setServerOptions(CONFIG_ELEVENTY.serverOptions);
 
   /**
    * Plugin configuration
@@ -491,6 +535,13 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  /**
+   * Renders a Markdown string and returns the rendered HTML
+   *
+   * @param   {String}  md  Markdown string
+   *
+   * @return  {String}      Rendered HTML
+   */
   eleventyConfig.addShortcode('md', async function(mrkdwn) {
     return markdownRender(mrkdwn);
   });
@@ -550,15 +601,17 @@ module.exports = function(eleventyConfig) {
    * Retrieves a package's ERB template source and wraps it in a code block
    *
    * @param   {String}   name     Name of the package
-   * @param   {Boolean}  include  Pass true to return the inclusion demonstration instead of the template
+   * @param   {Boolean}  include  Pass true to return the inclusion demonstration
+   *                              instead of the template
    *
-   * @return  {String}            The template source escaped and wrapped in a code block
+   * @return  {String}            The template source escaped and wrapped in a
+   *                              code block
    */
   eleventyConfig.addShortcode('erb', async function(name, include = false) {
     let templatePath = getFile(name, 'erb')
-      .replace(__dirname, package.name)
-      .replace('/_', '/')
-      .replace('.html.erb', '');
+      .replace(__dirname, package.name);
+      // .replace('/_', '/')
+      // .replace('.html.erb', '');
 
     let template = removeNewLines(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
@@ -607,10 +660,23 @@ module.exports = function(eleventyConfig) {
           params.map(attr => {
             return `${attr}: ${attr}`;
           }).join(', ')
-        }}) %>`, 'ruby', true);
+        }}) %>`, 'erb', true);
     }
 
-    return block(template, 'ruby', false);
+    return block(template, 'erb', false);
+  });
+
+  /**
+   * Turns a string into a highlighted code block
+   *
+   * @param   {String}  type  The type of code block to return. Accepted values
+   *                          are defined in the ./config.js, 'hightlightJs' file
+   * @param   {String}  str   String containing code
+   *
+   * @return  {String}       The Sass code escaped and wrapped in a code block
+   */
+  eleventyConfig.addShortcode('block', async function(type, str) {
+    return block(str, type, false);
   });
 
   /**

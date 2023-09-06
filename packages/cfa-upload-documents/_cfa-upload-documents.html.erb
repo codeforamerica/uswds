@@ -1,0 +1,139 @@
+<div class="usa-form-group cfa-form-group cfa-file-input" data-js="upload-documents"<% if defined?(id) %> id="<%= id %>"<% end %>>
+  <div class="cfa-upload-documents" data-dropzone="uploads">
+    <% if fileInput['label'] %><label class="usa-label<% if fileInput['label']['modifier'] %> <%= fileInput['label']['modifier'] %><% end %>"<% if fileInput['label']['for'] %> for="<%= fileInput['label']['for'] %>"<% end %><% if fileInput['label']['tabindex'] %> tabindex="<%= fileInput['label']['tabindex'] %>"<% end %>>
+      <span><%= fileInput['label']['text'] %></span>
+
+      <% if fileInput['input']['required'] %>
+      <abbr title="required" class="usa-hint usa-hint--required<% if fileInput['label']['modifierHint'] %> <%= fileInput['label']['modifierHint'] %><% end %>">*</abbr>
+      <% end %>
+    </label><% end %>
+
+    <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
+
+    <div class="usa-file-input">
+      <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
+        <div class="usa-file-input__box"></div>
+
+        <div class="usa-file-input__instructions">
+          <% if fileInput['hint'] %>
+          <div class="usa-hint<% if fileInput['hint']['modifier'] %> <%= fileInput['hint']['modifier'] %><% end %>" id="<%= fileInput['hint']['id'] %>" aria-hidden="true"><%= fileInput['hint']['text'] %></div>
+          <% end %>
+
+          <div class="dz-message" data-dropzone="upload-button">
+            <button class="usa-button cfa-button circle-9 padding-0 margin-0" type="button" data-dropzone="button" aria-hidden="true" focusable="false" tabindex="-1">
+              <svg class="usa-icon square-7 margin-bottom-neg-2px" aria-hidden="true" focusable="false" tabindex="-1">
+                <use href="<%= fileInput['button']['icon'] %>"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <input class="usa-file-input__input" type="file" data-dropzone="fallback" th:attr="id=${fileInput.input.id},name=${fileInput.input.name},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple}">
+
+        <div data-dropzone="hidden-input-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <%# @hidden       "true"  Visually hides element %>
+  <%# @aria-hidden  "true"  Hides element from the accessibility API %>
+  <div data-dropzone="preview" hidden="true" aria-hidden="true">
+    <h3 class="cfa-upload-documents__preview-header" data-dropzone="preview-header" id="<%= previewHeader['id'] %>">
+      Your documents. <span data-dropzone="preview-number">0</span> <span data-dropzone="preview-text">uploaded</span> <span>(<span>20 max</span>)</span>
+    </h3>
+
+    <ul class="add-list-reset" role="list" data-dropzone="preview-container" aria-describedby="<%= previewHeader['id'] %>">
+      <%# Use previewTemplate to add a custom preview template  %>
+      <%# @data-dropzone  "remove"  removes contents before passing to Dropzone %>
+      <% if defined?(previewTemplate) %>
+      <li class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
+        <%= previewTemplate %>
+      </li>
+      <% end %>
+
+      <%# Dropzone will modify or replace the contents of this element %>
+      <%# @data-dropzone  "remove"  removes contents before passing to Dropzone %>
+      <% if defined?(defaultPreviewTemplate) %>
+      <li class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
+        <div class="cfa-upload-documents__details">
+          <div class="cfa-upload-documents__thumbnail" data-dropzone="thumbnail">
+            <div class="cfa-upload-documents__progress">
+              <span class="cfa-upload-documents__progress-bar" data-dz-uploadprogress="keep"></span>
+            </div>
+
+            <svg class="usa-icon cfa-upload-documents__icon-error" aria-hidden="true" focusable="false" role="img">
+              <use href="<%= defaultPreviewTemplate['error']['icon'] %>"></use>
+            </svg>
+
+            <svg class="usa-icon cfa-upload-documents__icon-default" aria-hidden="true" focusable="false" role="img">
+              <use href="<%= defaultPreviewTemplate['thumbnail']['default'] %>"></use>
+            </svg>
+
+            <img class="cfa-upload-documents__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext" />
+          </div>
+
+          <div class="cfa-upload-documents__file">
+            <div class="cfa-upload-documents__filename" data-dz-name="keep">
+              <span class="cfa-upload-documents__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
+              <span class="cfa-upload-documents__filename-ext" aria-hidden="true">.ext</span>
+            </div>
+
+            <span class="cfa-upload-documents__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
+              Message
+            </span>
+
+            <div>
+              <span class="font-body-2xs" title="File size">
+                <span class="usa-sr-only">File size, </span>
+
+                <span class="font-body-2xs" data-dz-size="keep">
+                  <strong>99</strong> MB
+                </span>
+              <span>
+
+              <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+              <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="file-remove" data-dz-remove="keep"><span data-dropzone="file-remove-label">remove</span> <span class="usa-sr-only" data-dz-name="keep">preview-template__filename--testing-truncated-text.ext</span></button>
+
+              <%# @data-dropzone  "remove"  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. %>
+              <span data-dropzone="remove">
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview">base</button>
+
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing">processing</button>
+
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-complete">complete</button>
+
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
+
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default">default</button>
+
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <%# Strings used by the UploadDocument script will be pulled from this element %>
+  <%# @hidden         "true"    Visually hides element %>
+  <%# @aria-hidden    "true"    Hides element from the accessibility API %>
+  <%# @data-dropzone  "remove"  removes contents before passing to Dropzone %>
+  <div hidden="true" aria-hidden="true" data-dropzone="remove">
+    <% dict.each do |item| %><p data-dropzone="dict" data-dropzone-dict="<%= item['key'] %>"><%= item['string'] %></p><% end %>
+  </div>
+</div>

@@ -1,13 +1,13 @@
-<details class="cfa-details<% if defined?(modifier) %> <%= modifier %><% end %>"<% if defined?(openAttr) %> open<% end %>>
-  <% if defined?(summary) %><summary class="cfa-details__summary">
-    <%= summary %><% if defined?(icon) %><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+<div class="cfa-details<% if defined?(modifier) %> <%= modifier %><% end %>">
+  <% if defined?(summary) %><button type="button" class="cfa-details__summary" data-js="details"<% if defined?(controls) %> data-aria-controls="<%= controls %>"<% end %><% if defined?(openAttr) %> data-aria-expanded="<%= openAttr %>"<% end %>>
+    <span><%= summary %></span><% if defined?(icon) %><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="<%= icon %>"></use>
     </svg><% end %>
-  </summary><% end %>
+  </button><% end %>
 
   <% if defined?(body) %>
-    <div class="cfa-details__content usa-prose"><%= body %></div>
+    <div class="cfa-details__content"<% if defined?(controls) %> id="<%= controls %>"<% end %>><%= body %></div>
   <% elsif defined?(text) %>
-    <div class="cfa-details__content usa-prose"><p><%= text %></p></div>
+    <div class="cfa-details__content"<% if defined?(controls) %> id="<%= controls %>"<% end %>><p><%= text %></p></div>
   <% end %>
-</details>
+</div>

@@ -1,13 +1,13 @@
-<details th:fragment="details(modifier, open, summary, body, text)" class="cfa-details" th:classappend="${modifier}" th:attr="open=${openAttr}">
-  <summary th:if="${summary}" class="cfa-details__summary">
+<div th:fragment="details(modifier, summary, controls, openAttr, icon, body, text)" class="cfa-details" th:classappend="${modifier}">
+  <button type="button" th:if="${summary}" class="cfa-details__summary" data-js="details" th:attr="data-aria-controls=${controls},data-aria-expanded=${openAttr}">
     <span th:text="${summary}">Summary</span><svg th:if="icon" class="usa-icon" aria-hidden="true" focusable="false" role="img">
       <use th:href="${icon}"></use>
     </svg>
-  </summary>
+  </button>
 
-  <div th:if="${body}" class="cfa-details__content usa-prose" th:utext="${body}"></div>
+  <div th:attr="id=${controls}" th:if="${body}" class="cfa-details__content" th:utext="${body}"></div>
 
-  <div th:if="${text}" class="cfa-details__content usa-prose">
+  <div th:attr="id=${controls}" th:if="${text}" class="cfa-details__content">
     <p th:text="${text}">Text</p>
   </div>
-</details>
+</div>

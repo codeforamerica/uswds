@@ -1,4 +1,4 @@
-<div th:fragment="formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
+<div th:fragment="formGroup(modifier, id, label, input, textarea, selectEl, hint, error, inputGroup)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
   <label class="usa-label" th:classappend="${label.modifier}" th:attr="for=${label.for},tabindex=${label.tabindex}">
     <span th:text="${label.text}">Label</span>
 

@@ -1,8 +1,13 @@
 @use 'uswds-core' as *;
-@use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-transition/cfa-transition' as *;
+@use 'cfa-core' as *;
+@use '../cfa-transition/_cfa-transition.scss' as *;
 
-.dropzone__preview-header {
+.cfa-upload-documents .usa-file-input {
+  max-width: initial;
+}
+
+.cfa-upload-documents__preview-header {
+  @include u-font('sans', 'xs');
   @include u-text('bold');
   @include u-margin-bottom(2);
   @include u-padding-bottom(1);
@@ -11,44 +16,47 @@
   display: block;
 }
 
-.dropzone__preview {
+.cfa-upload-documents__preview {
   @include u-margin-bottom(2);
 
   &.dz-image-preview {
-    .dropzone__img {
+    .cfa-upload-documents__img {
       opacity: 0;
     }
 
-    .dropzone__icon-error,
-    .dropzone__error-message {
+    .cfa-upload-documents__icon-error,
+    .cfa-upload-documents__icon-default,
+    .cfa-upload-documents__error-message {
       display: none;
     }
   }
 
   &.dz-processing {
-    .dropzone__icon-error,
-    .dropzone__error-message {
+    .cfa-upload-documents__icon-error,
+    .cfa-upload-documents__icon-default,
+    .cfa-upload-documents__error-message {
       display: none;
     }
 
-    .dropzone__progress-bar {
+    .cfa-upload-documents__progress-bar {
       width: 0;
     }
 
-    .dropzone__img {
+    .cfa-upload-documents__img {
       opacity: 0;
     }
   }
 
   &.dz-complete {
-    .dropzone__icon-error,
-    .dropzone__error-message {
+    .cfa-upload-documents__icon-error,
+    .cfa-upload-documents__icon-default,
+    .cfa-upload-documents__error-message {
       display: none;
     }
   }
 
   &.dz-processing.dz-complete {
-    .dropzone__progress-bar {
+    .cfa-upload-documents__progress-bar {
       width: 100%;
     }
   }
@@ -65,54 +73,69 @@
       margin-left: units(-4)
     }
 
-    .dropzone__thumbnail {
+    .cfa-upload-documents__thumbnail {
       @include u-border('error');
+
       background-color: color('error-lighter');
     }
 
-    .dropzone__icon-error,
-    .dropzone__error-message {
+    .cfa-upload-documents__icon-error,
+    .cfa-upload-documents__error-message {
       display: block;
     }
 
-    .dropzone__img,
-    .dropzone__progress {
+    .cfa-upload-documents__img,
+    .cfa-upload-documents__progress {
       display: none;
     }
   }
 
   &.dz-complete.dz-success {
-    .dropzone__thumbnail {
+    .cfa-upload-documents__thumbnail {
       @include u-border('success-darker');
 
       background-color: color('success-lighter');
     }
 
-    .dropzone__filename {
+    .cfa-upload-documents__filename {
       color: color('ink');
     }
 
-    .dropzone__img {
+    .cfa-upload-documents__img {
       opacity: 1;
     }
 
-    .dropzone__progress {
+    .cfa-upload-documents__progress {
       @include u-border('success-darker');
     }
 
-    .dropzone__progress-bar {
+    .cfa-upload-documents__progress-bar {
       background: color('success-darker');
+    }
+  }
+
+  &.dz-complete.dz-success.dz-default {
+    .cfa-upload-documents__img,
+    .cfa-upload-documents__progress,
+    .cfa-upload-documents__icon-error,
+    .cfa-upload-documents__error-message {
+      display: none;
+    }
+
+    .cfa-upload-documents__icon-default {
+      display: block;
     }
   }
 }
 
-.dropzone__details {
+.cfa-upload-documents__details {
   display: flex;
 }
 
-.dropzone__thumbnail {
+.cfa-upload-documents__thumbnail {
   @include u-radius('lg');
   @include u-border(2px, 'info-light', 'solid');
+  @include u-square(8);
 
   background-color: color('info-lighter');
 
@@ -120,6 +143,7 @@
   flex-shrink: 0;
 
   box-sizing: content-box;
+  position: relative;
   overflow: hidden;
 
   display: flex;
@@ -129,7 +153,7 @@
   transition: background-color, border-color 300ms ease-in-out;
 }
 
-.dropzone__progress {
+.cfa-upload-documents__progress {
   @include u-border(2px, 'info-dark', 'solid');
 
   border-radius: units(1);
@@ -142,7 +166,7 @@
   -webkit-transform: scale(1);
 }
 
-.dropzone__progress-bar {
+.cfa-upload-documents__progress-bar {
   background: color('info-dark');
 
   position: absolute;
@@ -154,25 +178,29 @@
   transition: width 300ms ease-in-out;
 }
 
-.dropzone__img {
-  @include u-radius('lg');
-
+.cfa-upload-documents__img {
   position: absolute;
   transition: opacity 100ms ease-in-out;
   transition-delay: 400ms;
 }
 
-.dropzone__icon-error {
+.cfa-upload-documents__icon-error {
   color: color('error-dark');
   width: units(4);
   height: units(4);
 }
 
-.dropzone__file {
+.cfa-upload-documents__icon-default {
+  color: color('success-darker');
+  width: units(4);
+  height: units(4);
+}
+
+.cfa-upload-documents__file {
   min-width: 0;
 }
 
-.dropzone__filename {
+.cfa-upload-documents__filename {
   @include u-font($theme-body-font-family, 'sm');
   @include u-text('bold');
 
@@ -181,12 +209,12 @@
   display: flex;
 }
 
-.dropzone__filename-name {
+.cfa-upload-documents__filename-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.dropzone__filename-ext {
+.cfa-upload-documents__filename-ext {
   flex-shrink: 0;
 }

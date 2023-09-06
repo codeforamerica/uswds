@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 
 .cfa-follow-up {
   .cfa-hint {
@@ -9,7 +9,7 @@
 
 .cfa-follow-up__region {
   @include set-text-and-bg($theme-color-base-lightest);
-  @include u-border-y($theme-form-elements-border-width, 'ink');
+  @include u-border-y(units($cfa-form-elements-border-width), 'ink');
 
   position: relative;
   padding: units(3);
@@ -51,30 +51,30 @@
 }
 
 .cfa-follow-up__region::before {
-  border-bottom-width: $theme-input-select-width;
+  border-bottom-width: units($cfa-input-select-width);
   border-bottom-color: color('ink');
 
   border-left-width: units(1.5);
   border-right-width: units(1.5);
 
-  top: calc(#{-($theme-input-select-width)} - #{$theme-form-elements-border-width});
+  top: calc(#{-(units($cfa-input-select-width))} - #{units($cfa-form-elements-border-width)});
 
   // padding + radio/check box padding - input border width
-  left: calc(#{units(6)} - #{$theme-form-elements-border-width});
+  left: calc(#{units(6)} - #{units($cfa-form-elements-border-width)});
 
   @include at-media('tablet') {
-    left: calc(#{units(7)} - #{$theme-form-elements-border-width});
+    left: calc(#{units(7)} - #{units($cfa-form-elements-border-width)});
   }
 }
 
 .cfa-follow-up__region::after {
-  border-bottom-width: calc(#{$theme-input-select-width} - #{$theme-form-elements-border-width});
+  border-bottom-width: calc(#{units($cfa-input-select-width)} - #{units($cfa-form-elements-border-width)});
   border-bottom-color: color($theme-color-base-lightest);
 
-  border-left-width: calc(#{units(1.5)} - #{$theme-form-elements-border-width});
-  border-right-width: calc(#{units(1.5)} - #{$theme-form-elements-border-width});
+  border-left-width: calc(#{units(1.5)} - #{units($cfa-form-elements-border-width)});
+  border-right-width: calc(#{units(1.5)} - #{units($cfa-form-elements-border-width)});
 
-  top: calc(#{-($theme-input-select-width)} + #{$theme-form-elements-border-width});
+  top: calc(#{-(units($cfa-input-select-width))} + #{units($cfa-form-elements-border-width)});
 
   left: units(6);
 

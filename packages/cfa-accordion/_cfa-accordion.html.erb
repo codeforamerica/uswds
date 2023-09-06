@@ -1,4 +1,4 @@
-<div class="usa-accordion<% if modifier %> <%= modifier %><% end %>"<% if multiple %> data-allow-multiple<% end %>>
+<div class="usa-accordion<% if defined?(modifier) %> <%= modifier %><% end %>"<% if defined?(multiple) %> data-allow-multiple<% end %>>
   <% items.each do |item| %>
     <h3 class="usa-accordion__heading">
       <button type="button" class="usa-accordion__button"<% if item['expanded'] %> aria-expanded="<%= item['expanded'] %>"<% end %><% if item['controls'] %> aria-controls="<%= item['controls'] %>"<% end %>>
@@ -6,10 +6,10 @@
       </button>
     </h3>
 
-    <div class="usa-accordion__content usa-prose"<% if item['controls'] %> id="<%= item['controls'] %>"<% end %>>
+    <div class="usa-accordion__content"<% if item['controls'] %> id="<%= item['controls'] %>"<% end %>>
       <% if item['body'] %>
         <%= item['body'] %>
-      <% else item['text'] %>
+      <% elsif item['text'] %>
         <p><%= item['text'] %></p>
       <% end %>
     </div>

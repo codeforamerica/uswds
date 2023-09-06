@@ -1,7 +1,7 @@
 <!-- in production environments the skip nav link would be embedded above the main header -->
 <!-- <a class="usa-skipnav" href="#main-content">Skip to main content</a> -->
 
-<header th:fragment="toolbar(modifier, container, startEl, home, logo, endEl, alert)" th:class="${modifier}">
+<header th:fragment="toolbar(modifier, container, startEl, startElModifier, home, logo, endEl, endElModifier, chat, languageSelector, links, alert)" th:class="${modifier}">
   <div class="grid-container display-flex flex-justify flex-align-center" th:classappend="${container.modifier}">
     <div th:if="${startEl}" th:replace="${startEl}">
       Toolbar start contents

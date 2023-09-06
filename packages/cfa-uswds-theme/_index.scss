@@ -1,0 +1,204 @@
+/*
+ * Code for America USWDS theme settings
+ */
+
+// Settings
+// $cfa-show-compile-warnings: false !default;
+$cfa-show-compile-warnings: true !default;
+$cfa-show-notifications: false !default;
+// $cfa-show-notifications: true !default;
+
+// Focus
+$cfa-focus-color: 'gold-30v' !default;
+
+// Spacing
+$cfa-border-radius-sm: 0.5 !default;
+$cfa-border-radius-md: 1 !default;
+$cfa-border-radius-lg: 2 !default;
+
+$cfa-grid-container-max-width: 'desktop-lg' !default;
+
+// These are not within the spacing section but keeping them together
+// helps with managing the max-width dimension consistently for all components
+$cfa-banner-max-width: 'desktop-lg' !default;
+$cfa-footer-max-width: 'desktop-lg' !default;
+$cfa-header-max-width: 'desktop-lg' !default;
+$cfa-identifier-max-width: 'desktop-lg' !default;
+$cfa-in-page-nav-main-content-max-width: 'desktop-lg' !default;
+$cfa-site-alert-max-width: 'desktop-lg' !default;
+
+// Color
+// - Base
+$cfa-color-base-family: 'gray-warm' !default;
+$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background, outline button background hover, checkbox/radio background hover, follow-up question container background, footer primary section background, background color of the input, background color of the textarea
+$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover, disabled button state, footer secondary section background, color of the input inset border, color of the textarea inset border
+$cfa-color-base-light: 'gray-warm-30' !default;
+$cfa-color-base: 'gray-warm-50' !default;
+$cfa-color-base-dark: 'gray-warm-60' !default;
+$cfa-color-base-darker: 'gray-warm-70' !default; // Affects follow up question container border
+$cfa-color-base-darkest: 'gray-warm-90' !default;
+$cfa-color-base-ink: 'gray-warm-90' !default; // Affects outline button, text and border color of the input, text and border color of the select, text and border color of the textarea
+
+// - Primary
+$cfa-color-primary-family: 'mint' !default;
+$cfa-color-primary-lightest: 'mint-cool-5' !default; // Affects details background
+$cfa-color-primary-lighter: 'mint-10' !default;
+$cfa-color-primary-light: 'mint-30' !default;
+$cfa-color-primary: 'mint-50' !default; // Affects primary button state
+$cfa-color-primary-vivid: 'mint-40v' !default;
+$cfa-color-primary-dark: 'mint-cool-70v' !default;
+$cfa-color-primary-darker: 'mint-cool-80v' !default; // Affects primary button hover state, details text and border
+
+// - Secondary
+$cfa-color-secondary-family: 'magenta-vivid' !default;
+$cfa-color-secondary-lighter: 'magenta-10v' !default;
+$cfa-color-secondary-light: 'magenta-30v' !default;
+$cfa-color-secondary: 'magenta-50v' !default; // Affects the secondary button
+$cfa-color-secondary-vivid: 'magenta-40v' !default;
+$cfa-color-secondary-dark: 'magenta-60v' !default;
+$cfa-color-secondary-darker: 'magenta-70v' !default; // Affects the secondary button hover state
+
+// - Accent Warm
+$cfa-color-accent-warm-family: 'red-warm-vivid' !default;
+$cfa-color-accent-warm-lighter: 'red-warm-10v' !default;
+$cfa-color-accent-warm-light: 'red-warm-20v' !default;
+$cfa-color-accent-warm: 'red-warm-30v' !default;
+$cfa-color-accent-warm-dark: 'red-warm-50v' !default;
+$cfa-color-accent-warm-darker: 'red-warm-60v' !default;
+
+// - Accent Cool
+$cfa-color-accent-cool-family: 'green-cool-vivid' !default;
+$cfa-color-accent-cool-lighter: 'green-cool-5v' !default;
+$cfa-color-accent-cool-light: 'green-cool-20v' !default;
+$cfa-color-accent-cool: 'green-cool-30v' !default;
+$cfa-color-accent-cool-dark: 'green-cool-40v' !default;
+$cfa-color-accent-cool-darker: 'green-cool-60v' !default;
+
+// - Error
+$cfa-color-error-family: 'orange-warm-vivid' !default;
+$cfa-color-error-lighter: 'orange-warm-10v' !default;
+$cfa-color-error-light: 'orange-warm-30v' !default;
+$cfa-color-error: 'orange-warm-50v' !default; // Affects the danger button, the no button icon color
+$cfa-color-error-dark: 'orange-warm-60v' !default; // Affects the error state border color
+$cfa-color-error-darker: 'orange-warm-70v' !default; // Affects the danger button hover state
+
+// - Warning
+$cfa-color-warning-family: 'gold-vivid' !default;
+$cfa-color-warning-lighter: 'gold-5v' !default;
+$cfa-color-warning-light: 'gold-10v' !default;
+$cfa-color-warning: 'gold-20v' !default;
+$cfa-color-warning-dark: 'gold-30v' !default;
+$cfa-color-warning-darker: 'gold-50v' !default;
+
+// - Success
+$cfa-color-success-family: 'green-cool-vivid' !default;
+$cfa-color-success-lighter: 'green-cool-5v' !default;
+$cfa-color-success-light: 'green-cool-20v' !default;
+$cfa-color-success: 'green-cool-40v' !default;
+$cfa-color-success-dark: 'green-cool-50v' !default;
+$cfa-color-success-darker: 'green-cool-60v' !default;
+
+// - Info
+$cfa-color-info-family: 'gray-warm' !default;
+$cfa-color-info-lighter: 'gray-warm-4' !default;
+$cfa-color-info-light: 'gray-warm-20' !default;
+$cfa-color-info: 'gray-warm-50' !default;
+$cfa-color-info-dark: 'gray-warm-60' !default;
+$cfa-color-info-darker: 'gray-warm-70' !default;
+
+// - Emergency
+$cfa-color-emergency: 'orange-warm-30v' !default;
+$cfa-color-emergency-dark: 'orange-warm-60v' !default;
+
+// - Disabled
+$cfa-color-disabled-family: 'gray-warm' !default;
+$cfa-color-disabled-light: 'gray-warm-10' !default; // Affects disabled button
+$cfa-color-disabled: 'gray-warm-50' !default;       // Affects disabled outline button
+$cfa-color-disabled-dark: 'gray-warm-70' !default;  // Affects disabled button text
+
+// $cfa-color-disabled-text: 'gray-warm-50' !default;         // This setting can't be configured
+// $cfa-color-disabled-text-reverse: 'gray-warm-40' !default; // This setting can't be configured
+// $cfa-color-text-on-disabled: 'gray-warm-70' !default;      // This setting can't be configured
+
+// - Visited
+$cfa-link-color: 'primary' !default;
+$cfa-link-visited-color: 'ink' !default;
+
+// 4. Typography
+$cfa-global-paragraph-styles: true !default;
+$cfa-global-link-styles: true !default;
+$cfa-global-content-styles: true !default;
+
+$cfa-font-type-sans: 'system' !default; // Match Honeycrisp codebase
+$cfa-font-type-serif: false !default;
+$cfa-font-role-heading: 'sans' !default;
+
+// - Custom monospaced font for code demonstration
+$cfa-typeface-tokens: (
+  "jetbrains-mono": (
+    "display-name": '"JetBrains Mono"',
+    "cap-height": 365px
+  )
+) !default;
+
+$cfa-font-type-mono: 'jetbrains-mono' !default;
+$cfa-font-mono-custom-stack: monospace !default;
+
+// - Type scales
+$cfa-type-scale-3xs: 3 !default;
+$cfa-type-scale-2xs: 4 !default;
+$cfa-type-scale-xs: 5 !default;     // h6?
+$cfa-type-scale-sm: 6 !default;     // h5 + paragraphs?
+$cfa-type-scale-md: 7 !default;     // h4?
+// $cfa-type-scale-lg: 9 !default;  // h3
+// $cfa-type-scale-xl: 12 !default; // h2
+$cfa-type-scale-2xl: 15 !default;   // h1
+$cfa-type-scale-3xl: 17 !default;   // Pushing this more because h1 is originally set to 15
+
+$cfa-style-body-element: true !default; // Not well documented but necessary to make type size and line heights consistent with .usa-prose
+$cfa-body-line-height: 4 !default;
+$cfa-h6-font-size: 'xs' !default;
+$cfa-small-font-size: '2xs' !default; // Affects details font size
+
+// Setting measures to none prevents text from having a fixed width and allows it to flow
+$cfa-text-measure-narrow: 'none' !default;
+$cfa-text-measure: 'none' !default;
+$cfa-text-measure-wide: 'none' !default;
+
+$cfa-lead-line-height: 4 !default;
+
+// Components
+// - Accordion
+$cfa-accordion-border-width: 2px !default;
+$cfa-accordion-border-color: 'gray-warm-20' !default;
+// - Alert
+$cfa-alert-padding-x: 2 !default;
+$cfa-alert-padding-y: 2 !default;
+$cfa-alert-link-color: 'ink' !default;
+// - Banner
+$cfa-banner-link-color: 'mint-cool-70v' !default;
+// - Checkbox
+$cfa-input-select-size: 3 !default;
+$cfa-input-tile-border-radius: 0 !default;
+$cfa-input-tile-border-width: 2px !default;
+$cfa-checkbox-border-radius: 0 !default;
+// - Header
+$cfa-header-logo-text-width: auto !default;
+// - Summary Box
+$cfa-summary-box-link-color: 'mint-cool-70v' !default;
+
+// 6. Utilities
+$cfa-utilities-use-important: true !default;
+
+$cfa-utility-breakpoints: (
+  'mobile': true,
+  'mobile-lg': true,
+  'tablet': true,
+  'tablet-lg': true,
+  'desktop': true
+) !default;
+
+$cfa-text-align-manual-values: (
+  'start': start,
+  'end': end
+) !default;

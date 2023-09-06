@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/svg+xml" href="https://codeforamerica.org/wp-content/themes/cfa-main/static/icon.svg">
+
+  <title>{% if title %}{{ title }} |{% endif %}{{ package.nice }}</title>
+
+  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/css/site.css">
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  {% include '../_partials/header.twig' %}
+
+  <main id="main-content" class="bg-primary overflow-hidden">
+    {{ content|raw }}
+  </main>
+
+  {% include '../_partials/footer.twig' %}
+
+  <script src="{{ config.baseUrl }}{{ config.assets }}/js/default.js"></script>
+
+  {% block scripts %}{% endblock %}
+
+  {% include '../../../dist/assets/svg/svgs.svg' %}
+</body>
+</html>

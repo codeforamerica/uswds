@@ -1,0 +1,115 @@
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<div class="usa-overlay"></div>
+
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container flex-align-center">
+    <div class="usa-navbar">
+      <div class="usa-logo margin-y-2">
+        <a href="{{ config.baseUrl }}" title="{{ package.nice }}">
+          <svg aria-hidden="true" tabindex="-1" width="380" height="85" xmlns="http://www.w3.org/2000/svg" class="display-none desktop:display-block maxw-full">
+            <use href="#logo">
+          </svg>
+        </a>
+
+        <em class="usa-logo__text desktop:display-none">
+          <a href="{{ config.baseUrl }}" title="{{ package.nice }}">{{ package.nice }}</a>
+        </em>
+      </div>
+
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+
+    <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
+      <button type="button" class="usa-nav__close">
+        <img src="{{ config.baseUrl }}assets/img/usa-icons/close.svg" role="img" alt="Close" />
+      </button>
+
+      <ul class="usa-nav__primary usa-accordion">
+        {% for item in collections.primary %}
+        {% set ID = createId() %}
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-accordion__button usa-nav__link{% if item.data.collection in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
+            <span>{{ item.data.title }}</span>
+          </button>
+
+          <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
+            {% for item in collections[item.data.collection] %}
+              <li class="usa-nav__submenu-item">
+                {% set url = item.url|split('/', 2) %}
+                <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+
+        <li class="usa-nav__primary-item">
+          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+        </li>
+
+        <li class="usa-nav__primary-item">
+          <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
+        </li>
+      </ul>
+
+      {# <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          {% set ID = createId() %}
+          <button type="button" class="usa-accordion__button usa-nav__link{% if 'component' in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
+            <span>Components</span>
+          </button>
+
+          <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
+            {% for item in collections.component %}
+              <li class="usa-nav__submenu-item">
+                {% set url = item.url|split('/', 2) %}
+                <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li class="usa-nav__primary-item">
+          {% set ID = createId() %}
+          <button type="button" class="usa-accordion__button usa-nav__link{% if 'design_token' in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
+            <span>Design tokens</span>
+          </button>
+
+          <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
+            {% for item in collections.design_token %}
+              <li class="usa-nav__submenu-item">
+                {% set url = item.url|split('/', 2) %}
+                <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li class="usa-nav__primary-item">
+          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+        </li>
+
+        <li class="usa-nav__primary-item">
+          <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
+        </li>
+      </ul> #}
+
+      {# <section aria-label="Search component">
+        <form class="usa-search usa-search--small" role="search">
+          <label class="usa-sr-only" for="search-field">Search</label>
+
+          <input class="usa-input" id="search-field" type="search" name="search"/>
+
+          <button class="usa-button" type="submit">
+            <img
+              src="{{ config.baseUrl }}assets/img/usa-icons-bg/search--white.svg"
+              class="usa-search__submit-icon"
+              alt="Search"
+            />
+          </button>
+        </form>
+      </section> #}
+    </nav>
+  </div>
+</header>
