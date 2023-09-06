@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-388309ddb037">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-6df35ecf4b4a">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-388309ddb037" class="usa-nav__submenu">
+          <ul id="aria-c-6df35ecf4b4a" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -82,6 +82,9 @@
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/checkbox/" aria-current="page"><span>Checkbox</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/details/" ><span>Details</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset/" ><span>Fieldset</span></a>
@@ -131,11 +134,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d0069c1803e21">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-2a97f4365c4e6">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-d0069c1803e21" class="usa-nav__submenu">
+          <ul id="aria-c-2a97f4365c4e6" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -200,6 +203,10 @@
 
                   <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
                                   </ul>
+                              </li>
+                            <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/dist/components/details/" >Details</a>
+
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/fieldset/" >Fieldset</a>
@@ -280,31 +287,32 @@
   <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/checkbox" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component</a></li>
   <li><strong>Honeycrisp:</strong> <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form element atom</a></li>
   <li>
-    <strong>Customization:</strong> <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="Design tokens are passed to the settings configuration to modify the visual appearance of the component.">Design tokens <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
-    and <abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="A custom stylesheet is used to modify the component's visual appearance.">Styles <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg></abbr>
+    <strong>Customization:</strong> Design tokens
+    and Styles
   </li>
-  <li><strong><abbr class="usa-tooltip display-inline-flex flex-align-center" data-position="bottom" title="The class name that applies extended style customization to modify the component's visual appearance.">Modifier <svg class="usa-icon margin-left-2px" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#info_outline"></use></svg>:</abbr></strong> <code>.cfa-checkbox</code></li>
-  <li>
-    <details>
-      <summary class="usa-button cfa-button usa-button--unstyled">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use xlink:href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#arrow_drop_down"></use></svg></summary>
-<p><p>The <b>Checkbox</b> extends the <a href="https://designsystem.digital.gov/components/checkbox" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Form element atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-checkbox</code> to add <b>styles</b> defined in a custom stylesheet.</p>
-</details></p>
-  </li>
+  <li><strong>Modifier:</strong> <code>.cfa-checkbox</code></li>
 </ul>
+<details class="cfa-details">
+  <summary class="cfa-details__summary">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#chevron_right"></use></svg></summary>
+  <div class="cfa-details__content usa-prose">
+    <p>The <b>Checkbox</b> extends the <a href="https://designsystem.digital.gov/components/checkbox" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Checkbox component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Form element atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-checkbox</code> to add <b>styles</b> defined in a custom stylesheet.</p>
+    <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
+    <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
+</details>
   <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Checkboxes</figcaption>
     <div class="usa-checkbox cfa-checkbox">
-  <input type="checkbox" id="checkbox-ffeac7702fa43" name="checkbox['a49efa950933']" value="option-a" class="usa-checkbox__input usa-checkbox__input--tile">
-  <label for="checkbox-ffeac7702fa43" class="usa-checkbox__label">
+  <input type="checkbox" id="checkbox-905d5cb768113" name="checkbox['098caca455d7a']" value="option-a" class="usa-checkbox__input usa-checkbox__input--tile">
+  <label for="checkbox-905d5cb768113" class="usa-checkbox__label">
     <span>Option A</span>
   </label>
 </div>
 <div class="usa-checkbox cfa-checkbox">
-  <input type="checkbox" id="checkbox-c812db26cd968" name="checkbox['a49efa950933']" value="option-b" class="usa-checkbox__input usa-checkbox__input--tile">
-  <label for="checkbox-c812db26cd968" class="usa-checkbox__label">
+  <input type="checkbox" id="checkbox-64ca03fa377e4" name="checkbox['098caca455d7a']" value="option-b" class="usa-checkbox__input usa-checkbox__input--tile">
+  <label for="checkbox-64ca03fa377e4" class="usa-checkbox__label">
     <span>Option B</span>
   </label>
 </div>
@@ -312,21 +320,21 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f9eb239c2648">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-655c952397607">
           View HTML
         </button>
       </div>
-      <div id="aria-c-f9eb239c2648" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-655c952397607" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-ffeac7702fa43&quot; name=&quot;checkbox['a49efa950933']&quot; value=&quot;option-a&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-  &lt;label for=&quot;checkbox-ffeac7702fa43&quot; class=&quot;usa-checkbox__label&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-905d5cb768113&quot; name=&quot;checkbox['098caca455d7a']&quot; value=&quot;option-a&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+  &lt;label for=&quot;checkbox-905d5cb768113&quot; class=&quot;usa-checkbox__label&quot;&gt;
     &lt;span&gt;Option A&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-c812db26cd968&quot; name=&quot;checkbox['a49efa950933']&quot; value=&quot;option-b&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-  &lt;label for=&quot;checkbox-c812db26cd968&quot; class=&quot;usa-checkbox__label&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-64ca03fa377e4&quot; name=&quot;checkbox['098caca455d7a']&quot; value=&quot;option-b&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+  &lt;label for=&quot;checkbox-64ca03fa377e4&quot; class=&quot;usa-checkbox__label&quot;&gt;
     &lt;span&gt;Option B&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;</pre>
@@ -339,15 +347,15 @@
   <div class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">Checkboxes with descriptions</figcaption>
     <div class="usa-checkbox cfa-checkbox">
-  <input type="checkbox" id="checkbox-1ed29efcf5708" name="checkbox['9943355175aa5']" value="option-a" class="usa-checkbox__input usa-checkbox__input--tile">
-  <label for="checkbox-1ed29efcf5708" class="usa-checkbox__label">
+  <input type="checkbox" id="checkbox-188135a1fc1b9" name="checkbox['ad23c9596abea']" value="option-a" class="usa-checkbox__input usa-checkbox__input--tile">
+  <label for="checkbox-188135a1fc1b9" class="usa-checkbox__label">
     <span>Option A</span>
     <span class="usa-checkbox__label-description">Option description</span>
   </label>
 </div>
 <div class="usa-checkbox cfa-checkbox">
-  <input type="checkbox" id="checkbox-b44fce67bc4c" name="checkbox['9943355175aa5']" value="option-b" class="usa-checkbox__input usa-checkbox__input--tile">
-  <label for="checkbox-b44fce67bc4c" class="usa-checkbox__label">
+  <input type="checkbox" id="checkbox-4a7199ffa67fa" name="checkbox['ad23c9596abea']" value="option-b" class="usa-checkbox__input usa-checkbox__input--tile">
+  <label for="checkbox-4a7199ffa67fa" class="usa-checkbox__label">
     <span>Option B</span>
     <span class="usa-checkbox__label-description">Option description</span>
   </label>
@@ -356,22 +364,22 @@
   <div class="margin-0">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-88c01c44ba337">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c810c935c098">
           View HTML
         </button>
       </div>
-      <div id="aria-c-88c01c44ba337" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-c810c935c098" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <pre class="language-html">&lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1ed29efcf5708&quot; name=&quot;checkbox['9943355175aa5']&quot; value=&quot;option-a&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-  &lt;label for=&quot;checkbox-1ed29efcf5708&quot; class=&quot;usa-checkbox__label&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-188135a1fc1b9&quot; name=&quot;checkbox['ad23c9596abea']&quot; value=&quot;option-a&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+  &lt;label for=&quot;checkbox-188135a1fc1b9&quot; class=&quot;usa-checkbox__label&quot;&gt;
     &lt;span&gt;Option A&lt;/span&gt;
     &lt;span class=&quot;usa-checkbox__label-description&quot;&gt;Option description&lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-b44fce67bc4c&quot; name=&quot;checkbox['9943355175aa5']&quot; value=&quot;option-b&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-  &lt;label for=&quot;checkbox-b44fce67bc4c&quot; class=&quot;usa-checkbox__label&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-4a7199ffa67fa&quot; name=&quot;checkbox['ad23c9596abea']&quot; value=&quot;option-b&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+  &lt;label for=&quot;checkbox-4a7199ffa67fa&quot; class=&quot;usa-checkbox__label&quot;&gt;
     &lt;span&gt;Option B&lt;/span&gt;
     &lt;span class=&quot;usa-checkbox__label-description&quot;&gt;Option description&lt;/span&gt;
   &lt;/label&gt;
@@ -476,7 +484,7 @@
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/uswds/img/sprite.svg#folder_open"></use></svg></span>
   <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-input-select" target="_blank" class="usa-link--external code">@codeforamerica/uswds/packages/cfa-input-select</a></span>
 </p>
-<p>Packages are collections of functionality that make up a component. Typically they include, stylesheets, templates, and scripts. Learn more about packages on the <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS documentation site</a>.</p>
+<p>Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.</p>
 <ul class="usa-content-list">
   <li>
     <strong>Sass stylesheet:</strong> <code>./_cfa-input-select.scss</code>

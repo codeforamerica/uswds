@@ -1,0 +1,72 @@
+@use 'uswds-core' as *;
+@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../cfa-links/cfa-links' as *;
+
+.cfa-details__summary {
+  @include u-border-bottom($theme-button-stroke-width);
+
+  @include set-text-and-bg(
+    $bg-color: 'primary-lightest',
+    $preferred-text-color: 'primary-darker',
+    $context: 'CfA Details'
+  );
+
+  padding: units(0.5) units(1.5);
+  padding-inline-end: units(0.5);
+
+  cursor: pointer;
+  display: inline-block;
+  appearance: none;
+
+  // Hide the default arrow on Safari
+  &::-webkit-details-marker {
+    display: none
+  }
+
+  > .usa-icon {
+    margin-bottom: -0.2rem;
+    pointer-events: none;
+
+    &:first-child {
+      margin-inline-end: units(0.5);
+    }
+
+    &:last-child {
+      margin-inline-start: units(0.5);
+    }
+  }
+
+  &:focus {
+    @include focus-outline
+  }
+}
+
+.cfa-details__content {
+  @include u-radius('md');
+
+  border: $theme-accordion-border;
+  padding: units(1) units(1.5);
+  margin-top: units(2);
+
+  @include set-text-and-bg(
+    $bg-color: $theme-color-base-lightest,
+    $preferred-text-color: 'ink',
+    $context: 'CfA Details'
+  );
+
+  @include cfa-link-selectors {
+    @include set-link-from-bg(
+      $bg-color: $theme-color-base-lightest,
+      $preferred-link-color: $theme-color-primary-dark,
+      $context: 'CfA Details'
+    );
+  }
+}
+
+.cfa-details {
+  &[open] {
+    .cfa-details__summary > .usa-icon {
+      transform: rotate(90deg)
+    }
+  }
+}
