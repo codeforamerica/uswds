@@ -3,9 +3,9 @@
     <button type="button" class="usa-accordion__button" th:attr="aria-expanded=${item.expanded},aria-controls=${item.controls}" th:text="${item.heading}">Heading</button>
   </h3>
 
-  <div th:if="${item.body}" th:attr="id=${item.controls}" class="usa-accordion__content usa-prose" th:utext="${item.body}"></div>
+  <div th:if="${item.body}" th:attr="id=${item.controls}" class="usa-accordion__content" th:utext="${item.body}"></div>
 
-  <div th:if="${item.text}" th:attr="id=${item.controls}" class="usa-accordion__content usa-prose">
+  <div th:if="${item.text}" th:attr="id=${item.controls}" class="usa-accordion__content">
     <p th:text="${item.text}">Text</p>
   </div>
 </div>

@@ -5,9 +5,9 @@
     </svg>
   </summary>
 
-  <div th:if="${body}" class="cfa-details__content usa-prose" th:utext="${body}"></div>
+  <div th:if="${body}" class="cfa-details__content" th:utext="${body}"></div>
 
-  <div th:if="${text}" class="cfa-details__content usa-prose">
+  <div th:if="${text}" class="cfa-details__content">
     <p th:text="${text}">Text</p>
   </div>
 </details>

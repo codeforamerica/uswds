@@ -156,6 +156,7 @@ in the form $setting: value,
   $theme-type-scale-2xl: 15,   // h1
   $theme-type-scale-3xl: 17,   // Pushing this more because h1 is originally set to 15
 
+  $theme-style-body-element: true, // Not well documented but necessary to make type size and line heights consistent with .usa-prose
   $theme-body-line-height: 4,
   $theme-h6-font-size: 'xs',
   $theme-small-font-size: 'xs',
