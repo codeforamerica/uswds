@@ -2,7 +2,7 @@
 tags: component
 title: Identifier
 layout: default
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds: https://designsystem.digital.gov/components/identifier
 url_uswds_guidance: https://designsystem.digital.gov/components/identifier/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/identifier/#using-the-footer-component-2
@@ -17,7 +17,7 @@ styles: false
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
 
 <!-- DETAILS -->
 

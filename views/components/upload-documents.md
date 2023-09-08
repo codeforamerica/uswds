@@ -2,7 +2,7 @@
 tags: component
 title: Upload documents
 layout: default
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -13,11 +13,12 @@ modifier_honeycrisp: false
 design_honeycrisp: false
 tokens: false
 styles: false
+intro: intro
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
 
 <!-- DETAILS -->
 

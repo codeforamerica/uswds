@@ -2,7 +2,7 @@
 tags: component
 title: Form card
 layout: default
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds: https://designsystem.digital.gov/components/form
 url_uswds_guidance: https://designsystem.digital.gov/components/form
 url_uswds_usage: https://designsystem.digital.gov/components/form
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections.
+Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections. {.usa-prose}
 
 <!-- DETAILS -->
 

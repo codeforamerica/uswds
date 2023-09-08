@@ -2,7 +2,7 @@
 tags: component
 title: Button
 layout: default
-intro: '"I use buttons to find important links or submit online applications"'
+story: '"I use buttons to find important links or submit online applications"'
 url_uswds: https://designsystem.digital.gov/components/button
 url_uswds_guidance: https://designsystem.digital.gov/components/button/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/button/#using-the-button-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Buttons allow users to trigger actions. They are styled consistently according to their importance and the type of action they enable the user to perform.
+Buttons allow users to trigger actions. They are styled consistently according to their importance and the type of action they enable the user to perform. {.usa-prose}
 
 <!-- DETAILS -->
 

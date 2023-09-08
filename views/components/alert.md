@@ -2,7 +2,7 @@
 tags: component
 title: Alert
 layout: default
-intro: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
+story: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
 url_uswds: https://designsystem.digital.gov/components/alert
 url_uswds_guidance: https://designsystem.digital.gov/components/alert/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/alert/#using-the-alert-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Alerts distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
+Alerts distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction. {.usa-prose}
 
 <!-- DETAILS -->
 

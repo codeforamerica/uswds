@@ -2,7 +2,7 @@
 tags: component
 title: Accordion
 layout: default
-intro: '"An accordion helps me scan long pages by letting me show or hide information."'
+story: '"An accordion helps me scan long pages by letting me show or hide information."'
 url_uswds: https://designsystem.digital.gov/components/accordion
 url_uswds_guidance: https://designsystem.digital.gov/components/accordion/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/accordion/#using-the-accordion-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Accordions allow users to find information on a page by clicking content headings to expand or hide content beneath. They are always used to collapse multiple heading groups and are most useful for fitting content into a limited space.
+Accordions allow users to find information on a page by clicking content headings to expand or hide content beneath. They are always used to collapse multiple heading groups and are most useful for fitting content into a limited space. {.usa-prose}
 
 <!-- DETAILS -->
 
