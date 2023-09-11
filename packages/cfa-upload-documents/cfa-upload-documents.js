@@ -104,7 +104,9 @@ class UploadDocuments {
       this.drop(event);
     };
 
-    /** */
+    /**
+     * Initialize Dropzone
+     */
 
     return new Dropzone(region, options);
   }

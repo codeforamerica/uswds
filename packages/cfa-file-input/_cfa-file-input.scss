@@ -1,6 +1,6 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-transition/cfa-transition' as *;
+@use '../cfa-transition/_cfa-transition.scss' as *;
 
 .cfa-file-input {
   .usa-file-input__target {

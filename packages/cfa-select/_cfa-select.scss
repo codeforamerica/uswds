@@ -1,6 +1,6 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-input/cfa-input.scss';
+@use '../cfa-input/_cfa-input.scss';
 
 .cfa-select {
   @include set-text-and-bg(

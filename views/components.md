@@ -20,7 +20,7 @@ The {{ package.nice }} contains customizations for the following components.
         </h3>
       </header>
       <div class="usa-card__body font-lang-sm">
-        <p>{{ item.data.intro }}</p>
+        <p>{{ item.data.story }}</p>
       </div>
     </div>
   </li>

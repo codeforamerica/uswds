@@ -1,7 +1,7 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-transition/cfa-transition' as *;
-@use '../cfa-links/cfa-links' as *;
+@use '../cfa-transition/_cfa-transition.scss' as *;
+@use '../cfa-links/_cfa-links.scss' as *;
 
 /**
  * Match closest size of small CfA buttons

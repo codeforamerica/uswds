@@ -1,6 +1,6 @@
 @use 'uswds-core' as *;
 @use '../../scss/theme/_uswds-theme-shared.scss' as *;
-@use '../cfa-links/cfa-links' as *;
+@use '../cfa-links/_cfa-links.scss' as *;
 
 .cfa-accordion {
   .usa-accordion__button {

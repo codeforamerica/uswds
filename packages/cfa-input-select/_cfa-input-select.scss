@@ -1,7 +1,7 @@
 @use 'sass:string';
 @use 'uswds-core' as *;
 @use 'uswds-theme-shared' as *;
-@use '../cfa-transition/cfa-transition' as *;
+@use '../cfa-transition/_cfa-transition.scss' as *;
 
 @mixin theme-input-select($input-select-type: 'checkbox') {
   .cfa-#{$input-select-type} {
