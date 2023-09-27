@@ -8,25 +8,29 @@ window.uswdsPresent = true; // GLOBAL variable to indicate that the uswds.js has
 
 /**
  * The 'polyfills' define key ECMAScript 5 methods that may be missing from
- * older browsers, so must be loaded first.
+ * older browsers, so must be imported first.
  */
 
-require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills');
+import polyfills from '../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills';
 
-const uswds = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/config');
+import uswds from '../node_modules/@uswds/uswds/packages/uswds-core/src/js/config';
 
-const components = require('./components');
-const svg4everybody = require('../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills/svg4everybody');
-const MaskDollars = require('./mask-dollars.js');
-const MaskTel = require('./mask-tel.js');
-const MaskSSN = require('./mask-ssn.js');
-const FollowUpQuestion = require('../packages/cfa-follow-up-question/cfa-follow-up-question.js');
-const UploadDocuments = require('../packages/cfa-upload-documents/cfa-upload-documents.js');
+import components from './components';
+import svg4everybody from '../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills/svg4everybody';
+import MaskDollars from './mask-dollars.js';
+import MaskTel from './mask-tel.js';
+import MaskSSN from './mask-ssn.js';
+import FollowUpQuestion from '../packages/cfa-follow-up-question/cfa-follow-up-question.js';
+import UploadDocuments from '../packages/cfa-upload-documents/cfa-upload-documents.js';
 
 uswds.components = components;
 
 const initComponents = () => {
   const target = document.body;
+
+  /**
+   * USWDS Components
+   */
 
   Object.keys(components).forEach(key => {
     const behavior = components[key];
@@ -36,11 +40,27 @@ const initComponents = () => {
 
   svg4everybody();
 
+  /**
+   * CfA Theme Utilities and Components
+   */
+
   new MaskDollars();
   new MaskTel();
   new MaskSSN();
   new FollowUpQuestion();
-  new UploadDocuments();
+
+  /**
+   * Upload Documents Component
+   */
+  (elements => {
+    for (let i = 0; i < elements.length; i++) {
+      new UploadDocuments(elements[i], {
+        dropzoneOptions: {
+          url: 'https://app-46361.on-aptible.com/file-upload'
+        }
+      });
+    }
+  })(document.querySelectorAll(UploadDocuments.selector));
 };
 
 if (document.readyState === 'loading') {
@@ -48,7 +68,3 @@ if (document.readyState === 'loading') {
 } else {
   initComponents();
 }
-
-// This script is self-executing so no need to export
-// exports.default = uswds;
-// exports.initComponents = initComponents;

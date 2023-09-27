@@ -11,25 +11,26 @@ class UploadDocuments {
   /**
    * Constructor
    *
-   * @param   {Object}  s  Optional settings configuration that will be processed and passed to Dropzone
+   * @param  {Object}  element  Required. A pre-queried Dropzone element to initialize
+   * @param  {Object}  s        Optional settings configuration that will be processed and passed to Dropzone
    *
-   * @return  {Object}     Instance of UploadDocuments
+   * @return {Object}           Instance of UploadDocuments
    */
-  constructor(s = {}) {
+  constructor(element, s = {}) {
+    this.element = element;
+
     this.dropzoneOptions = s.dropzoneOptions ?
       Object.assign(UploadDocuments.dropzoneOptions, s.dropzoneOptions) : UploadDocuments.dropzoneOptions;
 
+    this.mockFiles = s.mockFiles ? s.mockFiles : [];
+
     /**
-     * Initialize Dropzone regions
+     * Configure and initialize Dropzone and chain custom utility initialization
      */
 
-    this.dropzones = document.querySelectorAll(UploadDocuments.selector);
+    this.dropzone = this.configDropzone(this.element, this.dropzoneOptions);
 
-    for (let i = 0; i < this.dropzones.length; i++) {
-      let dz = this.configDropzone(this.dropzones[i], this.dropzoneOptions)
-
-      this.init(dz);
-    }
+    this.init(this.dropzone);
 
     /**
      * Event handlers for development
@@ -127,12 +128,23 @@ class UploadDocuments {
       .swapFallback(dz);
 
     dz.on('addedfile', file => {
-      this.addedfile(file, dz);
+      this.addedfile(dz, file);
     });
 
     dz.on('removedfile', file => {
       this.maxFiles(dz);
     });
+
+    console.dir(this);
+
+    /**
+     * Add previously uploaded documents
+     */
+    if (this.mockfiles.length) {
+      for (let i = 0; i < this.mockfiles.length; i++) {
+        this.addMockFile(this.mockfiles[i]);
+      }
+    }
 
     return this;
   }
@@ -225,12 +237,12 @@ class UploadDocuments {
   /**
    * Event handler for added files
    *
-   * @param   {Object}  file  Most recently added Dropzone file object
    * @param   {Object}  dz    Instance of Dropzone
+   * @param   {Object}  file  Most recently added Dropzone file object
    *
    * @return  {Object}        Instance of UploadDocuments
    */
-  addedfile(file, dz) {
+  addedfile(dz, file) {
     this.formatFilename(file)
       .maxFiles(dz);
 
@@ -250,6 +262,7 @@ class UploadDocuments {
 
     /**
      * Get filename extension
+     *
      * @source https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
      */
 
@@ -297,6 +310,40 @@ class UploadDocuments {
 
     return this;
   }
+
+  /**
+   * [addMockFile description]
+   *
+   * @param   {Object}  dz    Instance of Dropzone
+   * @param   {Object}  file  Object containing parameters needed to mock a file: {
+   *                            @name:     {String}   file name including extension,
+   *                            @size:     {Number}   file size in bytes,
+   *                            @type:     {String}   file type,
+   *                            @id:       {String}   file ID,
+   *                            @dataURL:  {String}   data encoded URI of the image thumbnail,
+   *                            @accepted: {Boolean}  defaults to true
+   *                          }
+   *                          Example: {
+   *                            name: 'filename.png',
+   *                            size: 192435,
+   *                            type: 'image/png',
+   *                            id: '0f488973-63e2-4a1d-a509-d1b492f10344',
+   *                            dataURL: "data:image/png;base64,...",
+   *                            accepted: true
+   *                          }
+   *
+   * @return  {Object}        Instance of UploadDocuments
+   */
+  addMockFile(dz, file) {
+    dz.files.push(file);
+
+    dz.emit('addedfile', file);
+    dz.emit('thumbnail', file, file.dataURL);
+    dz.emit('success', file, file.id);
+    dz.emit('complete', file);
+
+    return this;
+  }
 }
 
 /** @type  {String}  The main selector for Upload Document components **/
@@ -321,7 +368,6 @@ UploadDocuments.classes = {
 
 /** @type  {Object}  Default options to pass to the Dropzone library **/
 UploadDocuments.dropzoneOptions = {
-  'url': 'https://app-46361.on-aptible.com/file-upload',
   'clickable': UploadDocuments.selectors.dragRegion,
   'thumbnailMethod': 'crop',
   'thumbnailWidth': 8, // to be multiplied by 8

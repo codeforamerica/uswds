@@ -1,35 +1,9 @@
-var Default = (function () {
+(function () {
 	'use strict';
 
-	function getAugmentedNamespace(n) {
-	  if (n.__esModule) return n;
-	  var f = n.default;
-		if (typeof f == "function") {
-			var a = function a () {
-				if (this instanceof a) {
-					var args = [null];
-					args.push.apply(args, arguments);
-					var Ctor = Function.bind.apply(f, args);
-					return new Ctor();
-				}
-				return f.apply(this, arguments);
-			};
-			a.prototype = f.prototype;
-	  } else a = {};
-	  Object.defineProperty(a, '__esModule', {value: true});
-		Object.keys(n).forEach(function (k) {
-			var d = Object.getOwnPropertyDescriptor(n, k);
-			Object.defineProperty(a, k, d.get ? d : {
-				enumerable: true,
-				get: function () {
-					return n[k];
-				}
-			});
-		});
-		return a;
+	function getDefaultExportFromCjs (x) {
+		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 	}
-
-	var js = {};
 
 	/*
 	 * classList.js: Cross-browser full element.classList implementation.
@@ -500,10 +474,13 @@ var Default = (function () {
 	});
 
 	var svg4everybodyExports = svg4everybody$1.exports;
+	var svg4everybody = /*@__PURE__*/getDefaultExportFromCjs(svg4everybodyExports);
 
 	var config = {
 	  prefix: "usa",
 	};
+
+	var uswds = /*@__PURE__*/getDefaultExportFromCjs(config);
 
 	/**
 	 * @name isElement
@@ -1981,7 +1958,7 @@ var Default = (function () {
 	// const timePicker = require('../node_modules/@uswds/uswds/packages/usa-time-picker/src/index');
 	const tooltip = src;
 
-	var components$1 = {
+	var components = {
 	  accordion,
 	  // banner,
 	  button,
@@ -2004,6 +1981,8 @@ var Default = (function () {
 	  tooltip,
 	  // validator
 	};
+
+	var components$1 = /*@__PURE__*/getDefaultExportFromCjs(components);
 
 	var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -3562,7 +3541,7 @@ var Default = (function () {
 	// CommonJS
 	var Cleave_1 = Cleave;
 
-	let MaskDollars$1 = class MaskDollars {
+	class MaskDollars {
 	  constructor() {
 	    let dollars = document.querySelectorAll('[data-js="mask-dollars"]');
 
@@ -3590,16 +3569,9 @@ var Default = (function () {
 	      });
 	    }
 	  }
-	};
+	}
 
-	var maskDollars = /*#__PURE__*/Object.freeze({
-		__proto__: null,
-		default: MaskDollars$1
-	});
-
-	var require$$4 = /*@__PURE__*/getAugmentedNamespace(maskDollars);
-
-	let MaskTel$1 = class MaskTel {
+	class MaskTel {
 	  constructor() {
 	    let phones = document.querySelectorAll('[data-js="mask-tel"]');
 
@@ -3611,16 +3583,9 @@ var Default = (function () {
 	      });
 	    }
 	  }
-	};
+	}
 
-	var maskTel = /*#__PURE__*/Object.freeze({
-		__proto__: null,
-		default: MaskTel$1
-	});
-
-	var require$$5 = /*@__PURE__*/getAugmentedNamespace(maskTel);
-
-	let MaskSSN$1 = class MaskSSN {
+	class MaskSSN {
 	  constructor() {
 	    let ssns = document.querySelectorAll('[data-js="mask-ssn"]');
 
@@ -3632,16 +3597,9 @@ var Default = (function () {
 	      });
 	    }
 	  }
-	};
+	}
 
-	var maskSsn = /*#__PURE__*/Object.freeze({
-		__proto__: null,
-		default: MaskSSN$1
-	});
-
-	var require$$6 = /*@__PURE__*/getAugmentedNamespace(maskSsn);
-
-	let FollowUpQuestion$1 = class FollowUpQuestion {
+	class FollowUpQuestion {
 	  /**
 	   * Follow up constructor
 	   *
@@ -3823,32 +3781,25 @@ var Default = (function () {
 
 	    return this;
 	  }
-	};
+	}
 
 	/** @type  {String}  The main selector for the follow up question component event listening */
-	FollowUpQuestion$1.selector = '[data-js="follow-up-question"]';
+	FollowUpQuestion.selector = '[data-js="follow-up-question"]';
 
 	/** @type  {Array}  A list of potentially focusable element selectors */
-	FollowUpQuestion$1.elFocusable = [
+	FollowUpQuestion.elFocusable = [
 	  'a', 'button', 'input', 'select', 'textarea', 'object', 'embed', 'form',
 	  'fieldset', 'legend', 'label', 'area', 'audio', 'video', 'iframe', 'svg',
 	  'details', 'table', '[tabindex]', '[contenteditable]', '[usemap]'
 	];
 
 	/** @type  {Array}  A list of form elements that can be disabled */
-	FollowUpQuestion$1.elDisabled = [
+	FollowUpQuestion.elDisabled = [
 	  'button', 'fieldset', 'select', 'textarea', 'input'
 	];
 
 	/** @type  {Boolean}  Wether to add the aria-expanded attribute to the radio button, which at the time of authoring, is an invalid use of aria */
-	FollowUpQuestion$1.ariaExpanded = false;
-
-	var cfaFollowUpQuestion = /*#__PURE__*/Object.freeze({
-		__proto__: null,
-		default: FollowUpQuestion$1
-	});
-
-	var require$$7 = /*@__PURE__*/getAugmentedNamespace(cfaFollowUpQuestion);
+	FollowUpQuestion.ariaExpanded = false;
 
 	var dropzone = {exports: {}};
 
@@ -14158,29 +14109,30 @@ var Default = (function () {
 	 *
 	 * Compatible with @dropzone v5.9.3
 	 */
-	let UploadDocuments$1 = class UploadDocuments {
+	class UploadDocuments {
 	  /**
 	   * Constructor
 	   *
-	   * @param   {Object}  s  Optional settings configuration that will be processed and passed to Dropzone
+	   * @param  {Object}  element  Required. A pre-queried Dropzone element to initialize
+	   * @param  {Object}  s        Optional settings configuration that will be processed and passed to Dropzone
 	   *
-	   * @return  {Object}     Instance of UploadDocuments
+	   * @return {Object}           Instance of UploadDocuments
 	   */
-	  constructor(s = {}) {
+	  constructor(element, s = {}) {
+	    this.element = element;
+
 	    this.dropzoneOptions = s.dropzoneOptions ?
 	      Object.assign(UploadDocuments.dropzoneOptions, s.dropzoneOptions) : UploadDocuments.dropzoneOptions;
 
+	    this.mockFiles = s.mockFiles ? s.mockFiles : [];
+
 	    /**
-	     * Initialize Dropzone regions
+	     * Configure and initialize Dropzone and chain custom utility initialization
 	     */
 
-	    this.dropzones = document.querySelectorAll(UploadDocuments.selector);
+	    this.dropzone = this.configDropzone(this.element, this.dropzoneOptions);
 
-	    for (let i = 0; i < this.dropzones.length; i++) {
-	      let dz = this.configDropzone(this.dropzones[i], this.dropzoneOptions);
-
-	      this.init(dz);
-	    }
+	    this.init(this.dropzone);
 
 	    /**
 	     * Event handlers for development
@@ -14255,7 +14207,9 @@ var Default = (function () {
 	      this.drop(event);
 	    };
 
-	    /** */
+	    /**
+	     * Initialize Dropzone
+	     */
 
 	    return new dropzoneExports.Dropzone(region, options);
 	  }
@@ -14276,12 +14230,23 @@ var Default = (function () {
 	      .swapFallback(dz);
 
 	    dz.on('addedfile', file => {
-	      this.addedfile(file, dz);
+	      this.addedfile(dz, file);
 	    });
 
 	    dz.on('removedfile', file => {
 	      this.maxFiles(dz);
 	    });
+
+	    console.dir(this);
+
+	    /**
+	     * Add previously uploaded documents
+	     */
+	    if (this.mockfiles.length) {
+	      for (let i = 0; i < this.mockfiles.length; i++) {
+	        this.mockAddedFile(this.mockfiles[i]);
+	      }
+	    }
 
 	    return this;
 	  }
@@ -14374,12 +14339,12 @@ var Default = (function () {
 	  /**
 	   * Event handler for added files
 	   *
-	   * @param   {Object}  file  Most recently added Dropzone file object
 	   * @param   {Object}  dz    Instance of Dropzone
+	   * @param   {Object}  file  Most recently added Dropzone file object
 	   *
 	   * @return  {Object}        Instance of UploadDocuments
 	   */
-	  addedfile(file, dz) {
+	  addedfile(dz, file) {
 	    this.formatFilename(file)
 	      .maxFiles(dz);
 
@@ -14399,6 +14364,7 @@ var Default = (function () {
 
 	    /**
 	     * Get filename extension
+	     *
 	     * @source https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
 	     */
 
@@ -14446,13 +14412,47 @@ var Default = (function () {
 
 	    return this;
 	  }
-	};
+
+	  /**
+	   * [mockAddedFile description]
+	   *
+	   * @param   {Object}  dz    Instance of Dropzone
+	   * @param   {Object}  file  Object containing parameters needed to mock a file: {
+	   *                            @name:     {String}   file name including extension,
+	   *                            @size:     {Number}   file size in bytes,
+	   *                            @type:     {String}   file type,
+	   *                            @id:       {String}   file ID,
+	   *                            @dataURL:  {String}   data encoded URI of the image thumbnail,
+	   *                            @accepted: {Boolean}  defaults to true
+	   *                          }
+	   *                          Example: {
+	   *                            name: 'filename.png',
+	   *                            size: 192435,
+	   *                            type: 'image/png',
+	   *                            id: '0f488973-63e2-4a1d-a509-d1b492f10344',
+	   *                            dataURL: "data:image/png;base64,...",
+	   *                            accepted: true
+	   *                          }
+	   *
+	   * @return  {Object}        Instance of UploadDocuments
+	   */
+	  mockAddedFile(dz, file) {
+	    dz.files.push(file);
+
+	    dz.emit('addedfile', file);
+	    dz.emit('thumbnail', file, file.dataURL);
+	    dz.emit('success', file, file.id);
+	    dz.emit('complete', file);
+
+	    return this;
+	  }
+	}
 
 	/** @type  {String}  The main selector for Upload Document components **/
-	UploadDocuments$1.selector = '[data-js="upload-documents"]';
+	UploadDocuments.selector = '[data-js="upload-documents"]';
 
 	/** @type  {Object}  A dictionary of selectors used by the utility class **/
-	UploadDocuments$1.selectors = {
+	UploadDocuments.selectors = {
 	  'dragRegion': '[data-dropzone="drag-and-drop-region"]',
 	  'inputErrorMessage': '[data-dropzone="input-error-message"]',
 	  'fallback': '[data-dropzone="fallback"]',
@@ -14464,14 +14464,13 @@ var Default = (function () {
 	};
 
 	/** @type  {Object}  A dictionary of classes used by the utility class **/
-	UploadDocuments$1.classes = {
+	UploadDocuments.classes = {
 	  'dragOver': 'usa-file-input--drag'
 	};
 
 	/** @type  {Object}  Default options to pass to the Dropzone library **/
-	UploadDocuments$1.dropzoneOptions = {
-	  'url': 'https://app-46361.on-aptible.com/file-upload',
-	  'clickable': UploadDocuments$1.selectors.dragRegion,
+	UploadDocuments.dropzoneOptions = {
+	  'clickable': UploadDocuments.selectors.dragRegion,
 	  'thumbnailMethod': 'crop',
 	  'thumbnailWidth': 8, // to be multiplied by 8
 	  'thumbnailHeight': 8, // to be multiplied by 8
@@ -14480,17 +14479,10 @@ var Default = (function () {
 	};
 
 	/** @type  {Array}  A list of attributes to swap from the fallback file input to the hidden Dropzone input **/
-	UploadDocuments$1.fallbackAttrs = ['class', 'id', 'name', 'aria-labelledby', 'aria-describedby', 'multiple', 'accept'];
+	UploadDocuments.fallbackAttrs = ['class', 'id', 'name', 'aria-labelledby', 'aria-describedby', 'multiple', 'accept'];
 
 	/** @type  {Array}  A list of attributes remove from the hidden Dropzone input **/
-	UploadDocuments$1.removeAttrs = ['tabindex', 'style'];
-
-	var cfaUploadDocuments = /*#__PURE__*/Object.freeze({
-		__proto__: null,
-		default: UploadDocuments$1
-	});
-
-	var require$$8 = /*@__PURE__*/getAugmentedNamespace(cfaUploadDocuments);
+	UploadDocuments.removeAttrs = ['tabindex', 'style'];
 
 	/**
 	 * Copy of @uswds/uswds/packages/uswds-core/src/js/start.js
@@ -14500,41 +14492,44 @@ var Default = (function () {
 
 	window.uswdsPresent = true; // GLOBAL variable to indicate that the uswds.js has loaded in the DOM.
 
-	/**
-	 * The 'polyfills' define key ECMAScript 5 methods that may be missing from
-	 * older browsers, so must be loaded first.
-	 */
-
-
-
-	const uswds = config;
-
-	const components = components$1;
-	const svg4everybody = svg4everybodyExports;
-	const MaskDollars = require$$4;
-	const MaskTel = require$$5;
-	const MaskSSN = require$$6;
-	const FollowUpQuestion = require$$7;
-	const UploadDocuments = require$$8;
-
-	uswds.components = components;
+	uswds.components = components$1;
 
 	const initComponents = () => {
 	  const target = document.body;
 
-	  Object.keys(components).forEach(key => {
-	    const behavior = components[key];
+	  /**
+	   * USWDS Components
+	   */
+
+	  Object.keys(components$1).forEach(key => {
+	    const behavior = components$1[key];
 
 	    behavior.on(target);
 	  });
 
 	  svg4everybody();
 
+	  /**
+	   * CfA Theme Utilities and Components
+	   */
+
 	  new MaskDollars();
 	  new MaskTel();
 	  new MaskSSN();
 	  new FollowUpQuestion();
-	  new UploadDocuments();
+
+	  /**
+	   * Upload Documents Component
+	   */
+	  (elements => {
+	    for (let i = 0; i < elements.length; i++) {
+	      new UploadDocuments(elements[i], {
+	        dropzoneOptions: {
+	          url: 'https://app-46361.on-aptible.com/file-upload'
+	        }
+	      });
+	    }
+	  })(document.querySelectorAll(UploadDocuments.selector));
 	};
 
 	if (document.readyState === 'loading') {
@@ -14542,7 +14537,5 @@ var Default = (function () {
 	} else {
 	  initComponents();
 	}
-
-	return js;
 
 })();
