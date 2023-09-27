@@ -140,10 +140,8 @@ class UploadDocuments {
     /**
      * Add previously uploaded documents
      */
-    if (this.mockfiles.length) {
-      for (let i = 0; i < this.mockfiles.length; i++) {
-        this.addMockFile(this.mockfiles[i]);
-      }
+    for (let i = 0; i < this.mockFiles.length; i++) {
+      this.addMockFile(this.mockFiles[i]);
     }
 
     return this;
@@ -312,7 +310,7 @@ class UploadDocuments {
   }
 
   /**
-   * [addMockFile description]
+   * Forces the display of a previously uploaded document programatically.
    *
    * @param   {Object}  dz    Instance of Dropzone
    * @param   {Object}  file  Object containing parameters needed to mock a file: {
