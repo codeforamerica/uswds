@@ -14105,7 +14105,7 @@
 	dropzoneExports.Dropzone.autoDiscover = false;
 
 	/**
-	 * A utility class for the Dropzone library
+	 * A utility class for interacting with the Dropzone library
 	 *
 	 * Compatible with @dropzone v5.9.3
 	 */
@@ -14119,6 +14119,8 @@
 	   * @return {Object}           Instance of UploadDocuments
 	   */
 	  constructor(element, s = {}) {
+	    this.selectors = s.selectors ? s.selectors : UploadDocuments.selectors;
+
 	    this.element = element;
 
 	    this.dropzoneOptions = s.dropzoneOptions ?
@@ -14127,10 +14129,14 @@
 	    this.mockFiles = s.mockFiles ? s.mockFiles : [];
 
 	    /**
-	     * Configure and initialize Dropzone and chain custom utility initialization
+	     * Configure and initialize Dropzone
 	     */
 
-	    this.dropzone = this.configDropzone(this.element, this.dropzoneOptions);
+	    this.dropzone = this.configDropzone(this.dropzoneOptions);
+
+	    /**
+	     * Append custom init method. This is not the same as the Dropzone init callback
+	     */
 
 	    this.init(this.dropzone);
 
@@ -14138,15 +14144,16 @@
 	     * Event handlers for development
 	     */
 
-	    // if (process.env.NODE_ENV === 'development') {
-	    document.querySelector('body')
-	      .addEventListener('click', event => {
+	    {
+	      document.querySelector('body').addEventListener('click', event => {
 	        if (event.target.matches('[data-dropzone="toggle-preview-state"]')) {
 	          event.target.closest('[data-dropzone="preview-template"]')
 	            .className = event.target.dataset.dropzonePreviewState;
 	        }
-	    });
-	    // }
+	      });
+	    }
+
+	    console.dir(this);
 
 	    return this;
 	  }
@@ -14155,25 +14162,28 @@
 	   * Set Dropzone options, relevant to the template, and initialize Dropzone.
 	   * @source https://github.com/dropzone/dropzone/blob/main/src/options.js
 	   *
-	   * @param   {Element}  region   A Dropzone element to extract configuration from and pass to the Dropzone class
 	   * @param   {Object}   options  Options to pass to configure and pass to the Dropzone class
 	   *
 	   * @return  {Object}            Instance of UploadDocuments
 	   */
-	  configDropzone(region, options) {
-	    let input = region.querySelector(UploadDocuments.selectors.input);
-	    let previewsContainer = region.querySelector(UploadDocuments.selectors.previewsContainer);
-	    let previewTemplate = region.querySelector(UploadDocuments.selectors.previewTemplate);
-	    let hiddenInputContainer = region.querySelector(UploadDocuments.selectors.hiddenInputContainer);
-	    let dict = region.querySelectorAll(UploadDocuments.selectors.dict);
+	  configDropzone(options) {
+	    let input = this.element.querySelector(this.selectors.input);
+	    let previewsContainer = this.element.querySelector(this.selectors.previewsContainer);
+	    let previewTemplate = this.element.querySelector(this.selectors.previewTemplate);
+	    let thumbnail = previewTemplate.querySelector(this.selectors.thumbnail);
+	    let hiddenInputContainer = this.element.querySelector(this.selectors.hiddenInputContainer);
+	    let dict = this.element.querySelectorAll(this.selectors.dict);
+
+	    thumbnail.classList.add(`width-${options.thumbnailWidth}`);
+	    thumbnail.classList.add(`height-${options.thumbnailHeight}`);
+
+	    options.thumbnailWidth = options.thumbnailWidth * 8;
+	    options.thumbnailHeight = options.thumbnailHeight * 8;
 
 	    options.previewsContainer = (previewsContainer) ? previewsContainer : null;
 	    options.previewTemplate = (previewTemplate) ? previewTemplate.outerHTML : null;
 
 	    options.acceptedFiles = (input) ? input.getAttribute('accept') : null;
-
-	    options.thumbnailWidth = options.thumbnailWidth * 8;
-	    options.thumbnailHeight = options.thumbnailHeight * 8;
 
 	    options.hiddenInputContainer = (hiddenInputContainer) ? hiddenInputContainer : region;
 
@@ -14211,7 +14221,7 @@
 	     * Initialize Dropzone
 	     */
 
-	    return new dropzoneExports.Dropzone(region, options);
+	    return new dropzoneExports.Dropzone(this.element, options);
 	  }
 
 	  /**
@@ -14219,31 +14229,28 @@
 	   * init event handler. However, this handler does trigger after Dropzone is
 	   * initialized.
 	   *
-	   * @param   {Object}  dz  Instance of Dropzone
-	   *
 	   * @return  {Object}      Instance of UploadDocuments
 	   */
-	  init(dz) {
-	    console.dir(dz);
+	  init() {
+	    this.maxFiles()
+	      .swapFallback();
 
-	    this.maxFiles(dz)
-	      .swapFallback(dz);
-
-	    dz.on('addedfile', file => {
-	      this.addedfile(dz, file);
+	    this.dropzone.on('addedfile', file => {
+	      this.formatFilename(file)
+	        .maxFiles()
+	        .uploadedNumber();
 	    });
 
-	    dz.on('removedfile', file => {
-	      this.maxFiles(dz);
+	    this.dropzone.on('removedfile', file => {
+	      this.maxFiles()
+	        .uploadedNumber();
 	    });
-
-	    console.dir(this);
 
 	    /**
 	     * Add previously uploaded documents
 	     */
 	    for (let i = 0; i < this.mockFiles.length; i++) {
-	      this.addMockFile(this.mockFiles[i]);
+	      this.addFile(this.mockFiles[i]);
 	    }
 
 	    return this;
@@ -14254,18 +14261,16 @@
 	   * Dropzone file input. This makes the presentation of the Dropzone element
 	   * compatible with the default USWDS File Input component.
 	   *
-	   * @param   {Object}  dz  Initialized Dropzone instance
-	   *
 	   * @return  {Object}      Instance of UploadDocuments
 	   */
-	  swapFallback(dz) {
-	    let fallback = dz.element.querySelector(UploadDocuments.selectors.fallback);
+	  swapFallback() {
+	    let fallback = this.dropzone.element.querySelector(UploadDocuments.selectors.fallback);
 
 	    for (let i = 0; i < UploadDocuments.fallbackAttrs.length; i++) {
 	      let attr = UploadDocuments.fallbackAttrs[i];
 	      let value = fallback.getAttribute(attr);
 
-	      if (value) dz.hiddenFileInput.setAttribute(attr, value);
+	      if (value) this.dropzone.hiddenFileInput.setAttribute(attr, value);
 	    }
 
 	    fallback.remove();
@@ -14273,7 +14278,7 @@
 	    for (let i = 0; i < UploadDocuments.removeAttrs.length; i++) {
 	      let attr = UploadDocuments.removeAttrs[i];
 
-	      dz.hiddenFileInput.removeAttribute(attr);
+	      this.dropzone.hiddenFileInput.removeAttribute(attr);
 	    }
 
 	    return this;
@@ -14323,28 +14328,12 @@
 	     * Shift focus to the uploads header with additional information
 	     */
 
-	    let header = event.srcElement.closest(UploadDocuments.selector)
-	      .querySelector(UploadDocuments.selectors.uploadsHeader);
+	    let header = this.element.querySelector(UploadDocuments.selectors.uploadsHeader);
 
 	    if (header) {
 	      header.setAttribute('tabindex', '-1');
 	      header.focus();
 	    }
-
-	    return this;
-	  }
-
-	  /**
-	   * Event handler for added files
-	   *
-	   * @param   {Object}  dz    Instance of Dropzone
-	   * @param   {Object}  file  Most recently added Dropzone file object
-	   *
-	   * @return  {Object}        Instance of UploadDocuments
-	   */
-	  addedfile(dz, file) {
-	    this.formatFilename(file)
-	      .maxFiles(dz);
 
 	    return this;
 	  }
@@ -14381,26 +14370,38 @@
 	  }
 
 	  /**
+	   * Update the uploaded number inner text to reflect the number of added files
+	   */
+	  uploadedNumber() {
+	    let number = this.element.querySelector(UploadDocuments.selectors.uploadsNumber);
+
+	    if (number) {
+	      number.innerText = this.dropzone.files.length;
+	    }
+
+	    return this;
+	  }
+
+	  /**
 	   * Assert if max files have been reached and toggle messaging and other relevant events
-	   *
-	   * @param   {Object}  dz  Instance of Dropzone
 	   *
 	   * @return  {Object}      Instance of UploadDocuments
 	   */
-	  maxFiles(dz) {
-	    let inputErrorMessage = document.querySelector(UploadDocuments.selectors.inputErrorMessage);
+	  maxFiles() {
+	    let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
 
-	    if (inputErrorMessage.getAttribute('aria-hidden') === 'true' && dz.files.length >= dz.options.maxFiles) {
-	      let inputErrorMessage = document.querySelector(UploadDocuments.selectors.inputErrorMessage);
+	    if (inputErrorMessage.getAttribute('aria-hidden') === 'true' &&
+	      this.dropzone.files.length >= this.dropzone.options.maxFiles) {
+	      let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
 
-	      inputErrorMessage.innerText = dz.options.dictMaxFilesExceeded;
+	      inputErrorMessage.innerText = this.dropzone.options.dictMaxFilesExceeded;
 	      inputErrorMessage.removeAttribute('aria-hidden');
 	      inputErrorMessage.setAttribute('role', 'alert');
 	      inputErrorMessage.setAttribute('aria-live', 'polite');
 	    }
 
-	    if (dz.files.length <= dz.options.maxFiles) {
-	      let inputErrorMessage = document.querySelector(UploadDocuments.selectors.inputErrorMessage);
+	    if (this.dropzone.files.length <= this.dropzone.options.maxFiles) {
+	      let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
 
 	      inputErrorMessage.innerText = '';
 	      inputErrorMessage.setAttribute('aria-hidden', 'true');
@@ -14414,7 +14415,6 @@
 	  /**
 	   * Forces the display of a previously uploaded document programatically.
 	   *
-	   * @param   {Object}  dz    Instance of Dropzone
 	   * @param   {Object}  file  Object containing parameters needed to mock a file: {
 	   *                            @name:     {String}   file name including extension,
 	   *                            @size:     {Number}   file size in bytes,
@@ -14434,16 +14434,51 @@
 	   *
 	   * @return  {Object}        Instance of UploadDocuments
 	   */
-	  addMockFile(dz, file) {
-	    dz.files.push(file);
+	  addFile(file) {
+	    this.dropzone.files.push(file);
 
-	    dz.emit('addedfile', file);
-	    dz.emit('thumbnail', file, file.dataURL);
-	    dz.emit('success', file, file.id);
-	    dz.emit('complete', file);
+	    this.dropzone.emit('addedfile', file);
+	    this.dropzone.emit('thumbnail', file, file.dataURL);
+	    this.dropzone.emit('success', file, file.id);
+	    this.dropzone.emit('complete', file);
 
 	    return this;
 	  }
+
+	  // This doesn't seem necessary once hooks are added correctly
+	  // /**
+	  //  * Removing a file from Dropzone
+	  //  *
+	  //  * @param   {Object}  file  Dropzone file object
+	  //  *
+	  //  * @return  {Object}        Instance of UploadDocuments
+	  //  */
+	  // removeFile(file) {
+	  //   this.dropzone.removeFile(file); // Dropzone method? needs testing
+
+	  //   // A separate tracking array of user files?
+	  //   // if (id) {
+	  //   //   let toDeleteIdx = window['userFileIds' + [[${inputName}]]].indexOf(id);
+
+	  //   //   if (toDeleteIdx !== -1) {
+	  //   //     window['userFileIds' + [[${inputName}]]].splice(toDeleteIdx, 1)
+	  //   //   }
+	  //   // }
+
+	  //   // Updates an input with a JSON object of file IDs...
+	  //   // updateFileInputValue();
+
+	  //   // Needs to be created...
+	  //   // showNumberOfAddedFiles();
+
+	  //   // if (window['myDropZone' + [[${inputName}]]].files.length <= window['myDropZone' + [[${inputName}]]].options.maxFiles) {
+	  //   //   toggleMaxFileMessage('off');
+	  //   // }
+
+	  //   this.maxFiles();
+
+	  //   return this;
+	  // }
 	}
 
 	/** @type  {String}  The main selector for Upload Document components **/
@@ -14455,10 +14490,14 @@
 	  'inputErrorMessage': '[data-dropzone="input-error-message"]',
 	  'fallback': '[data-dropzone="fallback"]',
 	  'uploadsHeader': '[data-dropzone="uploads-header"]',
+	  'uploadsNumber': '[data-dropzone="uploads-number"]',
 	  'previewsContainer': '[data-dropzone="previews-container"]',
 	  'previewTemplate': '[data-dropzone="preview-template"]',
+	  'thumbnail': '[data-dropzone="thumbnail"]',
 	  'hiddenInputContainer': '[data-dropzone="hidden-input-container"]',
-	  'dict': '[data-dropzone="dict"]'
+	  'dict': '[data-dropzone="dict"]',
+	  'fileRemove': '[data-dropzone="file-remove"]',
+	  'fileRemoveLabel': '[data-dropzone="file-remove-label"]'
 	};
 
 	/** @type  {Object}  A dictionary of classes used by the utility class **/
@@ -14522,8 +14561,101 @@
 	  (elements => {
 	    for (let i = 0; i < elements.length; i++) {
 	      new UploadDocuments(elements[i], {
+	        // /**
+	        //  * Example of passing already uploaded files to the utility
+	        //  *
+	        //  * @type  {Array}
+	        //  */
+	        // mockFiles: [
+	        //   {
+	        //     @name:     {String}   file name including extension,
+	        //     @size:     {Number}   file size in bytes,
+	        //     @type:     {String}   file type,
+	        //     @id:       {String}   file ID,
+	        //     @dataURL:  {String}   data encoded URI of the image thumbnail,
+	        //     @accepted: {Boolean}  defaults to true
+	        //   },
+	        //   {
+	        //     name: 'filename.png',
+	        //     size: 192435,
+	        //     type: 'image/png',
+	        //     id: '0f488973-63e2-4a1d-a509-d1b492f10344',
+	        //     dataURL: "data:image/png;base64,...",
+	        //     accepted: true
+	        //   }
+	        // ],
+
+	        /**
+	         * Dropzone Options. These will be passed to the Dropzone instantiation.
+	         *
+	         * @url https://github.com/dropzone/dropzone/blob/main/src/options.js
+	         */
 	        dropzoneOptions: {
-	          url: 'https://app-46361.on-aptible.com/file-upload'
+	          /**
+	           * Required. A URL must be set in the Dropzone options configuration
+	           */
+	          url: 'https://app-46361.on-aptible.com/file-upload',
+
+	          // /**
+	          //  * Example Dropzone init configuration
+	          //  */
+	          // init: function() {
+	          //   /**
+	          //    * Example added file event hook. Called when a file is added to the queue
+	          //    *
+	          //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L611
+	          //    *
+	          //    * @param  {Object}  file  Dropzone file object
+	          //    */
+	          //   this.on('addedfile', function(file) {
+	          //     //... some custom methods can go here
+	          //
+	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'cancel';
+	          //
+	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
+	          //       .addEventListener('click', () => {
+	          //         //... cancel event for uploading file
+	          //       });
+	          //   });
+	          //
+	          //   /**
+	          //    * Example success event hook. When the complete upload is finished
+	          //    * and successful.
+	          //    *
+	          //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L752
+	          //    *
+	          //    * @param  {Object}  file  Dropzone file object
+	          //    */
+	          //   this.on('success', function(file) {
+	          //     //... some custom methods can go here
+	          //
+	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'remove';
+	          //
+	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
+	          //       .addEventListener('click', () => {
+	          //         //... remove event for uploaded file
+	          //       });
+	          //   });
+
+	          //   /**
+	          //    * Example sending event hook. Called just before the file is sent.
+	          //    * Gets the `xhr` object as second parameter, so you can modify it
+	          //    * (for example to add a CSRF token) and a `formData` object to add
+	          //    * additional information.
+	          //    *
+	          //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L746
+	          //    *
+	          //    * @param  {Object}  file      Dropzone file object
+	          //    * @param  {Object}  xhr       The xhr request
+	          //    * @param  {Object}  formData  Form data to append additional information to
+	          //    */
+	          //   this.on('sending', function(file, xhr, formData) {
+	          //     let token = document.querySelector('[data-js="csrf"]').value;
+
+	          //     formData.append('_csrf', token);
+	          //     //...
+	          //   });
+	          // }
 	        }
 	      });
 	    }
