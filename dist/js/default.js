@@ -14128,6 +14128,10 @@
 
 	    this.mockFiles = s.mockFiles ? s.mockFiles : [];
 
+	    this.maxFilesReached = s.maxFilesReached ? s.maxFilesReached : UploadDocuments.maxFilesReached;
+
+	    this.maxFilesReset = s.maxFilesReset ? s.maxFilesReset : UploadDocuments.maxFilesReset;
+
 	    /**
 	     * Configure and initialize Dropzone
 	     */
@@ -14162,9 +14166,9 @@
 	   * Set Dropzone options, relevant to the template, and initialize Dropzone.
 	   * @source https://github.com/dropzone/dropzone/blob/main/src/options.js
 	   *
-	   * @param   {Object}   options  Options to pass to configure and pass to the Dropzone class
+	   * @param   {Object}  options  Options to pass to configure and pass to the Dropzone class
 	   *
-	   * @return  {Object}            Instance of UploadDocuments
+	   * @return  {Object}           Instance of UploadDocuments
 	   */
 	  configDropzone(options) {
 	    let input = this.element.querySelector(this.selectors.input);
@@ -14229,7 +14233,7 @@
 	   * init event handler. However, this handler does trigger after Dropzone is
 	   * initialized.
 	   *
-	   * @return  {Object}      Instance of UploadDocuments
+	   * @return  {Object} Instance of UploadDocuments
 	   */
 	  init() {
 	    this.maxFiles()
@@ -14261,7 +14265,7 @@
 	   * Dropzone file input. This makes the presentation of the Dropzone element
 	   * compatible with the default USWDS File Input component.
 	   *
-	   * @return  {Object}      Instance of UploadDocuments
+	   * @return  {Object}  Instance of UploadDocuments
 	   */
 	  swapFallback() {
 	    let fallback = this.dropzone.element.querySelector(UploadDocuments.selectors.fallback);
@@ -14371,6 +14375,8 @@
 
 	  /**
 	   * Update the uploaded number inner text to reflect the number of added files
+	   *
+	   * @return  {Object}  Instance of UploadDocuments
 	   */
 	  uploadedNumber() {
 	    let number = this.element.querySelector(UploadDocuments.selectors.uploadsNumber);
@@ -14385,7 +14391,7 @@
 	  /**
 	   * Assert if max files have been reached and toggle messaging and other relevant events
 	   *
-	   * @return  {Object}      Instance of UploadDocuments
+	   * @return  {Object}  Instance of UploadDocuments
 	   */
 	  maxFiles() {
 	    let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
@@ -14398,6 +14404,8 @@
 	      inputErrorMessage.removeAttribute('aria-hidden');
 	      inputErrorMessage.setAttribute('role', 'alert');
 	      inputErrorMessage.setAttribute('aria-live', 'polite');
+
+	      this.maxFilesReached(this);
 	    }
 
 	    if (this.dropzone.files.length <= this.dropzone.options.maxFiles) {
@@ -14407,6 +14415,8 @@
 	      inputErrorMessage.setAttribute('aria-hidden', 'true');
 	      inputErrorMessage.removeAttribute('role');
 	      inputErrorMessage.removeAttribute('aria-live');
+
+	      this.maxFilesReset(this);
 	    }
 
 	    return this;
@@ -14444,41 +14454,6 @@
 
 	    return this;
 	  }
-
-	  // This doesn't seem necessary once hooks are added correctly
-	  // /**
-	  //  * Removing a file from Dropzone
-	  //  *
-	  //  * @param   {Object}  file  Dropzone file object
-	  //  *
-	  //  * @return  {Object}        Instance of UploadDocuments
-	  //  */
-	  // removeFile(file) {
-	  //   this.dropzone.removeFile(file); // Dropzone method? needs testing
-
-	  //   // A separate tracking array of user files?
-	  //   // if (id) {
-	  //   //   let toDeleteIdx = window['userFileIds' + [[${inputName}]]].indexOf(id);
-
-	  //   //   if (toDeleteIdx !== -1) {
-	  //   //     window['userFileIds' + [[${inputName}]]].splice(toDeleteIdx, 1)
-	  //   //   }
-	  //   // }
-
-	  //   // Updates an input with a JSON object of file IDs...
-	  //   // updateFileInputValue();
-
-	  //   // Needs to be created...
-	  //   // showNumberOfAddedFiles();
-
-	  //   // if (window['myDropZone' + [[${inputName}]]].files.length <= window['myDropZone' + [[${inputName}]]].options.maxFiles) {
-	  //   //   toggleMaxFileMessage('off');
-	  //   // }
-
-	  //   this.maxFiles();
-
-	  //   return this;
-	  // }
 	}
 
 	/** @type  {String}  The main selector for Upload Document components **/
@@ -14520,6 +14495,20 @@
 
 	/** @type  {Array}  A list of attributes remove from the hidden Dropzone input **/
 	UploadDocuments.removeAttrs = ['tabindex', 'style'];
+
+	/** @type  {Function}  A callback function for reaching max files within this utility **/
+	UploadDocuments.maxFilesReached = () => {
+	  {
+	    console.dir('Max files limit reached!');
+	  }
+	};
+
+	/** @type  {Function}  A callback function for when the max files warning is reset within this utility **/
+	UploadDocuments.maxFilesReset = () => {
+	  {
+	    console.dir('Max files threshold not reached!');
+	  }
+	};
 
 	/**
 	 * Copy of @uswds/uswds/packages/uswds-core/src/js/start.js
