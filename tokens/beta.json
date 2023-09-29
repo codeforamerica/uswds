@@ -2345,7 +2345,7 @@
     "base-family": {
       "value": "{gray-warm}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "base-lightest": {
       "value": "{gray-warm-4}",
@@ -2382,7 +2382,7 @@
     "primary-family": {
       "value": "{mint}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "primary-lightest": {
       "value": "{mint-cool-5}",
@@ -2415,7 +2415,7 @@
     "secondary-family": {
       "value": "{magenta-vivid}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "secondary-lighter": {
       "value": "{magenta-10v}",
@@ -2444,7 +2444,7 @@
     "accent-warm-family": {
       "value": "{red-warm-vivid}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "accent-warm-lighter": {
       "value": "{red-warm-10v}",
@@ -2469,7 +2469,7 @@
     "accent-cool-family": {
       "value": "{green-cool-vivid}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "accent-cool-lighter": {
       "value": "{green-cool-5v}",
@@ -2494,7 +2494,7 @@
     "error-family": {
       "value": "{orange-warm-vivid}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "error-lighter": {
       "value": "{orange-warm-10v}",
@@ -2519,7 +2519,7 @@
     "warning-family": {
       "value": "{gold-vivid}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "warning-lighter": {
       "value": "{gold-5v}",
@@ -2544,7 +2544,7 @@
     "success-family": {
       "value": "{green-cool-vivid}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "success-lighter": {
       "value": "{green-cool-5v}",
@@ -2569,7 +2569,7 @@
     "info-family": {
       "value": "{gray-warm}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "info-lighter": {
       "value": "{gray-warm-4}",
@@ -2602,7 +2602,7 @@
     "disabled-family": {
       "value": "{gray-warm}",
       "type": "color",
-      "description": "Family tokens designate the color set and do not map to explicit values."
+      "description": "Family tokens designate the overall color set and do not map to explicit values. Therefore, they are blank."
     },
     "disabled-light": {
       "value": "{gray-warm-10}",
