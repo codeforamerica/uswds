@@ -14144,19 +14144,6 @@
 
 	    this.init(this.dropzone);
 
-	    /**
-	     * Event handlers for development
-	     */
-
-	    {
-	      document.querySelector('body').addEventListener('click', event => {
-	        if (event.target.matches('[data-dropzone="toggle-preview-state"]')) {
-	          event.target.closest('[data-dropzone="preview-template"]')
-	            .className = event.target.dataset.dropzonePreviewState;
-	        }
-	      });
-	    }
-
 	    console.dir(this);
 
 	    return this;
@@ -14498,16 +14485,10 @@
 
 	/** @type  {Function}  A callback function for reaching max files within this utility **/
 	UploadDocuments.maxFilesReached = () => {
-	  {
-	    console.dir('Max files limit reached!');
-	  }
 	};
 
 	/** @type  {Function}  A callback function for when the max files warning is reset within this utility **/
 	UploadDocuments.maxFilesReset = () => {
-	  {
-	    console.dir('Max files threshold not reached!');
-	  }
 	};
 
 	/**

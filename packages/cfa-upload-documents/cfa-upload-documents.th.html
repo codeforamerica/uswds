@@ -59,7 +59,7 @@
     <ul class="add-list-reset preview-container" role="list" data-dropzone="previews-container" th:attr="aria-describedby=${previewTemplate.header.id}">
       <li class="dropzone__preview dz-image-preview" data-dropzone="preview-template">
         <div class="dropzone__details">
-          <div class="dropzone__thumbnail width-8 height-8">
+          <div class="dropzone__thumbnail" data-dropzone="thumbnail">
             <div class="dropzone__progress">
               <span class="dropzone__progress-bar" data-dz-uploadprogress="keep"></span>
             </div>
@@ -97,7 +97,7 @@
 
               <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-              <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" data-dropzone="document-remove" data-dz-remove="keep">remove <span class="usa-sr-only" data-dz-name="keep">filename.ext</span></button>
+              <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" data-dropzone="file-remove" data-dz-remove="keep"><span data-dropzone="file-remove-label">remove</span> <span class="usa-sr-only" data-dz-name="keep">filename.ext</span></button>
 
               <!-- remove contents below before passing to Dropzone -->
 
