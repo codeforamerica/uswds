@@ -1,3 +1,5 @@
+'use strict';
+
 import Cleave from 'cleave.js';
 
 class MaskDollars {

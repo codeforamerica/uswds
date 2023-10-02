@@ -148,12 +148,23 @@ const sanitizeForErb = (param) => {
  * @return  {String}          The transformed template string wrapped in a code block
  */
 const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
+  let id = `block-${createId()}`;
+
   str = (beautifyStr) ? beautify(str, CONFIG_BEAUTIFY) : str;
 
   str = (escapeStr) ? escapeHtml(str) : str;
 
   return `<div class="code-block">
-      <pre class="language-${lang}">${str}</pre>
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="${id}" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="${config.baseUrl}uswds/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea type="text" hidden data-copy-target="${id}">${str}</textarea>
+      </div>
+      <pre class="language-${lang} padding-top-0">${str}</pre>
     </div>`;
 };
 

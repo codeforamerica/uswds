@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Copy of @uswds/uswds/packages/uswds-core/src/js/start.js
  *
@@ -17,6 +19,7 @@ import uswds from '../node_modules/@uswds/uswds/packages/uswds-core/src/js/confi
 
 import components from './components';
 import svg4everybody from '../node_modules/@uswds/uswds/packages/uswds-core/src/js/polyfills/svg4everybody';
+import Copy from './copy.js';
 import MaskDollars from './mask-dollars.js';
 import MaskTel from './mask-tel.js';
 import MaskSSN from './mask-ssn.js';
@@ -44,6 +47,7 @@ const initComponents = () => {
    * CfA Theme Utilities and Components
    */
 
+  new Copy();
   new MaskDollars();
   new MaskTel();
   new MaskSSN();

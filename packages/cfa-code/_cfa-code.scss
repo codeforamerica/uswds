@@ -92,6 +92,14 @@ pre, .hljs {
   }
 }
 
+.code-block__utility {
+  padding: var(--cfa-spacing-DEFAULT);
+
+  @media screen and (min-width: 600px) {
+    padding: calc(var(--cfa-spacing-DEFAULT) * 2);
+  }
+}
+
 code, .code, .code-block, pre, .hljs {
   color: var(--cfa-code-text) !important;
   background-color: var(--cfa-code-background) !important;

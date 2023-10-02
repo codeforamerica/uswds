@@ -922,7 +922,7 @@
 	 */
 	const hideButton = (button) => toggleButton$1(button, false);
 
-	const accordion$2 = behavior$4(
+	const accordion$1 = behavior$4(
 	  {
 	    [CLICK$1]: {
 	      [BUTTON]() {
@@ -953,7 +953,9 @@
 	  }
 	);
 
-	var src$3 = accordion$2;
+	var src$3 = accordion$1;
+
+	var accordion$2 = /*@__PURE__*/getDefaultExportFromCjs(src$3);
 
 	var keymap$3 = {exports: {}};
 
@@ -1143,6 +1145,8 @@
 
 	var src$2 = anchorButton;
 
+	var button = /*@__PURE__*/getDefaultExportFromCjs(src$2);
+
 	var ignore = function ignore(element, fn) {
 	  return function ignorance(e) {
 	    if (element !== e.target && !element.contains(e.target)) {
@@ -1277,7 +1281,7 @@
 	const select$1 = select$4;
 	const toggle = toggle$2;
 	const FocusTrap = focusTrap;
-	const accordion$1 = src$3;
+	const accordion = src$3;
 	const ScrollBarWidth = scrollbarWidth;
 
 	const { CLICK } = events;
@@ -1303,7 +1307,7 @@
 	const ACTIVE_CLASS = "usa-js-mobile-nav--active";
 	const VISIBLE_CLASS$1 = "is-visible";
 
-	let navigation$1;
+	let navigation;
 	let navActive;
 	let nonNavElements;
 
@@ -1362,7 +1366,7 @@
 	    el.classList.toggle(VISIBLE_CLASS$1, safeActive)
 	  );
 
-	  navigation$1.focusTrap.update(safeActive);
+	  navigation.focusTrap.update(safeActive);
 
 	  const closeButton = body.querySelector(CLOSE_BUTTON);
 	  const menuButton = document.querySelector(OPENERS);
@@ -1400,11 +1404,11 @@
 	    // When the mobile nav is active, and the close box isn't visible,
 	    // we know the user's viewport has been resized to be larger.
 	    // Let's make the page state consistent by deactivating the mobile nav.
-	    navigation$1.toggleNav.call(closer, false);
+	    navigation.toggleNav.call(closer, false);
 	  }
 	};
 
-	const onMenuClose = () => navigation$1.toggleNav.call(navigation$1, false);
+	const onMenuClose = () => navigation.toggleNav.call(navigation, false);
 
 	const hideActiveNavDropdown = () => {
 	  if (!navActive) {
@@ -1432,7 +1436,7 @@
 	  focusNavButton(event);
 	};
 
-	navigation$1 = behavior$1(
+	navigation = behavior$1(
 	  {
 	    [CLICK]: {
 	      [NAV_CONTROL]() {
@@ -1460,15 +1464,15 @@
 
 	        // Some navigation links are inside accordions; when they're
 	        // clicked, we want to collapse those accordions.
-	        const acc = this.closest(accordion$1.ACCORDION);
+	        const acc = this.closest(accordion.ACCORDION);
 
 	        if (acc) {
-	          accordion$1.getButtons(acc).forEach((btn) => accordion$1.hide(btn));
+	          accordion.getButtons(acc).forEach((btn) => accordion.hide(btn));
 	        }
 
 	        // If the mobile navigation menu is active, we want to hide it.
 	        if (isActive()) {
-	          navigation$1.toggleNav.call(navigation$1, false);
+	          navigation.toggleNav.call(navigation, false);
 	        }
 	      },
 	    },
@@ -1490,7 +1494,7 @@
 	      const trapContainer = root.matches(NAV) ? root : root.querySelector(NAV);
 
 	      if (trapContainer) {
-	        navigation$1.focusTrap = FocusTrap(trapContainer, {
+	        navigation.focusTrap = FocusTrap(trapContainer, {
 	          Escape: onMenuClose,
 	        });
 	      }
@@ -1507,7 +1511,9 @@
 	  }
 	);
 
-	var src$1 = navigation$1;
+	var src$1 = navigation;
+
+	var navigation$1 = /*@__PURE__*/getDefaultExportFromCjs(src$1);
 
 	const select = select$4;
 	/**
@@ -1896,7 +1902,7 @@
 	};
 
 	// Setup our function to run on various events
-	const tooltip$1 = behavior(
+	const tooltip = behavior(
 	  {
 	    "mouseover focusin": {
 	      [TOOLTIP](e) {
@@ -1935,31 +1941,12 @@
 	  }
 	);
 
-	var src = tooltip$1;
+	var src = tooltip;
 
-	const accordion = src$3;
-	// const banner = require('../node_modules/@uswds/uswds/packages/usa-banner/src/index');
-	const button = src$2;
-	// const characterCount = require('../node_modules/@uswds/uswds/packages/usa-character-count/src/index');
-	// const comboBox = require('../node_modules/@uswds/uswds/packages/usa-combo-box/src/index');
-	// const datePicker = require('../node_modules/@uswds/uswds/packages/usa-date-picker/src/index');
-	// const dateRangePicker = require('../node_modules/@uswds/uswds/packages/usa-date-range-picker/src/index');
-	// const fileInput = require('../node_modules/@uswds/uswds/packages/usa-file-input/src/index');
-	// const footer = require('../node_modules/@uswds/uswds/packages/usa-footer/src/index');
-	// const inPageNavigation = require('../node_modules/@uswds/uswds/packages/usa-in-page-navigation/src/index');
-	// const inputMask = require('../node_modules/@uswds/uswds/packages/usa-input-mask/src/index');
-	// const languageSelector = require('../node_modules/@uswds/uswds/packages/usa-language-selector/src/index');
-	// const modal = require('../node_modules/@uswds/uswds/packages/usa-modal/src/index');
-	const navigation = src$1;
-	// const password = require('../node_modules/@uswds/uswds/packages/_usa-password/src/index');
-	// const search = require('../node_modules/@uswds/uswds/packages/usa-search/src/index');
-	// const skipnav = require('../node_modules/@uswds/uswds/packages/usa-skipnav/src/index');
-	// const table = require('../node_modules/@uswds/uswds/packages/usa-table/src/index');
-	// const timePicker = require('../node_modules/@uswds/uswds/packages/usa-time-picker/src/index');
-	const tooltip = src;
+	var tooltip$1 = /*@__PURE__*/getDefaultExportFromCjs(src);
 
 	var components = {
-	  accordion,
+	  accordion: accordion$2,
 	  // banner,
 	  button,
 	  // characterCount,
@@ -1972,17 +1959,169 @@
 	  // inputMask,
 	  // languageSelector,
 	  // modal,
-	  navigation,
+	  navigation: navigation$1,
 	  // password,
 	  // search,
 	  // skipnav,
 	  // table,
 	  // timePicker,
-	  tooltip,
+	  tooltip: tooltip$1,
 	  // validator
 	};
 
-	var components$1 = /*@__PURE__*/getDefaultExportFromCjs(components);
+	/**
+	 * Copy to Clipboard Helper
+	 */
+	class Copy {
+	  /**
+	   * @constructor
+	   *
+	   * @param   {Object}  s  The settings object, may include 'selector',
+	   *                       'aria', 'notifyTimeout', 'before', 'copied',
+	   *                       or 'after' attributes.
+	   *
+	   * @return  {Class}      The constructed instance of Copy.
+	   */
+	  constructor(s = {}) {
+	    // Set attributes
+	    this.selector = (s.hasOwnProperty('selector')) ? s.selector : Copy.selector;
+
+	    this.selectors = (s.hasOwnProperty('selectors')) ? s.selectors : Copy.selectors;
+
+	    this.aria = (s.hasOwnProperty('aria')) ? s.aria : Copy.aria;
+
+	    this.notifyTimeout = (s.hasOwnProperty('notifyTimeout')) ? s.notifyTimeout : Copy.notifyTimeout;
+
+	    this.before = (s.hasOwnProperty('before')) ? s.before : Copy.before;
+
+	    this.copied = (s.hasOwnProperty('copied')) ? s.copied : Copy.copied;
+
+	    this.after = (s.hasOwnProperty('after')) ? s.after : Copy.after;
+
+	    // Select the entire text when it's focused on
+	    document.querySelectorAll(this.selectors.TARGETS).forEach(item => {
+	      item.addEventListener('focus', () => this.select(item));
+	      item.addEventListener('click', () => this.select(item));
+	    });
+
+	    // The main click event for the class
+	    document.querySelector('body').addEventListener('click', event => {
+	      if (!event.target.matches(this.selector))
+	        return;
+
+	      this.element = event.target;
+
+	      this.element.setAttribute(this.aria, false);
+
+	      this.target = this.element.dataset.copy;
+
+	      this.before(this);
+
+	      if (this.copy(this.target)) {
+	        this.copied(this);
+
+	        this.element.setAttribute(this.aria, true);
+
+	        clearTimeout(this.element['timeout']);
+
+	        this.element['timeout'] = setTimeout(() => {
+	          this.element.setAttribute(this.aria, false);
+
+	          this.after(this);
+	        }, this.notifyTimeout);
+	      }
+	    });
+
+	    return this;
+	  }
+
+	  /**
+	   * The click event handler
+	   *
+	   * @param   {String}  target  Content of target data attribute
+	   *
+	   * @return  {Boolean}         Wether copy was successful or not
+	   */
+	  copy(target) {
+	    let selector = this.selectors.TARGETS.replace(']', `="${target}"]`);
+
+	    let input = document.querySelector(selector);
+
+	    this.select(input);
+
+	    if (navigator.clipboard && navigator.clipboard.writeText)
+	      navigator.clipboard.writeText(input.value);
+	    else if (document.execCommand)
+	      document.execCommand('copy');
+	    else
+	      return false;
+
+	    return true;
+	  }
+
+	  /**
+	   * Handler for the text selection method
+	   *
+	   * @param   {Object}  input  The input with content to select
+	   */
+	  select(input) {
+	    input.select();
+
+	    input.setSelectionRange(0, 99999);
+	  }
+	}
+
+	/**
+	 * The main element selector.
+	 *
+	 * @var {String}
+	 */
+	Copy.selector = '[data-js*="copy"]';
+
+	/**
+	 * The selectors for various elements queried by the utility. Refer to the
+	 * source for defaults.
+	 *
+	 * @var {[type]}
+	 */
+	Copy.selectors = {
+	  TARGETS: '[data-copy-target]'
+	};
+
+	/**
+	 * Button aria role to toggle
+	 *
+	 * @var {String}
+	 */
+	Copy.aria = 'aria-pressed';
+
+	/**
+	 * Timeout for the "Copied!" notification
+	 *
+	 * @var {Number}
+	 */
+	Copy.notifyTimeout = 1500;
+
+	/**
+	 * Before hook. Triggers before the click event.
+	 *
+	 * @var {Function}
+	 */
+	Copy.before = () => {};
+
+	/**
+	 * Copied hook. Triggers after a successful the copy event.
+	 *
+	 * @var {Function}
+	 */
+	Copy.copied = () => {};
+
+	/**
+	 * After hook. Triggers after the click event.
+	 *
+	 * @var {Function}
+	 */
+	Copy.after = () => {};
 
 	var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -14497,7 +14636,7 @@
 
 	window.uswdsPresent = true; // GLOBAL variable to indicate that the uswds.js has loaded in the DOM.
 
-	uswds.components = components$1;
+	uswds.components = components;
 
 	const initComponents = () => {
 	  const target = document.body;
@@ -14506,8 +14645,8 @@
 	   * USWDS Components
 	   */
 
-	  Object.keys(components$1).forEach(key => {
-	    const behavior = components$1[key];
+	  Object.keys(components).forEach(key => {
+	    const behavior = components[key];
 
 	    behavior.on(target);
 	  });
@@ -14518,6 +14657,7 @@
 	   * CfA Theme Utilities and Components
 	   */
 
+	  new Copy();
 	  new MaskDollars();
 	  new MaskTel();
 	  new MaskSSN();
