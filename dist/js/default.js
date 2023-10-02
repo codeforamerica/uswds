@@ -14144,8 +14144,6 @@
 
 	    this.init(this.dropzone);
 
-	    console.dir(this);
-
 	    return this;
 	  }
 

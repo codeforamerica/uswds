@@ -55,7 +55,9 @@ class UploadDocuments {
       });
     }
 
-    console.dir(this);
+    if (process.env.NODE_ENV != 'production') {
+      console.dir(this);
+    }
 
     return this;
   }
