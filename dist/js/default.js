@@ -14329,10 +14329,10 @@
 	     */
 
 	    {
-	      let remove = previewTemplate.querySelectorAll(this.selectors.remove);
+	      let previewTemplateRemove = previewTemplate.querySelectorAll(this.selectors.remove);
 
-	      for (let i = 0; i < remove.length; i++) {
-	        remove[i].remove();
+	      for (let i = 0; i < previewTemplateRemove.length; i++) {
+	        previewTemplateRemove[i].remove();
 	      }
 	    }
 
@@ -14367,6 +14367,15 @@
 	    options.drop = event => {
 	      this.drop(event);
 	    };
+
+	    // Remove remaining elements
+	    {
+	      let remove = this.element.querySelectorAll(this.selectors.remove);
+
+	      for (let i = 0; i < remove.length; i++) {
+	        remove[i].remove();
+	      }
+	    }
 
 	    /**
 	     * Initialize Dropzone

@@ -1,122 +1,120 @@
-<form th:fragment="uploadDocuments(modifier, documentType)">
-  <div class="usa-form-group cfa-form-group cfa-file-input" data-js="upload-documents" th:attr="id=${id}">
-    <div class="dropzone needsclick" data-dropzone="uploads">
-      <label class="usa-label" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
-        <span th:text="${fileInput.label.text}">Label</span>
+<div th:fragment="uploadDocuments(modifier, documentType)" class="usa-form-group cfa-form-group cfa-file-input" th:attr="id=${id}" data-js="upload-documents">
+  <div class="dropzone needsclick" data-dropzone="uploads">
+    <label class="usa-label" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
+      <span th:text="${fileInput.label.text}">Label</span>
 
-        <abbr th:if="${fileInput.input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${fileInput.label.modifierHint}">*</abbr>
-      </label>
+      <abbr th:if="${fileInput.input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${fileInput.label.modifierHint}">*</abbr>
+    </label>
 
-      <!-- <div data-dropzone="max-uploads"> -->
-      <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
-      <!-- </div> -->
+    <!-- <div data-dropzone="max-uploads"> -->
+    <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
+    <!-- </div> -->
 
-      <div class="usa-file-input">
-        <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
-          <div class="usa-file-input__box"></div>
+    <div class="usa-file-input">
+      <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
+        <div class="usa-file-input__box"></div>
 
-          <div class="usa-file-input__instructions">
-            <div th:if="${fileInput.hint}" class="usa-hint" th:classappend="${fileInput.hint.modifier}" th:attr="id=${fileInput.hint.id}" th:utext="${fileInput.hint.text}" aria-hidden="true">Hint</div>
+        <div class="usa-file-input__instructions">
+          <div th:if="${fileInput.hint}" class="usa-hint" th:classappend="${fileInput.hint.modifier}" th:attr="id=${fileInput.hint.id}" th:utext="${fileInput.hint.text}" aria-hidden="true">Hint</div>
 
-            <div class="dz-message" data-dropzone="upload-button">
-              <button class="usa-button cfa-button circle-9 padding-0 margin-0" type="button" data-dropzone="button" aria-hidden="true" focusable="false" tabindex="-1">
-                <svg class="usa-icon square-7 margin-bottom-neg-2px" aria-hidden="true" focusable="false" tabindex="-1">
-                  <use th:href="${fileInput.button.icon}"></use>
-                </svg>
-              </button>
-            </div>
+          <div class="dz-message" data-dropzone="upload-button">
+            <button class="usa-button cfa-button circle-9 padding-0 margin-0" type="button" data-dropzone="button" aria-hidden="true" focusable="false" tabindex="-1">
+              <svg class="usa-icon square-7 margin-bottom-neg-2px" aria-hidden="true" focusable="false" tabindex="-1">
+                <use th:href="${fileInput.button.icon}"></use>
+              </svg>
+            </button>
           </div>
-
-          <input class="usa-file-input__input" type="file" data-dropzone="fallback" th:attr="id=${fileInput.input.id},name=${fileInput.input.name},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple}">
-
-          <div data-dropzone="hidden-input-container"></div>
         </div>
+
+        <input class="usa-file-input__input" type="file" data-dropzone="fallback" th:attr="id=${fileInput.input.id},name=${fileInput.input.name},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple}">
+
+        <div data-dropzone="hidden-input-container"></div>
       </div>
     </div>
+  </div>
 
-    <div data-dropzone="preview">
-      <h3 class="dropzone__preview-header" data-dropzone="preview-header" th:attr="id=${previewTemplate.header.id}">
-        Your documents. <span data-dropzone="preview-number">0</span> <span data-dropzone="preview-text">uploaded</span> <span>(<span>20 max</span>)</span>
-      </h3>
+  <div data-dropzone="preview" hidden="true" aria-hidden="true">
+    <h3 class="dropzone__preview-header" data-dropzone="preview-header" th:attr="id=${previewTemplate.header.id}">
+      Your documents. <span data-dropzone="preview-number">0</span> <span data-dropzone="preview-text">uploaded</span> <span>(<span>20 max</span>)</span>
+    </h3>
 
-      <ul class="add-list-reset" role="list" data-dropzone="preview-container" th:attr="aria-describedby=${previewTemplate.header.id}">
-        <li class="dropzone__preview dz-image-preview" data-dropzone="preview-template">
-          <div class="dropzone__details">
-            <div class="dropzone__thumbnail" data-dropzone="thumbnail">
-              <div class="dropzone__progress">
-                <span class="dropzone__progress-bar" data-dz-uploadprogress="keep"></span>
-              </div>
-
-              <svg class="usa-icon dropzone__icon-error" aria-hidden="true" focusable="false" role="img">
-                <use th:href="${previewTemplate.error.icon}"></use>
-              </svg>
-
-              <svg class="usa-icon dropzone__icon-default" aria-hidden="true" focusable="false" role="img">
-                <use th:href="${previewTemplate.thumbnail.default}"></use>
-              </svg>
-
-              <!-- <img class="dz-thumb" data-dz-thumbnail="keep" aria-hidden="true" /> -->
-
-              <img class="dropzone__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext" />
+    <ul class="add-list-reset" role="list" data-dropzone="preview-container" th:attr="aria-describedby=${previewTemplate.header.id}">
+      <li class="dropzone__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
+        <div class="dropzone__details">
+          <div class="dropzone__thumbnail" data-dropzone="thumbnail">
+            <div class="dropzone__progress">
+              <span class="dropzone__progress-bar" data-dz-uploadprogress="keep"></span>
             </div>
 
-            <div class="dropzone__file">
-              <div class="dropzone__filename" data-dz-name="keep">
-                <!-- Dropzone will replace the contents of this element -->
-                <span class="dropzone__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
-                <span class="dropzone__filename-ext" aria-hidden="true">.ext</span>
-              </div>
+            <svg class="usa-icon dropzone__icon-error" aria-hidden="true" focusable="false" role="img">
+              <use th:href="${previewTemplate.error.icon}"></use>
+            </svg>
 
-              <span class="dropzone__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
-                <!-- Dropzone will replace the contents of this element -->
-                Message
-              </span>
+            <svg class="usa-icon dropzone__icon-default" aria-hidden="true" focusable="false" role="img">
+              <use th:href="${previewTemplate.thumbnail.default}"></use>
+            </svg>
 
-              <div>
-                <span class="font-body-2xs" title="File size">
-                  <span class="usa-sr-only">File size, </span>
+            <!-- <img class="dz-thumb" data-dz-thumbnail="keep" aria-hidden="true" /> -->
 
-                  <span class="font-body-2xs" data-dz-size="keep">
-                    <!-- Dropzone will replace the contents of this element -->
-                    <strong>99</strong> MB
-                  </span>
-                <span>
+            <img class="dropzone__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext" />
+          </div>
+
+          <div class="dropzone__file">
+            <div class="dropzone__filename" data-dz-name="keep">
+              <!-- Dropzone will replace the contents of this element -->
+              <span class="dropzone__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
+              <span class="dropzone__filename-ext" aria-hidden="true">.ext</span>
+            </div>
+
+            <span class="dropzone__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
+              <!-- Dropzone will replace the contents of this element -->
+              Message
+            </span>
+
+            <div>
+              <span class="font-body-2xs" title="File size">
+                <span class="usa-sr-only">File size, </span>
+
+                <span class="font-body-2xs" data-dz-size="keep">
+                  <!-- Dropzone will replace the contents of this element -->
+                  <strong>99</strong> MB
+                </span>
+              <span>
+
+              <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+              <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="file-remove" data-dz-remove="keep"><span data-dropzone="file-remove-label">remove</span> <span class="usa-sr-only" data-dz-name="keep">preview-template__filename--testing-truncated-text.ext</span></button>
+
+              <!-- remove contents below before passing to Dropzone -->
+              <span data-dropzone="remove">
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview">base</button>
 
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" data-dropzone="file-remove" data-dz-remove="keep"><span data-dropzone="file-remove-label">remove</span> <span class="usa-sr-only" data-dz-name="keep">preview-template__filename--testing-truncated-text.ext</span></button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing">processing</button>
 
-                <!-- remove contents below before passing to Dropzone -->
-                <span data-dropzone="remove">
-                  <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                  <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview">base</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing dz-complete">complete</button>
 
-                  <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                  <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing">processing</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
 
-                  <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
+                <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                  <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing dz-complete">complete</button>
-
-                  <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-
-                  <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
-
-                  <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-
-                  <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
-                </span>
-              </div>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="dropzone__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
+              </span>
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </li>
+    </ul>
   </div>
 
-  <div data-dropzone="remove">
+  <div hidden="true" aria-hidden="true" data-dropzone="remove">
     <p th:each="dict: ${dict}" th:text="${dict.string}" data-dropzone="dict" th:attr="data-dropzone-dict=${dict.key}">String</p>
   </div>
-</form>
+</div>
