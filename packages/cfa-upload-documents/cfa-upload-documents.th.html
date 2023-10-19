@@ -1,4 +1,4 @@
-<div th:fragment="uploadDocuments(modifier, documentType)" class="usa-form-group cfa-form-group cfa-file-input" th:attr="id=${id}" data-js="upload-documents">
+<div th:fragment="uploadDocuments(id, fileInput, previewTemplate, dict)" class="usa-form-group cfa-form-group cfa-file-input" th:attr="id=${id}" data-js="upload-documents">
   <div class="dropzone needsclick" data-dropzone="uploads">
     <label class="usa-label" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
       <span th:text="${fileInput.label.text}">Label</span>
@@ -6,9 +6,7 @@
       <abbr th:if="${fileInput.input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${fileInput.label.modifierHint}">*</abbr>
     </label>
 
-    <!-- <div data-dropzone="max-uploads"> -->
     <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
-    <!-- </div> -->
 
     <div class="usa-file-input">
       <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
@@ -33,12 +31,16 @@
     </div>
   </div>
 
+  <!-- @hidden       "true"  Visually hides element -->
+  <!-- @aria-hidden  "true"  Hides element from the accessibility API -->
   <div data-dropzone="preview" hidden="true" aria-hidden="true">
     <h3 class="dropzone__preview-header" data-dropzone="preview-header" th:attr="id=${previewTemplate.header.id}">
       Your documents. <span data-dropzone="preview-number">0</span> <span data-dropzone="preview-text">uploaded</span> <span>(<span>20 max</span>)</span>
     </h3>
 
     <ul class="add-list-reset" role="list" data-dropzone="preview-container" th:attr="aria-describedby=${previewTemplate.header.id}">
+      <!-- Dropzone will modify or replace the contents of this element -->
+      <!-- @data-dropzone  "remove"  removes contents before passing to Dropzone -->
       <li class="dropzone__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
         <div class="dropzone__details">
           <div class="dropzone__thumbnail" data-dropzone="thumbnail">
@@ -61,13 +63,11 @@
 
           <div class="dropzone__file">
             <div class="dropzone__filename" data-dz-name="keep">
-              <!-- Dropzone will replace the contents of this element -->
               <span class="dropzone__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
               <span class="dropzone__filename-ext" aria-hidden="true">.ext</span>
             </div>
 
             <span class="dropzone__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
-              <!-- Dropzone will replace the contents of this element -->
               Message
             </span>
 
@@ -76,7 +76,6 @@
                 <span class="usa-sr-only">File size, </span>
 
                 <span class="font-body-2xs" data-dz-size="keep">
-                  <!-- Dropzone will replace the contents of this element -->
                   <strong>99</strong> MB
                 </span>
               <span>
@@ -85,7 +84,7 @@
 
               <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="file-remove" data-dz-remove="keep"><span data-dropzone="file-remove-label">remove</span> <span class="usa-sr-only" data-dz-name="keep">preview-template__filename--testing-truncated-text.ext</span></button>
 
-              <!-- remove contents below before passing to Dropzone -->
+              <!-- @data-dropzone  "remove"  removes contents before passing to Dropzone -->
               <span data-dropzone="remove">
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
@@ -114,7 +113,10 @@
     </ul>
   </div>
 
+  <!-- @hidden         "true"    Visually hides element -->
+  <!-- @aria-hidden    "true"    Hides element from the accessibility API -->
+  <!-- @data-dropzone  "remove"  removes contents before passing to Dropzone -->
   <div hidden="true" aria-hidden="true" data-dropzone="remove">
-    <p th:each="dict: ${dict}" th:text="${dict.string}" data-dropzone="dict" th:attr="data-dropzone-dict=${dict.key}">String</p>
+    <p th:each="item: ${dict}" th:text="${item.string}" data-dropzone="dict" th:attr="data-dropzone-dict=${item.key}">String</p>
   </div>
 </div>
