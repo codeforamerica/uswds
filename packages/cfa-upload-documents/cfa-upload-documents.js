@@ -17,9 +17,9 @@ class UploadDocuments {
    * @return {Object}           Instance of UploadDocuments
    */
   constructor(element, s = {}) {
-    this.selectors = s.selectors ? s.selectors : UploadDocuments.selectors;
-
     this.element = element;
+
+    this.selectors = s.selectors ? s.selectors : UploadDocuments.selectors;
 
     this.dropzoneOptions = s.dropzoneOptions ?
       Object.assign(UploadDocuments.dropzoneOptions, s.dropzoneOptions) : UploadDocuments.dropzoneOptions;
@@ -29,6 +29,14 @@ class UploadDocuments {
     this.maxFilesReached = s.maxFilesReached ? s.maxFilesReached : UploadDocuments.maxFilesReached;
 
     this.maxFilesReset = s.maxFilesReset ? s.maxFilesReset : UploadDocuments.maxFilesReset;
+
+    this.elFocusable = s.elFocusable ? s.elFocusable : UploadDocuments.elFocusable;
+
+    this.index = s.index ? s.index : UploadDocuments.index;
+
+    this.addedFile = s.addedFile ? s.addedFile : this.addedFile;
+
+    this.removedFile = s.removedFile ? s.removedFile : this.removedFile;
 
     /**
      * Configure and initialize Dropzone
@@ -48,8 +56,8 @@ class UploadDocuments {
 
     if (process.env.NODE_ENV != 'production') {
       document.querySelector('body').addEventListener('click', event => {
-        if (event.target.matches('[data-dropzone="toggle-preview-state"]')) {
-          event.target.closest('[data-dropzone="preview-template"]')
+        if (event.target.matches(this.selectors.previewStateToggle)) {
+          event.target.closest(this.selectors.previewTemplate)
             .className = event.target.dataset.dropzonePreviewState;
         }
       });
@@ -71,8 +79,8 @@ class UploadDocuments {
    * @return  {Object}           Instance of UploadDocuments
    */
   configDropzone(options) {
-    let input = this.element.querySelector(this.selectors.input);
-    let previewsContainer = this.element.querySelector(this.selectors.previewsContainer);
+    let fallback = this.element.querySelector(this.selectors.fallback);
+    let previewContainer = this.element.querySelector(this.selectors.previewContainer);
     let previewTemplate = this.element.querySelector(this.selectors.previewTemplate);
     let thumbnail = previewTemplate.querySelector(this.selectors.thumbnail);
     let hiddenInputContainer = this.element.querySelector(this.selectors.hiddenInputContainer);
@@ -84,12 +92,25 @@ class UploadDocuments {
     options.thumbnailWidth = options.thumbnailWidth * 8;
     options.thumbnailHeight = options.thumbnailHeight * 8;
 
-    options.previewsContainer = (previewsContainer) ? previewsContainer : null;
-    options.previewTemplate = (previewTemplate) ? previewTemplate.outerHTML : null;
+    options.previewsContainer = (previewContainer) ? previewContainer : null;
 
-    options.acceptedFiles = (input) ? input.getAttribute('accept') : null;
+    options.acceptedFiles = (fallback) ? fallback.getAttribute('accept') : null;
 
     options.hiddenInputContainer = (hiddenInputContainer) ? hiddenInputContainer : region;
+
+    /**
+     * Remove testing elements if building for production
+     */
+
+    if (process.env.NODE_ENV === 'production') {
+      let remove = previewTemplate.querySelectorAll(this.selectors.remove);
+
+      for (let i = 0; i < remove.length; i++) {
+        remove[i].remove();
+      }
+    }
+
+    options.previewTemplate = (previewTemplate) ? previewTemplate.outerHTML : null;
 
     /**
      * Set all provided dictionary items from the template
@@ -133,22 +154,18 @@ class UploadDocuments {
    * init event handler. However, this handler does trigger after Dropzone is
    * initialized.
    *
-   * @return  {Object} Instance of UploadDocuments
+   * @return  {Object}  Instance of UploadDocuments
    */
   init() {
-    this.maxFiles()
-      .swapFallback();
+    if (process.env.NODE_ENV === 'production') {
+      this.hidePreviewTemplate();
+    }
 
-    this.dropzone.on('addedfile', file => {
-      this.formatFilename(file)
-        .maxFiles()
-        .uploadedNumber();
-    });
-
-    this.dropzone.on('removedfile', file => {
-      this.maxFiles()
-        .uploadedNumber();
-    });
+    this.preview()
+      .maxFiles()
+      .swapFallback()
+      .addedFile()
+      .removedFile();
 
     /**
      * Add previously uploaded documents
@@ -168,7 +185,7 @@ class UploadDocuments {
    * @return  {Object}  Instance of UploadDocuments
    */
   swapFallback() {
-    let fallback = this.dropzone.element.querySelector(UploadDocuments.selectors.fallback);
+    let fallback = this.dropzone.element.querySelector(this.selectors.fallback);
 
     for (let i = 0; i < UploadDocuments.fallbackAttrs.length; i++) {
       let attr = UploadDocuments.fallbackAttrs[i];
@@ -189,6 +206,38 @@ class UploadDocuments {
   }
 
   /**
+   * Add the Dropzone event listener for 'addedfile'. This method property could
+   * be overridden to customize the chain of events contained within.
+   *
+   * @return  {Object}  Instance of UploadDocuments
+   */
+  addedFile() {
+    this.dropzone.on('addedfile', file => {
+      this.formatFilename(file)
+        .maxFiles()
+        .preview()
+        .previewNumber()
+        .previewHeader();
+    });
+
+    return this;
+  }
+
+  /**
+   * Add the Dropzone event listener for 'removedfile'. This method property could
+   * be overridden to customize the chain of events contained within.
+   *
+   * @return  {Object}  Instance of UploadDocuments
+   */
+  removedFile() {
+    this.dropzone.on('removedfile', file => {
+      this.maxFiles()
+        .preview()
+        .previewNumber();
+    });
+  }
+
+  /**
    * Event handler for the dragover event on the Dropzone region
    *
    * @param   {Object}  event  Dragover event
@@ -196,7 +245,7 @@ class UploadDocuments {
    * @return  {Object}         Instance of UploadDocuments
    */
   dragover(event) {
-    if (event.srcElement.matches(UploadDocuments.selectors.dragRegion)) {
+    if (event.srcElement.matches(this.selectors.dragRegion)) {
       event.srcElement.classList.add(UploadDocuments.classes.dragOver);
     }
 
@@ -211,7 +260,7 @@ class UploadDocuments {
    * @return  {Object}         Instance of UploadDocuments
    */
   dragleave(event) {
-    if (event.srcElement.matches(UploadDocuments.selectors.dragRegion)) {
+    if (event.srcElement.matches(this.selectors.dragRegion)) {
       event.srcElement.classList.remove(UploadDocuments.classes.dragOver);
     }
 
@@ -227,17 +276,6 @@ class UploadDocuments {
    */
   drop(event) {
     this.dragleave(event);
-
-    /**
-     * Shift focus to the uploads header with additional information
-     */
-
-    let header = this.element.querySelector(UploadDocuments.selectors.uploadsHeader);
-
-    if (header) {
-      header.setAttribute('tabindex', '-1');
-      header.focus();
-    }
 
     return this;
   }
@@ -274,15 +312,72 @@ class UploadDocuments {
   }
 
   /**
+   * Show or hide the preview based on the number of added files
+   *
+   * @return  {Object}  Instance of UploadDocuments
+   */
+  preview() {
+    let preview = this.element.querySelector(this.selectors.preview);
+
+    if (this.dropzone.files.length > 0) {
+      preview.removeAttribute('aria-hidden');
+      preview.removeAttribute('hidden');
+    } else {
+      preview.setAttribute('aria-hidden', 'true');
+      preview.setAttribute('hidden', '');
+    }
+
+    return this;
+  }
+
+  /**
    * Update the uploaded number inner text to reflect the number of added files
    *
    * @return  {Object}  Instance of UploadDocuments
    */
-  uploadedNumber() {
-    let number = this.element.querySelector(UploadDocuments.selectors.uploadsNumber);
+  previewNumber() {
+    let number = this.element.querySelector(this.selectors.previewNumber);
 
     if (number) {
       number.innerText = this.dropzone.files.length;
+    }
+
+    return this;
+  }
+
+  /**
+   * Shift focus to the uploads header with additional information
+   *
+   * @return  {Object}  Instance of UploadDocuments
+   */
+  previewHeader() {
+    let header = this.element.querySelector(this.selectors.previewHeader);
+
+    if (header) {
+      header.setAttribute('tabindex', '-1');
+      header.focus();
+    }
+
+    return this;
+  }
+
+  /**
+   * Hide the preview template
+   *
+   * @param   {Object}  remove  If set to true the element will be removed from the DOM
+   *
+   * @return  {Object}          Instance of UploadDocuments
+   */
+  hidePreviewTemplate(remove = false) {
+    if (remove) {
+      previewTemplate.remove();
+    } else {
+      let previewTemplate = this.element.querySelector(this.selectors.previewTemplate);
+
+      previewTemplate.setAttribute('aria-hidden', 'true');
+      previewTemplate.setAttribute('hidden', '');
+
+      this.index(previewTemplate.querySelectorAll(this.elFocusable.join(', ')), false);
     }
 
     return this;
@@ -294,11 +389,11 @@ class UploadDocuments {
    * @return  {Object}  Instance of UploadDocuments
    */
   maxFiles() {
-    let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
+    let inputErrorMessage = this.element.querySelector(this.selectors.inputErrorMessage);
 
     if (inputErrorMessage.getAttribute('aria-hidden') === 'true' &&
       this.dropzone.files.length >= this.dropzone.options.maxFiles) {
-      let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
+      let inputErrorMessage = this.element.querySelector(this.selectors.inputErrorMessage);
 
       inputErrorMessage.innerText = this.dropzone.options.dictMaxFilesExceeded;
       inputErrorMessage.removeAttribute('aria-hidden');
@@ -309,7 +404,7 @@ class UploadDocuments {
     }
 
     if (this.dropzone.files.length <= this.dropzone.options.maxFiles) {
-      let inputErrorMessage = this.element.querySelector(UploadDocuments.selectors.inputErrorMessage);
+      let inputErrorMessage = this.element.querySelector(this.selectors.inputErrorMessage);
 
       inputErrorMessage.innerText = '';
       inputErrorMessage.setAttribute('aria-hidden', 'true');
@@ -364,15 +459,18 @@ UploadDocuments.selectors = {
   'dragRegion': '[data-dropzone="drag-and-drop-region"]',
   'inputErrorMessage': '[data-dropzone="input-error-message"]',
   'fallback': '[data-dropzone="fallback"]',
-  'uploadsHeader': '[data-dropzone="uploads-header"]',
-  'uploadsNumber': '[data-dropzone="uploads-number"]',
-  'previewsContainer': '[data-dropzone="previews-container"]',
+  'previewHeader': '[data-dropzone="preview-header"]',
+  'previewNumber': '[data-dropzone="preview-number"]',
+  'preview': '[data-dropzone="preview"]',
+  'previewContainer': '[data-dropzone="preview-container"]',
   'previewTemplate': '[data-dropzone="preview-template"]',
+  'previewStateToggle': '[data-dropzone="toggle-preview-state"]',
   'thumbnail': '[data-dropzone="thumbnail"]',
   'hiddenInputContainer': '[data-dropzone="hidden-input-container"]',
   'dict': '[data-dropzone="dict"]',
   'fileRemove': '[data-dropzone="file-remove"]',
-  'fileRemoveLabel': '[data-dropzone="file-remove-label"]'
+  'fileRemoveLabel': '[data-dropzone="file-remove-label"]',
+  'remove': '[data-dropzone="remove"]'
 };
 
 /** @type  {Object}  A dictionary of classes used by the utility class **/
@@ -409,5 +507,41 @@ UploadDocuments.maxFilesReset = () => {
     console.dir('Max files threshold not reached!');
   }
 };
+
+/** @type  {Array}  A list of potentially focusable element selectors */
+UploadDocuments.elFocusable = [
+  'a', 'button', 'input', 'select', 'textarea', 'object', 'embed', 'form',
+  'fieldset', 'legend', 'label', 'area', 'audio', 'video', 'iframe', 'svg',
+  'details', 'table', '[tabindex]', '[contenteditable]', '[usemap]'
+];
+
+/**
+ * Method for adding or removing potentially focusable elements from the
+ * dom tabbing order within the target region.
+ *
+ * @param   {NodeList}  elements  Elements to index
+ * @param   {Boolean}   index     Wether to index elements or not
+ *
+ * @return  {Object}              The indexed elements
+ */
+UploadDocuments.index = (elements, index = false) => {
+  for (let i = 0; i < elements.length; i++) {
+    let element = elements[i];
+
+    if (index) {
+      let dataDefault = element.getAttribute(`data-js-tabindex`);
+
+      if (dataDefault) {
+        element.setAttribute('tabindex', dataDefault);
+      } else {
+        element.removeAttribute('tabindex');
+      }
+    } else {
+      element.setAttribute('tabindex', '-1');
+    }
+  };
+
+  return elements;
+}
 
 export default UploadDocuments;

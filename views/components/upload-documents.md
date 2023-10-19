@@ -82,20 +82,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     "modifier": "cfa-form-group cfa-file-input",
     "id": "form-group-{{ id }}",
     "label": {
-      "text": "Add your files",
+      "text": "Add your files or photos",
       "for": "input-{{ id }}",
       "modifier": "cfa-label",
       "modifierHint": "cfa-hint"
     },
     "hint": {
-      "text": "Drag your files here or <span class=\"usa-file-input__choose\">choose from folder</span>. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to <b>20 MB</b> and a maximum of <b>20 files</b> are allowed.",
+      "text": "<span class=\"usa-file-input__choose\">Select or drop files here</span>. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to <b>20 MB</b>, and a maximum of <b>20 files</b> are allowed.",
       "modifier": "cfa-hint",
       "id": "hint-{{ id }}"
-    },
-    "error": {
-      "text": "You have uploaded the maximum number of 20 files. You will have the opportunity to add more later.",
-      "id": "error-message-{{ id }}",
-      "role": "alert"
     },
     "input": {
       "modifier": "usa-file-input cfa-input cfa-file-input__input",
@@ -116,27 +111,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       "id": "aria-db-{{ id_preview }}"
     },
     "error": {
-      "icon": "{{ config.baseUrl }}uswds/img/sprite.svg#warning",
-      "dict": [
-        {
-          "key": "fileTooBig",
-          "string": "Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again."
-        },
-        {
-          "key": "maxFilesExceeded",
-          "string": "Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later."
-        },
-        {
-          "key": "invalidFileType",
-          "string": "Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp."
-        },
-        {
-          "key": "responseError",
-          "string": "Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later."
-        }
-      ]
+      "icon": "{{ config.baseUrl }}uswds/img/sprite.svg#warning"
+    },
+    "thumbnail": {
+      "default": "{{ config.baseUrl }}uswds/img/sprite.svg#file_present"
     }
-  }
+  },
+  "dict": [
+    {
+      "key": "fileTooBig",
+      "string": "Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again."
+    },
+    {
+      "key": "maxFiles",
+      "string": "You have uploaded the maximum number of 20 files. You will have the opportunity to add more later."
+    },
+    {
+      "key": "maxFilesExceeded",
+      "string": "Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later."
+    },
+    {
+      "key": "invalidFileType",
+      "string": "Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp."
+    },
+    {
+      "key": "responseError",
+      "string": "Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later."
+    }
+  ]
 }{% endcapture %}
 
 {% render 'figure.md', name: 'upload-documents', nice: title, body: body, context: context, caption: title %}

@@ -107,15 +107,15 @@ const initComponents = () => {
           //    */
           //   this.on('addedfile', function(file) {
           //     //... some custom methods can go here
-          //
+
           //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'cancel';
-          //
+
           //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
           //       .addEventListener('click', () => {
           //         //... cancel event for uploading file
           //       });
           //   });
-          //
+
           //   /**
           //    * Example success event hook. When the complete upload is finished
           //    * and successful.
@@ -126,9 +126,9 @@ const initComponents = () => {
           //    */
           //   this.on('success', function(file) {
           //     //... some custom methods can go here
-          //
+
           //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'remove';
-          //
+
           //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
           //       .addEventListener('click', () => {
           //         //... remove event for uploaded file

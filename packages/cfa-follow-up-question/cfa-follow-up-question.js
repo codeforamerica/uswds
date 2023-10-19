@@ -17,6 +17,8 @@ class FollowUpQuestion {
 
     this.ariaExpanded = s.ariaExpanded ? s.ariaExpanded : FollowUpQuestion.ariaExpanded;
 
+    this.index = s.index ? s.index : FollowUpQuestion.index;
+
     this.show = s.show ? s.show : this.show;
 
     this.hide = s.hide ? s.hide : this.hide;
@@ -134,35 +136,6 @@ class FollowUpQuestion {
   }
 
   /**
-   * Method for adding or removing potentially focusable elements from the
-   * dom tabbing order within the target region.
-   *
-   * @param   {NodeList}  elements  Elements to index
-   * @param   {Boolean}   index     Wether to index elements or not
-   *
-   * @return  {Object}              Instance of FollowUpQuestion
-   */
-  index(elements, index = false) {
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-
-      if (index) {
-        let dataDefault = element.getAttribute(`data-js-tabindex`);
-
-        if (dataDefault) {
-          element.setAttribute('tabindex', dataDefault);
-        } else {
-          element.removeAttribute('tabindex');
-        }
-      } else {
-        element.setAttribute('tabindex', '-1');
-      }
-    };
-
-    return this;
-  }
-
-  /**
    * Method for enabling or disabling form elements within the target region.
    *
    * @param   {NodeList}  elements  Elements to enable or disable
@@ -194,6 +167,35 @@ FollowUpQuestion.elFocusable = [
   'fieldset', 'legend', 'label', 'area', 'audio', 'video', 'iframe', 'svg',
   'details', 'table', '[tabindex]', '[contenteditable]', '[usemap]'
 ];
+
+/**
+ * Method for adding or removing potentially focusable elements from the
+ * dom tabbing order within the target region.
+ *
+ * @param   {NodeList}  elements  Elements to index
+ * @param   {Boolean}   index     Wether to index elements or not
+ *
+ * @return  {Object}              The indexed elements
+ */
+FollowUpQuestion.index = (elements, index = false) => {
+  for (let i = 0; i < elements.length; i++) {
+    let element = elements[i];
+
+    if (index) {
+      let dataDefault = element.getAttribute(`data-js-tabindex`);
+
+      if (dataDefault) {
+        element.setAttribute('tabindex', dataDefault);
+      } else {
+        element.removeAttribute('tabindex');
+      }
+    } else {
+      element.setAttribute('tabindex', '-1');
+    }
+  };
+
+  return elements;
+}
 
 /** @type  {Array}  A list of form elements that can be disabled */
 FollowUpQuestion.elDisabled = [
