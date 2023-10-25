@@ -2,7 +2,7 @@
 @forward 'uswds';
 @forward 'uswds-theme-custom-styles';
 
-@forward 'site';
+@forward '_site.scss';
 
 @forward '../../packages/cfa-accordion/_cfa-accordion.scss';
 @forward '../../packages/cfa-alert/_cfa-alert.scss';
