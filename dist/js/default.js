@@ -5,482 +5,9 @@
 		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 	}
 
-	/*
-	 * classList.js: Cross-browser full element.classList implementation.
-	 * 2014-07-23
-	 *
-	 * By Eli Grey, http://eligrey.com
-	 * Public Domain.
-	 * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
-	 */
-
-	/*global self, document, DOMException */
-
-	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
-
-	/* Copied from MDN:
-	 * https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-	 */
-
-	if ("document" in window.self) {
-
-	  // Full polyfill for browsers with no classList support
-	  // Including IE < Edge missing SVGElement.classList
-	  if (!("classList" in document.createElement("_"))
-	    || document.createElementNS && !("classList" in document.createElementNS("http://www.w3.org/2000/svg","g"))) {
-
-	  (function (view) {
-
-	    if (!('Element' in view)) return;
-
-	    var
-	        classListProp = "classList"
-	      , protoProp = "prototype"
-	      , elemCtrProto = view.Element[protoProp]
-	      , objCtr = Object
-	      , strTrim = String[protoProp].trim || function () {
-	        return this.replace(/^\s+|\s+$/g, "");
-	      }
-	      , arrIndexOf = Array[protoProp].indexOf || function (item) {
-	        var
-	            i = 0
-	          , len = this.length
-	        ;
-	        for (; i < len; i++) {
-	          if (i in this && this[i] === item) {
-	            return i;
-	          }
-	        }
-	        return -1;
-	      }
-	      // Vendors: please allow content code to instantiate DOMExceptions
-	      , DOMEx = function (type, message) {
-	        this.name = type;
-	        this.code = DOMException[type];
-	        this.message = message;
-	      }
-	      , checkTokenAndGetIndex = function (classList, token) {
-	        if (token === "") {
-	          throw new DOMEx(
-	              "SYNTAX_ERR"
-	            , "An invalid or illegal string was specified"
-	          );
-	        }
-	        if (/\s/.test(token)) {
-	          throw new DOMEx(
-	              "INVALID_CHARACTER_ERR"
-	            , "String contains an invalid character"
-	          );
-	        }
-	        return arrIndexOf.call(classList, token);
-	      }
-	      , ClassList = function (elem) {
-	        var
-	            trimmedClasses = strTrim.call(elem.getAttribute("class") || "")
-	          , classes = trimmedClasses ? trimmedClasses.split(/\s+/) : []
-	          , i = 0
-	          , len = classes.length
-	        ;
-	        for (; i < len; i++) {
-	          this.push(classes[i]);
-	        }
-	        this._updateClassName = function () {
-	          elem.setAttribute("class", this.toString());
-	        };
-	      }
-	      , classListProto = ClassList[protoProp] = []
-	      , classListGetter = function () {
-	        return new ClassList(this);
-	      }
-	    ;
-	    // Most DOMException implementations don't allow calling DOMException's toString()
-	    // on non-DOMExceptions. Error's toString() is sufficient here.
-	    DOMEx[protoProp] = Error[protoProp];
-	    classListProto.item = function (i) {
-	      return this[i] || null;
-	    };
-	    classListProto.contains = function (token) {
-	      token += "";
-	      return checkTokenAndGetIndex(this, token) !== -1;
-	    };
-	    classListProto.add = function () {
-	      var
-	          tokens = arguments
-	        , i = 0
-	        , l = tokens.length
-	        , token
-	        , updated = false
-	      ;
-	      do {
-	        token = tokens[i] + "";
-	        if (checkTokenAndGetIndex(this, token) === -1) {
-	          this.push(token);
-	          updated = true;
-	        }
-	      }
-	      while (++i < l);
-
-	      if (updated) {
-	        this._updateClassName();
-	      }
-	    };
-	    classListProto.remove = function () {
-	      var
-	          tokens = arguments
-	        , i = 0
-	        , l = tokens.length
-	        , token
-	        , updated = false
-	        , index
-	      ;
-	      do {
-	        token = tokens[i] + "";
-	        index = checkTokenAndGetIndex(this, token);
-	        while (index !== -1) {
-	          this.splice(index, 1);
-	          updated = true;
-	          index = checkTokenAndGetIndex(this, token);
-	        }
-	      }
-	      while (++i < l);
-
-	      if (updated) {
-	        this._updateClassName();
-	      }
-	    };
-	    classListProto.toggle = function (token, force) {
-	      token += "";
-
-	      var
-	          result = this.contains(token)
-	        , method = result ?
-	          force !== true && "remove"
-	        :
-	          force !== false && "add"
-	      ;
-
-	      if (method) {
-	        this[method](token);
-	      }
-
-	      if (force === true || force === false) {
-	        return force;
-	      } else {
-	        return !result;
-	      }
-	    };
-	    classListProto.toString = function () {
-	      return this.join(" ");
-	    };
-
-	    if (objCtr.defineProperty) {
-	      var classListPropDesc = {
-	          get: classListGetter
-	        , enumerable: true
-	        , configurable: true
-	      };
-	      try {
-	        objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-	      } catch (ex) { // IE 8 doesn't support enumerable:true
-	        if (ex.number === -0x7FF5EC54) {
-	          classListPropDesc.enumerable = false;
-	          objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-	        }
-	      }
-	    } else if (objCtr[protoProp].__defineGetter__) {
-	      elemCtrProto.__defineGetter__(classListProp, classListGetter);
-	    }
-
-	    }(window.self));
-
-	    } else {
-	    // There is full or partial native classList support, so just check if we need
-	    // to normalize the add/remove and toggle APIs.
-
-	    (function () {
-
-	      var testElement = document.createElement("_");
-
-	      testElement.classList.add("c1", "c2");
-
-	      // Polyfill for IE 10/11 and Firefox <26, where classList.add and
-	      // classList.remove exist but support only one argument at a time.
-	      if (!testElement.classList.contains("c2")) {
-	        var createMethod = function(method) {
-	          var original = DOMTokenList.prototype[method];
-
-	          DOMTokenList.prototype[method] = function(token) {
-	            var i, len = arguments.length;
-
-	            for (i = 0; i < len; i++) {
-	              token = arguments[i];
-	              original.call(this, token);
-	            }
-	          };
-	        };
-	        createMethod('add');
-	        createMethod('remove');
-	      }
-
-	      testElement.classList.toggle("c3", false);
-
-	      // Polyfill for IE 10 and Firefox <24, where classList.toggle does not
-	      // support the second argument.
-	      if (testElement.classList.contains("c3")) {
-	        var _toggle = DOMTokenList.prototype.toggle;
-
-	        DOMTokenList.prototype.toggle = function(token, force) {
-	          if (1 in arguments && !this.contains(token) === !force) {
-	            return force;
-	          } else {
-	            return _toggle.call(this, token);
-	          }
-	        };
-
-	      }
-
-	      testElement = null;
-	    }());
-	  }
-	}
-
-	const elproto = window.HTMLElement.prototype;
-	const HIDDEN$1 = "hidden";
-
-	if (!(HIDDEN$1 in elproto)) {
-	  Object.defineProperty(elproto, HIDDEN$1, {
-	    get() {
-	      return this.hasAttribute(HIDDEN$1);
-	    },
-	    set(value) {
-	      if (value) {
-	        this.setAttribute(HIDDEN$1, "");
-	      } else {
-	        this.removeAttribute(HIDDEN$1);
-	      }
-	    },
-	  });
-	}
-
-	Number.isNaN =
-	  Number.isNaN ||
-	  function isNaN(input) {
-	    // eslint-disable-next-line no-self-compare
-	    return typeof input === "number" && input !== input;
-	  };
-
-	/* eslint-disable consistent-return */
-
-	/* eslint-disable func-names */
-	(function () {
-	  if (typeof window.CustomEvent === "function") return false;
-
-	  function CustomEvent(event, _params) {
-	    const params = _params || {
-	      bubbles: false,
-	      cancelable: false,
-	      detail: null,
-	    };
-	    const evt = document.createEvent("CustomEvent");
-	    evt.initCustomEvent(
-	      event,
-	      params.bubbles,
-	      params.cancelable,
-	      params.detail
-	    );
-	    return evt;
-	  }
-
-	  window.CustomEvent = CustomEvent;
-	})();
-
-	var svg4everybody$1 = {exports: {}};
-
-	/* eslint-disable */
-
-	!(function (factory) {
-	  svg4everybody$1.exports = factory();
-	})(function () {
-	  /*! svg4everybody v2.1.9 | github.com/jonathantneal/svg4everybody */
-	  function embed(parent, svg, target, use) {
-	    // if the target exists
-	    if (target) {
-	      // create a document fragment to hold the contents of the target
-	      var fragment = document.createDocumentFragment(),
-	        viewBox =
-	          !svg.hasAttribute("viewBox") && target.getAttribute("viewBox");
-	      // conditionally set the viewBox on the svg
-	      viewBox && svg.setAttribute("viewBox", viewBox);
-	      // copy the contents of the clone into the fragment
-	      for (
-	        // clone the target
-	        var clone = document.importNode
-	            ? document.importNode(target, !0)
-	            : target.cloneNode(!0),
-	          g = document.createElementNS(
-	            svg.namespaceURI || "http://www.w3.org/2000/svg",
-	            "g"
-	          );
-	        clone.childNodes.length;
-
-	      ) {
-	        g.appendChild(clone.firstChild);
-	      }
-	      if (use) {
-	        for (var i = 0; use.attributes.length > i; i++) {
-	          var attr = use.attributes[i];
-	          "xlink:href" !== attr.name &&
-	            "href" !== attr.name &&
-	            g.setAttribute(attr.name, attr.value);
-	        }
-	      }
-	      fragment.appendChild(g), // append the fragment into the svg
-	        parent.appendChild(fragment);
-	    }
-	  }
-	  function loadreadystatechange(xhr, use) {
-	    // listen to changes in the request
-	    (xhr.onreadystatechange = function () {
-	      // if the request is ready
-	      if (4 === xhr.readyState) {
-	        // get the cached html document
-	        var cachedDocument = xhr._cachedDocument;
-	        // ensure the cached html document based on the xhr response
-	        cachedDocument ||
-	          ((cachedDocument = xhr._cachedDocument =
-	            document.implementation.createHTMLDocument("")),
-	          (cachedDocument.body.innerHTML = xhr.responseText), // ensure domains are the same, otherwise we'll have issues appending the
-	          // element in IE 11
-	          cachedDocument.domain !== document.domain &&
-	            (cachedDocument.domain = document.domain),
-	          (xhr._cachedTarget = {})), // clear the xhr embeds list and embed each item
-	          xhr._embeds.splice(0).map(function (item) {
-	            // get the cached target
-	            var target = xhr._cachedTarget[item.id];
-	            // ensure the cached target
-	            target ||
-	              (target = xhr._cachedTarget[item.id] =
-	                cachedDocument.getElementById(item.id)),
-	              // embed the target into the svg
-	              embed(item.parent, item.svg, target, use);
-	          });
-	      }
-	    }), // test the ready state change immediately
-	      xhr.onreadystatechange();
-	  }
-	  function svg4everybody(rawopts) {
-	    function oninterval() {
-	      // if all <use>s in the array are being bypassed, don't proceed.
-	      if (
-	        numberOfSvgUseElementsToBypass &&
-	        uses.length - numberOfSvgUseElementsToBypass <= 0
-	      ) {
-	        return void requestAnimationFrame(oninterval, 67);
-	      }
-	      // if there are <use>s to process, proceed.
-	      // reset the bypass counter, since the counter will be incremented for every bypassed element,
-	      // even ones that were counted before.
-	      numberOfSvgUseElementsToBypass = 0;
-	      // while the index exists in the live <use> collection
-	      for (
-	        // get the cached <use> index
-	        var index = 0;
-	        index < uses.length;
-
-	      ) {
-	        // get the current <use>
-	        var use = uses[index],
-	          parent = use.parentNode,
-	          svg = getSVGAncestor(parent),
-	          src = use.getAttribute("xlink:href") || use.getAttribute("href");
-	        if (
-	          (!src &&
-	            opts.attributeName &&
-	            (src = use.getAttribute(opts.attributeName)),
-	          svg && src)
-	        ) {
-	          if (polyfill) {
-	            if (!opts.validate || opts.validate(src, svg, use)) {
-	              // remove the <use> element
-	              parent.removeChild(use);
-	              // parse the src and get the url and id
-	              var srcSplit = src.split("#"),
-	                url = srcSplit.shift(),
-	                id = srcSplit.join("#");
-	              // if the link is external
-	              if (url.length) {
-	                // get the cached xhr request
-	                var xhr = requests[url];
-	                // ensure the xhr request exists
-	                xhr ||
-	                  ((xhr = requests[url] = new XMLHttpRequest()),
-	                  xhr.open("GET", url),
-	                  xhr.send(),
-	                  (xhr._embeds = [])), // add the svg and id as an item to the xhr embeds list
-	                  xhr._embeds.push({
-	                    parent: parent,
-	                    svg: svg,
-	                    id: id,
-	                  }), // prepare the xhr ready state change event
-	                  loadreadystatechange(xhr, use);
-	              } else {
-	                // embed the local id into the svg
-	                embed(parent, svg, document.getElementById(id), use);
-	              }
-	            } else {
-	              // increase the index when the previous value was not "valid"
-	              ++index, ++numberOfSvgUseElementsToBypass;
-	            }
-	          }
-	        } else {
-	          // increase the index when the previous value was not "valid"
-	          ++index;
-	        }
-	      }
-	      // continue the interval
-	      requestAnimationFrame(oninterval, 67);
-	    }
-	    var polyfill,
-	      opts = Object(rawopts),
-	      newerIEUA = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/,
-	      webkitUA = /\bAppleWebKit\/(\d+)\b/,
-	      olderEdgeUA = /\bEdge\/12\.(\d+)\b/,
-	      edgeUA = /\bEdge\/.(\d+)\b/,
-	      inIframe = window.top !== window.self;
-	    polyfill =
-	      "polyfill" in opts
-	        ? opts.polyfill
-	        : newerIEUA.test(navigator.userAgent) ||
-	          (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 ||
-	          (navigator.userAgent.match(webkitUA) || [])[1] < 537 ||
-	          (edgeUA.test(navigator.userAgent) && inIframe);
-	    // create xhr requests object
-	    var requests = {},
-	      requestAnimationFrame = window.requestAnimationFrame || setTimeout,
-	      uses = document.getElementsByTagName("use"),
-	      numberOfSvgUseElementsToBypass = 0;
-	    // conditionally start the interval if the polyfill is active
-	    polyfill && oninterval();
-	  }
-	  function getSVGAncestor(node) {
-	    for (
-	      var svg = node;
-	      "svg" !== svg.nodeName.toLowerCase() && (svg = svg.parentNode);
-
-	    ) {}
-	    return svg;
-	  }
-	  return svg4everybody;
-	});
-
-	var svg4everybodyExports = svg4everybody$1.exports;
-	var svg4everybody = /*@__PURE__*/getDefaultExportFromCjs(svg4everybodyExports);
-
 	var config = {
 	  prefix: "usa",
 	};
-
-	var uswds = /*@__PURE__*/getDefaultExportFromCjs(config);
 
 	/**
 	 * @name isElement
@@ -727,7 +254,7 @@
 	  return value;
 	};
 
-	var behavior$6 = function behavior(events, props) {
+	var behavior$7 = function behavior(events, props) {
 	  const listeners = Object.keys(events)
 	    .reduce(function(memo, type) {
 	      var listeners = getListeners(type, events[type]);
@@ -757,7 +284,7 @@
 	};
 
 	const assign$1 = objectAssign;
-	const Behavior = behavior$6;
+	const Behavior = behavior$7;
 
 	/**
 	 * @name sequence
@@ -781,7 +308,7 @@
 	 * @param {object?} props
 	 * @return {receptor.behavior}
 	 */
-	var behavior$5 = (events, props) =>
+	var behavior$6 = (events, props) =>
 	  Behavior(
 	    events,
 	    assign$1(
@@ -856,14 +383,14 @@
 	};
 
 	const select$3 = select$4;
-	const behavior$4 = behavior$5;
+	const behavior$5 = behavior$6;
 	const toggle$1 = toggle$2;
 	const isElementInViewport$1 = isInViewport;
-	const { CLICK: CLICK$1 } = events;
-	const { prefix: PREFIX$2 } = config;
+	const { CLICK: CLICK$2 } = events;
+	const { prefix: PREFIX$3 } = config;
 
-	const ACCORDION = `.${PREFIX$2}-accordion, .${PREFIX$2}-accordion--bordered`;
-	const BUTTON = `.${PREFIX$2}-accordion__button[aria-controls]`;
+	const ACCORDION = `.${PREFIX$3}-accordion, .${PREFIX$3}-accordion--bordered`;
+	const BUTTON = `.${PREFIX$3}-accordion__button[aria-controls]`;
 	const EXPANDED = "aria-expanded";
 	const MULTISELECTABLE = "data-allow-multiple";
 
@@ -922,9 +449,9 @@
 	 */
 	const hideButton = (button) => toggleButton$1(button, false);
 
-	const accordion$1 = behavior$4(
+	const accordion$1 = behavior$5(
 	  {
-	    [CLICK$1]: {
+	    [CLICK$2]: {
 	      [BUTTON]() {
 	        toggleButton$1(this);
 
@@ -953,9 +480,9 @@
 	  }
 	);
 
-	var src$3 = accordion$1;
+	var src$4 = accordion$1;
 
-	var accordion$2 = /*@__PURE__*/getDefaultExportFromCjs(src$3);
+	var accordion$2 = /*@__PURE__*/getDefaultExportFromCjs(src$4);
 
 	var keymap$3 = {exports: {}};
 
@@ -1126,7 +653,7 @@
 	var keymapExports = keymap$3.exports;
 
 	const keymap$2 = keymapExports;
-	const behavior$3 = behavior$5;
+	const behavior$4 = behavior$6;
 
 	const ANCHOR_BUTTON = `a[class*="usa-button"]`;
 
@@ -1135,7 +662,7 @@
 	  event.target.click();
 	};
 
-	const anchorButton = behavior$3({
+	const anchorButton = behavior$4({
 	  keydown: {
 	    [ANCHOR_BUTTON]: keymap$2({
 	      " ": toggleButton,
@@ -1143,9 +670,9 @@
 	  },
 	});
 
-	var src$2 = anchorButton;
+	var src$3 = anchorButton;
 
-	var button = /*@__PURE__*/getDefaultExportFromCjs(src$2);
+	var button = /*@__PURE__*/getDefaultExportFromCjs(src$3);
 
 	var ignore = function ignore(element, fn) {
 	  return function ignorance(e) {
@@ -1156,7 +683,7 @@
 	};
 
 	var receptor = {
-	  behavior:     behavior$6,
+	  behavior:     behavior$7,
 	  delegate:     delegate$2,
 	  delegateAll:  delegateAll$1,
 	  ignore:       ignore,
@@ -1167,7 +694,7 @@
 
 	const assign = objectAssign;
 	const { keymap: keymap$1 } = receptor;
-	const behavior$2 = behavior$5;
+	const behavior$3 = behavior$6;
 	const select$2 = select$4;
 	const activeElement = activeElement$1;
 
@@ -1230,7 +757,7 @@
 	    )
 	  );
 
-	  const focusTrap = behavior$2(
+	  const focusTrap = behavior$3(
 	    {
 	      keydown: keyMappings,
 	    },
@@ -1277,29 +804,29 @@
 	};
 
 	const keymap = keymapExports;
-	const behavior$1 = behavior$5;
+	const behavior$2 = behavior$6;
 	const select$1 = select$4;
 	const toggle = toggle$2;
 	const FocusTrap = focusTrap;
-	const accordion = src$3;
+	const accordion = src$4;
 	const ScrollBarWidth = scrollbarWidth;
 
-	const { CLICK } = events;
-	const { prefix: PREFIX$1 } = config;
+	const { CLICK: CLICK$1 } = events;
+	const { prefix: PREFIX$2 } = config;
 
 	const BODY = "body";
-	const HEADER = `.${PREFIX$1}-header`;
-	const NAV = `.${PREFIX$1}-nav`;
-	const NAV_CONTAINER = `.${PREFIX$1}-nav-container`;
-	const NAV_PRIMARY = `.${PREFIX$1}-nav__primary`;
-	const NAV_PRIMARY_ITEM = `.${PREFIX$1}-nav__primary-item`;
-	const NAV_CONTROL = `button.${PREFIX$1}-nav__link`;
+	const HEADER = `.${PREFIX$2}-header`;
+	const NAV = `.${PREFIX$2}-nav`;
+	const NAV_CONTAINER = `.${PREFIX$2}-nav-container`;
+	const NAV_PRIMARY = `.${PREFIX$2}-nav__primary`;
+	const NAV_PRIMARY_ITEM = `.${PREFIX$2}-nav__primary-item`;
+	const NAV_CONTROL = `button.${PREFIX$2}-nav__link`;
 	const NAV_LINKS = `${NAV} a`;
 	const NON_NAV_HIDDEN_ATTRIBUTE = `data-nav-hidden`;
-	const OPENERS = `.${PREFIX$1}-menu-btn`;
-	const CLOSE_BUTTON = `.${PREFIX$1}-nav__close`;
-	const OVERLAY = `.${PREFIX$1}-overlay`;
-	const CLOSERS = `${CLOSE_BUTTON}, .${PREFIX$1}-overlay`;
+	const OPENERS = `.${PREFIX$2}-menu-btn`;
+	const CLOSE_BUTTON = `.${PREFIX$2}-nav__close`;
+	const OVERLAY = `.${PREFIX$2}-overlay`;
+	const CLOSERS = `${CLOSE_BUTTON}, .${PREFIX$2}-overlay`;
 	const TOGGLES = [NAV, OVERLAY].join(", ");
 	const NON_NAV_ELEMENTS = `body *:not(${HEADER}, ${NAV_CONTAINER}, ${NAV}, ${NAV} *):not([aria-hidden])`;
 	const NON_NAV_HIDDEN = `[${NON_NAV_HIDDEN_ATTRIBUTE}]`;
@@ -1436,9 +963,9 @@
 	  focusNavButton(event);
 	};
 
-	navigation = behavior$1(
+	navigation = behavior$2(
 	  {
-	    [CLICK]: {
+	    [CLICK$1]: {
 	      [NAV_CONTROL]() {
 	        // If another nav is open, close it
 	        if (navActive !== this) {
@@ -1511,9 +1038,54 @@
 	  }
 	);
 
-	var src$1 = navigation;
+	var src$2 = navigation;
 
-	var navigation$1 = /*@__PURE__*/getDefaultExportFromCjs(src$1);
+	var navigation$1 = /*@__PURE__*/getDefaultExportFromCjs(src$2);
+
+	var once$1 = function once(listener, options) {
+	  var wrapped = function wrappedOnce(e) {
+	    e.currentTarget.removeEventListener(e.type, wrapped, options);
+	    return listener.call(this, e);
+	  };
+	  return wrapped;
+	};
+
+	const once = once$1;
+	const behavior$1 = behavior$6;
+	const { CLICK } = events;
+	const { prefix: PREFIX$1 } = config;
+
+	const LINK = `.${PREFIX$1}-skipnav[href^="#"], .${PREFIX$1}-footer__return-to-top [href^="#"]`;
+	const MAINCONTENT = "main-content";
+
+	function setTabindex() {
+	  // NB: we know because of the selector we're delegating to below that the
+	  // href already begins with '#'
+	  const id = encodeURI(this.getAttribute("href"));
+	  const target = document.getElementById(
+	    id === "#" ? MAINCONTENT : id.slice(1)
+	  );
+
+	  if (target) {
+	    target.style.outline = "0";
+	    target.setAttribute("tabindex", 0);
+	    target.focus();
+	    target.addEventListener(
+	      "blur",
+	      once(() => {
+	        target.setAttribute("tabindex", -1);
+	      })
+	    );
+	  }
+	}
+
+	var src$1 = behavior$1({
+	  [CLICK]: {
+	    [LINK]: setTabindex,
+	  },
+	});
+
+	var skipnav = /*@__PURE__*/getDefaultExportFromCjs(src$1);
 
 	const select = select$4;
 	/**
@@ -1548,7 +1120,7 @@
 
 	// Tooltips
 	const selectOrMatches = selectOrMatches$1;
-	const behavior = behavior$5;
+	const behavior = behavior$6;
 	const { prefix: PREFIX } = config;
 	const isElementInViewport = isInViewport;
 
@@ -1945,30 +1517,6 @@
 
 	var tooltip$1 = /*@__PURE__*/getDefaultExportFromCjs(src);
 
-	var components = {
-	  accordion: accordion$2,
-	  // banner,
-	  button,
-	  // characterCount,
-	  // comboBox,
-	  // datePicker,
-	  // dateRangePicker,
-	  // fileInput,
-	  // footer,
-	  // inPageNavigation,
-	  // inputMask,
-	  // languageSelector,
-	  // modal,
-	  navigation: navigation$1,
-	  // password,
-	  // search,
-	  // skipnav,
-	  // table,
-	  // timePicker,
-	  tooltip: tooltip$1,
-	  // validator
-	};
-
 	/**
 	 * Copy to Clipboard Helper
 	 */
@@ -2122,6 +1670,210 @@
 	 * @var {Function}
 	 */
 	Copy.after = () => {};
+
+	class FollowUpQuestion {
+	  /**
+	   * Follow up constructor
+	   *
+	   * @param   {Object}  s  Optional settings configuration
+	   *
+	   * @return  {Object}     Instance of FollowUpQuestion
+	   */
+	  constructor(s = {}) {
+	    this.selector = s.selector ? s.selector : FollowUpQuestion.selector;
+
+	    this.elFocusable = s.elFocusable ? s.elFocusable : FollowUpQuestion.elFocusable;
+
+	    this.elDisabled = s.elDisabled ? s.elDisabled : FollowUpQuestion.elDisabled;
+
+	    this.ariaExpanded = s.ariaExpanded ? s.ariaExpanded : FollowUpQuestion.ariaExpanded;
+
+	    this.index = s.index ? s.index : FollowUpQuestion.index;
+
+	    this.show = s.show ? s.show : this.show;
+
+	    this.hide = s.hide ? s.hide : this.hide;
+
+	    this.init();
+
+	    document.querySelector('body')
+	      .addEventListener('change', event => {
+	        if (event.target.matches(this.selector)) {
+	          this.toggle();
+	        }
+	    });
+
+	    return this;
+	  }
+
+	  /**
+	   * Initializes the follow up trigger and target region
+	   *
+	   * @return  {Object}  Instance of FollowUpQuestion
+	   */
+	  init() {
+	    let triggers = document.querySelectorAll(this.selector);
+
+	    for (let i = 0; i < triggers.length; i++) {
+	      if (triggers[i].dataset.ariaControls) {
+	        let trigger = triggers[i];
+	        let target = document.getElementById(trigger.dataset.ariaControls);
+	        let checked = trigger.getAttribute('checked') ? true : false;
+
+	        if (false === checked) {
+	          this.hide(target);
+	        }
+
+	        trigger.setAttribute('aria-controls', trigger.dataset.ariaControls);
+
+	        if (this.ariaExpanded) {
+	          trigger.setAttribute('aria-expanded', checked);
+	        }
+	      }
+	    }
+
+	    return this;
+	  }
+
+	  /**
+	   * Main toggling method that checks all follow up triggers to ensure they
+	   * are properly hidden or shown.
+	   *
+	   * @param   {Object}  trigger  The node element that triggered the toggle
+	   *
+	   * @return  {Object}           Instance of FollowUpQuestion
+	   */
+	  toggle() {
+	    let triggers = document.querySelectorAll(this.selector);
+
+	    for (let i = 0; i < triggers.length; i++) {
+	      let trigger = triggers[i];
+
+	      if (null === trigger.getAttribute('aria-controls')) continue;
+
+	      let target = document.getElementById(trigger.dataset.ariaControls);
+	      let checked = trigger.checked;
+
+	      if (checked) {
+	        this.show(target);
+	      } else {
+	        this.hide(target);
+	      }
+
+	      if (this.ariaExpanded) {
+	        trigger.setAttribute('aria-expanded', checked);
+	      }
+	    }
+
+	    return this;
+	  }
+
+	  /**
+	   * Method for hiding the follow up target region
+	   *
+	   * @param   {Object}  target  Node element of the target region
+	   *
+	   * @return  {Object}          Instance of FollowUpQuestion
+	   */
+	  hide(target) {
+	    target.setAttribute('hidden', '');
+
+	    // Set potentially focusable contents tabindex to -1
+	    this.index(target.querySelectorAll(this.elFocusable.join(', ')));
+
+	    // Set child inputs to disabled
+	    this.disable(target.querySelectorAll(this.elDisabled.join(', ')));
+
+	    return this;
+	  }
+
+	  /**
+	   * Method for showing the follow up target region
+	   *
+	   * @param   {Object}  target  Node element of the target region
+	   *
+	   * @return  {Object}          Instance of FollowUpQuestion
+	   */
+	  show(target) {
+	    target.removeAttribute('hidden');
+
+	    // Remove potentially focusable contents tabindex
+	    this.index(target.querySelectorAll(this.elFocusable.join(', ')), true);
+
+	    // Enable child inputs
+	    this.disable(target.querySelectorAll(this.elDisabled.join(', ')), true);
+
+	    return this;
+	  }
+
+	  /**
+	   * Method for enabling or disabling form elements within the target region.
+	   *
+	   * @param   {NodeList}  elements  Elements to enable or disable
+	   * @param   {Boolean}   enable    Wether to enable or disable elements
+	   *
+	   * @return  {Object}              Instance of FollowUpQuestion
+	   */
+	  disable(elements, enable = false) {
+	    for (let i = 0; i < elements.length; i++) {
+	      let element = elements[i];
+
+	      if (enable) {
+	        element.removeAttribute('disabled');
+	      } else {
+	        element.setAttribute('disabled', '');
+	      }
+	    }
+
+	    return this;
+	  }
+	}
+
+	/** @type  {String}  The main selector for the follow up question component event listening */
+	FollowUpQuestion.selector = '[data-js="follow-up-question"]';
+
+	/** @type  {Array}  A list of potentially focusable element selectors */
+	FollowUpQuestion.elFocusable = [
+	  'a', 'button', 'input', 'select', 'textarea', 'object', 'embed', 'form',
+	  'fieldset', 'legend', 'label', 'area', 'audio', 'video', 'iframe', 'svg',
+	  'details', 'table', '[tabindex]', '[contenteditable]', '[usemap]'
+	];
+
+	/**
+	 * Method for adding or removing potentially focusable elements from the
+	 * dom tabbing order within the target region.
+	 *
+	 * @param   {NodeList}  elements  Elements to index
+	 * @param   {Boolean}   index     Wether to index elements or not
+	 *
+	 * @return  {Object}              The indexed elements
+	 */
+	FollowUpQuestion.index = (elements, index = false) => {
+	  for (let i = 0; i < elements.length; i++) {
+	    let element = elements[i];
+
+	    if (index) {
+	      let dataDefault = element.getAttribute(`data-js-tabindex`);
+
+	      if (dataDefault) {
+	        element.setAttribute('tabindex', dataDefault);
+	      } else {
+	        element.removeAttribute('tabindex');
+	      }
+	    } else {
+	      element.setAttribute('tabindex', '-1');
+	    }
+	  }
+	  return elements;
+	};
+
+	/** @type  {Array}  A list of form elements that can be disabled */
+	FollowUpQuestion.elDisabled = [
+	  'button', 'fieldset', 'select', 'textarea', 'input'
+	];
+
+	/** @type  {Boolean}  Wether to add the aria-expanded attribute to the radio button, which at the time of authoring, is an invalid use of aria */
+	FollowUpQuestion.ariaExpanded = false;
 
 	var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -3737,210 +3489,6 @@
 	    }
 	  }
 	}
-
-	class FollowUpQuestion {
-	  /**
-	   * Follow up constructor
-	   *
-	   * @param   {Object}  s  Optional settings configuration
-	   *
-	   * @return  {Object}     Instance of FollowUpQuestion
-	   */
-	  constructor(s = {}) {
-	    this.selector = s.selector ? s.selector : FollowUpQuestion.selector;
-
-	    this.elFocusable = s.elFocusable ? s.elFocusable : FollowUpQuestion.elFocusable;
-
-	    this.elDisabled = s.elDisabled ? s.elDisabled : FollowUpQuestion.elDisabled;
-
-	    this.ariaExpanded = s.ariaExpanded ? s.ariaExpanded : FollowUpQuestion.ariaExpanded;
-
-	    this.index = s.index ? s.index : FollowUpQuestion.index;
-
-	    this.show = s.show ? s.show : this.show;
-
-	    this.hide = s.hide ? s.hide : this.hide;
-
-	    this.init();
-
-	    document.querySelector('body')
-	      .addEventListener('change', event => {
-	        if (event.target.matches(this.selector)) {
-	          this.toggle();
-	        }
-	    });
-
-	    return this;
-	  }
-
-	  /**
-	   * Initializes the follow up trigger and target region
-	   *
-	   * @return  {Object}  Instance of FollowUpQuestion
-	   */
-	  init() {
-	    let triggers = document.querySelectorAll(this.selector);
-
-	    for (let i = 0; i < triggers.length; i++) {
-	      if (triggers[i].dataset.ariaControls) {
-	        let trigger = triggers[i];
-	        let target = document.getElementById(trigger.dataset.ariaControls);
-	        let checked = trigger.getAttribute('checked') ? true : false;
-
-	        if (false === checked) {
-	          this.hide(target);
-	        }
-
-	        trigger.setAttribute('aria-controls', trigger.dataset.ariaControls);
-
-	        if (this.ariaExpanded) {
-	          trigger.setAttribute('aria-expanded', checked);
-	        }
-	      }
-	    }
-
-	    return this;
-	  }
-
-	  /**
-	   * Main toggling method that checks all follow up triggers to ensure they
-	   * are properly hidden or shown.
-	   *
-	   * @param   {Object}  trigger  The node element that triggered the toggle
-	   *
-	   * @return  {Object}           Instance of FollowUpQuestion
-	   */
-	  toggle() {
-	    let triggers = document.querySelectorAll(this.selector);
-
-	    for (let i = 0; i < triggers.length; i++) {
-	      let trigger = triggers[i];
-
-	      if (null === trigger.getAttribute('aria-controls')) continue;
-
-	      let target = document.getElementById(trigger.dataset.ariaControls);
-	      let checked = trigger.checked;
-
-	      if (checked) {
-	        this.show(target);
-	      } else {
-	        this.hide(target);
-	      }
-
-	      if (this.ariaExpanded) {
-	        trigger.setAttribute('aria-expanded', checked);
-	      }
-	    }
-
-	    return this;
-	  }
-
-	  /**
-	   * Method for hiding the follow up target region
-	   *
-	   * @param   {Object}  target  Node element of the target region
-	   *
-	   * @return  {Object}          Instance of FollowUpQuestion
-	   */
-	  hide(target) {
-	    target.setAttribute('hidden', '');
-
-	    // Set potentially focusable contents tabindex to -1
-	    this.index(target.querySelectorAll(this.elFocusable.join(', ')));
-
-	    // Set child inputs to disabled
-	    this.disable(target.querySelectorAll(this.elDisabled.join(', ')));
-
-	    return this;
-	  }
-
-	  /**
-	   * Method for showing the follow up target region
-	   *
-	   * @param   {Object}  target  Node element of the target region
-	   *
-	   * @return  {Object}          Instance of FollowUpQuestion
-	   */
-	  show(target) {
-	    target.removeAttribute('hidden');
-
-	    // Remove potentially focusable contents tabindex
-	    this.index(target.querySelectorAll(this.elFocusable.join(', ')), true);
-
-	    // Enable child inputs
-	    this.disable(target.querySelectorAll(this.elDisabled.join(', ')), true);
-
-	    return this;
-	  }
-
-	  /**
-	   * Method for enabling or disabling form elements within the target region.
-	   *
-	   * @param   {NodeList}  elements  Elements to enable or disable
-	   * @param   {Boolean}   enable    Wether to enable or disable elements
-	   *
-	   * @return  {Object}              Instance of FollowUpQuestion
-	   */
-	  disable(elements, enable = false) {
-	    for (let i = 0; i < elements.length; i++) {
-	      let element = elements[i];
-
-	      if (enable) {
-	        element.removeAttribute('disabled');
-	      } else {
-	        element.setAttribute('disabled', '');
-	      }
-	    }
-
-	    return this;
-	  }
-	}
-
-	/** @type  {String}  The main selector for the follow up question component event listening */
-	FollowUpQuestion.selector = '[data-js="follow-up-question"]';
-
-	/** @type  {Array}  A list of potentially focusable element selectors */
-	FollowUpQuestion.elFocusable = [
-	  'a', 'button', 'input', 'select', 'textarea', 'object', 'embed', 'form',
-	  'fieldset', 'legend', 'label', 'area', 'audio', 'video', 'iframe', 'svg',
-	  'details', 'table', '[tabindex]', '[contenteditable]', '[usemap]'
-	];
-
-	/**
-	 * Method for adding or removing potentially focusable elements from the
-	 * dom tabbing order within the target region.
-	 *
-	 * @param   {NodeList}  elements  Elements to index
-	 * @param   {Boolean}   index     Wether to index elements or not
-	 *
-	 * @return  {Object}              The indexed elements
-	 */
-	FollowUpQuestion.index = (elements, index = false) => {
-	  for (let i = 0; i < elements.length; i++) {
-	    let element = elements[i];
-
-	    if (index) {
-	      let dataDefault = element.getAttribute(`data-js-tabindex`);
-
-	      if (dataDefault) {
-	        element.setAttribute('tabindex', dataDefault);
-	      } else {
-	        element.removeAttribute('tabindex');
-	      }
-	    } else {
-	      element.setAttribute('tabindex', '-1');
-	    }
-	  }
-	  return elements;
-	};
-
-	/** @type  {Array}  A list of form elements that can be disabled */
-	FollowUpQuestion.elDisabled = [
-	  'button', 'fieldset', 'select', 'textarea', 'input'
-	];
-
-	/** @type  {Boolean}  Wether to add the aria-expanded attribute to the radio button, which at the time of authoring, is an invalid use of aria */
-	FollowUpQuestion.ariaExpanded = false;
 
 	var dropzone = {exports: {}};
 
@@ -14772,152 +14320,156 @@
 	  return elements;
 	};
 
+	window.uswdsPresent = true; // Indicate uswds.js has loaded in the DOM.
+
 	/**
-	 * Copy of @uswds/uswds/packages/uswds-core/src/js/start.js
-	 *
-	 * Likely, this script can be made into an ES module
+	 * Initialize USWDS utilities and components
 	 */
 
-	window.uswdsPresent = true; // GLOBAL variable to indicate that the uswds.js has loaded in the DOM.
-
-	uswds.components = components;
-
-	const initComponents = () => {
-	  const target = document.body;
-
-	  /**
-	   * USWDS Components
-	   */
-
-	  Object.keys(components).forEach(key => {
-	    const behavior = components[key];
-
-	    behavior.on(target);
-	  });
-
-	  svg4everybody();
-
-	  /**
-	   * CfA Theme Utilities and Components
-	   */
-
-	  new Copy();
-	  new MaskDollars();
-	  new MaskTel();
-	  new MaskSSN();
-	  new FollowUpQuestion();
-
-	  /**
-	   * Upload Documents Component
-	   */
-	  (elements => {
-	    for (let i = 0; i < elements.length; i++) {
-	      new UploadDocuments(elements[i], {
-	        // /**
-	        //  * Example of passing already uploaded files to the utility
-	        //  *
-	        //  * @type  {Array}
-	        //  */
-	        // mockFiles: [
-	        //   {
-	        //     @name:     {String}   file name including extension,
-	        //     @size:     {Number}   file size in bytes,
-	        //     @type:     {String}   file type,
-	        //     @id:       {String}   file ID,
-	        //     @dataURL:  {String}   data encoded URI of the image thumbnail,
-	        //     @accepted: {Boolean}  defaults to true
-	        //   },
-	        //   {
-	        //     name: 'filename.png',
-	        //     size: 192435,
-	        //     type: 'image/png',
-	        //     id: '0f488973-63e2-4a1d-a509-d1b492f10344',
-	        //     dataURL: "data:image/png;base64,...",
-	        //     accepted: true
-	        //   }
-	        // ],
-
-	        /**
-	         * Dropzone Options. These will be passed to the Dropzone instantiation.
-	         *
-	         * @url https://github.com/dropzone/dropzone/blob/main/src/options.js
-	         */
-	        dropzoneOptions: {
-	          /**
-	           * Required. A URL must be set in the Dropzone options configuration
-	           */
-	          url: 'https://app-46361.on-aptible.com/file-upload',
-
-	          // /**
-	          //  * Example Dropzone init configuration
-	          //  */
-	          // init: function() {
-	          //   /**
-	          //    * Example added file event hook. Called when a file is added to the queue
-	          //    *
-	          //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L611
-	          //    *
-	          //    * @param  {Object}  file  Dropzone file object
-	          //    */
-	          //   this.on('addedfile', function(file) {
-	          //     //... some custom methods can go here
-
-	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'cancel';
-
-	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
-	          //       .addEventListener('click', () => {
-	          //         //... cancel event for uploading file
-	          //       });
-	          //   });
-
-	          //   /**
-	          //    * Example success event hook. When the complete upload is finished
-	          //    * and successful.
-	          //    *
-	          //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L752
-	          //    *
-	          //    * @param  {Object}  file  Dropzone file object
-	          //    */
-	          //   this.on('success', function(file) {
-	          //     //... some custom methods can go here
-
-	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'remove';
-
-	          //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
-	          //       .addEventListener('click', () => {
-	          //         //... remove event for uploaded file
-	          //       });
-	          //   });
-
-	          //   /**
-	          //    * Example sending event hook. Called just before the file is sent.
-	          //    * Gets the `xhr` object as second parameter, so you can modify it
-	          //    * (for example to add a CSRF token) and a `formData` object to add
-	          //    * additional information.
-	          //    *
-	          //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L746
-	          //    *
-	          //    * @param  {Object}  file      Dropzone file object
-	          //    * @param  {Object}  xhr       The xhr request
-	          //    * @param  {Object}  formData  Form data to append additional information to
-	          //    */
-	          //   this.on('sending', function(file, xhr, formData) {
-	          //     let token = document.querySelector('[data-js="csrf"]').value;
-
-	          //     formData.append('_csrf', token);
-	          //     //...
-	          //   });
-	          // }
-	        }
-	      });
-	    }
-	  })(document.querySelectorAll(UploadDocuments.selector));
+	let components = {
+	  accordion: accordion$2,
+	  // banner,
+	  button,
+	  // characterCount,
+	  // comboBox,
+	  // datePicker,
+	  // dateRangePicker,
+	  // fileInput,
+	  // footer,
+	  // inPageNavigation,
+	  // inputMask,
+	  // languageSelector,
+	  // modal,
+	  navigation: navigation$1,
+	  // password,
+	  // search,
+	  skipnav,
+	  // table,
+	  // timePicker,
+	  tooltip: tooltip$1,
+	  // validator
 	};
 
-	if (document.readyState === 'loading') {
-	  document.addEventListener('DOMContentLoaded', initComponents, { once: true });
-	} else {
-	  initComponents();
-	}
+	Object.keys(components).forEach(key => {
+	  const behavior = components[key];
+
+	  behavior.on(document.body);
+	});
+
+	/**
+	 * Initialize Code for America theme utilities and components
+	 */
+
+	new Copy();
+	new MaskDollars();
+	new MaskTel();
+	new MaskSSN();
+	new FollowUpQuestion();
+
+	/**
+	 * Upload Documents component
+	 */
+	(elements => {
+	  for (let i = 0; i < elements.length; i++) {
+	    new UploadDocuments(elements[i], {
+	      // /**
+	      //  * Example of passing already uploaded files to the utility
+	      //  *
+	      //  * @type  {Array}
+	      //  */
+	      // mockFiles: [
+	      //   {
+	      //     @name:     {String}   file name including extension,
+	      //     @size:     {Number}   file size in bytes,
+	      //     @type:     {String}   file type,
+	      //     @id:       {String}   file ID,
+	      //     @dataURL:  {String}   data encoded URI of the image thumbnail,
+	      //     @accepted: {Boolean}  defaults to true
+	      //   },
+	      //   {
+	      //     name: 'filename.png',
+	      //     size: 192435,
+	      //     type: 'image/png',
+	      //     id: '0f488973-63e2-4a1d-a509-d1b492f10344',
+	      //     dataURL: "data:image/png;base64,...",
+	      //     accepted: true
+	      //   }
+	      // ],
+
+	      /**
+	       * Dropzone Options. These will be passed to the Dropzone instantiation.
+	       *
+	       * @url https://github.com/dropzone/dropzone/blob/main/src/options.js
+	       */
+	      dropzoneOptions: {
+	        /**
+	         * Required. A URL must be set in the Dropzone options configuration
+	         */
+	        url: 'https://app-46361.on-aptible.com/file-upload',
+
+	        // /**
+	        //  * Example Dropzone init configuration
+	        //  */
+	        // init: function() {
+	        //   /**
+	        //    * Example added file event hook. Called when a file is added to the queue
+	        //    *
+	        //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L611
+	        //    *
+	        //    * @param  {Object}  file  Dropzone file object
+	        //    */
+	        //   this.on('addedfile', function(file) {
+	        //     //... some custom methods can go here
+
+	        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'cancel';
+
+	        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
+	        //       .addEventListener('click', () => {
+	        //         //... cancel event for uploading file
+	        //       });
+	        //   });
+
+	        //   /**
+	        //    * Example success event hook. When the complete upload is finished
+	        //    * and successful.
+	        //    *
+	        //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L752
+	        //    *
+	        //    * @param  {Object}  file  Dropzone file object
+	        //    */
+	        //   this.on('success', function(file) {
+	        //     //... some custom methods can go here
+
+	        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'remove';
+
+	        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
+	        //       .addEventListener('click', () => {
+	        //         //... remove event for uploaded file
+	        //       });
+	        //   });
+
+	        //   /**
+	        //    * Example sending event hook. Called just before the file is sent.
+	        //    * Gets the `xhr` object as second parameter, so you can modify it
+	        //    * (for example to add a CSRF token) and a `formData` object to add
+	        //    * additional information.
+	        //    *
+	        //    * @url https://github.com/dropzone/dropzone/blob/f50d1828ab5df79a76be00d1306cc320e39a27f4/src/options.js#L746
+	        //    *
+	        //    * @param  {Object}  file      Dropzone file object
+	        //    * @param  {Object}  xhr       The xhr request
+	        //    * @param  {Object}  formData  Form data to append additional information to
+	        //    */
+	        //   this.on('sending', function(file, xhr, formData) {
+	        //     let token = document.querySelector('[data-js="csrf"]').value;
+
+	        //     formData.append('_csrf', token);
+	        //     //...
+	        //   });
+	        // }
+	      }
+	    });
+	  }
+	})(document.querySelectorAll(UploadDocuments.selector));
 
 })();

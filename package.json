@@ -18,11 +18,12 @@
     "url": "https://github.com/codeforamerica/uswds/issues"
   },
   "scripts": {
-    "start": "npx concurrently 'npm run views' 'npm run uswds'",
-    "default": "npx @11ty/eleventy && npx gulp compile",
+    "start": "npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
+    "default": "npx @11ty/eleventy && npm run styles && npm run scripts",
     "views": "npx @11ty/eleventy --serve",
     "uswds": "npx gulp watch",
-    "rollup": "npx rollup --config rollup.config.cjs",
+    "scripts": "node scripts.config.js",
+    "styles": "node styles.config.js",
     "preview": "NODE_ENV=production npm run views",
     "version": "NODE_ENV=production npm run default && git add .",
     "prepublishOnly": "git push && git push --tags"
@@ -30,17 +31,24 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-replace": "^5.0.2",
     "@uswds/compile": "^1.0.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
     "thymeleaf": "^0.21.0"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-replace": "^5.0.2",
     "@uswds/uswds": "^3.5.0",
+    "autoprefixer": "^10.4.16",
     "cleave.js": "^1.6.0",
-    "dropzone": "^5.9.3"
+    "cssnano": "^6.0.1",
+    "dropzone": "^5.9.3",
+    "postcss": "^8.4.31",
+    "rollup": "^3.29.4",
+    "sass": "^1.69.5"
   }
 }
