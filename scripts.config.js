@@ -1,3 +1,5 @@
+const package = require('./package.json');
+
 const rollup = require('rollup');
 
 const commonJs = require('@rollup/plugin-commonjs');        // Adds support for legacy CommonJS modules
@@ -50,6 +52,9 @@ let modules = [
   try {
     for (let i = 0; i < modules.length; i++) {
       const script = modules[i];
+
+      console.log(`[${package.name}] Rolling up JS for "${script.input}"`);
+
       const bundle = await rollup.rollup(script);
 
       for (let i = 0; i < script.output.length; i++) {
@@ -57,6 +62,8 @@ let modules = [
       }
 
       bundle.close();
+
+      console.log(`[${package.name}] Rollup complete`);
     }
   } catch (err) {
     console.dir(err);

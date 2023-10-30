@@ -1,3 +1,5 @@
+const package = require('./package.json');
+
 const sass = require('sass');
 
 const postcss = require('postcss');
@@ -14,16 +16,27 @@ const fs = require('fs');
  */
 
 let plugins = [
-  // TODO: will need to save this until we can figure out which CSS selectors are added dynamically using JavaScript
   // purgecss({
   //   content: [
-  //     path.join(__dirname, '/dist/**/*.html')
+  //     path.join(__dirname, 'dist/**/*.html'),
+  //     path.join(__dirname, 'eleventy.config.js')
   //   ],
-  //   safelist: [
-  //     standard: [/red$/],
-  //      deep: [/blue$/],
-  //      greedy: [/yellow$/]
-  //   ]
+  //   fontFace: true,
+  //   keyframes: true,
+  //   // variables: true,
+  //   safelist: {
+  //     // standard: [
+  //     //   /hljs[\S]*?(?=")/g
+  //     // ],
+  //     deep: [
+  //       /hljs-[-_:\w]*/g,
+  //       // USWDS Navigation/Header
+  //       /usa-js-mobile-nav--active/,
+  //       /is-visible/
+  //     ]
+  //     // greedy: []
+  //   },
+  //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
   // }),
   autoprefixer('last 4 version'),
   mqpacker({
@@ -69,6 +82,9 @@ let modules = [
   try {
     for (let i = 0; i < modules.length; i++) {
       const style = modules[i];
+
+      console.log(`[${package.name}] Compiling Sass for "${style.file}"`);
+
       let result = await sass.compileAsync(style.file, style.options);
 
       // TODO: Create sourcemap handler from Sass to PostCSS?
@@ -76,12 +92,16 @@ let modules = [
       //   console.dir(result.sourceMap);
       // }
 
+      console.log(`[${package.name}] Compiled. Running output through PostCSS`);
+
       let optim = await postcss(plugins)
         .process(result.css, {
           from: undefined
         });
 
       fs.writeFileSync(`${style.outDir}${style.outFile}`, optim.css);
+
+      console.log(`[${package.name}] Styles complete`);
     }
   } catch (err) {
     console.dir(err);
