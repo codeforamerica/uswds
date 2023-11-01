@@ -1,5 +1,5 @@
-const package = require('./package.json');
-const config = require('./config');
+const package = require(`${process.env.PWD}/package.json`);
+const config = require(`${process.env.PWD}/config`);
 
 const fs = require('fs');
 const path = require('path');
@@ -15,7 +15,11 @@ const execSync = require('child_process').execSync;
 let CONFIG_BEAUTIFY = config.beautify;
 let CONFIG_ELEVENTY = config.eleventy;
 let CONFIG_MARKDOWN = config.markdown_it;
-let CONFIG_THYMELEAF = config.thymeleaf;
+
+let CONFIG_THYMELEAF = {
+  ...thymeleaf.STANDARD_CONFIGURATION,
+  ...config.thymeleaf
+};
 
 let markdown = markdownIt(CONFIG_MARKDOWN);
 
@@ -158,7 +162,7 @@ const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
       <div class="code-block__utility position-sticky pin-top">
         <button data-js="copy" data-copy="${id}" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-            <use href="${config.baseUrl}uswds/img/sprite.svg#content_copy"></use>
+            <use href="${config.baseUrl}assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
@@ -227,7 +231,7 @@ const removeNewLines = (str) => {
  * @return  {String/Boolean}        A fully resolved file path. If no file exists, false is returned
  */
 const getFile = (name, type = '') => {
-  let filename = `packages/cfa-${name}`;
+  let filename = `${config.packages}/cfa-${name}`;
 
   switch (type) {
     case 'template':
@@ -253,7 +257,7 @@ const getFile = (name, type = '') => {
       break;
   }
 
-  let resolved = path.join(__dirname, filename);
+  let resolved = path.join(config.base, filename);
   let exists = fs.existsSync(resolved);
 
   if (false === exists) {

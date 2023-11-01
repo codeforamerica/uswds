@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../../scss/theme/_uswds-theme-shared.scss' as *;
+@use '../src/scss/_cfa-theme-shared.scss' as *;
 
 @mixin cfa-input-border() {
   @include u-border($theme-form-elements-border-width, 'ink');

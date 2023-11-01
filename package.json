@@ -1,7 +1,7 @@
 {
   "name": "@codeforamerica/uswds",
   "nice": "Code for America USWDS theme",
-  "version": "0.0.0-17",
+  "version": "0.0.0-18",
   "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
   "repository": {
     "type": "git",
@@ -21,9 +21,8 @@
     "start": "npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
     "default": "npx @11ty/eleventy && npm run styles && npm run scripts",
     "views": "npx @11ty/eleventy --serve",
-    "uswds": "npx gulp watch",
-    "scripts": "node scripts.config.js",
-    "styles": "node styles.config.js",
+    "scripts": "node scripts.js",
+    "styles": "node styles.js",
     "preview": "NODE_ENV=production npm run views",
     "version": "NODE_ENV=production npm run default && git add .",
     "prepublishOnly": "git push && git push --tags"
@@ -31,7 +30,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
-    "@uswds/compile": "^1.0.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
     "thymeleaf": "^0.21.0"
