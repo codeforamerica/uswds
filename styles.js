@@ -15,9 +15,9 @@ const fs = require('fs');
  * Plugin configuration
  */
 
-let plugins = [
+let plugins = {
   // TODO: Regex for hljs styles are not working
-  // purgecss({
+  // purgecss: purgecss({
   //   content: [
   //     path.join(__dirname, 'dist/**/*.html'),
   //     path.join(__dirname, 'eleventy.config.js')
@@ -39,11 +39,11 @@ let plugins = [
   //   },
   //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
   // }),
-  autoprefixer('last 4 version'),
-  mqpacker({
+  autoprefixer: autoprefixer('last 4 version'),
+  mqpacker: mqpacker({
     sort: true
   }),
-  cssnano({
+  cssnano: cssnano({
     preset: [
       'default', {
         // TODO: The current calc preset is not up-to-date with postcss-calc so
@@ -52,7 +52,7 @@ let plugins = [
       }
     ]
   })
-];
+};
 
 /**
  * Module declaration and configuration
@@ -60,34 +60,37 @@ let plugins = [
 
 let modules = [
   {
-    input:  path.join(config.base, config.src, config.entry.styles),
-    output: [{
-      file:  path.join(config.base, config.dist, config.assets, config.output.styles),
-      options: {
-        // TODO: Create sourcemap handler from Sass to PostCSS?
-        //       Needs to be enabled if creating a sourcemap handler below
-        // sourceMap: (process.env.NODE_ENV === 'production') ? false : true,
-        sourceMap: false,
-        loadPaths: config.loadPaths
-          .map(i => path.join(config.base, i))
-      }
-    }],
-    plugins: plugins
-  },
-  {
     input:  path.join(config.base, config.src, 'scss/_site.scss'),
     output: [{
       file:  path.join(config.base, config.dist, config.assets, 'css/site.css'),
       options: {
-        // TODO: Create sourcemap handler from Sass to PostCSS?
-        //       Needs to be enabled if creating a sourcemap handler below
-        // sourceMap: (process.env.NODE_ENV === 'production') ? false : true,
-        sourceMap: false,
+        sourceMap: (process.env.NODE_ENV === 'production') ? false : true,
         loadPaths: config.loadPaths
           .map(i => path.join(config.base, i))
       }
     }],
-    plugins: plugins
+    plugins: [
+      // plugins.purgecss,
+      plugins.autoprefixer,
+      plugins.mqpacker,
+      plugins.cssnano
+    ]
+  },
+  {
+    input:  path.join(config.base, config.src, config.entry.styles),
+    output: [{
+      file:  path.join(config.base, config.dist, config.assets, config.output.styles),
+      options: {
+        sourceMap: (process.env.NODE_ENV === 'production') ? false : true,
+        loadPaths: config.loadPaths
+          .map(i => path.join(config.base, i))
+      }
+    }],
+    plugins: [
+      plugins.autoprefixer,
+      plugins.mqpacker,
+      plugins.cssnano
+    ]
   }
 ];
 
@@ -107,19 +110,28 @@ let modules = [
 
         let result = await sass.compileAsync(style.input, output.options);
 
-        // TODO: Create sourcemap handler from Sass to PostCSS?
-        // if (process.env.NODE_ENV != 'production') {
-        //   console.dir(result.sourceMap);
-        // }
+        let css = result.css;
+
+        if (result.hasOwnProperty('sourceMap')) {
+          console.log(`[${package.name}] Generating sourcemaps`);
+
+          let sourceMap = JSON.stringify(result.sourceMap);
+          let sourceMapBase64 = (Buffer.from(sourceMap, 'utf8') || '').toString('base64');
+          let sourceMapComment = '/*# sourceMappingURL=data:application/json;charset=utf-8;base64,' + sourceMapBase64 + ' */';
+
+          css = `${css}\n\n${sourceMapComment}`;
+        }
+
+        fs.writeFileSync(output.file, css);
 
         console.log(`[${package.name}] Sass compiled. Running output through PostCSS`);
 
         let optim = await postcss(style.plugins)
-          .process(result.css, {
-            from: undefined
+          .process(css, {
+            from: output.file
           });
 
-        fs.writeFileSync(`${output.file}`, optim.css);
+        fs.writeFileSync(output.file, optim.css);
 
         console.log(`[${package.name}] Styles written to "${output.file.replace(process.env.PWD, '')}"`);
       }
