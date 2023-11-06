@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../src/scss/_cfa-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 @use '../cfa-input/_cfa-input.scss';
 
 .cfa-select {
@@ -13,13 +13,13 @@
 
   background-size: units(4);
 
-  // height: calc(units($theme-select-height) - $theme-form-elements-border-width);
-  height: units($theme-select-height);
+  // height: calc(units($cfa-select-height) - $cfa-form-elements-border-width);
+  height: units($cfa-select-height);
   font-weight: $theme-font-weight-bold;
 
-  padding-top: units($theme-form-elements-padding-y);
-  padding-bottom: units($theme-form-elements-padding-y);
-  padding-left: units($theme-form-elements-padding-x);
+  padding-top: units($cfa-form-elements-padding-y);
+  padding-bottom: units($cfa-form-elements-padding-y);
+  padding-left: units($cfa-form-elements-padding-x);
 
   cursor: pointer;
   text-overflow: ellipsis;

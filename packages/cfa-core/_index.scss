@@ -1,0 +1,35 @@
+@use 'uswds-core' as *;
+
+/*
+ * Code for America package settings. These are variables that are not
+ * configurable for the USWDS and are used only by the Code for America
+ * packages.
+ */
+
+// Components
+$cfa-form-elements-padding-y: 2 !default;
+$cfa-form-elements-padding-x: 2.5 !default;
+$cfa-form-elements-border-width: 2px !default;
+
+// - Input
+$cfa-input-height: 8 !default;
+
+// - Textarea
+$cfa-textarea-height: 15 !default;
+
+// - Select
+$cfa-select-height: 8 !default;
+
+// - Radio and Checkbox
+$cfa-input-select-margin: units(1.5) !default;
+$cfa-input-select-width: units(2) !default;
+$cfa-input-select-height: units(2) !default;
+$cfa-input-select-padding-x: units(3) !default;
+$cfa-input-select-padding-y: units(2) !default;
+$cfa-input-select-gap: units(2) !default;
+
+// - Accordion
+$cfa-accordion-border: units($theme-accordion-border-width) solid color($theme-accordion-border-color) !default;
+
+// - Button
+$cfa-button-stroke: inset 0 0 0 units($theme-button-stroke-width) !default;

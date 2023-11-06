@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../src/scss/_cfa-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 
 .cfa-form-card {
   @include set-text-and-bg('white');

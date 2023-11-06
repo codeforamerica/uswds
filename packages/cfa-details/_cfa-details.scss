@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../src/scss/_cfa-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 @use '../cfa-links/_cfa-links.scss' as *;
 
 .cfa-details__summary {
@@ -44,7 +44,7 @@
 .cfa-details__content {
   @include u-radius('md');
 
-  border: $theme-accordion-border;
+  border: $cfa-accordion-border;
   padding: units(1) units(1.5);
   margin-top: units(2);
 

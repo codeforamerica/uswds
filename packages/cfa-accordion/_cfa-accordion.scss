@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../src/scss/_cfa-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 @use '../cfa-links/_cfa-links.scss' as *;
 
 .cfa-accordion {
@@ -40,11 +40,11 @@
 
 .cfa-accordion.usa-accordion--bordered {
   .usa-accordion__button {
-    border: $theme-accordion-border;
+    border: $cfa-accordion-border;
     border-bottom: 0;
   }
 
   .usa-accordion__button[aria-expanded='false'] {
-    border: $theme-accordion-border;
+    border: $cfa-accordion-border;
   }
 }

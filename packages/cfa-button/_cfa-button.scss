@@ -1,5 +1,5 @@
 @use 'uswds-core' as *;
-@use '../src/scss/_cfa-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 @use '../cfa-transition/_cfa-transition.scss' as *;
 @use '../cfa-links/_cfa-links.scss' as *;
 
@@ -63,7 +63,7 @@
     $context: 'CfA Button'
   );
 
-  box-shadow: $theme-button-stroke color('ink');
+  box-shadow: $cfa-button-stroke color('ink');
 
   -moz-osx-font-smoothing: auto;
    -webkit-font-smoothing: auto;
@@ -80,7 +80,7 @@
       $context: 'CfA Button'
     );
 
-    box-shadow: $theme-button-stroke color('ink');
+    box-shadow: $cfa-button-stroke color('ink');
   }
 
   &:active,
@@ -91,7 +91,7 @@
       $context: 'CfA Button'
     );
 
-    box-shadow: $theme-button-stroke color('ink');
+    box-shadow: $cfa-button-stroke color('ink');
   }
 }
 

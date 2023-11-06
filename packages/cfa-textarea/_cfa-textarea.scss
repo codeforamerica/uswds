@@ -1,11 +1,11 @@
 @use 'uswds-core' as *;
-@use '../src/scss/_cfa-theme-shared.scss' as *;
+@use 'cfa-core' as *;
 @use '../cfa-input/_cfa-input.scss';
 
 .cfa-textarea {
   @include cfa-input.cfa-input();
 
-  height: units($theme-textarea-height);
+  height: units($cfa-textarea-height);
 }
 
 .cfa-textarea:not(.usa-input--error):not(.usa-input--success),
