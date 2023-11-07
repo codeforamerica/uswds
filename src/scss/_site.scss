@@ -1,18 +1,4 @@
-// Theme level configuration: Example of a CfA USWDS setting override
-// @use 'cfa-uswds' with (
-//   $cfa-focus-color: 'red-warm-50v'
-// );
-
-@forward 'cfa-uswds/theme';
-
-@forward 'uswds';
-
-// Package level configuration: Example of a CfA USWDS package setting override
-// @use 'cfa-core' with (
-//   $cfa-form-elements-padding-y: 10
-// );
-
-@forward 'cfa-core/packages';
+@forward 'styles';
 
 // Example of a custom site style sheet
 @forward 'cfa-site';

@@ -1,15 +1,24 @@
-// Example of a CfA USWDS setting override
-// @use 'cfa-uswds' with (
-//   $cfa-focus-color: 'red-warm-50v'
+// Theme level configuration. Example of a theme setting override.
+// @use 'cfa-uswds-theme' with (
+//   $cfa-focus-color: 'red-warm-50v',
+//   ...
 // );
 
-@forward 'cfa-uswds/theme';
+@forward 'cfa-uswds';
+
+// USWDS level configuration. Example of USWDS core setting override. The previous block must be omitted.
+// @use 'uswds-core' with (
+//   $theme-focus-color: 'red-warm-50v',
+//   $theme-focus-offset: 2,
+//   ...
+// );
 
 @forward 'uswds';
 
-// Example of a CfA USWDS package setting override
+// Package level configuration. Example of a theme package setting override.
 // @use 'cfa-core' with (
-//   $cfa-form-elements-padding-y: 10
+//   $cfa-form-elements-padding-y: 10,
+//   ...
 // );
 
-@forward 'cfa-core/packages';
+@forward 'cfa';
