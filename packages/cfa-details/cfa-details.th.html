@@ -5,9 +5,9 @@
     </svg>
   </button>
 
-  <div th:id="${controls}" th:if="${body}" class="cfa-details__content" th:utext="${body}"></div>
+  <div th:attr="id=${controls}" th:if="${body}" class="cfa-details__content" th:utext="${body}"></div>
 
-  <div th:id="${controls}" th:if="${text}" class="cfa-details__content">
+  <div th:attr="id=${controls}" th:if="${text}" class="cfa-details__content">
     <p th:text="${text}">Text</p>
   </div>
 </div>
