@@ -14,7 +14,7 @@ const execSync = require('child_process').execSync;
 
 let CONFIG_BEAUTIFY = config.beautify;
 let CONFIG_ELEVENTY = config.eleventy;
-let CONFIG_MARKDOWN = config.markdown_it;
+let CONFIG_MARKDOWN = config.markdownIt;
 
 let CONFIG_THYMELEAF = {
   ...thymeleaf.STANDARD_CONFIGURATION,

@@ -40,7 +40,7 @@ module.exports = {
       includes: '_partials'
     }
   },
-  markdown_it: {
+  markdownIt: {
     html: true,
     breaks: false,
     linkify: true
