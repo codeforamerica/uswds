@@ -1,7 +1,7 @@
 {
   "name": "@codeforamerica/uswds",
   "nice": "Code for America USWDS theme",
-  "version": "0.0.0-22",
+  "version": "0.0.0-23",
   "description": "This is a demonstration of the Code for America, U.S. Web Design System (USWDS) theme. Design tokens and styles from the Honeycrisp design system are applied to USWDS settings.",
   "repository": {
     "type": "git",
