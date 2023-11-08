@@ -58,6 +58,8 @@ class FollowUpQuestion {
         if (this.ariaExpanded) {
           trigger.setAttribute('aria-expanded', checked);
         }
+
+        trigger.removeAttribute('data-aria-controls');
       }
     }
 
@@ -80,7 +82,7 @@ class FollowUpQuestion {
 
       if (null === trigger.getAttribute('aria-controls')) continue;
 
-      let target = document.getElementById(trigger.dataset.ariaControls);
+      let target = document.getElementById(trigger.getAttribute('aria-controls'));
       let checked = trigger.checked;
 
       if (checked) {

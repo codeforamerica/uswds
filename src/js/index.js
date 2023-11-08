@@ -39,6 +39,7 @@ import tooltip from '@uswds/uswds/js/usa-tooltip';
  */
 
 import Copy from '../../packages/cfa-copy/cfa-copy.js';
+import Details from '../../packages/cfa-details/cfa-details.js';
 import FollowUpQuestion from '../../packages/cfa-follow-up-question/cfa-follow-up-question.js';
 import MaskDollars from '../../packages/cfa-mask/cfa-mask-dollars.js';
 import MaskTel from '../../packages/cfa-mask/cfa-mask-tel.js';
@@ -46,48 +47,24 @@ import MaskSSN from '../../packages/cfa-mask/cfa-mask-ssn.js';
 import UploadDocuments from '../../packages/cfa-upload-documents/cfa-upload-documents.js';
 
 /**
- * Initialize USWDS utilities and components
+ * Initialize USWDS and Code for America theme utilities and components
  */
 
-let components = {
-  accordion,
-  // banner,
-  button,
-  // characterCount,
-  // comboBox,
-  // datePicker,
-  // dateRangePicker,
-  // fileInput,
-  // footer,
-  // inPageNavigation,
-  // inputMask,
-  // languageSelector,
-  // modal,
-  navigation,
-  // password,
-  // search,
-  skipnav,
-  // table,
-  // timePicker,
-  tooltip,
-  // validator
-};
-
-Object.keys(components).forEach(key => {
-  const behavior = components[key];
-
-  behavior.on(document.body);
-});
-
-/**
- * Initialize Code for America theme utilities and components
- */
+accordion.on(document.body);
+button.on(document.body);
 
 new Copy();
+new Details();
+new FollowUpQuestion();
+
+navigation.on(document.body);
+
 new MaskDollars();
 new MaskTel();
 new MaskSSN();
-new FollowUpQuestion();
+
+skipnav.on(document.body);
+tooltip.on(document.body);
 
 /**
  * Upload Documents component

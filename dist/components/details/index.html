@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <meta name="robots" content="noindex, nofollow" />
 
@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-0cb0ed33a66b9">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-45dada0dfff37">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-0cb0ed33a66b9" class="usa-nav__submenu">
+          <ul id="aria-c-45dada0dfff37" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -134,11 +134,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-edbfa09821924">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c11bb2f3e1c0a">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-edbfa09821924" class="usa-nav__submenu">
+          <ul id="aria-c-c11bb2f3e1c0a" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -276,40 +276,39 @@
           <div class="usa-prose">
             <h1>Details</h1>
 
-            <p class="usa-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="usa-intro">I've read the text but I'm still not sure what it means and I need more details.</p>
           </div>
 
           <!-- INTRO -->
-<p class="usa-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="usa-prose">The Details component contains helpful context for users but may not be necessary to display by default. It is primarily used to consolidate long or complex information to save space for other critical elements.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
-  <li><strong>Honeycrisp:</strong> <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion" target="_blank" rel="noopener nofollow" class="usa-link--external">Reveal molecule</a></li>
+  <li><strong>Honeycrisp:</strong> <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-reveal" target="_blank" rel="noopener nofollow" class="usa-link--external">Reveal molecule</a></li>
   <li>
     <strong>Customization:</strong> Design tokens
     and Styles
   </li>
   <li><strong>Modifier:</strong> <code>.cfa-details</code></li>
 </ul>
-<details class="cfa-details">
-  <summary class="cfa-details__summary usa-prose">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></summary>
-  <div class="cfa-details__content usa-prose">
-    <p>The visual appearance is modified using <b>design tokens</b> from the <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Reveal molecule</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-details</code> to add <b>styles</b> defined in a custom stylesheet.</p>
+<div class="cfa-details">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-31ecaf6ba3cd5"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-31ecaf6ba3cd5">
+    <p>The visual appearance is modified using <b>design tokens</b> from the <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-reveal" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Reveal molecule</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-details</code> to add <b>styles</b> defined in a custom stylesheet.</p>
     <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
     <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
-</details>
+</div>
 <h2 id="examples">Examples</h2>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Details</figcaption>
-    <details class="cfa-details">
-  <summary class="cfa-details__summary">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Details</figcaption>
+  <div class="cfa-details">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-1c087d8c1b88d">
     <span>What’s an example of a self-certification letter?</span>
     <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use>
     </svg>
-  </summary>
-  <div class="cfa-details__content">
+  </button>
+  <div th:id="${controls}" class="cfa-details__content">
     <p>If you don’t have any of these documents, you can write, sign, date, and submit this letter:</p>
     <p>
       <i>I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.</i>
@@ -321,32 +320,31 @@
       <i>[Today’s date]</i>
     </p>
   </div>
-</details>
-  </div>
-  <div class="margin-0">
+</div>
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-44d683dd16a45">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c69a6dd6fd538">
           View HTML
         </button>
       </div>
-      <div id="aria-c-44d683dd16a45" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-c69a6dd6fd538" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-a8ba13b779668" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-0c5695ad89d11" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-a8ba13b779668">&lt;details class=&quot;cfa-details&quot;&gt;
-  &lt;summary class=&quot;cfa-details__summary&quot;&gt;
+        <textarea hidden data-copy-target="block-0c5695ad89d11">&lt;div class=&quot;cfa-details&quot;&gt;
+  &lt;button class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; data-aria-controls=&quot;aria-c-1c087d8c1b88d&quot;&gt;
     &lt;span&gt;What’s an example of a self-certification letter?&lt;/span&gt;
     &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right&quot;&gt;&lt;/use&gt;
     &lt;/svg&gt;
-  &lt;/summary&gt;
-  &lt;div class=&quot;cfa-details__content&quot;&gt;
+  &lt;/button&gt;
+  &lt;div th:id=&quot;${controls}&quot; class=&quot;cfa-details__content&quot;&gt;
     &lt;p&gt;If you don’t have any of these documents, you can write, sign, date, and submit this letter:&lt;/p&gt;
     &lt;p&gt;
       &lt;i&gt;I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.&lt;/i&gt;
@@ -358,16 +356,16 @@
       &lt;i&gt;[Today’s date]&lt;/i&gt;
     &lt;/p&gt;
   &lt;/div&gt;
-&lt;/details&gt;</textarea>
+&lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;details class=&quot;cfa-details&quot;&gt;
-  &lt;summary class=&quot;cfa-details__summary&quot;&gt;
+      <pre class="language-html padding-top-0">&lt;div class=&quot;cfa-details&quot;&gt;
+  &lt;button class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; data-aria-controls=&quot;aria-c-1c087d8c1b88d&quot;&gt;
     &lt;span&gt;What’s an example of a self-certification letter?&lt;/span&gt;
     &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right&quot;&gt;&lt;/use&gt;
     &lt;/svg&gt;
-  &lt;/summary&gt;
-  &lt;div class=&quot;cfa-details__content&quot;&gt;
+  &lt;/button&gt;
+  &lt;div th:id=&quot;${controls}&quot; class=&quot;cfa-details__content&quot;&gt;
     &lt;p&gt;If you don’t have any of these documents, you can write, sign, date, and submit this letter:&lt;/p&gt;
     &lt;p&gt;
       &lt;i&gt;I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.&lt;/i&gt;
@@ -379,7 +377,7 @@
       &lt;i&gt;[Today’s date]&lt;/i&gt;
     &lt;/p&gt;
   &lt;/div&gt;
-&lt;/details&gt;</pre>
+&lt;/div&gt;</pre>
     </div>
       </div>
     </div>
@@ -387,12 +385,13 @@
 </figure>
 <!-- GUIDANCE -->
 <h2 id="guidance">Guidance</h2>
-<p><b>Additional references</b></p>
-<div class="font-body-3xs">
-<ol>
-<li><a href="#" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Title</cite> | domain.com</a></li>
-</ol>
-</div>
+<p><strong>Placement</strong>. The component always follows complex text or lengthy descriptions. This is because the content in the component should answer potential questions related to it’s preceding content.</p>
+<p><strong>Collapsed by default</strong>. There is a risk of users skipping content in the component. Therefore, it should never contain critical information if it is always closed by default.</p>
+<p><strong>Open by default, collapsed when revisiting</strong>. Ideally, the component is open by default. If the user leaves the screen containing the component and returns, then the component can be closed.</p>
+<p><strong>When to use something else</strong>.</p>
+<p><strong>Stacking collapsable sections of text</strong>. <a href="https://codeforamerica.github.io/uswds/dist/components/accordion">Accordions</a> are used to consolidate long pages of text containing multiple headings. The Details component uses code that can’t be applied to this use case in a reliable way for screen reader users.</p>
+<p><strong>Long text blocks such as legal information</strong>. Text wells are used to contain extremely lengthy blocks of text. The Details component should contain shorter blocks of supplementary content.</p>
+<!-- render 'references.md', ref_main: url_uswds_guidance, ref_additional: ref_additional, config: config -->
 <!-- ACCESSIBILITY -->
 <!-- <div class="usa-summary-box margin-y-6" role="region" aria-labelledby="accessibility">
   <div class="usa-summary-box__body"> -->
@@ -465,7 +464,149 @@
 <h2 id="design-library-component">Design library component</h2>
 <iframe tabindex="0" class="border border-base-lighter radius-lg width-full add-aspect-16x9 padding-0" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5004%253A537%26mode%3Ddesign%26t%3Db7vIYK7WH81HUo0S-1" allowfullscreen></iframe>
 <!-- SOURCE -->
-<!-- render 'source.md', name: 'name', nice: title, theme: '$theme-setting: value', usage: usage, config: config, pckg: package -->
+<h2 id="source-and-usage">Source and usage</h2>
+<p class="usa-icon-list__item">
+  <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#folder_open"></use></svg></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="@codeforamerica/uswds/packages/cfa-details" target="_blank" class="usa-link--external code">@codeforamerica/uswds/packages/cfa-details</a></span>
+</p>
+<p>Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.</p>
+<ul class="usa-content-list">
+  <li>
+    <strong>Sass stylesheet:</strong> <code>./_cfa-details.scss</code>
+  </li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-details.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-details.html.erb</code></li>
+  <li><strong>JavaScript</strong> enables the expansion and collapse of the details region. It also toggles the ARIA expanded attribute on the summary button and the tabindex attribute on potentially focusable children inside the details region. The module can be found at <code>./cfa-details.js</code>. Guidance on individual module loading will added. Currently, there is one script that imports all modules. The source is located at
+<code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>
+</ul>
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
+  <figcaption class="margin-bottom-2">
+    <strong>Sass theme settings and stylesheet loading</strong>
+    <p>Below is a demonstration of importing the Sass stylesheet from the package.</p>
+  </figcaption>
+  <div class="code-block"><pre class="language-scss">@forward 'cfa-uswds';
+@forward 'uswds';
+@forward '@codeforamerica/uswds/packages/cfa-details/_cfa-details.scss';
+</pre></div>
+</figure>
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong id="aria-lb-th-label">Thymeleaf template fragment</strong>
+      <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
+    </figcaption>
+    <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-7f1fc96ba6a8e" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea hidden data-copy-target="block-7f1fc96ba6a8e">&lt;div th:fragment=&quot;details(modifier, summary, controls, openAttr, icon, body, text)&quot; class=&quot;cfa-details&quot; th:classappend=&quot;${modifier}&quot;&gt;
+  &lt;button th:if=&quot;${summary}&quot; class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; th:attr=&quot;data-aria-controls=${controls},data-aria-expanded=${openAttr}&quot;&gt;
+    &lt;span th:text=&quot;${summary}&quot;&gt;Summary&lt;/span&gt;&lt;svg th:if=&quot;icon&quot; class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use th:href=&quot;${icon}&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;div th:id=&quot;${controls}&quot; th:if=&quot;${body}&quot; class=&quot;cfa-details__content&quot; th:utext=&quot;${body}&quot;&gt;&lt;/div&gt;
+  &lt;div th:id=&quot;${controls}&quot; th:if=&quot;${text}&quot; class=&quot;cfa-details__content&quot;&gt;
+    &lt;p th:text=&quot;${text}&quot;&gt;Text&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+      </div>
+      <pre class="language-html padding-top-0">&lt;div th:fragment=&quot;details(modifier, summary, controls, openAttr, icon, body, text)&quot; class=&quot;cfa-details&quot; th:classappend=&quot;${modifier}&quot;&gt;
+  &lt;button th:if=&quot;${summary}&quot; class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; th:attr=&quot;data-aria-controls=${controls},data-aria-expanded=${openAttr}&quot;&gt;
+    &lt;span th:text=&quot;${summary}&quot;&gt;Summary&lt;/span&gt;&lt;svg th:if=&quot;icon&quot; class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use th:href=&quot;${icon}&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;div th:id=&quot;${controls}&quot; th:if=&quot;${body}&quot; class=&quot;cfa-details__content&quot; th:utext=&quot;${body}&quot;&gt;&lt;/div&gt;
+  &lt;div th:id=&quot;${controls}&quot; th:if=&quot;${text}&quot; class=&quot;cfa-details__content&quot;&gt;
+    &lt;p th:text=&quot;${text}&quot;&gt;Text&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Template fragment inclusion</strong>
+      <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
+    </figcaption>
+    <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-8d27bffcddb5" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea hidden data-copy-target="block-8d27bffcddb5">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-details/cfa-details.th :: details(${modifier}, ${summary}, ${controls}, ${openAttr}, ${icon}, ${body}, ${text})}&quot; /&gt;</textarea>
+      </div>
+      <pre class="language-html padding-top-0">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-details/cfa-details.th :: details(${modifier}, ${summary}, ${controls}, ${openAttr}, ${icon}, ${body}, ${text})}&quot; /&gt;</pre>
+    </div>
+  </figure>
+</div>
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
+    <figcaption class="margin-bottom-2">
+      <strong>ERB template partial</strong>
+      <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
+    </figcaption>
+    <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-a54cdcaee9a6" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea hidden data-copy-target="block-a54cdcaee9a6">&lt;div class=&quot;cfa-details&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+  &lt;% if defined?(summary) %&gt;&lt;button class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot;&lt;% if defined?(controls) %&gt; data-aria-controls=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(openAttr) %&gt; data-aria-expanded=&quot;&lt;%= openAttr %&gt;&quot;&lt;% end %&gt;&gt;
+    &lt;span&gt;&lt;%= summary %&gt;&lt;/span&gt;&lt;% if defined?(icon) %&gt;&lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use href=&quot;&lt;%= icon %&gt;&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;&lt;% end %&gt;
+  &lt;/button&gt;&lt;% end %&gt;
+  &lt;% if defined?(body) %&gt;
+    &lt;div class=&quot;cfa-details__content&quot;&lt;% if defined?(controls) %&gt; id=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= body %&gt;&lt;/div&gt;
+  &lt;% elsif defined?(text) %&gt;
+    &lt;div class=&quot;cfa-details__content&quot;&lt;% if defined?(controls) %&gt; id=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&gt;&lt;p&gt;&lt;%= text %&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;% end %&gt;
+&lt;/div&gt;</textarea>
+      </div>
+      <pre class="language-ruby padding-top-0">&lt;div class=&quot;cfa-details&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+  &lt;% if defined?(summary) %&gt;&lt;button class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot;&lt;% if defined?(controls) %&gt; data-aria-controls=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(openAttr) %&gt; data-aria-expanded=&quot;&lt;%= openAttr %&gt;&quot;&lt;% end %&gt;&gt;
+    &lt;span&gt;&lt;%= summary %&gt;&lt;/span&gt;&lt;% if defined?(icon) %&gt;&lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+      &lt;use href=&quot;&lt;%= icon %&gt;&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;&lt;% end %&gt;
+  &lt;/button&gt;&lt;% end %&gt;
+  &lt;% if defined?(body) %&gt;
+    &lt;div class=&quot;cfa-details__content&quot;&lt;% if defined?(controls) %&gt; id=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= body %&gt;&lt;/div&gt;
+  &lt;% elsif defined?(text) %&gt;
+    &lt;div class=&quot;cfa-details__content&quot;&lt;% if defined?(controls) %&gt; id=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&gt;&lt;p&gt;&lt;%= text %&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;% end %&gt;
+&lt;/div&gt;</pre>
+    </div>
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Partial render</strong>
+      <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
+    </figcaption>
+    <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-5dd676eb7a034" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea hidden data-copy-target="block-5dd676eb7a034">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-details/cfa-details'), 0, 0, '@details').result_with_hash({modifier: modifier, controls: controls, openAttr: openAttr, summary: summary, icon: icon, body: body, text: text}) %&gt;</textarea>
+      </div>
+      <pre class="language-ruby padding-top-0">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-details/cfa-details'), 0, 0, '@details').result_with_hash({modifier: modifier, controls: controls, openAttr: openAttr, summary: summary, icon: icon, body: body, text: text}) %&gt;</pre>
+    </div>
+  </figure>
+</div>
 
         </main>
       </div>

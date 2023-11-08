@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} is a custom component. It includes the <a href="{{ config.baseUrl }}components/form-group/">form group component</a>, <a href="{{ config.baseUrl }}/components/fieldset">fieldset component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in a custom stylesheet.{% endcapture %}
+<p>The {{ title }} is a custom component. It includes the <a href="{{ config.baseUrl }}components/form-group/">form group component</a>, <a href="{{ config.baseUrl }}/components/fieldset">fieldset component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in a custom stylesheet.</p>{% endcapture %}
 
 {% render 'details.md',
   name: title,

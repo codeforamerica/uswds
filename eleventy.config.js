@@ -166,7 +166,7 @@ const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="${id}">${str}</textarea>
+        <textarea hidden data-copy-target="${id}">${str}</textarea>
       </div>
       <pre class="language-${lang} padding-top-0">${str}</pre>
     </div>`;

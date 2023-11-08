@@ -26,12 +26,13 @@
 </ul>
 
 {% if sass != false %}
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" aria-label="Sass">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
   <figcaption class="margin-bottom-2">
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of{% if theme %} customizing the component theme settings and{% endif %} importing {% if stylesheets %}Sass stylesheets{% else %}the Sass stylesheet{% endif %} from the package.{% if usage %} Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.{% endif %}</p>
   </figcaption>
-  <div class="code-block"><pre class="language-scss">{% if theme %}@use 'uswds-core' with (
+  <div class="code-block"><pre class="language-scss">@forward 'cfa-uswds';
+{% if theme %}@use 'uswds-core' with (
   {{ theme }},
   // ... additional theme settings here ...
 );
@@ -42,41 +43,41 @@
 {% endif %}
 
 {% for i in thymeleaf %}
-<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Thymeleaf">
-  <div class="margin-0 margin-bottom-3">
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
-      <strong>Thymeleaf template fragment</strong>
+      <strong id="aria-lb-th-label">Thymeleaf template fragment</strong>
       <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
     </figcaption>
     {% thymeleaf name %}
-  </div>
+  </figure>
 
-  <div class="margin-0">
-    <div class="margin-bottom-2">
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
       <strong>Template fragment inclusion</strong>
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
-    </div>
+    </figcaption>
     {% thymeleaf name true %}
-  </div>
-</figure>
+  </figure>
+</div>
 {% endfor %}
 
 {% for i in erb %}
-<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Embedded Ruby">
-  <div class="margin-0 margin-bottom-3">
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
       <strong>ERB template partial</strong>
       <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
     </figcaption>
     {% erb name %}
-  </div>
+  </figure>
 
-  <div class="margin-0">
-    <div class="margin-bottom-2">
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
       <strong>Partial render</strong>
       <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
-    </div>
+    </figcaption>
     {% erb name true %}
-  </div>
-</figure>
+  </figure>
+</div>
 {% endfor %}

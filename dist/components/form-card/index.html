@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <meta name="robots" content="noindex, nofollow" />
 
@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-7dfc51dde171f">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-6497b9f145d79">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-7dfc51dde171f" class="usa-nav__submenu">
+          <ul id="aria-c-6497b9f145d79" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -134,11 +134,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-fb976f380066d">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c5d8c7aa8a93a">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-fb976f380066d" class="usa-nav__submenu">
+          <ul id="aria-c-c5d8c7aa8a93a" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -292,18 +292,17 @@
   </li>
   <li><strong>Modifier:</strong> <code>.cfa-form-card</code>, <code>.cfa-form</code>, <code>.cfa-form-card__graphic</code>, <code>.cfa-form-card__heading</code>, <code>.cfa-form-card__help-message</code>, <code>.cfa-form-card__header-alert</code>, <code>.cfa-form-card__content</code>, <code>.cfa-form-card__input-select-group</code>, <code>.cfa-form-card__footer</code></li>
 </ul>
-<details class="cfa-details">
-  <summary class="cfa-details__summary usa-prose">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></summary>
-  <div class="cfa-details__content usa-prose">
+<div class="cfa-details">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-aae16bd7e004"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-aae16bd7e004">
 The Form card is a custom component that extends the <a href="https://designsystem.digital.gov/components/form" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Form</a>. It includes the <a href="https://codeforamerica.github.io/uswds/dist/components/alert/">alert component</a>, <a href="https://codeforamerica.github.io/uswds/dist/components/form-group/">form group component</a>, <a href="https://codeforamerica.github.io/uswds/dist//components/fieldset">fieldset component</a>, <a href="https://codeforamerica.github.io/uswds/dist//components/button">button component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form card organism</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-form-card</code>, <code>.cfa-form</code>, <code>.cfa-form-card__graphic</code>, <code>.cfa-form-card__heading</code>, <code>.cfa-form-card__help-message</code>, <code>.cfa-form-card__header-alert</code>, <code>.cfa-form-card__content</code>, <code>.cfa-form-card__input-select-group</code>, <code>.cfa-form-card__footer</code> to add <b>styles</b> defined in a custom stylesheet.
 <p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div></p>
-</details>
+</div>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card with multiple form groups and fieldsets</figcaption>
-    <main class="cfa-form-card">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Form card with multiple form groups and fieldsets</figcaption>
+  <main class="cfa-form-card">
   <form class="usa-form cfa-form">
     <svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#person"></use>
@@ -316,15 +315,15 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-4c98c661eabed">
-                <label class="usa-label cfa-label" for="input-4c98c661eabed">
+              <div class="usa-form-group cfa-form-group" id="form-group-1a074ce6adf44">
+                <label class="usa-label cfa-label" for="input-1a074ce6adf44">
                   <span>What is your first name?</span>
                   <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                 </label>
-                <div class="usa-hint cfa-hint" id="hint-4c98c661eabed">Legally as it appears on your I.D.</div>
+                <div class="usa-hint cfa-hint" id="hint-1a074ce6adf44">Legally as it appears on your I.D.</div>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-4c98c661eabed" name="input['4c98c661eabed']" aria-describedby="hint-4c98c661eabed" required="true">
+                    <input class="usa-input cfa-input" type="text" id="input-1a074ce6adf44" name="input['1a074ce6adf44']" aria-describedby="hint-1a074ce6adf44" required="true">
                   </div>
                 </div>
               </div>
@@ -334,16 +333,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-2f62d84dfc5c1">
-                <label class="usa-label cfa-label" for="input-2f62d84dfc5c1">
+              <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-d494e21a46575">
+                <label class="usa-label cfa-label" for="input-d494e21a46575">
                   <span>What is your last name?</span>
                   <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                 </label>
-                <div class="usa-hint cfa-hint" id="hint-2f62d84dfc5c1">Legally as it appears on your I.D.</div>
-                <span class="usa-error-message" id="error-message-450434fdca73e" role="alert">This field is required</span>
+                <div class="usa-hint cfa-hint" id="hint-d494e21a46575">Legally as it appears on your I.D.</div>
+                <span class="usa-error-message" id="error-message-c3b0e98934295" role="alert">This field is required</span>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-2f62d84dfc5c1" name="input['2f62d84dfc5c1']" aria-describedby="hint-2f62d84dfc5c1" required="true">
+                    <input class="usa-input cfa-input" type="text" id="input-d494e21a46575" name="input['d494e21a46575']" aria-describedby="hint-d494e21a46575" required="true">
                   </div>
                 </div>
               </div>
@@ -356,16 +355,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
               <legend class="usa-legend cfa-legend">
                 <span>What is your date of birth?</span>
               </legend>
-              <div class="usa-hint cfa-hint" id="hint-e31e7301c8b9b">For example January / 1 / 2000</div>
+              <div class="usa-hint cfa-hint" id="hint-ee13e441005b8">For example January / 1 / 2000</div>
               <div class="usa-memorable-date cfa-memorable-date">
                 <div>
-                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-e31e7301c8b9b">
-                    <label class="usa-label cfa-label text-normal" for="month-e31e7301c8b9b">
+                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-ee13e441005b8">
+                    <label class="usa-label cfa-label text-normal" for="month-ee13e441005b8">
                       <span>Month</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
-                      <select class="usa-select cfa-select" id="month-e31e7301c8b9b" name="month['e31e7301c8b9b']" aria-describedby="hint-e31e7301c8b9b" required="true">
+                      <select class="usa-select cfa-select" id="month-ee13e441005b8" name="month['ee13e441005b8']" aria-describedby="hint-ee13e441005b8" required="true">
                         <option selected="true">Click to select month</option>
                         <option disabled="true">---</option>
                         <option value="1">01 - January</option>
@@ -385,27 +384,27 @@ The Form card is a custom component that extends the <a href="https://designsyst
                   </div>
                 </div>
                 <div>
-                  <div class="usa-form-group usa-form-group--day" id="form-group-e31e7301c8b9b">
-                    <label class="usa-label cfa-label text-normal" for="day-e31e7301c8b9b">
+                  <div class="usa-form-group usa-form-group--day" id="form-group-ee13e441005b8">
+                    <label class="usa-label cfa-label text-normal" for="day-ee13e441005b8">
                       <span>Day</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
                       <div>
-                        <input class="usa-input cfa-input" type="text" id="day-e31e7301c8b9b" name="day['e31e7301c8b9b']" aria-describedby="hint-e31e7301c8b9b" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        <input class="usa-input cfa-input" type="text" id="day-ee13e441005b8" name="day['ee13e441005b8']" aria-describedby="hint-ee13e441005b8" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
                       </div>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <div class="usa-form-group usa-form-group--year" id="form-group-e31e7301c8b9b">
-                    <label class="usa-label cfa-label text-normal" for="year-e31e7301c8b9b">
+                  <div class="usa-form-group usa-form-group--year" id="form-group-ee13e441005b8">
+                    <label class="usa-label cfa-label text-normal" for="year-ee13e441005b8">
                       <span>Year</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
                       <div>
-                        <input class="usa-input cfa-input" type="text" id="year-e31e7301c8b9b" name="year['e31e7301c8b9b']" aria-describedby="hint-e31e7301c8b9b" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                        <input class="usa-input cfa-input" type="text" id="year-ee13e441005b8" name="year['ee13e441005b8']" aria-describedby="hint-ee13e441005b8" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
                       </div>
                     </div>
                   </div>
@@ -417,14 +416,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-605963584b5c2">
-                <label class="usa-label cfa-label" for="input-605963584b5c2">
+              <div class="usa-form-group cfa-form-group" id="form-group-b214691126e46">
+                <label class="usa-label cfa-label" for="input-b214691126e46">
                   <span>Which gender do you identify with?</span>
                 </label>
-                <div class="usa-hint cfa-hint" id="hint-605963584b5c2">For example, man, woman, or non-binary.</div>
+                <div class="usa-hint cfa-hint" id="hint-b214691126e46">For example, man, woman, or non-binary.</div>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-605963584b5c2" name="input['605963584b5c2']" aria-describedby="hint-605963584b5c2">
+                    <input class="usa-input cfa-input" type="text" id="input-b214691126e46" name="input['b214691126e46']" aria-describedby="hint-b214691126e46">
                   </div>
                 </div>
               </div>
@@ -438,14 +437,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
                 <span>Did you move to the state within the last year?</span>
               </legend>
               <div class="usa-radio cfa-radio">
-                <input type="radio" id="radio-6fe642d658287" name="radio['649337cfa8cc5']" value="yes" class="usa-radio__input usa-radio__input--tile">
-                <label for="radio-6fe642d658287" class="usa-radio__label">
+                <input type="radio" id="radio-3e4eebd2290e" name="radio['654e6e72939a1']" value="yes" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-3e4eebd2290e" class="usa-radio__label">
                   <span>Yes</span>
                 </label>
               </div>
               <div class="usa-radio cfa-radio">
-                <input type="radio" id="radio-647da4de11a8c" name="radio['649337cfa8cc5']" value="no" class="usa-radio__input usa-radio__input--tile">
-                <label for="radio-647da4de11a8c" class="usa-radio__label">
+                <input type="radio" id="radio-1a37b4826e395" name="radio['654e6e72939a1']" value="no" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-1a37b4826e395" class="usa-radio__label">
                   <span>No</span>
                 </label>
               </div>
@@ -465,24 +464,23 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </form>
 </main>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-1143e035b007d">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-40913ac9d0ef4">
           View HTML
         </button>
       </div>
-      <div id="aria-c-1143e035b007d" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-40913ac9d0ef4" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-901449ca546f7" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-ec6a6d6d999cc" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-901449ca546f7">&lt;main class=&quot;cfa-form-card&quot;&gt;
+        <textarea hidden data-copy-target="block-ec6a6d6d999cc">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#person&quot;&gt;&lt;/use&gt;
@@ -495,15 +493,15 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-4c98c661eabed&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4c98c661eabed&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1a074ce6adf44&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-1a074ce6adf44&quot;&gt;
                   &lt;span&gt;What is your first name?&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
-                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-4c98c661eabed&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-1a074ce6adf44&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-4c98c661eabed&quot; name=&quot;input['4c98c661eabed']&quot; aria-describedby=&quot;hint-4c98c661eabed&quot; required=&quot;true&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-1a074ce6adf44&quot; name=&quot;input['1a074ce6adf44']&quot; aria-describedby=&quot;hint-1a074ce6adf44&quot; required=&quot;true&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -513,16 +511,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-2f62d84dfc5c1&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2f62d84dfc5c1&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-d494e21a46575&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d494e21a46575&quot;&gt;
                   &lt;span&gt;What is your last name?&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
-                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-2f62d84dfc5c1&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-450434fdca73e&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
+                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-d494e21a46575&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-c3b0e98934295&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2f62d84dfc5c1&quot; name=&quot;input['2f62d84dfc5c1']&quot; aria-describedby=&quot;hint-2f62d84dfc5c1&quot; required=&quot;true&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-d494e21a46575&quot; name=&quot;input['d494e21a46575']&quot; aria-describedby=&quot;hint-d494e21a46575&quot; required=&quot;true&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -535,16 +533,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
               &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
                 &lt;span&gt;What is your date of birth?&lt;/span&gt;
               &lt;/legend&gt;
-              &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-e31e7301c8b9b&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
+              &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-ee13e441005b8&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
               &lt;div class=&quot;usa-memorable-date cfa-memorable-date&quot;&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-e31e7301c8b9b&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-e31e7301c8b9b&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-ee13e441005b8&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-ee13e441005b8&quot;&gt;
                       &lt;span&gt;Month&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
-                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-e31e7301c8b9b&quot; name=&quot;month['e31e7301c8b9b']&quot; aria-describedby=&quot;hint-e31e7301c8b9b&quot; required=&quot;true&quot;&gt;
+                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-ee13e441005b8&quot; name=&quot;month['ee13e441005b8']&quot; aria-describedby=&quot;hint-ee13e441005b8&quot; required=&quot;true&quot;&gt;
                         &lt;option selected=&quot;true&quot;&gt;Click to select month&lt;/option&gt;
                         &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
                         &lt;option value=&quot;1&quot;&gt;01 - January&lt;/option&gt;
@@ -564,27 +562,27 @@ The Form card is a custom component that extends the <a href="https://designsyst
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-e31e7301c8b9b&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-e31e7301c8b9b&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-ee13e441005b8&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-ee13e441005b8&quot;&gt;
                       &lt;span&gt;Day&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
                       &lt;div&gt;
-                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-e31e7301c8b9b&quot; name=&quot;day['e31e7301c8b9b']&quot; aria-describedby=&quot;hint-e31e7301c8b9b&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-ee13e441005b8&quot; name=&quot;day['ee13e441005b8']&quot; aria-describedby=&quot;hint-ee13e441005b8&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-e31e7301c8b9b&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-e31e7301c8b9b&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-ee13e441005b8&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-ee13e441005b8&quot;&gt;
                       &lt;span&gt;Year&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
                       &lt;div&gt;
-                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-e31e7301c8b9b&quot; name=&quot;year['e31e7301c8b9b']&quot; aria-describedby=&quot;hint-e31e7301c8b9b&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-ee13e441005b8&quot; name=&quot;year['ee13e441005b8']&quot; aria-describedby=&quot;hint-ee13e441005b8&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -596,14 +594,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-605963584b5c2&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-605963584b5c2&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b214691126e46&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-b214691126e46&quot;&gt;
                   &lt;span&gt;Which gender do you identify with?&lt;/span&gt;
                 &lt;/label&gt;
-                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-605963584b5c2&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
+                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-b214691126e46&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-605963584b5c2&quot; name=&quot;input['605963584b5c2']&quot; aria-describedby=&quot;hint-605963584b5c2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-b214691126e46&quot; name=&quot;input['b214691126e46']&quot; aria-describedby=&quot;hint-b214691126e46&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -617,14 +615,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
                 &lt;span&gt;Did you move to the state within the last year?&lt;/span&gt;
               &lt;/legend&gt;
               &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;radio-6fe642d658287&quot; name=&quot;radio['649337cfa8cc5']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-                &lt;label for=&quot;radio-6fe642d658287&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-3e4eebd2290e&quot; name=&quot;radio['654e6e72939a1']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-3e4eebd2290e&quot; class=&quot;usa-radio__label&quot;&gt;
                   &lt;span&gt;Yes&lt;/span&gt;
                 &lt;/label&gt;
               &lt;/div&gt;
               &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;radio-647da4de11a8c&quot; name=&quot;radio['649337cfa8cc5']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-                &lt;label for=&quot;radio-647da4de11a8c&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-1a37b4826e395&quot; name=&quot;radio['654e6e72939a1']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-1a37b4826e395&quot; class=&quot;usa-radio__label&quot;&gt;
                   &lt;span&gt;No&lt;/span&gt;
                 &lt;/label&gt;
               &lt;/div&gt;
@@ -658,15 +656,15 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-4c98c661eabed&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4c98c661eabed&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1a074ce6adf44&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-1a074ce6adf44&quot;&gt;
                   &lt;span&gt;What is your first name?&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
-                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-4c98c661eabed&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-1a074ce6adf44&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-4c98c661eabed&quot; name=&quot;input['4c98c661eabed']&quot; aria-describedby=&quot;hint-4c98c661eabed&quot; required=&quot;true&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-1a074ce6adf44&quot; name=&quot;input['1a074ce6adf44']&quot; aria-describedby=&quot;hint-1a074ce6adf44&quot; required=&quot;true&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -676,16 +674,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-2f62d84dfc5c1&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2f62d84dfc5c1&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-d494e21a46575&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d494e21a46575&quot;&gt;
                   &lt;span&gt;What is your last name?&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
-                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-2f62d84dfc5c1&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-450434fdca73e&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
+                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-d494e21a46575&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+                &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-c3b0e98934295&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2f62d84dfc5c1&quot; name=&quot;input['2f62d84dfc5c1']&quot; aria-describedby=&quot;hint-2f62d84dfc5c1&quot; required=&quot;true&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-d494e21a46575&quot; name=&quot;input['d494e21a46575']&quot; aria-describedby=&quot;hint-d494e21a46575&quot; required=&quot;true&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -698,16 +696,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
               &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
                 &lt;span&gt;What is your date of birth?&lt;/span&gt;
               &lt;/legend&gt;
-              &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-e31e7301c8b9b&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
+              &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-ee13e441005b8&quot;&gt;For example January / 1 / 2000&lt;/div&gt;
               &lt;div class=&quot;usa-memorable-date cfa-memorable-date&quot;&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-e31e7301c8b9b&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-e31e7301c8b9b&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--month usa-form-group--select&quot; id=&quot;month-ee13e441005b8&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;month-ee13e441005b8&quot;&gt;
                       &lt;span&gt;Month&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
-                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-e31e7301c8b9b&quot; name=&quot;month['e31e7301c8b9b']&quot; aria-describedby=&quot;hint-e31e7301c8b9b&quot; required=&quot;true&quot;&gt;
+                      &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;month-ee13e441005b8&quot; name=&quot;month['ee13e441005b8']&quot; aria-describedby=&quot;hint-ee13e441005b8&quot; required=&quot;true&quot;&gt;
                         &lt;option selected=&quot;true&quot;&gt;Click to select month&lt;/option&gt;
                         &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
                         &lt;option value=&quot;1&quot;&gt;01 - January&lt;/option&gt;
@@ -727,27 +725,27 @@ The Form card is a custom component that extends the <a href="https://designsyst
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-e31e7301c8b9b&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-e31e7301c8b9b&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--day&quot; id=&quot;form-group-ee13e441005b8&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;day-ee13e441005b8&quot;&gt;
                       &lt;span&gt;Day&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
                       &lt;div&gt;
-                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-e31e7301c8b9b&quot; name=&quot;day['e31e7301c8b9b']&quot; aria-describedby=&quot;hint-e31e7301c8b9b&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;day-ee13e441005b8&quot; name=&quot;day['ee13e441005b8']&quot; aria-describedby=&quot;hint-ee13e441005b8&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;2&quot;&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div&gt;
-                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-e31e7301c8b9b&quot;&gt;
-                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-e31e7301c8b9b&quot;&gt;
+                  &lt;div class=&quot;usa-form-group usa-form-group--year&quot; id=&quot;form-group-ee13e441005b8&quot;&gt;
+                    &lt;label class=&quot;usa-label cfa-label text-normal&quot; for=&quot;year-ee13e441005b8&quot;&gt;
                       &lt;span&gt;Year&lt;/span&gt;
                       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
                     &lt;/label&gt;
                     &lt;div&gt;
                       &lt;div&gt;
-                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-e31e7301c8b9b&quot; name=&quot;year['e31e7301c8b9b']&quot; aria-describedby=&quot;hint-e31e7301c8b9b&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
+                        &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;year-ee13e441005b8&quot; name=&quot;year['ee13e441005b8']&quot; aria-describedby=&quot;hint-ee13e441005b8&quot; required=&quot;true&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot;&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -759,14 +757,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-605963584b5c2&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-605963584b5c2&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b214691126e46&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-b214691126e46&quot;&gt;
                   &lt;span&gt;Which gender do you identify with?&lt;/span&gt;
                 &lt;/label&gt;
-                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-605963584b5c2&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
+                &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-b214691126e46&quot;&gt;For example, man, woman, or non-binary.&lt;/div&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-605963584b5c2&quot; name=&quot;input['605963584b5c2']&quot; aria-describedby=&quot;hint-605963584b5c2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-b214691126e46&quot; name=&quot;input['b214691126e46']&quot; aria-describedby=&quot;hint-b214691126e46&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -780,14 +778,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
                 &lt;span&gt;Did you move to the state within the last year?&lt;/span&gt;
               &lt;/legend&gt;
               &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;radio-6fe642d658287&quot; name=&quot;radio['649337cfa8cc5']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-                &lt;label for=&quot;radio-6fe642d658287&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-3e4eebd2290e&quot; name=&quot;radio['654e6e72939a1']&quot; value=&quot;yes&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-3e4eebd2290e&quot; class=&quot;usa-radio__label&quot;&gt;
                   &lt;span&gt;Yes&lt;/span&gt;
                 &lt;/label&gt;
               &lt;/div&gt;
               &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;radio-647da4de11a8c&quot; name=&quot;radio['649337cfa8cc5']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-                &lt;label for=&quot;radio-647da4de11a8c&quot; class=&quot;usa-radio__label&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;radio-1a37b4826e395&quot; name=&quot;radio['654e6e72939a1']&quot; value=&quot;no&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+                &lt;label for=&quot;radio-1a37b4826e395&quot; class=&quot;usa-radio__label&quot;&gt;
                   &lt;span&gt;No&lt;/span&gt;
                 &lt;/label&gt;
               &lt;/div&gt;
@@ -812,10 +810,9 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </div>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card with single question and multi-part text input fieldset</figcaption>
-    <main class="cfa-form-card">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Form card with single question and multi-part text input fieldset</figcaption>
+  <main class="cfa-form-card">
   <form class="usa-form cfa-form">
     <svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#home"></use>
@@ -828,14 +825,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-4c6c66a5fd503">
-                <label class="usa-label cfa-label" for="input-4c6c66a5fd503">
+              <div class="usa-form-group cfa-form-group" id="form-group-2bd93debd8655">
+                <label class="usa-label cfa-label" for="input-2bd93debd8655">
                   <span>Street address</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-4c6c66a5fd503" name="input['4c6c66a5fd503']" required="true" autocomplete="address-line1">
+                    <input class="usa-input cfa-input" type="text" id="input-2bd93debd8655" name="input['2bd93debd8655']" required="true" autocomplete="address-line1">
                   </div>
                 </div>
               </div>
@@ -845,14 +842,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-7c657d7d1fe54">
-                <label class="usa-label cfa-label" for="input-7c657d7d1fe54">
+              <div class="usa-form-group cfa-form-group" id="form-group-1ec1620e8ebc2">
+                <label class="usa-label cfa-label" for="input-1ec1620e8ebc2">
                   <span>Street address line 2</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-7c657d7d1fe54" name="input['7c657d7d1fe54']" required="true" autocomplete="address-line2">
+                    <input class="usa-input cfa-input" type="text" id="input-1ec1620e8ebc2" name="input['1ec1620e8ebc2']" required="true" autocomplete="address-line2">
                   </div>
                 </div>
               </div>
@@ -862,14 +859,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-34cc46098a8b9">
-                <label class="usa-label cfa-label" for="input-34cc46098a8b9">
+              <div class="usa-form-group cfa-form-group" id="form-group-2463de22f7369">
+                <label class="usa-label cfa-label" for="input-2463de22f7369">
                   <span>City</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-34cc46098a8b9" name="input['34cc46098a8b9']" required="true" autocomplete="address-level2">
+                    <input class="usa-input cfa-input" type="text" id="input-2463de22f7369" name="input['2463de22f7369']" required="true" autocomplete="address-level2">
                   </div>
                 </div>
               </div>
@@ -879,14 +876,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-ae6e6bcd8ee9c">
-                <label class="usa-label cfa-label" for="input-ae6e6bcd8ee9c">
+              <div class="usa-form-group cfa-form-group" id="form-group-4a4f02e1db472">
+                <label class="usa-label cfa-label" for="input-4a4f02e1db472">
                   <span>State, territory, or military post</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input usa-input--sm" type="text" id="input-ae6e6bcd8ee9c" name="input['ae6e6bcd8ee9c']" required="true" maxlength="2" autocomplete="address-level1">
+                    <input class="usa-input cfa-input usa-input--sm" type="text" id="input-4a4f02e1db472" name="input['4a4f02e1db472']" required="true" maxlength="2" autocomplete="address-level1">
                   </div>
                 </div>
               </div>
@@ -896,14 +893,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-39f27346a027f">
-                <label class="usa-label cfa-label" for="input-39f27346a027f">
+              <div class="usa-form-group cfa-form-group" id="form-group-3672c2b0bc52e">
+                <label class="usa-label cfa-label" for="input-3672c2b0bc52e">
                   <span>ZIP code</span>
                   <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
                 </label>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input usa-input--md" type="text" id="input-39f27346a027f" name="input['39f27346a027f']" required="true" pattern="[\d]{5}(-[\d]{4})?" autocomplete="postal-code">
+                    <input class="usa-input cfa-input usa-input--md" type="text" id="input-3672c2b0bc52e" name="input['3672c2b0bc52e']" required="true" pattern="[\d]{5}(-[\d]{4})?" autocomplete="postal-code">
                   </div>
                 </div>
               </div>
@@ -923,24 +920,23 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </form>
 </main>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-e56128e5faf75">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-47eabc77ae846">
           View HTML
         </button>
       </div>
-      <div id="aria-c-e56128e5faf75" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-47eabc77ae846" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-e3498c7fb5735" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-4387bc643ff4f" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-e3498c7fb5735">&lt;main class=&quot;cfa-form-card&quot;&gt;
+        <textarea hidden data-copy-target="block-4387bc643ff4f">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#home&quot;&gt;&lt;/use&gt;
@@ -953,14 +949,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-4c6c66a5fd503&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4c6c66a5fd503&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-2bd93debd8655&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2bd93debd8655&quot;&gt;
                   &lt;span&gt;Street address&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-4c6c66a5fd503&quot; name=&quot;input['4c6c66a5fd503']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2bd93debd8655&quot; name=&quot;input['2bd93debd8655']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -970,14 +966,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-7c657d7d1fe54&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-7c657d7d1fe54&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1ec1620e8ebc2&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-1ec1620e8ebc2&quot;&gt;
                   &lt;span&gt;Street address line 2&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-7c657d7d1fe54&quot; name=&quot;input['7c657d7d1fe54']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-1ec1620e8ebc2&quot; name=&quot;input['1ec1620e8ebc2']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -987,14 +983,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-34cc46098a8b9&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-34cc46098a8b9&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-2463de22f7369&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2463de22f7369&quot;&gt;
                   &lt;span&gt;City&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-34cc46098a8b9&quot; name=&quot;input['34cc46098a8b9']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2463de22f7369&quot; name=&quot;input['2463de22f7369']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1004,14 +1000,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-ae6e6bcd8ee9c&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ae6e6bcd8ee9c&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-4a4f02e1db472&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4a4f02e1db472&quot;&gt;
                   &lt;span&gt;State, territory, or military post&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-ae6e6bcd8ee9c&quot; name=&quot;input['ae6e6bcd8ee9c']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-4a4f02e1db472&quot; name=&quot;input['4a4f02e1db472']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1021,14 +1017,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-39f27346a027f&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-39f27346a027f&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-3672c2b0bc52e&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-3672c2b0bc52e&quot;&gt;
                   &lt;span&gt;ZIP code&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-39f27346a027f&quot; name=&quot;input['39f27346a027f']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-3672c2b0bc52e&quot; name=&quot;input['3672c2b0bc52e']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1062,14 +1058,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-4c6c66a5fd503&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4c6c66a5fd503&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-2bd93debd8655&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2bd93debd8655&quot;&gt;
                   &lt;span&gt;Street address&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-4c6c66a5fd503&quot; name=&quot;input['4c6c66a5fd503']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2bd93debd8655&quot; name=&quot;input['2bd93debd8655']&quot; required=&quot;true&quot; autocomplete=&quot;address-line1&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1079,14 +1075,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-7c657d7d1fe54&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-7c657d7d1fe54&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1ec1620e8ebc2&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-1ec1620e8ebc2&quot;&gt;
                   &lt;span&gt;Street address line 2&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-7c657d7d1fe54&quot; name=&quot;input['7c657d7d1fe54']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-1ec1620e8ebc2&quot; name=&quot;input['1ec1620e8ebc2']&quot; required=&quot;true&quot; autocomplete=&quot;address-line2&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1096,14 +1092,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-34cc46098a8b9&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-34cc46098a8b9&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-2463de22f7369&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-2463de22f7369&quot;&gt;
                   &lt;span&gt;City&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-34cc46098a8b9&quot; name=&quot;input['34cc46098a8b9']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-2463de22f7369&quot; name=&quot;input['2463de22f7369']&quot; required=&quot;true&quot; autocomplete=&quot;address-level2&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1113,14 +1109,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-ae6e6bcd8ee9c&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ae6e6bcd8ee9c&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-4a4f02e1db472&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4a4f02e1db472&quot;&gt;
                   &lt;span&gt;State, territory, or military post&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-ae6e6bcd8ee9c&quot; name=&quot;input['ae6e6bcd8ee9c']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--sm&quot; type=&quot;text&quot; id=&quot;input-4a4f02e1db472&quot; name=&quot;input['4a4f02e1db472']&quot; required=&quot;true&quot; maxlength=&quot;2&quot; autocomplete=&quot;address-level1&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1130,14 +1126,14 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div&gt;
             &lt;div&gt;
-              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-39f27346a027f&quot;&gt;
-                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-39f27346a027f&quot;&gt;
+              &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-3672c2b0bc52e&quot;&gt;
+                &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-3672c2b0bc52e&quot;&gt;
                   &lt;span&gt;ZIP code&lt;/span&gt;
                   &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot;&gt;*&lt;/abbr&gt;
                 &lt;/label&gt;
                 &lt;div&gt;
                   &lt;div&gt;
-                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-39f27346a027f&quot; name=&quot;input['39f27346a027f']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
+                    &lt;input class=&quot;usa-input cfa-input usa-input--md&quot; type=&quot;text&quot; id=&quot;input-3672c2b0bc52e&quot; name=&quot;input['3672c2b0bc52e']&quot; required=&quot;true&quot; pattern=&quot;[\d]{5}(-[\d]{4})?&quot; autocomplete=&quot;postal-code&quot;&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -1162,17 +1158,16 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </div>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card with single question, alert, and radios fieldset</figcaption>
-    <main class="cfa-form-card">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Form card with single question, alert, and radios fieldset</figcaption>
+  <main class="cfa-form-card">
   <form class="usa-form cfa-form">
     <fieldset class="usa-fieldset cfa-fieldset">
       <legend class="cfa-form-card__heading">
-        <h1 id="aria-lb-e29eb187e4a9e">Confirm your address</h1>
+        <h1 id="aria-lb-97085b2f8c4f6">Confirm your address</h1>
       </legend>
       <div>
-        <div class="usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning" role="region" aria-labelledby="aria-lb-e29eb187e4a9e">
+        <div class="usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning" role="region" aria-labelledby="aria-lb-97085b2f8c4f6">
           <div class="usa-alert__body">
             <p class="usa-alert__text">We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href="#">Alternatively, click here to look up your county information</a>.</p>
           </div>
@@ -1182,8 +1177,8 @@ The Form card is a custom component that extends the <a href="https://designsyst
         <div>
           <div class="cfa-form-card__input-select-group">
             <div class="usa-radio cfa-radio">
-              <input type="radio" id="radio-48cc41db284ec" name="radio['c22579881bbc7']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
-              <label for="radio-48cc41db284ec" class="usa-radio__label">
+              <input type="radio" id="radio-aff076f7630ea" name="radio['4349c08e49857']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
+              <label for="radio-aff076f7630ea" class="usa-radio__label">
                 <span>Suggested address</span>
                 <span class="usa-radio__label-description">4918 Webster St., Apt 2
                   <br> Oakland, CA
@@ -1192,8 +1187,8 @@ The Form card is a custom component that extends the <a href="https://designsyst
               </label>
             </div>
             <div class="usa-radio cfa-radio">
-              <input type="radio" id="radio-55e328c5dc7bf" name="radio['c22579881bbc7']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
-              <label for="radio-55e328c5dc7bf" class="usa-radio__label">
+              <input type="radio" id="radio-01bdbc728b1bf" name="radio['4349c08e49857']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
+              <label for="radio-01bdbc728b1bf" class="usa-radio__label">
                 <span>Address you entered</span>
                 <span class="usa-radio__label-description">4918 Webster Street
                   <br> Apt 2
@@ -1217,31 +1212,30 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </form>
 </main>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-95ea3f118ab11">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-86fac8516eabe">
           View HTML
         </button>
       </div>
-      <div id="aria-c-95ea3f118ab11" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-86fac8516eabe" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-c15b2802a4bfe" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1cada2590d7c7" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-c15b2802a4bfe">&lt;main class=&quot;cfa-form-card&quot;&gt;
+        <textarea hidden data-copy-target="block-1cada2590d7c7">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
       &lt;legend class=&quot;cfa-form-card__heading&quot;&gt;
-        &lt;h1 id=&quot;aria-lb-e29eb187e4a9e&quot;&gt;Confirm your address&lt;/h1&gt;
+        &lt;h1 id=&quot;aria-lb-97085b2f8c4f6&quot;&gt;Confirm your address&lt;/h1&gt;
       &lt;/legend&gt;
       &lt;div&gt;
-        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-e29eb187e4a9e&quot;&gt;
+        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-97085b2f8c4f6&quot;&gt;
           &lt;div class=&quot;usa-alert__body&quot;&gt;
             &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. &lt;a href=&quot;#&quot;&gt;Alternatively, click here to look up your county information&lt;/a&gt;.&lt;/p&gt;
           &lt;/div&gt;
@@ -1251,8 +1245,8 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div class=&quot;cfa-form-card__input-select-group&quot;&gt;
             &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-48cc41db284ec&quot; name=&quot;radio['c22579881bbc7']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-48cc41db284ec&quot; class=&quot;usa-radio__label&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-aff076f7630ea&quot; name=&quot;radio['4349c08e49857']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-aff076f7630ea&quot; class=&quot;usa-radio__label&quot;&gt;
                 &lt;span&gt;Suggested address&lt;/span&gt;
                 &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
                   &lt;br&gt; Oakland, CA
@@ -1261,8 +1255,8 @@ The Form card is a custom component that extends the <a href="https://designsyst
               &lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-55e328c5dc7bf&quot; name=&quot;radio['c22579881bbc7']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-55e328c5dc7bf&quot; class=&quot;usa-radio__label&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-01bdbc728b1bf&quot; name=&quot;radio['4349c08e49857']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-01bdbc728b1bf&quot; class=&quot;usa-radio__label&quot;&gt;
                 &lt;span&gt;Address you entered&lt;/span&gt;
                 &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
                   &lt;br&gt; Apt 2
@@ -1291,10 +1285,10 @@ The Form card is a custom component that extends the <a href="https://designsyst
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
       &lt;legend class=&quot;cfa-form-card__heading&quot;&gt;
-        &lt;h1 id=&quot;aria-lb-e29eb187e4a9e&quot;&gt;Confirm your address&lt;/h1&gt;
+        &lt;h1 id=&quot;aria-lb-97085b2f8c4f6&quot;&gt;Confirm your address&lt;/h1&gt;
       &lt;/legend&gt;
       &lt;div&gt;
-        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-e29eb187e4a9e&quot;&gt;
+        &lt;div class=&quot;usa-alert cfa-form-card__header-alert cfa-alert usa-alert--warning&quot; role=&quot;region&quot; aria-labelledby=&quot;aria-lb-97085b2f8c4f6&quot;&gt;
           &lt;div class=&quot;usa-alert__body&quot;&gt;
             &lt;p class=&quot;usa-alert__text&quot;&gt;We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. &lt;a href=&quot;#&quot;&gt;Alternatively, click here to look up your county information&lt;/a&gt;.&lt;/p&gt;
           &lt;/div&gt;
@@ -1304,8 +1298,8 @@ The Form card is a custom component that extends the <a href="https://designsyst
         &lt;div&gt;
           &lt;div class=&quot;cfa-form-card__input-select-group&quot;&gt;
             &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-48cc41db284ec&quot; name=&quot;radio['c22579881bbc7']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-48cc41db284ec&quot; class=&quot;usa-radio__label&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-aff076f7630ea&quot; name=&quot;radio['4349c08e49857']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-aff076f7630ea&quot; class=&quot;usa-radio__label&quot;&gt;
                 &lt;span&gt;Suggested address&lt;/span&gt;
                 &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
                   &lt;br&gt; Oakland, CA
@@ -1314,8 +1308,8 @@ The Form card is a custom component that extends the <a href="https://designsyst
               &lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-              &lt;input type=&quot;radio&quot; id=&quot;radio-55e328c5dc7bf&quot; name=&quot;radio['c22579881bbc7']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-              &lt;label for=&quot;radio-55e328c5dc7bf&quot; class=&quot;usa-radio__label&quot;&gt;
+              &lt;input type=&quot;radio&quot; id=&quot;radio-01bdbc728b1bf&quot; name=&quot;radio['4349c08e49857']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+              &lt;label for=&quot;radio-01bdbc728b1bf&quot; class=&quot;usa-radio__label&quot;&gt;
                 &lt;span&gt;Address you entered&lt;/span&gt;
                 &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
                   &lt;br&gt; Apt 2
@@ -1344,10 +1338,9 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </div>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card with single question, continue, and skip links</figcaption>
-    <main class="cfa-form-card">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Form card with single question, continue, and skip links</figcaption>
+  <main class="cfa-form-card">
   <form class="usa-form cfa-form">
     <svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#phone"></use>
@@ -1378,24 +1371,23 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </form>
 </main>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a8e401f8aa79">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-d99dc3316bd76">
           View HTML
         </button>
       </div>
-      <div id="aria-c-a8e401f8aa79" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-d99dc3316bd76" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-bcfebdaa83414" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-114e1fa8fc38d" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-bcfebdaa83414">&lt;main class=&quot;cfa-form-card&quot;&gt;
+        <textarea hidden data-copy-target="block-114e1fa8fc38d">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;svg class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#phone&quot;&gt;&lt;/use&gt;
@@ -1463,10 +1455,9 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </div>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Form card with single question, yes, and no links</figcaption>
-    <main class="cfa-form-card">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Form card with single question, yes, and no links</figcaption>
+  <main class="cfa-form-card">
   <form class="usa-form cfa-form">
     <div>
       <div class="cfa-form-card__heading">
@@ -1503,24 +1494,23 @@ The Form card is a custom component that extends the <a href="https://designsyst
     </div>
   </form>
 </main>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ec1aa1f0002f">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-2507f1dba8925">
           View HTML
         </button>
       </div>
-      <div id="aria-c-ec1aa1f0002f" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-2507f1dba8925" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-a769d3ef1bcff" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-7bcd889f08f98" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-a769d3ef1bcff">&lt;main class=&quot;cfa-form-card&quot;&gt;
+        <textarea hidden data-copy-target="block-7bcd889f08f98">&lt;main class=&quot;cfa-form-card&quot;&gt;
   &lt;form class=&quot;usa-form cfa-form&quot;&gt;
     &lt;div&gt;
       &lt;div class=&quot;cfa-form-card__heading&quot;&gt;
@@ -1739,31 +1729,32 @@ The Form card is a custom component that extends the <a href="https://designsyst
   <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-form-card.th.html</code></li>
   <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-form-card.html.erb</code></li>
 </ul>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" aria-label="Sass">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
   <figcaption class="margin-bottom-2">
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of importing Sass stylesheets from the package.</p>
   </figcaption>
-  <div class="code-block"><pre class="language-scss">@forward 'uswds';
+  <div class="code-block"><pre class="language-scss">@forward 'cfa-uswds';
+@forward 'uswds';
 @forward '@codeforamerica/uswds/packages/cfa-form-card/_cfa-form-card.scss';
 <p>@forward '@codeforamerica/uswds/packages/cfa-form/_cfa-form.scss'
 </pre></div></p>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Thymeleaf">
-  <div class="margin-0 margin-bottom-3">
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
-      <strong>Thymeleaf template fragment</strong>
+      <strong id="aria-lb-th-label">Thymeleaf template fragment</strong>
       <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-61197e54d453b" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-d0af9d1ccb964" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-61197e54d453b">&lt;main th:fragment=&quot;formCard(modifier, id, form, graphic, header, content, formGroups, fieldset, footer)&quot; class=&quot;cfa-form-card&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id},aria-label=${ariaLabel}&quot;&gt;
+        <textarea hidden data-copy-target="block-d0af9d1ccb964">&lt;main th:fragment=&quot;formCard(modifier, id, form, graphic, header, content, formGroups, fieldset, footer)&quot; class=&quot;cfa-form-card&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id},aria-label=${ariaLabel}&quot;&gt;
   &lt;form class=&quot;usa-form&quot; th:classappend=&quot;${form.modifier}&quot;&gt;
     &lt;svg th:if=&quot;${graphic}&quot; class=&quot;cfa-form-card__graphic usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use th:href=&quot;${graphic}&quot;&gt;&lt;/use&gt;
@@ -1971,41 +1962,41 @@ The Form card is a custom component that extends the <a href="https://designsyst
   &lt;/form&gt;
 &lt;/main&gt;</pre>
     </div>
-  </div>
-  <div class="margin-0">
-    <div class="margin-bottom-2">
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
       <strong>Template fragment inclusion</strong>
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
-    </div>
+    </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-0086098ded8e2" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-51f1c5f5270be" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-0086098ded8e2">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card.th :: formCard(${modifier}, ${id}, ${ariaLabel}, ${form}, ${graphic}, ${fieldset}, ${header}, ${content}, ${formGroups}, ${footer})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-51f1c5f5270be">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card.th :: formCard(${modifier}, ${id}, ${ariaLabel}, ${form}, ${graphic}, ${fieldset}, ${header}, ${content}, ${formGroups}, ${footer})}&quot; /&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card.th :: formCard(${modifier}, ${id}, ${ariaLabel}, ${form}, ${graphic}, ${fieldset}, ${header}, ${content}, ${formGroups}, ${footer})}&quot; /&gt;</pre>
     </div>
-  </div>
-</figure>
-<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Embedded Ruby">
-  <div class="margin-0 margin-bottom-3">
+  </figure>
+</div>
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
       <strong>ERB template partial</strong>
       <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-c3b86d444e54a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-ccf4ba9b55459" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-c3b86d444e54a">&lt;main class=&quot;cfa-form-card&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
+        <textarea hidden data-copy-target="block-ccf4ba9b55459">&lt;main class=&quot;cfa-form-card&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
   &lt;% if defined?(id) %&gt; id=&quot;&lt;%= id %&gt;&quot;&lt;% end %&gt;
   &lt;% if defined?(ariaLabel) %&gt; aria-label=&quot;&lt;%= ariaLabel %&gt;&quot;&lt;% end %&gt;&gt;
   &lt;form class=&quot;usa-form&lt;% if defined?(form) &amp;&amp; form['modifier'] %&gt; &lt;%= form['modifier'] %&gt;&lt;% end %&gt;&quot;&gt;
@@ -2359,26 +2350,26 @@ The Form card is a custom component that extends the <a href="https://designsyst
   &lt;/form&gt;
 &lt;/main&gt;</pre>
     </div>
-  </div>
-  <div class="margin-0">
-    <div class="margin-bottom-2">
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
       <strong>Partial render</strong>
       <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
-    </div>
+    </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-cfc87c19ecf2f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-bcb97643788f3" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-cfc87c19ecf2f">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card'), 0, 0, '@formCard').result_with_hash({modifier: modifier, id: id, ariaLabel: ariaLabel, graphic: graphic, content: content, fieldset: fieldset, header: header, formGroups: formGroups, footer: footer}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-bcb97643788f3">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card'), 0, 0, '@formCard').result_with_hash({modifier: modifier, id: id, ariaLabel: ariaLabel, graphic: graphic, content: content, fieldset: fieldset, header: header, formGroups: formGroups, footer: footer}) %&gt;</textarea>
       </div>
       <pre class="language-ruby padding-top-0">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-form-card/cfa-form-card'), 0, 0, '@formCard').result_with_hash({modifier: modifier, id: id, ariaLabel: ariaLabel, graphic: graphic, content: content, fieldset: fieldset, header: header, formGroups: formGroups, footer: footer}) %&gt;</pre>
     </div>
-  </div>
-</figure>
+  </figure>
+</div>
 
         </main>
       </div>

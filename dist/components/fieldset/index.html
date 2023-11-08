@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <meta name="robots" content="noindex, nofollow" />
 
@@ -63,11 +63,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-f9e9f031cd9a4">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-be14d6d14d09c">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-f9e9f031cd9a4" class="usa-nav__submenu">
+          <ul id="aria-c-be14d6d14d09c" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -134,11 +134,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-dfe6cf97612a5">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-fd31d4c910554">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-dfe6cf97612a5" class="usa-nav__submenu">
+          <ul id="aria-c-fd31d4c910554" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -291,91 +291,89 @@
   </li>
   <li><strong>Modifier:</strong> <code>.cfa-legend</code>, <code>.cfa-hint</code>, <code>.cfa-checkbox</code>, <code>.cfa-radio</code></li>
 </ul>
-<details class="cfa-details">
-  <summary class="cfa-details__summary usa-prose">More details<svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></summary>
-  <div class="cfa-details__content usa-prose">
+<div class="cfa-details">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-35253cf98b085"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-35253cf98b085">
 The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/components/checkbox/">checkbox component</a>, <a href="https://codeforamerica.github.io/uswds/dist//components/radio">radio component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form group molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-legend</code>, <code>.cfa-hint</code>, <code>.cfa-checkbox</code>, <code>.cfa-radio</code> to add <b>styles</b> defined in custom stylesheets.
     <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
     <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
-</details>
+</div>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Fieldset with checkbox options.</figcaption>
-    <fieldset class="usa-fieldset cfa-fieldset">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Fieldset with checkbox options.</figcaption>
+  <fieldset class="usa-fieldset cfa-fieldset">
   <legend class="usa-legend cfa-legend">
     <span>Do any of the following situations apply to you?</span>
   </legend>
-  <div class="usa-hint cfa-hint" id="hint-9cabd8e18e7d2">Please check all that apply.</div>
+  <div class="usa-hint cfa-hint" id="hint-91886a0f866be">Please check all that apply.</div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-c83739f84dd1" name="checkbox['9cabd8e18e7d2']" value="in-foster-care" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-c83739f84dd1" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-37511927f83b4" name="checkbox['91886a0f866be']" value="in-foster-care" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-37511927f83b4" class="usa-checkbox__label">
       <span>In foster care</span>
     </label>
   </div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-c7d5a32692d08" name="checkbox['9cabd8e18e7d2']" value="unhoused-homeless" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-c7d5a32692d08" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-1f7d397348327" name="checkbox['91886a0f866be']" value="unhoused-homeless" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-1f7d397348327" class="usa-checkbox__label">
       <span>Unhoused/homeless</span>
     </label>
   </div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-1f05ee21cee67" name="checkbox['9cabd8e18e7d2']" value="child-of-migrant-worker" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-1f05ee21cee67" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-7fbd06af2265d" name="checkbox['91886a0f866be']" value="child-of-migrant-worker" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-7fbd06af2265d" class="usa-checkbox__label">
       <span>Child of migrant worker</span>
     </label>
   </div>
   <div class="usa-checkbox cfa-checkbox">
-    <input type="checkbox" id="checkbox-217c9df359793" name="checkbox['9cabd8e18e7d2']" value="runaway-from-home" class="usa-checkbox__input usa-checkbox__input--tile">
-    <label for="checkbox-217c9df359793" class="usa-checkbox__label">
+    <input type="checkbox" id="checkbox-43b92c46f247c" name="checkbox['91886a0f866be']" value="runaway-from-home" class="usa-checkbox__input usa-checkbox__input--tile">
+    <label for="checkbox-43b92c46f247c" class="usa-checkbox__label">
       <span>Runaway from home</span>
     </label>
   </div>
 </fieldset>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-8f958963d9cb">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-66e87eb5d8949">
           View HTML
         </button>
       </div>
-      <div id="aria-c-8f958963d9cb" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-66e87eb5d8949" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-ac895a04c0338" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-7ccf36b33cede" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-ac895a04c0338">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+        <textarea hidden data-copy-target="block-7ccf36b33cede">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
     &lt;span&gt;Do any of the following situations apply to you?&lt;/span&gt;
   &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-9cabd8e18e7d2&quot;&gt;Please check all that apply.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-91886a0f866be&quot;&gt;Please check all that apply.&lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-c83739f84dd1&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;in-foster-care&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-c83739f84dd1&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-37511927f83b4&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;in-foster-care&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-37511927f83b4&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;In foster care&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-c7d5a32692d08&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;unhoused-homeless&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-c7d5a32692d08&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1f7d397348327&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;unhoused-homeless&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-1f7d397348327&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Unhoused/homeless&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1f05ee21cee67&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;child-of-migrant-worker&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-1f05ee21cee67&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-7fbd06af2265d&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;child-of-migrant-worker&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-7fbd06af2265d&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Child of migrant worker&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-217c9df359793&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;runaway-from-home&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-217c9df359793&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-43b92c46f247c&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;runaway-from-home&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-43b92c46f247c&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Runaway from home&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
@@ -385,28 +383,28 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
     &lt;span&gt;Do any of the following situations apply to you?&lt;/span&gt;
   &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-9cabd8e18e7d2&quot;&gt;Please check all that apply.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-91886a0f866be&quot;&gt;Please check all that apply.&lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-c83739f84dd1&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;in-foster-care&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-c83739f84dd1&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-37511927f83b4&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;in-foster-care&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-37511927f83b4&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;In foster care&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-c7d5a32692d08&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;unhoused-homeless&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-c7d5a32692d08&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1f7d397348327&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;unhoused-homeless&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-1f7d397348327&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Unhoused/homeless&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-1f05ee21cee67&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;child-of-migrant-worker&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-1f05ee21cee67&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-7fbd06af2265d&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;child-of-migrant-worker&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-7fbd06af2265d&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Child of migrant worker&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-checkbox cfa-checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-217c9df359793&quot; name=&quot;checkbox['9cabd8e18e7d2']&quot; value=&quot;runaway-from-home&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
-    &lt;label for=&quot;checkbox-217c9df359793&quot; class=&quot;usa-checkbox__label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox-43b92c46f247c&quot; name=&quot;checkbox['91886a0f866be']&quot; value=&quot;runaway-from-home&quot; class=&quot;usa-checkbox__input usa-checkbox__input--tile&quot;&gt;
+    &lt;label for=&quot;checkbox-43b92c46f247c&quot; class=&quot;usa-checkbox__label&quot;&gt;
       &lt;span&gt;Runaway from home&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
@@ -416,58 +414,56 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
     </div>
   </div>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Fieldset with radio options.</figcaption>
-    <fieldset class="usa-fieldset cfa-fieldset">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Fieldset with radio options.</figcaption>
+  <fieldset class="usa-fieldset cfa-fieldset">
   <legend class="usa-legend cfa-legend">
     <span>What type of school are you enrolled in?</span>
   </legend>
-  <div class="usa-hint cfa-hint" id="hint-8a75e552d24f2">Please choose one of the following.</div>
+  <div class="usa-hint cfa-hint" id="hint-e5705dfeae31e">Please choose one of the following.</div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-045b6c454f809" name="radio['8a75e552d24f2']" value="virtual-school" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-045b6c454f809" class="usa-radio__label">
+    <input type="radio" id="radio-fab328c6181ed" name="radio['e5705dfeae31e']" value="virtual-school" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-fab328c6181ed" class="usa-radio__label">
       <span>Virtual school</span>
     </label>
   </div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-9881842d5e945" name="radio['8a75e552d24f2']" value="homeschool" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-9881842d5e945" class="usa-radio__label">
+    <input type="radio" id="radio-d84cf18f1f16d" name="radio['e5705dfeae31e']" value="homeschool" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-d84cf18f1f16d" class="usa-radio__label">
       <span>Homeschool</span>
     </label>
   </div>
 </fieldset>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-9260d41d74e47">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-268e5208e3341">
           View HTML
         </button>
       </div>
-      <div id="aria-c-9260d41d74e47" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-268e5208e3341" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-7376aef32ff72" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-ffb9fc02f641d" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-7376aef32ff72">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+        <textarea hidden data-copy-target="block-ffb9fc02f641d">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
     &lt;span&gt;What type of school are you enrolled in?&lt;/span&gt;
   &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-8a75e552d24f2&quot;&gt;Please choose one of the following.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-e5705dfeae31e&quot;&gt;Please choose one of the following.&lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-045b6c454f809&quot; name=&quot;radio['8a75e552d24f2']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-045b6c454f809&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-fab328c6181ed&quot; name=&quot;radio['e5705dfeae31e']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-fab328c6181ed&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Virtual school&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-9881842d5e945&quot; name=&quot;radio['8a75e552d24f2']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-9881842d5e945&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-d84cf18f1f16d&quot; name=&quot;radio['e5705dfeae31e']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-d84cf18f1f16d&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Homeschool&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
@@ -477,16 +473,16 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
     &lt;span&gt;What type of school are you enrolled in?&lt;/span&gt;
   &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-8a75e552d24f2&quot;&gt;Please choose one of the following.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-e5705dfeae31e&quot;&gt;Please choose one of the following.&lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-045b6c454f809&quot; name=&quot;radio['8a75e552d24f2']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-045b6c454f809&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-fab328c6181ed&quot; name=&quot;radio['e5705dfeae31e']&quot; value=&quot;virtual-school&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-fab328c6181ed&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Virtual school&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-9881842d5e945&quot; name=&quot;radio['8a75e552d24f2']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-9881842d5e945&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-d84cf18f1f16d&quot; name=&quot;radio['e5705dfeae31e']&quot; value=&quot;homeschool&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-d84cf18f1f16d&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Homeschool&lt;/span&gt;
     &lt;/label&gt;
   &lt;/div&gt;
@@ -496,17 +492,16 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
     </div>
   </div>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" tabindex="0" >
-  <div class="margin-0 margin-bottom-3">
-    <figcaption class="margin-bottom-2">Fieldset with radio options.</figcaption>
-    <fieldset class="usa-fieldset cfa-fieldset">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
+  <figcaption class="margin-bottom-2">Fieldset with radio options.</figcaption>
+  <fieldset class="usa-fieldset cfa-fieldset">
   <legend class="usa-legend cfa-legend">
     <span>Please confirm your address.</span>
   </legend>
-  <div class="usa-hint cfa-hint" id="hint-d605486e26842">We updated the address you entered. If correct, please use the suggested address.</div>
+  <div class="usa-hint cfa-hint" id="hint-ffb46c4d075dc">We updated the address you entered. If correct, please use the suggested address.</div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-c134e0c88ea9b" name="radio['d605486e26842']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-c134e0c88ea9b" class="usa-radio__label">
+    <input type="radio" id="radio-225d0e44a13c6" name="radio['ffb46c4d075dc']" value="suggested-address" checked="true" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-225d0e44a13c6" class="usa-radio__label">
       <span>Suggested address</span>
       <span class="usa-radio__label-description">4918 Webster St., Apt 2
         <br> Oakland, CA
@@ -515,8 +510,8 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
     </label>
   </div>
   <div class="usa-radio cfa-radio">
-    <input type="radio" id="radio-3d0daa547812b" name="radio['d605486e26842']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
-    <label for="radio-3d0daa547812b" class="usa-radio__label">
+    <input type="radio" id="radio-9d27a0819d58e" name="radio['ffb46c4d075dc']" value="address-you-entered" class="usa-radio__input usa-radio__input--tile">
+    <label for="radio-9d27a0819d58e" class="usa-radio__label">
       <span>Address you entered</span>
       <span class="usa-radio__label-description">4918 Webster Street
         <br> Apt 2
@@ -526,31 +521,30 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
     </label>
   </div>
 </fieldset>
-  </div>
-  <div class="margin-0">
+  <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3ad3bf8dd516">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-da6e60ca29232">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3ad3bf8dd516" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-da6e60ca29232" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-cd0fed95a3f75" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6c42a456168f1" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-cd0fed95a3f75">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
+        <textarea hidden data-copy-target="block-6c42a456168f1">&lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
     &lt;span&gt;Please confirm your address.&lt;/span&gt;
   &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-d605486e26842&quot;&gt;We updated the address you entered. If correct, please use the suggested address.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-ffb46c4d075dc&quot;&gt;We updated the address you entered. If correct, please use the suggested address.&lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-c134e0c88ea9b&quot; name=&quot;radio['d605486e26842']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-c134e0c88ea9b&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-225d0e44a13c6&quot; name=&quot;radio['ffb46c4d075dc']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-225d0e44a13c6&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Suggested address&lt;/span&gt;
       &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
         &lt;br&gt; Oakland, CA
@@ -559,8 +553,8 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-3d0daa547812b&quot; name=&quot;radio['d605486e26842']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-3d0daa547812b&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-9d27a0819d58e&quot; name=&quot;radio['ffb46c4d075dc']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-9d27a0819d58e&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Address you entered&lt;/span&gt;
       &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
         &lt;br&gt; Apt 2
@@ -575,10 +569,10 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
   &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
     &lt;span&gt;Please confirm your address.&lt;/span&gt;
   &lt;/legend&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-d605486e26842&quot;&gt;We updated the address you entered. If correct, please use the suggested address.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-ffb46c4d075dc&quot;&gt;We updated the address you entered. If correct, please use the suggested address.&lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-c134e0c88ea9b&quot; name=&quot;radio['d605486e26842']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-c134e0c88ea9b&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-225d0e44a13c6&quot; name=&quot;radio['ffb46c4d075dc']&quot; value=&quot;suggested-address&quot; checked=&quot;true&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-225d0e44a13c6&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Suggested address&lt;/span&gt;
       &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster St., Apt 2
         &lt;br&gt; Oakland, CA
@@ -587,8 +581,8 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;radio-3d0daa547812b&quot; name=&quot;radio['d605486e26842']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-    &lt;label for=&quot;radio-3d0daa547812b&quot; class=&quot;usa-radio__label&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio-9d27a0819d58e&quot; name=&quot;radio['ffb46c4d075dc']&quot; value=&quot;address-you-entered&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+    &lt;label for=&quot;radio-9d27a0819d58e&quot; class=&quot;usa-radio__label&quot;&gt;
       &lt;span&gt;Address you entered&lt;/span&gt;
       &lt;span class=&quot;usa-radio__label-description&quot;&gt;4918 Webster Street
         &lt;br&gt; Apt 2
@@ -697,33 +691,34 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
   <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-fieldset.th.html</code></li>
   <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-fieldset.html.erb</code></li>
 </ul>
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" tabindex="0" aria-label="Sass">
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
   <figcaption class="margin-bottom-2">
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of importing Sass stylesheets from the package.</p>
   </figcaption>
-  <div class="code-block"><pre class="language-scss">@forward 'uswds';
+  <div class="code-block"><pre class="language-scss">@forward 'cfa-uswds';
+@forward 'uswds';
 @forward '@codeforamerica/uswds/packages/cfa-fieldset/_cfa-fieldset.scss';
 <p>@forward '@codeforamerica/uswds/packages/cfa-legend/_cfa-legend.scss'
 @forward '@codeforamerica/uswds/packages/cfa-hint/_cfa-hint.scss'
 @forward '@codeforamerica/uswds/packages/cfa-input-select/_cfa-input-select.scss'
 </pre></div></p>
 </figure>
-<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Thymeleaf">
-  <div class="margin-0 margin-bottom-3">
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
-      <strong>Thymeleaf template fragment</strong>
+      <strong id="aria-lb-th-label">Thymeleaf template fragment</strong>
       <p>This is the pre-rendered template fragment from the package. It is the same template used to render the demonstrations above. You may copy and paste from this example or use the template using the <code>th:block th:replace</code> tag. See the example below.</p>
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3f8c1590a078a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1a9279597dcd9" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-3f8c1590a078a">&lt;fieldset th:fragment=&quot;fieldset(modifier, id, legend, hint, required, error, options)&quot; class=&quot;usa-fieldset&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
+        <textarea hidden data-copy-target="block-1a9279597dcd9">&lt;fieldset th:fragment=&quot;fieldset(modifier, id, legend, hint, required, error, options)&quot; class=&quot;usa-fieldset&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
   &lt;legend class=&quot;usa-legend&quot; th:classappend=&quot;${legend.modifier}&quot; th:attr=&quot;tabindex=${legend.tabindex}&quot;&gt;
     &lt;span th:text=&quot;${legend.text}&quot;&gt;Legend&lt;/span&gt;
     &lt;abbr th:if=&quot;${required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${legend.modifierHint}&quot;&gt;*&lt;/abbr&gt;
@@ -743,41 +738,41 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
   &lt;th:block th:replace=&quot;~{packages/cfa-input-select/cfa-input-select.th :: inputSelect(${options}, ${required})}&quot; /&gt;
 &lt;/fieldset&gt;</pre>
     </div>
-  </div>
-  <div class="margin-0">
-    <div class="margin-bottom-2">
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
       <strong>Template fragment inclusion</strong>
       <p>Below is an example of how to use the fragment from the package directory using the <code>th:block th:replace</code> inclusion tag. Replace the fragment parameters using your variables or context.</p>
-    </div>
+    </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-960416c90f2f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-47ee10627dec" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-960416c90f2f">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${modifier}, ${id}, ${legend}, ${required}, ${hint}, ${error}, ${options})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-47ee10627dec">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${modifier}, ${id}, ${legend}, ${required}, ${hint}, ${error}, ${options})}&quot; /&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${modifier}, ${id}, ${legend}, ${required}, ${hint}, ${error}, ${options})}&quot; /&gt;</pre>
     </div>
-  </div>
-</figure>
-<figure class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg" tabindex="0" aria-label="Embedded Ruby">
-  <div class="margin-0 margin-bottom-3">
+  </figure>
+</div>
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0 margin-bottom-3">
     <figcaption class="margin-bottom-2">
       <strong>ERB template partial</strong>
       <p>This is the pre-rendered partial template from the package. You may copy and paste from this example or use the template directly from the path.</p>
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-f27cd0b7e90e1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6fd47065506fe" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-f27cd0b7e90e1">&lt;fieldset class=&quot;usa-fieldset&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
+        <textarea hidden data-copy-target="block-6fd47065506fe">&lt;fieldset class=&quot;usa-fieldset&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
   &lt;% if defined?(id) %&gt; id=&quot;&lt;%= id %&gt;&quot;&lt;% end %&gt;&gt;
   &lt;legend class=&quot;usa-legend&lt;% if legend['modifier'] %&gt; &lt;%= legend['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if legend['for'] %&gt; for=&quot;&lt;%= legend['for'] %&gt;&quot;&lt;% end %&gt;&lt;% if legend['tabindex'] %&gt; tabindex=&quot;&lt;%= legend['tabindex'] %&gt;&quot;&lt;% end %&gt;&gt;
     &lt;span&gt;&lt;%= legend['text'] %&gt;&lt;/span&gt;
@@ -803,26 +798,26 @@ The Fieldset includes the <a href="https://codeforamerica.github.io/uswds/dist/c
   &lt;% end %&gt;
 &lt;/fieldset&gt;</pre>
     </div>
-  </div>
-  <div class="margin-0">
-    <div class="margin-bottom-2">
+  </figure>
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
       <strong>Partial render</strong>
       <p>Below is an example of how to include the partial in a view from the package directory using the Ruby <code>ERB</code> class. Replace the argument values using your variables or context. In a Rails environment, the <code>render</code> method can be used instead with the same hash values.</p>
-    </div>
+    </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d6836165f72a3" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-ebe97b87a61f" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea type="text" hidden data-copy-target="block-d6836165f72a3">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-fieldset/cfa-fieldset'), 0, 0, '@fieldset').result_with_hash({modifier: modifier, id: id, legend: legend, hint: hint, error: error, required: required, options: options}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-ebe97b87a61f">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-fieldset/cfa-fieldset'), 0, 0, '@fieldset').result_with_hash({modifier: modifier, id: id, legend: legend, hint: hint, error: error, required: required, options: options}) %&gt;</textarea>
       </div>
       <pre class="language-ruby padding-top-0">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-fieldset/cfa-fieldset'), 0, 0, '@fieldset').result_with_hash({modifier: modifier, id: id, legend: legend, hint: hint, error: error, required: required, options: options}) %&gt;</pre>
     </div>
-  </div>
-</figure>
+  </figure>
+</div>
 
         </main>
       </div>
