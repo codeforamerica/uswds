@@ -1,4 +1,4 @@
-<div th:fragment="uploadDocuments(id, fileInput, previewTemplate, dict)" class="usa-form-group cfa-form-group cfa-file-input" th:attr="id=${id}" data-js="upload-documents">
+<div th:fragment="uploadDocuments(id, fileInput, header, previewTemplate, defaultPreviewTemplate, dict)" class="usa-form-group cfa-form-group cfa-file-input" th:attr="id=${id}" data-js="upload-documents">
   <div class="cfa-upload-documents" data-dropzone="uploads">
     <label class="usa-label" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
       <span th:text="${fileInput.label.text}">Label</span>
@@ -31,17 +31,21 @@
     </div>
   </div>
 
-  <!-- @hidden       "true"  Visually hides element -->
-  <!-- @aria-hidden  "true"  Hides element from the accessibility API -->
+  <!--/* @hidden       "true"  Visually hides element */-->
+  <!--/* @aria-hidden  "true"  Hides element from the accessibility API */-->
   <div data-dropzone="preview" hidden="true" aria-hidden="true">
-    <h3 class="cfa-upload-documents__preview-header" data-dropzone="preview-header" th:attr="id=${previewTemplate.header.id}">
+    <h3 class="cfa-upload-documents__preview-header" data-dropzone="preview-header" th:attr="id=${previewHeader.id}">
       Your documents. <span data-dropzone="preview-number">0</span> <span data-dropzone="preview-text">uploaded</span> <span>(<span>20 max</span>)</span>
     </h3>
 
-    <ul class="add-list-reset" role="list" data-dropzone="preview-container" th:attr="aria-describedby=${previewTemplate.header.id}">
-      <!-- Dropzone will modify or replace the contents of this element -->
-      <!-- @data-dropzone  "remove"  removes contents before passing to Dropzone -->
-      <li class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
+    <ul class="add-list-reset" role="list" data-dropzone="preview-container" th:attr="aria-describedby=${previewHeader.id}">
+      <!--/* Use previewTemplate to add a custom preview template  */-->
+      <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
+      <li th:if="${previewTemplate}" th:utext="${previewTemplate}" class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove"></li>
+
+      <!--/* Dropzone will modify or replace the contents of this element */-->
+      <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
+      <li th:if="${defaultPreviewTemplate}" class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
         <div class="cfa-upload-documents__details">
           <div class="cfa-upload-documents__thumbnail" data-dropzone="thumbnail">
             <div class="cfa-upload-documents__progress">
@@ -49,14 +53,12 @@
             </div>
 
             <svg class="usa-icon cfa-upload-documents__icon-error" aria-hidden="true" focusable="false" role="img">
-              <use th:href="${previewTemplate.error.icon}"></use>
+              <use th:href="${defaultPreviewTemplate.error.icon}"></use>
             </svg>
 
             <svg class="usa-icon cfa-upload-documents__icon-default" aria-hidden="true" focusable="false" role="img">
-              <use th:href="${previewTemplate.thumbnail.default}"></use>
+              <use th:href="${defaultPreviewTemplate.thumbnail.default}"></use>
             </svg>
-
-            <!-- <img class="dz-thumb" data-dz-thumbnail="keep" aria-hidden="true" /> -->
 
             <img class="cfa-upload-documents__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext" />
           </div>
@@ -84,7 +86,7 @@
 
               <button type="button" class="usa-button cfa-button cfa-button--danger usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="file-remove" data-dz-remove="keep"><span data-dropzone="file-remove-label">remove</span> <span class="usa-sr-only" data-dz-name="keep">preview-template__filename--testing-truncated-text.ext</span></button>
 
-              <!-- @data-dropzone  "remove"  removes contents before passing to Dropzone -->
+              <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. */-->
               <span data-dropzone="remove">
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
@@ -117,9 +119,10 @@
     </ul>
   </div>
 
-  <!-- @hidden         "true"    Visually hides element -->
-  <!-- @aria-hidden    "true"    Hides element from the accessibility API -->
-  <!-- @data-dropzone  "remove"  removes contents before passing to Dropzone -->
+  <!--/* Strings used by the UploadDocument script will be pulled from this element */-->
+  <!--/* @hidden         "true"    Visually hides element */-->
+  <!--/* @aria-hidden    "true"    Hides element from the accessibility API */-->
+  <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
   <div hidden="true" aria-hidden="true" data-dropzone="remove">
     <p th:each="item: ${dict}" th:text="${item.string}" data-dropzone="dict" th:attr="data-dropzone-dict=${item.key}">String</p>
   </div>

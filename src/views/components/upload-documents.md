@@ -106,10 +106,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       "icon": "{{ config.baseUrl }}assets/img/sprite.svg#add"
     }
   },
-  "previewTemplate": {
-    "header": {
-      "id": "aria-db-{{ id_preview }}"
-    },
+  "previewHeader": {
+    "id": "aria-db-{{ id_preview }}"
+  },
+  "defaultPreviewTemplate": {
     "error": {
       "icon": "{{ config.baseUrl }}assets/img/sprite.svg#warning"
     },
