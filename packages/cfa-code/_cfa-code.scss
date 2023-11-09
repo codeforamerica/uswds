@@ -94,9 +94,11 @@ pre, .hljs {
 
 .code-block__utility {
   padding: var(--cfa-spacing-DEFAULT);
+  padding-bottom: calc(var(--cfa-spacing-DEFAULT) / 2);
 
   @media screen and (min-width: 600px) {
     padding: calc(var(--cfa-spacing-DEFAULT) * 2);
+    padding-bottom: var(--cfa-spacing-DEFAULT);
   }
 }
 

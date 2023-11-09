@@ -10,26 +10,6 @@
   <title>{{ package.nice }}</title>
 
   <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/css/site.css">
-  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/highlight/styles/default.min.css">
-  <script type="text/javascript" src="{{ config.baseUrl }}{{ config.assets }}/highlight/highlight.min.js"></script>
-
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function(event) {
-      hljs.configure({
-        languages: ['ruby', 'html', 'javascript', 'css', 'sass']
-      });
-
-      document.querySelectorAll('pre').forEach(function(pre) {
-        if (!pre.hasAttribute('tabindex')) {
-          pre.setAttribute('tabindex', '0');
-        }
-
-        hljs.highlightElement(pre);
-      });
-    });
-  </script>
-
-  <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
 
   {% block head %}{% endblock %}
 </head>

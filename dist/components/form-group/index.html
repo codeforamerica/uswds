@@ -10,26 +10,6 @@
   <title>Code for America USWDS theme</title>
 
   <link rel="stylesheet" href="https://codeforamerica.github.io/uswds/dist/assets/css/site.css">
-  <link rel="stylesheet" href="https://codeforamerica.github.io/uswds/dist/assets/highlight/styles/default.min.css">
-  <script type="text/javascript" src="https://codeforamerica.github.io/uswds/dist/assets/highlight/highlight.min.js"></script>
-
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function(event) {
-      hljs.configure({
-        languages: ['ruby', 'html', 'javascript', 'css', 'sass']
-      });
-
-      document.querySelectorAll('pre').forEach(function(pre) {
-        if (!pre.hasAttribute('tabindex')) {
-          pre.setAttribute('tabindex', '0');
-        }
-
-        hljs.highlightElement(pre);
-      });
-    });
-  </script>
-
-  <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
 
   </head>
 
@@ -63,11 +43,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-6ecc756247ce5">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-9cd9634f2625c">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-6ecc756247ce5" class="usa-nav__submenu">
+          <ul id="aria-c-9cd9634f2625c" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/components/" ><span>Components</span></a>
               </li>
@@ -134,11 +114,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-1f239d2c93fe">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-d3368441d008d">
             <span>Design tokens</span>
           </button>
 
-          <ul id="aria-c-1f239d2c93fe" class="usa-nav__submenu">
+          <ul id="aria-c-d3368441d008d" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/dist/design-tokens/" ><span>Design tokens</span></a>
               </li>
@@ -292,8 +272,8 @@
   <li><strong>Modifier:</strong> <code>.cfa-form-group</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-input-group</code>, <code>.cfa-input</code>, <code>.cfa-textarea</code>, <code>.cfa-select</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-1f3984901da3b"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-1f3984901da3b">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-5999f1812a3f9"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-5999f1812a3f9">
 The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist/components/input">text input component</a>, <a href="https://codeforamerica.github.io/uswds/dist/components/textarea">textarea component</a>, <a href="https://codeforamerica.github.io/uswds/dist/components/select">select component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Form group molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-form-group</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-input-group</code>, <code>.cfa-input</code>, <code>.cfa-textarea</code>, <code>.cfa-select</code> to add <b>styles</b> defined in custom stylesheets.
     <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
     <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
@@ -302,59 +282,59 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 <h2 id="examples">Examples</h2>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with text input</figcaption>
-  <div class="usa-form-group cfa-form-group" id="form-group-63bb5d3f325cf">
-  <label class="usa-label cfa-label" for="input-63bb5d3f325cf">
+  <div class="usa-form-group cfa-form-group" id="form-group-81d50b1496637">
+  <label class="usa-label cfa-label" for="input-81d50b1496637">
     <span>What is your first name?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-63bb5d3f325cf">Legally as it appears on your I.D.</div>
+  <div class="usa-hint cfa-hint" id="hint-81d50b1496637">Legally as it appears on your I.D.</div>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="text" id="input-63bb5d3f325cf" name="input['63bb5d3f325cf']" aria-describedby="hint-63bb5d3f325cf" required="true">
+      <input class="usa-input cfa-input" type="text" id="input-81d50b1496637" name="input['81d50b1496637']" aria-describedby="hint-81d50b1496637" required="true">
     </div>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-53f34e5ee3535">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-4fcef93dd2cac">
           View HTML
         </button>
       </div>
-      <div id="aria-c-53f34e5ee3535" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-4fcef93dd2cac" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-b3b63107fc74a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-47c19313b40c4" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-b3b63107fc74a">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-63bb5d3f325cf&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-63bb5d3f325cf&quot;&gt;
+        <textarea hidden data-copy-target="block-47c19313b40c4">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-81d50b1496637&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-81d50b1496637&quot;&gt;
     &lt;span&gt;What is your first name?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-63bb5d3f325cf&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-81d50b1496637&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-63bb5d3f325cf&quot; name=&quot;input['63bb5d3f325cf']&quot; aria-describedby=&quot;hint-63bb5d3f325cf&quot; required=&quot;true&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-81d50b1496637&quot; name=&quot;input['81d50b1496637']&quot; aria-describedby=&quot;hint-81d50b1496637&quot; required=&quot;true&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-63bb5d3f325cf&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-63bb5d3f325cf&quot;&gt;
-    &lt;span&gt;What is your first name?&lt;/span&gt;
-    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-63bb5d3f325cf&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-63bb5d3f325cf&quot; name=&quot;input['63bb5d3f325cf']&quot; aria-describedby=&quot;hint-63bb5d3f325cf&quot; required=&quot;true&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-81d50b1496637&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-81d50b1496637&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What is your first name?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required cfa-hint&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-81d50b1496637&quot;</span>&gt;</span>Legally as it appears on your I.D.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-81d50b1496637&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;81d50b1496637&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-81d50b1496637&quot;</span> <span class="hljs-attr">required</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -362,62 +342,62 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Invalid form group</figcaption>
-  <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-4a628f544f">
-  <label class="usa-label cfa-label" for="input-4a628f544f">
+  <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-82e8b115cfbe5">
+  <label class="usa-label cfa-label" for="input-82e8b115cfbe5">
     <span>What is your first name?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-4a628f544f">Legally as it appears on your I.D.</div>
-  <span class="usa-error-message" id="error-message-4a628f544f" role="alert">This field is required</span>
+  <div class="usa-hint cfa-hint" id="hint-82e8b115cfbe5">Legally as it appears on your I.D.</div>
+  <span class="usa-error-message" id="error-message-82e8b115cfbe5" role="alert">This field is required</span>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="text" id="input-4a628f544f" name="input['4a628f544f']" aria-invalid="true" aria-describedby="error-message-4a628f544f" required="true">
+      <input class="usa-input cfa-input" type="text" id="input-82e8b115cfbe5" name="input['82e8b115cfbe5']" aria-invalid="true" aria-describedby="error-message-82e8b115cfbe5" required="true">
     </div>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-1a9203c68d82d">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-45ee63018e476">
           View HTML
         </button>
       </div>
-      <div id="aria-c-1a9203c68d82d" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-45ee63018e476" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-2b725ef705f43" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-b77ba0e0fa22c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-2b725ef705f43">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-4a628f544f&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4a628f544f&quot;&gt;
+        <textarea hidden data-copy-target="block-b77ba0e0fa22c">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-82e8b115cfbe5&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-82e8b115cfbe5&quot;&gt;
     &lt;span&gt;What is your first name?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-4a628f544f&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-4a628f544f&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-82e8b115cfbe5&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-82e8b115cfbe5&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-4a628f544f&quot; name=&quot;input['4a628f544f']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-4a628f544f&quot; required=&quot;true&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-82e8b115cfbe5&quot; name=&quot;input['82e8b115cfbe5']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-82e8b115cfbe5&quot; required=&quot;true&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group usa-form-group--error&quot; id=&quot;form-group-4a628f544f&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-4a628f544f&quot;&gt;
-    &lt;span&gt;What is your first name?&lt;/span&gt;
-    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-4a628f544f&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-  &lt;span class=&quot;usa-error-message&quot; id=&quot;error-message-4a628f544f&quot; role=&quot;alert&quot;&gt;This field is required&lt;/span&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-4a628f544f&quot; name=&quot;input['4a628f544f']&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;error-message-4a628f544f&quot; required=&quot;true&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group usa-form-group--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-82e8b115cfbe5&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-82e8b115cfbe5&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What is your first name?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required cfa-hint&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-82e8b115cfbe5&quot;</span>&gt;</span>Legally as it appears on your I.D.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-error-message&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;error-message-82e8b115cfbe5&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;alert&quot;</span>&gt;</span>This field is required<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-82e8b115cfbe5&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;82e8b115cfbe5&#x27;]&quot;</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;error-message-82e8b115cfbe5&quot;</span> <span class="hljs-attr">required</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -425,56 +405,56 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with email input</figcaption>
-  <div class="usa-form-group cfa-form-group" id="form-group-ee90c7bee104e">
-  <label class="usa-label cfa-label" for="input-ee90c7bee104e">
+  <div class="usa-form-group cfa-form-group" id="form-group-1be39dd2ec4ea">
+  <label class="usa-label cfa-label" for="input-1be39dd2ec4ea">
     <span>What is your email address?</span>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-ee90c7bee104e">Legally as it appears on your I.D.</div>
+  <div class="usa-hint cfa-hint" id="hint-1be39dd2ec4ea">Legally as it appears on your I.D.</div>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="email" id="input-ee90c7bee104e" name="input['ee90c7bee104e']" aria-describedby="hint-ee90c7bee104e">
+      <input class="usa-input cfa-input" type="email" id="input-1be39dd2ec4ea" name="input['1be39dd2ec4ea']" aria-describedby="hint-1be39dd2ec4ea">
     </div>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-2f613bd50780a">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-cfbc70c648377">
           View HTML
         </button>
       </div>
-      <div id="aria-c-2f613bd50780a" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-cfbc70c648377" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3f1f9ffddc06c" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-386737d87161a" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-3f1f9ffddc06c">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-ee90c7bee104e&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ee90c7bee104e&quot;&gt;
+        <textarea hidden data-copy-target="block-386737d87161a">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1be39dd2ec4ea&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-1be39dd2ec4ea&quot;&gt;
     &lt;span&gt;What is your email address?&lt;/span&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-ee90c7bee104e&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-1be39dd2ec4ea&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;email&quot; id=&quot;input-ee90c7bee104e&quot; name=&quot;input['ee90c7bee104e']&quot; aria-describedby=&quot;hint-ee90c7bee104e&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;email&quot; id=&quot;input-1be39dd2ec4ea&quot; name=&quot;input['1be39dd2ec4ea']&quot; aria-describedby=&quot;hint-1be39dd2ec4ea&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-ee90c7bee104e&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-ee90c7bee104e&quot;&gt;
-    &lt;span&gt;What is your email address?&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-ee90c7bee104e&quot;&gt;Legally as it appears on your I.D.&lt;/div&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;email&quot; id=&quot;input-ee90c7bee104e&quot; name=&quot;input['ee90c7bee104e']&quot; aria-describedby=&quot;hint-ee90c7bee104e&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-1be39dd2ec4ea&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-1be39dd2ec4ea&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What is your email address?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-1be39dd2ec4ea&quot;</span>&gt;</span>Legally as it appears on your I.D.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-1be39dd2ec4ea&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;1be39dd2ec4ea&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-1be39dd2ec4ea&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -482,47 +462,47 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with textarea</figcaption>
-  <div class="usa-form-group cfa-form-group" id="form-group-7340dac67cedb">
-  <label class="usa-label cfa-label" for="textarea-7340dac67cedb">
+  <div class="usa-form-group cfa-form-group" id="form-group-f46a8e076365f">
+  <label class="usa-label cfa-label" for="textarea-f46a8e076365f">
     <span>Please describe in as much detail as possible.</span>
   </label>
   <div>
-    <textarea class="usa-textarea cfa-textarea" id="textarea-7340dac67cedb" name="textarea['7340dac67cedb']"></textarea>
+    <textarea class="usa-textarea cfa-textarea" id="textarea-f46a8e076365f" name="textarea['f46a8e076365f']"></textarea>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a1fe0fdb42d9a">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-57f0f537fa55a">
           View HTML
         </button>
       </div>
-      <div id="aria-c-a1fe0fdb42d9a" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-57f0f537fa55a" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-5f2fbd1b2202e" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-9e32d67b51f92" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-5f2fbd1b2202e">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-7340dac67cedb&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-7340dac67cedb&quot;&gt;
+        <textarea hidden data-copy-target="block-9e32d67b51f92">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-f46a8e076365f&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-f46a8e076365f&quot;&gt;
     &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
   &lt;/label&gt;
   &lt;div&gt;
-    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-7340dac67cedb&quot; name=&quot;textarea['7340dac67cedb']&quot;&gt;&lt;/textarea&gt;
+    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-f46a8e076365f&quot; name=&quot;textarea['f46a8e076365f']&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-7340dac67cedb&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-7340dac67cedb&quot;&gt;
-    &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div&gt;
-    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-7340dac67cedb&quot; name=&quot;textarea['7340dac67cedb']&quot;&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-f46a8e076365f&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;textarea-f46a8e076365f&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Please describe in as much detail as possible.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-textarea cfa-textarea&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;textarea-f46a8e076365f&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;textarea[&#x27;f46a8e076365f&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -530,50 +510,50 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with textarea</figcaption>
-  <div class="usa-form-group cfa-form-group" id="form-group-c827786ded6ba">
-  <label class="usa-label cfa-label" for="textarea-c827786ded6ba">
+  <div class="usa-form-group cfa-form-group" id="form-group-0bf0e984655c1">
+  <label class="usa-label cfa-label" for="textarea-0bf0e984655c1">
     <span>Please describe in as much detail as possible.</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
   <div>
-    <textarea class="usa-textarea cfa-textarea" id="textarea-c827786ded6ba" name="textarea['c827786ded6ba']" required="true"></textarea>
+    <textarea class="usa-textarea cfa-textarea" id="textarea-0bf0e984655c1" name="textarea['0bf0e984655c1']" required="true"></textarea>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3062e54ed4d71">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-531f3d8dba912">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3062e54ed4d71" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-531f3d8dba912" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-be0ae08c9e03" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-a65423fd77b72" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-be0ae08c9e03">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-c827786ded6ba&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-c827786ded6ba&quot;&gt;
+        <textarea hidden data-copy-target="block-a65423fd77b72">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-0bf0e984655c1&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-0bf0e984655c1&quot;&gt;
     &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
   &lt;div&gt;
-    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-c827786ded6ba&quot; name=&quot;textarea['c827786ded6ba']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
+    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-0bf0e984655c1&quot; name=&quot;textarea['0bf0e984655c1']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-c827786ded6ba&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;textarea-c827786ded6ba&quot;&gt;
-    &lt;span&gt;Please describe in as much detail as possible.&lt;/span&gt;
-    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-  &lt;div&gt;
-    &lt;textarea class=&quot;usa-textarea cfa-textarea&quot; id=&quot;textarea-c827786ded6ba&quot; name=&quot;textarea['c827786ded6ba']&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-0bf0e984655c1&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;textarea-0bf0e984655c1&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Please describe in as much detail as possible.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required cfa-hint&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-textarea cfa-textarea&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;textarea-0bf0e984655c1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;textarea[&#x27;0bf0e984655c1&#x27;]&quot;</span> <span class="hljs-attr">required</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -581,59 +561,59 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with prefix and mask (U.S. Dollars)</figcaption>
-  <div class="usa-form-group cfa-form-group" id="90d303fc432d">
-  <label class="usa-label cfa-label" for="input-d0f842bd2000c">
+  <div class="usa-form-group cfa-form-group" id="0cf44200ddd64">
+  <label class="usa-label cfa-label" for="input-aace8cbf0bd08">
     <span>How much does your household currently have in savings?</span>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-d0f842bd2000c">Answer the best you can.</div>
+  <div class="usa-hint cfa-hint" id="hint-aace8cbf0bd08">Answer the best you can.</div>
   <div>
     <div class="usa-input-group cfa-input-group">
       <div class="usa-input-prefix" aria-hidden="true">$</div>
-      <input class="usa-input cfa-input text-end" type="text" id="input-d0f842bd2000c" name="input['d0f842bd2000c']" aria-describedby="hint-d0f842bd2000c" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
+      <input class="usa-input cfa-input text-end" type="text" id="input-aace8cbf0bd08" name="input['aace8cbf0bd08']" aria-describedby="hint-aace8cbf0bd08" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
     </div>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a9560bd2fad54">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-d10efeee68c69">
           View HTML
         </button>
       </div>
-      <div id="aria-c-a9560bd2fad54" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-d10efeee68c69" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3a1098072b198" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-e661cc77363ca" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-3a1098072b198">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;90d303fc432d&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d0f842bd2000c&quot;&gt;
+        <textarea hidden data-copy-target="block-e661cc77363ca">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;0cf44200ddd64&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-aace8cbf0bd08&quot;&gt;
     &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-d0f842bd2000c&quot;&gt;Answer the best you can.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-aace8cbf0bd08&quot;&gt;Answer the best you can.&lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
       &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;$&lt;/div&gt;
-      &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-d0f842bd2000c&quot; name=&quot;input['d0f842bd2000c']&quot; aria-describedby=&quot;hint-d0f842bd2000c&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-aace8cbf0bd08&quot; name=&quot;input['aace8cbf0bd08']&quot; aria-describedby=&quot;hint-aace8cbf0bd08&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;90d303fc432d&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-d0f842bd2000c&quot;&gt;
-    &lt;span&gt;How much does your household currently have in savings?&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-d0f842bd2000c&quot;&gt;Answer the best you can.&lt;/div&gt;
-  &lt;div&gt;
-    &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-      &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;$&lt;/div&gt;
-      &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-d0f842bd2000c&quot; name=&quot;input['d0f842bd2000c']&quot; aria-describedby=&quot;hint-d0f842bd2000c&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;0cf44200ddd64&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-aace8cbf0bd08&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>How much does your household currently have in savings?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-aace8cbf0bd08&quot;</span>&gt;</span>Answer the best you can.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-group cfa-input-group&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-prefix&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>$<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input text-end&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-aace8cbf0bd08&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;aace8cbf0bd08&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-aace8cbf0bd08&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;0.00&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;decimal&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;mask-dollars&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -641,14 +621,14 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with postfix</figcaption>
-  <div class="usa-form-group cfa-form-group" id="ce516ce9b0bc4">
-  <label class="usa-label cfa-label" for="input-199ab115b8d6d">
+  <div class="usa-form-group cfa-form-group" id="dc746648a57cf">
+  <label class="usa-label cfa-label" for="input-1e47685250828">
     <span>What percentage of your monthly income do you spend on monthly expenses?</span>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-199ab115b8d6d">Answer the best you can.</div>
+  <div class="usa-hint cfa-hint" id="hint-1e47685250828">Answer the best you can.</div>
   <div>
     <div class="usa-input-group cfa-input-group">
-      <input class="usa-input cfa-input text-end" type="text" id="input-199ab115b8d6d" name="input['199ab115b8d6d']" aria-describedby="hint-199ab115b8d6d" inputmode="decimal">
+      <input class="usa-input cfa-input text-end" type="text" id="input-1e47685250828" name="input['1e47685250828']" aria-describedby="hint-1e47685250828" inputmode="decimal">
       <div class="usa-input-suffix" aria-hidden="true">%</div>
     </div>
   </div>
@@ -656,44 +636,44 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-0499ec930874a">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-296751d6a87dc">
           View HTML
         </button>
       </div>
-      <div id="aria-c-0499ec930874a" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-296751d6a87dc" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-48913b04b3bc3" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-952f20c078dbb" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-48913b04b3bc3">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;ce516ce9b0bc4&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-199ab115b8d6d&quot;&gt;
+        <textarea hidden data-copy-target="block-952f20c078dbb">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;dc746648a57cf&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-1e47685250828&quot;&gt;
     &lt;span&gt;What percentage of your monthly income do you spend on monthly expenses?&lt;/span&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-199ab115b8d6d&quot;&gt;Answer the best you can.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-1e47685250828&quot;&gt;Answer the best you can.&lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-      &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-199ab115b8d6d&quot; name=&quot;input['199ab115b8d6d']&quot; aria-describedby=&quot;hint-199ab115b8d6d&quot; inputmode=&quot;decimal&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-1e47685250828&quot; name=&quot;input['1e47685250828']&quot; aria-describedby=&quot;hint-1e47685250828&quot; inputmode=&quot;decimal&quot;&gt;
       &lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;%&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;ce516ce9b0bc4&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-199ab115b8d6d&quot;&gt;
-    &lt;span&gt;What percentage of your monthly income do you spend on monthly expenses?&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-199ab115b8d6d&quot;&gt;Answer the best you can.&lt;/div&gt;
-  &lt;div&gt;
-    &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-      &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-199ab115b8d6d&quot; name=&quot;input['199ab115b8d6d']&quot; aria-describedby=&quot;hint-199ab115b8d6d&quot; inputmode=&quot;decimal&quot;&gt;
-      &lt;div class=&quot;usa-input-suffix&quot; aria-hidden=&quot;true&quot;&gt;%&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dc746648a57cf&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-1e47685250828&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What percentage of your monthly income do you spend on monthly expenses?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-1e47685250828&quot;</span>&gt;</span>Answer the best you can.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-group cfa-input-group&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input text-end&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-1e47685250828&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;1e47685250828&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-1e47685250828&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;decimal&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-suffix&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -701,59 +681,59 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with prefix and input mask (U.S. Phone)</figcaption>
-  <div class="usa-form-group cfa-form-group" id="671a04160b378">
-  <label class="usa-label cfa-label" for="input-248e92d10cc6a">
+  <div class="usa-form-group cfa-form-group" id="a47aa0c9fcfb1">
+  <label class="usa-label cfa-label" for="input-55ab9dd3c7658">
     <span>What's your phone number?</span>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-248e92d10cc6a">We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.</div>
+  <div class="usa-hint cfa-hint" id="hint-55ab9dd3c7658">We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.</div>
   <div>
     <div class="usa-input-group cfa-input-group">
       <div class="usa-input-prefix" aria-hidden="true">+1</div>
-      <input class="usa-input cfa-input" type="tel" id="input-248e92d10cc6a" name="input['248e92d10cc6a']" aria-describedby="hint-248e92d10cc6a" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" inputmode="tel" data-js="mask-tel">
+      <input class="usa-input cfa-input" type="tel" id="input-55ab9dd3c7658" name="input['55ab9dd3c7658']" aria-describedby="hint-55ab9dd3c7658" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" inputmode="tel" data-js="mask-tel">
     </div>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-513fca2556fa6">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c4f0686a425b6">
           View HTML
         </button>
       </div>
-      <div id="aria-c-513fca2556fa6" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-c4f0686a425b6" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-cbd247fbef259" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6c4ad01980519" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-cbd247fbef259">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;671a04160b378&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-248e92d10cc6a&quot;&gt;
+        <textarea hidden data-copy-target="block-6c4ad01980519">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;a47aa0c9fcfb1&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-55ab9dd3c7658&quot;&gt;
     &lt;span&gt;What's your phone number?&lt;/span&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-248e92d10cc6a&quot;&gt;We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-55ab9dd3c7658&quot;&gt;We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.&lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
       &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;+1&lt;/div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-248e92d10cc6a&quot; name=&quot;input['248e92d10cc6a']&quot; aria-describedby=&quot;hint-248e92d10cc6a&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-55ab9dd3c7658&quot; name=&quot;input['55ab9dd3c7658']&quot; aria-describedby=&quot;hint-55ab9dd3c7658&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;671a04160b378&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-248e92d10cc6a&quot;&gt;
-    &lt;span&gt;What's your phone number?&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-248e92d10cc6a&quot;&gt;We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.&lt;/div&gt;
-  &lt;div&gt;
-    &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
-      &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;+1&lt;/div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;tel&quot; id=&quot;input-248e92d10cc6a&quot; name=&quot;input['248e92d10cc6a']&quot; aria-describedby=&quot;hint-248e92d10cc6a&quot; pattern=&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot; inputmode=&quot;tel&quot; data-js=&quot;mask-tel&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;a47aa0c9fcfb1&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-55ab9dd3c7658&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What&#x27;s your phone number?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-55ab9dd3c7658&quot;</span>&gt;</span>We will use this number to contact your directly. If you do not add a phone number the processing of your application may be delayed.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-group cfa-input-group&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-prefix&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>+1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;tel&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-55ab9dd3c7658&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;55ab9dd3c7658&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-55ab9dd3c7658&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;([0-9]{3}) [0-9]{3}-[0-9]{4}&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;tel&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;mask-tel&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -761,53 +741,53 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with input mask (SSN)</figcaption>
-  <div class="usa-form-group cfa-form-group" id="8f11708d16a51">
-  <label class="usa-label cfa-label" for="input-024801314b835">
+  <div class="usa-form-group cfa-form-group" id="bb17fadf4bfd2">
+  <label class="usa-label cfa-label" for="input-b8f8be2084a42">
     <span>What is your social security number?</span>
   </label>
   <div>
     <div>
-      <input class="usa-input cfa-input" type="text" id="input-024801314b835" name="input['024801314b835']" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" inputmode="numeric" data-js="mask-ssn">
+      <input class="usa-input cfa-input" type="text" id="input-b8f8be2084a42" name="input['b8f8be2084a42']" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" inputmode="numeric" data-js="mask-ssn">
     </div>
   </div>
 </div>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ecbe86c3cf63e">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-aa61df531d34e">
           View HTML
         </button>
       </div>
-      <div id="aria-c-ecbe86c3cf63e" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-aa61df531d34e" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-21515c85fd364" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-a3cef56571b0f" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-21515c85fd364">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;8f11708d16a51&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-024801314b835&quot;&gt;
+        <textarea hidden data-copy-target="block-a3cef56571b0f">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;bb17fadf4bfd2&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-b8f8be2084a42&quot;&gt;
     &lt;span&gt;What is your social security number?&lt;/span&gt;
   &lt;/label&gt;
   &lt;div&gt;
     &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-024801314b835&quot; name=&quot;input['024801314b835']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
+      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-b8f8be2084a42&quot; name=&quot;input['b8f8be2084a42']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;8f11708d16a51&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-024801314b835&quot;&gt;
-    &lt;span&gt;What is your social security number?&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;input class=&quot;usa-input cfa-input&quot; type=&quot;text&quot; id=&quot;input-024801314b835&quot; name=&quot;input['024801314b835']&quot; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; inputmode=&quot;numeric&quot; data-js=&quot;mask-ssn&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;bb17fadf4bfd2&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-b8f8be2084a42&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What is your social security number?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-b8f8be2084a42&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;b8f8be2084a42&#x27;]&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;numeric&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;mask-ssn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -815,14 +795,14 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Form group with select</figcaption>
-  <div class="usa-form-group cfa-form-group" id="form-group-05f51390355e5">
-  <label class="usa-label cfa-label" for="select-05f51390355e5">
+  <div class="usa-form-group cfa-form-group" id="form-group-1cf9c02aadddc">
+  <label class="usa-label cfa-label" for="select-1cf9c02aadddc">
     <span>What type of income have you had most recently?</span>
     <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
   </label>
-  <div class="usa-hint cfa-hint" id="hint-05f51390355e5">Answer the best you can. You will be able to include additional types of income.</div>
+  <div class="usa-hint cfa-hint" id="hint-1cf9c02aadddc">Answer the best you can. You will be able to include additional types of income.</div>
   <div>
-    <select class="usa-select cfa-select" id="select-05f51390355e5" name="select['05f51390355e5']" aria-describedby="hint-05f51390355e5" required="true">
+    <select class="usa-select cfa-select" id="select-1cf9c02aadddc" name="select['1cf9c02aadddc']" aria-describedby="hint-1cf9c02aadddc" required="true">
       <option selected="true">Click to select an income type</option>
       <option disabled="true">---</option>
       <option value="wages">wages, salaries, tips</option>
@@ -852,27 +832,27 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-6aa9da9c1b0fb">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f35e9098d3f49">
           View HTML
         </button>
       </div>
-      <div id="aria-c-6aa9da9c1b0fb" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-f35e9098d3f49" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-fc094326ab7b3" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-bbe3f6a889a3e" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-fc094326ab7b3">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-05f51390355e5&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-05f51390355e5&quot;&gt;
+        <textarea hidden data-copy-target="block-bbe3f6a889a3e">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-1cf9c02aadddc&quot;&gt;
+  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-1cf9c02aadddc&quot;&gt;
     &lt;span&gt;What type of income have you had most recently?&lt;/span&gt;
     &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
   &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-05f51390355e5&quot;&gt;Answer the best you can. You will be able to include additional types of income.&lt;/div&gt;
+  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-1cf9c02aadddc&quot;&gt;Answer the best you can. You will be able to include additional types of income.&lt;/div&gt;
   &lt;div&gt;
-    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-05f51390355e5&quot; name=&quot;select['05f51390355e5']&quot; aria-describedby=&quot;hint-05f51390355e5&quot; required=&quot;true&quot;&gt;
+    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-1cf9c02aadddc&quot; name=&quot;select['1cf9c02aadddc']&quot; aria-describedby=&quot;hint-1cf9c02aadddc&quot; required=&quot;true&quot;&gt;
       &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
       &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
       &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
@@ -900,40 +880,40 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-05f51390355e5&quot;&gt;
-  &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;select-05f51390355e5&quot;&gt;
-    &lt;span&gt;What type of income have you had most recently?&lt;/span&gt;
-    &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-  &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-05f51390355e5&quot;&gt;Answer the best you can. You will be able to include additional types of income.&lt;/div&gt;
-  &lt;div&gt;
-    &lt;select class=&quot;usa-select cfa-select&quot; id=&quot;select-05f51390355e5&quot; name=&quot;select['05f51390355e5']&quot; aria-describedby=&quot;hint-05f51390355e5&quot; required=&quot;true&quot;&gt;
-      &lt;option selected=&quot;true&quot;&gt;Click to select an income type&lt;/option&gt;
-      &lt;option disabled=&quot;true&quot;&gt;---&lt;/option&gt;
-      &lt;option value=&quot;wages&quot;&gt;wages, salaries, tips&lt;/option&gt;
-      &lt;option value=&quot;self-employment&quot;&gt;self-employment income&lt;/option&gt;
-      &lt;option value=&quot;unemployment&quot;&gt;unemployment benefits&lt;/option&gt;
-      &lt;option value=&quot;cash-assistance&quot;&gt;Cash Assistance grant&lt;/option&gt;
-      &lt;option value=&quot;child-support&quot;&gt;child support (received)&lt;/option&gt;
-      &lt;option value=&quot;disability-medicaid&quot;&gt;disability-related Medicaid&lt;/option&gt;
-      &lt;option value=&quot;supplemental-security-income&quot;&gt;Supplemental Security Income (SSI)&lt;/option&gt;
-      &lt;option value=&quot;social-security-dependent&quot;&gt;Social Security Dependent Benefits&lt;/option&gt;
-      &lt;option value=&quot;social-security-disability&quot;&gt;Social Security Disability Benefits&lt;/option&gt;
-      &lt;option value=&quot;social-security-survivor&quot;&gt;Social Security Survivor’s Benefits&lt;/option&gt;
-      &lt;option value=&quot;social-security-retirement&quot;&gt;Social Security Retirement Benefits&lt;/option&gt;
-      &lt;option value=&quot;state-disability&quot;&gt;State Disability Benefits&lt;/option&gt;
-      &lt;option value=&quot;veteran&quot;&gt;Veteran’s Pension or Benefits&lt;/option&gt;
-      &lt;option value=&quot;pension&quot;&gt;Government or Private Pension&lt;/option&gt;
-      &lt;option value=&quot;deferred-comp&quot;&gt;Withdrawals from Deferred Compensation (IRA, Keogh, etc.)&lt;/option&gt;
-      &lt;option value=&quot;workers-comp&quot;&gt;Worker’s Compensation&lt;/option&gt;
-      &lt;option value=&quot;alimony&quot;&gt;alimony (received)&lt;/option&gt;
-      &lt;option value=&quot;boarder&quot;&gt;boarder or lodger&lt;/option&gt;
-      &lt;option value=&quot;gifts&quot;&gt;gifts/contributions (received)&lt;/option&gt;
-      &lt;option value=&quot;rental&quot;&gt;rental income&lt;/option&gt;
-      &lt;option value=&quot;investment&quot;&gt;investment income (interest, dividends, and profit from selling stocks)&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-1cf9c02aadddc&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;select-1cf9c02aadddc&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What type of income have you had most recently?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required cfa-hint&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-1cf9c02aadddc&quot;</span>&gt;</span>Answer the best you can. You will be able to include additional types of income.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-select cfa-select&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-1cf9c02aadddc&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select[&#x27;1cf9c02aadddc&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-1cf9c02aadddc&quot;</span> <span class="hljs-attr">required</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">selected</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Click to select an income type<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>---<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;wages&quot;</span>&gt;</span>wages, salaries, tips<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;self-employment&quot;</span>&gt;</span>self-employment income<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;unemployment&quot;</span>&gt;</span>unemployment benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;cash-assistance&quot;</span>&gt;</span>Cash Assistance grant<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;child-support&quot;</span>&gt;</span>child support (received)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;disability-medicaid&quot;</span>&gt;</span>disability-related Medicaid<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;supplemental-security-income&quot;</span>&gt;</span>Supplemental Security Income (SSI)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;social-security-dependent&quot;</span>&gt;</span>Social Security Dependent Benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;social-security-disability&quot;</span>&gt;</span>Social Security Disability Benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;social-security-survivor&quot;</span>&gt;</span>Social Security Survivor’s Benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;social-security-retirement&quot;</span>&gt;</span>Social Security Retirement Benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;state-disability&quot;</span>&gt;</span>State Disability Benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;veteran&quot;</span>&gt;</span>Veteran’s Pension or Benefits<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;pension&quot;</span>&gt;</span>Government or Private Pension<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;deferred-comp&quot;</span>&gt;</span>Withdrawals from Deferred Compensation (IRA, Keogh, etc.)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;workers-comp&quot;</span>&gt;</span>Worker’s Compensation<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;alimony&quot;</span>&gt;</span>alimony (received)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;boarder&quot;</span>&gt;</span>boarder or lodger<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;gifts&quot;</span>&gt;</span>gifts/contributions (received)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;rental&quot;</span>&gt;</span>rental income<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;investment&quot;</span>&gt;</span>investment income (interest, dividends, and profit from selling stocks)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
     </div>
       </div>
     </div>
@@ -1043,15 +1023,36 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of importing Sass stylesheets from the package.</p>
   </figcaption>
-  <div class="code-block"><pre class="language-scss">@forward 'cfa-uswds';
+  <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-dd5ec72bc70ad" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <textarea hidden data-copy-target="block-dd5ec72bc70ad">
+@forward 'cfa-uswds';
 @forward 'uswds';
 @forward '@codeforamerica/uswds/packages/cfa-form-group/_cfa-form-group.scss';
 <p>@forward '@codeforamerica/uswds/packages/cfa-label/_cfa-label.scss'
 @forward '@codeforamerica/uswds/packages/cfa-hint/_cfa-hint.scss'
 @forward '@codeforamerica/uswds/packages/cfa-input/_cfa-input.scss'
 @forward '@codeforamerica/uswds/packages/cfa-input-group/_cfa-input-group.scss'
-@forward '@codeforamerica/uswds/packages/cfa-select/_cfa-select.scss'
-</pre></div></p>
+@forward '@codeforamerica/uswds/packages/cfa-select/_cfa-select.scss'</p>
+</textarea>
+      </div>
+      <pre class="language-scss padding-top-0">
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">&#x27;cfa-uswds&#x27;</span>;
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">&#x27;uswds&#x27;</span>;
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-form-group/_cfa-form-group.scss&#x27;</span>;
+<p><span class="hljs-keyword">@forward</span> <span class="hljs-string">'@codeforamerica/uswds/packages/cfa-label/_cfa-label.scss'</span>
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">'@codeforamerica/uswds/packages/cfa-hint/_cfa-hint.scss'</span>
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">'@codeforamerica/uswds/packages/cfa-input/_cfa-input.scss'</span>
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">'@codeforamerica/uswds/packages/cfa-input-group/_cfa-input-group.scss'</span>
+<span class="hljs-keyword">@forward</span> <span class="hljs-string">'@codeforamerica/uswds/packages/cfa-select/_cfa-select.scss'</span></p>
+</pre>
+    </div>
 </figure>
 <div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
   <figure class="margin-0 margin-bottom-3">
@@ -1061,13 +1062,13 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-572675830d4ea" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-7d7b74378cedb" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-572675830d4ea">&lt;div th:fragment=&quot;formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)&quot; class=&quot;usa-form-group&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
+        <textarea hidden data-copy-target="block-7d7b74378cedb">&lt;div th:fragment=&quot;formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)&quot; class=&quot;usa-form-group&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
   &lt;label class=&quot;usa-label&quot; th:classappend=&quot;${label.modifier}&quot; th:attr=&quot;for=${label.for},tabindex=${label.tabindex}&quot;&gt;
     &lt;span th:text=&quot;${label.text}&quot;&gt;Label&lt;/span&gt;
     &lt;abbr th:if=&quot;${input.required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${label.modifierHint}&quot;&gt;*&lt;/abbr&gt;
@@ -1088,25 +1089,25 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
 &lt;/div&gt;
 </textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;div th:fragment=&quot;formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)&quot; class=&quot;usa-form-group&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;id=${id}&quot;&gt;
-  &lt;label class=&quot;usa-label&quot; th:classappend=&quot;${label.modifier}&quot; th:attr=&quot;for=${label.for},tabindex=${label.tabindex}&quot;&gt;
-    &lt;span th:text=&quot;${label.text}&quot;&gt;Label&lt;/span&gt;
-    &lt;abbr th:if=&quot;${input.required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${label.modifierHint}&quot;&gt;*&lt;/abbr&gt;
-    &lt;abbr th:if=&quot;${textarea.required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${label.modifierHint}&quot;&gt;*&lt;/abbr&gt;
-    &lt;abbr th:if=&quot;${selectEl.required}&quot; title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&quot; th:classappend=&quot;${label.modifierHint}&quot;&gt;*&lt;/abbr&gt;
-  &lt;/label&gt;
-  &lt;div th:if=&quot;${hint}&quot; class=&quot;usa-hint&quot; th:classappend=&quot;${hint.modifier}&quot; th:attr=&quot;id=${hint.id}&quot; th:text=&quot;${hint.text}&quot;&gt;Hint&lt;/div&gt;
-  &lt;span th:if=&quot;${error}&quot; class=&quot;usa-error-message&quot; th:classappend=&quot;${error.modifier}&quot; th:attr=&quot;id=${error.id},role=${error.role},aria-live=${error.ariaLive}&quot; th:text=&quot;${error.text}&quot;&gt;Message&lt;/span&gt;
-  &lt;div th:if=&quot;${input}&quot;&gt;
-    &lt;th:block th:replace=&quot;~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div th:if=&quot;${textarea}&quot;&gt;
-    &lt;th:block th:replace=&quot;~{packages/cfa-textarea/cfa-textarea.th :: textarea(${textarea})}&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div th:if=&quot;${selectEl}&quot;&gt;
-    &lt;th:block th:replace=&quot;~{packages/cfa-select/cfa-select.th :: select(${selectEl})}&quot; /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:fragment</span>=<span class="hljs-string">&quot;formGroup(modifier, id, label, hint, error, input, inputGroup, textarea, selectEl)&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${modifier}&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${id}&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${label.modifier}&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;for=${label.for},tabindex=${label.tabindex}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;${label.text}&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${input.required}&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${label.modifierHint}&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${textarea.required}&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${label.modifierHint}&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${selectEl.required}&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${label.modifierHint}&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${hint}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${hint.modifier}&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${hint.id}&quot;</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;${hint.text}&quot;</span>&gt;</span>Hint<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${error}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-error-message&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${error.modifier}&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${error.id},role=${error.role},aria-live=${error.ariaLive}&quot;</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;${error.text}&quot;</span>&gt;</span>Message<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${input}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${textarea}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-textarea/cfa-textarea.th :: textarea(${textarea})}&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${selectEl}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-select/cfa-select.th :: select(${selectEl})}&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </pre>
     </div>
   </figure>
@@ -1117,15 +1118,15 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-ff74fea8b73b1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-8c513a58e9b29" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-ff74fea8b73b1">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group.th :: formGroup(${modifier}, ${id}, ${label}, ${input}, ${textarea}, ${selectEl}, ${hint}, ${error}, ${inputGroup})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-8c513a58e9b29">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group.th :: formGroup(${modifier}, ${id}, ${label}, ${input}, ${textarea}, ${selectEl}, ${hint}, ${error}, ${inputGroup})}&quot; /&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group.th :: formGroup(${modifier}, ${id}, ${label}, ${input}, ${textarea}, ${selectEl}, ${hint}, ${error}, ${inputGroup})}&quot; /&gt;</pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group.th :: formGroup(${modifier}, ${id}, ${label}, ${input}, ${textarea}, ${selectEl}, ${hint}, ${error}, ${inputGroup})}&quot;</span> /&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -1137,13 +1138,13 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-1198f57394549" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-df52c85cf1fd" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-1198f57394549">&lt;div class=&quot;usa-form-group&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
+        <textarea hidden data-copy-target="block-df52c85cf1fd">&lt;div class=&quot;usa-form-group&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
   &lt;% if defined?(id) %&gt; id=&quot;&lt;%= id %&gt;&quot;&lt;% end %&gt;&gt;
   &lt;label class=&quot;usa-label&lt;% if label['modifier'] %&gt; &lt;%= label['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if label['for'] %&gt; for=&quot;&lt;%= label['for'] %&gt;&quot;&lt;% end %&gt;&lt;% if label['tabindex'] %&gt; tabindex=&quot;&lt;%= label['tabindex'] %&gt;&quot;&lt;% end %&gt;&gt;
     &lt;span&gt;&lt;%= label['text'] %&gt;&lt;/span&gt;
@@ -1168,30 +1169,30 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
   &lt;% end %&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-ruby padding-top-0">&lt;div class=&quot;usa-form-group&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;
-  &lt;% if defined?(id) %&gt; id=&quot;&lt;%= id %&gt;&quot;&lt;% end %&gt;&gt;
-  &lt;label class=&quot;usa-label&lt;% if label['modifier'] %&gt; &lt;%= label['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if label['for'] %&gt; for=&quot;&lt;%= label['for'] %&gt;&quot;&lt;% end %&gt;&lt;% if label['tabindex'] %&gt; tabindex=&quot;&lt;%= label['tabindex'] %&gt;&quot;&lt;% end %&gt;&gt;
-    &lt;span&gt;&lt;%= label['text'] %&gt;&lt;/span&gt;
-    &lt;% if defined?(input) &amp;&amp; input['required'] %&gt;&lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&lt;% if label['modifierHint'] %&gt; &lt;%= label['modifierHint'] %&gt;&lt;% end %&gt;&quot;&gt;*&lt;/abbr&gt;&lt;% end %&gt;
-    &lt;% if defined?(textarea) &amp;&amp; textarea['required'] %&gt;&lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&lt;% if label['modifierHint'] %&gt; &lt;%= label['modifierHint'] %&gt;&lt;% end %&gt;&quot;&gt;*&lt;/abbr&gt;&lt;% end %&gt;
-    &lt;% if defined?(selectEl) &amp;&amp; selectEl['required'] %&gt;&lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required&lt;% if label['modifierHint'] %&gt; &lt;%= label['modifierHint'] %&gt;&lt;% end %&gt;&quot;&gt;*&lt;/abbr&gt;&lt;% end %&gt;
-  &lt;/label&gt;
-  &lt;% if defined?(hint) %&gt;&lt;div class=&quot;usa-hint&lt;% if hint['modifier'] %&gt; &lt;%= hint['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if hint['id'] %&gt; id=&quot;&lt;%= hint['id'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= hint['text'] %&gt;&lt;/div&gt;&lt;% end %&gt;
-  &lt;% if defined?(error) %&gt;&lt;span class=&quot;usa-error-message&lt;% if error['modifier'] %&gt; &lt;%= error['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if error['id'] %&gt; id=&quot;&lt;%= error['id'] %&gt;&quot;&lt;% end %&gt;&lt;% if error['role'] %&gt; role=&quot;&lt;%= error['role'] %&gt;&quot;&lt;% end %&gt;&lt;% if error['ariaLive'] %&gt; aria-live=&quot;&lt;%= error['ariaLive'] %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= error['text'] %&gt;&lt;/span&gt;&lt;% end %&gt;
-  &lt;% if defined?(input) %&gt;
-    &lt;%= ERB.new(File.read('packages/cfa-input/_cfa-input.html.erb'), 0, 0, '@input')
+      <pre class="language-erb padding-top-0"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(modifier) </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> modifier </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>
+  &lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(id) </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> id=&quot;&lt;%=</span><span class="language-ruby"> id </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> label[<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> label[<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> label[<span class="hljs-string">&#x27;for&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> for=&quot;&lt;%=</span><span class="language-ruby"> label[<span class="hljs-string">&#x27;for&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> label[<span class="hljs-string">&#x27;tabindex&#x27;</span>] </span><span class="language-xml">%&gt; tabindex=&quot;&lt;%=</span><span class="language-ruby"> label[<span class="hljs-string">&#x27;tabindex&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&lt;%=</span><span class="language-ruby"> label[<span class="hljs-string">&#x27;text&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(input) &amp;&amp; input[<span class="hljs-string">&#x27;required&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> label[<span class="hljs-string">&#x27;modifierHint&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> label[<span class="hljs-string">&#x27;modifierHint&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+    &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(textarea) &amp;&amp; textarea[<span class="hljs-string">&#x27;required&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> label[<span class="hljs-string">&#x27;modifierHint&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> label[<span class="hljs-string">&#x27;modifierHint&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+    &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(selectEl) &amp;&amp; selectEl[<span class="hljs-string">&#x27;required&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> label[<span class="hljs-string">&#x27;modifierHint&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> label[<span class="hljs-string">&#x27;modifierHint&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(hint) </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> hint[<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> hint[<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> hint[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> id=&quot;&lt;%=</span><span class="language-ruby"> hint[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;&lt;%=</span><span class="language-ruby"> hint[<span class="hljs-string">&#x27;text&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(error) </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-error-message&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> error[<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> error[<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> error[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> id=&quot;&lt;%=</span><span class="language-ruby"> error[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> error[<span class="hljs-string">&#x27;role&#x27;</span>] </span><span class="language-xml">%&gt; role=&quot;&lt;%=</span><span class="language-ruby"> error[<span class="hljs-string">&#x27;role&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> error[<span class="hljs-string">&#x27;ariaLive&#x27;</span>] </span><span class="language-xml">%&gt; aria-live=&quot;&lt;%=</span><span class="language-ruby"> error[<span class="hljs-string">&#x27;ariaLive&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;&lt;%=</span><span class="language-ruby"> error[<span class="hljs-string">&#x27;text&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(input) </span><span class="language-xml">%&gt;
+    &lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;packages/cfa-input/_cfa-input.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@input&#x27;</span>)
       .result_with_hash({
-        input: input,
-        inputGroup: (inputGroup if defined?(inputGroup))
-      }.compact) %&gt;
-  &lt;% end %&gt;
-  &lt;% if defined?(textarea) %&gt;
-    &lt;%= ERB.new(File.read('packages/cfa-textarea/_cfa-textarea.html.erb'), 0, 0, '@textarea').result_with_hash({textarea: textarea}) %&gt;
-  &lt;% end %&gt;
-  &lt;% if defined?(selectEl) %&gt;
-    &lt;%= ERB.new(File.read('packages/cfa-select/_cfa-select.html.erb'), 0, 0, '@select').result_with_hash({selectEl: selectEl}) %&gt;
-  &lt;% end %&gt;
-&lt;/div&gt;</pre>
+        <span class="hljs-symbol">input:</span> input,
+        <span class="hljs-symbol">inputGroup:</span> (inputGroup <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(inputGroup))
+      }.compact) </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(textarea) </span><span class="language-xml">%&gt;
+    &lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;packages/cfa-textarea/_cfa-textarea.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@textarea&#x27;</span>).result_with_hash({<span class="hljs-symbol">textarea:</span> textarea}) </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(selectEl) </span><span class="language-xml">%&gt;
+    &lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;packages/cfa-select/_cfa-select.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@select&#x27;</span>).result_with_hash({<span class="hljs-symbol">selectEl:</span> selectEl}) </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </div>
   </figure>
   <figure class="margin-0">
@@ -1201,15 +1202,15 @@ The Form group includes the <a href="https://codeforamerica.github.io/uswds/dist
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-22f2bf983d866" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-adb389fd60a49" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/dist/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-22f2bf983d866">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group'), 0, 0, '@formGroup').result_with_hash({modifier: modifier, id: id, label: label, hint: hint, error: error, input: input, textarea: textarea, selectEl: selectEl}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-adb389fd60a49">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group'), 0, 0, '@formGroup').result_with_hash({modifier: modifier, id: id, label: label, hint: hint, error: error, input: input, textarea: textarea, selectEl: selectEl}) %&gt;</textarea>
       </div>
-      <pre class="language-ruby padding-top-0">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group'), 0, 0, '@formGroup').result_with_hash({modifier: modifier, id: id, label: label, hint: hint, error: error, input: input, textarea: textarea, selectEl: selectEl}) %&gt;</pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-form-group/cfa-form-group&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@formGroup&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">id:</span> id, <span class="hljs-symbol">label:</span> label, <span class="hljs-symbol">hint:</span> hint, <span class="hljs-symbol">error:</span> error, <span class="hljs-symbol">input:</span> input, <span class="hljs-symbol">textarea:</span> textarea, <span class="hljs-symbol">selectEl:</span> selectEl}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>

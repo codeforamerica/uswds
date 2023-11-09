@@ -26,19 +26,23 @@
 </ul>
 
 {% if sass != false %}
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
-  <figcaption class="margin-bottom-2">
-    <strong>Sass theme settings and stylesheet loading</strong>
-    <p>Below is a demonstration of{% if theme %} customizing the component theme settings and{% endif %} importing {% if stylesheets %}Sass stylesheets{% else %}the Sass stylesheet{% endif %} from the package.{% if usage %} Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.{% endif %}</p>
-  </figcaption>
-  <div class="code-block"><pre class="language-scss">@forward 'cfa-uswds';
+{% capture scssblock %}
+@forward 'cfa-uswds';
 {% if theme %}@use 'uswds-core' with (
   {{ theme }},
   // ... additional theme settings here ...
 );
 {% endif %}@forward 'uswds';
 {% for i in stylesheet %}@forward '{{ stylesheet }}';{% endfor %}
-{% if stylesheets_import %}{{ stylesheets_import }}{% endif %}</pre></div>
+{% if stylesheets_import %}{{ stylesheets_import }}{% endif %}
+{% endcapture %}
+
+<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
+  <figcaption class="margin-bottom-2">
+    <strong>Sass theme settings and stylesheet loading</strong>
+    <p>Below is a demonstration of{% if theme %} customizing the component theme settings and{% endif %} importing {% if stylesheets %}Sass stylesheets{% else %}the Sass stylesheet{% endif %} from the package.{% if usage %} Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.{% endif %}</p>
+  </figcaption>
+  {% scss scssblock %}
 </figure>
 {% endif %}
 

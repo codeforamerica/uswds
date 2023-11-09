@@ -32,6 +32,20 @@ module.exports = {
     inline: [],
     wrap_line_length: 0
   },
+  hightlightJs: [
+    'css',
+    'erb',
+    'java',
+    'javascript',
+    'json',
+    'markdown',
+    'plaintext',
+    'ruby',
+    'scss',
+    'twig',
+    'typescript',
+    'xml',
+  ],
   eleventy: {
     dir: {
       input: 'src/views',

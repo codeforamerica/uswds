@@ -171,3 +171,15 @@ tooltip.on(document.body);
     });
   }
 })(document.querySelectorAll(UploadDocuments.selector));
+
+/**
+ * Add tabindex to pre tags to make them focusable. Site only
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('pre').forEach(pre => {
+    if (!pre.hasAttribute('tabindex')) {
+      pre.setAttribute('tabindex', '0');
+    }
+  });
+});

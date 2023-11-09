@@ -30,6 +30,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
+    "highlight.js": "^11.9.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
     "thymeleaf": "^0.21.0"

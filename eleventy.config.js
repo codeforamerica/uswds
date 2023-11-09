@@ -10,7 +10,14 @@ const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const beautify = require('js-beautify').html;
 const thymeleaf = require('thymeleaf');
+const hljs = require('highlight.js/lib/core');
 const execSync = require('child_process').execSync;
+
+for (let i = 0; i < config.hightlightJs.length; i++) {
+  let lang = config.hightlightJs[i];
+
+  hljs.registerLanguage(lang, require(`highlight.js/lib/languages/${lang}`));
+}
 
 let CONFIG_BEAUTIFY = config.beautify;
 let CONFIG_ELEVENTY = config.eleventy;
@@ -142,6 +149,18 @@ const sanitizeForErb = (param) => {
 // }
 
 /**
+ * Adds syntax highlighting blocks to a string containing HTML.
+ *
+ * @param   {String}  str   String containing HTML.
+ * @param   {String}  lang  The Highlight.js language syntax code.
+ *
+ * @return  {String}        HTML wrapped in Highlight.js HTML blocks.
+ */
+const highlight = (str, lang) => {
+  return hljs.highlight(str, {language: lang}).value;
+};
+
+/**
  * Wraps passed string a code block and performs transformations on the content for display
  *
  * @param   {String}   str          An HTML template string
@@ -156,7 +175,9 @@ const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
 
   str = (beautifyStr) ? beautify(str, CONFIG_BEAUTIFY) : str;
 
-  str = (escapeStr) ? escapeHtml(str) : str;
+  let highlighted = highlight(str, lang);
+
+  let escaped = (escapeStr) ? escapeHtml(str) : str;
 
   return `<div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
@@ -166,9 +187,9 @@ const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="${id}">${str}</textarea>
+        <textarea hidden data-copy-target="${id}">${escaped}</textarea>
       </div>
-      <pre class="language-${lang} padding-top-0">${str}</pre>
+      <pre class="language-${lang} padding-top-0">${highlighted}</pre>
     </div>`;
 };
 
@@ -622,10 +643,21 @@ module.exports = function(eleventyConfig) {
           params.map(attr => {
             return `${attr}: ${attr}`;
           }).join(', ')
-        }}) %>`, 'ruby', true);
+        }}) %>`, 'erb', true);
     }
 
-    return block(template, 'ruby', false);
+    return block(template, 'erb', false);
+  });
+
+  /**
+   * Turns a string into a highlighted Sass block
+   *
+   * @param   {String}  str  String containing Sass code
+   *
+   * @return  {String}       The Sass code escaped and wrapped in a code block
+   */
+  eleventyConfig.addShortcode('scss', async function(str) {
+    return block(str, 'scss', false);
   });
 
   /**
