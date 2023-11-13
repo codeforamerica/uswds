@@ -1,5 +1,5 @@
 const package = require(`${process.env.PWD}/package.json`);
-const config = require(`${process.env.PWD}/config`);
+const entrypoints = require(`${process.env.PWD}/entrypoints`);
 
 const sass = require('sass');
 const postcss = require('postcss');
@@ -55,53 +55,15 @@ let plugins = {
 };
 
 /**
- * Module declaration and configuration
- */
-
-let modules = [
-  {
-    input:  path.join(config.base, config.src, 'scss/_site.scss'),
-    output: [{
-      file:  path.join(config.base, config.dist, config.assets, 'css/site.css'),
-      options: {
-        sourceMap: (process.env.NODE_ENV === 'production') ? false : true,
-        loadPaths: config.loadPaths
-          .map(i => path.join(config.base, i))
-      }
-    }],
-    plugins: [
-      // plugins.purgecss,
-      plugins.autoprefixer,
-      plugins.mqpacker,
-      plugins.cssnano
-    ]
-  },
-  {
-    input:  path.join(config.base, config.src, config.entry.styles),
-    output: [{
-      file:  path.join(config.base, config.dist, config.assets, config.output.styles),
-      options: {
-        sourceMap: (process.env.NODE_ENV === 'production') ? false : true,
-        loadPaths: config.loadPaths
-          .map(i => path.join(config.base, i))
-      }
-    }],
-    plugins: [
-      plugins.autoprefixer,
-      plugins.mqpacker,
-      plugins.cssnano
-    ]
-  }
-];
-
-/**
  * Executing function
  */
 
 (async () => {
   try {
-    for (let i = 0; i < modules.length; i++) {
-      const style = modules[i];
+    for (let i = 0; i < entrypoints.length; i++) {
+      if (path.extname(entrypoints[i].input) != '.scss') continue;
+
+      const style = entrypoints[i];
 
       console.log(`[${package.name}] Compiling Sass for "${style.input.replace(process.env.PWD, '')}"`);
 
@@ -125,6 +87,10 @@ let modules = [
         fs.writeFileSync(output.file, css);
 
         console.log(`[${package.name}] Sass compiled. Running output through PostCSS`);
+
+        // Set plugins if they are string keys for pre-configured plugins
+        style.plugins = style.plugins
+          .map(p => typeof p === 'string' ? plugins[p] : p);
 
         let optim = await postcss(style.plugins)
           .process(css, {

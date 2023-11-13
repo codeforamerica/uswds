@@ -1,5 +1,5 @@
 const package = require(`${process.env.PWD}/package.json`);
-const config = require(`${process.env.PWD}/config`);
+const entrypoints = require(`${process.env.PWD}/entrypoints`);
 
 const rollup = require('rollup');
 const commonJs = require('@rollup/plugin-commonjs');        // Adds support for legacy CommonJS modules
@@ -12,37 +12,19 @@ const path = require('path');
  * Plugin configuration
  */
 
-let plugins = [
-  replace({
+let plugins = {
+  replace: replace({
     'preventAssignment': true,
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   }),
-  nodeResolve({
+  nodeResolve: nodeResolve({
     browser: true,
     moduleDirectories: [
       'node_modules'
     ]
   }),
-  commonJs()
-];
-
-/**
- * Module declaration and configuration
- */
-
-let modules = [
-  {
-    input: path.join(config.base, config.src, config.entry.scripts),
-    output: [{
-      file:  path.join(config.base, config.dist, config.assets, config.output.scripts),
-      format: 'iife',
-      name: 'Default',
-      sourcemap: (process.env.NODE_ENV === 'production') ? false : 'inline',
-      strict: true
-    }],
-    plugins: plugins
-  }
-];
+  commonJs: commonJs()
+};
 
 /**
  * Executing function
@@ -50,10 +32,15 @@ let modules = [
 
 (async () => {
   try {
-    for (let i = 0; i < modules.length; i++) {
-      const script = modules[i];
+    for (let i = 0; i < entrypoints.length; i++) {
+      if (path.extname(entrypoints[i].input) != '.js') continue;
+
+      const script = entrypoints[i];
 
       console.log(`[${package.name}] Rolling up "${script.input.replace(process.env.PWD, '')}"`);
+
+      script.plugins = script.plugins
+        .map(p => typeof p === 'string' ? plugins[p] : p);
 
       const bundle = await rollup.rollup(script);
 
