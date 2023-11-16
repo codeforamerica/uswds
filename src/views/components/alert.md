@@ -10,7 +10,7 @@ nice_uswds: Alert component
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices
 nice_honeycrisp: Notice atom
 modifier_honeycrisp: .cfa-alert
-design_honeycrisp: https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5003%253A527%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5003%253A527%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
 tokens: true
 styles: true
 ---

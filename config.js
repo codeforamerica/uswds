@@ -3,7 +3,21 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = {
+  /**
+   * The base URL is used by the static site to find static assets. For local
+   * development it is relative while for the production (GitHub Pages) site it
+   * it uses prepends the site root URL to all paths.
+   *
+   * @var {String}
+   */
   baseUrl: (process.env.NODE_ENV === 'production') ? `${package.homepage}/` : '/',
+
+  /**
+   * The following set of path strings define where directories are located for
+   * compiling entry points.
+   *
+   * @var {String}
+   */
   base: process.env.PWD,
   src: 'src',
   dist: 'dist',
@@ -17,6 +31,12 @@ module.exports = {
     styles: 'css/styles.css',
     scripts: 'js/default.js'
   },
+
+  /**
+   * The following load paths are used by the Dart Sass library to find Sass modules
+   *
+   * @type {Array}
+   */
   loadPaths: [
     'src',
     'packages',

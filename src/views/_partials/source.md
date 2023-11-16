@@ -42,7 +42,7 @@
     <strong>Sass theme settings and stylesheet loading</strong>
     <p>Below is a demonstration of{% if theme %} customizing the component theme settings and{% endif %} importing {% if stylesheets %}Sass stylesheets{% else %}the Sass stylesheet{% endif %} from the package.{% if usage %} Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.{% endif %}</p>
   </figcaption>
-  {% scss scssblock %}
+  {% block 'scss' scssblock %}
 </figure>
 {% endif %}
 

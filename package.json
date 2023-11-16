@@ -11,7 +11,7 @@
     "type": "figma",
     "url": "https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0"
   },
-  "homepage": "https://codeforamerica.github.io/uswds/dist",
+  "homepage": "https://codeforamerica.github.io/uswds",
   "author": "dhirth@codeforamerica.org",
   "license": "UNLICENSED",
   "bugs": {
@@ -24,8 +24,10 @@
     "scripts": "node scripts.js",
     "styles": "node styles.js",
     "preview": "NODE_ENV=production npm run views",
-    "version": "NODE_ENV=production npm run default && git add .",
-    "prepublishOnly": "git push && git push --tags"
+    "production": "NODE_ENV=production npm run default",
+    "version": "npm run production && git add .",
+    "prepublishOnly": "git push && git push --tags",
+    "publish": "npx gh-pages -d dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",

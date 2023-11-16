@@ -10,7 +10,7 @@ nice_uswds: Accordion component
 url_honeycrisp: 'https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion'
 nice_honeycrisp: Accordion molecule
 modifier_honeycrisp: .cfa-accordion .usa-accordion--bordered
-design_honeycrisp: https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A536%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
+design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A536%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
 tokens: true
 styles: true
 ---
@@ -37,7 +37,6 @@ Accordions allow users to find information on a page by clicking content heading
 ## Examples {#examples}
 
 {% capture body_accordion_1 %}
-
 * Personal information
 * People who live with you
 * Income
@@ -45,33 +44,26 @@ Accordions allow users to find information on a page by clicking content heading
 * Assets
 
 [Learn more about how we protect your personal information](#).
-
 {% endcapture %}
 
 {% capture body_accordion_2 %}
-
 If you are applying for food assistance (SNAP), you will have the choice to submit an incomplete application with only your name, address, and signature.
 
 By choosing to submit an incomplete application, you may experience longer processing time and more communication with your county.
-
 {% endcapture %}
 
 {% capture body_accordion_3 %}
-
 At the end of this application, you will have the option to add documents, like pay stubs, rent receipts, or medical bills.
 
 You can use your phone to take photos of paper documents or select photos from your device.
 
 You can always return to our homepage to add documents later, too.
-
 {% endcapture %}
 
 {% capture body_accordion_4 %}
-
 Your application submission date is the earliest date your benefits can begin.
 
 Most programs on this application, including food and cash assistance, require an interview after you submit. Look for a letter in the mail or a phone call from your county.
-
 {% endcapture %}
 
 {% capture context %}{
@@ -105,7 +97,7 @@ Most programs on this application, including food and cash assistance, require a
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'accordion', nice: 'Bordered', body: body_default, context: context, caption: 'Bordered' %}
+{% render 'figure.md', name: 'accordion', nice: 'Bordered', context: context, caption: 'Bordered' %}
 
 <!-- GUIDANCE -->
 

@@ -527,6 +527,13 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  /**
+   * Renders a Markdown string and returns the rendered HTML
+   *
+   * @param   {String}  md  Markdown string
+   *
+   * @return  {String}      Rendered HTML
+   */
   eleventyConfig.addShortcode('md', async function(mrkdwn) {
     return markdownRender(mrkdwn);
   });
@@ -586,9 +593,11 @@ module.exports = function(eleventyConfig) {
    * Retrieves a package's ERB template source and wraps it in a code block
    *
    * @param   {String}   name     Name of the package
-   * @param   {Boolean}  include  Pass true to return the inclusion demonstration instead of the template
+   * @param   {Boolean}  include  Pass true to return the inclusion demonstration
+   *                              instead of the template
    *
-   * @return  {String}            The template source escaped and wrapped in a code block
+   * @return  {String}            The template source escaped and wrapped in a
+   *                              code block
    */
   eleventyConfig.addShortcode('erb', async function(name, include = false) {
     let templatePath = getFile(name, 'erb')
@@ -650,14 +659,16 @@ module.exports = function(eleventyConfig) {
   });
 
   /**
-   * Turns a string into a highlighted Sass block
+   * Turns a string into a highlighted code block
    *
-   * @param   {String}  str  String containing Sass code
+   * @param   {String}  type  The type of code block to return. Accepted values
+   *                          are defined in the ./config.js, 'hightlightJs' file
+   * @param   {String}  str   String containing code
    *
    * @return  {String}       The Sass code escaped and wrapped in a code block
    */
-  eleventyConfig.addShortcode('scss', async function(str) {
-    return block(str, 'scss', false);
+  eleventyConfig.addShortcode('block', async function(type, str) {
+    return block(str, type, false);
   });
 
   /**

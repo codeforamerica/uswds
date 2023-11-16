@@ -11,20 +11,20 @@
 
         font-weight: $theme-font-weight-bold;
 
-        padding: $cfa-input-select-padding-y $cfa-input-select-padding-x;
-        padding-left: $cfa-input-select-padding-x + $cfa-input-select-width + $cfa-input-select-gap;
+        padding: units($cfa-input-select-padding-y) units($cfa-input-select-padding-x);
+        padding-left: units($cfa-input-select-padding-x) + units($cfa-input-select-width) + units($cfa-input-select-gap);
 
-        margin-top: $cfa-input-select-margin;
+        margin-top: units($cfa-input-select-margin);
 
         &::before {
-          width: $cfa-input-select-width;
-          height: $cfa-input-select-height;
+          width: units($cfa-input-select-width);
+          height: units($cfa-input-select-height);
 
           top: 0;
           left: 0;
 
-          margin-top: calc(#{$cfa-input-select-padding-y} + 3px);
-          margin-left: $cfa-input-select-padding-x;
+          margin-top: calc(#{units($cfa-input-select-padding-y)} + 3px);
+          margin-left: units($cfa-input-select-padding-x);
         }
 
         .usa-#{$input-select-type}__label-description {
