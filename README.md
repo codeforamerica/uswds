@@ -52,6 +52,8 @@ Start development.
 npm start
 ```
 
+---
+
 ### Project directory and file structure
 
 ```
@@ -149,7 +151,7 @@ npm run production
 
 This script hooks into the default [`npm version`](https://docs.npmjs.com/cli/v9/commands/npm-version) command to compile views, scripts, and styles for production, and staging them for commit **before** NPM creates a version commit and Git version tag.
 
-You don't need to run this script on its own, just run `npm version {{ semantic version }}` when you are ready to commit a new version of the package to the repository before publishing.
+This script doesn't need to run on its own, just run `npm version {{ semantic version }}` when you are ready to commit a new version of the package to the repository before publishing.
 
 ```bash
 npm run version
@@ -159,7 +161,7 @@ npm run version
 
 This script hooks into the default [`npm publish`](https://docs.npmjs.com/cli/v9/commands/npm-publish) command to push local commits and tags to remote **before** NPM publishes the latest version to its registry.
 
-You don't need to run this script on its own, just run `npm publish` when you are ready to publish the latest version of the package.
+This script doesn't need to run on its own, just run `npm publish` when you are ready to publish the latest version of the package.
 
 ```bash
 npm run prepublishOnly
@@ -169,15 +171,19 @@ npm run prepublishOnly
 
 This script hooks into the default [`npm publish`](https://docs.npmjs.com/cli/v9/commands/npm-publish) command to push the [/dist](dist) directory to the GitHub Pages branch, gh-pages, which is the "production" environment for the site.
 
-You don't need to run this script on its own, just run `npm publish` when you are ready to publish the latest version of the package.
+This script doesn't need to run on its own, just run `npm publish` when you are ready to publish the latest version of the package.
 
 ```bash
 npm run publish
 ```
 
+---
+
 ### Configuration
 
 The [config.js](config.js) contains common configuration for the 11ty site and compilation path definitions for source Dart Sass and ES JavaScript entry points.
+
+---
 
 ### 11ty
 
@@ -185,9 +191,11 @@ The static documentation site is generated using [11ty (Eleventy)](https://www.1
 
 #### 11ty Configuration
 
-The [eleventy.config.js](eleventy.config.js) defines the customized functionality available to templates. The main additions are library and plugin configuration, [custom shortcodes](https://www.11ty.dev/docs/shortcodes/), global data, and collections. Below they are noted but documented in more detail in the [source](eleventy.config.js).
+The [eleventy.config.js](eleventy.config.js) defines the customized functionality available to templates. The main additions are library and plugin configuration, [custom shortcodes](https://www.11ty.dev/docs/shortcodes/), global data, and collections.
 
-#### Template Shortcodes
+#### Custom shortcodes
+
+Shortcodes are noted below but documented in more detail in the [source](eleventy.config.js).
 
 ##### **Package (Paired Shortcode)**
 
