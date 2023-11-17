@@ -19,10 +19,10 @@
   },
   "scripts": {
     "start": "npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
-    "default": "npx @11ty/eleventy && npm run styles && npm run scripts",
+    "default": "npx @11ty/eleventy && node styles.js && node scripts.js",
     "views": "npx @11ty/eleventy --serve",
-    "scripts": "node scripts.js",
-    "styles": "node styles.js",
+    "scripts": "npx chokidar-cli './{src,packages}/**/*.js' -c 'node scripts.js'",
+    "styles": "npx chokidar-cli './{src,packages}/**/*.scss' -c 'node styles.js'",
     "preview": "NODE_ENV=production npm run views",
     "production": "NODE_ENV=production npm run default",
     "version": "npm run production && git add .",
@@ -32,6 +32,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.2",
     "highlight.js": "^11.9.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",

@@ -427,7 +427,15 @@ const createCamelCase = function(str) {
  */
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addWatchTarget('./**/*.{css,scss,js,twig,json}');
+  /**
+   * Set up watch targets and development server options from config
+   */
+
+  for (let w = 0; w < CONFIG_ELEVENTY.watchTargets.length; w++) {
+    eleventyConfig.addWatchTarget(CONFIG_ELEVENTY.watchTargets[w]);
+  }
+
+  eleventyConfig.setServerOptions(CONFIG_ELEVENTY.serverOptions);
 
   /**
    * Plugin configuration

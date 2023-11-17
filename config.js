@@ -72,6 +72,13 @@ module.exports = {
       output: 'dist',
       layouts: '_layouts',
       includes: '_partials'
+    },
+    watchTargets: [
+      './packages/**/*.{html.erb,th.html}',
+      './src/views/**/*.{twig,md}'
+    ],
+    serverOptions: {
+      watch: './dist/**/*.{css,js,svg,png,jpg,jpeg,gif}'
     }
   },
   markdownIt: {
