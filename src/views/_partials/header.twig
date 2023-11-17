@@ -13,7 +13,7 @@
         </a>
 
         <em class="usa-logo__text desktop:display-none">
-          <a href="/" title="{{ package.nice }}">{{ package.nice }}</a>
+          <a href="{{ config.baseUrl }}" title="{{ package.nice }}">{{ package.nice }}</a>
         </em>
       </div>
 
@@ -49,7 +49,7 @@
         </li>
 
         <li class="usa-nav__primary-item">
-          <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
+          <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
         </li>
       </ul>
 
