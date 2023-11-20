@@ -6,21 +6,27 @@ This theme replaces the <a href="https://github.com/codeforamerica/honeycrisp-ge
 
 This readme will cover the basics for working with and contributing to the theme codebase. The following notes are a high-level overview of how to install and use the theme. More detailed instructions will be added in the first official release.
 
-1. Install this package and the USWDS package as dependencies using npm.
+```bash
+npm install @codeforamerica/uswds
+```
+
+1. Install this package ^ as a project dependency using npm.
 
 1. Configure Sass include paths.
 
-1. Add imports to project Sass entrypoint.
+1. Add `@forward` or `@use` statements to project Sass entrypoint. [Example](src/scss/_styles.scss).
 
-1. Compile Sass to /static/assets/css.
+1. Compile Sass to a static `assets/css/` directory.
 
-1. Copy the static /dist/img directory to the static/assets directory.
+1. Add `import` statements to project JavaScript entrypoint. [Example](src/js/index.js).
 
-1. Copy the static /dist/js file into the static/assets directory.
+1. Compile JavaScript to a static `assets/js/` directory.
 
-1. Fonts do not have to be copied into the static directory since the theme uses the system font but this would be done if desired. Copy the static /dist/fonts.
+1. Copy the static `dist/img/` directory to a static `assets/img` directory.
 
-1. Link to stylesheet and JavaScript files in the head once they are in the static directory.
+1. Fonts do not have to be copied into the static directory since the theme uses the system font but this would be done if desired. Copy the static `dist/fonts/` to a static `assets/fonts` directory.
+
+1. Link to static stylesheet in the HTML `<head>` tag and JavaScript file before the closing `</body>` tag.
 
 ## Contributing
 
