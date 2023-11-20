@@ -28,11 +28,22 @@ npm install @codeforamerica/uswds
 
 1. Link to static stylesheet in the HTML `<head>` tag and JavaScript file before the closing `</body>` tag.
 
+The [@codeforamerica/uswds-starter](https://github.com/codeforamerica/uswds-starter) can also be used to bootstrap a front-end development environment that uses this theme, taking advantage of the Node.js scripts that compile Sass and JavaScript.
+
 ## Contributing
 
 Contributing to the theme requires Node.js, NPM, and Ruby on the system level. Installing Node.js will install NPM at the same time. We recommend using <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noindex noopener nofollow">Node Version Manager (NVM)</a>, but you may also install <a href="https://nodejs.org" target="_blank" rel="noindex noopener nofollow">Node.js</a> directly. Components are written as Thymeleaf fragment and Embedded Ruby (ERB) partial templates. Thymeleaf is included as a project dependency. <a href="https://www.ruby-lang.org" target="_blank" rel="noindex noopener nofollow">Ruby</a>, however, is required on the system level to render ERB files. At the time of writing, the MacOS System Ruby `2.6.10p210` was used. <a href="https://rvm.io" target="_blank" rel="noindex noopener nofollow">Ruby Version Manager (RVM)</a> is available to help manage Ruby versions.
 
 The project primarily uses <a href="https://docs.npmjs.com/cli/v9/using-npm/scripts" target="_blank" rel="noindex noopener nofollow">NPM scripts</a> to run the Node.js libraries <a href="https://rollupjs.org" target="_blank" rel="noindex noopener nofollow">Rollup.js</a>, <a href="https://sass-lang.com/documentation/js-api" target="_blank" rel="noindex noopener nofollow">Sass</a>, <a href="https://www.11ty.dev" target="_blank" rel="noindex noopener nofollow">11ty (Eleventy)</a>, and <a href="https://github.com/ultraq/thymeleafjs" target="_blank" rel="noindex noopener nofollow">ThymeleafJS</a> to generate a static site and USWDS assets.
+
+### Table of contents
+
+* [Getting started](#getting-started)
+* [Workflow](#workflow)
+* [Project directory and file structure](#project-directory-and-file-structure)
+* [NPM Scripts](#npm-scripts)
+* [Configuration](#configuration)
+* [11ty](#11ty)
 
 ### Getting started
 
@@ -68,7 +79,7 @@ npm start
 
 Once the development command is running (`npm start`) 11ty will watch for changes to view and component templates defined in the `watchTargets` block of [config.js](config.js). Separate tasks for watching for changes to Sass and JavaScript files are also activated.
 
-Most changes will be made to files within the [src](src) or [packages](packages) directories. Once a change is made to a source file it will be compiled into the [dist](dist) directory. The local development server will refresh to reflect the change.
+Most changes will be made to files within the [src/](src) or [packages/](packages) directories. Once a change is made to a source file it will be compiled into the [dist/](dist) directory. The local development server will refresh to reflect the change.
 
 #### Flows and general style guides
 
@@ -77,13 +88,15 @@ Potential changes can be broken down into the following flow categories:
 * [Modifying documentation or content](#modifying-documentation-or-content): involves Node.js, Markdown + Liquid templates.
 * [Modifying or adding a USWDS theme setting](#modifying-or-adding-a-uswds-theme-setting): involves Sass.
 * [Modifying a CfA component](#modifying-a-cfa-component): involves Sass, JavaScript, Thymeleaf, or ERB.
+* [Notes on external dependencies](#notes-on-external-dependencies): involves NPM.
 * [Modifying the compilation of Sass or JavaScript](#modifying-the-compilation-of-sass-or-javascript): involves Node.js.
+* [Committing changes and publishing](#committing-changes-and-publishing): involves NPM.
 
 #### Modifying documentation or content
 
-All content and context (strings, classes, HTML) passed to rendered components occurs in the [src/views](src/views) directory. There may be some special cases where a string is hard-coded into a component template but generally this is discouraged. The documentation is written in <a href="https://www.11ty.dev/docs/languages/markdown" target="_blank" rel="noindex noopener nofollow">Markdown + Liquid</a> syntax (11ty pre-processes Markdown templates using Liquid, hence, the syntax is combined) or <a href="https://github.com/factorial-io/eleventy-plugin-twig" target="_blank" rel="noindex noopener nofollow">Twig</a>. Twig is minimally used and appears in layouts or partials. The language is supported because USWDS component templates are written using Twig.
+All content and context (strings, classes, HTML) passed to rendered components occurs in the [src/views/](src/views) directory. There may be some special cases where a string is hard-coded into a component template but generally this is discouraged. The documentation is written in <a href="https://www.11ty.dev/docs/languages/markdown" target="_blank" rel="noindex noopener nofollow">Markdown + Liquid</a> syntax (11ty pre-processes Markdown templates using Liquid, hence, the syntax is combined) or <a href="https://github.com/factorial-io/eleventy-plugin-twig" target="_blank" rel="noindex noopener nofollow">Twig</a>. Twig is minimally used and appears in layouts or partials. The language is supported because USWDS component templates are written using Twig.
 
-Pages use <a href="https://www.11ty.dev/docs/data-frontmatter" target="_blank" rel="noindex noopener nofollow">front matter</a>, or a YAML block, to define variables for the layout or page contents. This makes it easier to modify short strings deeply nested in the content. Several content blocks for each page are "templatized" to render automatically using variables. The variables are defined in each page, either through front-matter or other, and passed to partials in the [views/_partials](views/_partials) directory. For example, the details section for each component use a partial rendered with the shortcode `{% render 'details.md' name: title ... %}`.
+Pages use <a href="https://www.11ty.dev/docs/data-frontmatter" target="_blank" rel="noindex noopener nofollow">front matter</a>, or a YAML block, to define variables for the layout or page contents. This makes it easier to modify short strings deeply nested in the content. Several content blocks for each page are "templatized" to render automatically using variables. The variables are defined in each page, either through front-matter or other, and passed to partials in the [views/_partials/](views/_partials) directory. For example, the details section for each component use a partial rendered with the shortcode `{% render 'details.md' name: title ... %}`.
 
 Component demonstrations in the documentation use context to define their display. Context may be strings containing class names, plain text, or HTML, and booleans. Context is organized using a JSON object set in a capture block. For example, the Accordion component uses the following context:
 
@@ -107,13 +120,17 @@ Which is passed to the `figure.md` partial. This partial will create the figure 
 {% render 'figure.md', name: 'accordion', nice: 'Bordered', context: context, caption: 'Bordered' %}
 ```
 
-On the backend, the context is passed to both the Accordion component's Thymeleaf fragment and Embedded Ruby partial templates (in the [packages/cfa-accordion](packages/cfa-accordion) directory). It will then render unescaped and escaped HTML and inline it into the static HTML output. In the production build, only the Thymeleaf fragment is displayed.
+On the backend, the context is passed to both the Accordion component's Thymeleaf fragment and Embedded Ruby partial templates (in the [packages/cfa-accordion/](packages/cfa-accordion) directory). It will then render unescaped and escaped HTML and inline it into the static HTML output. In the production build, only the Thymeleaf fragment is displayed.
 
 Built-in Liquid template methods are used to enhance the functionality of Markdown. These are denoted inside the `{% ... %}` brackets. There are also several [custom shortcodes](#custom-shortcodes) added to the 11ty configuration for this site to assist various parts of the documentation display for the theme.
 
+##### Config.js
+
+Several packages used by the documentation site are customized in the [config.js](config.js) file.
+
 #### Modifying or adding a USWDS theme setting
 
-While the [src/scss](src/scss) directory contains the entry points for Sass, the the main **theme-level settings** for the USWDS are set in [packages/cfa-uswds-theme/_index.scss](packages/cfa-uswds-theme/_index.scss). These settings are actively extended by the USWDS core in the [packages/cfa-uswds/_index.scss](packages/cfa-uswds/_index.scss). For example, the setting for the theme focus color in `cfa-uswds-theme`:
+While the [src/scss/](src/scss) directory contains the entry points for Sass, the the main **theme-level settings** for the USWDS are set in [packages/cfa-uswds-theme/_index.scss](packages/cfa-uswds-theme/_index.scss). These settings are actively extended by the USWDS core in the [packages/cfa-uswds/_index.scss](packages/cfa-uswds/_index.scss). For example, the setting for the theme focus color in `cfa-uswds-theme`:
 
 ```scss
 $cfa-focus-color: 'gold-30v' !default;
@@ -137,7 +154,7 @@ All <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdY
 
 #### Modifying a CfA component
 
-Each component and its relevant code are stored together as [packages](packages) in the directory of the same name. Packages may contain template files for Thymeleaf and ERB to define the markup, Sass to define custom styles that aren't supported by the USWDS configuration, or JavaScript if it's necessary to enable functionality. Each of these concerns are separated into their own file.
+Each component and its relevant code are stored together as [packages/](packages) in the directory of the same name. Packages may contain template files for Thymeleaf and ERB to define the markup, Sass to define custom styles that aren't supported by the USWDS configuration, or JavaScript if it's necessary to enable functionality. Each of these concerns are separated into their own file.
 
 ```
 — 📂 packages
@@ -278,56 +295,62 @@ In some cases the string `@input` in the example above needs to be unique. It ca
 **Always use a class to define a component (using the component name, capitalized and camel-cased)**:
 
 ```javascript
-class Details {
+class Component {
   constructor() {
 
     // ...
 
-export default Details;
+export default Component;
 ```
 
 Using, or, creating a class instance:
 
 ```javascript
-import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
+import Component from '@codeforamerica/uswds/packages/cfa-component/cfa-component.js';
 
-new Details();
+new Component();
 ```
 
-Classes can be easily extended. Methods and properties within them can be overridden or accessed individually.
+Classes can be easily extended or have settings configurations passed to them to enable, disable, or modify internal functionality. Methods and properties within them can be overridden or accessed individually. This variety makes them flexible to work with.
 
 ```javascript
-import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
+import Component from '@codeforamerica/uswds/packages/cfa-component/cfa-component.js';
 
-Details.foo = 'bar';
+// Set a component property before it is initialized.
+Component.property = 'value';
 
-let details = new Details();
+// Initialize a component with custom values.
+let component = new Component({
+  property: 'value',
+  method: () => {}
+});
 
-details.method();
+// Call a component method after initialization.
+component.internalMethod();
 ```
 
 **Static properties used within the class are defined before the export**. They are often set for the class within the constructor with an optional settings override that can be passed upon instantiation.
 
 ```javascript
-class Details {
+class Component {
   constructor(s = {}) {
-    this.selector = s.selector ? s.selector : Details.selector;
+    this.selector = s.selector ? s.selector : Component.selector;
 
     // ...
 
 }
 
-Details.selector = '[data-js="details"]';
+Component.selector = '[data-js="component"]';
 
 // ...
 
-export default Details;
+export default Component;
 ```
 
 **Click, change, or other event listeners are added to the `body`**. This makes functions less dependent on individual elements and more compatible with reactive frameworks.
 
 ```javascript
-class Details {
+class Component {
   constructor() {
 
     // ...
@@ -335,7 +358,7 @@ class Details {
     document.querySelector('body')
       .addEventListener('click', event => {
         if (event.target.matches(this.selector)) {
-          this.toggle(event.target);
+          this.internalMethod(event.target);
         }
     });
 
@@ -345,9 +368,9 @@ class Details {
 Classes may be instantiated once for all elements they concern.
 
 ```javascript
-import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
+import Component from '@codeforamerica/uswds/packages/cfa-component/cfa-component.js';
 
-new Details();
+new Component();
 ```
 
 Or, they may be instantiated per element. However, the main selector for the component should always be stored as a static property.
@@ -355,18 +378,252 @@ Or, they may be instantiated per element. However, the main selector for the com
 ```javascript
 (elements => {
   for (let i = 0; i < elements.length; i++) {
-    new UploadDocuments(elements[i]);
+    new Component(elements[i]);
   }
-})(document.querySelectorAll(UploadDocuments.selector));
+})(document.querySelectorAll(Component.selector));
 ```
+
+Below is the general structure for theme component classes.
+
+```javascript
+'use strict';
+
+class Component {
+  /**
+   * Component constructor
+   *
+   * @param   {Object}  s  Optional settings configuration
+   *
+   * @return  {Object}     Instance of Component
+   */
+  constructor(s = {}) {
+    /**
+     * Instance setting overrides. If any of the properties are passed in the
+     * s object, they are used by the instance instead of the default properties.
+     */
+
+    this.selector = s.selector ? s.selector : Component.selector;
+
+    this.externalMethod = s.externalMethod ? s.externalMethod : Component.externalMethod;
+
+    /**
+     * Initialization for the progressively enhanced features
+     */
+
+    this.init();
+
+    /**
+     * Main event listener for the component
+     */
+
+    document.querySelector('body')
+      .addEventListener('click', event => {
+        if (event.target.matches(this.selector)) {
+          this.internalMethod(event.target);
+        }
+    });
+
+    return this;
+  }
+
+  /**
+   * Initializes the component, setting progressively enhanced
+   * ARIA attributes or other relevant dynamic templates.
+   *
+   * @return  {Object}  Instance of Component
+   */
+  init() {
+
+    // ...
+
+    return this;
+  }
+
+  /**
+   * An internal class method.
+   *
+   * @param   {Object}  target  Method argument
+   *
+   * @return  {Object}          Instance of Component
+   */
+  internalMethod(target) {
+
+    // ...
+
+    return this;
+  }
+}
+
+/** @type  {String}  The main selector for the Component event listener */
+Component.selector = '[data-js="component"]';
+
+/**
+ * An external class method
+ */
+Component.externalMethod = () => {}
+
+export default Component;
+```
+
+#### Notes on external dependencies
+
+Components *may* have external dependencies if they provide a very substantial or specific benefit necessary for that component to function.
+
+* **Do not add any design system other than the USWDS** (Bootstrap, Material, or other). Design systems are not intended to be used together. The USWDS also provides its own set of CSS utilities so Tailwindcss is also not supported at this time.
+
+* **Do not install jQuery**. It is not needed for most modern JS applications and it creates an oversized dependency if one component uses it. Use <a href="https://github.com/camsong/You-Dont-Need-jQuery" target="_blank" rel="noindex noopener nofollow">plain JavaScript</a>.
+
+* **Do not install Underscore or LoDash**. Use standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank" rel="noindex noopener nofollow">Array</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" rel="noindex noopener nofollow">Object</a> prototypes.
+
+* **The use of reactive front-end frameworks are not supported at this time** (React.js, Vue.js, or other).
+
+New dependencies should be installed as regular dependencies using `npm install` so that other projects can inherit them as well.
 
 #### Modifying the compilation of Sass or JavaScript
 
-...
+The source, distribution, and plugins that transform Sass or JavaScript can be modified in the [entrypoints.js](entrypoints.js) file. Each entrypoint is defined as an object `{}` in the export.
+
+```javascript
+module.exports = [
+  {
+    /* module settings */
+  },
+  {
+    /* module settings */
+  },
+  {
+    /* module settings */
+  }
+];
+```
+
+Each object may either be a style or script module. The difference is determined by the extension of the input file.
+
+##### Style modules
+
+CSS is translated from the source using [styles.js](styles.js). It uses the <a href="https://sass-lang.com/documentation/js-api" target="_blank" rel="noindex noopener nofollow">Dart Sass JavaScript API</a> to compile Sass to CSS. The CSS is then run through a series of <a href="https://postcss.org/" target="_blank" rel="noindex noopener nofollow">PostCSS</a> plugins to optimize the output:
+
+1. <a href="https://github.com/FullHuman/purgecss" target="_blank" rel="noindex noopener nofollow">purgecss</a>. Removes unused CSS (currently unused but will be supported).
+1. <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noindex noopener nofollow">autoprefixer</a>. Adds vendor prefixes to CSS rules.
+1. <a href="https://github.com/hail2u/node-css-mqpacker" target="_blank" rel="noindex noopener nofollow">mqpacker</a>. Combines all media queries that are the same.
+1. <a href="https://github.com/cssnano/cssnano" target="_blank" rel="noindex noopener nofollow">cssnano</a>. Compresses CSS.
+
+The attributes for style modules are documented in the [entrypoints.js](entrypoints.js) file in more detail but generally looks like the following:
+
+```javascript
+{
+  input: 'src/scss/_styles.scss',
+  output: [{
+    file:  'dist/css/styles.css',
+    options: {
+      sourceMap: true,
+      loadPaths: [ /* ... */ ]
+    }
+  }],
+  plugins: [ /* ... */ ]
+}
+```
+
+##### Script modules
+
+JavaScript is translated from the source using [scripts.js](scripts.js). It uses the <a href="https://rollupjs.org" target="_blank" rel="noindex noopener nofollow">Rollup.js</a> to combine concatenate scripts and perform some transformations. The JavaScript is then run through a series of <a href="https://github.com/rollup/awesome" target="_blank" rel="noindex noopener nofollow">plugins</a> to translate the output:
+
+1. <a href="https://github.com/rollup/plugins/tree/master/packages/commonjs" target="_blank" rel="noindex noopener nofollow">commonJs</a>. Enables the support for CommonJS module import.
+1. <a href="https://github.com/rollup/plugins/tree/master/packages/node-resolve" target="_blank" rel="noindex noopener nofollow">nodeResolve</a>. Adds support for the Node.js module resolution algorithm.
+1. <a href="https://github.com/rollup/plugins/tree/master/packages/replace" target="_blank" rel="noindex noopener nofollow">replace</a>. Performs string transformations on the JavaScript output.
+
+The attributes for script modules are documented in the [entrypoints.js](entrypoints.js) file in more detail but generally looks like the following:
+
+```javascript
+{
+  input: 'src/js/index.js',
+  output: [{
+    file:  'dist/js/default.js',
+    options: {
+      sourceMap: true,
+      loadPaths: [ /* ... */ ]
+    }
+  }],
+  plugins: [ /* ... */ ]
+}
+```
+
+##### Module plugins
+
+When contributing to the theme, plugins should only be added as default plugins (defined above) if all modules benefit from it. They can be added to either [styles.js](styles.js) or [scripts.js](scripts.js) directly. Which and what order plugins run can be configured for each module object in the plugins attribute. For example, a styles module with this set will run all the default plugins:
+
+```javascript
+plugins: [
+  'purgecss',
+  'autoprefixer',
+  'mqpacker',
+  'cssnano'
+]
+```
+
+Omit a plugin by commenting it out:
+
+```javascript
+plugins: [
+  // 'purgecss',
+  'autoprefixer',
+  'mqpacker',
+  'cssnano'
+]
+```
+
+##### Config.js
+
+Several paths, entrypoint names, distribution strings, and Node module load paths for the theme are defined in the [config.js](config.js) file.
+
+##### External projects
+
+External projects can use these module scripts to compile their own Sass and JavaScript. This is documented in the [@codeforamerica/uswds-starter](https://github.com/codeforamerica/uswds-starter). They need to set up their own NPM project, entrypoints.js file, and project source. This needs to be kept in mind when updating the theme's module scripts and their configuration.
+
+They can use the plugins attribute in their entrypoints.js file to choose default plugins or configure their own plugins. For example, the `purgecss` plugin can be configured by swapping the plugin string with an instance of the plugin (<a href="https://purgecss.com/getting-started.html" target="_blank" rel="noindex noopener nofollow">using instructions from the purgecss documentation</a>):
+
+```javascript
+plugins: [
+  purgecss({
+    content: [
+      path.join(__dirname, 'dist/**/*.html')
+    ],
+  }),
+  'autoprefixer',
+  'mqpacker',
+  'cssnano'
+]
+```
+
+New plugins should be installed as regular dependencies using `npm install` so that other projects can inherit them as well.
 
 #### Committing changes and publishing
 
-...
+After development, changes to the theme need to be staged, committed, tagged, and published to the NPM registry for other projects to inherit. [Create a pull request](https://github.com/codeforamerica/uswds/compare) with your changes for review. They will be squashed and merged into the main branch.
+
+##### Publishing
+
+The simple workflow for this uses two NPM scripts: `version` and `publish`. They must be run sequentially. Choose an appropriate <a href="https://semver.org" target="_blank" rel="noindex noopener nofollow">semantic version</a> increment: either `major`, `minor`, or `patch`. Then pass that to the `version` command. This will generate a new build for the package and production documentation site. The force flag, `-f` will force the staging of changes to the version commit.
+
+```bash
+npm version {{ major/minor/patch }} -f
+```
+
+Once the build and version commit and tag are complete, run the publish command to push changes to the remote. You will need to be authenticated to NPM to run this command by running the login command first.
+
+```bash
+npm login
+```
+
+If you are already authenticated you may skip the command above and run:
+
+```bash
+npm publish
+```
+
+This will push changes to the [remote repository](https://github.com/codeforamerica/uswds), publish the latest version of the documentation site to [GitHub pages](https://codeforamerica.github.io/uswds), and publish the latest package to the [NPM registry](https://www.npmjs.com/package/@codeforamerica/uswds).
+
+---
 
 ### Project directory and file structure
 
@@ -401,7 +658,9 @@ Or, they may be instantiated per element. However, the main selector for the com
 └ 📄 .nvmrc              —  Used to define the Node.js latest version number supported during development.
 ```
 
-### Scripts
+---
+
+### NPM Scripts
 
 The following NPM scripts, which are CLI commands, are available to run the primary development functions of the application.
 
@@ -483,7 +742,7 @@ npm run prepublishOnly
 
 #### Publish
 
-This script hooks into the default <a href="https://docs.npmjs.com/cli/v9/commands/npm-publish" target="_blank" rel="noindex noopener nofollow">`npm publish`</a> command to push the [/dist](dist) directory to the GitHub Pages branch, gh-pages, which is the "production" environment for the site.
+This script hooks into the default <a href="https://docs.npmjs.com/cli/v9/commands/npm-publish" target="_blank" rel="noindex noopener nofollow">`npm publish`</a> command to push the [dist/](dist) directory to the GitHub Pages branch, gh-pages, which is the "production" environment for the site.
 
 This script doesn't need to run on its own, just run `npm publish` when you are ready to publish the latest version of the package.
 
@@ -495,17 +754,17 @@ npm run publish
 
 ### Configuration
 
-The [config.js](config.js) contains common configuration for the 11ty site and compilation path definitions for source Sass and JavaScript entry points.
+The [package.json](package.json) contains configuration for the package name, public homepage URL, design file, and other NPM specifics.
+
+The [config.js](config.js) file contains common configuration for the 11ty site and compilation path definitions for source Sass and JavaScript entry points.
+
+The [entrypoints.js](entrypoints.js) contains configuration for source Sass and JavaScript entry point modules. Default plugin settings for PostCSS and Rollup.js are defined in the [styles.js](styles.js) and [scripts.js](scripts.js) files.
 
 ---
 
 ### 11ty
 
-The [eleventy.config.js](eleventy.config.js) defines the customized functionality available to templates. The main additions are library and plugin configuration, <a href="https://www.11ty.dev/docs/shortcodes" target="_blank" rel="noindex noopener nofollow">custom shortcodes</a>, global data, and collections.
-
-### Custom shortcodes
-
-Shortcodes are noted below but documented in more detail in the [source](eleventy.config.js).
+The [eleventy.config.js](eleventy.config.js) defines the customized functionality available to templates. The main additions are library and plugin configuration, <a href="https://www.11ty.dev/docs/shortcodes" target="_blank" rel="noindex noopener nofollow">custom shortcodes</a>, global data, and collections. Shortcodes are noted below but documented in more detail in the [eleventy.config.js](eleventy.config.js) file.
 
 #### **Package (Paired Shortcode)**
 

@@ -44,28 +44,17 @@ module.exports = {
     'node_modules/@uswds',
     'node_modules/@uswds/uswds/packages'
   ],
-  beautify: {
-    indent_size: 2,
-    indent_char: ' ',
-    preserve_newlines: false,
-    indent_inner_html: false,
-    inline: [],
-    wrap_line_length: 0
-  },
-  hightlightJs: [
-    'css',
-    'erb',
-    'java',
-    'javascript',
-    'json',
-    'markdown',
-    'plaintext',
-    'ruby',
-    'scss',
-    'twig',
-    'typescript',
-    'xml',
-  ],
+
+  /**
+   * 11ty (Eleventy) static site documentation configuration. Not all
+   * settings are relevant to 11ty but to packages used in eleventy.config.js
+   */
+
+  /**
+   * 11ty (Eleventy) configuration.
+   *
+   * @source https://www.11ty.dev/docs
+   */
   eleventy: {
     dir: {
       input: 'src/views',
@@ -81,16 +70,69 @@ module.exports = {
       watch: './dist/**/*.{css,js,svg,png,jpg,jpeg,gif}'
     }
   },
+
+  /**
+   * Settings for the structural rendering of code. These settings are
+   * passed to the js-beautify plugin directly.
+   *
+   * @source https://github.com/beautify-web/js-beautify#options
+   */
+  beautify: {
+    indent_size: 2,
+    indent_char: ' ',
+    preserve_newlines: false,
+    indent_inner_html: false,
+    inline: [],
+    wrap_line_length: 0
+  },
+
+  /**
+   * Syntax highlighters used for code. Languages are imported from
+   * the Highlight.js library.
+   *
+   * @source https://highlightjs.org
+   */
+  hightlightJs: [
+    'css',
+    'erb',
+    'java',
+    'javascript',
+    'json',
+    'markdown',
+    'plaintext',
+    'ruby',
+    'scss',
+    'twig',
+    'typescript',
+    'xml',
+  ],
+
+  /**
+   * Configuration for the markdownIt library. Used for 11ty markdown config
+   * and the {% md %} markdown shortcode.
+   *
+   * @source https://github.com/markdown-it/markdown-it
+   */
   markdownIt: {
     html: true,
     breaks: false,
     linkify: true
   },
+
+  /**
+   * Options for the ThymeleafJS library.
+   *
+   * @source https://github.com/ultraq/thymeleafjs#new-templateengineoptions
+   */
   thymeleaf: {
     templateResolver: (templateName) => {
       return fs.readFileSync(path.join(__dirname, `${templateName}.html`));
     }
   },
+
+  /**
+   * Common dictionary strings for the documentation
+   */
   dictionary: {
     package: 'Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts.',
     tokens: 'Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries.',
