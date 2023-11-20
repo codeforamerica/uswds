@@ -64,7 +64,7 @@ Once the development command is running (`npm start`) 11ty will watch for change
 
 Most changes will be made to files within the [src](src) or [packages](packages) directories. Once a change is made to a source file it will be compiled into the [dist](dist) directory. The local development server will refresh to reflect the change.
 
-#### Flows
+#### Flows and general style guides
 
 Potential changes can be broken down into the following flow categories:
 
@@ -73,7 +73,7 @@ Potential changes can be broken down into the following flow categories:
 * [Modifying a CfA component](#modifying-a-cfa-component): involves Sass, JavaScript, Thymeleaf, or ERB.
 * [Modifying the compilation of Sass or JavaScript](#modifying-the-compilation-of-sass-or-javascript): involves Node.js.
 
-##### Modifying documentation or content
+#### Modifying documentation or content
 
 All content and context (strings, classes, HTML) passed to rendered components occurs in the [src/views](src/views) directory. There may be some special cases where a string is hard-coded into a component template but generally this is discouraged. The documentation is written in <a href="https://www.11ty.dev/docs/languages/markdown" target="_blank" rel="noindex noopener nofollow">Markdown + Liquid</a> syntax (11ty pre-processes Markdown templates using Liquid, hence, the syntax is combined) or <a href="https://github.com/factorial-io/eleventy-plugin-twig" target="_blank" rel="noindex noopener nofollow">Twig</a>. Twig is minimally used and appears in layouts or partials. The language is supported because USWDS component templates are written using Twig.
 
@@ -105,7 +105,7 @@ On the backend, the context is passed to both the Accordion component's Thymelea
 
 Built-in Liquid template methods are used to enhance the functionality of Markdown. These are denoted inside the `{% ... %}` brackets. There are also several [custom shortcodes](#custom-shortcodes) added to the 11ty configuration for this site to assist various parts of the documentation display for the theme.
 
-##### Modifying or adding a USWDS theme setting
+#### Modifying or adding a USWDS theme setting
 
 While the [src/scss](src/scss) directory contains the entry points for Sass, the the main **theme-level settings** for the USWDS are set in [packages/cfa-uswds-theme/_index.scss](packages/cfa-uswds-theme/_index.scss). These settings are actively extended by the USWDS core in the [packages/cfa-uswds/_index.scss](packages/cfa-uswds/_index.scss). For example, the setting for the theme focus color in `cfa-uswds-theme`:
 
@@ -129,9 +129,9 @@ There is a smaller set of **package-level settings** used by components in this 
 
 All <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noindex noopener nofollow">theme and package-level settings are documented here</a>.
 
-##### Modifying a CfA component
+#### Modifying a CfA component
 
-Each component and its relevant code are stored together as [packages](packages) in the directory of the same name. Packages may contain template files for Thymeleaf and ERB to define the markup, Sass to define custom styles that aren't supported by the USWDS configuration, or JavaScript if it's necessary to enable functionality.
+Each component and its relevant code are stored together as [packages](packages) in the directory of the same name. Packages may contain template files for Thymeleaf and ERB to define the markup, Sass to define custom styles that aren't supported by the USWDS configuration, or JavaScript if it's necessary to enable functionality. Each of these concerns are separated into their own file.
 
 ```
 — 📂 packages
@@ -144,15 +144,217 @@ Each component and its relevant code are stored together as [packages](packages)
 
 In place of the asterisk (*) is the component name. Names are modelled after USWDS counterparts that they represent or override. Names are only customized if they do not exist in the USWDS (ex, `details` or `follow-up-question`). **It's important that names are consistent across package directories, files, and their corresponding documentation page**.
 
-**Thymeleaf fragments** are "componentized" templates for the Java template engine. This syntax models "natural templating" or writing thats feels similar to HTML with an added binding syntax through custom HTML attributes. This makes it more formal and less flexible. Passing variables to these bindings fills the standard HTML attributes and string content within HTML tags. To test the rendering of Thymeleaf the theme uses **ThymeleafJS**. This is important to note because this implementation of the language is limited.
+##### **📄 &#42;.th.html
 
-**Embedded Ruby partial templates** are scripted Ruby files with HTML and Ruby code intermixed. There is no binding syntax for HTML so it is less formal but more flexible. It is much easier to write Ruby code within templates which makes it less "componentized." This application doesn't operate inside of a Ruby on Rails environment so there are no helper methods, most notably the `render 'partial-name'` method for including other partials. The lowest level and simplest version of Rails `render` is `ERB.new(File.read('partial-name'), 0, 0, [*('a'..'z')].sample(8).join).result_with_hash({key: 'value'})` which can be cumbersome to manage.
+**Thymeleaf fragments** are "componentized" templates for the Java template engine. This syntax models "natural templating" or writing thats feels similar to HTML with an added binding syntax through custom HTML attributes. This makes it more formal and less flexible. Passing variables to these bindings fills the standard HTML attributes and string content within HTML tags. To test the rendering of Thymeleaf the theme uses **ThymeleafJS**. This is important to note because this implementation of the language is limited. <a href="https://www.thymeleaf.org" target="_blank" rel="noindex noopener nofollow">Read more about the Thymeleaf template language on the documentation site</a>.
 
-**Dart Sass** ...
+**Only USWDS classes prefixed with `.usa-` are hard-coded into templates**. Theme modifiers prefixed with `.cfa-` are passed to the fragment to achieve theme styling. For example, to append the `cfa-accordion` class to the `usa-accordion`, the modifier parameter needs to be set.
 
-**ES JavaScript** ...
+```html
+<div th:fragment="accordion(modifier, multiple, items)" class="usa-accordion" th:classappend="${modifier}" th:attr="data-allow-multiple=${multiple}" th:each="item: ${items}">
+  <!-- ... -->
+```
 
-##### Modifying the compilation of Sass or JavaScript
+**Fragments will nest other components instead of re-creating them**. This enables full customization of every nested component. For example, the Form Group component will pull in the Input component.
+
+```html
+<th:block th:replace="~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}" />
+```
+
+##### 📄 _&#42;.html.erb
+
+**Embedded Ruby partial templates** are scripted Ruby files with HTML and Ruby code intermixed. There is no binding syntax for HTML so it is less formal but more flexible. It is much easier to write Ruby code within templates which makes it less "componentized." This application doesn't operate inside of a Ruby on Rails environment so there are no helper methods, most notably the `render 'partial-name'` method for including other partials. The lowest level and simplest version of Rails `render` is `ERB.new(File.read('partial-name'), 0, 0, [*('a'..'z')].sample(8).join).result_with_hash({key: 'value'})` which can be cumbersome to manage. <a href="https://docs.ruby-lang.org/en/2.3.0/ERB.html" target="_blank" rel="noindex noopener nofollow">Read more about the ERB class on the Ruby documentation site</a>.
+
+**The same rules for modifiers and nesting other components applies to ERB templates**.
+
+```erb
+<div class="usa-accordion<% if defined?(modifier) %> <%= modifier %><% end %>"<% if defined?(multiple) %> data-allow-multiple<% end %>>
+  <!-- ... -->
+```
+
+Nesting another component:
+
+```ruby
+<%= ERB.new(File.read('packages/cfa-input/_cfa-input.html.erb'), 0, 0, '@input')
+  .result_with_hash({
+    input: input,
+    inputGroup: (inputGroup if defined?(inputGroup))
+  }.compact) %>
+```
+
+In some cases the string `@input` in the example above needs to be unique. It can be replaced with `[*('a'..'z')].sample(8).join` to always create a random string.
+
+##### 📄 _&#42;.scss
+
+**Dart Sass** modules **extend** the styling for custom or USWDS components that can't be styled using USWDS settings alone. Where possible, distinguish between theme styles and USWDS styles. Always prefer USWDS Sass theme tokens, utilities, functions, and other mixins over custom methods. This ensures that custom styling remains within the design system.
+
+**Use the Block, element, modifier (BEM) naming convention**. Always prefix theme classes with `.cfa-`. Use the same name as the component for the block selector. <a href="https://getbem.com" target="_blank" rel="noindex noopener nofollow">Read more about the BEM naming convention</a>.
+
+```
+.cfa-block { }
+.cfa-block__element { }
+.cfa-block--modifier { }
+```
+
+**Use the CSS `.cfa-` prefix for custom styles**. This ensures clarity when using custom theme styles versus USWDS defaults. Do not add style overrides dependent on `.usa-` classes as the root class.
+
+```scss
+.cfa-button:not(.usa-button--unstyled) {
+  // ...
+```
+
+**Reuse settings variables defined by theme settings**. They are always prefixed by `$theme-`. Often, they need to be passed to utility functions that will interpret the token value. <a href="https://designsystem.digital.gov/design-tokens/" target="_blank" rel="noindex noopener nofollow">Read more about design tokens on the USWDS documentation site</a>.
+
+```scss
+@use 'uswds-core' as *;
+
+.cfa-button.usa-button--big:not(.usa-button--unstyled) {
+  font-size: font-size($theme-button-font-family, 'lg');
+  // ...
+```
+
+**Always use the `units()` function** to convert unit design tokens to the spacing dimensions defined by the system. Never hard-code pixel values. <a href="https://designsystem.digital.gov/design-tokens/spacing-units/" target="_blank" rel="noindex noopener nofollow">Read more about spacing unit tokens on the USWDS documentation site</a>.
+
+```scss
+@use 'uswds-core' as *;
+
+.cfa-button:not(.usa-button--unstyled) {
+  padding: units(2) units(2.5);
+
+  // ...
+```
+
+**Use the `set-text-and-bg` mixin** when defining a background color and foreground text color. This ensures color combinations are run through the USWDS contrast checker. Combinations that don't have sufficient contrast (WCAG AA 2.1) will emit an exception to stdout. <a href="https://designsystem.digital.gov/design-tokens/color/overview" target="_blank" rel="noindex noopener nofollow">Read more about color on the USWDS documentation site</a>.
+
+```scss
+@use 'uswds-core' as *;
+
+.cfa-button.usa-button--outline:not(.usa-button--unstyled):not([disabled]):not([aria-disabled=true]) {
+  @include set-text-and-bg(
+    $bg-color: $theme-body-background-color,
+    $preferred-text-color: 'ink',
+    $context: 'CfA Button'
+  );
+
+  // ...
+```
+
+**Use theme and state color tokens over system color tokens**. This ensures that the color theme has continuity throughout components. Read more about color. Read more about each color token types on the USWDS documentation site:
+
+* <a href="https://designsystem.digital.gov/design-tokens/color/theme-tokens" target="_blank" rel="noindex noopener nofollow">Theme color tokens</a>
+* <a href="https://designsystem.digital.gov/design-tokens/color/state-tokens" target="_blank" rel="noindex noopener nofollow">State color tokens</a>
+* <a href="https://designsystem.digital.gov/design-tokens/color/system-tokens" target="_blank" rel="noindex noopener nofollow">System color tokens</a>
+
+```scss
+@use 'uswds-core' as *;
+
+.cfa-button--no {
+  > svg {
+    fill: color('error');
+
+  // ...
+
+.cfa-button--yes {
+  > svg {
+    fill: color('success-darker');
+
+  // ...
+```
+
+##### 📄 &#42;.js
+
+**ES JavaScript** modules provide functionality to custom components or provide a utility wrapper around external libraries. They are written using as standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank" rel="noindex noopener nofollow">modules</a> and defined using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" target="_blank" rel="noindex noopener nofollow">class templates</a>.
+
+* **Components properties and methods are be encapsulated**. Writing properties to global variables, such as the `window`, is discouraged. Write custom properties to the component instance, instead.
+* **All JavaScript should be considered a progressive enhancement**. There should be a suitable default state for the component if the page does not invoke JavaScript. ARIA properties, such as `aria-hidden` will only be toggled when the component is instantiated.
+* Use the `data-js` to define selectors for components. Use `aria-controls` to define target element selectors. Follow guidance defined by the <a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noindex noopener nofollow">ARIA Authoring Practices Guide</a>.
+
+**Always use a class to define a component (using the component name, capitalized and camel-cased)**:
+
+```javascript
+class Details {
+  constructor() {
+
+    // ...
+
+export default Details;
+```
+
+Using, or, creating a class instance:
+
+```javascript
+import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
+
+new Details();
+```
+
+Classes can be easily extended. Methods and properties within them can be overridden or accessed individually.
+
+```javascript
+import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
+
+Details.foo = 'bar';
+
+let details = new Details();
+
+details.method();
+```
+
+**Static properties used within the class are defined before the export**. They are often set for the class within the constructor with an optional settings override that can be passed upon instantiation.
+
+```javascript
+class Details {
+  constructor(s = {}) {
+    this.selector = s.selector ? s.selector : Details.selector;
+
+    // ...
+
+}
+
+Details.selector = '[data-js="details"]';
+
+// ...
+
+export default Details;
+```
+
+**Click, change, or other event listeners are added to the `body`**. This makes functions less dependent on individual elements and more compatible with reactive frameworks.
+
+```javascript
+class Details {
+  constructor() {
+
+    // ...
+
+    document.querySelector('body')
+      .addEventListener('click', event => {
+        if (event.target.matches(this.selector)) {
+          this.toggle(event.target);
+        }
+    });
+
+    // ...
+```
+
+Classes may be instantiated once for all elements they concern.
+
+```javascript
+import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
+
+new Details();
+```
+
+Or, they may be instantiated per element. However, the main selector for the component should always be stored as a static property.
+
+```javascript
+(elements => {
+  for (let i = 0; i < elements.length; i++) {
+    new UploadDocuments(elements[i]);
+  }
+})(document.querySelectorAll(UploadDocuments.selector));
+```
+
+#### Modifying the compilation of Sass or JavaScript
 
 ...
 
@@ -180,10 +382,10 @@ In place of the asterisk (*) is the component name. Names are modelled after USW
   ├ 📁 cfa-core          —  This package stores settings that aren’t supported by the USWDS but are used by other component packages.
   ├ 📁 cfa               —  This package imports all of the theme component packages.
   └ 📁 cfa-*             —  All additional *packages* are theme components or utilities.
-    ├ 📄 *.th.html    —  A Thymeleaf template component file for storing component markup.
-    ├ 📄 _*.html.erb  —  An Embedded Ruby partial template file for storing component markup.
-    ├ 📄 _*.scss      —  A Sass styling file for overriding or extending USWDS styles.
-    └ 📄 *.js         —  A JavaScript file for functionality (currently, not to be confused with web components).
+    ├ 📄 *.th.html       —  A Thymeleaf template component file for storing component markup.
+    ├ 📄 _*.html.erb     —  An Embedded Ruby partial template file for storing component markup.
+    ├ 📄 _*.scss         —  A Sass styling file for overriding or extending USWDS styles.
+    └ 📄 *.js            —  A JavaScript file for functionality (currently, not to be confused with web components).
 ├ 📄 config.js           —  Configuration for the theme, including base path definitions for static and source files.
 ├ 📄 eleventy.config.js  —  Configuration file for the 11ty site.
 ├ 📄 entrypoints.js      —  Defines the configuration for Sass and JavaScript modules and their distribution.
