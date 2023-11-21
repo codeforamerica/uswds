@@ -20,11 +20,11 @@
   "scripts": {
     "start": "npm run default && npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
     "default": "npx @11ty/eleventy && node styles.js && node scripts.js",
-    "views": "npx @11ty/eleventy --serve",
+    "views": "npx @11ty/eleventy --serve --ignore-initial",
     "scripts": "npx chokidar-cli './{src,packages}/**/*.js' -c 'node scripts.js'",
     "styles": "npx chokidar-cli './{src,packages}/**/*.scss' -c 'node styles.js'",
-    "preview": "NODE_ENV=production npm run views",
     "production": "NODE_ENV=production npm run default",
+    "preview": "npm run production && npm run views",
     "version": "npm run production && git add .",
     "prepublishOnly": "git push && git push --tags",
     "publish": "npx gh-pages -d dist"

@@ -682,7 +682,7 @@ npm run default
 
 #### Views
 
-Compile views and start the 11ty server. Watches for changes to relevant view and component templates.
+Start the 11ty server. Watches for changes to relevant view and component templates.
 
 ```bash
 npm run views
@@ -690,7 +690,7 @@ npm run views
 
 #### Scripts
 
-Compile JavaScript using Rollup.js. Watch for changes to JavaScript files.
+Watch for changes to JavaScript files then compile JavaScript using Rollup.js.
 
 ```bash
 npm run scripts
@@ -698,18 +698,10 @@ npm run scripts
 
 #### Styles
 
-Compile Sass using its built-in JavaScript API. Watch for changes to Sass files.
+Watch for changes to Sass files then compile Sass using its built-in JavaScript API.
 
 ```bash
 npm run styles
-```
-
-#### Preview
-
-Compile views and start the 11ty server in "production mode."
-
-```bash
-npm run preview
 ```
 
 #### Production
@@ -718,6 +710,14 @@ Compiles views, styles, and scripts for production.
 
 ```bash
 npm run production
+```
+
+#### Preview
+
+Compiles views, styles, and scripts for production and run the 11ty server in "production mode." (note, this will pull assets from production).
+
+```bash
+npm run preview
 ```
 
 #### Version
