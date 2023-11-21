@@ -18,7 +18,7 @@
     "url": "https://github.com/codeforamerica/uswds/issues"
   },
   "scripts": {
-    "start": "npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
+    "start": "npm run default && npx concurrently 'npm run views' 'npm run styles' 'npm run scripts'",
     "default": "npx @11ty/eleventy && node styles.js && node scripts.js",
     "views": "npx @11ty/eleventy --serve",
     "scripts": "npx chokidar-cli './{src,packages}/**/*.js' -c 'node scripts.js'",
