@@ -133,4 +133,19 @@ Most programs on this application, including food and cash assistance, require a
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: '$theme-accordion-border-width: 2px', usage: url_uswds_usage, javascript: 'enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.', config: config, pckg: package %}
+{% capture theme %}
+@use 'cfa-uswds-theme' with (
+  // Global theme settings
+  $cfa-color-base-lightest: 'gray-warm-4', // Affects accordion background
+  $cfa-color-base-lighter: 'gray-warm-10', // Affects accordion button hover state
+  // Component specific settings
+  $cfa-accordion-border-width: 2px,
+  $cfa-accordion-border-color: 'gray-warm-20'
+);
+{% endcapture %}
+
+{% capture javascript %}
+enables the expanding and collapsing of accordion sections as well as toggles ARIA attributes on the button and target region.
+{% endcapture %}
+
+{% render 'source.md', name: 'accordion', nice: 'Accordion', theme: theme, usage: url_uswds_usage, javascript: javascript, config: config, pckg: package %}

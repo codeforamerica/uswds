@@ -1703,7 +1703,7 @@
 	  }
 
 	  /**
-	   * Initializes the follow up trigger and target region
+	   * Initializes the Details trigger and target region
 	   *
 	   * @return  {Object}  Instance of Details
 	   */
@@ -1793,7 +1793,7 @@
 	  }
 	}
 
-	/** @type  {String}  The main selector for the follow up question component event listening */
+	/** @type  {String}  The main selector for the Details component event listener */
 	Details.selector = '[data-js="details"]';
 
 	/** @type  {Array}  A list of potentially focusable element selectors */

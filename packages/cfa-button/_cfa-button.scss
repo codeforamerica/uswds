@@ -63,7 +63,7 @@
     $context: 'CfA Button'
   );
 
-  box-shadow: $cfa-button-stroke color('ink');
+  box-shadow: inset 0 0 0 units($theme-button-stroke-width) color('ink');
 
   -moz-osx-font-smoothing: auto;
    -webkit-font-smoothing: auto;
@@ -80,7 +80,7 @@
       $context: 'CfA Button'
     );
 
-    box-shadow: $cfa-button-stroke color('ink');
+    box-shadow: inset 0 0 0 units($theme-button-stroke-width) color('ink');
   }
 
   &:active,
@@ -91,7 +91,7 @@
       $context: 'CfA Button'
     );
 
-    box-shadow: $cfa-button-stroke color('ink');
+    box-shadow: inset 0 0 0 units($theme-button-stroke-width) color('ink');
   }
 }
 

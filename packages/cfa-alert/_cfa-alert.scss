@@ -4,7 +4,21 @@
   border: 2px solid;
 
   .usa-alert__body {
-    padding: units($theme-alert-padding-y) units($theme-alert-padding-x);
+    // The USWDS currently doesn't respect $theme-alert-padding-x and uses the
+    // $theme-site-margins-width to calculate alert body margins. The following
+    // override enforces these settings.
+    //
+    // @since  USWDS v3.5.0
+    //
+    // @source https://github.com/uswds/uswds/issues/5252
+
+    @include u-padding-y($theme-alert-padding-y);
+    @include u-padding-x($theme-alert-padding-x);
+
+    @include at-media($theme-site-margins-breakpoint) {
+      @include u-padding-y($theme-alert-padding-y);
+      @include u-padding-x($theme-alert-padding-x);
+    }
   }
 
   .usa-alert__body::before {
@@ -20,7 +34,7 @@
 
 .cfa-site-alert {
   .usa-alert__body {
-    @include grid-container($theme-site-alert-max-width );
+    @include grid-container($theme-site-alert-max-width);
     @include add-responsive-site-margins;
   }
 }

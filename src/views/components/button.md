@@ -327,4 +327,8 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'button', nice: title, usage: url_uswds_usage, javascript: 'enables links that are styled as buttons to be invoked using the space bar.', config: config, pckg: package %}
+{% capture javascript %}
+enables links that are styled as buttons to be invoked using the space bar.
+{% endcapture %}
+
+{% render 'source.md', name: 'button', nice: title, usage: url_uswds_usage, javascript: javascript, config: config, pckg: package %}

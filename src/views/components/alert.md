@@ -173,4 +173,13 @@ Additional context and followup information including [a link](#). {.usa-alert__
 
 <!-- SOURCE -->
 
+{% capture theme %}
+@use 'cfa-uswds-theme' with (
+  $cfa-alert-bar-width: '0',
+  $cfa-alert-padding-x: '2',
+  $cfa-alert-padding-y: '2',
+  $cfa-alert-link-color: 'ink'
+);
+{% endcapture %}
+
 {% render 'source.md', name: 'alert', nice: title, theme: '$theme-alert-padding-x: 2', usage: url_uswds_usage, config: config, pckg: package %}

@@ -19,7 +19,7 @@ $cfa-border-radius-lg: 2 !default;
 $cfa-grid-container-max-width: 'desktop-lg' !default;
 
 // These are not within the spacing section but keeping them together
-// helps with managing the max-width dimension consistently
+// helps with managing the max-width dimension consistently for all components
 $cfa-banner-max-width: 'desktop-lg' !default;
 $cfa-footer-max-width: 'desktop-lg' !default;
 $cfa-header-max-width: 'desktop-lg' !default;
@@ -30,8 +30,8 @@ $cfa-site-alert-max-width: 'desktop-lg' !default;
 // Color
 // - Base
 $cfa-color-base-family: 'gray-warm' !default;
-$cfa-color-base-lightest: 'gray-warm-4' !default; // affects accordion background
-$cfa-color-base-lighter: 'gray-warm-10' !default; // affects accordion button hover state
+$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background
+$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover state
 $cfa-color-base-light: 'gray-warm-30' !default;
 $cfa-color-base: 'gray-warm-50' !default;
 $cfa-color-base-dark: 'gray-warm-60' !default;
@@ -140,11 +140,11 @@ $cfa-typeface-tokens: (
 $cfa-font-type-mono: 'jetbrains-mono' !default;
 $cfa-font-mono-custom-stack: monospace !default;
 
-// - Type scale
+// - Type scales
 $cfa-type-scale-3xs: 3 !default;
 $cfa-type-scale-2xs: 4 !default;
 $cfa-type-scale-xs: 5 !default;     // h6?
-$cfa-type-scale-sm: 6 !default;     // h5, paragraphs?
+$cfa-type-scale-sm: 6 !default;     // h5 + paragraphs?
 $cfa-type-scale-md: 7 !default;     // h4?
 // $cfa-type-scale-lg: 9 !default;  // h3
 // $cfa-type-scale-xl: 12 !default; // h2
@@ -156,6 +156,7 @@ $cfa-body-line-height: 4 !default;
 $cfa-h6-font-size: 'xs' !default;
 $cfa-small-font-size: 'xs' !default;
 
+// Setting measures to none prevents text from having a fixed width and allows it to flow
 $cfa-text-measure-narrow: 'none' !default;
 $cfa-text-measure: 'none' !default;
 $cfa-text-measure-wide: 'none' !default;
@@ -163,13 +164,13 @@ $cfa-text-measure-wide: 'none' !default;
 $cfa-lead-line-height: 4 !default;
 
 // Components
+// - Accordion
+$cfa-accordion-border-width: 2px !default;
+$cfa-accordion-border-color: 'gray-warm-20' !default;
 // - Alert
 $cfa-alert-padding-x: 2 !default;
 $cfa-alert-padding-y: 2 !default;
 $cfa-alert-link-color: 'ink' !default;
-// - Accordion
-$cfa-accordion-border-width: 2px !default;
-$cfa-accordion-border-color: 'gray-warm-20' !default;
 // - Banner
 $cfa-banner-link-color: 'mint-cool-70v' !default;
 // - Checkbox

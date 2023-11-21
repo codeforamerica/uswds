@@ -11,39 +11,27 @@
   <span class="usa-icon-list__content"><strong>Package:</strong> <a href="{{ pckg.repository.url }}{{ package | replace: pckg.name, '/tree/main' }}" target="_blank" class="usa-link--external code">{{ package }}</a></span>
 </p>
 
-{{ config.dictionary.package }} <a href="https://designsystem.digital.gov/components/packages/" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
+{{ config.dictionary.package }} <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
 {% endfor %}
 
 <ul class="usa-content-list">
-  {% if sass != false %}<li>
-    {% for i in stylesheet %}<strong>Sass stylesheet:</strong> <code>.{{ stylesheet | replace: package, '' }}</code>
-    {% endfor %}{% if stylesheets %}<div class="font-body-3xs"><em>Additional required stylesheets from other packages:</em><ul class="font-body-3xs">{{ stylesheets }}</ul></div>{% endif %}
-  </li>{% endif %}
+  {% for i in stylesheet %}<li><strong>Sass stylesheet:</strong> <code>.{{ stylesheet | replace: package, '' }}</code></li>{% endfor %}
   {% for i in thymeleaf %}<li><strong>Thymeleaf template fragment:</strong> <code>.{{ thymeleaf | replace: package, '' }}</code></li>{% endfor %}
   {% for i in erb %}<li><strong>Embedded Ruby (ERB) partial template:</strong> <code>.{{ erb | replace: package, '' }}</code></li>{% endfor %}
   {% if javascript %}<li><strong>JavaScript</strong> {{ javascript }} Guidance on individual module loading will added. Currently, there is one script that imports all modules. The source is located at
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>{% endif %}
 </ul>
 
-{% if sass != false %}
-{% capture scssblock %}
-@forward 'cfa-uswds';
-{% if theme %}@use 'uswds-core' with (
-  {{ theme }},
-  // ... additional theme settings here ...
-);
-{% endif %}@forward 'uswds';
-{% for i in stylesheet %}@forward '{{ stylesheet }}';{% endfor %}
-{% if stylesheets_import %}{{ stylesheets_import }}{% endif %}
-{% endcapture %}
-
-<figure class="border border-base-lighter margin-0 margin-y-3 padding-3 radius-lg" aria-label="Sass">
-  <figcaption class="margin-bottom-2">
-    <strong>Sass theme settings and stylesheet loading</strong>
-    <p>Below is a demonstration of{% if theme %} customizing the component theme settings and{% endif %} importing {% if stylesheets %}Sass stylesheets{% else %}the Sass stylesheet{% endif %} from the package.{% if usage %} Refer to the <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional settings.{% endif %}</p>
-  </figcaption>
-  {% block 'scss' scssblock %}
-</figure>
+{% if theme %}
+<div class="border border-base-lighter margin-0 margin-bottom-3 padding-3 radius-lg">
+  <figure class="margin-0">
+    <figcaption class="margin-bottom-2">
+      <strong>Sass theme settings</strong>
+      <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>{% if usage %} or <a href="{{ usage }}" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional USWDS settings{% endif %}.</p>
+    </figcaption>
+    {% block 'scss' theme %}
+  </figure>
+</div>
 {% endif %}
 
 {% for i in thymeleaf %}

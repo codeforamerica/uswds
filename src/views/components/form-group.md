@@ -448,34 +448,13 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
 
 <!-- SOURCE -->
 
-{% capture stylesheets %}
-  {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-  {% capture stylesheet_label %}{% getFile 'label' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_input %}{% getFile 'input' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_input_group %}{% getFile 'input-group' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_select %}{% getFile 'select' 'stylesheet' %}{% endcapture %}
-
-  <li>Label: <code>..{{ stylesheet_label | replace: packages, '' }}</code></li>
-  <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
-  <li>Text Input: <code>..{{ stylesheet_input | replace: packages, '' }}</code></li>
-  <li>Input Prefix or Suffix: <code>..{{ stylesheet_input_group | replace: packages, '' }}</code></li>
-  <li>Select: <code>..{{ stylesheet_select | replace: packages, '' }}</code></li>
-{% endcapture %}
-
-{% capture stylesheets_import %}
-@forward '{{ stylesheet_label }}'
-@forward '{{ stylesheet_hint }}'
-@forward '{{ stylesheet_input }}'
-@forward '{{ stylesheet_input_group }}'
-@forward '{{ stylesheet_select }}'
+{% capture javascript %}
+provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.
 {% endcapture %}
 
 {% render 'source.md',
   name: 'form-group',
   nice: title,
-  javascript: 'provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.',
-  stylesheets: stylesheets,
-  stylesheets_import: stylesheets_import,
+  javascript: javascript,
   config: config,
   pckg: package %}

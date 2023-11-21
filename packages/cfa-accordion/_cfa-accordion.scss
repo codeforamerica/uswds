@@ -40,11 +40,11 @@
 
 .cfa-accordion.usa-accordion--bordered {
   .usa-accordion__button {
-    border: $cfa-accordion-border;
+    border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
     border-bottom: 0;
   }
 
   .usa-accordion__button[aria-expanded='false'] {
-    border: $cfa-accordion-border;
+    border: units($theme-accordion-border-width) solid color($theme-accordion-border-color);
   }
 }
