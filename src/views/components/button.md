@@ -327,8 +327,33 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
 
 <!-- SOURCE -->
 
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-base-lightest: 'gray-warm-4',    // Affects outline button hover state
+  $cfa-color-base-lighter: 'gray-warm-10',    // Affects disabled button state
+  $cfa-color-base-ink: 'gray-warm-90',        // Affects outline button
+  $cfa-color-primary: 'mint-50',              // Affects primary button state
+  $cfa-color-primary-darker: 'mint-cool-80v', // Affects primary button hover state
+  $cfa-color-secondary: 'magenta-50v',        // Affects the secondary button
+  $cfa-color-secondary-darker: 'magenta-70v', // Affects the secondary button hover state
+  $cfa-color-error: 'orange-warm-50v',        // Affects the danger button, the no button icon color
+  $cfa-color-error-darker: 'orange-warm-70v', // Affects the danger button hover state
+  $cfa-color-disabled-light: 'gray-warm-10',  // Affects disabled button
+  $cfa-color-disabled: 'gray-warm-50',        // Affects disabled outline button
+  $cfa-color-disabled-dark: 'gray-warm-70',   // Affects disabled button text
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-button-big-font-size: 'lg',
+  $cfa-button-big-border-radius: 'lg',
+);
+{% endcapture %}
+
 {% capture javascript %}
 enables links that are styled as buttons to be invoked using the space bar.
 {% endcapture %}
 
-{% render 'source.md', name: 'button', nice: title, usage: url_uswds_usage, javascript: javascript, config: config, pckg: package %}
+{% render 'source.md', name: 'button', nice: title, theme: theme, usage: url_uswds_usage, javascript: javascript, config: config, pckg: package %}

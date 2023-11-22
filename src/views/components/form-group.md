@@ -452,9 +452,4 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
 provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.
 {% endcapture %}
 
-{% render 'source.md',
-  name: 'form-group',
-  nice: title,
-  javascript: javascript,
-  config: config,
-  pckg: package %}
+{% render 'source.md', name: 'form-group', nice: title, javascript: javascript, config: config, pckg: package %}

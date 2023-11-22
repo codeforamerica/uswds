@@ -134,8 +134,9 @@ Most programs on this application, including food and cash assistance, require a
 <!-- SOURCE -->
 
 {% capture theme %}
+// Theme-level settings
 @use 'cfa-uswds-theme' with (
-  // Global theme settings
+  // Global theme settings that affect the component, changing these will affect other components
   $cfa-color-base-lightest: 'gray-warm-4', // Affects accordion background
   $cfa-color-base-lighter: 'gray-warm-10', // Affects accordion button hover state
   // Component specific settings

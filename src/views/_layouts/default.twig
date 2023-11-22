@@ -7,7 +7,9 @@
 
   <meta name="robots" content="noindex, nofollow" />
 
-  <title>{{ package.nice }}</title>
+  <link rel="icon" type="image/svg+xml" href="https://codeforamerica.org/wp-content/themes/cfa-main/static/icon.svg">
+
+  <title>{% if title %}{{ title }} | {% endif %}{{ package.nice }}</title>
 
   <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/css/site.css">
 

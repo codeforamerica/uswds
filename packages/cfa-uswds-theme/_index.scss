@@ -30,33 +30,33 @@ $cfa-site-alert-max-width: 'desktop-lg' !default;
 // Color
 // - Base
 $cfa-color-base-family: 'gray-warm' !default;
-$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background
-$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover state
+$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background, outline button background hover, checkbox/radio background hover
+$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover, disabled button state
 $cfa-color-base-light: 'gray-warm-30' !default;
 $cfa-color-base: 'gray-warm-50' !default;
 $cfa-color-base-dark: 'gray-warm-60' !default;
 $cfa-color-base-darker: 'gray-warm-70' !default;
 $cfa-color-base-darkest: 'gray-warm-90' !default;
-$cfa-color-base-ink: 'gray-warm-90' !default;
+$cfa-color-base-ink: 'gray-warm-90' !default; // Affects outline button
 
 // - Primary
 $cfa-color-primary-family: 'mint' !default;
-$cfa-color-primary-lightest: 'mint-cool-5' !default;
+$cfa-color-primary-lightest: 'mint-cool-5' !default; // Affects details background
 $cfa-color-primary-lighter: 'mint-10' !default;
 $cfa-color-primary-light: 'mint-30' !default;
-$cfa-color-primary: 'mint-50' !default;
+$cfa-color-primary: 'mint-50' !default; // Affects primary button state
 $cfa-color-primary-vivid: 'mint-40v' !default;
 $cfa-color-primary-dark: 'mint-cool-70v' !default;
-$cfa-color-primary-darker: 'mint-cool-80v' !default;
+$cfa-color-primary-darker: 'mint-cool-80v' !default; // Affects primary button hover state, details text and border
 
 // - Secondary
 $cfa-color-secondary-family: 'magenta-vivid' !default;
 $cfa-color-secondary-lighter: 'magenta-10v' !default;
 $cfa-color-secondary-light: 'magenta-30v' !default;
-$cfa-color-secondary: 'magenta-50v' !default;
+$cfa-color-secondary: 'magenta-50v' !default; // Affects the secondary button
 $cfa-color-secondary-vivid: 'magenta-40v' !default;
 $cfa-color-secondary-dark: 'magenta-60v' !default;
-$cfa-color-secondary-darker: 'magenta-70v' !default;
+$cfa-color-secondary-darker: 'magenta-70v' !default; // Affects the secondary button hover state
 
 // - Accent Warm
 $cfa-color-accent-warm-family: 'red-warm-vivid' !default;
@@ -78,9 +78,9 @@ $cfa-color-accent-cool-darker: 'green-cool-60v' !default;
 $cfa-color-error-family: 'orange-warm-vivid' !default;
 $cfa-color-error-lighter: 'orange-warm-10v' !default;
 $cfa-color-error-light: 'orange-warm-30v' !default;
-$cfa-color-error: 'orange-warm-50v' !default;
+$cfa-color-error: 'orange-warm-50v' !default; // Affects the danger button, the no button icon color
 $cfa-color-error-dark: 'orange-warm-60v' !default;
-$cfa-color-error-darker: 'orange-warm-70v' !default;
+$cfa-color-error-darker: 'orange-warm-70v' !default; // Affects the danger button hover state
 
 // - Warning
 $cfa-color-warning-family: 'gold-vivid' !default;
@@ -112,9 +112,13 @@ $cfa-color-emergency-dark: 'orange-warm-60v' !default;
 
 // - Disabled
 $cfa-color-disabled-family: 'gray-warm' !default;
-$cfa-color-disabled-light: 'gray-warm-10' !default;
-$cfa-color-disabled: 'gray-warm-20' !default;
-$cfa-color-disabled-dark: 'gray-warm-30' !default;
+$cfa-color-disabled-light: 'gray-warm-10' !default; // Affects disabled button
+$cfa-color-disabled: 'gray-warm-50' !default;       // Affects disabled outline button
+$cfa-color-disabled-dark: 'gray-warm-70' !default;  // Affects disabled button text
+
+// $cfa-color-disabled-text: 'gray-warm-50' !default;         // This setting can't be configured
+// $cfa-color-disabled-text-reverse: 'gray-warm-40' !default; // This setting can't be configured
+// $cfa-color-text-on-disabled: 'gray-warm-70' !default;      // This setting can't be configured
 
 // - Visited
 $cfa-link-color: 'primary' !default;
@@ -154,7 +158,7 @@ $cfa-type-scale-3xl: 17 !default;   // Pushing this more because h1 is originall
 $cfa-style-body-element: true !default; // Not well documented but necessary to make type size and line heights consistent with .usa-prose
 $cfa-body-line-height: 4 !default;
 $cfa-h6-font-size: 'xs' !default;
-$cfa-small-font-size: 'xs' !default;
+$cfa-small-font-size: '2xs' !default; // Affects details font size
 
 // Setting measures to none prevents text from having a fixed width and allows it to flow
 $cfa-text-measure-narrow: 'none' !default;
@@ -175,9 +179,9 @@ $cfa-alert-link-color: 'ink' !default;
 $cfa-banner-link-color: 'mint-cool-70v' !default;
 // - Checkbox
 $cfa-input-select-size: 3 !default;
-$cfa-checkbox-border-radius: 0 !default;
 $cfa-input-tile-border-radius: 0 !default;
 $cfa-input-tile-border-width: 2px !default;
+$cfa-checkbox-border-radius: 0 !default;
 // - Header
 $cfa-header-logo-text-width: auto !default;
 // - Summary Box

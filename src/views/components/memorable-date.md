@@ -223,34 +223,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% capture stylesheets %}
-  {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-  {% capture stylesheet_legend %}{% getFile 'legend' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_label %}{% getFile 'label' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_select %}{% getFile 'select' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_input %}{% getFile 'input' 'stylesheet' %}{% endcapture %}
-
-  <li>Legend: <code>..{{ stylesheet_legend | replace: packages, '' }}</code></li>
-  <li>Label: <code>..{{ stylesheet_label | replace: packages, '' }}</code></li>
-  <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
-  <li>Select: <code>..{{ stylesheet_select | replace: packages, '' }}</code></li>
-  <li>Text Input: <code>..{{ stylesheet_input | replace: packages, '' }}</code></li>
-{% endcapture %}
-
-{% capture stylesheets_import %}
-@forward '{{ stylesheet_legend }}'
-@forward '{{ stylesheet_label }}'
-@forward '{{ stylesheet_hint }}'
-@forward '{{ stylesheet_select }}'
-@forward '{{ stylesheet_input }}'
-{% endcapture %}
-
-{% render 'source.md',
-  name: 'memorable-date',
-  nice: title,
-  usage: url_uswds_usage,
-  stylesheets: stylesheets,
-  stylesheets_import: stylesheets_import,
-  config: config,
-  pckg: package %}
+{% render 'source.md', name: 'memorable-date', nice: title, usage: url_uswds_usage, config: config, pckg: package %}

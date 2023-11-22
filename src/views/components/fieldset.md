@@ -221,21 +221,12 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
 
 <!-- SOURCE -->
 
-{% capture stylesheets %}
-  {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-  {% capture stylesheet_legend %}{% getFile 'legend' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_hint %}{% getFile 'hint' 'stylesheet' %}{% endcapture %}
-  {% capture stylesheet_input_select %}{% getFile 'input-select' 'stylesheet' %}{% endcapture %}
-
-  <li>Legend: <code>..{{ stylesheet_legend | replace: packages, '' }}</code></li>
-  <li>Hint: <code>..{{ stylesheet_hint | replace: packages, '' }}</code></li>
-  <li>Checkbox and Radio: <code>..{{ stylesheet_input_select | replace: packages, '' }}</code></li>
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-error: 'orange-warm-50v' // Affects the error state border color
+);
 {% endcapture %}
 
-{% capture stylesheets_import %}
-@forward '{{ stylesheet_legend }}'
-@forward '{{ stylesheet_hint }}'
-@forward '{{ stylesheet_input_select }}'
-{% endcapture %}
-
-{% render 'source.md', name: 'fieldset', nice: title, stylesheets: stylesheets, stylesheets_import: stylesheets_import, config: config, pckg: package %}
+{% render 'source.md', name: 'fieldset', nice: title, theme: theme, config: config, pckg: package %}

@@ -180,4 +180,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'select', nice: title, theme: '$theme-{{ setting }}: {{ value }}', usage: url_uswds, config: config, pckg: package %}
+{% render 'source.md', name: 'select', nice: title, usage: url_uswds, config: config, pckg: package %}

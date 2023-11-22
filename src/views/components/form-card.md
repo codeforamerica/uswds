@@ -636,15 +636,4 @@ The form card contains three major sections or slots that can be customized with
 
 <!-- SOURCE -->
 
-{% capture stylesheets %}
-  {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-  {% capture stylesheet_form %}{% getFile 'form' 'stylesheet' %}{% endcapture %}
-
-  <li>Form: <code>..{{ stylesheet_form | replace: packages, '' }}</code></li>
-{% endcapture %}
-
-{% capture stylesheets_import %}
-@forward '{{ stylesheet_form }}'
-{% endcapture %}
-
-{% render 'source.md', name: 'form-card', nice: title, stylesheets: stylesheets, stylesheets_import: stylesheets_import, config: config, pckg: package %}
+{% render 'source.md', name: 'form-card', nice: title, config: config, pckg: package %}

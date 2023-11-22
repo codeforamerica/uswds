@@ -86,10 +86,26 @@ The Details component contains helpful context for users but may not be necessar
 
 <!-- SOURCE -->
 
-{% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-{% capture package %}{% getFile 'details' %}{% endcapture %}
-{% capture javascript_question %}{% getFile 'details' 'javascript' %}{% endcapture %}
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-primary-lightest: 'mint-cool-5', // Affects details background
+  $cfa-color-primary-darker: 'mint-cool-80v'  // Affects details text and border color
+  $cfa-small-font-size: '2xs'                 // Affects details font size
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-details-font-size: $theme-small-font-size,
+  $cfa-details-background-color: $theme-color-primary-lightest,
+  $cfa-details-text-color: $theme-color-primary-darker
+);
+{% endcapture %}
 
-{% capture javascript %}enables the expansion and collapse of the details region. It also toggles the ARIA expanded attribute on the summary button and the tabindex attribute on potentially focusable children inside the details region. The module can be found at <code>.{{ javascript_question | replace: package, '' }}</code>.{% endcapture %}
+{% capture file_package %}{% getFile 'details' %}{% endcapture %}
+{% capture javascript_details %}{% getFile 'details' 'javascript' %}{% endcapture %}
 
-{% render 'source.md', name: 'details', nice: title, javascript: javascript, usage: usage, config: config, pckg: package %}
+{% capture javascript %}enables the expansion and collapse of the details region. It also toggles the ARIA expanded attribute on the summary button and the tabindex attribute on potentially focusable children inside the details region. The module can be found at <code>.{{ javascript_details | replace: file_package, '' }}</code>.{% endcapture %}
+
+{% render 'source.md', name: 'details', nice: title, theme: theme, javascript: javascript, config: config, pckg: package %}

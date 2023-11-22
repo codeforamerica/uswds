@@ -38,8 +38,8 @@
  */
 
 .cfa-button.usa-button--big:not(.usa-button--unstyled) {
-  font-size: font-size($theme-button-font-family, 'lg');
-  border-radius: radius('lg');
+  font-size: font-size($theme-button-font-family, $cfa-button-big-font-size);
+  border-radius: radius($cfa-button-big-border-radius);
   padding: units(2.5) units(4);
 }
 
@@ -102,16 +102,16 @@
 .cfa-button[disabled],
 .cfa-button[aria-disabled=true] {
   @include set-text-and-bg(
-    $bg-color: 'base-lighter',
-    $preferred-text-color: 'base-darker',
+    $bg-color: 'disabled-light',
+    $preferred-text-color: 'disabled-dark',
     $context: 'CfA Button'
   );
 
   &:hover,
   &:focus {
     @include set-text-and-bg(
-      $bg-color: 'base-lighter',
-      $preferred-text-color: 'base-darker',
+      $bg-color: 'disabled-light',
+      $preferred-text-color: 'disabled-dark',
       $context: 'CfA Button'
     );
   }
@@ -121,7 +121,7 @@
 .cfa-button.usa-button--outline[aria-disabled=true] {
   @include set-text-and-bg(
     $bg-color: $theme-body-background-color,
-    $preferred-text-color: 'base-dark',
+    $preferred-text-color: 'disabled',
     $context: 'CfA Button'
   );
 
@@ -129,7 +129,7 @@
   &:focus {
     @include set-text-and-bg(
       $bg-color: $theme-body-background-color,
-      $preferred-text-color: 'base-dark',
+      $preferred-text-color: 'disabled',
       $context: 'CfA Button'
     );
   }

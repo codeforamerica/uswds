@@ -172,9 +172,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- SOURCE -->
 
 {% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
-{% capture package %}{% getFile 'upload-documents' %}{% endcapture %}
-{% capture javascript_question %}{% getFile 'upload-documents' 'javascript' %}{% endcapture %}
+{% capture file_upload %}{% getFile 'upload-documents' %}{% endcapture %}
+{% capture javascript_upload %}{% getFile 'upload-documents' 'javascript' %}{% endcapture %}
 
-{% capture javascript %}enables the drag-and-drop interaction, uploaded file preview and management, and validation messaging. The module extends the open source library <a href="https://github.com/dropzone/dropzone" target="_blank" rel="noopener nofollow" class="usa-link--external">Dropzone</a> to provide interaction and customization options. The module can be found at <code>.{{ javascript_question | replace: package, '' }}</code>.{% endcapture %}
+{% capture javascript %}enables the drag-and-drop interaction, uploaded file preview and management, and validation messaging. The module extends the open source library <a href="https://github.com/dropzone/dropzone" target="_blank" rel="noopener nofollow" class="usa-link--external">Dropzone</a> to provide interaction and customization options. The module can be found at <code>.{{ javascript_upload | replace: file_upload, '' }}</code>.{% endcapture %}
 
 {% render 'source.md', name: 'upload-documents', nice: title, javascript: javascript, config: config, pckg: package %}

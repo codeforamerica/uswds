@@ -137,4 +137,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'input-select', nice: title, usage: url_uswds_usage, theme: '$theme-input-select-size: 3', config: config, pckg: package %}
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-base-lightest: 'gray-warm-4', // Affects checkbox and radio hover state
+  $cfa-input-select-size: 3,               // Affects checkbox and radio
+  $cfa-input-tile-border-radius: 0,        // Affects checkbox and radio
+  $cfa-input-tile-border-width: 2px,       // Affects checkbox and radio
+  // Component specific settings
+  $cfa-checkbox-border-radius: 0
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-input-select-margin: 1.5,  // Affects checkbox and radio
+  $cfa-input-select-width: 2,     // Affects checkbox and radio
+  $cfa-input-select-height: 2,    // Affects checkbox and radio
+  $cfa-input-select-padding-x: 3, // Affects checkbox and radio
+  $cfa-input-select-padding-y: 2, // Affects checkbox and radio
+  $cfa-input-select-gap: 2        // Affects checkbox and radio
+);
+{% endcapture %}
+
+{% render 'source.md', name: 'input-select', nice: title, usage: url_uswds_usage, theme: theme, config: config, pckg: package %}

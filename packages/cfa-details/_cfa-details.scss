@@ -3,7 +3,7 @@
 @use '../cfa-links/_cfa-links.scss' as *;
 
 .cfa-details {
-  @include u-font('sans', '2xs');
+  @include u-font('sans', $cfa-details-font-size);
 }
 
 .cfa-details__summary {

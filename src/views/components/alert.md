@@ -174,6 +174,7 @@ Additional context and followup information including [a link](#). {.usa-alert__
 <!-- SOURCE -->
 
 {% capture theme %}
+// Theme-level settings
 @use 'cfa-uswds-theme' with (
   $cfa-alert-bar-width: '0',
   $cfa-alert-padding-x: '2',
@@ -182,4 +183,4 @@ Additional context and followup information including [a link](#). {.usa-alert__
 );
 {% endcapture %}
 
-{% render 'source.md', name: 'alert', nice: title, theme: '$theme-alert-padding-x: 2', usage: url_uswds_usage, config: config, pckg: package %}
+{% render 'source.md', name: 'alert', nice: title, theme: theme, usage: url_uswds_usage, config: config, pckg: package %}
