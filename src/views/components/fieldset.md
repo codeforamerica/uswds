@@ -10,7 +10,7 @@ nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
 modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
-design_honeycrisp:
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=7110-1174&mode=design
 tokens: true
 styles: true
 ---
@@ -217,7 +217,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
 
 <!-- DESIGN -->
 
-<!-- render 'figma.md', url: design_honeycrisp -->
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
 
@@ -225,7 +225,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
-  $cfa-color-error: 'orange-warm-50v' // Affects the error state border color
+  $cfa-color-error-dark: 'orange-warm-60v' // Affects the error state border color
 );
 {% endcapture %}
 

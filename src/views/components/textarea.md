@@ -84,4 +84,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'textarea', nice: title, usage: url_uswds_usage, config: config, pckg: package %}
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-base-lightest: 'gray-warm-4', // Affects the background color of the textarea
+  $cfa-color-base-lighter: 'gray-warm-10', // Affects the color of the textarea inset border
+  $cfa-color-base-ink: 'gray-warm-90'      // Affects the text and border color of the textarea
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-form-elements-border-width: 2px,
+  $cfa-form-elements-padding-y: 2,
+  $cfa-form-elements-padding-x: 2.5,
+  $cfa-textarea-height: 15
+);
+{% endcapture %}
+
+{% render 'source.md', name: 'textarea', nice: title, theme: theme, usage: url_uswds_usage, config: config, pckg: package %}

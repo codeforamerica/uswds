@@ -1,5 +1,5 @@
 <div class="cfa-details<% if defined?(modifier) %> <%= modifier %><% end %>">
-  <% if defined?(summary) %><button class="cfa-details__summary" data-js="details"<% if defined?(controls) %> data-aria-controls="<%= controls %>"<% end %><% if defined?(openAttr) %> data-aria-expanded="<%= openAttr %>"<% end %>>
+  <% if defined?(summary) %><button type="button" class="cfa-details__summary" data-js="details"<% if defined?(controls) %> data-aria-controls="<%= controls %>"<% end %><% if defined?(openAttr) %> data-aria-expanded="<%= openAttr %>"<% end %>>
     <span><%= summary %></span><% if defined?(icon) %><svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="<%= icon %>"></use>
     </svg><% end %>

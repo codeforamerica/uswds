@@ -10,7 +10,7 @@ nice_uswds:
 url_honeycrisp:
 nice_honeycrisp:
 modifier_honeycrisp: false
-design_honeycrisp: false
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=16348-2627&mode=design
 tokens: false
 styles: false
 ---
@@ -204,4 +204,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'household-details', nice: title, usage: usage, sass: false, config: config, pckg: package %}
+{% render 'source.md', name: 'household-details', nice: title, config: config, pckg: package %}

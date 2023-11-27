@@ -1,5 +1,5 @@
 <div th:fragment="identifier(modifier, identity, requiredLinks, governmentSection)" class="usa-identifier" th:classappend="${modifier}">
-  <section th:if="${identity}" class="usa-identifier__section usa-identifier__section--masthead" th:attr="aria-label=${idenitity.ariaLabel}">
+  <section th:if="${identity}" class="usa-identifier__section usa-identifier__section--masthead" th:attr="aria-label=${identity.ariaLabel}">
     <div class="usa-identifier__container">
       <div class="usa-identifier__identity">
         <p th:if="${identity.domain}" class="usa-identifier__identity-domain" th:text="${identity.domain}">domain.gov</p>

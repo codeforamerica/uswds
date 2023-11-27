@@ -47,37 +47,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {% capture context %}{
   "modifier": "",
   "id": "dropzone-{{ id }}",
-  "documentType": {
-    "modifier": "cfa-form-group",
-    "id": "form-group-{{ id_document_type }}",
-    "label": {
-      "text": "What type of document is this?",
-      "for": "select-{{ id_document_type }}",
-      "modifier": "cfa-label",
-      "modifierHint": "cfa-hint"
-    },
-    "selectEl": {
-      "modifier": "cfa-select",
-      "id": "select-{{ id_document_type }}",
-      "name": "select['{{ id_document_type }}']",
-      "ariaDescribedby": "hint-{{ id_document_type }}",
-      "required": "true",
-      "default": {
-        "label": "Click to select a type",
-        "selected": "true"
-      },
-      "options": [
-        {
-          "label": "---",
-          "disabled": "true"
-        },
-        {
-          "value": "wages",
-          "label": "wages, salaries, tips"
-        }
-      ]
-    }
-  },
   "fileInput": {
     "modifier": "cfa-form-group cfa-file-input",
     "id": "form-group-{{ id }}",
@@ -171,10 +140,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% capture packages %}@codeforamerica/uswds/packages{% endcapture %}
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-focus-color: 'gold-30v',                // Affects border color of the file input hover and focus state
+  $cfa-color-base-ink: 'gray-warm-90',         // Affects color of the file input hint text and instructions
+  $cfa-color-primary-lightest: 'mint-cool-5',  // Affects color of the file input hover state background
+  $cfa-color-primary: 'mint-50',               // Affects the color of the file input border and primary button
+  $cfa-color-error-lighter: 'orange-warm-10v', // Affects error state color of upload document elements
+  $cfa-color-error: 'orange-warm-50v',         // Affects error state color of upload document elements
+  $cfa-color-error-dark: 'orange-warm-60v',    // Affects error state color of upload document elements
+  $cfa-color-success-lighter: 'green-cool-5v', // Affects success state color of upload document elements
+  $cfa-color-success-darker: 'green-cool-60v', // Affects success state color of upload document elements
+  $cfa-color-info-light: 'gray-warm-20',       // Affects informational state color of upload document elements
+  $cfa-color-info-lighter: 'gray-warm-4',      // Affects informational state color of upload document elements
+  $cfa-color-info-dark: 'gray-warm-60'         // Affects informational state color of upload document elements
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-form-elements-border-width: 2px
+);
+{% endcapture %}
+
 {% capture file_upload %}{% getFile 'upload-documents' %}{% endcapture %}
 {% capture javascript_upload %}{% getFile 'upload-documents' 'javascript' %}{% endcapture %}
 
 {% capture javascript %}enables the drag-and-drop interaction, uploaded file preview and management, and validation messaging. The module extends the open source library <a href="https://github.com/dropzone/dropzone" target="_blank" rel="noopener nofollow" class="usa-link--external">Dropzone</a> to provide interaction and customization options. The module can be found at <code>.{{ javascript_upload | replace: file_upload, '' }}</code>.{% endcapture %}
 
-{% render 'source.md', name: 'upload-documents', nice: title, javascript: javascript, config: config, pckg: package %}
+{% render 'source.md', name: 'upload-documents', nice: title, theme: theme, javascript: javascript, config: config, pckg: package %}

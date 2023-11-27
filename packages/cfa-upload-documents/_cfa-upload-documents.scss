@@ -2,6 +2,10 @@
 @use 'cfa-core' as *;
 @use '../cfa-transition/_cfa-transition.scss' as *;
 
+.cfa-upload-documents .usa-file-input {
+  max-width: initial;
+}
+
 .cfa-upload-documents__preview-header {
   @include u-font('sans', 'xs');
   @include u-text('bold');

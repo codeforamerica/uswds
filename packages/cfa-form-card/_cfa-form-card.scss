@@ -13,7 +13,6 @@
   margin-right: auto;
   margin-bottom: units(0.5);
 
-
   @include at-media('tablet') {
     max-width: units('tablet');
     padding: units(7) units(4);
@@ -32,8 +31,7 @@
   overflow: hidden;
 
   h1, h2, h3, h4, h5, h6 {
-    @include u-font('sans', 'xl');
-    @include u-text('bold');
+    @include typeset($cfa-form-card-header-typeset);
 
     margin-bottom: 0;
   }
@@ -41,6 +39,13 @@
 
 .cfa-form-card__help-message {
   margin-top: units(3);
+}
+
+.cfa-form-card__details {
+  margin-top: units(3);
+
+  display: grid;
+  gap: units(3);
 }
 
 .cfa-form-card__header-alert {
@@ -74,8 +79,14 @@
 
   display: grid;
   gap: units(4);
-}
 
-.usa-button.cfa-form-card__footer-first-button {
-  margin-top: 0;
+  .usa-button {
+    margin-top: 0;
+  }
+
+  @include at-media('mobile-lg') {
+    .usa-button {
+      margin-top: 0;
+    }
+  }
 }

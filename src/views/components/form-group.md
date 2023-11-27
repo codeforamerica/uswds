@@ -10,7 +10,7 @@ nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
 modifier_honeycrisp: ['.cfa-form-group', '.cfa-label', '.cfa-hint', '.cfa-input-group', '.cfa-input', '.cfa-textarea', '.cfa-select']
-design_honeycrisp:
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=7110-1174&mode=design
 tokens: true
 styles: true
 ---
@@ -65,7 +65,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with text input' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with text input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -100,7 +100,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Invalid form group' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Invalid form group' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -127,7 +127,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with email input' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with email input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -147,7 +147,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with textarea' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -168,7 +168,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with textarea' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -202,7 +202,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with prefix and mask (U.S. Dollars)' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with prefix and mask (U.S. Dollars)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -234,7 +234,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with postfix' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with postfix' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -268,7 +268,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with prefix and input mask (U.S. Phone)' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with prefix and input mask (U.S. Phone)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -292,7 +292,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with input mask (SSN)' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with input mask (SSN)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -413,7 +413,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, body: body, context: context, caption: 'Form group with select' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with select' %}
 
 <!-- GUIDANCE -->
 
@@ -444,12 +444,20 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
 
 <!-- DESIGN -->
 
-<!-- render 'figma.md', url: design_honeycrisp -->
+{% render 'figma.md', url: design_honeycrisp %}
 
 <!-- SOURCE -->
+
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-error-dark: 'orange-warm-60v' // Affects the error state border color
+);
+{% endcapture %}
 
 {% capture javascript %}
 provides custom input masking support utilizing the open source library <a href="https://github.com/nosir/cleave.js" target="_blank" rel="noopener nofollow" class="usa-link--external">Cleave.js</a>.
 {% endcapture %}
 
-{% render 'source.md', name: 'form-group', nice: title, javascript: javascript, config: config, pckg: package %}
+{% render 'source.md', name: 'form-group', nice: title, theme: theme, javascript: javascript, config: config, pckg: package %}

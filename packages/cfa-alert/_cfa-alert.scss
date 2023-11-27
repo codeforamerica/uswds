@@ -1,7 +1,9 @@
 @use 'uswds-core' as *;
+@use 'cfa-core' as *;
 
 .cfa-alert {
-  border: 2px solid;
+  // border: 2px solid;
+  @include u-border($cfa-alert-border-width);
 
   .usa-alert__body {
     // The USWDS currently doesn't respect $theme-alert-padding-x and uses the

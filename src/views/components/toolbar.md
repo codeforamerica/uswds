@@ -10,7 +10,7 @@ nice_uswds:
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-toolbar
 nice_honeycrisp: Toolbar molecule
 modifier_honeycrisp: false
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A922%26mode%3Ddesign%26t%3DYs0br9Tuopl6VRla-1
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-531&mode=design
 tokens: false
 styles: false
 ---
@@ -102,4 +102,4 @@ The {{ title }} is a custom component created using <a href="https://designsyste
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'toolbar', nice: title, usage: usage, sass: false, config: config, pckg: package %}
+{% render 'source.md', name: 'toolbar', nice: title, config: config, pckg: package %}

@@ -23,6 +23,21 @@
         <%= header['helpMessage']['content'] %>
       </div><% end %>
 
+      <% if header.has_key?('details') %><div class="cfa-form-card__details">
+        <% header['details'].each do |details| %><div>
+        <%= ERB.new(File.read('packages/cfa-details/_cfa-details.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+          .result_with_hash({
+            modifier: (details['modifier'] if details['modifier']),
+            summary: (details['summary'] if details['summary']),
+            controls: (details['controls'] if details['controls']),
+            openAttr: (details['openAttr'] if details['openAttr']),
+            icon: (details['icon'] if details['icon']),
+            body: (details['body'] if details['body']),
+            text: (details['text'] if details['text'])
+          }.compact) %>
+        </div><% end %>
+      </div><% end %>
+
       <% if header['alert'] %><div>
         <%= ERB.new(File.read('packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert')
           .result_with_hash({
@@ -82,6 +97,18 @@
                 required: (formGroup['required'] if formGroup['required'])
               }.compact) %>
           </div><% end %>
+
+          <% if formGroup['fileInput'] %>
+          <%= ERB.new(File.read('packages/cfa-upload-documents/_cfa-upload-documents.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              id: (formGroup['id'] if formGroup['id']),
+              fileInput: formGroup['fileInput'],
+              previewHeader: (formGroup['previewHeader'] if formGroup['previewHeader']),
+              previewTemplate: (formGroup['previewTemplate'] if formGroup['previewTemplate']),
+              defaultPreviewTemplate: (formGroup['defaultPreviewTemplate'] if formGroup['defaultPreviewTemplate']),
+              dict: (formGroup['dict'] if formGroup['dict'])
+            }.compact) %>
+          <% end %>
         </div><% end %>
       </div>
     </fieldset>
@@ -103,6 +130,34 @@
 
       <% if header.has_key?('helpMessage') && header['helpMessage']['content'] %><div class="cfa-form-card__help-message">
         <%= header['helpMessage']['content'] %>
+      </div><% end %>
+
+      <% if header.has_key?('details') %><div class="cfa-form-card__details">
+        <% header['details'].each do |details| %><div>
+        <%= ERB.new(File.read('packages/cfa-details/_cfa-details.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+          .result_with_hash({
+            modifier: (details['modifier'] if details['modifier']),
+            summary: (details['summary'] if details['summary']),
+            controls: (details['controls'] if details['controls']),
+            openAttr: (details['openAttr'] if details['openAttr']),
+            icon: (details['icon'] if details['icon']),
+            body: (details['body'] if details['body']),
+            text: (details['text'] if details['text'])
+          }.compact) %>
+        </div><% end %>
+      </div><% end %>
+
+      <% if header['alert'] %><div>
+        <%= ERB.new(File.read('packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert')
+          .result_with_hash({
+            modifier: (header['alert']['modifier'] if header['alert']['modifier']),
+            role: (header['alert']['role'] if header['alert']['role']),
+            heading: (header['alert']['heading'] if header['alert']['heading']),
+            label: (header['alert']['label'] if header['alert']['label']),
+            labelledBy: (header['alert']['labelledBy'] if header['alert']['labelledBy']),
+            body: (header['alert']['body'] if header['alert']['body']),
+            text: (header['alert']['text'] if header['alert']['text'])
+          }.compact) %>
       </div><% end %>
 
       <% if defined?(content) %><div class="cfa-form-card__content">
@@ -162,7 +217,7 @@
             }.compact) %>
           <% end %>
 
-          <% if formGroup['options'] %>
+          <% if formGroup['options'] %><div class="cfa-form-card__input-select-group">
           <%= ERB.new(File.read('packages/cfa-fieldset/_cfa-fieldset.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
             .result_with_hash({
               modifier: (formGroup['modifier'] if formGroup['modifier']),
@@ -172,6 +227,18 @@
               required: (formGroup['required'] if formGroup['required']),
               error: (formGroup['error'] if formGroup['error']),
               options: (formGroup['options'] if formGroup['options'])
+            }.compact) %>
+          </div><% end %>
+
+          <% if formGroup['fileInput'] %>
+          <%= ERB.new(File.read('packages/cfa-upload-documents/_cfa-upload-documents.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+            .result_with_hash({
+              id: (formGroup['id'] if formGroup['id']),
+              fileInput: formGroup['fileInput'],
+              previewHeader: (formGroup['previewHeader'] if formGroup['previewHeader']),
+              previewTemplate: (formGroup['previewTemplate'] if formGroup['previewTemplate']),
+              defaultPreviewTemplate: (formGroup['defaultPreviewTemplate'] if formGroup['defaultPreviewTemplate']),
+              dict: (formGroup['dict'] if formGroup['dict'])
             }.compact) %>
           <% end %>
         </div><% end %>

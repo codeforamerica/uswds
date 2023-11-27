@@ -1,5 +1,5 @@
 <div th:fragment="details(modifier, summary, controls, openAttr, icon, body, text)" class="cfa-details" th:classappend="${modifier}">
-  <button th:if="${summary}" class="cfa-details__summary" data-js="details" th:attr="data-aria-controls=${controls},data-aria-expanded=${openAttr}">
+  <button type="button" th:if="${summary}" class="cfa-details__summary" data-js="details" th:attr="data-aria-controls=${controls},data-aria-expanded=${openAttr}">
     <span th:text="${summary}">Summary</span><svg th:if="icon" class="usa-icon" aria-hidden="true" focusable="false" role="img">
       <use th:href="${icon}"></use>
     </svg>

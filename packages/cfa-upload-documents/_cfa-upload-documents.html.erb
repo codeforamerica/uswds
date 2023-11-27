@@ -1,12 +1,12 @@
 <div class="usa-form-group cfa-form-group cfa-file-input" data-js="upload-documents"<% if defined?(id) %> id="<%= id %>"<% end %>>
   <div class="cfa-upload-documents" data-dropzone="uploads">
-    <label class="usa-label<% if fileInput['label']['modifier'] %> <%= fileInput['label']['modifier'] %><% end %>"<% if fileInput['label']['for'] %> for="<%= fileInput['label']['for'] %>"<% end %><% if fileInput['label']['tabindex'] %> tabindex="<%= fileInput['label']['tabindex'] %>"<% end %>>
+    <% if fileInput['label'] %><label class="usa-label<% if fileInput['label']['modifier'] %> <%= fileInput['label']['modifier'] %><% end %>"<% if fileInput['label']['for'] %> for="<%= fileInput['label']['for'] %>"<% end %><% if fileInput['label']['tabindex'] %> tabindex="<%= fileInput['label']['tabindex'] %>"<% end %>>
       <span><%= fileInput['label']['text'] %></span>
 
       <% if fileInput['input']['required'] %>
       <abbr title="required" class="usa-hint usa-hint--required<% if fileInput['label']['modifierHint'] %> <%= fileInput['label']['modifierHint'] %><% end %>">*</abbr>
       <% end %>
-    </label>
+    </label><% end %>
 
     <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
 

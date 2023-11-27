@@ -10,7 +10,7 @@ nice_uswds: Footer, slim variant
 url_honeycrisp:
 nice_honeycrisp: Footer organism
 modifier_honeycrisp: false
-design_honeycrisp: false
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-532&mode=design
 tokens: false
 styles: false
 ---
@@ -113,4 +113,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'footer', nice: title, usage: usage, sass: false, config: config, pckg: package %}
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-base-lightest: 'gray-warm-4', // Affects footer primary section background
+  $cfa-color-base-lighter: 'gray-warm-10'  // Affects footer secondary section background
+);
+{% endcapture %}
+
+{% render 'source.md', name: 'footer', nice: title, usage: url_uswds_usage, theme: theme, config: config, pckg: package %}

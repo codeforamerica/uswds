@@ -10,7 +10,7 @@ nice_uswds: Form
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#organisms-form_card_1
 nice_honeycrisp: Form card organism
 modifier_honeycrisp: ['.cfa-form-card', '.cfa-form', '.cfa-form-card__graphic', '.cfa-form-card__heading', '.cfa-form-card__help-message', '.cfa-form-card__header-alert', '.cfa-form-card__content', '.cfa-form-card__input-select-group', '.cfa-form-card__footer']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A521%26mode%3Ddesign%26t%3DvzQiHaQRkv72JvWh-1
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-533&mode=design
 tokens: false
 styles: true
 ---
@@ -314,7 +314,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with multiple form groups and fieldsets' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with multiple form groups and fieldsets' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 {% capture id_street_address_line_1 %}{% createId %}{% endcapture %}
@@ -436,7 +436,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question and multi-part text input fieldset' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question and multi-part text input fieldset' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 {% capture id_alert_label %}{% createId %}{% endcapture %}
@@ -502,7 +502,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question, alert, and radios fieldset' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, alert, and radios fieldset' %}
 
 {% capture context %}{
   "form": {
@@ -533,7 +533,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question, continue, and skip links' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, continue, and skip links' %}
 
 {% capture help_message_content %}
 
@@ -572,7 +572,149 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, body: body, context: context, caption: 'Form card with single question, yes, and no links' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, yes, and no links' %}
+
+{% capture id %}{% createId %}{% endcapture %}
+{% capture id_document_type %}{% createId %}{% endcapture %}
+{% capture id_file_upload %}{% createId %}{% endcapture %}
+{% capture id_preview %}{% createId %}{% endcapture %}
+
+{% capture required_docs %}
+**Please submit proof of each of the following:**
+
+* **Your identity**. <br> For each person, we need things like a photo ID (like a driver's license or passport), birth certificate, adoption papers, or naturalization certificate.
+
+* **Your job and income**. <br> For work, we might ask for your latest tax returns, current pay stubs, a letter from your boss with info about how much you earn and how often you work, W-2 forms, or records if you work for yourself. We need this for everyone in your home.
+
+* **Money in the bank and other valuable assets**. <br> Having these things can affect whether you can get help with childcare and food benefits faster.
+
+* **Where you live and who lives there**. <br> This can include your lease, rental agreement, recent rent receipts with your address, a statement from your landlord (who can't be a relative), or mortgage papers.
+
+* **Money you spend on your home or shelter and bills**. <br> For example, we might need to see bills for things like electricity, gas, water, internet, phone, sewer, and garbage collection. Documentation for shelter costs may be similar to requirements for proof of where you live (lease or rental agreements).
+
+**The following proof may be requested depending on your circumstances:**
+
+* **Education and training**. <br> This could include diplomas, school records, transcripts, certificates, or proof of your work experience if you're getting help from the Temporary Assistance for Needy Families (TANF) program.
+
+* **Marriage or relationship status**. <br> These documents could be things like your marriage certificate, a document that says you're separated, or a divorce decree if you've been divorced.
+
+* **Your Social Security number**. <br> You can do this by sharing your Social Security card or any official papers you've received from the Social Security Administration.
+
+* **Your status in the United States**. <br> You can show us this with documents like your birth certificate, records from your military service, or a naturalization certificate if you became a citizen. If you're not a U.S. citizen, we'll need to know that too.
+
+* **Disability**. <br> Some examples include Medical records or doctor's statements.
+
+* **You get child support money**. <br> You can show us this with things like papers from family court, a statement from the person paying the support, check stubs, or official letters from the agency that's making sure the support is paid.
+
+* **Money from other support programs**. <br> To prove this, you can use official papers from the program that's helping you, awards, letters, pay stubs, checks, certificates, or letters.
+
+* **Health insurance you may have**. <br> This could be your insurance card, a paper from your insurance company, or your Medicare card if you have one.
+
+* **Details about any parent (or step-parent) who doesn't live with you**. <br> The information we need is similar to what we've already detailed such as, proof of identity, Social Security number, job information, or marriage documents.
+{% endcapture %}
+
+{% capture document_tips %}
+You can provide any of these documents as images or PDFs by…
+
+* … taking photos using your phone, or
+* … taking a screenshot on your phone or computer, or
+* … selecting files stored on your phone or computer.
+
+We accept any file with a name that ends in .pdf, .jpeg, .jpg, .png, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp. Each file is limited to **20 MB**, and a **maximum of 20 files** are allowed.
+{% endcapture %}
+
+{% capture context %}{
+  "form": {
+    "modifier": "cfa-form"
+  },
+  "header": {
+    "heading": {
+      "id": "label-{{ id }}",
+      "text": "Add your files or photos"
+    },
+    "details": [
+      {
+        "summary": "Review document list",
+        "icon": "{{ config.baseUrl }}assets/img/sprite.svg#chevron_right",
+        "controls": "aria-c-{% createId %}",
+        "body": "{% md required_docs %}"
+      },
+      {
+        "summary": "Review tips for adding documents",
+        "icon": "{{ config.baseUrl }}assets/img/sprite.svg#chevron_right",
+        "controls": "aria-c-{% createId %}",
+        "body": "{% md document_tips %}"
+      }
+    ]
+  },
+  "fieldset": {
+    "modifier": "cfa-fieldset",
+    "formGroups": [
+      {
+        "modifier": "",
+        "id": "dropzone-{{ id }}",
+        "fileInput": {
+          "modifier": "cfa-form-group cfa-file-input",
+          "id": "form-group-{{ id }}",
+          "hint": {
+            "text": "<span class=\"usa-file-input__choose\">Select or drop files here</span>",
+            "modifier": "cfa-hint",
+            "id": "hint-{{ id }}"
+          },
+          "input": {
+            "modifier": "usa-file-input cfa-input cfa-file-input__input",
+            "id": "input-{{ id }}",
+            "name": "input['{{ id }}']",
+            "ariaLabelledby": "label-{{ id }}",
+            "ariaDescribedby": "hint-{{ id }}",
+            "type": "file",
+            "accept": ".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp",
+            "multiple": "multiple",
+            "required": "true"
+          },
+          "button": {
+            "icon": "{{ config.baseUrl }}assets/img/sprite.svg#add"
+          }
+        },
+        "previewHeader": {
+          "id": "aria-db-{{ id_preview }}"
+        },
+        "defaultPreviewTemplate": {
+          "error": {
+            "icon": "{{ config.baseUrl }}assets/img/sprite.svg#warning"
+          },
+          "thumbnail": {
+            "default": "{{ config.baseUrl }}assets/img/sprite.svg#file_present"
+          }
+        },
+        "dict": [
+          {
+            "key": "fileTooBig",
+            "string": "Sorry, we can't accept files larger than 20 MB. Please, remove this file, make it smaller, then, try again."
+          },
+          {
+            "key": "maxFiles",
+            "string": "You have uploaded the maximum number of 20 files. You will have the opportunity to add more later."
+          },
+          {
+            "key": "maxFilesExceeded",
+            "string": "Sorry, we can't accept this file. You have uploaded the maximum number of 20 files. You will have the opportunity to add more later."
+          },
+          {
+            "key": "invalidFileType",
+            "string": "Sorry, we can't accept this type of file. Please, remove this file, then, try another file that ends in .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp."
+          },
+          {
+            "key": "responseError",
+            "string": "Sorry, there was an error on our end. Please, remove this file and try again. If the error continues please try again later."
+          }
+        ]
+      }
+    ]
+  }
+}{% endcapture %}
+
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card for uploading documents' %}
 
 ## Guidance {#guidance}
 
@@ -636,4 +778,19 @@ The form card contains three major sections or slots that can be customized with
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'form-card', nice: title, config: config, pckg: package %}
+{% capture theme %}
+// Theme-level settings
+@use 'uswds-core' with (
+  // The Form card uses settings from the USWDS Card component
+  $theme-card-border-width: 2px
+  $theme-card-border-color: 'base-lighter'
+  $theme-card-border-radius: 'lg'
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-form-card-header-typeset: 'heading', 'xl', 2
+);
+{% endcapture %}
+
+{% render 'source.md', name: 'form-card', nice: title, theme: theme, config: config, pckg: package %}

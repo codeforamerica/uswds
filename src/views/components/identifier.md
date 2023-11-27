@@ -5,12 +5,12 @@ layout: default
 story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 url_uswds: https://designsystem.digital.gov/components/identifier
 url_uswds_guidance: https://designsystem.digital.gov/components/identifier/#guidance
-url_uswds_usage: https://designsystem.digital.gov/components/identifier/#using-the-footer-component-2
+url_uswds_usage: https://designsystem.digital.gov/components/identifier/#using-the-identifier-component-2
 nice_uswds: Identifier, no logos
 url_honeycrisp:
 nice_honeycrisp:
 modifier_honeycrisp: false
-design_honeycrisp: false
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-532&mode=design
 tokens: false
 styles: false
 ---
@@ -107,4 +107,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'footer', nice: title, usage: usage, sass: false, config: config, pckg: package %}
+{% render 'source.md', name: 'identifier', nice: title, usage: url_uswds_usage, config: config, pckg: package %}

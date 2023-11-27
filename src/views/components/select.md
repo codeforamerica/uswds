@@ -180,4 +180,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
-{% render 'source.md', name: 'select', nice: title, usage: url_uswds, config: config, pckg: package %}
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-base-ink: 'gray-warm-90' // Affects the text and border color of the select
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-form-elements-border-width: 2px,
+  $cfa-form-elements-padding-y: 2,
+  $cfa-form-elements-padding-x: 2.5,
+  $cfa-select-height: 8
+);
+{% endcapture %}
+
+{% render 'source.md', name: 'select', nice: title, theme: theme, usage: url_uswds_usage, config: config, pckg: package %}

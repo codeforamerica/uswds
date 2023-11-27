@@ -33,11 +33,17 @@ The Details component contains helpful context for users but may not be necessar
 
 ## Examples {#examples}
 
+{% capture certification_letter %}
+If you don't have any of these documents, you can write, sign, date, and submit this letter:
+
+*I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.* <br> *[Your signature]* <br> *[Today's date]*
+{% endcapture %}
+
 {% capture context %}{
-  "summary": "What’s an example of a self-certification letter?",
+  "summary": "What's an example of a self-certification letter?",
   "icon": "{{ config.baseUrl }}assets/img/sprite.svg#chevron_right",
   "controls": "aria-c-{% createId %}",
-  "body": "<p>If you don’t have any of these documents, you can write, sign, date, and submit this letter:</p><p><i>I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.</i></p><p><i>[Your signature]</i></p><p><i>[Today’s date]</i></p>"
+  "body": "{% md certification_letter %}"
 }{% endcapture %}
 
 {% render 'figure.md', name: 'details', nice: title, body: body, context: context, caption: 'Details' %}

@@ -176,10 +176,27 @@ Additional context and followup information including [a link](#). {.usa-alert__
 {% capture theme %}
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
-  $cfa-alert-bar-width: '0',
-  $cfa-alert-padding-x: '2',
-  $cfa-alert-padding-y: '2',
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-info-lighter: 'gray-warm-4',       // Affects the background color of informational alerts
+  $cfa-color-info-light: 'gray-warm-20',        // Affects border color of informational alerts
+  $cfa-color-warning-lighter: 'gold-5v',        // Affects the background color of warning alerts
+  $cfa-color-warning: 'gold-20v',               // Affects border color of informational alerts
+  $cfa-color-error-lighter: 'orange-warm-10v'   // Affects the background color of error alerts
+  $cfa-color-error: 'orange-warm-50v',          // Affects border color of error alerts
+  $cfa-color-success-lighter: 'green-cool-5v',  // Affects the background color of success alerts
+  $cfa-color-success-darker: 'green-cool-60v',  // Affects border color of success alerts
+  $cfa-color-emergency: 'orange-warm-30v'       // Affects the background color of emergency alerts
+  $cfa-color-emergency-dark: 'orange-warm-60v', // Affects border color of emergency alerts
+  // Component specific settings
+  $cfa-alert-bar-width: 0,
+  $cfa-alert-padding-x: 2,
+  $cfa-alert-padding-y: 2,
   $cfa-alert-link-color: 'ink'
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  $cfa-alert-border-width: 2px
 );
 {% endcapture %}
 

@@ -153,9 +153,25 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- SOURCE -->
 
+{% capture theme %}
+// Theme-level settings
+@use 'cfa-uswds-theme' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-color-base-lightest: 'gray-warm-4', // Affects follow-up question background
+  $cfa-color-base-darker: 'gray-warm-70'   // Affects follow-up question container border
+);
+//
+// Package-level settings
+@use 'cfa-core' with (
+  // Global theme settings that affect the component, changing these will affect other components
+  $cfa-form-elements-border-width: 2px, // Affects follow-up question border
+  $cfa-input-select-width: 2            // Affects follow-up question arrow position
+);
+{% endcapture %}
+
 {% capture package_question %}{% getFile 'follow-up-question' %}{% endcapture %}
 {% capture javascript_question %}{% getFile 'follow-up-question' 'javascript' %}{% endcapture %}
 
 {% capture javascript %}enables the expansion and collapse of the follow-up region. It also toggles the following attributes on child elements inside the follow-up region; tabindex on potentially focusable children and disabled attribute on form element children. The module can be found at <code>.{{ javascript_question | replace: package_question, '' }}</code>.{% endcapture %}
 
-{% render 'source.md', name: 'follow-up-question', nice: title, javascript: javascript, config: config, pckg: package %}
+{% render 'source.md', name: 'follow-up-question', nice: title, theme: theme, javascript: javascript, config: config, pckg: package %}

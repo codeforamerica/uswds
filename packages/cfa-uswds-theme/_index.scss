@@ -30,14 +30,14 @@ $cfa-site-alert-max-width: 'desktop-lg' !default;
 // Color
 // - Base
 $cfa-color-base-family: 'gray-warm' !default;
-$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background, outline button background hover, checkbox/radio background hover
-$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover, disabled button state
+$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background, outline button background hover, checkbox/radio background hover, follow-up question container background, footer primary section background, background color of the input, background color of the textarea
+$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover, disabled button state, footer secondary section background, color of the input inset border, color of the textarea inset border
 $cfa-color-base-light: 'gray-warm-30' !default;
 $cfa-color-base: 'gray-warm-50' !default;
 $cfa-color-base-dark: 'gray-warm-60' !default;
-$cfa-color-base-darker: 'gray-warm-70' !default;
+$cfa-color-base-darker: 'gray-warm-70' !default; // Affects follow up question container border
 $cfa-color-base-darkest: 'gray-warm-90' !default;
-$cfa-color-base-ink: 'gray-warm-90' !default; // Affects outline button
+$cfa-color-base-ink: 'gray-warm-90' !default; // Affects outline button, text and border color of the input, text and border color of the select, text and border color of the textarea
 
 // - Primary
 $cfa-color-primary-family: 'mint' !default;
@@ -79,7 +79,7 @@ $cfa-color-error-family: 'orange-warm-vivid' !default;
 $cfa-color-error-lighter: 'orange-warm-10v' !default;
 $cfa-color-error-light: 'orange-warm-30v' !default;
 $cfa-color-error: 'orange-warm-50v' !default; // Affects the danger button, the no button icon color
-$cfa-color-error-dark: 'orange-warm-60v' !default;
+$cfa-color-error-dark: 'orange-warm-60v' !default; // Affects the error state border color
 $cfa-color-error-darker: 'orange-warm-70v' !default; // Affects the danger button hover state
 
 // - Warning
