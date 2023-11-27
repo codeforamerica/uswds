@@ -72,7 +72,7 @@ module.exports = [
       'cssnano'
     ]
   },
-  {
+  (process.env.NODE_ENV === 'production') ? {
     input:  path.join(config.base, config.src, config.entry.styles),
     output: [{
       file:  path.join(config.base, config.dist, config.assets, config.output.styles),
@@ -87,5 +87,5 @@ module.exports = [
       'mqpacker',
       'cssnano'
     ]
-  }
+  } : {}
 ];

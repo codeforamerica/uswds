@@ -33,9 +33,9 @@ let plugins = {
 (async () => {
   try {
     for (let i = 0; i < entrypoints.length; i++) {
-      if (path.extname(entrypoints[i].input) != '.js') continue;
-
       const script = entrypoints[i];
+
+      if (!script.hasOwnProperty('input') || path.extname(entrypoints[i].input) != '.js') continue;
 
       console.log(`[${package.name}] Rolling up "${script.input.replace(process.env.PWD, '')}"`);
 

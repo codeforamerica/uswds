@@ -61,9 +61,9 @@ let plugins = {
 (async () => {
   try {
     for (let i = 0; i < entrypoints.length; i++) {
-      if (path.extname(entrypoints[i].input) != '.scss') continue;
-
       const style = entrypoints[i];
+
+      if (!style.hasOwnProperty('input') || path.extname(style.input) != '.scss') continue;
 
       console.log(`[${package.name}] Compiling Sass for "${style.input.replace(process.env.PWD, '')}"`);
 
