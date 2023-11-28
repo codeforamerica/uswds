@@ -45,11 +45,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-165e91516c652">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-aa9413d94f03b">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-165e91516c652" class="usa-nav__submenu">
+          <ul id="aria-c-aa9413d94f03b" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -90,6 +90,9 @@
                                 <a href="https://codeforamerica.github.io/uswds/components/identifier/" ><span>Identifier</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Input</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" ><span>Memorable date</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
@@ -97,9 +100,6 @@
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" ><span>Select</span></a>
-              </li>
-                          <li class="usa-nav__submenu-item">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Text input</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/textarea/" ><span>Textarea</span></a>
@@ -202,6 +202,10 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" >Memorable date</a>
 
                               </li>
@@ -211,10 +215,6 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" >Select</a>
-
-                              </li>
-                            <li class="usa-sidenav__item is-current">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Text input</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -237,11 +237,13 @@
           <div class="usa-prose">
             <h1>Alert</h1>
 
-            <p class="usa-intro">"Alerts appear when I need help or when something has changed. It may be time-sensitive."</p>
+            <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
+              An alert appears when I need help or when something has changed. It may be time-sensitive.
+            </blockquote>
           </div>
 
           <!-- INTRO -->
-<p class="usa-prose">Alerts distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.</p>
+<p>The Alert component distinguishes important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
@@ -254,8 +256,8 @@
   <li><strong>Modifier:</strong> <code>.cfa-alert</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-08ab6f47412cd"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-08ab6f47412cd">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-a3295358b007"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-a3295358b007">
     <p>The <b>Alert</b> extends the <a href="https://designsystem.digital.gov/components/alert" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Alert component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-notices" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Notice atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-alert</code> to add <b>styles</b> defined in a custom stylesheet.</p>
     <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
     <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
@@ -268,7 +270,7 @@
   <div class="usa-alert cfa-alert usa-alert--info" role="region">
   <div class="usa-alert__body">
     <div>
-      <h3 class="usa-alert__heading" id="aria-lb-3c116d07165d6">Can we ask about your race and identity?</h3>
+      <h3 class="usa-alert__heading" id="aria-lb-50268700a5c5d">Can we ask about your race and identity?</h3>
       <p>Providing your race and ethnicity is optional and will not affect your individual application.</p>
       <p>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented. <a href="#">Learn more about how we protect your personal information</a>.</p>
     </div>
@@ -277,23 +279,23 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-c9fc0e7ea6a3c">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-fec44409a4213">
           View HTML
         </button>
       </div>
-      <div id="aria-c-c9fc0e7ea6a3c" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-fec44409a4213" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d56783ac4b8b7" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-5bb4a41e80c9c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d56783ac4b8b7">&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot; role=&quot;region&quot;&gt;
+        <textarea hidden data-copy-target="block-5bb4a41e80c9c">&lt;div class=&quot;usa-alert cfa-alert usa-alert--info&quot; role=&quot;region&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-3c116d07165d6&quot;&gt;Can we ask about your race and identity?&lt;/h3&gt;
+      &lt;h3 class=&quot;usa-alert__heading&quot; id=&quot;aria-lb-50268700a5c5d&quot;&gt;Can we ask about your race and identity?&lt;/h3&gt;
       &lt;p&gt;Providing your race and ethnicity is optional and will not affect your individual application.&lt;/p&gt;
       &lt;p&gt;We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented. &lt;a href=&quot;#&quot;&gt;Learn more about how we protect your personal information&lt;/a&gt;.&lt;/p&gt;
     &lt;/div&gt;
@@ -303,7 +305,7 @@
       <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-alert cfa-alert usa-alert--info&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;region&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-alert__body&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-alert__heading&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-lb-3c116d07165d6&quot;</span>&gt;</span>Can we ask about your race and identity?<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-alert__heading&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-lb-50268700a5c5d&quot;</span>&gt;</span>Can we ask about your race and identity?<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Providing your race and ethnicity is optional and will not affect your individual application.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>We will use this information to evaluate the fairness of this application, and we ask you to provide it to ensure that you are accurately represented. <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Learn more about how we protect your personal information<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -329,20 +331,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-9346cd1fba9d6">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-b76a7c24359d3">
           View HTML
         </button>
       </div>
-      <div id="aria-c-9346cd1fba9d6" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-b76a7c24359d3" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-22e61ec98ee69" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-2b08158fad77e" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-22e61ec98ee69">&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot; role=&quot;status&quot;&gt;
+        <textarea hidden data-copy-target="block-2b08158fad77e">&lt;div class=&quot;usa-alert cfa-alert usa-alert--success&quot; role=&quot;status&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;div&gt;
       &lt;h3 class=&quot;usa-alert__heading&quot;&gt;Done! Your application has been submitted.&lt;/h3&gt;
@@ -379,20 +381,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-feb8b69e307b2">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-b080f459c5a79">
           View HTML
         </button>
       </div>
-      <div id="aria-c-feb8b69e307b2" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-b080f459c5a79" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-17060f96b193a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1dc9550c83f26" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-17060f96b193a">&lt;div class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
+        <textarea hidden data-copy-target="block-1dc9550c83f26">&lt;div class=&quot;usa-alert cfa-alert usa-alert--warning&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;h3 class=&quot;usa-alert__heading&quot;&gt;Make sure your address is correct&lt;/h3&gt;
     &lt;div&gt;
@@ -429,20 +431,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-9d8bcce86a027">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a2918a1fb0fbd">
           View HTML
         </button>
       </div>
-      <div id="aria-c-9d8bcce86a027" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a2918a1fb0fbd" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d13cf0b762ed5" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-c25d10fa0b20d" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d13cf0b762ed5">&lt;div class=&quot;usa-alert cfa-alert usa-alert--error&quot; role=&quot;alert&quot;&gt;
+        <textarea hidden data-copy-target="block-c25d10fa0b20d">&lt;div class=&quot;usa-alert cfa-alert usa-alert--error&quot; role=&quot;alert&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;div&gt;
       &lt;h3 class=&quot;usa-alert__heading&quot;&gt;Error notice&lt;/h3&gt;
@@ -479,20 +481,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-8fd73f86c04b6">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-9bb989f6ea468">
           View HTML
         </button>
       </div>
-      <div id="aria-c-8fd73f86c04b6" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-9bb989f6ea468" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-eeb60d60bbda" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-b43a01dbbd68" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-eeb60d60bbda">&lt;div class=&quot;usa-alert cfa-alert usa-alert--emergency&quot; role=&quot;status&quot;&gt;
+        <textarea hidden data-copy-target="block-b43a01dbbd68">&lt;div class=&quot;usa-alert cfa-alert usa-alert--emergency&quot; role=&quot;status&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;div&gt;
       &lt;h3 class=&quot;usa-alert__heading&quot;&gt;Emergency alert message&lt;/h3&gt;
@@ -617,8 +619,8 @@
   <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-alert.html.erb</code></li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-73ae90259f249"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-73ae90259f249">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-430738d9094e3"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-430738d9094e3">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -629,13 +631,13 @@
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-66ae0bf76db04" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-2be995b9a9ae6" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-66ae0bf76db04">
+        <textarea hidden data-copy-target="block-2be995b9a9ae6">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -655,7 +657,6 @@
   $cfa-alert-padding-y: 2,
   $cfa-alert-link-color: 'ink'
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-alert-border-width: 2px
@@ -682,7 +683,6 @@
   <span class="hljs-variable">$cfa-alert-padding-y</span>: <span class="hljs-number">2</span>,
   <span class="hljs-variable">$cfa-alert-link-color</span>: <span class="hljs-string">&#x27;ink&#x27;</span>
 );
-<span class="hljs-comment">//</span>
 <span class="hljs-comment">// Package-level settings</span>
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;cfa-core&#x27;</span> with (
   <span class="hljs-variable">$cfa-alert-border-width</span>: <span class="hljs-number">2px</span>
@@ -698,13 +698,13 @@
       <p>Refer to the <a href="https://designsystem.digital.gov/components/alert/#using-the-alert-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional USWDS theme settings.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-58c9489b93b3a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-09cf5cc2438bb" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-58c9489b93b3a">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
+        <textarea hidden data-copy-target="block-09cf5cc2438bb">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
       </div>
       <pre class="language-scss padding-top-0"><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;uswds-core&quot;</span> with ( /* additional USWDS theme settings */ );</pre>
     </div>
@@ -718,13 +718,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-460566f0c4757" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-f0d4bba5e4c79" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-460566f0c4757">&lt;div th:fragment=&quot;alert(modifier, role, label, labelledBy, heading, body, text)&quot; class=&quot;usa-alert&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;role=${role},aria-label=${label},aria-labelledby=${labelledBy}&quot;&gt;
+        <textarea hidden data-copy-target="block-f0d4bba5e4c79">&lt;div th:fragment=&quot;alert(modifier, role, label, labelledBy, heading, body, text)&quot; class=&quot;usa-alert&quot; th:classappend=&quot;${modifier}&quot; th:attr=&quot;role=${role},aria-label=${label},aria-labelledby=${labelledBy}&quot;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;h3 class=&quot;usa-alert__heading&quot; th:if=&quot;${heading}&quot; th:text=&quot;${heading}&quot; th:attr=&quot;id=${labelledBy}&quot;&gt;Heading&lt;/h3&gt;
     &lt;div th:if=&quot;${body}&quot; th:utext=&quot;${body}&quot;&gt;
@@ -754,13 +754,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d3f3699a7e91" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6bb95f254589e" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d3f3699a7e91">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-alert/cfa-alert.th :: alert(${modifier}, ${role}, ${label}, ${labelledBy}, ${heading}, ${body}, ${text})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-6bb95f254589e">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-alert/cfa-alert.th :: alert(${modifier}, ${role}, ${label}, ${labelledBy}, ${heading}, ${body}, ${text})}&quot; /&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-alert/cfa-alert.th :: alert(${modifier}, ${role}, ${label}, ${labelledBy}, ${heading}, ${body}, ${text})}&quot;</span> /&gt;</span></pre>
     </div>
@@ -774,13 +774,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-6df133f00eeca" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-f2006ed2db8ff" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-6df133f00eeca">&lt;div class=&quot;usa-alert&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&lt;% if defined?(role) %&gt; role=&quot;&lt;%= role %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(label) %&gt; aria-label=&quot;&lt;%= label %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(labelledby) %&gt; aria-labelledby=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;
+        <textarea hidden data-copy-target="block-f2006ed2db8ff">&lt;div class=&quot;usa-alert&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&lt;% if defined?(role) %&gt; role=&quot;&lt;%= role %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(label) %&gt; aria-label=&quot;&lt;%= label %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(labelledby) %&gt; aria-labelledby=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;
   &lt;div class=&quot;usa-alert__body&quot;&gt;
     &lt;% if defined?(heading) %&gt;&lt;h3 class=&quot;usa-alert__heading&quot;&lt;% if defined?(labelledby) %&gt; id=&quot;&lt;%= labelledby %&gt;&quot;&lt;% end %&gt;&gt;&lt;%= heading %&gt;&lt;/h3&gt;&lt;% end %&gt;
     &lt;% if defined?(body) %&gt;&lt;div&gt;&lt;%= body %&gt;&lt;/div&gt;&lt;% end %&gt;
@@ -808,15 +808,15 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-513dc1de7f895" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-8dfb762884167" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-513dc1de7f895">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-alert/cfa-alert'), 0, 0, '@alert').result_with_hash({modifier: modifier, role: role, label: label, labelledby: labelledby, heading: heading, body: body, text: text}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-8dfb762884167">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert').result_with_hash({modifier: modifier, role: role, label: label, labelledby: labelledby, heading: heading, body: body, text: text}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-alert/cfa-alert&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@alert&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">role:</span> role, <span class="hljs-symbol">label:</span> label, <span class="hljs-symbol">labelledby:</span> labelledby, <span class="hljs-symbol">heading:</span> heading, <span class="hljs-symbol">body:</span> body, <span class="hljs-symbol">text:</span> text}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-alert/_cfa-alert.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@alert&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">role:</span> role, <span class="hljs-symbol">label:</span> label, <span class="hljs-symbol">labelledby:</span> labelledby, <span class="hljs-symbol">heading:</span> heading, <span class="hljs-symbol">body:</span> body, <span class="hljs-symbol">text:</span> text}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>

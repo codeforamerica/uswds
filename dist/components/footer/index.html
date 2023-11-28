@@ -45,11 +45,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-66bad1221e564">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-0a2f4cb3c3471">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-66bad1221e564" class="usa-nav__submenu">
+          <ul id="aria-c-0a2f4cb3c3471" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -90,6 +90,9 @@
                                 <a href="https://codeforamerica.github.io/uswds/components/identifier/" ><span>Identifier</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Input</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" ><span>Memorable date</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
@@ -97,9 +100,6 @@
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" ><span>Select</span></a>
-              </li>
-                          <li class="usa-nav__submenu-item">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Text input</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/textarea/" ><span>Textarea</span></a>
@@ -202,6 +202,10 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" >Memorable date</a>
 
                               </li>
@@ -211,10 +215,6 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" >Select</a>
-
-                              </li>
-                            <li class="usa-sidenav__item is-current">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Text input</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -237,19 +237,21 @@
           <div class="usa-prose">
             <h1>Footer</h1>
 
-            <p class="usa-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
+              A footer appears at the bottom of a web page and helps me find information like a site map or legal information.
+            </blockquote>
           </div>
 
           <!-- INTRO -->
-<p class="usa-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>The Footer component is the last component of a web page and appears globally on all site pages. It often contains secondary or tertiary navigations, simply labeled “footer navigation,” with links to other pages or legal disclaimers users need access to. It also contains the site’s <a href="https://codeforamerica.github.io/uswds/components/identifier">Identifier component</a>.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
   <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/footer" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Footer, slim variant</a></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-12de971745f82"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-12de971745f82">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-af0f01725226c"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-af0f01725226c">
     <p>The <b>Footer</b> extends the <a href="https://designsystem.digital.gov/components/footer" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Footer, slim variant</a>. </p>
 <p></div></p>
 </div>
@@ -297,24 +299,54 @@
       </div>
     </div>
   </div>
+  <div>
+    <div class="usa-identifier cfa-font-smooth">
+      <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+        <div class="usa-identifier__container">
+          <div class="usa-identifier__identity">
+            <p class="usa-identifier__identity-domain">domain.gov</p>
+            <p class="usa-identifier__identity-disclaimer">This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.</p>
+          </div>
+        </div>
+      </section>
+      <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+        <div class="usa-identifier__container">
+          <ul class="add-list-reset">
+            <li class="usa-identifier__required-links-item">
+              <a class="usa-identifier__required-link usa-link usa-link--external usa-link--external" rel="noopener nofollow" target="_blank" href="https://codeforamerica.org">About Code for America</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a class="usa-identifier__required-link usa-link usa-link--external usa-link--external" rel="noopener nofollow" target="_blank" href="https://codeforamerica.org/about-us/diversity-equity-inclusion">Diversity, Equity, &amp; Inclusion</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="Domain.gov government information and services">
+        <div class="usa-identifier__container">
+          <div class="usa-identifier__usagov-description">Looking for government information and services?</div>
+          <a class="usa-link usa-link--external" rel="noopener nofollow" target="_blank" href="https://get.gov">Visit domain.gov</a>
+        </div>
+      </section>
+    </div>
+  </div>
 </footer>
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-5a27be0b3ad3a">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f820877cc493a">
           View HTML
         </button>
       </div>
-      <div id="aria-c-5a27be0b3ad3a" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-f820877cc493a" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3e9e72ecceff3" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-406ace2e8ac71" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-3e9e72ecceff3">&lt;footer class=&quot;usa-footer usa-footer--slim&quot;&gt;
+        <textarea hidden data-copy-target="block-406ace2e8ac71">&lt;footer class=&quot;usa-footer usa-footer--slim&quot;&gt;
   &lt;div class=&quot;grid-container usa-footer__return-to-top&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;Return to top&lt;/a&gt;
   &lt;/div&gt;
@@ -352,6 +384,36 @@
           &lt;span class=&quot;usa-sr-only&quot;&gt;Code for America&lt;/span&gt;
         &lt;/a&gt;
       &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;usa-identifier cfa-font-smooth&quot;&gt;
+      &lt;section class=&quot;usa-identifier__section usa-identifier__section--masthead&quot; aria-label=&quot;Agency identifier&quot;&gt;
+        &lt;div class=&quot;usa-identifier__container&quot;&gt;
+          &lt;div class=&quot;usa-identifier__identity&quot;&gt;
+            &lt;p class=&quot;usa-identifier__identity-domain&quot;&gt;domain.gov&lt;/p&gt;
+            &lt;p class=&quot;usa-identifier__identity-disclaimer&quot;&gt;This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+      &lt;nav class=&quot;usa-identifier__section usa-identifier__section--required-links&quot; aria-label=&quot;Important links&quot;&gt;
+        &lt;div class=&quot;usa-identifier__container&quot;&gt;
+          &lt;ul class=&quot;add-list-reset&quot;&gt;
+            &lt;li class=&quot;usa-identifier__required-links-item&quot;&gt;
+              &lt;a class=&quot;usa-identifier__required-link usa-link usa-link--external usa-link--external&quot; rel=&quot;noopener nofollow&quot; target=&quot;_blank&quot; href=&quot;https://codeforamerica.org&quot;&gt;About Code for America&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;usa-identifier__required-links-item&quot;&gt;
+              &lt;a class=&quot;usa-identifier__required-link usa-link usa-link--external usa-link--external&quot; rel=&quot;noopener nofollow&quot; target=&quot;_blank&quot; href=&quot;https://codeforamerica.org/about-us/diversity-equity-inclusion&quot;&gt;Diversity, Equity, &amp;amp; Inclusion&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/nav&gt;
+      &lt;section class=&quot;usa-identifier__section usa-identifier__section--usagov&quot; aria-label=&quot;Domain.gov government information and services&quot;&gt;
+        &lt;div class=&quot;usa-identifier__container&quot;&gt;
+          &lt;div class=&quot;usa-identifier__usagov-description&quot;&gt;Looking for government information and services?&lt;/div&gt;
+          &lt;a class=&quot;usa-link usa-link--external&quot; rel=&quot;noopener nofollow&quot; target=&quot;_blank&quot; href=&quot;https://get.gov&quot;&gt;Visit domain.gov&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/footer&gt;</textarea>
@@ -394,6 +456,36 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-sr-only&quot;</span>&gt;</span>Code for America<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier cfa-font-smooth&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__section usa-identifier__section--masthead&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Agency identifier&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__container&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__identity&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__identity-domain&quot;</span>&gt;</span>domain.gov<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__identity-disclaimer&quot;</span>&gt;</span>This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__section usa-identifier__section--required-links&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Important links&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__container&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;add-list-reset&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__required-links-item&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__required-link usa-link usa-link--external usa-link--external&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noopener nofollow&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://codeforamerica.org&quot;</span>&gt;</span>About Code for America<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__required-links-item&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__required-link usa-link usa-link--external usa-link--external&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noopener nofollow&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://codeforamerica.org/about-us/diversity-equity-inclusion&quot;</span>&gt;</span>Diversity, Equity, <span class="hljs-symbol">&amp;amp;</span> Inclusion<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__section usa-identifier__section--usagov&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Domain.gov government information and services&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__container&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-identifier__usagov-description&quot;</span>&gt;</span>Looking for government information and services?<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-link usa-link--external&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noopener nofollow&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://get.gov&quot;</span>&gt;</span>Visit domain.gov<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></pre>
@@ -494,8 +586,8 @@
   <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-footer.html.erb</code></li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-a36e8b8faeea7"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-a36e8b8faeea7">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-2c107f28b4d49"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-2c107f28b4d49">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -506,13 +598,13 @@
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d029c09bb2ee5" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-eaeb8d0d22147" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d029c09bb2ee5">
+        <textarea hidden data-copy-target="block-eaeb8d0d22147">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -539,13 +631,13 @@
       <p>Refer to the <a href="https://designsystem.digital.gov/components/footer/#using-the-footer-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional USWDS theme settings.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-4765286844b5d" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-c2911808d512d" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-4765286844b5d">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
+        <textarea hidden data-copy-target="block-c2911808d512d">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
       </div>
       <pre class="language-scss padding-top-0"><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;uswds-core&quot;</span> with ( /* additional USWDS theme settings */ );</pre>
     </div>
@@ -559,13 +651,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-ddfd7a9563b3a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-8533a35a9244a" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-ddfd7a9563b3a">&lt;footer th:fragment=&quot;footer(modifier, returnToTop, navigation, logo, home)&quot; class=&quot;usa-footer usa-footer--slim&quot; th:classappend=&quot;${modifier}&quot;&gt;
+        <textarea hidden data-copy-target="block-8533a35a9244a">&lt;footer th:fragment=&quot;footer(modifier, returnToTop, navigation, logo, home)&quot; class=&quot;usa-footer usa-footer--slim&quot; th:classappend=&quot;${modifier}&quot;&gt;
   &lt;div th:if=&quot;${returnToTop}&quot; class=&quot;grid-container usa-footer__return-to-top&quot;&gt;
     &lt;a th:href=&quot;${returnToTop}&quot;&gt;Return to top&lt;/a&gt;
   &lt;/div&gt;
@@ -596,6 +688,9 @@
         &lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div th:if=&quot;${identifier}&quot;&gt;
+    &lt;th:block th:replace=&quot;~{packages/cfa-identifier/cfa-identifier.th :: identifier(${identifier.modifier}, ${identifier.identity}, ${identifier.requiredLinks}, ${identifier.governmentSection})}&quot; /&gt;
   &lt;/div&gt;
 &lt;/footer&gt;</textarea>
       </div>
@@ -631,6 +726,9 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${identifier}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-identifier/cfa-identifier.th :: identifier(${identifier.modifier}, ${identifier.identity}, ${identifier.requiredLinks}, ${identifier.governmentSection})}&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></pre>
     </div>
   </figure>
@@ -641,15 +739,15 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-a76dd27beb9bf" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-f78daf605e6f8" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-a76dd27beb9bf">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-footer/cfa-footer.th :: footer(${modifier}, ${returnToTop}, ${navigation}, ${logo}, ${home})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-f78daf605e6f8">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-footer/cfa-footer.th :: footer(${modifier}, ${returnToTop}, ${navigation}, ${logo}, ${home}, ${identifier})}&quot; /&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-footer/cfa-footer.th :: footer(${modifier}, ${returnToTop}, ${navigation}, ${logo}, ${home})}&quot;</span> /&gt;</span></pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-footer/cfa-footer.th :: footer(${modifier}, ${returnToTop}, ${navigation}, ${logo}, ${home}, ${identifier})}&quot;</span> /&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -661,13 +759,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-6fc1182aa31b4" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-e6508329dd6ce" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-6fc1182aa31b4">&lt;footer class=&quot;usa-footer usa-footer--slim&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+        <textarea hidden data-copy-target="block-e6508329dd6ce">&lt;footer class=&quot;usa-footer usa-footer--slim&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
   &lt;% if defined?(returnToTop) %&gt;&lt;div class=&quot;grid-container usa-footer__return-to-top&quot;&gt;
     &lt;a href=&quot;&lt;%= returnToTop %&gt;&quot;&gt;Return to top&lt;/a&gt;
   &lt;/div&gt;&lt;% end %&gt;
@@ -701,6 +799,15 @@
         &lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+  &lt;/div&gt;&lt;% end %&gt;
+  &lt;% if defined?(identifier) %&gt;&lt;div&gt;
+  &lt;%= ERB.new(File.read('packages/cfa-identifier/_cfa-identifier.html.erb'), 0, 0, '@identifier')
+    .result_with_hash({
+      modifier: (identifier['modifier'] if identifier['modifier']),
+      identity: (identifier['identity'] if identifier['identity']),
+      requiredLinks: (identifier['requiredLinks'] if identifier['requiredLinks']),
+      governmentSection: (identifier['governmentSection'] if identifier['governmentSection'])
+    }.compact) %&gt;
   &lt;/div&gt;&lt;% end %&gt;
 &lt;/footer&gt;</textarea>
       </div>
@@ -739,6 +846,15 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
+  &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(identifier) </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  &lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;packages/cfa-identifier/_cfa-identifier.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@identifier&#x27;</span>)
+    .result_with_hash({
+      <span class="hljs-symbol">modifier:</span> (identifier[<span class="hljs-string">&#x27;modifier&#x27;</span>] <span class="hljs-keyword">if</span> identifier[<span class="hljs-string">&#x27;modifier&#x27;</span>]),
+      <span class="hljs-symbol">identity:</span> (identifier[<span class="hljs-string">&#x27;identity&#x27;</span>] <span class="hljs-keyword">if</span> identifier[<span class="hljs-string">&#x27;identity&#x27;</span>]),
+      <span class="hljs-symbol">requiredLinks:</span> (identifier[<span class="hljs-string">&#x27;requiredLinks&#x27;</span>] <span class="hljs-keyword">if</span> identifier[<span class="hljs-string">&#x27;requiredLinks&#x27;</span>]),
+      <span class="hljs-symbol">governmentSection:</span> (identifier[<span class="hljs-string">&#x27;governmentSection&#x27;</span>] <span class="hljs-keyword">if</span> identifier[<span class="hljs-string">&#x27;governmentSection&#x27;</span>])
+    }.compact) </span><span class="language-xml">%&gt;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
 <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></span></pre>
     </div>
   </figure>
@@ -749,15 +865,15 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-f58b0a7a4f48c" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-655752e914ece" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-f58b0a7a4f48c">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-footer/cfa-footer'), 0, 0, '@footer').result_with_hash({modifier: modifier, returnToTop: returnToTop, navigation: navigation, home: home, logo: logo}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-655752e914ece">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-footer/_cfa-footer.html.erb'), 0, 0, '@footer').result_with_hash({modifier: modifier, returnToTop: returnToTop, navigation: navigation, home: home, logo: logo, identifier: identifier}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-footer/cfa-footer&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@footer&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">returnToTop:</span> returnToTop, <span class="hljs-symbol">navigation:</span> navigation, <span class="hljs-symbol">home:</span> home, <span class="hljs-symbol">logo:</span> logo}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-footer/_cfa-footer.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@footer&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">returnToTop:</span> returnToTop, <span class="hljs-symbol">navigation:</span> navigation, <span class="hljs-symbol">home:</span> home, <span class="hljs-symbol">logo:</span> logo, <span class="hljs-symbol">identifier:</span> identifier}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>

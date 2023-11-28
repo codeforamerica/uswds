@@ -45,11 +45,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-9983580e6261c">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-69729e4c9f579">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-9983580e6261c" class="usa-nav__submenu">
+          <ul id="aria-c-69729e4c9f579" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -90,6 +90,9 @@
                                 <a href="https://codeforamerica.github.io/uswds/components/identifier/" ><span>Identifier</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Input</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" ><span>Memorable date</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
@@ -97,9 +100,6 @@
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" ><span>Select</span></a>
-              </li>
-                          <li class="usa-nav__submenu-item">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Text input</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/textarea/" ><span>Textarea</span></a>
@@ -202,6 +202,10 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" >Memorable date</a>
 
                               </li>
@@ -211,10 +215,6 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" >Select</a>
-
-                              </li>
-                            <li class="usa-sidenav__item is-current">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Text input</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -237,11 +237,13 @@
           <div class="usa-prose">
             <h1>Button</h1>
 
-            <p class="usa-intro">"I use buttons to find important links or submit online applications"</p>
+            <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
+              A button helps me submit an online form, find important links, or turn something on.
+            </blockquote>
           </div>
 
           <!-- INTRO -->
-<p class="usa-prose">Buttons allow users to trigger actions. They are styled consistently according to their importance and the type of action they enable the user to perform.</p>
+<p>The Button component allows users to trigger actions. They are styled consistently according to their importance and the type of action they enable the user to perform.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
@@ -254,8 +256,8 @@
   <li><strong>Modifier:</strong> <code>.cfa-button</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-23672d55d4ffe"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-23672d55d4ffe">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-b5aaf03bdb473"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-b5aaf03bdb473">
     <p>The <b>Button</b> extends the <a href="https://designsystem.digital.gov/components/button" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Button component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/button/#using-the-button-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Button component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Button atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-button</code> to add <b>styles</b> defined in a custom stylesheet.</p>
     <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
     <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
@@ -282,20 +284,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-cae71aa3526cb">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a73477b79b538">
           View HTML
         </button>
       </div>
-      <div id="aria-c-cae71aa3526cb" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a73477b79b538" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-949828fa30d7f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6a1230f1197c3" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-949828fa30d7f">&lt;span&gt;
+        <textarea hidden data-copy-target="block-6a1230f1197c3">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Primary&lt;/span&gt;
   &lt;/button&gt;
@@ -351,20 +353,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-daf295091b109">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-2861c3ca8fc4">
           View HTML
         </button>
       </div>
-      <div id="aria-c-daf295091b109" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-2861c3ca8fc4" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-a7aad7d3809a4" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-793434768fccf" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-a7aad7d3809a4">&lt;span&gt;
+        <textarea hidden data-copy-target="block-793434768fccf">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button usa-button--outline&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Outline&lt;/span&gt;
   &lt;/button&gt;
@@ -420,20 +422,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-72e0341f70908">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-bb849fd5a281b">
           View HTML
         </button>
       </div>
-      <div id="aria-c-72e0341f70908" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-bb849fd5a281b" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3e1ed7d6a8bd4" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-209c55781ae95" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-3e1ed7d6a8bd4">&lt;span&gt;
+        <textarea hidden data-copy-target="block-209c55781ae95">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button usa-button--big&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Big Primary&lt;/span&gt;
   &lt;/button&gt;
@@ -489,20 +491,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-bb6fa7ef22c4a">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-26244757c29b5">
           View HTML
         </button>
       </div>
-      <div id="aria-c-bb6fa7ef22c4a" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-26244757c29b5" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-2fa25155a6c7f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-04817e0472def" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-2fa25155a6c7f">&lt;span&gt;
+        <textarea hidden data-copy-target="block-04817e0472def">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button usa-button--big usa-button--outline&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Big Outline&lt;/span&gt;
   &lt;/button&gt;
@@ -575,20 +577,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ca29c2bdc8fcd">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-aa0e6511569a2">
           View HTML
         </button>
       </div>
-      <div id="aria-c-ca29c2bdc8fcd" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-aa0e6511569a2" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-6b4f831d88c4" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-f41a3cb52ae19" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-6b4f831d88c4">&lt;span&gt;
+        <textarea hidden data-copy-target="block-f41a3cb52ae19">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot;&gt;
     &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate&quot;&gt;&lt;/use&gt;
@@ -678,20 +680,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-136bbf641b5cd">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-5aed6809f23d3">
           View HTML
         </button>
       </div>
-      <div id="aria-c-136bbf641b5cd" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-5aed6809f23d3" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-6767203e8640a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-d118b4ffdf6e5" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-6767203e8640a">&lt;span&gt;
+        <textarea hidden data-copy-target="block-d118b4ffdf6e5">&lt;span&gt;
   &lt;button class=&quot;usa-button usa-button--unstyled&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Unstyled&lt;/span&gt;
   &lt;/button&gt;
@@ -742,20 +744,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-69869e3b1476f">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-96e0a83a2a62">
           View HTML
         </button>
       </div>
-      <div id="aria-c-69869e3b1476f" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-96e0a83a2a62" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-28c52a4c49264" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-d67eab230d287" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-28c52a4c49264">&lt;span&gt;
+        <textarea hidden data-copy-target="block-d67eab230d287">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button usa-button--secondary&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Secondary&lt;/span&gt;
   &lt;/button&gt;
@@ -813,20 +815,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-31a8aee1d6747">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-a8b94bd04ed16">
           View HTML
         </button>
       </div>
-      <div id="aria-c-31a8aee1d6747" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-a8b94bd04ed16" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-95cd311941721" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-0890e4ecae76a" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-95cd311941721">&lt;span&gt;
+        <textarea hidden data-copy-target="block-0890e4ecae76a">&lt;span&gt;
   &lt;button class=&quot;usa-button cfa-button cfa-button--danger&quot; type=&quot;button&quot;&gt;
     &lt;span&gt;Danger&lt;/span&gt;
   &lt;/button&gt;
@@ -911,20 +913,20 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3ba7133f85bda">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ce7a3adca78be">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3ba7133f85bda" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-ce7a3adca78be" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-5e92f7e1f105f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-5925593f9fc89" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-5e92f7e1f105f">&lt;span&gt;
+        <textarea hidden data-copy-target="block-5925593f9fc89">&lt;span&gt;
   &lt;a class=&quot;usa-button cfa-button usa-button--outline&quot; href=&quot;#&quot;&gt;
     &lt;span&gt;Internal Link&lt;/span&gt;
     &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
@@ -1104,8 +1106,8 @@ enables links that are styled as buttons to be invoked using the space bar.
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-43e2004dafac3"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-43e2004dafac3">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-aa96347b92384"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-aa96347b92384">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -1116,13 +1118,13 @@ enables links that are styled as buttons to be invoked using the space bar.
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-71ab2cd9b7abb" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-3fcf4798f8a65" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-71ab2cd9b7abb">
+        <textarea hidden data-copy-target="block-3fcf4798f8a65">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -1139,7 +1141,6 @@ enables links that are styled as buttons to be invoked using the space bar.
   $cfa-color-disabled: 'gray-warm-50',        // Affects disabled outline button
   $cfa-color-disabled-dark: 'gray-warm-70',   // Affects disabled button text
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-button-big-font-size: 'lg',
@@ -1164,7 +1165,6 @@ enables links that are styled as buttons to be invoked using the space bar.
   <span class="hljs-variable">$cfa-color-disabled</span>: <span class="hljs-string">&#x27;gray-warm-50&#x27;</span>,        // Affects disabled outline button
   <span class="hljs-variable">$cfa-color-disabled-dark</span>: <span class="hljs-string">&#x27;gray-warm-70&#x27;</span>,   // Affects disabled button text
 );
-<span class="hljs-comment">//</span>
 <span class="hljs-comment">// Package-level settings</span>
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;cfa-core&#x27;</span> with (
   <span class="hljs-variable">$cfa-button-big-font-size</span>: <span class="hljs-string">&#x27;lg&#x27;</span>,
@@ -1181,13 +1181,13 @@ enables links that are styled as buttons to be invoked using the space bar.
       <p>Refer to the <a href="https://designsystem.digital.gov/components/button/#using-the-button-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional USWDS theme settings.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-5559f8ce219ac" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-cb3f4ebccceff" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-5559f8ce219ac">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
+        <textarea hidden data-copy-target="block-cb3f4ebccceff">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
       </div>
       <pre class="language-scss padding-top-0"><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;uswds-core&quot;</span> with ( /* additional USWDS theme settings */ );</pre>
     </div>
@@ -1201,13 +1201,13 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-be7d7f351f729" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1991e5dac32d6" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-be7d7f351f729">&lt;span th:fragment=&quot;button(items)&quot; th:each=&quot;button: ${items}&quot;&gt;
+        <textarea hidden data-copy-target="block-1991e5dac32d6">&lt;span th:fragment=&quot;button(items)&quot; th:each=&quot;button: ${items}&quot;&gt;
   &lt;button th:unless=&quot;${button.href}&quot; class=&quot;usa-button&quot; th:classappend=&quot;${button.modifier}&quot; th:attr=&quot;type=${button.type},disabled=${button.disabled},aria-disabled=${button.ariaDisabled}&quot;&gt;
     &lt;svg th:if=&quot;${button.check}&quot; class=&quot;usa-icon&quot; viewBox=&quot;0 0 22 22&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;path d=&quot;M3.5 9.42857L0 13L8 22L22 3.5L18 0L7.5 14L3.5 9.42857Z&quot; fill=&quot;inherit&quot;/&gt;
@@ -1281,13 +1281,13 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-f631383a2b94f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-d1b7920632a06" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-f631383a2b94f">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-button/cfa-button.th :: button(${items})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-d1b7920632a06">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-button/cfa-button.th :: button(${items})}&quot; /&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-button/cfa-button.th :: button(${items})}&quot;</span> /&gt;</span></pre>
     </div>
@@ -1301,13 +1301,13 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-49a9b203cba22" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-25a1d9db0f944" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-49a9b203cba22">&lt;% items.each do |button| %&gt;
+        <textarea hidden data-copy-target="block-25a1d9db0f944">&lt;% items.each do |button| %&gt;
   &lt;% if button['href'] %&gt;
     &lt;a href=&quot;&lt;%= button['href'] %&gt;&quot; class=&quot;usa-button&lt;% if button['modifier'] %&gt; &lt;%= button['modifier'] %&gt;&lt;% end %&gt;&quot;
       &lt;% if button['ariaDisabled'] %&gt; aria-disabled=&quot;&lt;%= button['ariaDisabled'] %&gt;&quot;&lt;% end %&gt;&gt;
@@ -1399,15 +1399,15 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-2599c1340229a" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6764a726e52df" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-2599c1340229a">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-button/cfa-button'), 0, 0, '@button').result_with_hash({items: items}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-6764a726e52df">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@button').result_with_hash({items: items}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-button/cfa-button&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@button&#x27;</span>).result_with_hash({<span class="hljs-symbol">items:</span> items}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-button/_cfa-button.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@button&#x27;</span>).result_with_hash({<span class="hljs-symbol">items:</span> items}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>
