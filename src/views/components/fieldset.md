@@ -2,11 +2,11 @@
 tags: component
 title: Fieldset
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A fieldset groups multiple options or form fields together under one question.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
-nice_uswds:
+nice_uswds: Fieldset component
 url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group
 nice_honeycrisp: Form group molecule
 modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ nice_uswds }} is a group containing multiple form elements such as checkboxes, radios, inputs, textareas, or selects. It is an important semantic that helps screen-readers understand the relationship between a meaningful label and the many form elements associated with it.
 
 <!-- DETAILS -->
 

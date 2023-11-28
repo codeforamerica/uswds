@@ -2,7 +2,7 @@
 tags: component
 title: Memorable date
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A memorable date is one I can easily recall without having to pick it in a calendar.
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2
@@ -231,7 +231,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lighter: 'gray-warm-10', // Affects the color of the inset border
   $cfa-color-base-ink: 'gray-warm-90'      // Affects the text and border color of the input
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,

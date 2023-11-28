@@ -2,7 +2,7 @@
 tags: component
 title: Details
 layout: default
-story: I've read the text but I'm still not sure what it means and I need more details.
+story: A detail contains the particulars of complex terms and help me understand them better.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-The Details component contains helpful context for users but may not be necessary to display by default. It is primarily used to consolidate long or complex information to save space for other critical elements. {.usa-prose}
+The {{ title }} component contains helpful context for users but may not be necessary to display by default. It is primarily used to consolidate long or complex information to save space for other critical elements.
 
 <!-- DETAILS -->
 
@@ -100,7 +100,6 @@ If you don't have any of these documents, you can write, sign, date, and submit 
   $cfa-color-primary-darker: 'mint-cool-80v'  // Affects details text and border color
   $cfa-small-font-size: '2xs'                 // Affects details font size
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-details-font-size: $theme-small-font-size,

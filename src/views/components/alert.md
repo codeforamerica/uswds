@@ -2,7 +2,7 @@
 tags: component
 title: Alert
 layout: default
-story: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
+story: An alert appears when I need help or when something has changed. It may be time-sensitive.
 url_uswds: https://designsystem.digital.gov/components/alert
 url_uswds_guidance: https://designsystem.digital.gov/components/alert/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/alert/#using-the-alert-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Alerts distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction. {.usa-prose}
+The {{ title }} component distinguishes important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
 
 <!-- DETAILS -->
 
@@ -193,7 +193,6 @@ Additional context and followup information including [a link](#). {.usa-alert__
   $cfa-alert-padding-y: 2,
   $cfa-alert-link-color: 'ink'
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-alert-border-width: 2px

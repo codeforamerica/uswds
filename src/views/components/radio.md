@@ -2,7 +2,7 @@
 tags: component
 title: Radio
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Radios let me choose one out of many options I can see.
 url_uswds: https://designsystem.digital.gov/components/radio-buttons
 url_uswds_guidance: https://designsystem.digital.gov/components/radio-buttons#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/radio-buttons#using-the-radio-buttons-component-2
@@ -148,7 +148,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   // Component specific settings
   $cfa-checkbox-border-radius: 0
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-input-select-margin: 1.5,  // Affects checkbox and radio

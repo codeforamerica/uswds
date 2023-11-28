@@ -2,7 +2,7 @@
 tags: component
 title: Follow-up question
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A follow-up question appears after I've answered another question in a specific way.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component progressively discloses a clarifying question. It only appears if an initial question is answered in a specific way. It and the question preceding it are visible on the same page.
 
 <!-- DETAILS -->
 
@@ -160,7 +160,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lightest: 'gray-warm-4', // Affects follow-up question background
   $cfa-color-base-darker: 'gray-warm-70'   // Affects follow-up question container border
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   // Global theme settings that affect the component, changing these will affect other components

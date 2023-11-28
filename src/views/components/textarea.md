@@ -2,7 +2,7 @@
 tags: component
 title: Textarea
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A textarea is where I provide a long answer to a question in an online form.
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input/#using-the-text-input-component-2
@@ -92,7 +92,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lighter: 'gray-warm-10', // Affects the color of the textarea inset border
   $cfa-color-base-ink: 'gray-warm-90'      // Affects the text and border color of the textarea
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,

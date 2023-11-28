@@ -2,7 +2,7 @@
 tags: component
 title: Checkbox
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Checkboxes let me choose between one or more options I can see.
 url_uswds: https://designsystem.digital.gov/components/checkbox
 url_uswds_guidance: https://designsystem.digital.gov/components/checkbox#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows users to choose one or more options from a visible list in a fieldset. They enable users full control to select and deselect an individual option if they change their mind.
 
 <!-- DETAILS -->
 
@@ -148,7 +148,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   // Component specific settings
   $cfa-checkbox-border-radius: 0
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-input-select-margin: 1.5,  // Affects checkbox and radio

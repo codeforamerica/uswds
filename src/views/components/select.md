@@ -2,7 +2,7 @@
 tags: component
 title: Select
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A select lets me choose one out of many options from a pop-up list.
 url_uswds: https://designsystem.digital.gov/components/select
 url_uswds_guidance: https://designsystem.digital.gov/components/select#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/select#using-the-select-component-2
@@ -186,7 +186,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   // Global theme settings that affect the component, changing these will affect other components
   $cfa-color-base-ink: 'gray-warm-90' // Affects the text and border color of the select
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,

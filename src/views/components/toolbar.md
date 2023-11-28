@@ -2,7 +2,7 @@
 tags: component
 title: Toolbar
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A toolbar has all of the important links and features I need from a website. It might also have a time-sensitive alert.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:

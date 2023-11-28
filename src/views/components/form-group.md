@@ -2,7 +2,7 @@
 tags: component
 title: Form group
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A form group contains one option or form field under one question.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component contains one form element such as an input, textarea, or select. The form element has a meaningful label associated with it. It may also contain an extra hint to help the user provide a valid answer.
 
 <!-- DETAILS -->
 

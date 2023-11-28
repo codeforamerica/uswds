@@ -2,7 +2,7 @@
 tags: component
 title: Household details
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Household details let me verify I’ve provided accurate information about my family or people I live with.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:

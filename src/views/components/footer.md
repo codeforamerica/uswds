@@ -2,7 +2,7 @@
 tags: component
 title: Footer
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A footer appears at the bottom of a web page and helps me find information like a site map or legal information.
 url_uswds: https://designsystem.digital.gov/components/footer
 url_uswds_guidance: https://designsystem.digital.gov/components/footer/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/footer/#using-the-footer-component-2
@@ -17,7 +17,7 @@ styles: false
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The Footer component is the last component of a web page and appears globally on all site pages. It often contains secondary or tertiary navigations, simply labeled “footer navigation,” with links to other pages or legal disclaimers users need access to. It also contains the site’s <a href="{{ config.baseUrl }}components/identifier">Identifier component</a>.
 
 <!-- DETAILS -->
 
@@ -79,6 +79,44 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     "tablet": {
       "href": "#logo-cfa-long",
       "style": "width: 161px; height: 49px"
+    }
+  },
+  "identifier": {
+    "modifier": "cfa-font-smooth",
+    "identity": {
+      "ariaLabel": "Agency identifier",
+      "domain": "domain.gov",
+      "disclaimer": "This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America."
+    },
+    "requiredLinks": {
+      "ariaLabel": "Important links",
+      "items": [
+        {
+          "label": "About Code for America",
+          "href": "https://codeforamerica.org",
+          "target": "_blank",
+          "rel": "noopener nofollow",
+          "modifier": "usa-link--external"
+        },
+        {
+          "label": "Diversity, Equity, & Inclusion",
+          "href": "https://codeforamerica.org/about-us/diversity-equity-inclusion",
+          "target": "_blank",
+          "rel": "noopener nofollow",
+          "modifier": "usa-link--external"
+        }
+      ]
+    },
+    "governmentSection": {
+      "ariaLabel": "Domain.gov government information and services",
+      "description": "Looking for government information and services?",
+      "link": {
+        "label": "Visit domain.gov",
+        "href": "https://get.gov",
+        "target": "_blank",
+        "rel": "noopener nofollow",
+        "modifier": "usa-link--external"
+      }
     }
   }
 }{% endcapture %}

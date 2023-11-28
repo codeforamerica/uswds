@@ -2,7 +2,7 @@
 tags: component
 title: Upload documents
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: I select or drop documents to the webpage when I need to add them to an online form.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -157,7 +157,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-info-lighter: 'gray-warm-4',      // Affects informational state color of upload document elements
   $cfa-color-info-dark: 'gray-warm-60'         // Affects informational state color of upload document elements
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px

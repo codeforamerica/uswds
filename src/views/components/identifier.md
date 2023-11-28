@@ -2,7 +2,7 @@
 tags: component
 title: Identifier
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: An identifier is a banner in the footer of a web page that tells me who created it.
 url_uswds: https://designsystem.digital.gov/components/identifier
 url_uswds_guidance: https://designsystem.digital.gov/components/identifier/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/identifier/#using-the-identifier-component-2

@@ -2,7 +2,7 @@
 tags: component
 title: Form card
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A form card helps me focus and answer a few questions in a big online form.
 url_uswds: https://designsystem.digital.gov/components/form
 url_uswds_guidance: https://designsystem.digital.gov/components/form
 url_uswds_usage: https://designsystem.digital.gov/components/form
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections. {.usa-prose}
+Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections.
 
 <!-- DETAILS -->
 
@@ -786,7 +786,6 @@ The form card contains three major sections or slots that can be customized with
   $theme-card-border-color: 'base-lighter'
   $theme-card-border-radius: 'lg'
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-card-header-typeset: 'heading', 'xl', 2

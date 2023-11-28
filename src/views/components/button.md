@@ -2,7 +2,7 @@
 tags: component
 title: Button
 layout: default
-story: '"I use buttons to find important links or submit online applications"'
+story: A button helps me submit an online form, find important links, or turn something on.
 url_uswds: https://designsystem.digital.gov/components/button
 url_uswds_guidance: https://designsystem.digital.gov/components/button/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/button/#using-the-button-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Buttons allow users to trigger actions. They are styled consistently according to their importance and the type of action they enable the user to perform. {.usa-prose}
+The {{ title }} component allows users to trigger actions. They are styled consistently according to their importance and the type of action they enable the user to perform.
 
 <!-- DETAILS -->
 
@@ -344,7 +344,6 @@ When navigating to any button using the keyboard, a <a href="https://www.w3.org/
   $cfa-color-disabled: 'gray-warm-50',        // Affects disabled outline button
   $cfa-color-disabled-dark: 'gray-warm-70',   // Affects disabled button text
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-button-big-font-size: 'lg',
