@@ -609,9 +609,9 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addShortcode('erb', async function(name, include = false) {
     let templatePath = getFile(name, 'erb')
-      .replace(__dirname, package.name)
-      .replace('/_', '/')
-      .replace('.html.erb', '');
+      .replace(__dirname, package.name);
+      // .replace('/_', '/')
+      // .replace('.html.erb', '');
 
     let template = removeNewLines(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
