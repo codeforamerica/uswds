@@ -10,7 +10,8 @@ module.exports = {
    *
    * @var {String}
    */
-  baseUrl: (process.env.NODE_ENV === 'production') ? `${package.homepage}/` : '/',
+  baseUrl: (process.env.NODE_ENV === 'production') ?
+    `${package.homepage}/` : 'http://localhost:8080/',
 
   /**
    * The following set of path strings define where directories are located for
