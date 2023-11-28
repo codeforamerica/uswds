@@ -3,7 +3,7 @@ tags: [primary, component]
 title: Components
 collection: componentByAlpha
 layout: default
-story: Components are simple and consistent solutions to common user-interface needs.
+story: Components are simple and consistent solutions to common user-interface needs
 sublist: true
 ---
 
@@ -16,11 +16,12 @@ The {{ package.nice }} contains customizations for the following components.
     <div class="usa-card__container">
       <header class="usa-card__header">
         <h3 class="usa-card__heading font-lang-lg">
-          <a href="{{ config.baseUrl }}{{ item.url }}">{{ item.data.title }}</a>
+          <a href="{{ config.baseUrl }}{{ item.url | remove_first: '/' }}">{{ item.data.title }}</a>
         </h3>
       </header>
       <div class="usa-card__body font-lang-sm">
         <p>{{ item.data.story }}</p>
+        {% if item.data.url_uswds %}<p class="margin-bottom-0"><small>Extends the <a href="{{ item.data.url_uswds }}" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS {{ item.data.nice_uswds }}</a>.</small></p>{% endif %}
       </div>
     </div>
   </li>
