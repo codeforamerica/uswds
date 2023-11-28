@@ -45,11 +45,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-115a9ad2bedca">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-21a9b045ff756">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-115a9ad2bedca" class="usa-nav__submenu">
+          <ul id="aria-c-21a9b045ff756" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -90,6 +90,9 @@
                                 <a href="https://codeforamerica.github.io/uswds/components/identifier/" ><span>Identifier</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Input</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" ><span>Memorable date</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
@@ -97,9 +100,6 @@
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" ><span>Select</span></a>
-              </li>
-                          <li class="usa-nav__submenu-item">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" ><span>Text input</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/textarea/" ><span>Textarea</span></a>
@@ -118,7 +118,7 @@
         </li>
 
         <li class="usa-nav__primary-item">
-          <a href="https://github.com/codeforamerica/uswds/releases/tag/v0.0.0-28" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-28</span></a>
+          <a href="https://github.com/codeforamerica/uswds/releases/tag/v0.0.0-29" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-29</span></a>
         </li>
       </ul>
 
@@ -202,6 +202,10 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Input</a>
+
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" >Memorable date</a>
 
                               </li>
@@ -211,10 +215,6 @@
                               </li>
                             <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" >Select</a>
-
-                              </li>
-                            <li class="usa-sidenav__item is-current">
-                                <a href="https://codeforamerica.github.io/uswds/components/input/" >Text input</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -237,11 +237,13 @@
           <div class="usa-prose">
             <h1>Follow-up question</h1>
 
-            <p class="usa-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
+              A follow-up question appears after I've answered another question in a specific way.
+            </blockquote>
           </div>
 
           <!-- INTRO -->
-<p class="usa-prose">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>The Follow-up question component progressively discloses a clarifying question. It only appears if an initial question is answered in a specific way. It and the question preceding it are visible on the same page.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
@@ -253,9 +255,8 @@
   <li><strong>Modifier:</strong> <code>.cfa-follow-up-question .cfa-follow-up-question__region</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-dfcbf167f7688"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-dfcbf167f7688">
-<p>The Follow-up question is a custom component. It includes the <a href="https://codeforamerica.github.io/uswds/components/form-group/">form group component</a>, <a href="https://codeforamerica.github.io/uswds//components/fieldset">fieldset component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">Follow-up question molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-follow-up-question .cfa-follow-up-question__region</code> to add <b>styles</b> defined in a custom stylesheet.</p>
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-ac1d4c75901db"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-ac1d4c75901db"><p>The Follow-up question is a custom component. It includes the <a href=\"https://codeforamerica.github.io/uswds/components/form-group/\">form group component</a>, <a href=\"https://codeforamerica.github.io/uswds//components/fieldset\">fieldset component</a>, and any other components necessary to create a form. The visual appearance uses <b>design tokens</b> from the Honeycrisp <a href=\"http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group\" target=\"_blank\" rel=\"noopener nofollow\" class=\"usa-link--external\">Follow-up question molecule</a>. Further customization is applied using the <b>CSS modifiers</b> <code>.cfa-follow-up-question .cfa-follow-up-question__region</code> to add <b>styles</b> defined in a custom stylesheet.</p>
     <p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p>
     <p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
 </div>
@@ -270,36 +271,33 @@
         <span>Do you think you will make less from this job this year?</span>
       </legend>
       <div class="usa-radio cfa-radio">
-        <input type="radio" id="radio-9d10b891a49d1" name="radio['a7d280bb019be']" value="yes" data-js="follow-up-question" class="usa-radio__input usa-radio__input--tile">
-        <label for="radio-9d10b891a49d1" class="usa-radio__label">
+        <input type="radio" id="radio-1e6b5c134f44e" name="radio['f9380d12e0bc2']" value="yes" data-js="follow-up-question" class="usa-radio__input usa-radio__input--tile">
+        <label for="radio-1e6b5c134f44e" class="usa-radio__label">
           <span>Yes</span>
         </label>
       </div>
       <div class="usa-radio cfa-radio">
-        <input type="radio" id="radio-75204abb63c14" name="radio['a7d280bb019be']" value="no" data-js="follow-up-question" data-aria-controls="aria-c-60439a30b5af9" class="usa-radio__input usa-radio__input--tile">
-        <label for="radio-75204abb63c14" class="usa-radio__label">
+        <input type="radio" id="radio-2cf3e0a2477f" name="radio['f9380d12e0bc2']" value="no" data-js="follow-up-question" data-aria-controls="aria-c-7477c842a5471" class="usa-radio__input usa-radio__input--tile">
+        <label for="radio-2cf3e0a2477f" class="usa-radio__label">
           <span>No</span>
         </label>
       </div>
     </fieldset>
   </div>
-  <div class="cfa-follow-up__region" id="aria-c-60439a30b5af9">
+  <div class="cfa-follow-up__region" id="aria-c-7477c842a5471">
     <div>
       <div>
         <div>
-          <div class="usa-form-group cfa-form-group" id="form-group-b58106e420ff7">
-            <label class="usa-label cfa-label" for="input-b58106e420ff7">
+          <div class="usa-form-group cfa-form-group" id="form-group-63bb3ddde97c6">
+            <label class="usa-label cfa-label" for="input-63bb3ddde97c6">
               <span>What do you think you'll make this year?</span>
             </label>
-            <div class="usa-hint usa-input-group cfa-input-group"></div>
+            <div class="usa-hint cfa-hint" id="hint-63bb3ddde97c6">We know this can be hard to answer. You can estimate or guess what you’ll make before taxes and deductions. We’ll use this to calculate and report your monthly pay.</div>
             <div>
-              <div>
-                <input class="usa-input cfa-hint" id="hint-b58106e420ff7">
+              <div class="usa-input-group cfa-input-group">
+                <div class="usa-input-prefix" aria-hidden="true">$</div>
+                <input class="usa-input cfa-input text-end" type="text" id="input-63bb3ddde97c6" name="input['63bb3ddde97c6']" aria-describedby="hint-63bb3ddde97c6" placeholder="0.00" inputmode="decimal" data-js="mask-dollars">
               </div>
-            </div>
-            <div>
-              <select class="usa-select cfa-input text-end" id="input-b58106e420ff7" name="input['b58106e420ff7']" aria-describedby="hint-b58106e420ff7">
-              </select>
             </div>
           </div>
         </div>
@@ -310,56 +308,53 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-b9c5aaa3ea591">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-f7abb98a6638f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-b9c5aaa3ea591" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-f7abb98a6638f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d514ae33e250e" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-da820e03b4757" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d514ae33e250e">&lt;div class=&quot;cfa-follow-up&quot;&gt;
+        <textarea hidden data-copy-target="block-da820e03b4757">&lt;div class=&quot;cfa-follow-up&quot;&gt;
   &lt;div&gt;
     &lt;fieldset class=&quot;usa-fieldset cfa-fieldset&quot;&gt;
       &lt;legend class=&quot;usa-legend cfa-legend&quot;&gt;
         &lt;span&gt;Do you think you will make less from this job this year?&lt;/span&gt;
       &lt;/legend&gt;
       &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-        &lt;input type=&quot;radio&quot; id=&quot;radio-9d10b891a49d1&quot; name=&quot;radio['a7d280bb019be']&quot; value=&quot;yes&quot; data-js=&quot;follow-up-question&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-        &lt;label for=&quot;radio-9d10b891a49d1&quot; class=&quot;usa-radio__label&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;radio-1e6b5c134f44e&quot; name=&quot;radio['f9380d12e0bc2']&quot; value=&quot;yes&quot; data-js=&quot;follow-up-question&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+        &lt;label for=&quot;radio-1e6b5c134f44e&quot; class=&quot;usa-radio__label&quot;&gt;
           &lt;span&gt;Yes&lt;/span&gt;
         &lt;/label&gt;
       &lt;/div&gt;
       &lt;div class=&quot;usa-radio cfa-radio&quot;&gt;
-        &lt;input type=&quot;radio&quot; id=&quot;radio-75204abb63c14&quot; name=&quot;radio['a7d280bb019be']&quot; value=&quot;no&quot; data-js=&quot;follow-up-question&quot; data-aria-controls=&quot;aria-c-60439a30b5af9&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
-        &lt;label for=&quot;radio-75204abb63c14&quot; class=&quot;usa-radio__label&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;radio-2cf3e0a2477f&quot; name=&quot;radio['f9380d12e0bc2']&quot; value=&quot;no&quot; data-js=&quot;follow-up-question&quot; data-aria-controls=&quot;aria-c-7477c842a5471&quot; class=&quot;usa-radio__input usa-radio__input--tile&quot;&gt;
+        &lt;label for=&quot;radio-2cf3e0a2477f&quot; class=&quot;usa-radio__label&quot;&gt;
           &lt;span&gt;No&lt;/span&gt;
         &lt;/label&gt;
       &lt;/div&gt;
     &lt;/fieldset&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;cfa-follow-up__region&quot; id=&quot;aria-c-60439a30b5af9&quot;&gt;
+  &lt;div class=&quot;cfa-follow-up__region&quot; id=&quot;aria-c-7477c842a5471&quot;&gt;
     &lt;div&gt;
       &lt;div&gt;
         &lt;div&gt;
-          &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-b58106e420ff7&quot;&gt;
-            &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-b58106e420ff7&quot;&gt;
+          &lt;div class=&quot;usa-form-group cfa-form-group&quot; id=&quot;form-group-63bb3ddde97c6&quot;&gt;
+            &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-63bb3ddde97c6&quot;&gt;
               &lt;span&gt;What do you think you'll make this year?&lt;/span&gt;
             &lt;/label&gt;
-            &lt;div class=&quot;usa-hint usa-input-group cfa-input-group&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;usa-hint cfa-hint&quot; id=&quot;hint-63bb3ddde97c6&quot;&gt;We know this can be hard to answer. You can estimate or guess what you’ll make before taxes and deductions. We’ll use this to calculate and report your monthly pay.&lt;/div&gt;
             &lt;div&gt;
-              &lt;div&gt;
-                &lt;input class=&quot;usa-input cfa-hint&quot; id=&quot;hint-b58106e420ff7&quot;&gt;
+              &lt;div class=&quot;usa-input-group cfa-input-group&quot;&gt;
+                &lt;div class=&quot;usa-input-prefix&quot; aria-hidden=&quot;true&quot;&gt;$&lt;/div&gt;
+                &lt;input class=&quot;usa-input cfa-input text-end&quot; type=&quot;text&quot; id=&quot;input-63bb3ddde97c6&quot; name=&quot;input['63bb3ddde97c6']&quot; aria-describedby=&quot;hint-63bb3ddde97c6&quot; placeholder=&quot;0.00&quot; inputmode=&quot;decimal&quot; data-js=&quot;mask-dollars&quot;&gt;
               &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-              &lt;select class=&quot;usa-select cfa-input text-end&quot; id=&quot;input-b58106e420ff7&quot; name=&quot;input['b58106e420ff7']&quot; aria-describedby=&quot;hint-b58106e420ff7&quot;&gt;
-              &lt;/select&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -375,36 +370,33 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Do you think you will make less from this job this year?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio cfa-radio&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio-9d10b891a49d1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;radio[&#x27;a7d280bb019be&#x27;]&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;yes&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;follow-up-question&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__input usa-radio__input--tile&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio-9d10b891a49d1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__label&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio-1e6b5c134f44e&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;radio[&#x27;f9380d12e0bc2&#x27;]&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;yes&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;follow-up-question&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__input usa-radio__input--tile&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio-1e6b5c134f44e&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__label&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio cfa-radio&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio-75204abb63c14&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;radio[&#x27;a7d280bb019be&#x27;]&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;no&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;follow-up-question&quot;</span> <span class="hljs-attr">data-aria-controls</span>=<span class="hljs-string">&quot;aria-c-60439a30b5af9&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__input usa-radio__input--tile&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio-75204abb63c14&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__label&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio-2cf3e0a2477f&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;radio[&#x27;f9380d12e0bc2&#x27;]&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;no&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;follow-up-question&quot;</span> <span class="hljs-attr">data-aria-controls</span>=<span class="hljs-string">&quot;aria-c-7477c842a5471&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__input usa-radio__input--tile&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio-2cf3e0a2477f&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-radio__label&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-follow-up__region&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-c-60439a30b5af9&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-follow-up__region&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-c-7477c842a5471&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-b58106e420ff7&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-b58106e420ff7&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;form-group-63bb3ddde97c6&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-63bb3ddde97c6&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What do you think you&#x27;ll make this year?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-input-group cfa-input-group&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-63bb3ddde97c6&quot;</span>&gt;</span>We know this can be hard to answer. You can estimate or guess what you’ll make before taxes and deductions. We’ll use this to calculate and report your monthly pay.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-hint&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-b58106e420ff7&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-group cfa-input-group&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input-prefix&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>$<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-input cfa-input text-end&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-63bb3ddde97c6&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;63bb3ddde97c6&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-63bb3ddde97c6&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;0.00&quot;</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">&quot;decimal&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;mask-dollars&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-select cfa-input text-end&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-b58106e420ff7&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;b58106e420ff7&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-b58106e420ff7&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -513,8 +505,8 @@
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-2e72508546c49"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-2e72508546c49">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-4fba4cc527dbd"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-4fba4cc527dbd">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -525,20 +517,19 @@
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-a49b40bffb876" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-f885c4db7b992" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-a49b40bffb876">
+        <textarea hidden data-copy-target="block-f885c4db7b992">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
   $cfa-color-base-lightest: 'gray-warm-4', // Affects follow-up question background
   $cfa-color-base-darker: 'gray-warm-70'   // Affects follow-up question container border
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -554,7 +545,6 @@
   <span class="hljs-variable">$cfa-color-base-lightest</span>: <span class="hljs-string">&#x27;gray-warm-4&#x27;</span>, // Affects follow-up question background
   <span class="hljs-variable">$cfa-color-base-darker</span>: <span class="hljs-string">&#x27;gray-warm-70&#x27;</span>   // Affects follow-up question container border
 );
-<span class="hljs-comment">//</span>
 <span class="hljs-comment">// Package-level settings</span>
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;cfa-core&#x27;</span> with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -573,13 +563,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-2822054596a04" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-699c25bd47ec" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-2822054596a04">&lt;div th:fragment=&quot;followUpQuestion(modifier, fieldset, region)&quot; class=&quot;cfa-follow-up&quot; th:classappend=&quot;${modifier}&quot;&gt;
+        <textarea hidden data-copy-target="block-699c25bd47ec">&lt;div th:fragment=&quot;followUpQuestion(modifier, fieldset, region)&quot; class=&quot;cfa-follow-up&quot; th:classappend=&quot;${modifier}&quot;&gt;
   &lt;div th:if=&quot;${fieldset}&quot;&gt;
     &lt;th:block th:replace=&quot;~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${fieldset.modifier}, ${fieldset.id}, ${fieldset.legend}, ${fieldset.hint}, ${fieldset.required}, ${fieldset.error}, ${fieldset.options})}&quot; /&gt;
   &lt;/div&gt;
@@ -587,20 +577,20 @@
     &lt;div th:each=&quot;formGroup: ${region.formGroups}&quot;&gt;
       &lt;div th:if=&quot;${formGroup.input}&quot;&gt;
         &lt;div th:if=&quot;${formGroup.inputGroup}&quot;&gt;
-          &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, '', '')}&quot; /&gt;
+          &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.input}, '', '', ${formGroup.hint}, ${formGroup.error}, ${formGroup.inputGroup})}&quot; /&gt;
         &lt;/div&gt;
         &lt;div th:unless=&quot;${formGroup.inputGroup}&quot;&gt;
-          &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, '', '', '')}&quot; /&gt;
+          &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.input}, '', '', ${formGroup.hint}, ${formGroup.error}, '')}&quot; /&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div th:if=&quot;${formGroup.textarea}&quot;&gt;
-        &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', ${formGroup.textarea}, '')}&quot; /&gt;
+        &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, '', '', ${formGroup.textarea}, ${formGroup.hint}, ${formGroup.error}, '')}&quot; /&gt;
       &lt;/div&gt;
       &lt;div th:if=&quot;${formGroup.selectEl}&quot;&gt;
-        &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, '', '', '', ${formGroup.selectEl})}&quot; /&gt;
+        &lt;th:block th:replace=&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, '', '', '', ${formGroup.hint}, ${formGroup.error}, ${formGroup.selectEl})}&quot; /&gt;
       &lt;/div&gt;
       &lt;div th:if=&quot;${formGroup.memorableDate}&quot;&gt;
-        &lt;th:block th:replace=&quot;~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.modifier}, ${formGroup.id}, ${formGroup.fieldset}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.month}, ${formGroup.day}, ${formGroup.year})}&quot; /&gt;
+        &lt;th:block th:replace=&quot;~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.fieldset}, ${formGroup.id}, ${formGroup.required}, ${formGroup.modifier}, ${formGroup.month}, ${formGroup.day}, ${formGroup.year})}&quot; /&gt;
       &lt;/div&gt;
       &lt;div th:if=&quot;${formGroup.options}&quot;&gt;
         &lt;th:block th:replace=&quot;~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${formGroup.modifier}, ${formGroup.id}, ${formGroup.legend}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.options})}&quot; /&gt;
@@ -617,20 +607,20 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:each</span>=<span class="hljs-string">&quot;formGroup: ${region.formGroups}&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${formGroup.input}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${formGroup.inputGroup}&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, ${formGroup.inputGroup}, &#x27;&#x27;, &#x27;&#x27;)}&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.input}, &#x27;&#x27;, &#x27;&#x27;, ${formGroup.hint}, ${formGroup.error}, ${formGroup.inputGroup})}&quot;</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:unless</span>=<span class="hljs-string">&quot;${formGroup.inputGroup}&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, ${formGroup.input}, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)}&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.input}, &#x27;&#x27;, &#x27;&#x27;, ${formGroup.hint}, ${formGroup.error}, &#x27;&#x27;)}&quot;</span> /&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${formGroup.textarea}&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, &#x27;&#x27;, &#x27;&#x27;, ${formGroup.textarea}, &#x27;&#x27;)}&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, &#x27;&#x27;, &#x27;&#x27;, ${formGroup.textarea}, ${formGroup.hint}, ${formGroup.error}, &#x27;&#x27;)}&quot;</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${formGroup.selectEl}&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, ${formGroup.hint}, ${formGroup.error}, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, ${formGroup.selectEl})}&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-form-group/cfa-form-group.th :: formGroup(${formGroup.modifier}, ${formGroup.id}, ${formGroup.label}, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, ${formGroup.hint}, ${formGroup.error}, ${formGroup.selectEl})}&quot;</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${formGroup.memorableDate}&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.modifier}, ${formGroup.id}, ${formGroup.fieldset}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.month}, ${formGroup.day}, ${formGroup.year})}&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.fieldset}, ${formGroup.id}, ${formGroup.required}, ${formGroup.modifier}, ${formGroup.month}, ${formGroup.day}, ${formGroup.year})}&quot;</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${formGroup.options}&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-fieldset/cfa-fieldset.th :: fieldset(${formGroup.modifier}, ${formGroup.id}, ${formGroup.legend}, ${formGroup.hint}, ${formGroup.required}, ${formGroup.error}, ${formGroup.options})}&quot;</span> /&gt;</span>
@@ -647,13 +637,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-5b8ebbae6f7" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6b126bf41784" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-5b8ebbae6f7">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-follow-up-question/cfa-follow-up-question.th :: followUpQuestion(${modifier}, ${fieldset}, ${region})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-6b126bf41784">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-follow-up-question/cfa-follow-up-question.th :: followUpQuestion(${modifier}, ${fieldset}, ${region})}&quot; /&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-follow-up-question/cfa-follow-up-question.th :: followUpQuestion(${modifier}, ${fieldset}, ${region})}&quot;</span> /&gt;</span></pre>
     </div>
@@ -667,13 +657,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-27cdb2a8c26b" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-a2dc3340a4f8a" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-27cdb2a8c26b">&lt;div class=&quot;cfa-follow-up&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+        <textarea hidden data-copy-target="block-a2dc3340a4f8a">&lt;div class=&quot;cfa-follow-up&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
   &lt;% if defined?(fieldset) %&gt;&lt;div&gt;
   &lt;%= ERB.new(File.read('packages/cfa-fieldset/_cfa-fieldset.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
     .result_with_hash({
@@ -732,7 +722,6 @@
           id: (formGroup['id'] if formGroup['id']),
           fieldset: (formGroup['fieldset'] if formGroup['fieldset']),
           required: (formGroup['required'] if formGroup['required']),
-          error: (formGroup['error'] if formGroup['error']),
           month: (formGroup['month'] if formGroup['month']),
           day: (formGroup['day'] if formGroup['day']),
           year: (formGroup['year'] if formGroup['year'])
@@ -813,7 +802,6 @@
           <span class="hljs-symbol">id:</span> (formGroup[<span class="hljs-string">&#x27;id&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;id&#x27;</span>]),
           <span class="hljs-symbol">fieldset:</span> (formGroup[<span class="hljs-string">&#x27;fieldset&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;fieldset&#x27;</span>]),
           <span class="hljs-symbol">required:</span> (formGroup[<span class="hljs-string">&#x27;required&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;required&#x27;</span>]),
-          <span class="hljs-symbol">error:</span> (formGroup[<span class="hljs-string">&#x27;error&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;error&#x27;</span>]),
           <span class="hljs-symbol">month:</span> (formGroup[<span class="hljs-string">&#x27;month&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;month&#x27;</span>]),
           <span class="hljs-symbol">day:</span> (formGroup[<span class="hljs-string">&#x27;day&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;day&#x27;</span>]),
           <span class="hljs-symbol">year:</span> (formGroup[<span class="hljs-string">&#x27;year&#x27;</span>] <span class="hljs-keyword">if</span> formGroup[<span class="hljs-string">&#x27;year&#x27;</span>])
@@ -843,15 +831,15 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d999874bb560c" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-8b471a85124df" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d999874bb560c">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-follow-up-question/cfa-follow-up-question'), 0, 0, '@followUpQuestion').result_with_hash({modifier: modifier, region: region, fieldset: fieldset}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-8b471a85124df">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-follow-up-question/_cfa-follow-up-question.html.erb'), 0, 0, '@followUpQuestion').result_with_hash({modifier: modifier, region: region, fieldset: fieldset}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-follow-up-question/cfa-follow-up-question&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@followUpQuestion&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">region:</span> region, <span class="hljs-symbol">fieldset:</span> fieldset}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-follow-up-question/_cfa-follow-up-question.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@followUpQuestion&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">region:</span> region, <span class="hljs-symbol">fieldset:</span> fieldset}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -878,7 +866,7 @@
         </li>
 
         <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-28</span></a>
+          <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.0-29</span></a>
         </li>
       </ul>
     </nav>
