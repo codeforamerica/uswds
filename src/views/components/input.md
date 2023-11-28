@@ -1,8 +1,8 @@
 ---
 tags: component
-title: Text input
+title: Input
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: An input is where I provide a short answer to a question in an online form.
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2
@@ -10,14 +10,16 @@ nice_uswds: Text input component
 # url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
 # nice_honeycrisp: Form element atom
 modifier_honeycrisp: ['.cfa-input', '.cfa-input-group']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A851%26mode%3Ddesign%26t%3D3z8wksZDJXdQbrxT-1
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-535&mode=design
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-input.png
+thumbnail_description: An illustration of the input component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is the most common form component for receiving user information on an online form. There are several types of inputs (text being one of them) that suggest the type of information they can receive. Input types are enhanced with icon prefixes, postfixes, or masks to help users enter the correct information. They are always paired with a label inside a <a href="{{ config.baseUrl }}components/form-group">Form group component</a>.
 
 <!-- DETAILS -->
 
@@ -50,7 +52,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Text input' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Text input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -64,7 +66,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Required text input' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Required text input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -77,7 +79,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Email input' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Email input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -97,7 +99,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input group with prefix and mask (U.S. Dollars)' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input group with prefix and mask (U.S. Dollars)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -115,7 +117,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input group with postfix' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input group with postfix' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -135,7 +137,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input group with prefix and mask (U.S. Phone)' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input group with prefix and mask (U.S. Phone)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -151,11 +153,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input with mask (SSN)' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input with mask (Social Security Number)' %}
 
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
+
+**Inputs vs. Textareas**. When longer form content needs to be entered the <a href="{{ config.baseUrl }}components/textarea">textarea component</a> is used.
 
 **Form groups**. Form questions with input components always use the <a href="{{ config.baseUrl }}components/form-group">form group component</a> to wrap the input with a visible `label` element.
 
@@ -196,7 +200,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lighter: 'gray-warm-10', // Affects the color of the input inset border
   $cfa-color-base-ink: 'gray-warm-90'      // Affects the text and border color of the input
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,
@@ -206,4 +209,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 );
 {% endcapture %}
 
-{% render 'source.md', name: 'input', nice: title, theme: theme, usage: url_uswds_usage, config: config, pckg: package %}
+{% capture javascript %}
+is used to provide a formatting (mask) utility for U.S. Dollars, U.S. Phone, and Social Security Number input types.
+{% endcapture %}
+
+{% render 'source.md', name: 'input', nice: title, theme: theme, usage: url_uswds_usage, javascript: javascript, config: config, pckg: package %}

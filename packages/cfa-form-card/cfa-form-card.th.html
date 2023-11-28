@@ -28,7 +28,7 @@
       </div>
 
       <div th:if="${header.alert}">
-        <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${header.alert.modifier}, ${header.alert.role}, ${header.alert.label}, ${header.alert.labelledBy}, ${header.alert.heading}, ${header.alert.body}, ${header.alert.text})}"></th:block>
+        <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${header.alert.modifier}, ${header.alert.role}, ${header.alert.label}, ${header.alert.labelledby}, ${header.alert.heading}, ${header.alert.body}, ${header.alert.text})}"></th:block>
       </div>
 
       <div class="cfa-form-card__content">
@@ -86,7 +86,7 @@
       </div>
 
       <div th:if="${header.alert}">
-        <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${header.alert.modifier}, ${header.alert.role}, ${header.alert.label}, ${header.alert.labelledBy}, ${header.alert.heading}, ${header.alert.body}, ${header.alert.text})}"></th:block>
+        <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${header.alert.modifier}, ${header.alert.role}, ${header.alert.label}, ${header.alert.labelledby}, ${header.alert.heading}, ${header.alert.body}, ${header.alert.text})}"></th:block>
       </div>
 
       <div th:if="${content}" class="cfa-form-card__content" th:utext="${content}">

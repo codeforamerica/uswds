@@ -94,6 +94,7 @@ module.exports = {
    * @source https://highlightjs.org
    */
   hightlightJs: [
+    'bash',
     'css',
     'erb',
     'java',

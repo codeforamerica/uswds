@@ -25,7 +25,7 @@
         <img src="{{ config.baseUrl }}assets/img/usa-icons/close.svg" role="img" alt="Close" />
       </button>
 
-      <ul class="usa-nav__primary usa-accordion">
+      <ul class="usa-nav__primary usa-accordion flex-align-center">
         {% for item in collections.primary %}
         {% set ID = createId() %}
         <li class="usa-nav__primary-item">
@@ -45,11 +45,23 @@
         {% endfor %}
 
         <li class="usa-nav__primary-item">
-          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link">
+            <span class="usa-sr-only">Design library</span>
+
+            <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
+              <use href="#icon-figma"></use>
+            </svg>
+          </a>
         </li>
 
         <li class="usa-nav__primary-item">
-          <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
+          <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="usa-nav-link" title="Latest Release v{{ package.version }}">
+            <span class="usa-sr-only">Source (GitHub)</span>
+
+            <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
+              <use href="{{ config.baseUrl }}assets/img/sprite.svg#github"></use>
+            </svg>
+          </a>
         </li>
       </ul>
 

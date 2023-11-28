@@ -2,7 +2,7 @@
 tags: component
 title: Alert
 layout: default
-story: '"Alerts appear when I need help or when something has changed. It may be time-sensitive."'
+story: An alert appears when I need help or when something has changed. It may be time-sensitive.
 url_uswds: https://designsystem.digital.gov/components/alert
 url_uswds_guidance: https://designsystem.digital.gov/components/alert/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/alert/#using-the-alert-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: .cfa-alert
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5003%253A527%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-alert.png
+thumbnail_description: An illustration of the alert component.
 ---
 
 <!-- INTRO -->
 
-Alerts distinguish important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction. {.usa-prose}
+The {{ title }} component distinguishes important information or errors that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
 
 <!-- DETAILS -->
 
@@ -57,10 +59,11 @@ We will use this information to evaluate the fairness of this application, and w
 {% capture context %}{
   "modifier": "cfa-alert usa-alert--info",
   "role": "region",
-  "labelledby": "aria-lb-{% createId %}"
+  "labelledby": "aria-lb-{% createId %}",
+  "body": "{% md body %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Informational', body: body, context: context, caption: caption %}
+{% render 'figure.md', name: 'alert', nice: 'Informational', context: context, caption: caption %}
 
 {% capture caption %}
 
@@ -76,10 +79,13 @@ You were recommended for expedited food assistance (SNAP). [Click here to learn 
 
 {% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Success', body: body, context: '{
+{% capture context %}{
   "modifier": "cfa-alert usa-alert--success",
-  "role": "status"
-}', caption: caption %}
+  "role": "status",
+  "body": "{% md body %}"
+}{% endcapture %}
+
+{% render 'figure.md', name: 'alert', nice: 'Success', context: context, caption: caption %}
 
 {% capture caption %}
 
@@ -93,10 +99,13 @@ We couldn't find your address. To make sure you get mail from the county, you ma
 
 {% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Warning', body: body, context: '{
+{% capture context %}{
   "modifier": "cfa-alert usa-alert--warning",
-  "heading": "Make sure your address is correct"
-}', caption: caption %}
+  "heading": "Make sure your address is correct",
+  "body": "{% md body %}"
+}{% endcapture %}
+
+{% render 'figure.md', name: 'alert', nice: 'Warning', context: context, caption: caption %}
 
 {% capture caption %}
 
@@ -112,10 +121,13 @@ This is an example error notice. Its a great way to highlight **errors or danger
 
 {% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Error', body: body, context: '{
+{% capture context %}{
   "modifier": "cfa-alert usa-alert--error",
-  "role": "alert"
-}', caption: caption %}
+  "role": "alert",
+  "body": "{% md body %}"
+}{% endcapture %}
+
+{% render 'figure.md', name: 'alert', nice: 'Error', context: context, caption: caption %}
 
 {% capture caption %}
 
@@ -131,10 +143,13 @@ Additional context and followup information including [a link](#). {.usa-alert__
 
 {% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Success', body: body, context: '{
+{% capture context %}{
   "modifier": "cfa-alert usa-alert--emergency",
-  "role": "status"
-}', caption: caption %}
+  "role": "status",
+  "body": "{% md body %}"
+}{% endcapture %}
+
+{% render 'figure.md', name: 'alert', nice: 'Success', context: context, caption: caption %}
 
 ## Guidance {#guidance}
 
@@ -193,7 +208,6 @@ Additional context and followup information including [a link](#). {.usa-alert__
   $cfa-alert-padding-y: 2,
   $cfa-alert-link-color: 'ink'
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-alert-border-width: 2px

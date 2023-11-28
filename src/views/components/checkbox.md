@@ -2,7 +2,7 @@
 tags: component
 title: Checkbox
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Checkboxes let me choose one or more options from a list.
 url_uswds: https://designsystem.digital.gov/components/checkbox
 url_uswds_guidance: https://designsystem.digital.gov/components/checkbox#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: .cfa-checkbox
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-checkbox.png
+thumbnail_description: An illustration of the checkbox component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows users to choose one or more options from a list on the page in a fieldset. They enable users full control to select and deselect an individual option if they change their mind.
 
 <!-- DETAILS -->
 
@@ -67,7 +69,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Checkboxes' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Checkboxes' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -100,7 +102,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Checkboxes with descriptions' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Checkboxes with descriptions' %}
 
 <!-- GUIDANCE -->
 
@@ -148,7 +150,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   // Component specific settings
   $cfa-checkbox-border-radius: 0
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-input-select-margin: 1.5,  // Affects checkbox and radio

@@ -1,6 +1,6 @@
-# Code for America, U.S. Web Design System theme (USWDS)
+# Code for America, U.S. Web Design System (USWDS) theme
 
-This theme replaces the <a href="https://github.com/codeforamerica/honeycrisp-gem" target="_blank" rel="noindex noopener nofollow">Honeycrisp Ruby gem</a> but preserves the style and design. The theme uses “design tokens” from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide" target="_blank" rel="noindex noopener nofollow">Honeycrisp design system</a> to make the USWDS look similar to Honeycrisp. Full documentation on using the theme can be referenced on the <a href="https://codeforamerica.github.io/uswds" target="_blank" rel="noindex noopener nofollow">corresponding documentation site</a>.
+This theme replaces the <a href="https://github.com/codeforamerica/honeycrisp-gem" target="_blank" rel="noindex noopener nofollow">Honeycrisp Ruby gem</a> but preserves the style and design. The theme uses “design tokens” from the Honeycrisp Design System to make the USWDS look similar to Honeycrisp. Full documentation on using the theme can be referenced on the <a href="https://codeforamerica.github.io/uswds" target="_blank" rel="noindex noopener nofollow">corresponding documentation site</a>.
 
 ## Usage
 
@@ -766,12 +766,12 @@ The [entrypoints.js](entrypoints.js) contains configuration for source Sass and 
 
 The [eleventy.config.js](eleventy.config.js) defines the customized functionality available to templates. The main additions are library and plugin configuration, <a href="https://www.11ty.dev/docs/shortcodes" target="_blank" rel="noindex noopener nofollow">custom shortcodes</a>, global data, and collections. Shortcodes are noted below but documented in more detail in the [eleventy.config.js](eleventy.config.js) file.
 
-#### **Package (Paired Shortcode)**
+#### **Component**
 
-Render a component. The JSON context fills the template slots with the values used by the template. The boolean value determines whether to return rendered (false, default) or escaped (true) HTML.
+Render a component. The JSON context fills the template slots with the values used by the template. The first boolean value determines whether to return rendered (false, default) or escaped (true) HTML. The second boolean determines wether to return both the rendered default Thymeleaf template (false) or both Thymeleaf and ERB templates (true).
 
 ```liquid
-{% package 'name' 'context (JSON String)' false %}{{ 'body (HTML String)' }}{% endpackage %}
+{% component 'name' 'context (JSON String)' false false %}
 ```
 
 #### Markdown

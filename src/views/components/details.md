@@ -2,7 +2,7 @@
 tags: component
 title: Details
 layout: default
-story: I've read the text but I'm still not sure what it means and I need more details.
+story: A detail contains answers to questions I have about confusing text.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -13,11 +13,13 @@ modifier_honeycrisp: .cfa-details
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5004%253A537%26mode%3Ddesign%26t%3Db7vIYK7WH81HUo0S-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-details.png
+thumbnail_description: An illustration of the details component.
 ---
 
 <!-- INTRO -->
 
-The Details component contains helpful context for users but may not be necessary to display by default. It is primarily used to consolidate long or complex information to save space for other critical elements. {.usa-prose}
+The {{ title }} component contains helpful context for users but may not be necessary to display by default. It always follows complex text or lengthy descriptions.
 
 <!-- DETAILS -->
 
@@ -36,7 +38,9 @@ The Details component contains helpful context for users but may not be necessar
 {% capture certification_letter %}
 If you don't have any of these documents, you can write, sign, date, and submit this letter:
 
-*I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.* <br> *[Your signature]* <br> *[Today's date]*
+*I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.*
+
+*[Your signature]* <br> *[Today's date]*
 {% endcapture %}
 
 {% capture context %}{
@@ -46,7 +50,7 @@ If you don't have any of these documents, you can write, sign, date, and submit 
   "body": "{% md certification_letter %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'details', nice: title, body: body, context: context, caption: 'Details' %}
+{% render 'figure.md', name: 'details', nice: title, context: context, caption: 'Details' %}
 
 <!-- GUIDANCE -->
 
@@ -100,7 +104,6 @@ If you don't have any of these documents, you can write, sign, date, and submit 
   $cfa-color-primary-darker: 'mint-cool-80v'  // Affects details text and border color
   $cfa-small-font-size: '2xs'                 // Affects details font size
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-details-font-size: $theme-small-font-size,

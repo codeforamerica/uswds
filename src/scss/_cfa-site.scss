@@ -129,3 +129,23 @@
 .site-identifier {
   background-color: var(--cfa-site-footer-background-color);
 }
+
+[class*="bg-"] {
+  background-repeat: no-repeat;
+}
+
+.bg-main {
+  background-color: color('primary-lightest');
+
+  background-image: url('../site/bg-main-blob-3.png'),
+                    url('../site/bg-main-blob-2.png'),
+                    url('../site/bg-main-blob-1.png');
+
+  background-position: center center,
+                       right top,
+                       left bottom;
+
+  background-size: 1043px 726px,
+                   910px 835px,
+                   993px 763px;
+}

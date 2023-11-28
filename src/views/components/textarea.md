@@ -2,7 +2,7 @@
 tags: component
 title: Textarea
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A textarea is where I provide a long answer to a question in an online form.
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input/#using-the-text-input-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: ['.cfa-textarea']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A550%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-textarea.png
+thumbnail_description: An illustration of the textarea component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is used when longer form content needs to be entered into an online form.
 
 <!-- DETAILS -->
 
@@ -47,7 +49,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'textarea', nice: title, body: body, context: context, caption: 'Textarea' %}
+{% render 'figure.md', name: 'textarea', nice: title, context: context, caption: 'Textarea' %}
 
 <!-- GUIDANCE -->
 
@@ -92,7 +94,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lighter: 'gray-warm-10', // Affects the color of the textarea inset border
   $cfa-color-base-ink: 'gray-warm-90'      // Affects the text and border color of the textarea
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,

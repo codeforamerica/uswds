@@ -1,7 +1,9 @@
 <% items.each do |button| %>
   <% if button['href'] %>
     <a href="<%= button['href'] %>" class="usa-button<% if button['modifier'] %> <%= button['modifier'] %><% end %>"
-      <% if button['ariaDisabled'] %> aria-disabled="<%= button['ariaDisabled'] %>"<% end %>>
+      <% if button['ariaDisabled'] %> aria-disabled="<%= button['ariaDisabled'] %>"<% end %>
+      <% if button['target'] %> target="<%= button['target'] %>"<% end %>
+      <% if button['rel'] %> rel="<%= button['rel'] %>"<% end %>>
       <% if button['check'] %><svg class="usa-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
         <path d="M3.5 9.42857L0 13L8 22L22 3.5L18 0L7.5 14L3.5 9.42857Z" fill="inherit"/>
       </svg><% end %>

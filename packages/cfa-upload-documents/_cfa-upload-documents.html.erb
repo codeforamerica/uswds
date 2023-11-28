@@ -1,5 +1,5 @@
-<div class="usa-form-group cfa-form-group cfa-file-input" data-js="upload-documents"<% if defined?(id) %> id="<%= id %>"<% end %>>
-  <div class="cfa-upload-documents" data-dropzone="uploads">
+<div class="usa-form-group cfa-form-group cfa-upload-documents" data-js="upload-documents"<% if defined?(id) %> id="<%= id %>"<% end %>>
+  <div data-dropzone="uploads">
     <% if fileInput['label'] %><label class="usa-label<% if fileInput['label']['modifier'] %> <%= fileInput['label']['modifier'] %><% end %>"<% if fileInput['label']['for'] %> for="<%= fileInput['label']['for'] %>"<% end %><% if fileInput['label']['tabindex'] %> tabindex="<%= fileInput['label']['tabindex'] %>"<% end %>>
       <span><%= fileInput['label']['text'] %></span>
 
@@ -8,9 +8,11 @@
       <% end %>
     </label><% end %>
 
-    <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
+    <span class="usa-error-message<% if fileInput['error'] && fileInput['error']['modifier'] %> <%= fileInput['error']['modifier'] %><% end %>" aria-hidden="true" data-dropzone="input-error-message"<% if fileInput['error'] && fileInput['error']['id'] %> id="<%= fileInput['error']['id'] %>"<% end %>>
+      <% if fileInput['error'] && fileInput['error']['text'] %><%= fileInput['error']['text'] %><% end %>
+    </span>
 
-    <div class="usa-file-input">
+    <div class="usa-file-input cfa-file-input">
       <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
         <div class="usa-file-input__box"></div>
 
@@ -28,7 +30,13 @@
           </div>
         </div>
 
-        <input class="usa-file-input__input" type="file" data-dropzone="fallback" th:attr="id=${fileInput.input.id},name=${fileInput.input.name},aria-labelledby=${fileInput.input.ariaLabelledby},aria-describedby=${fileInput.input.ariaDescribedby},accept=${fileInput.input.accept},multiple=${fileInput.input.multiple}">
+        <input class="usa-file-input__input" type="file" data-dropzone="fallback"
+          <% if fileInput['input']['id'] %> id="<%= fileInput['input']['id'] %>"<% end %>
+          <% if fileInput['input']['name'] %> name="<%= fileInput['input']['name'] %>"<% end %>
+          <% if fileInput['input']['aria-labelledby'] %> aria-labelledby="<%= fileInput['input']['ariaLabelledby'] %>"<% end %>
+          <% if fileInput['input']['aria-describedby'] %> aria-describedby="<%= fileInput['input']['ariaDescribedby'] %>"<% end %>
+          <% if fileInput['input']['accept'] %> accept="<%= fileInput['input']['accept'] %>"<% end %>
+          <% if fileInput['input']['multiple'] %> multiple="<%= fileInput['input']['multiple'] %>"<% end %>>
 
         <div data-dropzone="hidden-input-container"></div>
       </div>

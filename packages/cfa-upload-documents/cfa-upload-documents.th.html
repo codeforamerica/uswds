@@ -1,5 +1,5 @@
-<div th:fragment="uploadDocuments(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)" class="usa-form-group cfa-form-group cfa-file-input" th:attr="id=${id}" data-js="upload-documents">
-  <div class="cfa-upload-documents" data-dropzone="uploads">
+<div th:fragment="uploadDocuments(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)" class="usa-form-group cfa-form-group cfa-upload-documents" th:attr="id=${id}" data-js="upload-documents">
+  <div data-dropzone="uploads">
     <label class="usa-label" th:if="${fileInput.label}" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
       <span th:text="${fileInput.label.text}">Label</span>
 
@@ -8,7 +8,7 @@
 
     <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
 
-    <div class="usa-file-input">
+    <div class="usa-file-input cfa-file-input">
       <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
         <div class="usa-file-input__box"></div>
 

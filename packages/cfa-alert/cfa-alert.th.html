@@ -1,6 +1,6 @@
-<div th:fragment="alert(modifier, role, label, labelledBy, heading, body, text)" class="usa-alert" th:classappend="${modifier}" th:attr="role=${role},aria-label=${label},aria-labelledby=${labelledBy}">
+<div th:fragment="alert(modifier, role, label, labelledby, heading, body, text)" class="usa-alert" th:classappend="${modifier}" th:attr="role=${role},aria-label=${label},aria-labelledby=${labelledby}">
   <div class="usa-alert__body">
-    <h3 class="usa-alert__heading" th:if="${heading}" th:text="${heading}" th:attr="id=${labelledBy}">Heading</h3>
+    <h3 class="usa-alert__heading" th:if="${heading}" th:text="${heading}" th:attr="id=${labelledby}">Heading</h3>
 
     <div th:if="${body}" th:utext="${body}">
       <p>Body</p>

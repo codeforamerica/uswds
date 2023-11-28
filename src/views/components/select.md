@@ -2,7 +2,7 @@
 tags: component
 title: Select
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A select lets me choose one out of many options from a pop-up list.
 url_uswds: https://designsystem.digital.gov/components/select
 url_uswds_guidance: https://designsystem.digital.gov/components/select#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/select#using-the-select-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: ['.cfa-select']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A844%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-select.png
+thumbnail_description: An illustration of the select component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows users to choose one option from a list in a modal dialog. The full list of options is only visible once a user interacts with the select.
 
 <!-- DETAILS -->
 
@@ -143,7 +145,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'select', nice: title, body: body, context: context, caption: 'Select' %}
+{% render 'figure.md', name: 'select', nice: title, context: context, caption: 'Select' %}
 
 <!-- GUIDANCE -->
 
@@ -186,7 +188,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   // Global theme settings that affect the component, changing these will affect other components
   $cfa-color-base-ink: 'gray-warm-90' // Affects the text and border color of the select
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,

@@ -475,65 +475,92 @@ module.exports = function(eleventyConfig) {
    * string escaped and wrapped in a code block if the 3rd argument, escape,
    * is true.
    *
-   * @param   {Array}  args  Accepts 0: Context body, 1: name as String,
-   *                         2: context as JSON String, 3: wether to return
-   *                         rendered HTML (false) or pre-rendered HTML in a
-   *                         code block (true)
+   * @param   {Array}  args  0: String, package name
+   *                         1: String, context as JSON String
+   *                         2: Boolean. Wether to return rendered HTML (false)
+   *                            or pre-rendered HTML in a code block (true)
+   *                         3: Boolean. Wether to the default template only (false)
+   *                            or all component templates (true)
    *
    * @return  {String}       Rendered template or code block source preview
    */
-  eleventyConfig.addPairedShortcode('package', async function(...args) {
-    let name = args[1];
-
-    let context = (args[2]) ? JSON.parse(args[2]) : false;
+  eleventyConfig.addShortcode('component', async function(...args) {
+    let idAttrs = ['id', 'for', 'aria-describedby', 'aria-labelledby', 'aria-controls'];
+    let name = args[0];
+    let context = (args[1]) ? JSON.parse(args[1]) : false;
+    let pre = (args[2]) ? args[2] : false;
+    let all = (args[3]) ? args[3] : false;
 
     let rendered = '';
 
-    if (args[0]) {
-      context.body = markdown.render(args[0]);
+    let th = removeExtraHtml(await fragmentInclude(name, context));
+
+    th = removeEmptyAttr(th);
+
+    th = replaceSingleQuoteEscape(th);
+
+    /**
+     * Append ERB partial rendering to local development environments
+     */
+    if (all && process.env.NODE_ENV != 'production') {
+      let erb = await erbRender(name, context);
+
+      for (let i = 0; i < idAttrs.length; i++) {
+        erb = erb.split(`${idAttrs[i]}="`).join(`${idAttrs[i]}="erb-`);
+      }
+
+      rendered = `
+        <div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>
+        <div>
+        <!-- START THYMELEAF COMPONENT -->
+        ${th}
+        <!-- END THYMELEAF COMPONENT -->
+        </div>
+        <br>
+        <div class="margin-bottom-2"><b>ERB Preview</b></div>
+        <div>
+        <!-- START ERB COMPONENT -->
+        ${erb}
+        <!-- END ERB COMPONENT -->
+        </div>`;
+    } else {
+      rendered = th;
     }
 
-    if (args[3]) {
-      let th = removeExtraHtml(await fragmentInclude(name, context));
-
-      th = removeEmptyAttr(th);
-
-      th = replaceSingleQuoteEscape(th);
-
-      /**
-       * Test erb rendering for non-production environments
-       */
-      if (process.env.NODE_ENV != 'production') {
-        let erb = await erbRender(name, context);
-
-        rendered = `<div><div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>${th}</div>` +
-          `<div><br><div class="margin-bottom-2"><b>ERB Preview</b></div>${erb}</div>`;
-      } else {
-        rendered = th
-      }
-
+    /**
+     * Return code block or fully rendered HTML
+     */
+    if (pre) {
       return block(rendered, 'html');
     } else {
-      // Template fragment inclusion testing
-      let th = removeExtraHtml(await fragmentInclude(name, context));
-
-      th = removeEmptyAttr(th);
-
-      th = replaceSingleQuoteEscape(th);
-
-      if (process.env.NODE_ENV != 'production') {
-        // ERB partial render testing
-        let erb = await erbRender(name, context);
-
-        rendered = `<div><div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>${th}</div>` +
-          `<div><br><div class="margin-bottom-2"><b>ERB Preview</b></div>${erb}</div>`;
-      } else {
-        rendered = th;
-      }
-
       return beautify(rendered, CONFIG_BEAUTIFY);
     }
   });
+
+  // /**
+  //  * Fully renders a package's Thymeleaf template with context passed as the
+  //  * second argument and shortcode body. It returns the Thymeleaf template
+  //  * string escaped and wrapped in a code block if the 3rd argument, escape,
+  //  * is true.
+  //  *
+  //  * @param   {Array}  args  Accepts 0: Context body, 1: name as String,
+  //  *                         2: context as JSON String, 3: wether to return
+  //  *                         rendered HTML (false) or pre-rendered HTML in a
+  //  *                         code block (true)
+  //  *
+  //  * @return  {String}       Rendered template or code block source preview
+  //  */
+  // eleventyConfig.addShortcode('component', async function(...args) {
+  //   let name = args[0];
+  //   let context = (args[1]) ? JSON.parse(args[1]) : false;
+  //   let rendered = removeExtraHtml(await fragmentInclude(name, context));
+
+  //   rendered = removeEmptyAttr(rendered);
+
+  //   rendered = replaceSingleQuoteEscape(rendered);
+
+  //   return beautify(rendered, CONFIG_BEAUTIFY);
+  // });
 
   /**
    * Renders a Markdown string and returns the rendered HTML
@@ -728,8 +755,8 @@ module.exports = function(eleventyConfig) {
     return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
   });
 
-  eleventyConfig.addCollection('design_tokenByAlpha', (collectionApi) => {
-    let alpha = collectionApi.getFilteredByTag('design_token').sort((a, b) => a.data.title.localeCompare(b.data.title));
+  eleventyConfig.addCollection('documentationByAlpha', (collectionApi) => {
+    let alpha = collectionApi.getFilteredByTag('documentation').sort((a, b) => a.data.title.localeCompare(b.data.title));
 
     return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
   });

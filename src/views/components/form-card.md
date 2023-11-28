@@ -2,7 +2,7 @@
 tags: component
 title: Form card
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A form card helps me focus and answer a few questions in a big online form.
 url_uswds: https://designsystem.digital.gov/components/form
 url_uswds_guidance: https://designsystem.digital.gov/components/form
 url_uswds_usage: https://designsystem.digital.gov/components/form
@@ -13,11 +13,13 @@ modifier_honeycrisp: ['.cfa-form-card', '.cfa-form', '.cfa-form-card__graphic', 
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-533&mode=design
 tokens: false
 styles: true
+thumbnail: assets/site/thumbnail-form-card.png
+thumbnail_description: An illustration of the form card component.
 ---
 
 <!-- INTRO -->
 
-Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections. {.usa-prose}
+Form cards enable users to easily progress through complex forms by providing a single-page presentation of important questions and form sections.
 
 <!-- DETAILS -->
 
@@ -453,7 +455,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
     "alert": {
       "modifier": "cfa-form-card__header-alert cfa-alert usa-alert--warning",
       "role": "region",
-      "labelledBy": "aria-lb-{{ id_alert_label }}",
+      "labelledby": "aria-lb-{{ id_alert_label }}",
       "text": "We couldn't find your address. To make sure you get mail from the county, you may edit your address or keep going. <a href=\"#\">Alternatively, click here to look up your county information</a>."
     }
   },
@@ -786,7 +788,6 @@ The form card contains three major sections or slots that can be customized with
   $theme-card-border-color: 'base-lighter'
   $theme-card-border-radius: 'lg'
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-card-header-typeset: 'heading', 'xl', 2

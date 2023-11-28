@@ -9,9 +9,17 @@
 
   <link rel="icon" type="image/svg+xml" href="https://codeforamerica.org/wp-content/themes/cfa-main/static/icon.svg">
 
-  <title>{% if title %}{{ title }} |{% endif %}{{ package.nice }}</title>
+  <title>{% if title %}{{ title }} | {% endif %}{{ package.nice }}</title>
+  <meta name="title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
+  {% if meta_description %}<meta name="description" content="{{ meta_description }}" />{% endif %}
 
-  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/css/site.css">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
+  {% if meta_description %}<meta property="og:description" content="{{ meta_description }}" />{% endif %}
+  <meta property="og:image" content="{{ config.baseUrl }}{% if thumbnail %}{{ thumbnail }}{% else %}assets/site/thumbnail-site.png{% endif %}" />
+  <meta property="og:image:alt" content="{% if thumbnail and thumbnail_description %}{{ thumbnail_description }}{% else %}The {{ package.nice }} logo lockup.{% endif %}">
+
+  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/site/site.css">
 
   {% block head %}{% endblock %}
 </head>
@@ -19,7 +27,7 @@
 <body>
   {% include '../_partials/header.twig' %}
 
-  <main id="main-content" class="bg-primary overflow-hidden">
+  <main id="main-content" class="overflow-hidden">
     {{ content|raw }}
   </main>
 
@@ -29,6 +37,6 @@
 
   {% block scripts %}{% endblock %}
 
-  {% include '../../../dist/assets/svg/svgs.svg' %}
+  {% include '../../../dist/assets/site/svgs.svg' %}
 </body>
 </html>

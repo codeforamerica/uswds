@@ -10,8 +10,16 @@
   <link rel="icon" type="image/svg+xml" href="https://codeforamerica.org/wp-content/themes/cfa-main/static/icon.svg">
 
   <title>{% if title %}{{ title }} | {% endif %}{{ package.nice }}</title>
+  <meta name="title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
+  {% if meta_description or story %}<meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ story }}{% endif %}" />{% endif %}
 
-  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/css/site.css">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
+  {% if meta_description or story %}<meta name="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ story }}{% endif %}" />{% endif %}
+  <meta property="og:image" content="{{ config.baseUrl }}{% if thumbnail %}{{ thumbnail }}{% else %}assets/site/thumbnail-site.png{% endif %}" />
+  <meta property="og:image:alt" content="{% if thumbnail and thumbnail_description %}{{ thumbnail_description }}{% else %}The {{ package.nice }} logo lockup.{% endif %}">
+
+  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/site/site.css">
 
   {% block head %}{% endblock %}
 </head>
@@ -32,10 +40,10 @@
               } %}
               {% endif %}
 
-              {% if 'design_token' in tags %}
+              {% if 'documentation' in tags %}
               {% set sidenav = {
-                type: 'design_token',
-                items: collections.design_tokenByAlpha
+                type: 'documentation',
+                items: collections.documentationByAlpha
               } %}
               {% endif %}
 
@@ -81,6 +89,16 @@
           </div>
 
           {{ content|raw }}
+
+          <hr class="margin-y-4 border border-base-lighter">
+
+          <div class="usa-alert usa-alert--info" role="region" aria-labelledby="aria-lb-feedback">
+            <div class="usa-alert__body">
+              <div>
+                <p><a href="https://form.asana.com/?k=wy7M0xSmDjkncafrF8-ikQ&d=8676559049854" target="_blank" rel="noopener nofollow" class="usa-link--external" id="aria-lb-feedback">Have a suggestion or need help?</a></p>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
@@ -92,6 +110,6 @@
 
   {% block scripts %}{% endblock %}
 
-  {% include '../../../dist/assets/svg/svgs.svg' %}
+  {% include '../../../dist/assets/site/svgs.svg' %}
 </body>
 </html>

@@ -3,7 +3,7 @@
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" {% if label %}aria-label="{{ label }}"{% endif %}>
   {% if caption %}<figcaption class="margin-bottom-2">{{ caption }}</figcaption>{% endif %}
 
-  {% package name context %}{{ body }}{% endpackage %}
+  {% component name context false true %}
 
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
@@ -13,7 +13,7 @@
         </button>
       </div>
       <div id="aria-c-{{ ID }}" class="usa-accordion__content overflow-visible padding-0">
-        {% package name context true %}{{ body }}{% endpackage %}
+        {% component name context true true %}
       </div>
     </div>
   </div>

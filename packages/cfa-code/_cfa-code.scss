@@ -30,6 +30,7 @@ code, pre, .code {
   line-height: inherit;
   max-width: 100%;
   text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 p code, li code, td code, dl code, dd code,

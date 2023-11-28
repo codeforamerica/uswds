@@ -21,7 +21,7 @@
 </div>
 {% endcapture %}
 
-<ul class="usa-icon-list">
+<ul class="usa-icon-list margin-top-2" aria-labelledby="accessibility">
   <li class="usa-icon-list__item">
     {% if theme_passes %}{{ passes }}{% else %}{{ unchecked }}{% endif %}<div class="usa-icon-list__content">Customization to the visual appearance of the {{ nice }} has been verified for <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA contrast minimum success</a>.</div>
   </li>
@@ -64,3 +64,14 @@
 Refer to <a href="{{ url_uswds }}#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.
 
 {% endif %}
+
+<p id="aria-lb-accessibility-checklist-key"><b>Checklist Key</b></p>
+
+<ul class="usa-icon-list margin-top-2" aria-labelledby="aria-lb-accessibility-checklist-key">
+  <li class="usa-icon-list__item">
+    {{ passes }} <div class="usa-icon-list__content">Passes</div>
+  </li>
+  <li class="usa-icon-list__item">
+    {{ unchecked }} <div class="usa-icon-list__content">Unchecked</div>
+  </li>
+</ul>

@@ -2,7 +2,7 @@
 tags: component
 title: Accordion
 layout: default
-story: '"An accordion helps me scan long pages by letting me show or hide information."'
+story: An accordion helps me scan long pages by letting me show or hide sections of text.
 url_uswds: https://designsystem.digital.gov/components/accordion
 url_uswds_guidance: https://designsystem.digital.gov/components/accordion/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/accordion/#using-the-accordion-component-2
@@ -10,14 +10,16 @@ nice_uswds: Accordion component
 url_honeycrisp: 'https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion'
 nice_honeycrisp: Accordion molecule
 modifier_honeycrisp: .cfa-accordion .usa-accordion--bordered
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A536%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-536&mode=design
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-accordion.png
+thumbnail_description: An illustration of the accordion component.
 ---
 
 <!-- INTRO -->
 
-Accordions allow users to find information on a page by clicking content headings to expand or hide content beneath. They are always used to collapse multiple heading groups and are most useful for fitting content into a limited space. {.usa-prose}
+The {{ title }} component allows users to find information on a page by clicking headings to expand or hide content beneath. They are always used to collapse multiple heading groups and are most useful for fitting long-form content into a limited space.
 
 <!-- DETAILS -->
 

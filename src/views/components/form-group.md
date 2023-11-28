@@ -2,7 +2,7 @@
 tags: component
 title: Form group
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A form group contains one option or form field under one question.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -13,16 +13,19 @@ modifier_honeycrisp: ['.cfa-form-group', '.cfa-label', '.cfa-hint', '.cfa-input-
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=7110-1174&mode=design
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-form-group.png
+thumbnail_description: An illustration of the form group component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component contains one form element such as an input, textarea, or select. The form element has a meaningful label associated with it. It may also contain an extra hint to help the user provide a valid answer.
 
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text input component</a>, <a href="{{ config.baseUrl }}components/textarea">textarea component</a>, <a href="{{ config.baseUrl }}components/select">select component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
+The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text input component</a>, <a href="{{ config.baseUrl }}components/textarea">textarea component</a>, <a href="{{ config.baseUrl }}components/select">select component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.
+{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -419,7 +422,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
 
 ## Guidance {#guidance}
 
-**Form groups vs. Fieldsets**. Form questions with one form element, such as a text input, text area, or select, may use the form group component to associate the form element with a  question (or `label` element). Use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to associate multiple form elements with the same question, such as multi-part text inputs, checkboxes, or radios.
+**Form groups vs. Fieldsets**. Form questions with one form element, such as a text input, text area, or select, may use the form group component to associate the form element with a  question (or `label` element). Use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to associate multiple form elements with the same question, such as multi-part text inputs, checkboxes, or radio buttons.
 
 **Text inputs**. Refer to <a href="{{ config.baseUrl }}components/input">text input documentation</a>.
 

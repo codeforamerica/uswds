@@ -48,7 +48,7 @@ Default Body
   "modifier": "cfa-"
 }{% endcapture %}
 
-<!-- render 'figure.md', name: '{{ name }}', nice: title, body: body, context: context, caption: '{{ caption }}' -->
+<!-- render 'figure.md', name: '{{ name }}', nice: title, context: context, caption: '{{ caption }}' -->
 
 <!-- GUIDANCE -->
 

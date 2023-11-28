@@ -2,7 +2,7 @@
 tags: component
 title: Follow-up question
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A follow-up question appears after I've answered another question in a specific way.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -13,11 +13,13 @@ modifier_honeycrisp: .cfa-follow-up-question .cfa-follow-up-question__region
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A872%26mode%3Ddesign%26t%3DQEm097LeMZdJHFUX-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-follow-up-question.png
+thumbnail_description: An illustration of the follow-up question component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component progressively discloses a clarifying question. It only appears if an initial question is answered in a specific way. It and the question preceding it are visible on the same page.
 
 <!-- DETAILS -->
 
@@ -160,7 +162,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lightest: 'gray-warm-4', // Affects follow-up question background
   $cfa-color-base-darker: 'gray-warm-70'   // Affects follow-up question container border
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   // Global theme settings that affect the component, changing these will affect other components

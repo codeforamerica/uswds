@@ -2,7 +2,7 @@
 tags: component
 title: Identifier
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: An identifier is a banner in the footer of a web page that tells me who created it.
 url_uswds: https://designsystem.digital.gov/components/identifier
 url_uswds_guidance: https://designsystem.digital.gov/components/identifier/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/identifier/#using-the-identifier-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: false
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-532&mode=design
 tokens: false
 styles: false
+thumbnail: assets/site/thumbnail-identifier.png
+thumbnail_description: An illustration of the identifier component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is a USWDS pattern used to communicate the administering agency of a website (or web page) and links required by federal laws and policies. It is a standard and recognizable design element of federal government sites. It can be used to establish trust across government sites if used consistently with the <a href="{{ config.baseUrl }}components/footer">Footer component</a>.
 
 <!-- DETAILS -->
 
@@ -77,7 +79,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'identifier', nice: title, body: body, context: context, caption: nice_uswds %}
+{% render 'figure.md', name: 'identifier', nice: title, context: context, caption: nice_uswds %}
 
 <!-- GUIDANCE -->
 

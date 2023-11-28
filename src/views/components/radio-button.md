@@ -1,8 +1,8 @@
 ---
 tags: component
-title: Radio
+title: Radio button
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: Radio buttons let me choose one out of many options in a list.
 url_uswds: https://designsystem.digital.gov/components/radio-buttons
 url_uswds_guidance: https://designsystem.digital.gov/components/radio-buttons#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/radio-buttons#using-the-radio-buttons-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-radio-button.png
+thumbnail_description: An illustration of the radio button component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows users to choose one option from a group inside a fieldset. The full list of options is present on the page.
 
 <!-- DETAILS -->
 
@@ -67,7 +69,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Radios' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Radios' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -100,13 +102,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Radios with descriptions' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Radios with descriptions' %}
 
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
 
-**Fieldsets**. Form questions with radio components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options with a visible `legend` element.
+**Fieldsets**. Form questions with radio button components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options with a visible `legend` element.
 
 {% capture ref_additional %}
 1. <a href="https://design-system.service.gov.uk/components/radios" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Radios</cite> | GOV.UK Design System</a>
@@ -148,7 +150,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   // Component specific settings
   $cfa-checkbox-border-radius: 0
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-input-select-margin: 1.5,  // Affects checkbox and radio

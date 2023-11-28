@@ -2,7 +2,7 @@
 tags: component
 title: Memorable date
 layout: default
-story: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+story: A memorable date is one I can easily recall without having to pick it in a calendar.
 url_uswds: https://designsystem.digital.gov/components/text-input
 url_uswds_guidance: https://designsystem.digital.gov/components/text-input#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: ['.cfa-memorable-date', '.cfa-legend', '.cfa-label', '.cfa-
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A851%26mode%3Ddesign%26t%3DGH49ArJ6HONOroNF-1
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-memorable-date.png
+thumbnail_description: An illustration of the memorable date component.
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is used to allow the user to enter a date in an online form they are very familiar with, such as their birthday.
 
 <!-- DETAILS -->
 
@@ -173,7 +175,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'memorable-date', nice: title, body: body, context: context, caption: 'Memorable date' %}
+{% render 'figure.md', name: 'memorable-date', nice: title, context: context, caption: 'Memorable date' %}
 
 <!-- GUIDANCE -->
 
@@ -183,7 +185,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 **Month**. A text input component as opposed to a select component for the month is supported.
 
-**Fieldsets vs. form groups**. Form questions with multiple inputs including checkbox, radio, and memorable date components always use the fieldset component to group available options and a nested `legend` element. Other form element components with singular text inputs, text areas, and selects, will use the <a href="{{ config.baseUrl }}components/form-group">form group component</a>.
+**Fieldsets vs. form groups**. Form questions with multiple inputs including checkbox, button, and memorable date components always use the fieldset component to group available options and a nested `legend` element. Other form element components with singular text inputs, text areas, and selects, will use the <a href="{{ config.baseUrl }}components/form-group">form group component</a>.
 
 **Fieldset**. Refer to <a href="{{ config.baseUrl }}components/fieldset">fieldset documentation</a>.
 
@@ -231,7 +233,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   $cfa-color-base-lighter: 'gray-warm-10', // Affects the color of the inset border
   $cfa-color-base-ink: 'gray-warm-90'      // Affects the text and border color of the input
 );
-//
 // Package-level settings
 @use 'cfa-core' with (
   $cfa-form-elements-border-width: 2px,
