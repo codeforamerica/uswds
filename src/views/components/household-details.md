@@ -2,7 +2,7 @@
 tags: component
 title: Household details
 layout: default
-story: Household details let me verify I’ve provided accurate information about my family or people I live with.
+story: Household details let me verify I’ve provided accurate information about my family or the people I live with.
 url_uswds:
 url_uswds_guidance:
 url_uswds_usage:
@@ -17,20 +17,21 @@ styles: false
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component displays a summary of user’s household composition data they have provided in an online form. It allows them to review the information they’ve provided and the opportunity to correct any information they may have entered incorrectly. It can be used to summarize household members and their relationship to the applicant. It can also display special information about each household member such as income, expenses, or benefits they may have.
 
 <!-- DETAILS -->
 
+{% capture details_custom %}
+The {{ title }} is a custom component created using <a href="https://designsystem.digital.gov/utilities" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS CSS Utilities</a>.
+{% endcapture %}
+
 {% render 'details.md',
   name: title,
-  url_uswds: url_uswds,
-  url_uswds_usage: url_uswds_usage,
-  nice_uswds: nice_uswds,
   url_honeycrisp: url_honeycrisp,
   nice_honeycrisp: nice_honeycrisp,
+  details_custom: details_custom,
   tokens: tokens,
   styles: styles,
-  modifier_honeycrisp: modifier_honeycrisp,
   dictionary: dictionary,
   config: config %}
 

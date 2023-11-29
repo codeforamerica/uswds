@@ -3,13 +3,13 @@ tags: component
 title: Upload documents
 layout: default
 story: I select or drop documents to the webpage when I need to add them to an online form.
-url_uswds:
+url_uswds: https://designsystem.digital.gov/components/file-input
 url_uswds_guidance:
 url_uswds_usage:
-nice_uswds:
+nice_uswds: File input
 url_honeycrisp:
 nice_honeycrisp:
-modifier_honeycrisp: false
+modifier_honeycrisp: ['.cfa-file-input', '.cfa-form-group', '.cfa-upload-documents', '.cfa-label', '.cfa-hint', '.cfa-button', '.cfa-upload-documents__*']
 design_honeycrisp: false
 tokens: false
 styles: false
@@ -18,7 +18,7 @@ intro: intro
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows a user to select multiple files from their device, either by dragging and dropping them into the component or using the file picker modal dialog.
 
 <!-- DETAILS -->
 

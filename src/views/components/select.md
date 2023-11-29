@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows users to choose one option from a list in a modal dialog. The full list of options is only visible once a user interacts with the select.
 
 <!-- DETAILS -->
 

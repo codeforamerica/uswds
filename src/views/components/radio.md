@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component allows users to choose one option from a visible list in a fieldset. They enable users to see the full list of options at once.
 
 <!-- DETAILS -->
 

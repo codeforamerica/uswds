@@ -10,14 +10,14 @@ nice_uswds: Text input component
 # url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
 # nice_honeycrisp: Form element atom
 modifier_honeycrisp: ['.cfa-input', '.cfa-input-group']
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A851%26mode%3Ddesign%26t%3D3z8wksZDJXdQbrxT-1
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-535&mode=design
 # tokens: true
 styles: true
 ---
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is the most common form component for receiving user information on an online form. There are several types of inputs (text being one of them) which suggest the type of information they can receive. Input types are enhanced with icon prefixes, postfixes, or masks to help users enter the correct information.
 
 <!-- DETAILS -->
 
@@ -151,11 +151,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input with mask (SSN)' %}
+{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input with mask (Social Security Number)' %}
 
 <!-- GUIDANCE -->
 
 ## Guidance {#guidance}
+
+**Inputs vs. Textareas**. When longer form content needs to be entered the <a href="{{ config.baseUrl }}components/textarea">textarea component</a> is used.
 
 **Form groups**. Form questions with input components always use the <a href="{{ config.baseUrl }}components/form-group">form group component</a> to wrap the input with a visible `label` element.
 
@@ -205,4 +207,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 );
 {% endcapture %}
 
-{% render 'source.md', name: 'input', nice: title, theme: theme, usage: url_uswds_usage, config: config, pckg: package %}
+{% capture javascript %}
+is used to provide a formatting (mask) utility for U.S. Dollars, U.S. Phone, and Social Security Number input types.
+{% endcapture %}
+
+{% render 'source.md', name: 'input', nice: title, theme: theme, usage: url_uswds_usage, javascript: javascript, config: config, pckg: package %}

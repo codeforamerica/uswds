@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is used to allow the user to enter a date in an online form they are very familiar with, such as their birthday.
 
 <!-- DETAILS -->
 

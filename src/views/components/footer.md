@@ -17,7 +17,7 @@ styles: false
 
 <!-- INTRO -->
 
-The Footer component is the last component of a web page and appears globally on all site pages. It often contains secondary or tertiary navigations, simply labeled “footer navigation,” with links to other pages or legal disclaimers users need access to. It also contains the site’s <a href="{{ config.baseUrl }}components/identifier">Identifier component</a>.
+The Footer component is the last landmark of a web page and appears globally on all site pages. It often contains secondary or tertiary navigations, simply labeled “footer navigation,” with links to other pages or legal disclaimers users need access to. It also contains the site’s <a href="{{ config.baseUrl }}components/identifier">Identifier component</a>.
 
 <!-- DETAILS -->
 

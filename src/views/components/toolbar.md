@@ -17,12 +17,13 @@ styles: false
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is used as the header landmark for a page and appears globally on all site pages. It contains the primary navigation and buttons for the main features of the site that may include the homepage link, chat, language selector, or authentication links. It may also contain a site alert to provide the user with important or time sensitive information.
 
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} is a custom component created using <a href="https://designsystem.digital.gov/utilities" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS CSS Utilities</a>.{% endcapture %}
+The {{ title }} is a custom component created using <a href="https://designsystem.digital.gov/utilities" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS CSS Utilities</a>.
+{% endcapture %}
 
 {% render 'details.md',
   name: title,

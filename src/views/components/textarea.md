@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. {.usa-prose}
+The {{ title }} component is used when longer form content needs to be entered into an online form.
 
 <!-- DETAILS -->
 

@@ -7,7 +7,7 @@ story: Components are simple and consistent solutions to common user-interface n
 sublist: true
 ---
 
-The {{ package.nice }} contains customizations for the following components.
+The {{ package.nice }} contains the following components.
 
 <ul class="usa-card-group flex-row margin-top-4">
   {% for item in collections.componentByAlpha %}
