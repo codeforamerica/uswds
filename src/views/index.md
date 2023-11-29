@@ -23,7 +23,7 @@ intro:
       </div>
       <div>
         <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="cfa-button usa-button usa-button--outline margin-x-0">
-          <span>v{{ package.version }}</span>
+          <span>Latest release v{{ package.version }}</span>
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="{{ config.baseUrl }}assets/img/sprite.svg#launch"></use>
           </svg>

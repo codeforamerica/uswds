@@ -10,7 +10,7 @@ nice_uswds: Accordion component
 url_honeycrisp: 'https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-accordion'
 nice_honeycrisp: Accordion molecule
 modifier_honeycrisp: .cfa-accordion .usa-accordion--bordered
-design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5002%253A536%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
+design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-536&mode=design
 tokens: true
 styles: true
 ---
