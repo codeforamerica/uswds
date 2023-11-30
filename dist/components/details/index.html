@@ -14,8 +14,8 @@
   
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Details | Code for America USWDS theme" />
-    <meta property="og:image" content="https://codeforamerica.github.io/uswds/assets/img/thumbnail-site.png" />
-  <meta property="og:image:alt" content="The Code for America USWDS theme logo lockup.">
+    <meta property="og:image" content="https://codeforamerica.github.io/uswds/assets/img/thumbnail-details.png" />
+  <meta property="og:image:alt" content="An illustration of the Details component.">
 
   
   
@@ -56,11 +56,11 @@
 
       <ul class="usa-nav__primary usa-accordion">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c713be098c0d4">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-c437303b41e92">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-c713be098c0d4" class="usa-nav__submenu">
+          <ul id="aria-c-c437303b41e92" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -107,7 +107,7 @@
                                 <a href="https://codeforamerica.github.io/uswds/components/memorable-date/" ><span>Memorable date</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
-                                <a href="https://codeforamerica.github.io/uswds/components/radio/" ><span>Radio</span></a>
+                                <a href="https://codeforamerica.github.io/uswds/components/radio-button/" ><span>Radio button</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/select/" ><span>Select</span></a>
@@ -221,7 +221,7 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
-                                <a href="https://codeforamerica.github.io/uswds/components/radio/" >Radio</a>
+                                <a href="https://codeforamerica.github.io/uswds/components/radio-button/" >Radio button</a>
 
                               </li>
                             <li class="usa-sidenav__item is-current">
@@ -249,12 +249,12 @@
             <h1>Details</h1>
 
             <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
-              A detail contains the particulars of complex terms and help me understand them better.
+              A detail contains answers to questions I have about confusing text.
             </blockquote>
           </div>
 
           <!-- INTRO -->
-<p>The Details component contains helpful context for users but may not be necessary to display by default. It is primarily used to consolidate long or complex information to save space for other critical elements.</p>
+<p>The Details component contains helpful context for users but may not be necessary to display by default. It always follows complex text or lengthy descriptions.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
@@ -266,24 +266,25 @@
   <li><strong>Modifier:</strong> <code>.cfa-details</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-065bb7f637c71"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-065bb7f637c71"><p>The visual appearance is modified using <b>design tokens</b> from the <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-reveal" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Reveal molecule</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-details</code> to add <b>styles</b> defined in a custom stylesheet.</p><p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-38e064a61e2d2"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-38e064a61e2d2"><p>The visual appearance is modified using <b>design tokens</b> from the <a href="https://honeycrisp.herokuapp.com/cfa/styleguide#molecules-reveal" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Reveal molecule</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-details</code> to add <b>styles</b> defined in a custom stylesheet.</p><p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
 </div>
 <h2 id="examples">Examples</h2>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
   <figcaption class="margin-bottom-2">Details</figcaption>
   <div class="cfa-details">
-  <button type="button" class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-46a2999dc2f69">
+  <button type="button" class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-68f335e75fafc">
     <span>What's an example of a self-certification letter?</span>
     <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use>
     </svg>
   </button>
-  <div class="cfa-details__content" id="aria-c-46a2999dc2f69">
+  <div class="cfa-details__content" id="aria-c-68f335e75fafc">
     <p>If you don't have any of these documents, you can write, sign, date, and submit this letter:</p>
     <p>
       <em>I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.</em>
-      <br>
+    </p>
+    <p>
       <em>[Your signature]</em>
       <br>
       <em>[Today's date]</em>
@@ -293,31 +294,32 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-61930442d4148">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-44bc0a295ee6f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-61930442d4148" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-44bc0a295ee6f" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3fd68831ce0cd" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-29d9720b2cb7e" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-3fd68831ce0cd">&lt;div class=&quot;cfa-details&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; data-aria-controls=&quot;aria-c-46a2999dc2f69&quot;&gt;
+        <textarea hidden data-copy-target="block-29d9720b2cb7e">&lt;div class=&quot;cfa-details&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; data-aria-controls=&quot;aria-c-68f335e75fafc&quot;&gt;
     &lt;span&gt;What's an example of a self-certification letter?&lt;/span&gt;
     &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right&quot;&gt;&lt;/use&gt;
     &lt;/svg&gt;
   &lt;/button&gt;
-  &lt;div class=&quot;cfa-details__content&quot; id=&quot;aria-c-46a2999dc2f69&quot;&gt;
+  &lt;div class=&quot;cfa-details__content&quot; id=&quot;aria-c-68f335e75fafc&quot;&gt;
     &lt;p&gt;If you don't have any of these documents, you can write, sign, date, and submit this letter:&lt;/p&gt;
     &lt;p&gt;
       &lt;em&gt;I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.&lt;/em&gt;
-      &lt;br&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
       &lt;em&gt;[Your signature]&lt;/em&gt;
       &lt;br&gt;
       &lt;em&gt;[Today's date]&lt;/em&gt;
@@ -326,17 +328,18 @@
 &lt;/div&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-details&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-details__summary&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;details&quot;</span> <span class="hljs-attr">data-aria-controls</span>=<span class="hljs-string">&quot;aria-c-46a2999dc2f69&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-details__summary&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;details&quot;</span> <span class="hljs-attr">data-aria-controls</span>=<span class="hljs-string">&quot;aria-c-68f335e75fafc&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>What&#x27;s an example of a self-certification letter?<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-details__content&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-c-46a2999dc2f69&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-details__content&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-c-68f335e75fafc&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>If you don&#x27;t have any of these documents, you can write, sign, date, and submit this letter:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>I, [your full name], work as a [your job]. I made $[monthly income] last month. Please use this letter as self-certification of my income.<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[Your signature]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>[Today&#x27;s date]<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
@@ -463,8 +466,8 @@
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-a0be29fdf7154"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-a0be29fdf7154">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-10eaaefb1fc0c"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-10eaaefb1fc0c">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -475,13 +478,13 @@
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-426933ba03bbd" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-945ef55ada6a6" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-426933ba03bbd">
+        <textarea hidden data-copy-target="block-945ef55ada6a6">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -523,13 +526,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-78a0d534ef7c1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-4eee6594b4f89" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-78a0d534ef7c1">&lt;div th:fragment=&quot;details(modifier, summary, controls, openAttr, icon, body, text)&quot; class=&quot;cfa-details&quot; th:classappend=&quot;${modifier}&quot;&gt;
+        <textarea hidden data-copy-target="block-4eee6594b4f89">&lt;div th:fragment=&quot;details(modifier, summary, controls, openAttr, icon, body, text)&quot; class=&quot;cfa-details&quot; th:classappend=&quot;${modifier}&quot;&gt;
   &lt;button type=&quot;button&quot; th:if=&quot;${summary}&quot; class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot; th:attr=&quot;data-aria-controls=${controls},data-aria-expanded=${openAttr}&quot;&gt;
     &lt;span th:text=&quot;${summary}&quot;&gt;Summary&lt;/span&gt;&lt;svg th:if=&quot;icon&quot; class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use th:href=&quot;${icon}&quot;&gt;&lt;/use&gt;
@@ -561,13 +564,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-e591bfbeb0889" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-4afb992096c94" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-e591bfbeb0889">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-details/cfa-details.th :: details(${modifier}, ${summary}, ${controls}, ${openAttr}, ${icon}, ${body}, ${text})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-4afb992096c94">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-details/cfa-details.th :: details(${modifier}, ${summary}, ${controls}, ${openAttr}, ${icon}, ${body}, ${text})}&quot; /&gt;</textarea>
       </div>
       <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-details/cfa-details.th :: details(${modifier}, ${summary}, ${controls}, ${openAttr}, ${icon}, ${body}, ${text})}&quot;</span> /&gt;</span></pre>
     </div>
@@ -581,13 +584,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-2761e374a18eb" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-3bf6fe7fc601a" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-2761e374a18eb">&lt;div class=&quot;cfa-details&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+        <textarea hidden data-copy-target="block-3bf6fe7fc601a">&lt;div class=&quot;cfa-details&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
   &lt;% if defined?(summary) %&gt;&lt;button type=&quot;button&quot; class=&quot;cfa-details__summary&quot; data-js=&quot;details&quot;&lt;% if defined?(controls) %&gt; data-aria-controls=&quot;&lt;%= controls %&gt;&quot;&lt;% end %&gt;&lt;% if defined?(openAttr) %&gt; data-aria-expanded=&quot;&lt;%= openAttr %&gt;&quot;&lt;% end %&gt;&gt;
     &lt;span&gt;&lt;%= summary %&gt;&lt;/span&gt;&lt;% if defined?(icon) %&gt;&lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;use href=&quot;&lt;%= icon %&gt;&quot;&gt;&lt;/use&gt;
@@ -621,13 +624,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-d8656c352aa31" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-a66f91aec59cf" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-d8656c352aa31">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-details/_cfa-details.html.erb'), 0, 0, '@details').result_with_hash({modifier: modifier, controls: controls, openAttr: openAttr, summary: summary, icon: icon, body: body, text: text}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-a66f91aec59cf">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-details/_cfa-details.html.erb'), 0, 0, '@details').result_with_hash({modifier: modifier, controls: controls, openAttr: openAttr, summary: summary, icon: icon, body: body, text: text}) %&gt;</textarea>
       </div>
       <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-details/_cfa-details.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@details&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">controls:</span> controls, <span class="hljs-symbol">openAttr:</span> openAttr, <span class="hljs-symbol">summary:</span> summary, <span class="hljs-symbol">icon:</span> icon, <span class="hljs-symbol">body:</span> body, <span class="hljs-symbol">text:</span> text}) </span><span class="language-xml">%&gt;</span></pre>
     </div>

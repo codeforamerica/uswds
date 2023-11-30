@@ -2,7 +2,7 @@
 tags: component
 title: Accordion
 layout: default
-story: An accordion helps me scan long pages by letting me show or hide information.
+story: An accordion helps me scan long pages by letting me show or hide sections of text.
 url_uswds: https://designsystem.digital.gov/components/accordion
 url_uswds_guidance: https://designsystem.digital.gov/components/accordion/#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/accordion/#using-the-accordion-component-2

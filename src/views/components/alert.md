@@ -19,7 +19,7 @@ thumbnail_description: An illustration of the Alert component.
 
 <!-- INTRO -->
 
-The {{ title }} component distinguishes important information that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
+The {{ title }} component distinguishes important information or errors that wouldn't normally appear in a layout or template. They may blend into or disrupt a user's workflow. Disruptive notices are most effective if used sparingly and appear after user interaction.
 
 <!-- DETAILS -->
 

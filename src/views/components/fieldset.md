@@ -17,12 +17,12 @@ styles: true
 
 <!-- INTRO -->
 
-The {{ nice_uswds }} is a group containing multiple form elements such as checkboxes, radios, inputs, textareas, or selects. It is an important semantic that helps screen-readers understand the relationship between a meaningful label and the many form elements associated with it.
+The {{ nice_uswds }} is a group containing multiple form elements such as checkboxes, radio buttons, inputs, textareas, or selects. It is an important semantic that helps screen readers understand the relationship between a meaningful label and the many form elements associated with it. Fieldsets appear similar to the <a href="{{ config.baseUrl }}components/form-group">Form group component</a>, however, they are used for different input types and may even contain form group components.
 
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">checkbox component</a>, <a href="{{ config.baseUrl }}/components/radio">radio component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
+The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">checkbox component</a>, <a href="{{ config.baseUrl }}/components/radio-button/">radio button component</a>, and other components that do not have dedicated documentation in the USWDS (labels and hints). The visual appearance is modified using <b>design tokens</b> from the Honeycrisp <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements" target="_blank" rel="noopener nofollow" class="usa-link--external">Form elements atom</a> and <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#molecules-form_group" target="_blank" rel="noopener nofollow" class="usa-link--external">{{ nice_honeycrisp }}</a>. Further customization is applied using the <b>CSS modifiers</b> {% for modifier in modifier_honeycrisp %}<code>{{ modifier }}</code>{% if forloop.index != forloop.length %}, {% endif %}{% endfor %} to add <b>styles</b> defined in custom stylesheets.{% endcapture %}
 
 {% render 'details.md',
   name: title,
@@ -194,11 +194,13 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
 
 ## Guidance {#guidance}
 
-**Fieldsets vs. form groups**. Form questions with multiple form elements, such as multi-part text inputs, checkboxes, or radios may use the fieldset component to group themselves with a single question (or `legend` element). Use the <a href="{{ config.baseUrl }}components/form-group">form group component</a> to associate one form element with one question such as a text input, text area, or select.
+**Fieldsets vs. form groups**. Form questions with multiple form elements, such as multi-part text inputs, checkboxes, or radio buttons, may use the fieldset component to group themselves with a single question (or `legend` element). Use the <a href="{{ config.baseUrl }}components/form-group">form group component</a> to associate one form element with one question, such as a text input, text area, or select.
 
-**Checkbox options**. Refer to <a href="{{ config.baseUrl }}components/checkbox">checkbox documentation</a>.
+**Checkbox options**. Refer to <a href="{{ config.baseUrl }}components/checkbox/">checkbox documentation</a>.
 
-**Radio options**. Refer to <a href="{{ config.baseUrl }}components/radio">radio documentation</a>.
+**Radio button options**. Refer to <a href="{{ config.baseUrl }}components/radio-button/">radio button documentation</a>.
+
+**Memorable date**. Refer to <a href="{{ config.baseUrl }}components/memorable-date">memorable date documentation</a>.
 
 <!-- ACCESSIBILITY -->
 

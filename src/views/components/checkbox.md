@@ -2,7 +2,7 @@
 tags: component
 title: Checkbox
 layout: default
-story: Checkboxes let me choose between one or more options I can see.
+story: Checkboxes let me choose one or more options from a list.
 url_uswds: https://designsystem.digital.gov/components/checkbox
 url_uswds_guidance: https://designsystem.digital.gov/components/checkbox#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/checkbox#using-the-checkbox-component-2
@@ -13,11 +13,13 @@ modifier_honeycrisp: .cfa-checkbox
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1
 tokens: true
 styles: true
+thumbnail: assets/img/thumbnail-checkbox.png
+thumbnail_description: An illustration of the Checkbox component.
 ---
 
 <!-- INTRO -->
 
-The {{ title }} component allows users to choose one or more options from a visible list in a fieldset. They enable users full control to select and deselect an individual option if they change their mind.
+The {{ title }} component allows users to choose one or more options from a list on the page in a fieldset. They enable users full control to select and deselect an individual option if they change their mind.
 
 <!-- DETAILS -->
 

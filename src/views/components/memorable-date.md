@@ -183,7 +183,7 @@ The {{ title }} component is used to allow the user to enter a date in an online
 
 **Month**. A text input component as opposed to a select component for the month is supported.
 
-**Fieldsets vs. form groups**. Form questions with multiple inputs including checkbox, radio, and memorable date components always use the fieldset component to group available options and a nested `legend` element. Other form element components with singular text inputs, text areas, and selects, will use the <a href="{{ config.baseUrl }}components/form-group">form group component</a>.
+**Fieldsets vs. form groups**. Form questions with multiple inputs including checkbox, button, and memorable date components always use the fieldset component to group available options and a nested `legend` element. Other form element components with singular text inputs, text areas, and selects, will use the <a href="{{ config.baseUrl }}components/form-group">form group component</a>.
 
 **Fieldset**. Refer to <a href="{{ config.baseUrl }}components/fieldset">fieldset documentation</a>.
 

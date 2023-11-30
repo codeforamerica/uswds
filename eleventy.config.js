@@ -483,6 +483,8 @@ module.exports = function(eleventyConfig) {
    * @return  {String}       Rendered template or code block source preview
    */
   eleventyConfig.addPairedShortcode('package', async function(...args) {
+    let idAttrs = ['id', 'for', 'aria-describedby', 'aria-labelledby', 'aria-controls'];
+
     let name = args[1];
 
     let context = (args[2]) ? JSON.parse(args[2]) : false;
@@ -501,13 +503,29 @@ module.exports = function(eleventyConfig) {
       th = replaceSingleQuoteEscape(th);
 
       /**
-       * Test erb rendering for non-production environments
+       * Append ERB partial rendering to local development environments
        */
       if (process.env.NODE_ENV != 'production') {
         let erb = await erbRender(name, context);
 
-        rendered = `<div><div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>${th}</div>` +
-          `<div><br><div class="margin-bottom-2"><b>ERB Preview</b></div>${erb}</div>`;
+        for (let i = 0; i < idAttrs.length; i++) {
+          erb = erb.split(`${idAttrs[i]}="`).join(`${idAttrs[i]}="erb-`);
+        }
+
+        rendered = `
+          <div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>
+          <div>
+          <!-- START THYMELEAF COMPONENT -->
+          ${th}
+          <!-- END THYMELEAF COMPONENT -->
+          </div>
+          <br>
+          <div class="margin-bottom-2"><b>ERB Preview</b></div>
+          <div>
+          <!-- START ERB COMPONENT -->
+          ${erb}
+          <!-- END ERB COMPONENT -->
+          </div>`;
       } else {
         rendered = th
       }
@@ -521,12 +539,30 @@ module.exports = function(eleventyConfig) {
 
       th = replaceSingleQuoteEscape(th);
 
+      /**
+       * Append ERB partial rendering to local development environments
+       */
       if (process.env.NODE_ENV != 'production') {
-        // ERB partial render testing
         let erb = await erbRender(name, context);
 
-        rendered = `<div><div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>${th}</div>` +
-          `<div><br><div class="margin-bottom-2"><b>ERB Preview</b></div>${erb}</div>`;
+        for (let i = 0; i < idAttrs.length; i++) {
+          erb = erb.split(`${idAttrs[i]}="`).join(`${idAttrs[i]}="erb-`);
+        }
+
+        rendered = `
+          <div class="margin-bottom-2"><b>Thymeleaf Preview</b></div>
+          <div>
+          <!-- START THYMELEAF COMPONENT -->
+          ${th}
+          <!-- END THYMELEAF COMPONENT -->
+          </div>
+          <br>
+          <div class="margin-bottom-2"><b>ERB Preview</b></div>
+          <div>
+          <!-- START ERB COMPONENT -->
+          ${erb}
+          <!-- END ERB COMPONENT -->
+          </div>`;
       } else {
         rendered = th;
       }

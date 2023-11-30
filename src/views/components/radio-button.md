@@ -1,8 +1,8 @@
 ---
 tags: component
-title: Radio
+title: Radio button
 layout: default
-story: Radios let me choose one out of many options I can see.
+story: Radio buttons let me choose one out of many options in a list.
 url_uswds: https://designsystem.digital.gov/components/radio-buttons
 url_uswds_guidance: https://designsystem.digital.gov/components/radio-buttons#guidance
 url_uswds_usage: https://designsystem.digital.gov/components/radio-buttons#using-the-radio-buttons-component-2
@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-The {{ title }} component allows users to choose one option from a visible list in a fieldset. They enable users to see the full list of options at once.
+The {{ title }} component allows users to choose one option from a group inside a fieldset. The full list of options is present on the page.
 
 <!-- DETAILS -->
 
@@ -106,7 +106,7 @@ The {{ title }} component allows users to choose one option from a visible list 
 
 ## Guidance {#guidance}
 
-**Fieldsets**. Form questions with radio components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options with a visible `legend` element.
+**Fieldsets**. Form questions with radio button components always use the <a href="{{ config.baseUrl }}components/fieldset">fieldset component</a> to group available options with a visible `legend` element.
 
 {% capture ref_additional %}
 1. <a href="https://design-system.service.gov.uk/components/radios" target="_blank" rel="noopener nofollow" class="usa-link--external"><cite>Radios</cite> | GOV.UK Design System</a>

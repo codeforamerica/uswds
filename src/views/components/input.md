@@ -17,7 +17,7 @@ styles: true
 
 <!-- INTRO -->
 
-The {{ title }} component is the most common form component for receiving user information on an online form. There are several types of inputs (text being one of them) which suggest the type of information they can receive. Input types are enhanced with icon prefixes, postfixes, or masks to help users enter the correct information.
+The {{ title }} component is the most common form component for receiving user information on an online form. There are several types of inputs (text being one of them) that suggest the type of information they can receive. Input types are enhanced with icon prefixes, postfixes, or masks to help users enter the correct information. They are always paired with a label inside a <a href="{{ config.baseUrl }}components/form-group">Form group component</a>.
 
 <!-- DETAILS -->
 

@@ -22,7 +22,7 @@ The {{ title }} component is used as the header landmark for a page and appears 
 <!-- DETAILS -->
 
 {% capture details_custom %}
-The {{ title }} is a custom component created using <a href="https://designsystem.digital.gov/utilities" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS CSS Utilities</a>.
+<p>The {{ title }} is a custom component created using <a href="https://designsystem.digital.gov/utilities" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS CSS Utilities</a>.</p>
 {% endcapture %}
 
 {% render 'details.md',

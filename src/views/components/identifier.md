@@ -17,7 +17,7 @@ styles: false
 
 <!-- INTRO -->
 
-The {{ title }} component is a USWDS pattern used to communicate the administering agency of a website (or web page) and links required by federal laws and policies. It is a standard and recognizable design elements of federal government sites. It can be used to establish trust across government sites if used consistently with the <a href="{{ config.baseUrl }}components/footer">Footer component</a>.
+The {{ title }} component is a USWDS pattern used to communicate the administering agency of a website (or web page) and links required by federal laws and policies. It is a standard and recognizable design element of federal government sites. It can be used to establish trust across government sites if used consistently with the <a href="{{ config.baseUrl }}components/footer">Footer component</a>.
 
 <!-- DETAILS -->
 
