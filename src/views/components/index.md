@@ -3,7 +3,7 @@ tags: [primary, component]
 title: Components
 collection: componentByAlpha
 layout: default
-story: Components are simple and consistent solutions to common user-interface needs. The Code for America USWDS theme contains the following components.
+story: Simple and consistent solutions to common user-interface needs. The Code for America USWDS theme contains the following components.
 sublist: true
 ---
 
@@ -14,7 +14,7 @@ sublist: true
     <div class="usa-card__container">
       <div class="usa-card__media">
         <div class="usa-card__img">
-          <img src="{{ config.baseUrl }}assets/img/thumbnail-accordion.png" alt="A placeholder image" title="A placeholder image" loading="lazy" decoding="async">
+          <img src="{{ config.baseUrl }}{% if item.data.thumbnail %}{{ item.data.thumbnail }}{% else %}assets/img/thumbnail-component.png{% endif %}" alt="{{ item.data.meta_image_description }}" loading="lazy" decoding="async">
         </div>
       </div>
       <header class="usa-card__header">

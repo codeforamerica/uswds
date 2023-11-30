@@ -13,6 +13,8 @@ modifier_honeycrisp: .cfa-alert
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5003%253A527%26mode%3Ddesign%26t%3DwZwR9bNLbdvqwaT5-1
 tokens: true
 styles: true
+thumbnail: assets/img/thumbnail-alert.png
+thumbnail_description: An illustration of the Alert component.
 ---
 
 <!-- INTRO -->
