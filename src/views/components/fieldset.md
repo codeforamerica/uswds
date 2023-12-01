@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=7110-1174&mode=design
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-fieldset.png
+thumbnail_description: An illustration of the fieldset component.
 ---
 
 <!-- INTRO -->

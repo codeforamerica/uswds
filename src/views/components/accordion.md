@@ -13,8 +13,8 @@ modifier_honeycrisp: .cfa-accordion .usa-accordion--bordered
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-536&mode=design
 tokens: true
 styles: true
-thumbnail: assets/img/thumbnail-accordion.png
-thumbnail_description: An illustration of the Accordion component.
+thumbnail: assets/site/thumbnail-accordion.png
+thumbnail_description: An illustration of the accordion component.
 ---
 
 <!-- INTRO -->

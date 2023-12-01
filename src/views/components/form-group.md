@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-form-group', '.cfa-label', '.cfa-hint', '.cfa-input-
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=7110-1174&mode=design
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-form-group.png
+thumbnail_description: An illustration of the form group component.
 ---
 
 <!-- INTRO -->

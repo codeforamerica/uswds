@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-input', '.cfa-input-group']
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-535&mode=design
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-input.png
+thumbnail_description: An illustration of the input component.
 ---
 
 <!-- INTRO -->

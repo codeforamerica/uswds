@@ -13,8 +13,8 @@ modifier_honeycrisp: .cfa-details
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D5004%253A537%26mode%3Ddesign%26t%3Db7vIYK7WH81HUo0S-1
 tokens: true
 styles: true
-thumbnail: assets/img/thumbnail-details.png
-thumbnail_description: An illustration of the Details component.
+thumbnail: assets/site/thumbnail-details.png
+thumbnail_description: An illustration of the details component.
 ---
 
 <!-- INTRO -->

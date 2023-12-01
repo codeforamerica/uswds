@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-form-card', '.cfa-form', '.cfa-form-card__graphic', 
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=5002-533&mode=design
 tokens: false
 styles: true
+thumbnail: assets/site/thumbnail-form-card.png
+thumbnail_description: An illustration of the form card component.
 ---
 
 <!-- INTRO -->

@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-memorable-date', '.cfa-legend', '.cfa-label', '.cfa-
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A851%26mode%3Ddesign%26t%3DGH49ArJ6HONOroNF-1
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-memorable-date.png
+thumbnail_description: An illustration of the memorable date component.
 ---
 
 <!-- INTRO -->

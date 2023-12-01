@@ -13,6 +13,8 @@ modifier_honeycrisp: .cfa-follow-up-question .cfa-follow-up-question__region
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A872%26mode%3Ddesign%26t%3DQEm097LeMZdJHFUX-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-follow-up-question.png
+thumbnail_description: An illustration of the follow-up question component.
 ---
 
 <!-- INTRO -->

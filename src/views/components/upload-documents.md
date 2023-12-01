@@ -13,7 +13,8 @@ modifier_honeycrisp: ['.cfa-file-input', '.cfa-form-group', '.cfa-upload-documen
 design_honeycrisp: false
 tokens: false
 styles: false
-intro: intro
+thumbnail: assets/site/thumbnail-upload-documents.png
+thumbnail_description: An illustration of the upload documents component.
 ---
 
 <!-- INTRO -->

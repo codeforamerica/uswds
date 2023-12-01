@@ -13,6 +13,8 @@ modifier_honeycrisp: false
 design_honeycrisp: https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=16348-2627&mode=design
 tokens: false
 styles: false
+thumbnail: assets/site/thumbnail-household-details.png
+thumbnail_description: An illustration of the household details component.
 ---
 
 <!-- INTRO -->

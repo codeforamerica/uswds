@@ -43,7 +43,7 @@ module.exports = [
   {
     input:  path.join(config.base, config.src, 'scss/_site.scss'),
     output: [{
-      file:  path.join(config.base, config.dist, config.assets, 'css/site.css'),
+      file:  path.join(config.base, config.dist, config.assets, 'site/site.css'),
 
       /**
        * Dart Sass compileAsync options

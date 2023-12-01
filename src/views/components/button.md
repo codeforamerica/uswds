@@ -13,8 +13,8 @@ modifier_honeycrisp: .cfa-button
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A1490%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
 tokens: true
 styles: true
-thumbnail: assets/img/thumbnail-button.png
-thumbnail_description: An illustration of the Button component.
+thumbnail: assets/site/thumbnail-button.png
+thumbnail_description: An illustration of the button component.
 ---
 
 <!-- INTRO -->

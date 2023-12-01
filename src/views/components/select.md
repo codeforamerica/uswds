@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-select']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6133%253A844%26mode%3Ddesign%26t%3DeSs9ZaxsX9qacQvQ-1
 # tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-select.png
+thumbnail_description: An illustration of the select component.
 ---
 
 <!-- INTRO -->

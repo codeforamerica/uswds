@@ -13,6 +13,8 @@ modifier_honeycrisp: ['.cfa-legend', '.cfa-hint', '.cfa-checkbox', '.cfa-radio']
 design_honeycrisp: https%3A%2F%2Fwww.figma.com%2Ffile%2FsQQqaoeuOPpm43wLlYfyEo%2FHoneycrisp-Design-System%3Ftype%3Ddesign%26node-id%3D6129%253A562%26mode%3Ddesign%26t%3DEPbRtLr1I6JH7aqP-1
 tokens: true
 styles: true
+thumbnail: assets/site/thumbnail-radio-button.png
+thumbnail_description: An illustration of the radio button component.
 ---
 
 <!-- INTRO -->

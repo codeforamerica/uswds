@@ -14,7 +14,7 @@ sublist: true
     <div class="usa-card__container">
       <div class="usa-card__media">
         <div class="usa-card__img">
-          <img src="{{ config.baseUrl }}{% if item.data.thumbnail %}{{ item.data.thumbnail }}{% else %}assets/img/thumbnail-component.png{% endif %}" alt="{{ item.data.meta_image_description }}" loading="lazy" decoding="async">
+          <img src="{{ config.baseUrl }}{% if item.data.thumbnail %}{{ item.data.thumbnail }}{% else %}assets/site/thumbnail-component.png{% endif %}" alt="{{ item.data.meta_image_description }}" loading="lazy" decoding="async">
         </div>
       </div>
       <header class="usa-card__header">
@@ -32,7 +32,7 @@ sublist: true
   {% endfor %}
 </ul>
 
-For a full list of available USWDS components refer to guidance on the USWDS documentation site.
+For a full list of additional USWDS components available refer to guidance on the USWDS documentation site.
 
 <a class="usa-button cfa-button usa-button--outline" href="https://designsystem.digital.gov/components/overview" target="_blank" rel="noopener nofollow">
   <span>USWDS documentation site</span>
