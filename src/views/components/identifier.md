@@ -79,7 +79,7 @@ The {{ title }} component is a USWDS pattern used to communicate the administeri
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'identifier', nice: title, body: body, context: context, caption: nice_uswds %}
+{% render 'figure.md', name: 'identifier', nice: title, context: context, caption: nice_uswds %}
 
 <!-- GUIDANCE -->
 

@@ -71,7 +71,7 @@ The {{ title }} component is used as the header landmark for a page and appears 
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'toolbar', nice: title, body: body, context: context, caption: 'Toolbar' %}
+{% render 'figure.md', name: 'toolbar', nice: title, context: context, caption: 'Toolbar' %}
 
 <!-- GUIDANCE -->
 

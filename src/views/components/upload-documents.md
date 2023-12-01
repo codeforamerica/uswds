@@ -111,7 +111,7 @@ The {{ title }} component allows a user to select multiple files from their devi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'upload-documents', nice: title, body: body, context: context, caption: title %}
+{% render 'figure.md', name: 'upload-documents', nice: title, context: context, caption: title %}
 
 <!-- GUIDANCE -->
 

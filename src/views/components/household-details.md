@@ -94,7 +94,7 @@ The {{ title }} is a custom component created using <a href="https://designsyste
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'household-details', nice: title, body: body, context: context, caption: title %}
+{% render 'figure.md', name: 'household-details', nice: title, context: context, caption: title %}
 
 {% capture context %}{
   "header": {
@@ -173,7 +173,7 @@ The {{ title }} is a custom component created using <a href="https://designsyste
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'household-details', nice: title, body: body, context: context, caption: 'Household details with annual income details' %}
+{% render 'figure.md', name: 'household-details', nice: title, context: context, caption: 'Household details with annual income details' %}
 
 <!-- GUIDANCE -->
 

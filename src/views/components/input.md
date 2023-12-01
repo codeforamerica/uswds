@@ -52,7 +52,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Text input' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Text input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -66,7 +66,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Required text input' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Required text input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -79,7 +79,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Email input' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Email input' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -99,7 +99,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input group with prefix and mask (U.S. Dollars)' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input group with prefix and mask (U.S. Dollars)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -117,7 +117,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input group with postfix' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input group with postfix' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -137,7 +137,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input group with prefix and mask (U.S. Phone)' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input group with prefix and mask (U.S. Phone)' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -153,7 +153,7 @@ The {{ title }} component is the most common form component for receiving user i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input', nice: title, body: body, context: context, caption: 'Input with mask (Social Security Number)' %}
+{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Input with mask (Social Security Number)' %}
 
 <!-- GUIDANCE -->
 

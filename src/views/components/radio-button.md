@@ -69,7 +69,7 @@ The {{ title }} component allows users to choose one option from a group inside 
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Radios' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Radios' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -102,7 +102,7 @@ The {{ title }} component allows users to choose one option from a group inside 
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, body: body, context: context, caption: 'Radios with descriptions' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Radios with descriptions' %}
 
 <!-- GUIDANCE -->
 

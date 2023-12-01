@@ -145,7 +145,7 @@ The {{ title }} component allows users to choose one option from a list in a mod
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'select', nice: title, body: body, context: context, caption: 'Select' %}
+{% render 'figure.md', name: 'select', nice: title, context: context, caption: 'Select' %}
 
 <!-- GUIDANCE -->
 

@@ -766,12 +766,12 @@ The [entrypoints.js](entrypoints.js) contains configuration for source Sass and 
 
 The [eleventy.config.js](eleventy.config.js) defines the customized functionality available to templates. The main additions are library and plugin configuration, <a href="https://www.11ty.dev/docs/shortcodes" target="_blank" rel="noindex noopener nofollow">custom shortcodes</a>, global data, and collections. Shortcodes are noted below but documented in more detail in the [eleventy.config.js](eleventy.config.js) file.
 
-#### **Package (Paired Shortcode)**
+#### **Component**
 
-Render a component. The JSON context fills the template slots with the values used by the template. The boolean value determines whether to return rendered (false, default) or escaped (true) HTML.
+Render a component. The JSON context fills the template slots with the values used by the template. The first boolean value determines whether to return rendered (false, default) or escaped (true) HTML. The second boolean determines wether to return both the rendered default Thymeleaf template (false) or both Thymeleaf and ERB templates (true).
 
 ```liquid
-{% package 'name' 'context (JSON String)' false %}{{ 'body (HTML String)' }}{% endpackage %}
+{% component 'name' 'context (JSON String)' false false %}
 ```
 
 #### Markdown

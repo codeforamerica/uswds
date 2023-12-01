@@ -50,7 +50,7 @@ If you don't have any of these documents, you can write, sign, date, and submit 
   "body": "{% md certification_letter %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'details', nice: title, body: body, context: context, caption: 'Details' %}
+{% render 'figure.md', name: 'details', nice: title, context: context, caption: 'Details' %}
 
 <!-- GUIDANCE -->
 

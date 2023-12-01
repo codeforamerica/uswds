@@ -103,7 +103,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with checkbox options.' %}
+{% render 'figure.md', name: 'fieldset', nice: title, context: context, caption: 'Fieldset with checkbox options.' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -145,7 +145,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with radio options.' %}
+{% render 'figure.md', name: 'fieldset', nice: title, context: context, caption: 'Fieldset with radio options.' %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -190,7 +190,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/checkbox/">
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'fieldset', nice: title, body: body, context: context, caption: 'Fieldset with radio options.' %}
+{% render 'figure.md', name: 'fieldset', nice: title, context: context, caption: 'Fieldset with radio options.' %}
 
 <!-- GUIDANCE -->
 
