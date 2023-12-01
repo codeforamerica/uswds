@@ -11,11 +11,11 @@
 
   <title>{% if title %}{{ title }} | {% endif %}{{ package.nice }}</title>
   <meta name="title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
-  {% if meta_description %}<meta name="description" content="{{ meta_description }}" />{% endif %}
+  {% if meta_description or story %}<meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ story }}{% endif %}" />{% endif %}
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
-  {% if meta_description %}<meta property="og:description" content="{{ meta_description }}" />{% endif %}
+  {% if meta_description or story %}<meta name="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ story }}{% endif %}" />{% endif %}
   <meta property="og:image" content="{{ config.baseUrl }}{% if thumbnail %}{{ thumbnail }}{% else %}assets/site/thumbnail-site.png{% endif %}" />
   <meta property="og:image:alt" content="{% if thumbnail and thumbnail_description %}{{ thumbnail_description }}{% else %}The {{ package.nice }} logo lockup.{% endif %}">
 
