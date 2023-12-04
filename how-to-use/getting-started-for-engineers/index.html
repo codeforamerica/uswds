@@ -49,13 +49,13 @@
         <img src="https://codeforamerica.github.io/uswds/assets/img/usa-icons/close.svg" role="img" alt="Close" />
       </button>
 
-      <ul class="usa-nav__primary usa-accordion">
+      <ul class="usa-nav__primary usa-accordion flex-align-center">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-60919ecc43384">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-b548b417ba07">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-60919ecc43384" class="usa-nav__submenu">
+          <ul id="aria-c-b548b417ba07" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -119,11 +119,11 @@
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-90f6ae89423a8">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-0c98adf74276">
             <span>How to use</span>
           </button>
 
-          <ul id="aria-c-90f6ae89423a8" class="usa-nav__submenu">
+          <ul id="aria-c-0c98adf74276" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/how-to-use/" ><span>How to use</span></a>
               </li>
@@ -134,11 +134,23 @@
         </li>
         
         <li class="usa-nav__primary-item">
-          <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
+          <a href="https://www.figma.com/file/sQQqaoeuOPpm43wLlYfyEo/Honeycrisp-Design-System?type=design&node-id=0-854&t=KC3uSVBca3LLKfIm-0" target="_blank" rel="noopener nofollow" class="usa-nav-link">
+            <span class="usa-sr-only">Design library</span>
+
+            <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
+              <use href="#icon-figma"></use>
+            </svg>
+          </a>
         </li>
 
         <li class="usa-nav__primary-item">
-          <a href="https://github.com/codeforamerica/uswds/releases/tag/v0.0.0-30" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v0.0.0-30</span></a>
+          <a href="https://github.com/codeforamerica/uswds/releases/tag/v0.0.0-30" target="_blank" rel="noopener nofollow" class="usa-nav-link" title="Latest Release v0.0.0-30">
+            <span class="usa-sr-only">Source (GitHub)</span>
+
+            <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
+              <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#github"></use>
+            </svg>
+          </a>
         </li>
       </ul>
 
@@ -167,6 +179,7 @@
                                                         <li class="usa-sidenav__item"><a href="#overview">Overview</a></li>
                                       <li class="usa-sidenav__item"><a href="#ffb">Form Flow Builder</a></li>
                                       <li class="usa-sidenav__item"><a href="#npm">Node Package Manager</a></li>
+                                      <li class="usa-sidenav__item"><a href="#starter">USWDS Starter</a></li>
                                                     </ul>
                               </li>
                           </ul>
@@ -183,7 +196,7 @@
           </div>
 
           <h2 id="overview">Overview of the new design system</h2>
-<p>The Code for America, U. S. Web Design System (USWDS) theme replaces the Honeycrisp Ruby gem but preserves the style and design. The theme uses “design tokens” from the Honeycrisp design system to make the USWDS look similar to Honeycrisp. On this site, engineers can reference documentation for component replacements.</p>
+<p>The Code for America, U. S. Web Design System (USWDS) theme replaces the Honeycrisp Ruby gem but preserves its design style. The theme uses “design tokens” from the Honeycrisp design system to make the USWDS look similar to Honeycrisp. On this site, engineers can reference documentation for component replacements.</p>
 <h3>Migrating from Honeycrisp</h3>
 <p>Migration requires changes in installation and how components are written in applications. For each component documentation page, you will find.</p>
 <ul>
@@ -242,13 +255,13 @@
 <p>The <span class="code">src/main/resources/static/assets/scss/styles.scss</span> is the entry point for all of the local styles for the FFB. This is where Sass imports and theme settings can be managed. The default setup will provide the necessary styles for the theme.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-5d754f931f652" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6f1962eecb1d" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-5d754f931f652">
+        <textarea hidden data-copy-target="block-6f1962eecb1d">
 @forward 'cfa-uswds'; // CfA USWDS theme
 @forward 'uswds';     // USWDS component packages
 @forward 'cfa';       // CfA component packages
@@ -263,13 +276,13 @@
 <p>If you want to modify a few theme settings, such as colors, you may extend the theme’s default settings with a Sass map.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-910f49a47960c" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-b74fc00d8ef0e" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-910f49a47960c">
+        <textarea hidden data-copy-target="block-b74fc00d8ef0e">
 // Modify CfA USWDS theme settings
 @use 'cfa-uswds-theme' with (
   $cfa-focus-color: 'blue-warm-60v'
@@ -308,13 +321,13 @@
 <p>There are many more that can be configured, however, directly with the USWDS. If you want to modify more or anything other than the theme settings, omit the <code>@use 'cfa-uswds-theme' ...</code> statement and extend the USWDS core with a new Sass map containing USWDS settings. Keep in mind this may require a larger settings block and should only be done if you are prepared to create your own theme or use the USWDS without the Code for America theme layer. Use the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme settings</a> as a base and <a href="https://designsystem.digital.gov/documentation/settings/" target="_blank" rel="noopener nofollow" class="usa-link--external">the USWDS documentation site for additional settings</a>.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-f88f4069ea408" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6ffd396f57ef1" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-f88f4069ea408">
+        <textarea hidden data-copy-target="block-6ffd396f57ef1">
 // Modify USWDS theme settings
 @use 'uswds-core' with (
   $theme-focus-color: 'blue-warm-60v'
@@ -345,13 +358,13 @@
 </a>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-933049f560e98" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-2eb7b5ec0a419" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-933049f560e98">
+        <textarea hidden data-copy-target="block-2eb7b5ec0a419">
 // Modify CfA USWDS theme settings
 @use 'cfa-uswds-theme' with (
   $cfa-focus-color: 'blue-warm-60v'
@@ -383,13 +396,13 @@
 <p>The <span class="code">src/main/resources/static/assets/js/index.js</span> file is the entry point for the FFB JavaScript. This is where ES module imports and component configuration and instantiation are handled. The default setup will provide the necessary functionality for the theme. Components for the USWDS typically follow this instantiation pattern:</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-7c8cf82e67889" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1ef386bf72552" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-7c8cf82e67889">
+        <textarea hidden data-copy-target="block-1ef386bf72552">
 import accordion from '@uswds/uswds/js/usa-accordion';
 accordion.on(document.body);
 </textarea>
@@ -403,13 +416,13 @@ accordion.<span class="hljs-title function_">on</span>(<span class="hljs-variabl
 <p>Components for the theme typically follow a slightly different instantiation pattern:</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-6f2baf012ed23" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-15ab0c4bde4e7" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-6f2baf012ed23">
+        <textarea hidden data-copy-target="block-15ab0c4bde4e7">
 import Details from '@codeforamerica/uswds/packages/cfa-details/cfa-details.js';
 new Details();
 </textarea>
@@ -426,76 +439,76 @@ new Details();
 <h2 id="npm">Installation using Node Package Manager (NPM)</h2>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-dcd0ff9eef42f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-06e6b41b7c768" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-dcd0ff9eef42f">$ npm install @codeforamerica/uswds</textarea>
+        <textarea hidden data-copy-target="block-06e6b41b7c768">$ npm install @codeforamerica/uswds</textarea>
       </div>
       <pre class="language-bash padding-top-0">$ npm install @codeforamerica/uswds</pre>
     </div>
-<p>When not using the <a href="#ffb">Form Flow Builder</a>, the Code for America USWDS theme is most reasonably managed using NPM (Node Package Manager). This lets you compile the theme with your application’s CSS, JavaScript, SVGs, and other images. It also maintains a dependency link with the theme source to receive updates. Installing Node.js will install NPM at the same time. We recommend using <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener nofollow" class="usa-link--external">Node Version Manager (NVM)</a>, but you may also install <a href="https://nodejs.org/" target="_blank" rel="noopener nofollow" class="usa-link--external">Node.js</a> directly. Even if you are using the Form Flow Builder’s automated integration, it’s helpful to know how this installation works.</p>
+<p>When not using the <a href="#ffb">Form Flow Builder</a>, the Code for America USWDS theme is most reasonably managed using NPM. This lets you compile the theme with your application’s CSS, JavaScript, SVGs, and other images. It also maintains a dependency link with the theme source to receive updates. Installing Node.js will install NPM at the same time. We recommend using <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener nofollow" class="usa-link--external">Node Version Manager (NVM)</a>, but you may also install <a href="https://nodejs.org/" target="_blank" rel="noopener nofollow" class="usa-link--external">Node.js</a> directly. Even if you are using the Form Flow Builder’s automated integration, it’s helpful to know how this installation works.</p>
 <h3>Quick start</h3>
 <div class="usa-alert usa-alert--info" role="region" aria-label="USWDS CSS Utilities">
   <div class="usa-alert__body">
     <p class="usa-alert__text">You may use the <a href="https://github.com/codeforamerica/uswds-starter" target="_blank" rel="noopener nofollow" class="usa-link--external">Code for America USWDS starter repository</a> to quickly get started or follow a similar step-by-step process below.</p>
   </div>
 </div>
-<p>Once NPM is available, you can add the theme to a new or existing project. If you do not have a package.json file in your project yet, you can run the init command where you would like the package.json to exist and where the corresponding node_modules directory is installed. This will walk you through the steps of creating a package.json file.</p>
+<p>Once NPM is available, you can add the theme to a new or existing project. If you do not have a package.json file in your project yet, you can run the init command where you would like the package.json to exist and where the corresponding <code>node_modules/</code> directory is installed. This will walk you through the steps of creating a package.json file.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-7fd8cb9847859" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6c8f06ff856e1" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-7fd8cb9847859">$ npm init</textarea>
+        <textarea hidden data-copy-target="block-6c8f06ff856e1">$ npm init</textarea>
       </div>
       <pre class="language-bash padding-top-0">$ npm init</pre>
     </div>
 <p>Once complete, run the installation command to add the theme to your project.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-a3c7f8019f3b3" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-a467599c1dbca" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-a3c7f8019f3b3">$ npm install @codeforamerica/uswds</textarea>
+        <textarea hidden data-copy-target="block-a467599c1dbca">$ npm install @codeforamerica/uswds</textarea>
       </div>
       <pre class="language-bash padding-top-0">$ npm install @codeforamerica/uswds</pre>
     </div>
 <p>This will add the theme package to the <span class="code">node_modules/@codeforamerica/uswds/</span> directory of your project. Precompiled static assets are available in the dist directory of the theme. These can be added as links in your HTML or project templates. The stylesheet can be added to the <code>&lt;head&gt;</code> tag.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-fb54524e961fe" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-b255b6f57b1b9" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-fb54524e961fe">&lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/@codeforamerica/uswds/dist/assets/css/styles.css&quot;&gt;</textarea>
+        <textarea hidden data-copy-target="block-b255b6f57b1b9">&lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/@codeforamerica/uswds/dist/assets/css/styles.css&quot;&gt;</textarea>
       </div>
       <pre class="language-bash padding-top-0">&lt;<span class="hljs-built_in">link</span> rel=<span class="hljs-string">&quot;stylesheet&quot;</span> href=<span class="hljs-string">&quot;node_modules/@codeforamerica/uswds/dist/assets/css/styles.css&quot;</span>&gt;</pre>
     </div>
 <p>The JavaScript can be added just before the closing <code>&lt;/body&gt;</code> tag.</p>
 <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-55e1901ae42c4" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-0968963eb4e4c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-55e1901ae42c4">&lt;script src=&quot;node_modules/@codeforamerica/uswds/dist/assets/js/default.js&quot;&gt;&lt;/script&gt;</textarea>
+        <textarea hidden data-copy-target="block-0968963eb4e4c">&lt;script src=&quot;node_modules/@codeforamerica/uswds/dist/assets/js/default.js&quot;&gt;&lt;/script&gt;</textarea>
       </div>
       <pre class="language-bash padding-top-0">&lt;script src=<span class="hljs-string">&quot;node_modules/@codeforamerica/uswds/dist/assets/js/default.js&quot;</span>&gt;&lt;/script&gt;</pre>
     </div>
-<p>These examples link the assets from the <code>node_modules</code> directory, however, you should move all of the static assets under <span class="code">dist/assets/</span> into the directory where you keep (or plan to keep) similar static assets. Refer to the directory diagram below for more information on available assets.</p>
+<p>These examples link the assets from the <code>node_modules/</code> directory, however, you should move all of the static assets under <span class="code">dist/assets/</span> into the directory where you keep (or plan to keep) similar static assets. Refer to the directory diagram below for more information on available assets.</p>
 <h3>Custom installation and theming</h3>
 <p>To make simple modifications to the theme, such as colors, you must set up a <strong>front-end development environment</strong> for compiling the theme’s Sass and JavaScript. This is preferred if you want to use the theme components as a base and make simple updates to the color palette or other USWDS settings.</p>
 <div class="usa-alert usa-alert--info" role="region" aria-label="USWDS CSS Utilities">
@@ -505,6 +518,7 @@ new Details();
     </div>
   </div>
 </div>
+<h2 id="starter">Code for America USWDS starter</h2>
 <p>The <a href="https://github.com/codeforamerica/uswds-starter" target="_blank" target="_blank" rel="noopener nofollow" class="usa-link--external">Code for America USWDS starter</a> can be used to quickly set up an environment to start configuring the theme. It describes how to set up a simple NPM project with the theme as a dependency. It also describes how the theme’s Sass and Rollup scripts can be used to compile Sass and JavaScript and run them through the necessary transformations without programming your own Sass or Rollup scripts.</p>
 <a class="usa-button cfa-button usa-button--outline" target="_blank" rel="noopener nofollow" href="https://github.com/codeforamerica/uswds-starter">
   <span>Code for America USWDS starter</span>
@@ -513,9 +527,9 @@ new Details();
   </svg>
 </a>
 <p>You may also follow the <a href="https://designsystem.digital.gov/how-to-use-uswds" target="_blank" target="_blank" rel="noopener nofollow" class="usa-link--external">instructions on the USWDS documentation site</a> to create your own USWDS theme for your project from scratch.</p>
-<h3>Building pages</h3>
+<h2>Building pages</h2>
 <p>Once the theme is installed, configured, and linked you can start building pages. The <a href="https://designsystem.digital.gov/templates/">USWDS documentation site has several page templates</a> that you can use to get started. Once you have created page templates you can start adding components using the rendered HTML in the component catalog. Or, use the Thymeleaf template fragments and ERB templates partial to render pre-built components in your Java Spring or Ruby on Rails application.</p>
-<a class="usa-button cfa-button usa-button--big usa-button--outline" target="_blank" rel="noopener nofollow" href="https://codeforamerica.github.io/uswds/components">
+<a class="usa-button cfa-button usa-button--big usa-button--outline" href="https://codeforamerica.github.io/uswds/components">
   <span>Browse components</span>
   <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
     <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward"></use>
@@ -611,6 +625,10 @@ new Details();
 
   <svg id="logo-cfa-stacked" viewBox="0 0 276 223">
     <path d="M252.35 142.786L256.72 130.636L261.08 142.786H252.35ZM261.95 122.086H251.68L237.85 158.136H246.85L249.58 150.566H263.88L266.61 158.136H275.78L261.95 122.086ZM215.67 129.656C217.395 129.609 219.102 130.025 220.611 130.863C222.12 131.7 223.377 132.927 224.25 134.416L231.79 130.096C228.73 124.636 222.65 121.416 215.79 121.416C204.67 121.416 196.79 129.196 196.79 140.106C196.79 151.016 204.64 158.796 215.79 158.796C222.7 158.796 228.18 155.736 231.48 150.796L224.42 145.796C223.496 147.264 222.211 148.471 220.688 149.301C219.165 150.131 217.454 150.556 215.72 150.536C210.39 150.536 205.78 146.776 205.78 140.076C205.78 133.906 210 129.626 215.69 129.626L215.67 129.656ZM177.96 158.136H186.55V122.136H177.96V158.136ZM146.82 137.406V129.886H153.82C156.82 129.886 158.82 131.076 158.82 133.616C158.82 136.156 156.92 137.406 153.82 137.406H146.82ZM167.55 133.616C167.55 126.516 162.81 122.086 153.9 122.086H138.22V158.136H146.82V144.646H148.08L157.58 158.136H167.83L157.48 144.386C163.94 143.386 167.55 139.386 167.55 133.616ZM107.8 143.796H125.59V136.066H107.8V129.836H126.7V122.086H99.2V158.136H126.8V150.386H107.8V143.796ZM66.76 145.006L58.55 122.086H46.37V158.136H54.97V133.546L62.18 154.736H71.32L78.53 133.466V158.136H87.08V122.136H74.92L66.76 145.006ZM14.57 142.786L18.95 130.636L23.33 142.786H14.57ZM13.91 122.086L0.0799561 158.136H9.07996L11.81 150.566H26.08L28.81 158.136H37.97L24.15 122.136L13.91 122.086ZM241.71 84.0859C242.921 82.5492 244.524 81.3676 246.35 80.6659L247.73 84.5859H247.83C249.145 84.643 250.433 84.204 251.44 83.3559C251.892 82.9696 252.252 82.4872 252.495 81.944C252.737 81.4008 252.855 80.8105 252.84 80.2159C252.863 79.7069 252.779 79.1988 252.595 78.7238C252.41 78.2489 252.129 77.8175 251.769 77.4572C251.408 77.0969 250.977 76.8156 250.502 76.6312C250.027 76.4467 249.519 76.3632 249.01 76.3859C247.477 76.5043 246.027 77.1307 244.89 78.1659C243.098 79.6492 241.525 81.3799 240.22 83.3059L241.65 76.3859H239.86L230.99 78.4459V80.2659L235.26 80.8859L231.14 101.786H237.48L239.48 89.7859C239.749 87.7084 240.514 85.7261 241.71 84.0059V84.0859ZM211.8 82.7959C213.173 80.2693 214.84 79.0026 216.8 78.9959C217.473 78.9632 218.141 79.1167 218.732 79.4396C219.323 79.7625 219.814 80.2422 220.15 80.8259C221.006 82.5304 221.393 84.4324 221.27 86.3359C221.386 89.5983 220.67 92.8365 219.19 95.7459C217.79 98.2593 216.097 99.5159 214.11 99.5159C213.451 99.5386 212.799 99.38 212.224 99.0573C211.649 98.7346 211.174 98.2602 210.85 97.6859C210.002 96.0324 209.615 94.1808 209.73 92.3259C209.611 89.0283 210.316 85.753 211.78 82.7959H211.8ZM204.28 85.5759C203.491 87.4746 203.083 89.5099 203.08 91.5659C203.009 92.9866 203.222 94.4072 203.706 95.7447C204.19 97.0822 204.936 98.3098 205.9 99.3559C206.904 100.34 208.102 101.105 209.417 101.603C210.732 102.1 212.136 102.319 213.54 102.246C215.397 102.256 217.237 101.892 218.95 101.176C220.626 100.486 222.147 99.4661 223.42 98.1759C224.859 96.6863 225.994 94.9301 226.76 93.0059C227.538 91.0771 227.935 89.0158 227.93 86.9359C227.999 85.522 227.783 84.1086 227.293 82.7804C226.803 81.4521 226.051 80.2364 225.08 79.2059C224.07 78.2312 222.871 77.4743 221.557 76.9823C220.243 76.4903 218.841 76.2737 217.44 76.3459C215.599 76.3424 213.776 76.7097 212.08 77.4259C210.384 78.1363 208.852 79.1881 207.58 80.5159C206.158 81.9824 205.04 83.7156 204.29 85.6159L204.28 85.5759ZM203.83 77.7059H196.83C197.226 75.3039 197.797 72.9342 198.54 70.6159C198.983 69.1036 199.691 67.6817 200.63 66.4159L204.95 70.9459C205.859 70.7795 206.697 70.34 207.35 69.6859C207.635 69.4069 207.861 69.074 208.015 68.7065C208.17 68.3391 208.25 67.9446 208.25 67.5459C208.25 67.0387 208.122 66.5397 207.877 66.0955C207.632 65.6513 207.279 65.2765 206.85 65.0059C205.801 64.2998 204.553 63.9492 203.29 64.0059C201.815 64.0344 200.363 64.3763 199.03 65.0091C197.697 65.6419 196.514 66.5509 195.56 67.6759C193.164 70.3131 191.605 73.602 191.08 77.1259L187.08 78.8859L187.03 81.1559L190.48 80.7259L188.26 96.4859C187.88 99.4135 187.34 102.318 186.64 105.186C186.312 106.637 185.729 108.018 184.92 109.266L179.41 106.316C178.78 106.57 178.246 107.014 177.88 107.586C177.515 108.188 177.331 108.882 177.35 109.586C177.341 110.019 177.425 110.448 177.598 110.845C177.771 111.242 178.027 111.597 178.35 111.886C179.051 112.499 179.959 112.821 180.89 112.786C182.758 112.712 184.555 112.047 186.02 110.886C187.927 109.462 189.54 107.683 190.77 105.646C191.74 104.093 192.516 102.428 193.08 100.686C193.747 98.5602 194.235 96.3827 194.54 94.1759L196.42 80.7259H203.89L203.83 77.7059ZM165.96 94.0059H146.96V87.4059H164.75V79.6759H146.95V73.4459H165.85V65.6959H138.35V101.746H165.96V94.0059ZM109.21 93.7959H102.57V73.6559H109.21C115.91 73.6559 119.12 77.8259 119.12 83.7159C119.12 89.6059 115.91 93.7859 109.21 93.7859V93.7959ZM109.39 65.6959H93.97V101.746H109.39C120.67 101.746 128.11 94.5859 128.11 83.7459C128.11 72.9059 120.67 65.7459 109.39 65.7459V65.6959ZM63.7 73.2659C69.57 73.2659 73.7 77.5459 73.7 83.7159C73.7 89.8859 69.53 94.1759 63.7 94.1759C57.87 94.1759 53.7 89.8959 53.7 83.7159C53.7 77.5359 57.87 73.2659 63.7 73.2659V73.2659ZM63.7 102.416C74.82 102.416 82.7 94.4859 82.7 83.7159C82.7 72.9459 74.82 65.0059 63.7 65.0059C52.58 65.0059 44.7 72.9359 44.7 83.6959C44.7 94.4559 52.57 102.396 63.7 102.396V102.416ZM20.52 102.396C27.42 102.396 32.91 99.3259 36.2 94.3959L29.2 89.3959C28.2754 90.8656 26.989 92.0733 25.4639 92.9033C23.9388 93.7333 22.2261 94.1577 20.49 94.1359C15.16 94.1359 10.56 90.3759 10.56 83.6759C10.56 77.5059 14.78 73.2259 20.47 73.2259C22.1873 73.1904 23.883 73.6149 25.3811 74.4554C26.8792 75.2958 28.1252 76.5217 28.99 78.0059L36.54 73.7059C33.47 68.2459 27.4 65.0059 20.52 65.0059C9.39996 65.0059 1.51996 72.7859 1.51996 83.6959C1.51996 94.6059 9.36996 102.396 20.52 102.396" fill="currentColor"/>
+  </svg>
+
+  <svg id="icon-figma" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00002 2.44739H11.4475H12H12.0001H12.5527H15.0001C15.9424 2.44739 16.846 2.82168 17.5122 3.48793C18.1785 4.15418 18.5528 5.0578 18.5528 6.00002C18.5528 6.94224 18.1785 7.84586 17.5122 8.51211C17.3262 8.69809 17.1218 8.86133 16.9031 9.00002C17.1218 9.13871 17.3262 9.30194 17.5122 9.48793C18.1785 10.1542 18.5528 11.0578 18.5528 12C18.5528 12.9422 18.1785 13.8459 17.5122 14.5121C16.846 15.1784 15.9424 15.5527 15.0001 15.5527C14.088 15.5527 13.2121 15.2019 12.5527 14.5751V15V15.5527V18C12.5527 18.9422 12.1784 19.8459 11.5121 20.5121C10.8459 21.1784 9.94224 21.5527 9.00002 21.5527C8.0578 21.5527 7.15418 21.1784 6.48793 20.5121C5.82168 19.8459 5.44739 18.9422 5.44739 18C5.44739 17.0578 5.82168 16.1542 6.48793 15.4879C6.67391 15.3019 6.8784 15.1387 7.09706 15C6.8784 14.8613 6.67391 14.6981 6.48793 14.5121C5.82168 13.8459 5.44739 12.9422 5.44739 12C5.44739 11.0578 5.82168 10.1542 6.48793 9.48793C6.67391 9.30194 6.8784 9.13871 7.09705 9.00002C6.8784 8.86133 6.67391 8.69809 6.48793 8.51211C5.82168 7.84586 5.44739 6.94224 5.44739 6.00002C5.44739 5.0578 5.82168 4.15418 6.48793 3.48793C7.15418 2.82168 8.0578 2.44739 9.00002 2.44739ZM9.00002 8.44739H11.4474V3.55265H9.00002C8.35094 3.55265 7.72844 3.8105 7.26947 4.26947C6.8105 4.72844 6.55265 5.35094 6.55265 6.00002C6.55265 6.6491 6.8105 7.2716 7.26947 7.73057C7.72844 8.18954 8.35094 8.44739 9.00002 8.44739ZM9.00002 9.55265C8.35094 9.55265 7.72844 9.8105 7.26947 10.2695C6.8105 10.7284 6.55265 11.3509 6.55265 12C6.55265 12.6491 6.8105 13.2716 7.26947 13.7306C7.72844 14.1895 8.35094 14.4474 9.00002 14.4474H11.4474V9.55265H9.00002ZM9.00002 15.5527C8.35094 15.5527 7.72844 15.8105 7.26947 16.2695C6.8105 16.7284 6.55265 17.3509 6.55265 18C6.55265 18.6491 6.8105 19.2716 7.26947 19.7306C7.72844 20.1895 8.35094 20.4474 9.00002 20.4474C9.6491 20.4474 10.2716 20.1895 10.7306 19.7306C11.1895 19.2716 11.4474 18.6491 11.4474 18V15.5527H9.00002ZM15.0001 8.44739C15.6492 8.44739 16.2717 8.18954 16.7307 7.73057C17.1897 7.2716 17.4475 6.6491 17.4475 6.00002C17.4475 5.35094 17.1897 4.72844 16.7307 4.26947C16.2717 3.8105 15.6492 3.55265 15.0001 3.55265H12.5528V8.44739H15.0001ZM15.0001 9.55265C14.3511 9.55265 13.7286 9.8105 13.2696 10.2695C12.8106 10.7284 12.5528 11.3509 12.5528 12C12.5528 12.6491 12.8106 13.2716 13.2696 13.7306C13.7286 14.1895 14.3511 14.4474 15.0001 14.4474C15.6492 14.4474 16.2717 14.1895 16.7307 13.7306C17.1897 13.2716 17.4475 12.6491 17.4475 12C17.4475 11.3509 17.1897 10.7284 16.7307 10.2695C16.2717 9.8105 15.6492 9.55265 15.0001 9.55265Z" fill="currentColor"/>
   </svg>
 </svg></body>
 </html>
