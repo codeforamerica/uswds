@@ -7,32 +7,32 @@ Dropzone.autoDiscover = false;
  *
  * Compatible with @dropzone v5.9.3
  */
-class UploadDocuments {
+class FileSelector {
   /**
    * Constructor
    *
    * @param  {Object}  element  Required. A pre-queried Dropzone element to initialize
    * @param  {Object}  s        Optional settings configuration that will be processed and passed to Dropzone
    *
-   * @return {Object}           Instance of UploadDocuments
+   * @return {Object}           Instance of FileSelector
    */
   constructor(element, s = {}) {
     this.element = element;
 
-    this.selectors = s.selectors ? s.selectors : UploadDocuments.selectors;
+    this.selectors = s.selectors ? s.selectors : FileSelector.selectors;
 
     this.dropzoneOptions = s.dropzoneOptions ?
-      Object.assign(UploadDocuments.dropzoneOptions, s.dropzoneOptions) : UploadDocuments.dropzoneOptions;
+      Object.assign(FileSelector.dropzoneOptions, s.dropzoneOptions) : FileSelector.dropzoneOptions;
 
     this.mockFiles = s.mockFiles ? s.mockFiles : [];
 
-    this.maxFilesReached = s.maxFilesReached ? s.maxFilesReached : UploadDocuments.maxFilesReached;
+    this.maxFilesReached = s.maxFilesReached ? s.maxFilesReached : FileSelector.maxFilesReached;
 
-    this.maxFilesReset = s.maxFilesReset ? s.maxFilesReset : UploadDocuments.maxFilesReset;
+    this.maxFilesReset = s.maxFilesReset ? s.maxFilesReset : FileSelector.maxFilesReset;
 
-    this.elFocusable = s.elFocusable ? s.elFocusable : UploadDocuments.elFocusable;
+    this.elFocusable = s.elFocusable ? s.elFocusable : FileSelector.elFocusable;
 
-    this.index = s.index ? s.index : UploadDocuments.index;
+    this.index = s.index ? s.index : FileSelector.index;
 
     this.addedFile = s.addedFile ? s.addedFile : this.addedFile;
 
@@ -76,7 +76,7 @@ class UploadDocuments {
    *
    * @param   {Object}  options  Options to pass to configure and pass to the Dropzone class
    *
-   * @return  {Object}           Instance of UploadDocuments
+   * @return  {Object}           Instance of FileSelector
    */
   configDropzone(options) {
     let fallback = this.element.querySelector(this.selectors.fallback);
@@ -163,7 +163,7 @@ class UploadDocuments {
    * init event handler. However, this handler does trigger after Dropzone is
    * initialized.
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   init() {
     if (process.env.NODE_ENV === 'production') {
@@ -191,13 +191,13 @@ class UploadDocuments {
    * Dropzone file input. This makes the presentation of the Dropzone element
    * compatible with the default USWDS File Input component.
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   swapFallback() {
     let fallback = this.dropzone.element.querySelector(this.selectors.fallback);
 
-    for (let i = 0; i < UploadDocuments.fallbackAttrs.length; i++) {
-      let attr = UploadDocuments.fallbackAttrs[i];
+    for (let i = 0; i < FileSelector.fallbackAttrs.length; i++) {
+      let attr = FileSelector.fallbackAttrs[i];
       let value = fallback.getAttribute(attr);
 
       if (value) this.dropzone.hiddenFileInput.setAttribute(attr, value);
@@ -205,8 +205,8 @@ class UploadDocuments {
 
     fallback.remove();
 
-    for (let i = 0; i < UploadDocuments.removeAttrs.length; i++) {
-      let attr = UploadDocuments.removeAttrs[i];
+    for (let i = 0; i < FileSelector.removeAttrs.length; i++) {
+      let attr = FileSelector.removeAttrs[i];
 
       this.dropzone.hiddenFileInput.removeAttribute(attr);
     }
@@ -218,7 +218,7 @@ class UploadDocuments {
    * Add the Dropzone event listener for 'addedfile'. This method property could
    * be overridden to customize the chain of events contained within.
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   addedFile() {
     this.dropzone.on('addedfile', file => {
@@ -236,7 +236,7 @@ class UploadDocuments {
    * Add the Dropzone event listener for 'removedfile'. This method property could
    * be overridden to customize the chain of events contained within.
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   removedFile() {
     this.dropzone.on('removedfile', file => {
@@ -251,11 +251,11 @@ class UploadDocuments {
    *
    * @param   {Object}  event  Dragover event
    *
-   * @return  {Object}         Instance of UploadDocuments
+   * @return  {Object}         Instance of FileSelector
    */
   dragover(event) {
     if (event.srcElement.matches(this.selectors.dragRegion)) {
-      event.srcElement.classList.add(UploadDocuments.classes.dragOver);
+      event.srcElement.classList.add(FileSelector.classes.dragOver);
     }
 
     return this;
@@ -266,11 +266,11 @@ class UploadDocuments {
    *
    * @param   {Object}  event  Dragleave event
    *
-   * @return  {Object}         Instance of UploadDocuments
+   * @return  {Object}         Instance of FileSelector
    */
   dragleave(event) {
     if (event.srcElement.matches(this.selectors.dragRegion)) {
-      event.srcElement.classList.remove(UploadDocuments.classes.dragOver);
+      event.srcElement.classList.remove(FileSelector.classes.dragOver);
     }
 
     return this;
@@ -281,7 +281,7 @@ class UploadDocuments {
    *
    * @param   {Object}  event  Drop event
    *
-   * @return  {Object}         Instance of UploadDocuments
+   * @return  {Object}         Instance of FileSelector
    */
   drop(event) {
     this.dragleave(event);
@@ -294,7 +294,7 @@ class UploadDocuments {
    *
    * @param   {Object}  file  Most recently added Dropzone file object
    *
-   * @return  {Object}        Instance of UploadDocuments
+   * @return  {Object}        Instance of FileSelector
    */
   formatFilename(file) {
     let nameElement = file.previewElement.querySelector('[data-dz-name]');
@@ -323,7 +323,7 @@ class UploadDocuments {
   /**
    * Show or hide the preview based on the number of added files
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   preview() {
     let preview = this.element.querySelector(this.selectors.preview);
@@ -342,7 +342,7 @@ class UploadDocuments {
   /**
    * Update the uploaded number inner text to reflect the number of added files
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   previewNumber() {
     let number = this.element.querySelector(this.selectors.previewNumber);
@@ -357,7 +357,7 @@ class UploadDocuments {
   /**
    * Shift focus to the uploads header with additional information
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   previewHeader() {
     let header = this.element.querySelector(this.selectors.previewHeader);
@@ -375,7 +375,7 @@ class UploadDocuments {
    *
    * @param   {Object}  remove  If set to true the element will be removed from the DOM
    *
-   * @return  {Object}          Instance of UploadDocuments
+   * @return  {Object}          Instance of FileSelector
    */
   hidePreviewTemplate(remove = false) {
     if (remove) {
@@ -395,7 +395,7 @@ class UploadDocuments {
   /**
    * Assert if max files have been reached and toggle messaging and other relevant events
    *
-   * @return  {Object}  Instance of UploadDocuments
+   * @return  {Object}  Instance of FileSelector
    */
   maxFiles() {
     let inputErrorMessage = this.element.querySelector(this.selectors.inputErrorMessage);
@@ -446,7 +446,7 @@ class UploadDocuments {
    *                            accepted: true
    *                          }
    *
-   * @return  {Object}        Instance of UploadDocuments
+   * @return  {Object}        Instance of FileSelector
    */
   addFile(file) {
     this.dropzone.files.push(file);
@@ -460,11 +460,11 @@ class UploadDocuments {
   }
 }
 
-/** @type  {String}  The main selector for Upload Document components **/
-UploadDocuments.selector = '[data-js="upload-documents"]';
+/** @type  {String}  The main selector for File Selector components **/
+FileSelector.selector = '[data-js="file-selector"]';
 
 /** @type  {Object}  A dictionary of selectors used by the utility class **/
-UploadDocuments.selectors = {
+FileSelector.selectors = {
   'dragRegion': '[data-dropzone="drag-and-drop-region"]',
   'inputErrorMessage': '[data-dropzone="input-error-message"]',
   'fallback': '[data-dropzone="fallback"]',
@@ -483,13 +483,13 @@ UploadDocuments.selectors = {
 };
 
 /** @type  {Object}  A dictionary of classes used by the utility class **/
-UploadDocuments.classes = {
+FileSelector.classes = {
   'dragOver': 'usa-file-input--drag'
 };
 
 /** @type  {Object}  Default options to pass to the Dropzone library **/
-UploadDocuments.dropzoneOptions = {
-  'clickable': UploadDocuments.selectors.dragRegion,
+FileSelector.dropzoneOptions = {
+  'clickable': FileSelector.selectors.dragRegion,
   'thumbnailMethod': 'crop',
   'thumbnailWidth': 8, // to be multiplied by 8
   'thumbnailHeight': 8, // to be multiplied by 8
@@ -498,27 +498,27 @@ UploadDocuments.dropzoneOptions = {
 };
 
 /** @type  {Array}  A list of attributes to swap from the fallback file input to the hidden Dropzone input **/
-UploadDocuments.fallbackAttrs = ['class', 'id', 'name', 'aria-labelledby', 'aria-describedby', 'multiple', 'accept'];
+FileSelector.fallbackAttrs = ['class', 'id', 'name', 'aria-labelledby', 'aria-describedby', 'multiple', 'accept'];
 
 /** @type  {Array}  A list of attributes remove from the hidden Dropzone input **/
-UploadDocuments.removeAttrs = ['tabindex', 'style'];
+FileSelector.removeAttrs = ['tabindex', 'style'];
 
 /** @type  {Function}  A callback function for reaching max files within this utility **/
-UploadDocuments.maxFilesReached = () => {
+FileSelector.maxFilesReached = () => {
   if (process.env.NODE_ENV != 'production') {
     console.dir('Max files limit reached!');
   }
 };
 
 /** @type  {Function}  A callback function for when the max files warning is reset within this utility **/
-UploadDocuments.maxFilesReset = () => {
+FileSelector.maxFilesReset = () => {
   if (process.env.NODE_ENV != 'production') {
     console.dir('Max files threshold not reached!');
   }
 };
 
 /** @type  {Array}  A list of potentially focusable element selectors */
-UploadDocuments.elFocusable = [
+FileSelector.elFocusable = [
   'a', 'button', 'input', 'select', 'textarea', 'object', 'embed', 'form',
   'fieldset', 'legend', 'label', 'area', 'audio', 'video', 'iframe', 'svg',
   'details', 'table', '[tabindex]', '[contenteditable]', '[usemap]'
@@ -533,7 +533,7 @@ UploadDocuments.elFocusable = [
  *
  * @return  {Object}              The indexed elements
  */
-UploadDocuments.index = (elements, index = false) => {
+FileSelector.index = (elements, index = false) => {
   for (let i = 0; i < elements.length; i++) {
     let element = elements[i];
 
@@ -553,4 +553,4 @@ UploadDocuments.index = (elements, index = false) => {
   return elements;
 }
 
-export default UploadDocuments;
+export default FileSelector;

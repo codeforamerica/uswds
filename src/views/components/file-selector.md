@@ -1,25 +1,25 @@
 ---
 tags: component
-title: Upload documents
+title: File selector
 layout: default
-story: I select or drop documents to the webpage when I need to add them to an online form.
+story: A file selector lets me pick or drop my documents when I need to add them to an online form.
 url_uswds: https://designsystem.digital.gov/components/file-input
 url_uswds_guidance:
 url_uswds_usage:
 nice_uswds: File input
 url_honeycrisp:
 nice_honeycrisp:
-modifier_honeycrisp: ['.cfa-file-input', '.cfa-form-group', '.cfa-upload-documents', '.cfa-label', '.cfa-hint', '.cfa-button', '.cfa-upload-documents__*']
+modifier_honeycrisp: ['.cfa-file-input', '.cfa-form-group', '.cfa-file-selector', '.cfa-label', '.cfa-hint', '.cfa-button', '.cfa-file-selector__*']
 design_honeycrisp: false
 tokens: false
 styles: false
-thumbnail: assets/site/thumbnail-upload-documents.png
-thumbnail_description: An illustration of the upload documents component.
+thumbnail: assets/site/thumbnail-file-selector.png
+thumbnail_description: An illustration of the file selector component.
 ---
 
 <!-- INTRO -->
 
-The {{ title }} component allows a user to select multiple files from their device, either by dragging and dropping them into the component or using the file picker modal dialog.
+The {{ title }} component allows a user to select multiple files from their device, either by dragging and dropping them into the component or using the file input modal dialog.
 
 <!-- DETAILS -->
 
@@ -111,7 +111,7 @@ The {{ title }} component allows a user to select multiple files from their devi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'upload-documents', nice: title, context: context, caption: title %}
+{% render 'figure.md', name: 'file-selector', nice: title, context: context, caption: title %}
 
 <!-- GUIDANCE -->
 
@@ -164,9 +164,9 @@ The {{ title }} component allows a user to select multiple files from their devi
 );
 {% endcapture %}
 
-{% capture file_upload %}{% getFile 'upload-documents' %}{% endcapture %}
-{% capture javascript_upload %}{% getFile 'upload-documents' 'javascript' %}{% endcapture %}
+{% capture file_upload %}{% getFile 'file-selector' %}{% endcapture %}
+{% capture javascript_upload %}{% getFile 'file-selector' 'javascript' %}{% endcapture %}
 
 {% capture javascript %}enables the drag-and-drop interaction, uploaded file preview and management, and validation messaging. The module extends the open source library <a href="https://github.com/dropzone/dropzone" target="_blank" rel="noopener nofollow" class="usa-link--external">Dropzone</a> to provide interaction and customization options. The module can be found at <code>.{{ javascript_upload | replace: file_upload, '' }}</code>.{% endcapture %}
 
-{% render 'source.md', name: 'upload-documents', nice: title, theme: theme, javascript: javascript, config: config, pckg: package %}
+{% render 'source.md', name: 'file-selector', nice: title, theme: theme, javascript: javascript, config: config, pckg: package %}

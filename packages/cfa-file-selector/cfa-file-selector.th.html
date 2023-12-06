@@ -1,4 +1,4 @@
-<div th:fragment="uploadDocuments(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)" class="usa-form-group cfa-form-group cfa-upload-documents" th:attr="id=${id}" data-js="upload-documents">
+<div th:fragment="fileSelector(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)" class="usa-form-group cfa-form-group cfa-file-selector" th:attr="id=${id}" data-js="file-selector">
   <div data-dropzone="uploads">
     <label class="usa-label" th:if="${fileInput.label}" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
       <span th:text="${fileInput.label.text}">Label</span>
@@ -34,42 +34,42 @@
   <!--/* @hidden       "true"  Visually hides element */-->
   <!--/* @aria-hidden  "true"  Hides element from the accessibility API */-->
   <div data-dropzone="preview" hidden="true" aria-hidden="true">
-    <h3 class="cfa-upload-documents__preview-header" data-dropzone="preview-header" th:attr="id=${previewHeader.id}">
+    <h3 class="cfa-file-selector__preview-header" data-dropzone="preview-header" th:attr="id=${previewHeader.id}">
       Your documents. <span data-dropzone="preview-number">0</span> <span data-dropzone="preview-text">uploaded</span> <span>(<span>20 max</span>)</span>
     </h3>
 
     <ul class="add-list-reset" role="list" data-dropzone="preview-container" th:attr="aria-describedby=${previewHeader.id}">
       <!--/* Use previewTemplate to add a custom preview template  */-->
       <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
-      <li th:if="${previewTemplate}" th:utext="${previewTemplate}" class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove"></li>
+      <li th:if="${previewTemplate}" th:utext="${previewTemplate}" class="cfa-file-selector__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove"></li>
 
       <!--/* Dropzone will modify or replace the contents of this element */-->
       <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
-      <li th:if="${defaultPreviewTemplate}" class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
-        <div class="cfa-upload-documents__details">
-          <div class="cfa-upload-documents__thumbnail" data-dropzone="thumbnail">
-            <div class="cfa-upload-documents__progress">
-              <span class="cfa-upload-documents__progress-bar" data-dz-uploadprogress="keep"></span>
+      <li th:if="${defaultPreviewTemplate}" class="cfa-file-selector__preview dz-image-preview" data-dropzone="preview-template" data-dropzone="remove">
+        <div class="cfa-file-selector__details">
+          <div class="cfa-file-selector__thumbnail" data-dropzone="thumbnail">
+            <div class="cfa-file-selector__progress">
+              <span class="cfa-file-selector__progress-bar" data-dz-uploadprogress="keep"></span>
             </div>
 
-            <svg class="usa-icon cfa-upload-documents__icon-error" aria-hidden="true" focusable="false" role="img">
+            <svg class="usa-icon cfa-file-selector__icon-error" aria-hidden="true" focusable="false" role="img">
               <use th:href="${defaultPreviewTemplate.error.icon}"></use>
             </svg>
 
-            <svg class="usa-icon cfa-upload-documents__icon-default" aria-hidden="true" focusable="false" role="img">
+            <svg class="usa-icon cfa-file-selector__icon-default" aria-hidden="true" focusable="false" role="img">
               <use th:href="${defaultPreviewTemplate.thumbnail.default}"></use>
             </svg>
 
-            <img class="cfa-upload-documents__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext" />
+            <img class="cfa-file-selector__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext" />
           </div>
 
-          <div class="cfa-upload-documents__file">
-            <div class="cfa-upload-documents__filename" data-dz-name="keep">
-              <span class="cfa-upload-documents__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
-              <span class="cfa-upload-documents__filename-ext" aria-hidden="true">.ext</span>
+          <div class="cfa-file-selector__file">
+            <div class="cfa-file-selector__filename" data-dz-name="keep">
+              <span class="cfa-file-selector__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
+              <span class="cfa-file-selector__filename-ext" aria-hidden="true">.ext</span>
             </div>
 
-            <span class="cfa-upload-documents__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
+            <span class="cfa-file-selector__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep">
               Message
             </span>
 
@@ -90,27 +90,27 @@
               <span data-dropzone="remove">
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview">base</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview">base</button>
 
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing">processing</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing">processing</button>
 
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-complete">complete</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-complete">complete</button>
 
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
 
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default">default</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default">default</button>
 
                 <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
 
-                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
+                <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
               </span>
             </div>
           </div>

@@ -44,7 +44,7 @@ import FollowUpQuestion from '../../packages/cfa-follow-up-question/cfa-follow-u
 import MaskDollars from '../../packages/cfa-mask/cfa-mask-dollars.js';
 import MaskTel from '../../packages/cfa-mask/cfa-mask-tel.js';
 import MaskSSN from '../../packages/cfa-mask/cfa-mask-ssn.js';
-import UploadDocuments from '../../packages/cfa-upload-documents/cfa-upload-documents.js';
+import FileSelector from '../../packages/cfa-file-selector/cfa-file-selector.js';
 
 /**
  * Initialize USWDS and Code for America theme utilities and components
@@ -71,7 +71,7 @@ tooltip.on(document.body);
  */
 (elements => {
   for (let i = 0; i < elements.length; i++) {
-    new UploadDocuments(elements[i], {
+    new FileSelector(elements[i], {
       // /**
       //  * Example of passing already uploaded files to the utility
       //  *
@@ -121,9 +121,9 @@ tooltip.on(document.body);
         //   this.on('addedfile', function(file) {
         //     //... some custom methods can go here
 
-        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'cancel';
+        //     file.previewElement.querySelector(FileSelector.selectors.documentRemoveLabel).innerText = 'cancel';
 
-        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
+        //     file.previewElement.querySelector(FileSelector.selectors.documentRemove)
         //       .addEventListener('click', () => {
         //         //... cancel event for uploading file
         //       });
@@ -140,9 +140,9 @@ tooltip.on(document.body);
         //   this.on('success', function(file) {
         //     //... some custom methods can go here
 
-        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemoveLabel).innerText = 'remove';
+        //     file.previewElement.querySelector(FileSelector.selectors.documentRemoveLabel).innerText = 'remove';
 
-        //     file.previewElement.querySelector(UploadDocuments.selectors.documentRemove)
+        //     file.previewElement.querySelector(FileSelector.selectors.documentRemove)
         //       .addEventListener('click', () => {
         //         //... remove event for uploaded file
         //       });
@@ -170,7 +170,7 @@ tooltip.on(document.body);
       }
     });
   }
-})(document.querySelectorAll(UploadDocuments.selector));
+})(document.querySelectorAll(FileSelector.selector));
 
 /**
  * Add tabindex to pre tags to make them focusable. Site only

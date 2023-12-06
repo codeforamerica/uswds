@@ -56,7 +56,7 @@
           </div>
 
           <div th:if="${formGroup.fileInput}">
-            <th:block th:replace="~{packages/cfa-upload-documents/cfa-upload-documents.th :: uploadDocuments(${formGroup.id}, ${formGroup.fileInput}, ${formGroup.previewHeader}, ${formGroup.previewTemplate}, ${formGroup.defaultPreviewTemplate}, ${formGroup.dict})}" />
+            <th:block th:replace="~{packages/cfa-file-selector/cfa-file-selector.th :: fileSelector(${formGroup.id}, ${formGroup.fileInput}, ${formGroup.previewHeader}, ${formGroup.previewTemplate}, ${formGroup.defaultPreviewTemplate}, ${formGroup.dict})}" />
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@
           </div>
 
           <div th:if="${formGroup.fileInput}">
-            <th:block th:replace="~{packages/cfa-upload-documents/cfa-upload-documents.th :: uploadDocuments(${formGroup.id}, ${formGroup.fileInput}, ${formGroup.previewHeader}, ${formGroup.previewTemplate}, ${formGroup.defaultPreviewTemplate}, ${formGroup.dict})}" />
+            <th:block th:replace="~{packages/cfa-file-selector/cfa-file-selector.th :: fileSelector(${formGroup.id}, ${formGroup.fileInput}, ${formGroup.previewHeader}, ${formGroup.previewTemplate}, ${formGroup.defaultPreviewTemplate}, ${formGroup.dict})}" />
           </div>
         </div>
       </div>

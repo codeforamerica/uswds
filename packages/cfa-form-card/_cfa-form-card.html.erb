@@ -99,7 +99,7 @@
           </div><% end %>
 
           <% if formGroup['fileInput'] %>
-          <%= ERB.new(File.read('packages/cfa-upload-documents/_cfa-upload-documents.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+          <%= ERB.new(File.read('packages/cfa-file-selector/_cfa-file-selector.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
             .result_with_hash({
               id: (formGroup['id'] if formGroup['id']),
               fileInput: formGroup['fileInput'],
@@ -230,7 +230,7 @@
           </div><% end %>
 
           <% if formGroup['fileInput'] %>
-          <%= ERB.new(File.read('packages/cfa-upload-documents/_cfa-upload-documents.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
+          <%= ERB.new(File.read('packages/cfa-file-selector/_cfa-file-selector.html.erb'), 0, 0, [*('a'..'z')].sample(8).join)
             .result_with_hash({
               id: (formGroup['id'] if formGroup['id']),
               fileInput: formGroup['fileInput'],
