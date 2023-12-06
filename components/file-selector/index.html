@@ -9,13 +9,13 @@
 
   <link rel="icon" type="image/svg+xml" href="https://codeforamerica.org/wp-content/themes/cfa-main/static/icon.svg">
 
-  <title>Upload documents | Code for America U.S. Web Design System theme</title>
-  <meta name="title" content="Upload documents | Code for America U.S. Web Design System theme" />
-  <meta name="description" content="I select or drop documents to the webpage when I need to add them to an online form." />
+  <title>File selector | Code for America U.S. Web Design System theme</title>
+  <meta name="title" content="File selector | Code for America U.S. Web Design System theme" />
+  <meta name="description" content="A file selector lets me pick or drop my documents when I need to add them to an online form." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Upload documents | Code for America U.S. Web Design System theme" />
-  <meta name="og:description" content="I select or drop documents to the webpage when I need to add them to an online form." />  <meta property="og:image" content="https://codeforamerica.github.io/uswds/assets/site/thumbnail-upload-documents.png" />
-  <meta property="og:image:alt" content="An illustration of the upload documents component.">
+  <meta property="og:title" content="File selector | Code for America U.S. Web Design System theme" />
+  <meta name="og:description" content="A file selector lets me pick or drop my documents when I need to add them to an online form." />  <meta property="og:image" content="https://codeforamerica.github.io/uswds/assets/site/thumbnail-file-selector.png" />
+  <meta property="og:image:alt" content="An illustration of the file selector component.">
 
   <link rel="stylesheet" href="https://codeforamerica.github.io/uswds/assets/site/site.css">
 
@@ -51,11 +51,11 @@
 
       <ul class="usa-nav__primary usa-accordion flex-align-center">
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-a2ba2715df098">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-feac79972b1c1">
             <span>Components</span>
           </button>
 
-          <ul id="aria-c-a2ba2715df098" class="usa-nav__submenu">
+          <ul id="aria-c-feac79972b1c1" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/" ><span>Components</span></a>
               </li>
@@ -76,6 +76,9 @@
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/fieldset/" ><span>Fieldset</span></a>
+              </li>
+                          <li class="usa-nav__submenu-item">
+                                <a href="https://codeforamerica.github.io/uswds/components/file-selector/" aria-current="page"><span>File selector</span></a>
               </li>
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/follow-up-question/" ><span>Follow-up question</span></a>
@@ -113,17 +116,14 @@
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/components/toolbar/" ><span>Toolbar</span></a>
               </li>
-                          <li class="usa-nav__submenu-item">
-                                <a href="https://codeforamerica.github.io/uswds/components/upload-documents/" aria-current="page"><span>Upload documents</span></a>
-              </li>
                       </ul>
         </li>
                         <li class="usa-nav__primary-item">
-          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-732e0d8408a29">
+          <button type="button" class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="aria-c-89e37718d7508">
             <span>How to use</span>
           </button>
 
-          <ul id="aria-c-732e0d8408a29" class="usa-nav__submenu">
+          <ul id="aria-c-89e37718d7508" class="usa-nav__submenu">
                           <li class="usa-nav__submenu-item">
                                 <a href="https://codeforamerica.github.io/uswds/how-to-use/" ><span>How to use</span></a>
               </li>
@@ -144,7 +144,7 @@
         </li>
 
         <li class="usa-nav__primary-item">
-          <a href="https://github.com/codeforamerica/uswds/releases/tag/v0.0.1-alpha.0" target="_blank" rel="noopener nofollow" class="usa-nav-link" title="Latest Release v0.0.1-alpha.0">
+          <a href="https://github.com/codeforamerica/uswds/releases/tag/v0.0.1-alpha.1" target="_blank" rel="noopener nofollow" class="usa-nav-link" title="Latest Release v0.0.1-alpha.1">
             <span class="usa-sr-only">Source (GitHub)</span>
 
             <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
@@ -197,6 +197,23 @@
 
                               </li>
                             <li class="usa-sidenav__item is-current">
+                                <a href="https://codeforamerica.github.io/uswds/components/file-selector/" class="usa-current" aria-current="page">File selector</a>
+
+                                <ul class="usa-sidenav__sublist">
+                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#guidance">Guidance</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
+
+                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
+                                  </ul>
+                              </li>
+                            <li class="usa-sidenav__item is-current">
                                 <a href="https://codeforamerica.github.io/uswds/components/follow-up-question/" >Follow-up question</a>
 
                               </li>
@@ -244,55 +261,38 @@
                                 <a href="https://codeforamerica.github.io/uswds/components/toolbar/" >Toolbar</a>
 
                               </li>
-                            <li class="usa-sidenav__item is-current">
-                                <a href="https://codeforamerica.github.io/uswds/components/upload-documents/" class="usa-current" aria-current="page">Upload documents</a>
-
-                                <ul class="usa-sidenav__sublist">
-                                    <li class="usa-sidenav__item"><a href="#details">Details</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#examples">Examples</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#guidance">Guidance</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#accessibility">Accessibility</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#design-library-component">Design library component</a></li>
-
-                  <li class="usa-sidenav__item"><a href="#source-and-usage">Source and usage</a></li>
-                                  </ul>
-                              </li>
                           </ul>
           </nav>
         </div>
 
         <main class="usa-layout-docs__main desktop:grid-col-9 usa-layout-docs" id="main-content">
           <div class="usa-prose">
-            <h1>Upload documents</h1>
+            <h1>File selector</h1>
 
             <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
-              I select or drop documents to the webpage when I need to add them to an online form.
+              A file selector lets me pick or drop my documents when I need to add them to an online form.
             </blockquote>
           </div>
 
           <!-- INTRO -->
-<p>The Upload documents component allows a user to select multiple files from their device, either by dragging and dropping them into the component or using the file picker modal dialog.</p>
+<p>The File selector component allows a user to select multiple files from their device, either by dragging and dropping them into the component or using the file input modal dialog.</p>
 <!-- DETAILS -->
 <h2 id="details">Details</h2>
 <ul class="usa-content-list">
   <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/file-input" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS File input</a></li>
-  <li><strong>Modifier:</strong> <code>.cfa-file-input</code>, <code>.cfa-form-group</code>, <code>.cfa-upload-documents</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-button</code>, <code>.cfa-upload-documents__*</code></li>
+  <li><strong>Modifier:</strong> <code>.cfa-file-input</code>, <code>.cfa-form-group</code>, <code>.cfa-file-selector</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-button</code>, <code>.cfa-file-selector__*</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-0c018289797e1"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-0c018289797e1"><p>The <b>Upload documents</b> extends the <a href="https://designsystem.digital.gov/components/file-input" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS File input</a>.  Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-file-input</code>, <code>.cfa-form-group</code>, <code>.cfa-upload-documents</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-button</code>, <code>.cfa-upload-documents__*</code> to add <b>styles</b> defined in a custom stylesheet.</p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-2b2e27bafcf89"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-2b2e27bafcf89"><p>The <b>File selector</b> extends the <a href="https://designsystem.digital.gov/components/file-input" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS File input</a>.  Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-file-input</code>, <code>.cfa-form-group</code>, <code>.cfa-file-selector</code>, <code>.cfa-label</code>, <code>.cfa-hint</code>, <code>.cfa-button</code>, <code>.cfa-file-selector__*</code> to add <b>styles</b> defined in a custom stylesheet.</p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
 </div>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
-  <figcaption class="margin-bottom-2">Upload documents</figcaption>
-  <div class="usa-form-group cfa-form-group cfa-upload-documents" data-js="upload-documents" id="dropzone-cd01dae056343">
+  <figcaption class="margin-bottom-2">File selector</figcaption>
+  <div class="usa-form-group cfa-form-group cfa-file-selector" data-js="file-selector" id="dropzone-388e87f0c36ea">
   <div data-dropzone="uploads">
-    <label class="usa-label cfa-label" for="input-cd01dae056343">
+    <label class="usa-label cfa-label" for="input-388e87f0c36ea">
       <span>Add your files or photos</span>
       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
     </label>
@@ -301,7 +301,7 @@
       <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">
         <div class="usa-file-input__box"></div>
         <div class="usa-file-input__instructions">
-          <div class="usa-hint cfa-hint" aria-hidden="true" id="hint-cd01dae056343">
+          <div class="usa-hint cfa-hint" aria-hidden="true" id="hint-388e87f0c36ea">
             <span class="usa-file-input__choose">Select or drop files here</span>. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to <b>20 MB</b>, and a maximum of <b>20 files</b> are allowed.
           </div>
           <div class="dz-message" data-dropzone="upload-button">
@@ -312,7 +312,7 @@
             </button>
           </div>
         </div>
-        <input class="usa-file-input__input" type="file" data-dropzone="fallback" id="input-cd01dae056343" name="input['cd01dae056343']" aria-describedby="hint-cd01dae056343" accept=".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp" multiple="multiple">
+        <input class="usa-file-input__input" type="file" data-dropzone="fallback" id="input-388e87f0c36ea" name="input['388e87f0c36ea']" aria-describedby="hint-388e87f0c36ea" accept=".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp" multiple="multiple">
         <div data-dropzone="hidden-input-container"></div>
       </div>
     </div>
@@ -320,35 +320,35 @@
   <!--/* @hidden       "true"  Visually hides element */-->
   <!--/* @aria-hidden  "true"  Hides element from the accessibility API */-->
   <div data-dropzone="preview" hidden="true" aria-hidden="true">
-    <h3 class="cfa-upload-documents__preview-header" data-dropzone="preview-header" id="aria-db-e402bf0b81ef2"> Your documents. <span data-dropzone="preview-number">0</span>
+    <h3 class="cfa-file-selector__preview-header" data-dropzone="preview-header" id="aria-db-7cfeccb299362"> Your documents. <span data-dropzone="preview-number">0</span>
       <span data-dropzone="preview-text">uploaded</span>
       <span>(<span>20 max</span>)</span>
     </h3>
-    <ul class="add-list-reset" role="list" data-dropzone="preview-container" aria-describedby="aria-db-e402bf0b81ef2">
+    <ul class="add-list-reset" role="list" data-dropzone="preview-container" aria-describedby="aria-db-7cfeccb299362">
       <!--/* Use previewTemplate to add a custom preview template  */-->
       <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
       <!--/* Dropzone will modify or replace the contents of this element */-->
       <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone */-->
-      <li class="cfa-upload-documents__preview dz-image-preview" data-dropzone="preview-template">
-        <div class="cfa-upload-documents__details">
-          <div class="cfa-upload-documents__thumbnail" data-dropzone="thumbnail">
-            <div class="cfa-upload-documents__progress">
-              <span class="cfa-upload-documents__progress-bar" data-dz-uploadprogress="keep"></span>
+      <li class="cfa-file-selector__preview dz-image-preview" data-dropzone="preview-template">
+        <div class="cfa-file-selector__details">
+          <div class="cfa-file-selector__thumbnail" data-dropzone="thumbnail">
+            <div class="cfa-file-selector__progress">
+              <span class="cfa-file-selector__progress-bar" data-dz-uploadprogress="keep"></span>
             </div>
-            <svg class="usa-icon cfa-upload-documents__icon-error" aria-hidden="true" focusable="false" role="img">
+            <svg class="usa-icon cfa-file-selector__icon-error" aria-hidden="true" focusable="false" role="img">
               <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#warning"></use>
             </svg>
-            <svg class="usa-icon cfa-upload-documents__icon-default" aria-hidden="true" focusable="false" role="img">
+            <svg class="usa-icon cfa-file-selector__icon-default" aria-hidden="true" focusable="false" role="img">
               <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#file_present"></use>
             </svg>
-            <img class="cfa-upload-documents__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext">
+            <img class="cfa-file-selector__img" data-dropzone="img" data-dz-thumbnail="keep" aria-hidden="true" alt="preview-template__filename--testing-truncated-text.ext">
           </div>
-          <div class="cfa-upload-documents__file">
-            <div class="cfa-upload-documents__filename" data-dz-name="keep">
-              <span class="cfa-upload-documents__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
-              <span class="cfa-upload-documents__filename-ext" aria-hidden="true">.ext</span>
+          <div class="cfa-file-selector__file">
+            <div class="cfa-file-selector__filename" data-dz-name="keep">
+              <span class="cfa-file-selector__filename-name" aria-hidden="true">preview-template__filename--testing-truncated-text</span>
+              <span class="cfa-file-selector__filename-ext" aria-hidden="true">.ext</span>
             </div>
-            <span class="cfa-upload-documents__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep"> Message </span>
+            <span class="cfa-file-selector__error-message usa-error-message" aria-live="polite" aria-atomic="true" data-dz-errormessage="keep"> Message </span>
             <div>
               <span class="font-body-2xs" title="File size">
                 <span class="usa-sr-only">File size, </span>
@@ -364,17 +364,17 @@
                   <!--/* @data-dropzone  "remove"  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. */-->
                   <span data-dropzone="remove">
                     <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview">base</button>
+                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview">base</button>
                     <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing">processing</button>
+                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing">processing</button>
                     <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-complete">complete</button>
+                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-complete">complete</button>
                     <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
+                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete">success</button>
                     <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default">default</button>
+                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default">default</button>
                     <span class="text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block" aria-hidden="true">|</span>
-                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
+                    <button type="button" class="usa-button cfa-button usa-button--unstyled font-body-2xs" aria-hidden="true" focusable="false" data-dropzone="toggle-preview-state" data-dropzone-preview-state="cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete">error</button>
                   </span>
                 </span>
               </span>
@@ -399,22 +399,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-39120695ba6d2">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-325b519117e4d">
           View HTML
         </button>
       </div>
-      <div id="aria-c-39120695ba6d2" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-325b519117e4d" class="usa-accordion__content overflow-visible padding-0">
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-b88210cb258fa" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6ea1664009b87" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-b88210cb258fa">&lt;div class=&quot;usa-form-group cfa-form-group cfa-upload-documents&quot; data-js=&quot;upload-documents&quot; id=&quot;dropzone-cd01dae056343&quot;&gt;
+        <textarea hidden data-copy-target="block-6ea1664009b87">&lt;div class=&quot;usa-form-group cfa-form-group cfa-file-selector&quot; data-js=&quot;file-selector&quot; id=&quot;dropzone-388e87f0c36ea&quot;&gt;
   &lt;div data-dropzone=&quot;uploads&quot;&gt;
-    &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-cd01dae056343&quot;&gt;
+    &lt;label class=&quot;usa-label cfa-label&quot; for=&quot;input-388e87f0c36ea&quot;&gt;
       &lt;span&gt;Add your files or photos&lt;/span&gt;
       &lt;abbr title=&quot;required&quot; class=&quot;usa-hint usa-hint--required cfa-hint&quot;&gt;*&lt;/abbr&gt;
     &lt;/label&gt;
@@ -423,7 +423,7 @@
       &lt;div class=&quot;usa-file-input__target margin-bottom-3&quot; data-dropzone=&quot;drag-and-drop-region&quot;&gt;
         &lt;div class=&quot;usa-file-input__box&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;usa-file-input__instructions&quot;&gt;
-          &lt;div class=&quot;usa-hint cfa-hint&quot; aria-hidden=&quot;true&quot; id=&quot;hint-cd01dae056343&quot;&gt;
+          &lt;div class=&quot;usa-hint cfa-hint&quot; aria-hidden=&quot;true&quot; id=&quot;hint-388e87f0c36ea&quot;&gt;
             &lt;span class=&quot;usa-file-input__choose&quot;&gt;Select or drop files here&lt;/span&gt;. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to &lt;b&gt;20 MB&lt;/b&gt;, and a maximum of &lt;b&gt;20 files&lt;/b&gt; are allowed.
           &lt;/div&gt;
           &lt;div class=&quot;dz-message&quot; data-dropzone=&quot;upload-button&quot;&gt;
@@ -434,7 +434,7 @@
             &lt;/button&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;input class=&quot;usa-file-input__input&quot; type=&quot;file&quot; data-dropzone=&quot;fallback&quot; id=&quot;input-cd01dae056343&quot; name=&quot;input['cd01dae056343']&quot; aria-describedby=&quot;hint-cd01dae056343&quot; accept=&quot;.jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp&quot; multiple=&quot;multiple&quot;&gt;
+        &lt;input class=&quot;usa-file-input__input&quot; type=&quot;file&quot; data-dropzone=&quot;fallback&quot; id=&quot;input-388e87f0c36ea&quot; name=&quot;input['388e87f0c36ea']&quot; aria-describedby=&quot;hint-388e87f0c36ea&quot; accept=&quot;.jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp&quot; multiple=&quot;multiple&quot;&gt;
         &lt;div data-dropzone=&quot;hidden-input-container&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -442,35 +442,35 @@
   &lt;!--/* @hidden       &quot;true&quot;  Visually hides element */--&gt;
   &lt;!--/* @aria-hidden  &quot;true&quot;  Hides element from the accessibility API */--&gt;
   &lt;div data-dropzone=&quot;preview&quot; hidden=&quot;true&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;h3 class=&quot;cfa-upload-documents__preview-header&quot; data-dropzone=&quot;preview-header&quot; id=&quot;aria-db-e402bf0b81ef2&quot;&gt; Your documents. &lt;span data-dropzone=&quot;preview-number&quot;&gt;0&lt;/span&gt;
+    &lt;h3 class=&quot;cfa-file-selector__preview-header&quot; data-dropzone=&quot;preview-header&quot; id=&quot;aria-db-7cfeccb299362&quot;&gt; Your documents. &lt;span data-dropzone=&quot;preview-number&quot;&gt;0&lt;/span&gt;
       &lt;span data-dropzone=&quot;preview-text&quot;&gt;uploaded&lt;/span&gt;
       &lt;span&gt;(&lt;span&gt;20 max&lt;/span&gt;)&lt;/span&gt;
     &lt;/h3&gt;
-    &lt;ul class=&quot;add-list-reset&quot; role=&quot;list&quot; data-dropzone=&quot;preview-container&quot; aria-describedby=&quot;aria-db-e402bf0b81ef2&quot;&gt;
+    &lt;ul class=&quot;add-list-reset&quot; role=&quot;list&quot; data-dropzone=&quot;preview-container&quot; aria-describedby=&quot;aria-db-7cfeccb299362&quot;&gt;
       &lt;!--/* Use previewTemplate to add a custom preview template  */--&gt;
       &lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;
       &lt;!--/* Dropzone will modify or replace the contents of this element */--&gt;
       &lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;
-      &lt;li class=&quot;cfa-upload-documents__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot;&gt;
-        &lt;div class=&quot;cfa-upload-documents__details&quot;&gt;
-          &lt;div class=&quot;cfa-upload-documents__thumbnail&quot; data-dropzone=&quot;thumbnail&quot;&gt;
-            &lt;div class=&quot;cfa-upload-documents__progress&quot;&gt;
-              &lt;span class=&quot;cfa-upload-documents__progress-bar&quot; data-dz-uploadprogress=&quot;keep&quot;&gt;&lt;/span&gt;
+      &lt;li class=&quot;cfa-file-selector__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot;&gt;
+        &lt;div class=&quot;cfa-file-selector__details&quot;&gt;
+          &lt;div class=&quot;cfa-file-selector__thumbnail&quot; data-dropzone=&quot;thumbnail&quot;&gt;
+            &lt;div class=&quot;cfa-file-selector__progress&quot;&gt;
+              &lt;span class=&quot;cfa-file-selector__progress-bar&quot; data-dz-uploadprogress=&quot;keep&quot;&gt;&lt;/span&gt;
             &lt;/div&gt;
-            &lt;svg class=&quot;usa-icon cfa-upload-documents__icon-error&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;svg class=&quot;usa-icon cfa-file-selector__icon-error&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
               &lt;use href=&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#warning&quot;&gt;&lt;/use&gt;
             &lt;/svg&gt;
-            &lt;svg class=&quot;usa-icon cfa-upload-documents__icon-default&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;svg class=&quot;usa-icon cfa-file-selector__icon-default&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
               &lt;use href=&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#file_present&quot;&gt;&lt;/use&gt;
             &lt;/svg&gt;
-            &lt;img class=&quot;cfa-upload-documents__img&quot; data-dropzone=&quot;img&quot; data-dz-thumbnail=&quot;keep&quot; aria-hidden=&quot;true&quot; alt=&quot;preview-template__filename--testing-truncated-text.ext&quot;&gt;
+            &lt;img class=&quot;cfa-file-selector__img&quot; data-dropzone=&quot;img&quot; data-dz-thumbnail=&quot;keep&quot; aria-hidden=&quot;true&quot; alt=&quot;preview-template__filename--testing-truncated-text.ext&quot;&gt;
           &lt;/div&gt;
-          &lt;div class=&quot;cfa-upload-documents__file&quot;&gt;
-            &lt;div class=&quot;cfa-upload-documents__filename&quot; data-dz-name=&quot;keep&quot;&gt;
-              &lt;span class=&quot;cfa-upload-documents__filename-name&quot; aria-hidden=&quot;true&quot;&gt;preview-template__filename--testing-truncated-text&lt;/span&gt;
-              &lt;span class=&quot;cfa-upload-documents__filename-ext&quot; aria-hidden=&quot;true&quot;&gt;.ext&lt;/span&gt;
+          &lt;div class=&quot;cfa-file-selector__file&quot;&gt;
+            &lt;div class=&quot;cfa-file-selector__filename&quot; data-dz-name=&quot;keep&quot;&gt;
+              &lt;span class=&quot;cfa-file-selector__filename-name&quot; aria-hidden=&quot;true&quot;&gt;preview-template__filename--testing-truncated-text&lt;/span&gt;
+              &lt;span class=&quot;cfa-file-selector__filename-ext&quot; aria-hidden=&quot;true&quot;&gt;.ext&lt;/span&gt;
             &lt;/div&gt;
-            &lt;span class=&quot;cfa-upload-documents__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt; Message &lt;/span&gt;
+            &lt;span class=&quot;cfa-file-selector__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt; Message &lt;/span&gt;
             &lt;div&gt;
               &lt;span class=&quot;font-body-2xs&quot; title=&quot;File size&quot;&gt;
                 &lt;span class=&quot;usa-sr-only&quot;&gt;File size, &lt;/span&gt;
@@ -486,17 +486,17 @@
                   &lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. */--&gt;
                   &lt;span data-dropzone=&quot;remove&quot;&gt;
                     &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview&quot;&gt;base&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview&quot;&gt;base&lt;/button&gt;
                     &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing&quot;&gt;processing&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing&quot;&gt;processing&lt;/button&gt;
                     &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-complete&quot;&gt;complete&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-complete&quot;&gt;complete&lt;/button&gt;
                     &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete&quot;&gt;success&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete&quot;&gt;success&lt;/button&gt;
                     &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;&gt;default&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;&gt;default&lt;/button&gt;
                     &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete&quot;&gt;error&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete&quot;&gt;error&lt;/button&gt;
                   &lt;/span&gt;
                 &lt;/span&gt;
               &lt;/span&gt;
@@ -519,9 +519,9 @@
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group cfa-upload-documents&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;upload-documents&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dropzone-cd01dae056343&quot;</span>&gt;</span>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group cfa-file-selector&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;file-selector&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dropzone-388e87f0c36ea&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;uploads&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-cd01dae056343&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label cfa-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;input-388e87f0c36ea&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Add your files or photos<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;required&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint usa-hint--required cfa-hint&quot;</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -530,7 +530,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-file-input__target margin-bottom-3&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;drag-and-drop-region&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-file-input__box&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-file-input__instructions&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-cd01dae056343&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-hint cfa-hint&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hint-388e87f0c36ea&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-file-input__choose&quot;</span>&gt;</span>Select or drop files here<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>. Accepted file types include .jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, or .odp files. Each file is limited to <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>20 MB<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>, and a maximum of <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>20 files<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> are allowed.
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dz-message&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;upload-button&quot;</span>&gt;</span>
@@ -541,7 +541,7 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-file-input__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;fallback&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-cd01dae056343&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;cd01dae056343&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-cd01dae056343&quot;</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">&quot;.jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp&quot;</span> <span class="hljs-attr">multiple</span>=<span class="hljs-string">&quot;multiple&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-file-input__input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;fallback&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input-388e87f0c36ea&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;input[&#x27;388e87f0c36ea&#x27;]&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;hint-388e87f0c36ea&quot;</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">&quot;.jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp&quot;</span> <span class="hljs-attr">multiple</span>=<span class="hljs-string">&quot;multiple&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;hidden-input-container&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -549,35 +549,35 @@
   <span class="hljs-comment">&lt;!--/* @hidden       &quot;true&quot;  Visually hides element */--&gt;</span>
   <span class="hljs-comment">&lt;!--/* @aria-hidden  &quot;true&quot;  Hides element from the accessibility API */--&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview&quot;</span> <span class="hljs-attr">hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview-header&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-header&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-db-e402bf0b81ef2&quot;</span>&gt;</span> Your documents. <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-number&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview-header&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-header&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;aria-db-7cfeccb299362&quot;</span>&gt;</span> Your documents. <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-number&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-text&quot;</span>&gt;</span>uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>20 max<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;add-list-reset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-container&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;aria-db-e402bf0b81ef2&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;add-list-reset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-container&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;aria-db-7cfeccb299362&quot;</span>&gt;</span>
       <span class="hljs-comment">&lt;!--/* Use previewTemplate to add a custom preview template  */--&gt;</span>
       <span class="hljs-comment">&lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;</span>
       <span class="hljs-comment">&lt;!--/* Dropzone will modify or replace the contents of this element */--&gt;</span>
       <span class="hljs-comment">&lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__details&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__thumbnail&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;thumbnail&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__progress&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__progress-bar&quot;</span> <span class="hljs-attr">data-dz-uploadprogress</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__details&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__thumbnail&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;thumbnail&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__progress&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__progress-bar&quot;</span> <span class="hljs-attr">data-dz-uploadprogress</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-upload-documents__icon-error&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-file-selector__icon-error&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#warning&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-upload-documents__icon-default&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-file-selector__icon-default&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#file_present&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__img&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">data-dz-thumbnail</span>=<span class="hljs-string">&quot;keep&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;preview-template__filename--testing-truncated-text.ext&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__img&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">data-dz-thumbnail</span>=<span class="hljs-string">&quot;keep&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;preview-template__filename--testing-truncated-text.ext&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__file&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename&quot;</span> <span class="hljs-attr">data-dz-name</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename-name&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>preview-template__filename--testing-truncated-text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename-ext&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>.ext<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__file&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename&quot;</span> <span class="hljs-attr">data-dz-name</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename-name&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>preview-template__filename--testing-truncated-text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename-ext&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>.ext<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__error-message usa-error-message&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">aria-atomic</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">data-dz-errormessage</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span> Message <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__error-message usa-error-message&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">aria-atomic</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">data-dz-errormessage</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span> Message <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;font-body-2xs&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;File size&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-sr-only&quot;</span>&gt;</span>File size, <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -593,17 +593,17 @@
                   <span class="hljs-comment">&lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. */--&gt;</span>
                   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span>&gt;</span>base<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span>&gt;</span>base<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing&quot;</span>&gt;</span>processing<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing&quot;</span>&gt;</span>processing<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-complete&quot;</span>&gt;</span>complete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-complete&quot;</span>&gt;</span>complete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete&quot;</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete&quot;</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete&quot;</span>&gt;</span>error<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete&quot;</span>&gt;</span>error<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -646,7 +646,7 @@
     <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#radio_button_unchecked"></use>
   </svg>
 </div>
-<div class="usa-icon-list__content">Customization to the visual appearance of the Upload documents has been verified for <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA contrast minimum success</a>.</div>
+<div class="usa-icon-list__content">Customization to the visual appearance of the File selector has been verified for <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA contrast minimum success</a>.</div>
   </li>
   <li class="usa-icon-list__item">
 <div class="usa-icon-list__icon text-base">
@@ -655,7 +655,7 @@
     <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#radio_button_unchecked"></use>
   </svg>
 </div>
-<div class="usa-icon-list__content">The Upload documents examples pass manual audits (WCAG 2.1 AA using <a href="https://www.deque.com/axe/browser-extensions/" target="_blank" rel="noopener nofollow" class="usa-link--external">axe</a> or <a href="https://developer.chrome.com/docs/lighthouse/accessibility/" target="_blank" rel="noopener nofollow" class="usa-link--external">Lighthouse</a>).</div>
+<div class="usa-icon-list__content">The File selector examples pass manual audits (WCAG 2.1 AA using <a href="https://www.deque.com/axe/browser-extensions/" target="_blank" rel="noopener nofollow" class="usa-link--external">axe</a> or <a href="https://developer.chrome.com/docs/lighthouse/accessibility/" target="_blank" rel="noopener nofollow" class="usa-link--external">Lighthouse</a>).</div>
   </li>
   <li class="usa-icon-list__item">
 <div class="usa-icon-list__icon text-base">
@@ -665,7 +665,7 @@
   </svg>
 </div>
 <div class="usa-icon-list__content">
-      The Upload documents achieves <a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA resizing success</a>.
+      The File selector achieves <a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank" rel="noopener nofollow" class="usa-link--external">WCAG 2.1 AA resizing success</a>.
       <div><em class="font-body-3xs">Resizing text up to 200% without loss of content or functionality.</em></div>
     </div>
   </li>
@@ -677,7 +677,7 @@
   </svg>
 </div>
 <div class="usa-icon-list__content">
-      The Upload documents passes keyboard interaction tests.
+      The File selector passes keyboard interaction tests.
       <div><em class="font-body-3xs">No keyboard test has been created.</em></div>
     </div>
   </li>
@@ -689,7 +689,7 @@
   </svg>
 </div>
 <div class="usa-icon-list__content">
-      The Upload documents passes screen reader interaction tests.
+      The File selector passes screen reader interaction tests.
 <p></div></p>
   </li>
   <li class="usa-icon-list__item">
@@ -699,7 +699,7 @@
     <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#radio_button_unchecked"></use>
   </svg>
 </div>
-<div class="usa-icon-list__content">Guidance on ensuring Upload documents accessibility has been provided in this documentation.</div>
+<div class="usa-icon-list__content">Guidance on ensuring File selector accessibility has been provided in this documentation.</div>
   </li>
 </ul>
 <p>Refer to <a href="https://designsystem.digital.gov/components/file-input#accessibility" target="_blank" rel="noopener nofollow" class="usa-link--external">additional accessibility guidance on the USWDS documentation site</a>.</p>
@@ -729,18 +729,18 @@
 <h2 id="source-and-usage">Source and usage</h2>
 <p class="usa-icon-list__item">
   <span class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#folder_open"></use></svg></span>
-  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-upload-documents" target="_blank" class="usa-link--external code">@codeforamerica/uswds/packages/cfa-upload-documents</a></span>
+  <span class="usa-icon-list__content"><strong>Package:</strong> <a href="https://github.com/codeforamerica/uswds/tree/main/packages/cfa-file-selector" target="_blank" class="usa-link--external code">@codeforamerica/uswds/packages/cfa-file-selector</a></span>
 </p>
 <ul class="usa-content-list">
-  <li><strong>Sass stylesheet:</strong> <code>./_cfa-upload-documents.scss</code></li>
-  <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-upload-documents.th.html</code></li>
-  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-upload-documents.html.erb</code></li>
-  <li><strong>JavaScript</strong> enables the drag-and-drop interaction, uploaded file preview and management, and validation messaging. The module extends the open source library <a href="https://github.com/dropzone/dropzone" target="_blank" rel="noopener nofollow" class="usa-link--external">Dropzone</a> to provide interaction and customization options. The module can be found at <code>./cfa-upload-documents.js</code>. Guidance on individual module loading will added. Currently, there is one script that imports all modules. The source is located at
+  <li><strong>Sass stylesheet:</strong> <code>./_cfa-file-selector.scss</code></li>
+  <li><strong>Thymeleaf template fragment:</strong> <code>./cfa-file-selector.th.html</code></li>
+  <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-file-selector.html.erb</code></li>
+  <li><strong>JavaScript</strong> enables the drag-and-drop interaction, uploaded file preview and management, and validation messaging. The module extends the open source library <a href="https://github.com/dropzone/dropzone" target="_blank" rel="noopener nofollow" class="usa-link--external">Dropzone</a> to provide interaction and customization options. The module can be found at <code>./cfa-file-selector.js</code>. Guidance on individual module loading will added. Currently, there is one script that imports all modules. The source is located at
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-62388bc751baf"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-62388bc751baf">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-3dd6b6c2595ee"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-3dd6b6c2595ee">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -751,13 +751,13 @@
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-24536ffdd3336" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-db131110c9d04" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-24536ffdd3336">
+        <textarea hidden data-copy-target="block-db131110c9d04">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -813,13 +813,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-91fdefaf2c515" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-caae9058d689b" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-91fdefaf2c515">&lt;div th:fragment=&quot;uploadDocuments(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)&quot; class=&quot;usa-form-group cfa-form-group cfa-upload-documents&quot; th:attr=&quot;id=${id}&quot; data-js=&quot;upload-documents&quot;&gt;
+        <textarea hidden data-copy-target="block-caae9058d689b">&lt;div th:fragment=&quot;fileSelector(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)&quot; class=&quot;usa-form-group cfa-form-group cfa-file-selector&quot; th:attr=&quot;id=${id}&quot; data-js=&quot;file-selector&quot;&gt;
   &lt;div data-dropzone=&quot;uploads&quot;&gt;
     &lt;label class=&quot;usa-label&quot; th:if=&quot;${fileInput.label}&quot; th:classappend=&quot;${fileInput.label.modifier}&quot; th:attr=&quot;for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}&quot;&gt;
       &lt;span th:text=&quot;${fileInput.label.text}&quot;&gt;Label&lt;/span&gt;
@@ -847,35 +847,35 @@
   &lt;!--/* @hidden       &quot;true&quot;  Visually hides element */--&gt;
   &lt;!--/* @aria-hidden  &quot;true&quot;  Hides element from the accessibility API */--&gt;
   &lt;div data-dropzone=&quot;preview&quot; hidden=&quot;true&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;h3 class=&quot;cfa-upload-documents__preview-header&quot; data-dropzone=&quot;preview-header&quot; th:attr=&quot;id=${previewHeader.id}&quot;&gt;
+    &lt;h3 class=&quot;cfa-file-selector__preview-header&quot; data-dropzone=&quot;preview-header&quot; th:attr=&quot;id=${previewHeader.id}&quot;&gt;
       Your documents. &lt;span data-dropzone=&quot;preview-number&quot;&gt;0&lt;/span&gt; &lt;span data-dropzone=&quot;preview-text&quot;&gt;uploaded&lt;/span&gt; &lt;span&gt;(&lt;span&gt;20 max&lt;/span&gt;)&lt;/span&gt;
     &lt;/h3&gt;
     &lt;ul class=&quot;add-list-reset&quot; role=&quot;list&quot; data-dropzone=&quot;preview-container&quot; th:attr=&quot;aria-describedby=${previewHeader.id}&quot;&gt;
       &lt;!--/* Use previewTemplate to add a custom preview template  */--&gt;
       &lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;
-      &lt;li th:if=&quot;${previewTemplate}&quot; th:utext=&quot;${previewTemplate}&quot; class=&quot;cfa-upload-documents__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;&lt;/li&gt;
+      &lt;li th:if=&quot;${previewTemplate}&quot; th:utext=&quot;${previewTemplate}&quot; class=&quot;cfa-file-selector__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;&lt;/li&gt;
       &lt;!--/* Dropzone will modify or replace the contents of this element */--&gt;
       &lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;
-      &lt;li th:if=&quot;${defaultPreviewTemplate}&quot; class=&quot;cfa-upload-documents__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;
-        &lt;div class=&quot;cfa-upload-documents__details&quot;&gt;
-          &lt;div class=&quot;cfa-upload-documents__thumbnail&quot; data-dropzone=&quot;thumbnail&quot;&gt;
-            &lt;div class=&quot;cfa-upload-documents__progress&quot;&gt;
-              &lt;span class=&quot;cfa-upload-documents__progress-bar&quot; data-dz-uploadprogress=&quot;keep&quot;&gt;&lt;/span&gt;
+      &lt;li th:if=&quot;${defaultPreviewTemplate}&quot; class=&quot;cfa-file-selector__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;
+        &lt;div class=&quot;cfa-file-selector__details&quot;&gt;
+          &lt;div class=&quot;cfa-file-selector__thumbnail&quot; data-dropzone=&quot;thumbnail&quot;&gt;
+            &lt;div class=&quot;cfa-file-selector__progress&quot;&gt;
+              &lt;span class=&quot;cfa-file-selector__progress-bar&quot; data-dz-uploadprogress=&quot;keep&quot;&gt;&lt;/span&gt;
             &lt;/div&gt;
-            &lt;svg class=&quot;usa-icon cfa-upload-documents__icon-error&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;svg class=&quot;usa-icon cfa-file-selector__icon-error&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
               &lt;use th:href=&quot;${defaultPreviewTemplate.error.icon}&quot;&gt;&lt;/use&gt;
             &lt;/svg&gt;
-            &lt;svg class=&quot;usa-icon cfa-upload-documents__icon-default&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;svg class=&quot;usa-icon cfa-file-selector__icon-default&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
               &lt;use th:href=&quot;${defaultPreviewTemplate.thumbnail.default}&quot;&gt;&lt;/use&gt;
             &lt;/svg&gt;
-            &lt;img class=&quot;cfa-upload-documents__img&quot; data-dropzone=&quot;img&quot; data-dz-thumbnail=&quot;keep&quot; aria-hidden=&quot;true&quot; alt=&quot;preview-template__filename--testing-truncated-text.ext&quot; /&gt;
+            &lt;img class=&quot;cfa-file-selector__img&quot; data-dropzone=&quot;img&quot; data-dz-thumbnail=&quot;keep&quot; aria-hidden=&quot;true&quot; alt=&quot;preview-template__filename--testing-truncated-text.ext&quot; /&gt;
           &lt;/div&gt;
-          &lt;div class=&quot;cfa-upload-documents__file&quot;&gt;
-            &lt;div class=&quot;cfa-upload-documents__filename&quot; data-dz-name=&quot;keep&quot;&gt;
-              &lt;span class=&quot;cfa-upload-documents__filename-name&quot; aria-hidden=&quot;true&quot;&gt;preview-template__filename--testing-truncated-text&lt;/span&gt;
-              &lt;span class=&quot;cfa-upload-documents__filename-ext&quot; aria-hidden=&quot;true&quot;&gt;.ext&lt;/span&gt;
+          &lt;div class=&quot;cfa-file-selector__file&quot;&gt;
+            &lt;div class=&quot;cfa-file-selector__filename&quot; data-dz-name=&quot;keep&quot;&gt;
+              &lt;span class=&quot;cfa-file-selector__filename-name&quot; aria-hidden=&quot;true&quot;&gt;preview-template__filename--testing-truncated-text&lt;/span&gt;
+              &lt;span class=&quot;cfa-file-selector__filename-ext&quot; aria-hidden=&quot;true&quot;&gt;.ext&lt;/span&gt;
             &lt;/div&gt;
-            &lt;span class=&quot;cfa-upload-documents__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt;
+            &lt;span class=&quot;cfa-file-selector__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt;
               Message
             &lt;/span&gt;
             &lt;div&gt;
@@ -890,17 +890,17 @@
               &lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. */--&gt;
               &lt;span data-dropzone=&quot;remove&quot;&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview&quot;&gt;base&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview&quot;&gt;base&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing&quot;&gt;processing&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing&quot;&gt;processing&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-complete&quot;&gt;complete&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-complete&quot;&gt;complete&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete&quot;&gt;success&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete&quot;&gt;success&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;&gt;default&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;&gt;default&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete&quot;&gt;error&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete&quot;&gt;error&lt;/button&gt;
               &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -917,7 +917,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:fragment</span>=<span class="hljs-string">&quot;uploadDocuments(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group cfa-upload-documents&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${id}&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;upload-documents&quot;</span>&gt;</span>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:fragment</span>=<span class="hljs-string">&quot;fileSelector(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group cfa-file-selector&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${id}&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;file-selector&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;uploads&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label&quot;</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${fileInput.label}&quot;</span> <span class="hljs-attr">th:classappend</span>=<span class="hljs-string">&quot;${fileInput.label.modifier}&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;${fileInput.label.text}&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -945,35 +945,35 @@
   <span class="hljs-comment">&lt;!--/* @hidden       &quot;true&quot;  Visually hides element */--&gt;</span>
   <span class="hljs-comment">&lt;!--/* @aria-hidden  &quot;true&quot;  Hides element from the accessibility API */--&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview&quot;</span> <span class="hljs-attr">hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview-header&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-header&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${previewHeader.id}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview-header&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-header&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;id=${previewHeader.id}&quot;</span>&gt;</span>
       Your documents. <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-number&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-text&quot;</span>&gt;</span>uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>20 max<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;add-list-reset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-container&quot;</span> <span class="hljs-attr">th:attr</span>=<span class="hljs-string">&quot;aria-describedby=${previewHeader.id}&quot;</span>&gt;</span>
       <span class="hljs-comment">&lt;!--/* Use previewTemplate to add a custom preview template  */--&gt;</span>
       <span class="hljs-comment">&lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${previewTemplate}&quot;</span> <span class="hljs-attr">th:utext</span>=<span class="hljs-string">&quot;${previewTemplate}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${previewTemplate}&quot;</span> <span class="hljs-attr">th:utext</span>=<span class="hljs-string">&quot;${previewTemplate}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-comment">&lt;!--/* Dropzone will modify or replace the contents of this element */--&gt;</span>
       <span class="hljs-comment">&lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone */--&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${defaultPreviewTemplate}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__details&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__thumbnail&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;thumbnail&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__progress&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__progress-bar&quot;</span> <span class="hljs-attr">data-dz-uploadprogress</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${defaultPreviewTemplate}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__details&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__thumbnail&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;thumbnail&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__progress&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__progress-bar&quot;</span> <span class="hljs-attr">data-dz-uploadprogress</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-upload-documents__icon-error&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-file-selector__icon-error&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;${defaultPreviewTemplate.error.icon}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-upload-documents__icon-default&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-file-selector__icon-default&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;${defaultPreviewTemplate.thumbnail.default}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__img&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">data-dz-thumbnail</span>=<span class="hljs-string">&quot;keep&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;preview-template__filename--testing-truncated-text.ext&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__img&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">data-dz-thumbnail</span>=<span class="hljs-string">&quot;keep&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;preview-template__filename--testing-truncated-text.ext&quot;</span> /&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__file&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename&quot;</span> <span class="hljs-attr">data-dz-name</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename-name&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>preview-template__filename--testing-truncated-text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename-ext&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>.ext<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__file&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename&quot;</span> <span class="hljs-attr">data-dz-name</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename-name&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>preview-template__filename--testing-truncated-text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename-ext&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>.ext<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__error-message usa-error-message&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">aria-atomic</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">data-dz-errormessage</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__error-message usa-error-message&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">aria-atomic</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">data-dz-errormessage</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
               Message
             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -988,17 +988,17 @@
               <span class="hljs-comment">&lt;!--/* @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. */--&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span>&gt;</span>base<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span>&gt;</span>base<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing&quot;</span>&gt;</span>processing<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing&quot;</span>&gt;</span>processing<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-complete&quot;</span>&gt;</span>complete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-complete&quot;</span>&gt;</span>complete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete&quot;</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete&quot;</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete&quot;</span>&gt;</span>error<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete&quot;</span>&gt;</span>error<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1023,15 +1023,15 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-ac867e3251492" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-34315e4b19afd" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-ac867e3251492">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-upload-documents/cfa-upload-documents.th :: uploadDocuments(${id}, ${fileInput}, ${previewHeader}, ${previewTemplate}, ${defaultPreviewTemplate}, ${dict})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-34315e4b19afd">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-file-selector/cfa-file-selector.th :: fileSelector(${id}, ${fileInput}, ${previewHeader}, ${previewTemplate}, ${defaultPreviewTemplate}, ${dict})}&quot; /&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-upload-documents/cfa-upload-documents.th :: uploadDocuments(${id}, ${fileInput}, ${previewHeader}, ${previewTemplate}, ${defaultPreviewTemplate}, ${dict})}&quot;</span> /&gt;</span></pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-file-selector/cfa-file-selector.th :: fileSelector(${id}, ${fileInput}, ${previewHeader}, ${previewTemplate}, ${defaultPreviewTemplate}, ${dict})}&quot;</span> /&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -1043,13 +1043,13 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-35818e11f4023" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-09585def8fd97" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-35818e11f4023">&lt;div class=&quot;usa-form-group cfa-form-group cfa-upload-documents&quot; data-js=&quot;upload-documents&quot;&lt;% if defined?(id) %&gt; id=&quot;&lt;%= id %&gt;&quot;&lt;% end %&gt;&gt;
+        <textarea hidden data-copy-target="block-09585def8fd97">&lt;div class=&quot;usa-form-group cfa-form-group cfa-file-selector&quot; data-js=&quot;file-selector&quot;&lt;% if defined?(id) %&gt; id=&quot;&lt;%= id %&gt;&quot;&lt;% end %&gt;&gt;
   &lt;div data-dropzone=&quot;uploads&quot;&gt;
     &lt;% if fileInput['label'] %&gt;&lt;label class=&quot;usa-label&lt;% if fileInput['label']['modifier'] %&gt; &lt;%= fileInput['label']['modifier'] %&gt;&lt;% end %&gt;&quot;&lt;% if fileInput['label']['for'] %&gt; for=&quot;&lt;%= fileInput['label']['for'] %&gt;&quot;&lt;% end %&gt;&lt;% if fileInput['label']['tabindex'] %&gt; tabindex=&quot;&lt;%= fileInput['label']['tabindex'] %&gt;&quot;&lt;% end %&gt;&gt;
       &lt;span&gt;&lt;%= fileInput['label']['text'] %&gt;&lt;/span&gt;
@@ -1089,40 +1089,40 @@
   &lt;%# @hidden       &quot;true&quot;  Visually hides element %&gt;
   &lt;%# @aria-hidden  &quot;true&quot;  Hides element from the accessibility API %&gt;
   &lt;div data-dropzone=&quot;preview&quot; hidden=&quot;true&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;h3 class=&quot;cfa-upload-documents__preview-header&quot; data-dropzone=&quot;preview-header&quot; id=&quot;&lt;%= previewHeader['id'] %&gt;&quot;&gt;
+    &lt;h3 class=&quot;cfa-file-selector__preview-header&quot; data-dropzone=&quot;preview-header&quot; id=&quot;&lt;%= previewHeader['id'] %&gt;&quot;&gt;
       Your documents. &lt;span data-dropzone=&quot;preview-number&quot;&gt;0&lt;/span&gt; &lt;span data-dropzone=&quot;preview-text&quot;&gt;uploaded&lt;/span&gt; &lt;span&gt;(&lt;span&gt;20 max&lt;/span&gt;)&lt;/span&gt;
     &lt;/h3&gt;
     &lt;ul class=&quot;add-list-reset&quot; role=&quot;list&quot; data-dropzone=&quot;preview-container&quot; aria-describedby=&quot;&lt;%= previewHeader['id'] %&gt;&quot;&gt;
       &lt;%# Use previewTemplate to add a custom preview template  %&gt;
       &lt;%# @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone %&gt;
       &lt;% if defined?(previewTemplate) %&gt;
-      &lt;li class=&quot;cfa-upload-documents__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;
+      &lt;li class=&quot;cfa-file-selector__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;
         &lt;%= previewTemplate %&gt;
       &lt;/li&gt;
       &lt;% end %&gt;
       &lt;%# Dropzone will modify or replace the contents of this element %&gt;
       &lt;%# @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone %&gt;
       &lt;% if defined?(defaultPreviewTemplate) %&gt;
-      &lt;li class=&quot;cfa-upload-documents__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;
-        &lt;div class=&quot;cfa-upload-documents__details&quot;&gt;
-          &lt;div class=&quot;cfa-upload-documents__thumbnail&quot; data-dropzone=&quot;thumbnail&quot;&gt;
-            &lt;div class=&quot;cfa-upload-documents__progress&quot;&gt;
-              &lt;span class=&quot;cfa-upload-documents__progress-bar&quot; data-dz-uploadprogress=&quot;keep&quot;&gt;&lt;/span&gt;
+      &lt;li class=&quot;cfa-file-selector__preview dz-image-preview&quot; data-dropzone=&quot;preview-template&quot; data-dropzone=&quot;remove&quot;&gt;
+        &lt;div class=&quot;cfa-file-selector__details&quot;&gt;
+          &lt;div class=&quot;cfa-file-selector__thumbnail&quot; data-dropzone=&quot;thumbnail&quot;&gt;
+            &lt;div class=&quot;cfa-file-selector__progress&quot;&gt;
+              &lt;span class=&quot;cfa-file-selector__progress-bar&quot; data-dz-uploadprogress=&quot;keep&quot;&gt;&lt;/span&gt;
             &lt;/div&gt;
-            &lt;svg class=&quot;usa-icon cfa-upload-documents__icon-error&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;svg class=&quot;usa-icon cfa-file-selector__icon-error&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
               &lt;use href=&quot;&lt;%= defaultPreviewTemplate['error']['icon'] %&gt;&quot;&gt;&lt;/use&gt;
             &lt;/svg&gt;
-            &lt;svg class=&quot;usa-icon cfa-upload-documents__icon-default&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
+            &lt;svg class=&quot;usa-icon cfa-file-selector__icon-default&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
               &lt;use href=&quot;&lt;%= defaultPreviewTemplate['thumbnail']['default'] %&gt;&quot;&gt;&lt;/use&gt;
             &lt;/svg&gt;
-            &lt;img class=&quot;cfa-upload-documents__img&quot; data-dropzone=&quot;img&quot; data-dz-thumbnail=&quot;keep&quot; aria-hidden=&quot;true&quot; alt=&quot;preview-template__filename--testing-truncated-text.ext&quot; /&gt;
+            &lt;img class=&quot;cfa-file-selector__img&quot; data-dropzone=&quot;img&quot; data-dz-thumbnail=&quot;keep&quot; aria-hidden=&quot;true&quot; alt=&quot;preview-template__filename--testing-truncated-text.ext&quot; /&gt;
           &lt;/div&gt;
-          &lt;div class=&quot;cfa-upload-documents__file&quot;&gt;
-            &lt;div class=&quot;cfa-upload-documents__filename&quot; data-dz-name=&quot;keep&quot;&gt;
-              &lt;span class=&quot;cfa-upload-documents__filename-name&quot; aria-hidden=&quot;true&quot;&gt;preview-template__filename--testing-truncated-text&lt;/span&gt;
-              &lt;span class=&quot;cfa-upload-documents__filename-ext&quot; aria-hidden=&quot;true&quot;&gt;.ext&lt;/span&gt;
+          &lt;div class=&quot;cfa-file-selector__file&quot;&gt;
+            &lt;div class=&quot;cfa-file-selector__filename&quot; data-dz-name=&quot;keep&quot;&gt;
+              &lt;span class=&quot;cfa-file-selector__filename-name&quot; aria-hidden=&quot;true&quot;&gt;preview-template__filename--testing-truncated-text&lt;/span&gt;
+              &lt;span class=&quot;cfa-file-selector__filename-ext&quot; aria-hidden=&quot;true&quot;&gt;.ext&lt;/span&gt;
             &lt;/div&gt;
-            &lt;span class=&quot;cfa-upload-documents__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt;
+            &lt;span class=&quot;cfa-file-selector__error-message usa-error-message&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; data-dz-errormessage=&quot;keep&quot;&gt;
               Message
             &lt;/span&gt;
             &lt;div&gt;
@@ -1137,17 +1137,17 @@
               &lt;%# @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. %&gt;
               &lt;span data-dropzone=&quot;remove&quot;&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview&quot;&gt;base&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview&quot;&gt;base&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing&quot;&gt;processing&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing&quot;&gt;processing&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-complete&quot;&gt;complete&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-complete&quot;&gt;complete&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete&quot;&gt;success&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete&quot;&gt;success&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;&gt;default&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;&gt;default&lt;/button&gt;
                 &lt;span class=&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot; aria-hidden=&quot;true&quot;&gt;|&lt;/span&gt;
-                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete&quot;&gt;error&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; data-dropzone=&quot;toggle-preview-state&quot; data-dropzone-preview-state=&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete&quot;&gt;error&lt;/button&gt;
               &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -1165,7 +1165,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group cfa-upload-documents&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;upload-documents&quot;</span>&lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(id) </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> id=&quot;&lt;%=</span><span class="language-ruby"> id </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;
+      <pre class="language-erb padding-top-0"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-form-group cfa-form-group cfa-file-selector&quot;</span> <span class="hljs-attr">data-js</span>=<span class="hljs-string">&quot;file-selector&quot;</span>&lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(id) </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> id=&quot;&lt;%=</span><span class="language-ruby"> id </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;uploads&quot;</span>&gt;</span>
     &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-label&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt; &lt;%=</span></span></span><span class="language-ruby"> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;modifier&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&lt;%</span></span></span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&lt;%</span></span><span class="language-ruby"> <span class="hljs-keyword">if</span> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;for&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag">%&gt;</span> for=&quot;&lt;%=</span><span class="language-ruby"> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;for&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;tabindex&#x27;</span>] </span><span class="language-xml">%&gt; tabindex=&quot;&lt;%=</span><span class="language-ruby"> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;tabindex&#x27;</span>] </span><span class="language-xml">%&gt;&quot;&lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;&gt;
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&lt;%=</span><span class="language-ruby"> fileInput[<span class="hljs-string">&#x27;label&#x27;</span>][<span class="hljs-string">&#x27;text&#x27;</span>] </span><span class="language-xml">%&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -1205,40 +1205,40 @@
   </span><span class="hljs-comment">&lt;%# @hidden       &quot;true&quot;  Visually hides element %&gt;</span><span class="language-xml">
   </span><span class="hljs-comment">&lt;%# @aria-hidden  &quot;true&quot;  Hides element from the accessibility API %&gt;</span><span class="language-xml">
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview&quot;</span> <span class="hljs-attr">hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview-header&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-header&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;&lt;%=</span></span></span><span class="language-ruby"> previewHeader[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview-header&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-header&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;&lt;%=</span></span></span><span class="language-ruby"> previewHeader[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span>
       Your documents. <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-number&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-text&quot;</span>&gt;</span>uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>20 max<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;add-list-reset&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-container&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&lt;%=</span></span></span><span class="language-ruby"> previewHeader[<span class="hljs-string">&#x27;id&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span>
       </span><span class="hljs-comment">&lt;%# Use previewTemplate to add a custom preview template  %&gt;</span><span class="language-xml">
       </span><span class="hljs-comment">&lt;%# @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone %&gt;</span><span class="language-xml">
       &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(previewTemplate) </span><span class="language-xml">%&gt;
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
         &lt;%=</span><span class="language-ruby"> previewTemplate </span><span class="language-xml">%&gt;
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">end</span> </span><span class="language-xml">%&gt;
       </span><span class="hljs-comment">&lt;%# Dropzone will modify or replace the contents of this element %&gt;</span><span class="language-xml">
       </span><span class="hljs-comment">&lt;%# @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone %&gt;</span><span class="language-xml">
       &lt;%</span><span class="language-ruby"> <span class="hljs-keyword">if</span> <span class="hljs-keyword">defined</span>?(defaultPreviewTemplate) </span><span class="language-xml">%&gt;
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__details&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__thumbnail&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;thumbnail&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__progress&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__progress-bar&quot;</span> <span class="hljs-attr">data-dz-uploadprogress</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;preview-template&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__details&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__thumbnail&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;thumbnail&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__progress&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__progress-bar&quot;</span> <span class="hljs-attr">data-dz-uploadprogress</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-upload-documents__icon-error&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-file-selector__icon-error&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&lt;%=</span></span></span><span class="language-ruby"> defaultPreviewTemplate[<span class="hljs-string">&#x27;error&#x27;</span>][<span class="hljs-string">&#x27;icon&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-upload-documents__icon-default&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-icon cfa-file-selector__icon-default&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&lt;%=</span></span></span><span class="language-ruby"> defaultPreviewTemplate[<span class="hljs-string">&#x27;thumbnail&#x27;</span>][<span class="hljs-string">&#x27;default&#x27;</span>] </span><span class="language-xml"><span class="hljs-tag"><span class="hljs-string">%&gt;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__img&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">data-dz-thumbnail</span>=<span class="hljs-string">&quot;keep&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;preview-template__filename--testing-truncated-text.ext&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__img&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">data-dz-thumbnail</span>=<span class="hljs-string">&quot;keep&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;preview-template__filename--testing-truncated-text.ext&quot;</span> /&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__file&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename&quot;</span> <span class="hljs-attr">data-dz-name</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename-name&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>preview-template__filename--testing-truncated-text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__filename-ext&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>.ext<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__file&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename&quot;</span> <span class="hljs-attr">data-dz-name</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename-name&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>preview-template__filename--testing-truncated-text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__filename-ext&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>.ext<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-upload-documents__error-message usa-error-message&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">aria-atomic</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">data-dz-errormessage</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cfa-file-selector__error-message usa-error-message&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">aria-atomic</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">data-dz-errormessage</span>=<span class="hljs-string">&quot;keep&quot;</span>&gt;</span>
               Message
             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -1253,17 +1253,17 @@
               </span><span class="hljs-comment">&lt;%# @data-dropzone  &quot;remove&quot;  removes contents before passing to Dropzone. These are used to test the various states for the thumbnail upload. %&gt;</span><span class="language-xml">
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview&quot;</span>&gt;</span>base<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview&quot;</span>&gt;</span>base<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing&quot;</span>&gt;</span>processing<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing&quot;</span>&gt;</span>processing<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-complete&quot;</span>&gt;</span>complete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-complete&quot;</span>&gt;</span>complete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete&quot;</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete&quot;</span>&gt;</span>success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-success dz-complete dz-default&quot;</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-base-lighter padding-inline-x-1 display-none mobile:display-inline-block&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-upload-documents__preview dz-image-preview dz-processing dz-error dz-complete&quot;</span>&gt;</span>error<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--unstyled font-body-2xs&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">data-dropzone</span>=<span class="hljs-string">&quot;toggle-preview-state&quot;</span> <span class="hljs-attr">data-dropzone-preview-state</span>=<span class="hljs-string">&quot;cfa-file-selector__preview dz-image-preview dz-processing dz-error dz-complete&quot;</span>&gt;</span>error<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1289,15 +1289,15 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-491303a0297e1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-8b95696df8e8f" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
-        <textarea hidden data-copy-target="block-491303a0297e1">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-upload-documents/_cfa-upload-documents.html.erb'), 0, 0, '@uploadDocuments').result_with_hash({id: id, previewTemplate: previewTemplate, fileInput: fileInput, defaultPreviewTemplate: defaultPreviewTemplate, dict: dict}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-8b95696df8e8f">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-file-selector/_cfa-file-selector.html.erb'), 0, 0, '@fileSelector').result_with_hash({id: id, previewTemplate: previewTemplate, fileInput: fileInput, defaultPreviewTemplate: defaultPreviewTemplate, dict: dict}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-upload-documents/_cfa-upload-documents.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@uploadDocuments&#x27;</span>).result_with_hash({<span class="hljs-symbol">id:</span> id, <span class="hljs-symbol">previewTemplate:</span> previewTemplate, <span class="hljs-symbol">fileInput:</span> fileInput, <span class="hljs-symbol">defaultPreviewTemplate:</span> defaultPreviewTemplate, <span class="hljs-symbol">dict:</span> dict}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-file-selector/_cfa-file-selector.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@fileSelector&#x27;</span>).result_with_hash({<span class="hljs-symbol">id:</span> id, <span class="hljs-symbol">previewTemplate:</span> previewTemplate, <span class="hljs-symbol">fileInput:</span> fileInput, <span class="hljs-symbol">defaultPreviewTemplate:</span> defaultPreviewTemplate, <span class="hljs-symbol">dict:</span> dict}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -1337,7 +1337,7 @@
         </li>
 
         <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.1-alpha.0</span></a>
+          <a href="https://github.com/codeforamerica/uswds" target="_blank" rel="noopener nofollow" class="usa-footer__primary-link usa-link--external"><span>v0.0.1-alpha.1</span></a>
         </li>
       </ul>
     </nav>
