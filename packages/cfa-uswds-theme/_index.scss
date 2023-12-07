@@ -2,6 +2,8 @@
  * Code for America USWDS theme settings
  */
 
+@use 'tokens';
+
 // Settings
 // $cfa-show-compile-warnings: false !default;
 $cfa-show-compile-warnings: true !default;
@@ -29,100 +31,180 @@ $cfa-site-alert-max-width: 'desktop-lg' !default;
 
 // Color
 // - Base
-$cfa-color-base-family: 'gray-warm' !default;
-$cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background, outline button background hover, checkbox/radio background hover, follow-up question container background, footer primary section background, background color of the input, background color of the textarea
-$cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover, disabled button state, footer secondary section background, color of the input inset border, color of the textarea inset border
-$cfa-color-base-light: 'gray-warm-30' !default;
-$cfa-color-base: 'gray-warm-50' !default;
-$cfa-color-base-dark: 'gray-warm-60' !default;
-$cfa-color-base-darker: 'gray-warm-70' !default; // Affects follow up question container border
-$cfa-color-base-darkest: 'gray-warm-90' !default;
-$cfa-color-base-ink: 'gray-warm-90' !default; // Affects outline button, text and border color of the input, text and border color of the select, text and border color of the textarea
+// $cfa-color-base-family: 'gray-warm' !default;
+// $cfa-color-base-lightest: 'gray-warm-4' !default; // Affects accordion background, outline button background hover, checkbox/radio background hover, follow-up question container background, footer primary section background, background color of the input, background color of the textarea
+// $cfa-color-base-lighter: 'gray-warm-10' !default; // Affects accordion button hover, disabled button state, footer secondary section background, color of the input inset border, color of the textarea inset border
+// $cfa-color-base-light: 'gray-warm-30' !default;
+// $cfa-color-base: 'gray-warm-50' !default;
+// $cfa-color-base-dark: 'gray-warm-60' !default;
+// $cfa-color-base-darker: 'gray-warm-70' !default; // Affects follow up question container border
+// $cfa-color-base-darkest: 'gray-warm-90' !default;
+// $cfa-color-base-ink: 'gray-warm-90' !default; // Affects outline button, text and border color of the input, text and border color of the select, text and border color of the textarea
+// POC for using tokens studio tokens
+$cfa-color-base-family: tokens.$base-family !default;
+$cfa-color-base-lightest: tokens.$base-lightest !default;
+$cfa-color-base-lighter: tokens.$base-lighter !default;
+$cfa-color-base-light: tokens.$base-light !default;
+$cfa-color-base: tokens.$base !default;
+$cfa-color-base-dark: tokens.$base-dark !default;
+$cfa-color-base-darker: tokens.$base-darker !default;
+$cfa-color-base-darkest: tokens.$base-darkest !default;
+$cfa-color-base-ink: tokens.$base-ink !default;
 
 // - Primary
-$cfa-color-primary-family: 'mint' !default;
-$cfa-color-primary-lightest: 'mint-cool-5' !default; // Affects details background
-$cfa-color-primary-lighter: 'mint-10' !default;
-$cfa-color-primary-light: 'mint-30' !default;
-$cfa-color-primary: 'mint-50' !default; // Affects primary button state
-$cfa-color-primary-vivid: 'mint-40v' !default;
-$cfa-color-primary-dark: 'mint-cool-70v' !default;
-$cfa-color-primary-darker: 'mint-cool-80v' !default; // Affects primary button hover state, details text and border
+// $cfa-color-primary-family: 'mint' !default;
+// $cfa-color-primary-lightest: 'mint-cool-5' !default; // Affects details background
+// $cfa-color-primary-lighter: 'mint-10' !default;
+// $cfa-color-primary-light: 'mint-30' !default;
+// $cfa-color-primary: 'mint-50' !default; // Affects primary button state
+// $cfa-color-primary-vivid: 'mint-40v' !default;
+// $cfa-color-primary-dark: 'mint-cool-70v' !default;
+// $cfa-color-primary-darker: 'mint-cool-80v' !default; // Affects primary button hover state, details text and border
+// POC for using tokens studio tokens
+$cfa-color-primary-family: tokens.$primary-family !default;
+$cfa-color-primary-lightest: tokens.$primary-lightest !default;
+$cfa-color-primary-lighter: tokens.$primary-lighter !default;
+$cfa-color-primary-light: tokens.$primary-light !default;
+$cfa-color-primary: tokens.$primary !default;
+$cfa-color-primary-vivid: tokens.$primary-vivid !default;
+$cfa-color-primary-dark: tokens.$primary-dark !default;
+$cfa-color-primary-darker: tokens.$primary-darker !default;
 
 // - Secondary
-$cfa-color-secondary-family: 'magenta-vivid' !default;
-$cfa-color-secondary-lighter: 'magenta-10v' !default;
-$cfa-color-secondary-light: 'magenta-30v' !default;
-$cfa-color-secondary: 'magenta-50v' !default; // Affects the secondary button
-$cfa-color-secondary-vivid: 'magenta-40v' !default;
-$cfa-color-secondary-dark: 'magenta-60v' !default;
-$cfa-color-secondary-darker: 'magenta-70v' !default; // Affects the secondary button hover state
+// $cfa-color-secondary-family: 'magenta-vivid' !default;
+// $cfa-color-secondary-lighter: 'magenta-10v' !default;
+// $cfa-color-secondary-light: 'magenta-30v' !default;
+// $cfa-color-secondary: 'magenta-50v' !default; // Affects the secondary button
+// $cfa-color-secondary-vivid: 'magenta-40v' !default;
+// $cfa-color-secondary-dark: 'magenta-60v' !default;
+// $cfa-color-secondary-darker: 'magenta-70v' !default; // Affects the secondary button hover state
+// POC for using tokens studio tokens
+$cfa-color-secondary-family: tokens.$secondary-family !default;
+$cfa-color-secondary-lighter: tokens.$secondary-lighter !default;
+$cfa-color-secondary-light: tokens.$secondary-light !default;
+$cfa-color-secondary: tokens.$secondary !default;
+$cfa-color-secondary-vivid: tokens.$secondary-vivid !default;
+$cfa-color-secondary-dark: tokens.$secondary-dark !default;
+$cfa-color-secondary-darker: tokens.$secondary-darker !default;
 
 // - Accent Warm
-$cfa-color-accent-warm-family: 'red-warm-vivid' !default;
-$cfa-color-accent-warm-lighter: 'red-warm-10v' !default;
-$cfa-color-accent-warm-light: 'red-warm-20v' !default;
-$cfa-color-accent-warm: 'red-warm-30v' !default;
-$cfa-color-accent-warm-dark: 'red-warm-50v' !default;
-$cfa-color-accent-warm-darker: 'red-warm-60v' !default;
+// $cfa-color-accent-warm-family: 'red-warm-vivid' !default;
+// $cfa-color-accent-warm-lighter: 'red-warm-10v' !default;
+// $cfa-color-accent-warm-light: 'red-warm-20v' !default;
+// $cfa-color-accent-warm: 'red-warm-30v' !default;
+// $cfa-color-accent-warm-dark: 'red-warm-50v' !default;
+// $cfa-color-accent-warm-darker: 'red-warm-60v' !default;
+// POC for using tokens studio tokens
+$cfa-color-accent-warm-family: tokens.$accent-warm-family !default;
+$cfa-color-accent-warm-lighter: tokens.$accent-warm-lighter !default;
+$cfa-color-accent-warm-light: tokens.$accent-warm-light !default;
+$cfa-color-accent-warm: tokens.$accent-warm !default;
+$cfa-color-accent-warm-dark: tokens.$accent-warm-dark !default;
+$cfa-color-accent-warm-darker: tokens.$accent-warm-darker !default;
 
 // - Accent Cool
-$cfa-color-accent-cool-family: 'green-cool-vivid' !default;
-$cfa-color-accent-cool-lighter: 'green-cool-5v' !default;
-$cfa-color-accent-cool-light: 'green-cool-20v' !default;
-$cfa-color-accent-cool: 'green-cool-30v' !default;
-$cfa-color-accent-cool-dark: 'green-cool-40v' !default;
-$cfa-color-accent-cool-darker: 'green-cool-60v' !default;
+// $cfa-color-accent-cool-family: 'green-cool-vivid' !default;
+// $cfa-color-accent-cool-lighter: 'green-cool-5v' !default;
+// $cfa-color-accent-cool-light: 'green-cool-20v' !default;
+// $cfa-color-accent-cool: 'green-cool-30v' !default;
+// $cfa-color-accent-cool-dark: 'green-cool-40v' !default;
+// $cfa-color-accent-cool-darker: 'green-cool-60v' !default;
+// POC for using tokens studio tokens
+$cfa-color-accent-cool-family: tokens.$accent-cool-family !default;
+$cfa-color-accent-cool-lighter: tokens.$accent-cool-lighter !default;
+$cfa-color-accent-cool-light: tokens.$accent-cool-light !default;
+$cfa-color-accent-cool: tokens.$accent-cool !default;
+$cfa-color-accent-cool-dark: tokens.$accent-cool-dark !default;
+$cfa-color-accent-cool-darker: tokens.$accent-cool-darker !default;
 
 // - Error
-$cfa-color-error-family: 'orange-warm-vivid' !default;
-$cfa-color-error-lighter: 'orange-warm-10v' !default;
-$cfa-color-error-light: 'orange-warm-30v' !default;
-$cfa-color-error: 'orange-warm-50v' !default; // Affects the danger button, the no button icon color
-$cfa-color-error-dark: 'orange-warm-60v' !default; // Affects the error state border color
-$cfa-color-error-darker: 'orange-warm-70v' !default; // Affects the danger button hover state
+// $cfa-color-error-family: 'orange-warm-vivid' !default;
+// $cfa-color-error-lighter: 'orange-warm-10v' !default;
+// $cfa-color-error-light: 'orange-warm-30v' !default;
+// $cfa-color-error: 'orange-warm-50v' !default; // Affects the danger button, the no button icon color
+// $cfa-color-error-dark: 'orange-warm-60v' !default; // Affects the error state border color
+// $cfa-color-error-darker: 'orange-warm-70v' !default; // Affects the danger button hover state
+// POC for using tokens studio tokens
+$cfa-color-error-family: tokens.$error-family !default;
+$cfa-color-error-lighter: tokens.$error-lighter !default;
+$cfa-color-error-light: tokens.$error-light !default;
+$cfa-color-error: tokens.$error !default;
+$cfa-color-error-dark: tokens.$error-dark !default;
+$cfa-color-error-darker: tokens.$error-darker !default;
 
 // - Warning
-$cfa-color-warning-family: 'gold-vivid' !default;
-$cfa-color-warning-lighter: 'gold-5v' !default;
-$cfa-color-warning-light: 'gold-10v' !default;
-$cfa-color-warning: 'gold-20v' !default;
-$cfa-color-warning-dark: 'gold-30v' !default;
-$cfa-color-warning-darker: 'gold-50v' !default;
+// $cfa-color-warning-family: 'gold-vivid' !default;
+// $cfa-color-warning-lighter: 'gold-5v' !default;
+// $cfa-color-warning-light: 'gold-10v' !default;
+// $cfa-color-warning: 'gold-20v' !default;
+// $cfa-color-warning-dark: 'gold-30v' !default;
+// $cfa-color-warning-darker: 'gold-50v' !default;
+// POC for using tokens studio tokens
+$cfa-color-warning-family: tokens.$warning-family !default;
+$cfa-color-warning-lighter: tokens.$warning-lighter !default;
+$cfa-color-warning-light: tokens.$warning-light !default;
+$cfa-color-warning: tokens.$warning !default;
+$cfa-color-warning-dark: tokens.$warning-dark !default;
+$cfa-color-warning-darker: tokens.$warning-darker !default;
 
 // - Success
-$cfa-color-success-family: 'green-cool-vivid' !default;
-$cfa-color-success-lighter: 'green-cool-5v' !default;
-$cfa-color-success-light: 'green-cool-20v' !default;
-$cfa-color-success: 'green-cool-40v' !default;
-$cfa-color-success-dark: 'green-cool-50v' !default;
-$cfa-color-success-darker: 'green-cool-60v' !default;
+// $cfa-color-success-family: 'green-cool-vivid' !default;
+// $cfa-color-success-lighter: 'green-cool-5v' !default;
+// $cfa-color-success-light: 'green-cool-20v' !default;
+// $cfa-color-success: 'green-cool-40v' !default;
+// $cfa-color-success-dark: 'green-cool-50v' !default;
+// $cfa-color-success-darker: 'green-cool-60v' !default;
+// POC for using tokens studio tokens
+$cfa-color-success-family: tokens.$success-family !default;
+$cfa-color-success-lighter: tokens.$success-lighter !default;
+$cfa-color-success-light: tokens.$success-light !default;
+$cfa-color-success: tokens.$success !default;
+$cfa-color-success-dark: tokens.$success-dark !default;
+$cfa-color-success-darker: tokens.$success-darker !default;
 
 // - Info
-$cfa-color-info-family: 'gray-warm' !default;
-$cfa-color-info-lighter: 'gray-warm-4' !default;
-$cfa-color-info-light: 'gray-warm-20' !default;
-$cfa-color-info: 'gray-warm-50' !default;
-$cfa-color-info-dark: 'gray-warm-60' !default;
-$cfa-color-info-darker: 'gray-warm-70' !default;
+// $cfa-color-info-family: 'gray-warm' !default;
+// $cfa-color-info-lighter: 'gray-warm-4' !default;
+// $cfa-color-info-light: 'gray-warm-20' !default;
+// $cfa-color-info: 'gray-warm-50' !default;
+// $cfa-color-info-dark: 'gray-warm-60' !default;
+// $cfa-color-info-darker: 'gray-warm-70' !default;
+// POC for using tokens studio tokens
+$cfa-color-info-family: tokens.$info-family !default;
+$cfa-color-info-lighter: tokens.$info-lighter !default;
+$cfa-color-info-light: tokens.$info-light !default;
+$cfa-color-info: tokens.$info !default;
+$cfa-color-info-dark: tokens.$info-dark !default;
+$cfa-color-info-darker: tokens.$info-darker !default;
 
 // - Emergency
-$cfa-color-emergency: 'orange-warm-30v' !default;
-$cfa-color-emergency-dark: 'orange-warm-60v' !default;
+// $cfa-color-emergency: 'orange-warm-30v' !default;
+// $cfa-color-emergency-dark: 'orange-warm-60v' !default;
+// POC for using tokens studio tokens
+$cfa-color-emergency: tokens.$emergency !default;
+$cfa-color-emergency-dark: tokens.$emergency-dark !default;
 
 // - Disabled
-$cfa-color-disabled-family: 'gray-warm' !default;
-$cfa-color-disabled-light: 'gray-warm-10' !default; // Affects disabled button
-$cfa-color-disabled: 'gray-warm-50' !default;       // Affects disabled outline button
-$cfa-color-disabled-dark: 'gray-warm-70' !default;  // Affects disabled button text
+// $cfa-color-disabled-family: 'gray-warm' !default;
+// $cfa-color-disabled-light: 'gray-warm-10' !default; // Affects disabled button
+// $cfa-color-disabled: 'gray-warm-50' !default;       // Affects disabled outline button
+// $cfa-color-disabled-dark: 'gray-warm-70' !default;  // Affects disabled button text
+// POC for using tokens studio tokens
+$cfa-color-disabled-family: tokens.$disabled-family !default;
+$cfa-color-disabled-light: tokens.$disabled-light !default;
+$cfa-color-disabled: tokens.$disabled !default;
+$cfa-color-disabled-dark: tokens.$disabled-dark !default;
 
 // $cfa-color-disabled-text: 'gray-warm-50' !default;         // This setting can't be configured
 // $cfa-color-disabled-text-reverse: 'gray-warm-40' !default; // This setting can't be configured
 // $cfa-color-text-on-disabled: 'gray-warm-70' !default;      // This setting can't be configured
 
 // - Visited
-$cfa-link-color: 'primary' !default;
-$cfa-link-visited-color: 'ink' !default;
+// $cfa-link-color: 'primary' !default;
+// $cfa-link-visited-color: 'ink' !default;
+// POC for using tokens studio tokens
+$cfa-link-color: tokens.$link-color !default;
+$cfa-link-visited-color: tokens.$link-visited-color !default;
 
 // 4. Typography
 $cfa-global-paragraph-styles: true !default;

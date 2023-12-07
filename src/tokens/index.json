@@ -1,5 +1,10 @@
 {
   "System": {
+    "red-cool": {
+      "value": "rgba(0,0,0,0)",
+      "type": "color",
+      "description": "This is a placeholder reference to fill the family with a value"
+    },
     "red-cool-5": {
       "value": "#f8eff1",
       "type": "color"
@@ -40,100 +45,96 @@
       "value": "#1e1517",
       "type": "color"
     },
+    "red-cool-vivid": {
+      "value": "rgba(0,0,0,0)",
+      "type": "color",
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
+    },
     "red-cool-5v": {
       "value": "#fff0f3",
-      "type": "color",
-      "description": "FFEFF3"
+      "type": "color"
     },
     "red-cool-10v": {
       "value": "#f8dee1",
-      "type": "color",
-      "description": "F7DDE0"
+      "type": "color"
     },
     "red-cool-20v": {
       "value": "#f8b9c5",
-      "type": "color",
-      "description": "F8B9C5"
+      "type": "color"
     },
     "red-cool-30v": {
       "value": "#fd8ba0",
-      "type": "color",
-      "description": "FD8BA0"
+      "type": "color"
     },
     "red-cool-40v": {
       "value": "#f45d79",
-      "type": "color",
-      "description": "F45D79"
+      "type": "color"
     },
     "red-cool-50v": {
       "value": "#e41b3c",
-      "type": "color",
-      "description": "E41A3C"
+      "type": "color"
     },
     "red-cool-60v": {
       "value": "#b41d39",
-      "type": "color",
-      "description": "B31D38"
+      "type": "color"
     },
     "red-cool-70v": {
       "value": "#832133",
-      "type": "color",
-      "description": "822032"
+      "type": "color"
     },
     "red-cool-80v": {
       "value": "#4f1c24",
+      "type": "color"
+    },
+    "red": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "4F1C24"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "red-5": {
       "value": "#f9eeee",
-      "type": "color",
-      "description": "F9EEEE"
+      "type": "color"
     },
     "red-10": {
       "value": "#f8e1de",
-      "type": "color",
-      "description": "F8E1DE"
+      "type": "color"
     },
     "red-20": {
       "value": "#f7bbb1",
-      "type": "color",
-      "description": "F7BBB1"
+      "type": "color"
     },
     "red-30": {
       "value": "#f2938c",
-      "type": "color",
-      "description": "F2938C"
+      "type": "color"
     },
     "red-40": {
       "value": "#e9695f",
-      "type": "color",
-      "description": "E9695F"
+      "type": "color"
     },
     "red-50": {
       "value": "#d83933",
-      "type": "color",
-      "description": "D83933"
+      "type": "color"
     },
     "red-60": {
       "value": "#a23737",
-      "type": "color",
-      "description": "A23737"
+      "type": "color"
     },
     "red-70": {
       "value": "#6f3331",
-      "type": "color",
-      "description": "6F3331"
+      "type": "color"
     },
     "red-80": {
       "value": "#3e2927",
-      "type": "color",
-      "description": "3E2927"
+      "type": "color"
     },
     "red-90": {
       "value": "#1b1616",
+      "type": "color"
+    },
+    "red-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1B1616"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "red-warm-5": {
       "value": "#f6efea",
@@ -141,1103 +142,998 @@
     },
     "red-warm-10": {
       "value": "#f4e3db",
-      "type": "color",
-      "description": "F4E3DB"
+      "type": "color"
     },
     "red-warm-20": {
       "value": "#ecc0a7",
-      "type": "color",
-      "description": "ECC0A7"
+      "type": "color"
     },
     "red-warm-30": {
       "value": "#dca081",
-      "type": "color",
-      "description": "DCA081"
+      "type": "color"
     },
     "red-warm-40": {
       "value": "#d27a56",
-      "type": "color",
-      "description": "D27A56"
+      "type": "color"
     },
     "red-warm-50": {
       "value": "#c3512c",
-      "type": "color",
-      "description": "C3512C"
+      "type": "color"
     },
     "red-warm-60": {
       "value": "#805039",
-      "type": "color",
-      "description": "805039"
+      "type": "color"
     },
     "red-warm-70": {
       "value": "#524236",
-      "type": "color",
-      "description": "524236"
+      "type": "color"
     },
     "red-warm-80": {
       "value": "#332d29",
-      "type": "color",
-      "description": "332D29"
+      "type": "color"
     },
     "red-warm-90": {
       "value": "#1f1c18",
+      "type": "color"
+    },
+    "red-warm-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1F1C18"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "red-warm-5v": {
       "value": "#fff5ee",
-      "type": "color",
-      "description": "FFF5EE"
+      "type": "color"
     },
     "red-warm-10v": {
       "value": "#fce1d4",
-      "type": "color",
-      "description": "FCE1D4"
+      "type": "color"
     },
     "red-warm-20v": {
       "value": "#f6bd9c",
-      "type": "color",
-      "description": "F6BD9C"
+      "type": "color"
     },
     "red-warm-30v": {
       "value": "#f39268",
-      "type": "color",
-      "description": "F39268"
+      "type": "color"
     },
     "red-warm-40v": {
       "value": "#ef5e25",
-      "type": "color",
-      "description": "EF5E25"
+      "type": "color"
     },
     "red-warm-50v": {
       "value": "#d54309",
-      "type": "color",
-      "description": "D54309"
+      "type": "color"
     },
     "red-warm-60v": {
       "value": "#9c3d10",
-      "type": "color",
-      "description": "9C3D10"
+      "type": "color"
     },
     "red-warm-70v": {
       "value": "#63340f",
-      "type": "color",
-      "description": "63340F"
+      "type": "color"
     },
     "red-warm-80v": {
       "value": "#3e2a1e",
+      "type": "color"
+    },
+    "red-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "3E2A1E"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "red-5v": {
       "value": "#fff3f2",
-      "type": "color",
-      "description": "FFF3F2"
+      "type": "color"
     },
     "red-10v": {
       "value": "#fde0db",
-      "type": "color",
-      "description": "FDE0DB"
+      "type": "color"
     },
     "red-20v": {
       "value": "#fdb8ae",
-      "type": "color",
-      "description": "FDB8AE"
+      "type": "color"
     },
     "red-30v": {
       "value": "#ff8d7b",
-      "type": "color",
-      "description": "FF8D7B"
+      "type": "color"
     },
     "red-40v": {
       "value": "#fb5a47",
-      "type": "color",
-      "description": "FB5A47"
+      "type": "color"
     },
     "red-50v": {
       "value": "#e52207",
-      "type": "color",
-      "description": "E52207"
+      "type": "color"
     },
     "red-60v": {
       "value": "#b50909",
-      "type": "color",
-      "description": "B50909"
+      "type": "color"
     },
     "red-70v": {
       "value": "#8b0a03",
-      "type": "color",
-      "description": "8B0A03"
+      "type": "color"
     },
     "red-80v": {
       "value": "#5c1111",
-      "type": "color",
-      "description": "5C1111"
+      "type": "color"
     },
     "orange-warm-10": {
       "value": "#fbe0d0",
-      "type": "color",
-      "description": "FBE0D0"
+      "type": "color"
     },
     "orange-warm-20": {
       "value": "#f7bca2",
-      "type": "color",
-      "description": "F7BCA2"
+      "type": "color"
     },
     "orange-warm-30": {
       "value": "#f3966d",
-      "type": "color",
-      "description": "F3966D"
+      "type": "color"
     },
     "orange-warm-40": {
       "value": "#e17141",
+      "type": "color"
+    },
+    "orange-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "E17141"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "orange-warm-5": {
       "value": "#faeee5",
-      "type": "color",
-      "description": "FAEEE5"
+      "type": "color"
     },
     "orange-warm-50": {
       "value": "#bd5727",
-      "type": "color",
-      "description": "BD5727"
+      "type": "color"
     },
     "orange-warm-60": {
       "value": "#914734",
-      "type": "color",
-      "description": "914734"
+      "type": "color"
     },
     "orange-warm-70": {
       "value": "#633a32",
-      "type": "color",
-      "description": "633A32"
+      "type": "color"
     },
     "orange-warm-80": {
       "value": "#3d2925",
-      "type": "color",
-      "description": "3D2925"
+      "type": "color"
     },
     "orange-warm-90": {
       "value": "#1c1615",
-      "type": "color",
-      "description": "1C1615"
+      "type": "color"
     },
     "orange-warm-10v": {
       "value": "#ffe2d1",
-      "type": "color",
-      "description": "FFE2D1"
+      "type": "color"
     },
     "orange-warm-20v": {
       "value": "#fbbaa7",
-      "type": "color",
-      "description": "FBBAA7"
+      "type": "color"
     },
     "orange-warm-30v": {
       "value": "#fc906d",
-      "type": "color",
-      "description": "FC906D"
+      "type": "color"
     },
     "orange-warm-40v": {
       "value": "#ff580a",
-      "type": "color",
-      "description": "FF580A"
+      "type": "color"
     },
     "orange-warm-50v": {
       "value": "#cf4900",
+      "type": "color"
+    },
+    "orange-warm-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "CF4900"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "orange-warm-5v": {
       "value": "#fff3ea",
-      "type": "color",
-      "description": "FFF3EA"
+      "type": "color"
     },
     "orange-warm-60v": {
       "value": "#a72f10",
-      "type": "color",
-      "description": "A72F10"
+      "type": "color"
     },
     "orange-warm-70v": {
       "value": "#782312",
-      "type": "color",
-      "description": "782312"
+      "type": "color"
     },
     "orange-warm-80v": {
       "value": "#3d231d",
+      "type": "color"
+    },
+    "orange": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "3D231D"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "orange-5": {
       "value": "#f6efe9",
-      "type": "color",
-      "description": "F6EFE9"
+      "type": "color"
     },
     "orange-10": {
       "value": "#f2e4d4",
-      "type": "color",
-      "description": "F2E4D4"
+      "type": "color"
     },
     "orange-20": {
       "value": "#f3bf90",
-      "type": "color",
-      "description": "F3BF90"
+      "type": "color"
     },
     "orange-30": {
       "value": "#f09860",
-      "type": "color",
-      "description": "F09860"
+      "type": "color"
     },
     "orange-40": {
       "value": "#dd7533",
-      "type": "color",
-      "description": "DD7533"
+      "type": "color"
     },
     "orange-50": {
       "value": "#a86437",
-      "type": "color",
-      "description": "A86437"
+      "type": "color"
     },
     "orange-60": {
       "value": "#775540",
-      "type": "color",
-      "description": "775540"
+      "type": "color"
     },
     "orange-70": {
       "value": "#524236",
-      "type": "color",
-      "description": "524236"
+      "type": "color"
     },
     "orange-80": {
       "value": "#332d27",
-      "type": "color",
-      "description": "332D27"
+      "type": "color"
     },
     "orange-90": {
       "value": "#1b1614",
+      "type": "color"
+    },
+    "orange-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1B1614"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "orange-5v": {
       "value": "#fef2e4",
-      "type": "color",
-      "description": "FEF2E4"
+      "type": "color"
     },
     "orange-10v": {
       "value": "#fce2c5",
-      "type": "color",
-      "description": "FCE2C5"
+      "type": "color"
     },
     "orange-20v": {
       "value": "#ffbc78",
-      "type": "color",
-      "description": "FFBC78"
+      "type": "color"
     },
     "orange-30v": {
       "value": "#fa9441",
-      "type": "color",
-      "description": "FA9441"
+      "type": "color"
     },
     "orange-40v": {
       "value": "#e66f0e",
-      "type": "color",
-      "description": "E66F0E"
+      "type": "color"
     },
     "orange-50v": {
       "value": "#c05600",
-      "type": "color",
-      "description": "C05600"
+      "type": "color"
     },
     "orange-60v": {
       "value": "#8c471c",
-      "type": "color",
-      "description": "8C471C"
+      "type": "color"
     },
     "orange-70v": {
       "value": "#5f3617",
-      "type": "color",
-      "description": "5F3617"
+      "type": "color"
     },
     "orange-80v": {
       "value": "#352313",
+      "type": "color"
+    },
+    "gold": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "352313"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "gold-5": {
       "value": "#f5f0e6",
-      "type": "color",
-      "description": "F5F0E6"
+      "type": "color"
     },
     "gold-10": {
       "value": "#f1e5cd",
-      "type": "color",
-      "description": "F1E5CD"
+      "type": "color"
     },
     "gold-20": {
       "value": "#dec69a",
-      "type": "color",
-      "description": "DEC69A"
+      "type": "color"
     },
     "gold-30": {
       "value": "#c7a97b",
-      "type": "color",
-      "description": "C7A97B"
+      "type": "color"
     },
     "gold-40": {
       "value": "#ad8b65",
-      "type": "color",
-      "description": "AD8B65"
+      "type": "color"
     },
     "gold-50": {
       "value": "#8e704f",
-      "type": "color",
-      "description": "8E704F"
+      "type": "color"
     },
     "gold-60": {
       "value": "#6b5947",
-      "type": "color",
-      "description": "6B5947"
+      "type": "color"
     },
     "gold-70": {
       "value": "#4d4438",
-      "type": "color",
-      "description": "4D4438"
+      "type": "color"
     },
     "gold-80": {
       "value": "#322d26",
-      "type": "color",
-      "description": "322D26"
+      "type": "color"
     },
     "gold-90": {
       "value": "#191714",
-      "type": "color",
-      "description": "191714"
+      "type": "color"
     },
     "gold-10v": {
       "value": "#ffe396",
-      "type": "color",
-      "description": "FFE396"
+      "type": "color"
     },
     "gold-20v": {
       "value": "#ffbe2e",
-      "type": "color",
-      "description": "FFBE2E"
+      "type": "color"
     },
     "gold-30v": {
       "value": "#e5a000",
-      "type": "color",
-      "description": "E5A000"
+      "type": "color"
     },
     "gold-40v": {
       "value": "#c2850c",
-      "type": "color",
-      "description": "C2850C"
+      "type": "color"
     },
     "gold-50v": {
       "value": "#936f38",
+      "type": "color"
+    },
+    "gold-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "936F38"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "gold-5v": {
       "value": "#fef0c8",
-      "type": "color",
-      "description": "FEF0C8"
+      "type": "color"
     },
     "gold-60v": {
       "value": "#7a591a",
-      "type": "color",
-      "description": "7A591A"
+      "type": "color"
     },
     "gold-70v": {
       "value": "#5c410a",
-      "type": "color",
-      "description": "5C410A"
+      "type": "color"
     },
     "gold-80v": {
       "value": "#3b2b15",
-      "type": "color",
-      "description": "3B2B15"
+      "type": "color"
     },
     "yellow-10": {
       "value": "#f5e6af",
-      "type": "color",
-      "description": "F5E6AF"
+      "type": "color"
     },
     "yellow-20": {
       "value": "#e6c74c",
-      "type": "color",
-      "description": "E6C74C"
+      "type": "color"
     },
     "yellow-30": {
       "value": "#c9ab48",
-      "type": "color",
-      "description": "C9AB48"
+      "type": "color"
     },
     "yellow-40": {
       "value": "#a88f48",
+      "type": "color"
+    },
+    "yellow": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "A88F48"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "yellow-5": {
       "value": "#faf3d1",
-      "type": "color",
-      "description": "FAF3D1"
+      "type": "color"
     },
     "yellow-50": {
       "value": "#8a7237",
-      "type": "color",
-      "description": "8A7237"
+      "type": "color"
     },
     "yellow-60": {
       "value": "#6b5a39",
-      "type": "color",
-      "description": "6B5A39"
+      "type": "color"
     },
     "yellow-70": {
       "value": "#504332",
-      "type": "color",
-      "description": "504332"
+      "type": "color"
     },
     "yellow-80": {
       "value": "#332d27",
-      "type": "color",
-      "description": "332D27"
+      "type": "color"
     },
     "yellow-90": {
       "value": "#1a1614",
-      "type": "color",
-      "description": "1A1614"
+      "type": "color"
     },
     "yellow-10v": {
       "value": "#fee685",
-      "type": "color",
-      "description": "FEE685"
+      "type": "color"
     },
     "yellow-20v": {
       "value": "#face00",
-      "type": "color",
-      "description": "FACE00"
+      "type": "color"
     },
     "yellow-30v": {
       "value": "#ddaa01",
-      "type": "color",
-      "description": "DDAA01"
+      "type": "color"
     },
     "yellow-40v": {
       "value": "#b38c00",
-      "type": "color",
-      "description": "B38C00"
+      "type": "color"
     },
     "yellow-50v": {
       "value": "#947100",
+      "type": "color"
+    },
+    "yellow-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "947100"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "yellow-5v": {
       "value": "#fff5c2",
-      "type": "color",
-      "description": "FFF5C2"
+      "type": "color"
     },
     "yellow-60v": {
       "value": "#776017",
-      "type": "color",
-      "description": "776017"
+      "type": "color"
     },
     "yellow-70v": {
       "value": "#5c4809",
-      "type": "color",
-      "description": "5C4809"
+      "type": "color"
     },
     "yellow-80v": {
       "value": "#422d19",
+      "type": "color"
+    },
+    "green-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "422D19"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "green-warm-5": {
       "value": "#f1f4d7",
-      "type": "color",
-      "description": "F1F4D7"
+      "type": "color"
     },
     "green-warm-10": {
       "value": "#e7eab7",
-      "type": "color",
-      "description": "E7EAB7"
+      "type": "color"
     },
     "green-warm-20": {
       "value": "#cbd17a",
-      "type": "color",
-      "description": "CBD17A"
+      "type": "color"
     },
     "green-warm-30": {
       "value": "#a6b557",
-      "type": "color",
-      "description": "A6B557"
+      "type": "color"
     },
     "green-warm-40": {
       "value": "#8a984b",
-      "type": "color",
-      "description": "8A984B"
+      "type": "color"
     },
     "green-warm-50": {
       "value": "#6f7a41",
-      "type": "color",
-      "description": "6F7A41"
+      "type": "color"
     },
     "green-warm-60": {
       "value": "#5a5f38",
-      "type": "color",
-      "description": "5A5F38"
+      "type": "color"
     },
     "green-warm-70": {
       "value": "#45472f",
-      "type": "color",
-      "description": "45472F"
+      "type": "color"
     },
     "green-warm-80": {
       "value": "#2d2f21",
-      "type": "color",
-      "description": "2D2F21"
+      "type": "color"
     },
     "green-warm-90": {
       "value": "#171712",
+      "type": "color"
+    },
+    "green-warm-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "171712"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "green-warm-5v": {
       "value": "#f5fbc1",
-      "type": "color",
-      "description": "F5FBC1"
+      "type": "color"
     },
     "green-warm-10v": {
       "value": "#e7f434",
-      "type": "color",
-      "description": "E7F434"
+      "type": "color"
     },
     "green-warm-20v": {
       "value": "#c5d30a",
-      "type": "color",
-      "description": "C5D30A"
+      "type": "color"
     },
     "green-warm-30v": {
       "value": "#a3b72c",
-      "type": "color",
-      "description": "A3B72C"
+      "type": "color"
     },
     "green-warm-40v": {
       "value": "#7e9c1d",
-      "type": "color",
-      "description": "7E9C1D"
+      "type": "color"
     },
     "green-warm-50v": {
       "value": "#6a7d00",
-      "type": "color",
-      "description": "6A7D00"
+      "type": "color"
     },
     "green-warm-60v": {
       "value": "#5a6613",
-      "type": "color",
-      "description": "5A6613"
+      "type": "color"
     },
     "green-warm-70v": {
       "value": "#4b4e10",
-      "type": "color",
-      "description": "4B4E10"
+      "type": "color"
     },
     "green-warm-80v": {
       "value": "#38380b",
+      "type": "color"
+    },
+    "green": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "38380B"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "green-5": {
       "value": "#eaf4dd",
-      "type": "color",
-      "description": "EAF4DD"
+      "type": "color"
     },
     "green-10": {
       "value": "#dfeacd",
-      "type": "color",
-      "description": "DFEACD"
+      "type": "color"
     },
     "green-20": {
       "value": "#b8d293",
-      "type": "color",
-      "description": "B8D293"
+      "type": "color"
     },
     "green-30": {
       "value": "#9bb672",
-      "type": "color",
-      "description": "9BB672"
+      "type": "color"
     },
     "green-40": {
       "value": "#7d9b4e",
-      "type": "color",
-      "description": "7D9B4E"
+      "type": "color"
     },
     "green-50": {
       "value": "#607f35",
-      "type": "color",
-      "description": "607F35"
+      "type": "color"
     },
     "green-60": {
       "value": "#4c6424",
-      "type": "color",
-      "description": "4C6424"
+      "type": "color"
     },
     "green-70": {
       "value": "#3c4a29",
-      "type": "color",
-      "description": "3C4A29"
+      "type": "color"
     },
     "green-80": {
       "value": "#293021",
-      "type": "color",
-      "description": "293021"
+      "type": "color"
     },
     "green-90": {
       "value": "#161814",
+      "type": "color"
+    },
+    "green-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "161814"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "green-5v": {
       "value": "#ddf9c7",
-      "type": "color",
-      "description": "DDF9C7"
+      "type": "color"
     },
     "green-10v": {
       "value": "#c5ee93",
-      "type": "color",
-      "description": "C5EE93"
+      "type": "color"
     },
     "green-20v": {
       "value": "#98d035",
-      "type": "color",
-      "description": "98D035"
+      "type": "color"
     },
     "green-30v": {
       "value": "#7fb135",
-      "type": "color",
-      "description": "7FB135"
+      "type": "color"
     },
     "green-40v": {
       "value": "#719f2a",
-      "type": "color",
-      "description": "719F2A"
+      "type": "color"
     },
     "green-50v": {
       "value": "#538200",
-      "type": "color",
-      "description": "538200"
+      "type": "color"
     },
     "green-60v": {
       "value": "#466c04",
-      "type": "color",
-      "description": "466C04"
+      "type": "color"
     },
     "green-70v": {
       "value": "#2f4a0b",
-      "type": "color",
-      "description": "2F4A0B"
+      "type": "color"
     },
     "green-80v": {
       "value": "#243413",
+      "type": "color"
+    },
+    "green-cool": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "243413"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "green-cool-5": {
       "value": "#ecf3ec",
-      "type": "color",
-      "description": "ECF3EC"
+      "type": "color"
     },
     "green-cool-10": {
       "value": "#dbebde",
-      "type": "color",
-      "description": "DBEBDE"
+      "type": "color"
     },
     "green-cool-20": {
       "value": "#b4d0b9",
-      "type": "color",
-      "description": "B4D0B9"
+      "type": "color"
     },
     "green-cool-30": {
       "value": "#86b98e",
-      "type": "color",
-      "description": "86B98E"
+      "type": "color"
     },
     "green-cool-40": {
       "value": "#5e9f69",
-      "type": "color",
-      "description": "5E9F69"
+      "type": "color"
     },
     "green-cool-50": {
       "value": "#4d8055",
-      "type": "color",
-      "description": "4D8055"
+      "type": "color"
     },
     "green-cool-60": {
       "value": "#446443",
-      "type": "color",
-      "description": "446443"
+      "type": "color"
     },
     "green-cool-70": {
       "value": "#37493b",
-      "type": "color",
-      "description": "37493B"
+      "type": "color"
     },
     "green-cool-80": {
       "value": "#28312a",
-      "type": "color",
-      "description": "28312A"
+      "type": "color"
     },
     "green-cool-90": {
       "value": "#1a1f1a",
+      "type": "color"
+    },
+    "green-cool-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1A1F1A"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "green-cool-5v": {
       "value": "#e3f5e1",
-      "type": "color",
-      "description": "E3F5E1"
+      "type": "color"
     },
     "green-cool-10v": {
       "value": "#b7f5bd",
-      "type": "color",
-      "description": "B7F5BD"
+      "type": "color"
     },
     "green-cool-20v": {
       "value": "#70e17b",
-      "type": "color",
-      "description": "70E17B"
+      "type": "color"
     },
     "green-cool-30v": {
       "value": "#21c834",
-      "type": "color",
-      "description": "21C834"
+      "type": "color"
     },
     "green-cool-40v": {
       "value": "#00a91c",
-      "type": "color",
-      "description": "00A91C"
+      "type": "color"
     },
     "green-cool-50v": {
       "value": "#008817",
-      "type": "color",
-      "description": "008817"
+      "type": "color"
     },
     "green-cool-60v": {
       "value": "#216e1f",
-      "type": "color",
-      "description": "216E1F"
+      "type": "color"
     },
     "green-cool-70v": {
       "value": "#154c21",
-      "type": "color",
-      "description": "154C21"
+      "type": "color"
     },
     "green-cool-80v": {
       "value": "#19311e",
-      "type": "color",
-      "description": "19311E"
+      "type": "color"
     },
     "mint-10": {
       "value": "#c7efe2",
-      "type": "color",
-      "description": "C7EFE2"
+      "type": "color"
     },
     "mint-20": {
       "value": "#92d9bb",
-      "type": "color",
-      "description": "92D9BB"
+      "type": "color"
     },
     "mint-30": {
       "value": "#5abf95",
-      "type": "color",
-      "description": "5ABF95"
+      "type": "color"
     },
     "mint-40": {
       "value": "#34a37e",
+      "type": "color"
+    },
+    "mint": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "34A37E"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "mint-5": {
       "value": "#dbf6ed",
-      "type": "color",
-      "description": "DBF6ED"
+      "type": "color"
     },
     "mint-50": {
       "value": "#2e8367",
-      "type": "color",
-      "description": "2E8367"
+      "type": "color"
     },
     "mint-60": {
       "value": "#286846",
-      "type": "color",
-      "description": "286846"
+      "type": "color"
     },
     "mint-70": {
       "value": "#204e34",
-      "type": "color",
-      "description": "204E34"
+      "type": "color"
     },
     "mint-80": {
       "value": "#193324",
-      "type": "color",
-      "description": "193324"
+      "type": "color"
     },
     "mint-90": {
       "value": "#0d1a12",
+      "type": "color"
+    },
+    "mint-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "0D1A12"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "mint-5v": {
       "value": "#c9fbeb",
-      "type": "color",
-      "description": "C9FBEB"
+      "type": "color"
     },
     "mint-10v": {
       "value": "#83fcd4",
-      "type": "color",
-      "description": "83FCD4"
+      "type": "color"
     },
     "mint-20v": {
       "value": "#0ceda6",
-      "type": "color",
-      "description": "0CEDA6"
+      "type": "color"
     },
     "mint-30v": {
       "value": "#04c585",
-      "type": "color",
-      "description": "04C585"
+      "type": "color"
     },
     "mint-40v": {
       "value": "#00a871",
-      "type": "color",
-      "description": "00A871"
+      "type": "color"
     },
     "mint-50v": {
       "value": "#008659",
-      "type": "color",
-      "description": "008659"
+      "type": "color"
     },
     "mint-60v": {
       "value": "#146947",
-      "type": "color",
-      "description": "146947"
+      "type": "color"
     },
     "mint-70v": {
       "value": "#0c4e29",
-      "type": "color",
-      "description": "0C4E29"
+      "type": "color"
     },
     "mint-80v": {
       "value": "#0d351e",
+      "type": "color"
+    },
+    "mint-cool": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "0D351E"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "mint-cool-5": {
       "value": "#e0f7f6",
-      "type": "color",
-      "description": "E0F7F6"
+      "type": "color"
     },
     "mint-cool-10": {
       "value": "#c4eeeb",
-      "type": "color",
-      "description": "C4EEEB"
+      "type": "color"
     },
     "mint-cool-20": {
       "value": "#9bd4cf",
-      "type": "color",
-      "description": "9BD4CF"
+      "type": "color"
     },
     "mint-cool-30": {
       "value": "#6fbab3",
-      "type": "color",
-      "description": "6FBAB3"
+      "type": "color"
     },
     "mint-cool-40": {
       "value": "#4f9e99",
-      "type": "color",
-      "description": "4F9E99"
+      "type": "color"
     },
     "mint-cool-50": {
       "value": "#40807e",
-      "type": "color",
-      "description": "40807E"
+      "type": "color"
     },
     "mint-cool-60": {
       "value": "#376462",
-      "type": "color",
-      "description": "376462"
+      "type": "color"
     },
     "mint-cool-70": {
       "value": "#2a4b45",
-      "type": "color",
-      "description": "2A4B45"
+      "type": "color"
     },
     "mint-cool-80": {
       "value": "#203131",
-      "type": "color",
-      "description": "203131"
+      "type": "color"
     },
     "mint-cool-90": {
       "value": "#111818",
-      "type": "color",
-      "description": "111818"
+      "type": "color"
     },
     "mint-cool-20v": {
       "value": "#29e1cb",
-      "type": "color",
-      "description": "29E1CB"
+      "type": "color"
     },
     "mint-cool-50v": {
       "value": "#008480",
+      "type": "color"
+    },
+    "mint-cool-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "008480"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "mint-cool-5v": {
       "value": "#d5fbf3",
-      "type": "color",
-      "description": "D5FBF3"
+      "type": "color"
     },
     "mint-cool-60v": {
       "value": "#0f6460",
-      "type": "color",
-      "description": "0F6460"
+      "type": "color"
     },
     "mint-cool-70v": {
       "value": "#0b4b3f",
-      "type": "color",
-      "description": "0B4B3F"
+      "type": "color"
     },
     "mint-cool-80v": {
       "value": "#123131",
-      "type": "color",
-      "description": "123131"
+      "type": "color"
     },
     "mint-cool-10v": {
       "value": "#7efbe1",
-      "type": "color",
-      "description": "7EFBE1"
+      "type": "color"
     },
     "mint-cool-30v": {
       "value": "#1dc2ae",
-      "type": "color",
-      "description": "1DC2AE"
+      "type": "color"
     },
     "mint-cool-40v": {
       "value": "#00a398",
+      "type": "color"
+    },
+    "cyan": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "00A398"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "cyan-5": {
       "value": "#e7f6f8",
-      "type": "color",
-      "description": "E7F6F8"
+      "type": "color"
     },
     "cyan-10": {
       "value": "#ccecf2",
-      "type": "color",
-      "description": "CCECF2"
+      "type": "color"
     },
     "cyan-20": {
       "value": "#99deea",
-      "type": "color",
-      "description": "99DEEA"
+      "type": "color"
     },
     "cyan-30": {
       "value": "#5dc0d1",
-      "type": "color",
-      "description": "5DC0D1"
+      "type": "color"
     },
     "cyan-40": {
       "value": "#449dac",
-      "type": "color",
-      "description": "449DAC"
+      "type": "color"
     },
     "cyan-50": {
       "value": "#168092",
-      "type": "color",
-      "description": "168092"
+      "type": "color"
     },
     "cyan-60": {
       "value": "#2a646d",
-      "type": "color",
-      "description": "2A646D"
+      "type": "color"
     },
     "cyan-70": {
       "value": "#2c4a4e",
-      "type": "color",
-      "description": "2C4A4E"
+      "type": "color"
     },
     "cyan-80": {
       "value": "#203133",
-      "type": "color",
-      "description": "203133"
+      "type": "color"
     },
     "cyan-90": {
       "value": "#111819",
+      "type": "color"
+    },
+    "cyan-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "111819"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "cyan-5v": {
       "value": "#e5faff",
-      "type": "color",
-      "description": "E5FAFF"
+      "type": "color"
     },
     "cyan-10v": {
       "value": "#a8f2ff",
-      "type": "color",
-      "description": "A8F2FF"
+      "type": "color"
     },
     "cyan-20v": {
       "value": "#52daf2",
-      "type": "color",
-      "description": "52DAF2"
+      "type": "color"
     },
     "cyan-30v": {
       "value": "#00bde3",
-      "type": "color",
-      "description": "00BDE3"
+      "type": "color"
     },
     "cyan-40v": {
       "value": "#009ec1",
-      "type": "color",
-      "description": "009EC1"
+      "type": "color"
     },
     "cyan-50v": {
       "value": "#0081a1",
-      "type": "color",
-      "description": "0081A1"
+      "type": "color"
     },
     "cyan-60v": {
       "value": "#00687d",
-      "type": "color",
-      "description": "00687D"
+      "type": "color"
     },
     "cyan-70v": {
       "value": "#0e4f5c",
-      "type": "color",
-      "description": "0E4F5C"
+      "type": "color"
     },
     "cyan-80v": {
       "value": "#093b44",
+      "type": "color"
+    },
+    "blue-cool": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "093B44"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "blue-cool-5": {
       "value": "#e7f2f5",
-      "type": "color",
-      "description": "E7F2F5"
+      "type": "color"
     },
     "blue-cool-10": {
       "value": "#dae9ee",
-      "type": "color",
-      "description": "DAE9EE"
+      "type": "color"
     },
     "blue-cool-20": {
       "value": "#adcfdc",
-      "type": "color",
-      "description": "ADCFDC"
+      "type": "color"
     },
     "blue-cool-30": {
       "value": "#82b4c9",
@@ -1274,1020 +1170,917 @@
       "type": "color",
       "description": "0F191C"
     },
+    "blue-cool-vivid": {
+      "value": "rgba(0,0,0,0)",
+      "type": "color",
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
+    },
     "blue-cool-5v": {
       "value": "#e1f3f8",
-      "type": "color",
-      "description": "E1F3F8"
+      "type": "color"
     },
     "blue-cool-10v": {
       "value": "#c3ebfa",
-      "type": "color",
-      "description": "C3EBFA"
+      "type": "color"
     },
     "blue-cool-20v": {
       "value": "#97d4ea",
-      "type": "color",
-      "description": "97D4EA"
+      "type": "color"
     },
     "blue-cool-30v": {
       "value": "#59b9de",
-      "type": "color",
-      "description": "59B9DE"
+      "type": "color"
     },
     "blue-cool-40v": {
       "value": "#28a0cb",
-      "type": "color",
-      "description": "28A0CB"
+      "type": "color"
     },
     "blue-cool-50v": {
       "value": "#0d7ea2",
-      "type": "color",
-      "description": "0D7EA2"
+      "type": "color"
     },
     "blue-cool-60v": {
       "value": "#07648d",
-      "type": "color",
-      "description": "07648D"
+      "type": "color"
     },
     "blue-cool-70v": {
       "value": "#074b69",
-      "type": "color",
-      "description": "074B69"
+      "type": "color"
     },
     "blue-cool-80v": {
       "value": "#002d3f",
+      "type": "color"
+    },
+    "blue": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "002D3F"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "blue-5": {
       "value": "#eff6fb",
-      "type": "color",
-      "description": "EFF6FB"
+      "type": "color"
     },
     "blue-10": {
       "value": "#d9e8f6",
-      "type": "color",
-      "description": "D9E8F6"
+      "type": "color"
     },
     "blue-20": {
       "value": "#aacdec",
-      "type": "color",
-      "description": "AACDEC"
+      "type": "color"
     },
     "blue-30": {
       "value": "#73b3e7",
-      "type": "color",
-      "description": "73B3E7"
+      "type": "color"
     },
     "blue-40": {
       "value": "#4f97d1",
-      "type": "color",
-      "description": "4F97D1"
+      "type": "color"
     },
     "blue-50": {
       "value": "#2378c3",
-      "type": "color",
-      "description": "2378C3"
+      "type": "color"
     },
     "blue-60": {
       "value": "#2c608a",
-      "type": "color",
-      "description": "2C608A"
+      "type": "color"
     },
     "blue-70": {
       "value": "#274863",
-      "type": "color",
-      "description": "274863"
+      "type": "color"
     },
     "blue-80": {
       "value": "#1f303e",
-      "type": "color",
-      "description": "1F303E"
+      "type": "color"
     },
     "blue-90": {
       "value": "#11181d",
+      "type": "color"
+    },
+    "blue-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "11181D"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "blue-5v": {
       "value": "#e8f5ff",
-      "type": "color",
-      "description": "E8F5FF"
+      "type": "color"
     },
     "blue-10v": {
       "value": "#cfe8ff",
-      "type": "color",
-      "description": "CFE8FF"
+      "type": "color"
     },
     "blue-20v": {
       "value": "#a1d3ff",
-      "type": "color",
-      "description": "A1D3FF"
+      "type": "color"
     },
     "blue-30v": {
       "value": "#58b4ff",
-      "type": "color",
-      "description": "58B4FF"
+      "type": "color"
     },
     "blue-40v": {
       "value": "#2491ff",
-      "type": "color",
-      "description": "2491FF"
+      "type": "color"
     },
     "blue-50v": {
       "value": "#0076d6",
-      "type": "color",
-      "description": "0076D6"
+      "type": "color"
     },
     "blue-60v": {
       "value": "#005ea2",
-      "type": "color",
-      "description": "005EA2"
+      "type": "color"
     },
     "blue-70v": {
       "value": "#0b4778",
-      "type": "color",
-      "description": "0B4778"
+      "type": "color"
     },
     "blue-80v": {
       "value": "#112f4e",
+      "type": "color"
+    },
+    "blue-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "112F4E"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "blue-warm-5": {
       "value": "#ecf1f7",
-      "type": "color",
-      "description": "ECF1F7"
+      "type": "color"
     },
     "blue-warm-10": {
       "value": "#e1e7f1",
-      "type": "color",
-      "description": "E1E7F1"
+      "type": "color"
     },
     "blue-warm-20": {
       "value": "#bbcae4",
-      "type": "color",
-      "description": "BBCAE4"
+      "type": "color"
     },
     "blue-warm-30": {
       "value": "#98afd2",
-      "type": "color",
-      "description": "98AFD2"
+      "type": "color"
     },
     "blue-warm-40": {
       "value": "#7292c7",
-      "type": "color",
-      "description": "7292C7"
+      "type": "color"
     },
     "blue-warm-50": {
       "value": "#4a77b4",
-      "type": "color",
-      "description": "4A77B4"
+      "type": "color"
     },
     "blue-warm-60": {
       "value": "#345d96",
-      "type": "color",
-      "description": "345D96"
+      "type": "color"
     },
     "blue-warm-70": {
       "value": "#2f4668",
-      "type": "color",
-      "description": "2F4668"
+      "type": "color"
     },
     "blue-warm-80": {
       "value": "#252f3e",
-      "type": "color",
-      "description": "252F3E"
+      "type": "color"
     },
     "blue-warm-90": {
       "value": "#13171f",
+      "type": "color"
+    },
+    "blue-warm-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "13171F"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "blue-warm-5v": {
       "value": "#edf5ff",
-      "type": "color",
-      "description": "EDF5FF"
+      "type": "color"
     },
     "blue-warm-10v": {
       "value": "#d4e5ff",
-      "type": "color",
-      "description": "D4E5FF"
+      "type": "color"
     },
     "blue-warm-20v": {
       "value": "#adcdff",
-      "type": "color",
-      "description": "ADCDFF"
+      "type": "color"
     },
     "blue-warm-30v": {
       "value": "#81aefc",
-      "type": "color",
-      "description": "81AEFC"
+      "type": "color"
     },
     "blue-warm-40v": {
       "value": "#5994f6",
-      "type": "color",
-      "description": "5994F6"
+      "type": "color"
     },
     "blue-warm-50v": {
       "value": "#2672de",
-      "type": "color",
-      "description": "2672DE"
+      "type": "color"
     },
     "blue-warm-60v": {
       "value": "#0050d8",
-      "type": "color",
-      "description": "0050D8"
+      "type": "color"
     },
     "blue-warm-70v": {
       "value": "#1a4480",
-      "type": "color",
-      "description": "1A4480"
+      "type": "color"
     },
     "blue-warm-80v": {
       "value": "#162e51",
+      "type": "color"
+    },
+    "indigo-cool": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "162E51"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "indigo-cool-5": {
       "value": "#eef0f9",
-      "type": "color",
-      "description": "EEF0F9"
+      "type": "color"
     },
     "indigo-cool-10": {
       "value": "#e1e6f9",
-      "type": "color",
-      "description": "E1E6F9"
+      "type": "color"
     },
     "indigo-cool-20": {
       "value": "#bbc8f5",
-      "type": "color",
-      "description": "BBC8F5"
+      "type": "color"
     },
     "indigo-cool-30": {
       "value": "#96abee",
-      "type": "color",
-      "description": "96ABEE"
+      "type": "color"
     },
     "indigo-cool-40": {
       "value": "#6b8ee8",
-      "type": "color",
-      "description": "6B8EE8"
+      "type": "color"
     },
     "indigo-cool-50": {
       "value": "#496fd8",
-      "type": "color",
-      "description": "496FD8"
+      "type": "color"
     },
     "indigo-cool-60": {
       "value": "#3f57a6",
-      "type": "color",
-      "description": "3F57A6"
+      "type": "color"
     },
     "indigo-cool-70": {
       "value": "#374274",
-      "type": "color",
-      "description": "374274"
+      "type": "color"
     },
     "indigo-cool-80": {
       "value": "#292d42",
-      "type": "color",
-      "description": "292D42"
+      "type": "color"
     },
     "indigo-cool-90": {
       "value": "#151622",
+      "type": "color"
+    },
+    "indigo-cool-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "151622"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "indigo-cool-5v": {
       "value": "#edf0ff",
-      "type": "color",
-      "description": "EDF0FF"
+      "type": "color"
     },
     "indigo-cool-10v": {
       "value": "#dee5ff",
-      "type": "color",
-      "description": "DEE5FF"
+      "type": "color"
     },
     "indigo-cool-20v": {
       "value": "#b8c8ff",
-      "type": "color",
-      "description": "B8C8FF"
+      "type": "color"
     },
     "indigo-cool-30v": {
       "value": "#94adff",
-      "type": "color",
-      "description": "94ADFF"
+      "type": "color"
     },
     "indigo-cool-40v": {
       "value": "#628ef4",
-      "type": "color",
-      "description": "628EF4"
+      "type": "color"
     },
     "indigo-cool-50v": {
       "value": "#4866ff",
-      "type": "color",
-      "description": "4866FF"
+      "type": "color"
     },
     "indigo-cool-60v": {
       "value": "#3e4ded",
-      "type": "color",
-      "description": "3E4DED"
+      "type": "color"
     },
     "indigo-cool-70v": {
       "value": "#222fbf",
-      "type": "color",
-      "description": "222FBF"
+      "type": "color"
     },
     "indigo-cool-80v": {
       "value": "#1b2b85",
+      "type": "color"
+    },
+    "indigo": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1B2B85"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "indigo-5": {
       "value": "#efeff8",
-      "type": "color",
-      "description": "EFEFF8"
+      "type": "color"
     },
     "indigo-10": {
       "value": "#e5e4fa",
-      "type": "color",
-      "description": "E5E4FA"
+      "type": "color"
     },
     "indigo-20": {
       "value": "#c5c5f3",
-      "type": "color",
-      "description": "C5C5F3"
+      "type": "color"
     },
     "indigo-30": {
       "value": "#a5a8eb",
-      "type": "color",
-      "description": "A5A8EB"
+      "type": "color"
     },
     "indigo-40": {
       "value": "#8889db",
-      "type": "color",
-      "description": "8889DB"
+      "type": "color"
     },
     "indigo-50": {
       "value": "#676cc8",
-      "type": "color",
-      "description": "676CC8"
+      "type": "color"
     },
     "indigo-60": {
       "value": "#4d52af",
-      "type": "color",
-      "description": "4D52AF"
+      "type": "color"
     },
     "indigo-70": {
       "value": "#3d4076",
-      "type": "color",
-      "description": "3D4076"
+      "type": "color"
     },
     "indigo-80": {
       "value": "#2b2c40",
-      "type": "color",
-      "description": "2B2C40"
+      "type": "color"
     },
     "indigo-90": {
       "value": "#16171f",
+      "type": "color"
+    },
+    "indigo-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "16171F"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "indigo-5v": {
       "value": "#f0f0ff",
-      "type": "color",
-      "description": "F0F0FF"
+      "type": "color"
     },
     "indigo-10v": {
       "value": "#e0e0ff",
-      "type": "color",
-      "description": "E0E0FF"
+      "type": "color"
     },
     "indigo-20v": {
       "value": "#ccceff",
-      "type": "color",
-      "description": "CCCEFF"
+      "type": "color"
     },
     "indigo-30v": {
       "value": "#a3a7fa",
-      "type": "color",
-      "description": "A3A7FA"
+      "type": "color"
     },
     "indigo-40v": {
       "value": "#8289ff",
-      "type": "color",
-      "description": "8289FF"
+      "type": "color"
     },
     "indigo-50v": {
       "value": "#656bd7",
-      "type": "color",
-      "description": "656BD7"
+      "type": "color"
     },
     "indigo-60v": {
       "value": "#4a50c4",
-      "type": "color",
-      "description": "4A50C4"
+      "type": "color"
     },
     "indigo-70v": {
       "value": "#3333a3",
-      "type": "color",
-      "description": "3333A3"
+      "type": "color"
     },
     "indigo-80v": {
       "value": "#212463",
+      "type": "color"
+    },
+    "indigo-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "212463"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "indigo-warm-5": {
       "value": "#f1eff7",
-      "type": "color",
-      "description": "F1EFF7"
+      "type": "color"
     },
     "indigo-warm-10": {
       "value": "#e7e3fa",
-      "type": "color",
-      "description": "E7E3FA"
+      "type": "color"
     },
     "indigo-warm-20": {
       "value": "#cbc4f2",
-      "type": "color",
-      "description": "CBC4F2"
+      "type": "color"
     },
     "indigo-warm-30": {
       "value": "#afa5e8",
-      "type": "color",
-      "description": "AFA5E8"
+      "type": "color"
     },
     "indigo-warm-40": {
       "value": "#9287d8",
-      "type": "color",
-      "description": "9287D8"
+      "type": "color"
     },
     "indigo-warm-50": {
       "value": "#7665d1",
-      "type": "color",
-      "description": "7665D1"
+      "type": "color"
     },
     "indigo-warm-60": {
       "value": "#5e519e",
-      "type": "color",
-      "description": "5E519E"
+      "type": "color"
     },
     "indigo-warm-70": {
       "value": "#453c7b",
-      "type": "color",
-      "description": "453C7B"
+      "type": "color"
     },
     "indigo-warm-80": {
       "value": "#2e2c40",
-      "type": "color",
-      "description": "2E2C40"
+      "type": "color"
     },
     "indigo-warm-90": {
       "value": "#18161d",
+      "type": "color"
+    },
+    "indigo-warm-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "18161D"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "indigo-warm-5v": {
       "value": "#f5f2ff",
-      "type": "color",
-      "description": "F5F2FF"
+      "type": "color"
     },
     "indigo-warm-10v": {
       "value": "#e4deff",
-      "type": "color",
-      "description": "E4DEFF"
+      "type": "color"
     },
     "indigo-warm-20v": {
       "value": "#cfc4fd",
-      "type": "color",
-      "description": "CFC4FD"
+      "type": "color"
     },
     "indigo-warm-30v": {
       "value": "#b69fff",
-      "type": "color",
-      "description": "B69FFF"
+      "type": "color"
     },
     "indigo-warm-40v": {
       "value": "#967efb",
-      "type": "color",
-      "description": "967EFB"
+      "type": "color"
     },
     "indigo-warm-50v": {
       "value": "#745fe9",
-      "type": "color",
-      "description": "745FE9"
+      "type": "color"
     },
     "indigo-warm-60v": {
       "value": "#5942d2",
-      "type": "color",
-      "description": "5942D2"
+      "type": "color"
     },
     "indigo-warm-70v": {
       "value": "#3d2c9d",
-      "type": "color",
-      "description": "3D2C9D"
+      "type": "color"
     },
     "indigo-warm-80v": {
       "value": "#261f5b",
+      "type": "color"
+    },
+    "violet": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "261F5B"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "violet-5": {
       "value": "#f4f1f9",
-      "type": "color",
-      "description": "F4F1F9"
+      "type": "color"
     },
     "violet-10": {
       "value": "#ebe3f9",
-      "type": "color",
-      "description": "EBE3F9"
+      "type": "color"
     },
     "violet-20": {
       "value": "#d0c3e9",
-      "type": "color",
-      "description": "D0C3E9"
+      "type": "color"
     },
     "violet-30": {
       "value": "#b8a2e3",
-      "type": "color",
-      "description": "B8A2E3"
+      "type": "color"
     },
     "violet-40": {
       "value": "#9d84d2",
-      "type": "color",
-      "description": "9D84D2"
+      "type": "color"
     },
     "violet-50": {
       "value": "#8168b3",
-      "type": "color",
-      "description": "8168B3"
+      "type": "color"
     },
     "violet-60": {
       "value": "#665190",
-      "type": "color",
-      "description": "665190"
+      "type": "color"
     },
     "violet-70": {
       "value": "#4c3d69",
-      "type": "color",
-      "description": "4C3D69"
+      "type": "color"
     },
     "violet-80": {
       "value": "#312b3f",
-      "type": "color",
-      "description": "312B3F"
+      "type": "color"
     },
     "violet-90": {
       "value": "#18161d",
+      "type": "color"
+    },
+    "violet-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "18161D"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "violet-5v": {
       "value": "#f7f2ff",
-      "type": "color",
-      "description": "F7F2FF"
+      "type": "color"
     },
     "violet-10v": {
       "value": "#ede3ff",
-      "type": "color",
-      "description": "EDE3FF"
+      "type": "color"
     },
     "violet-20v": {
       "value": "#d5bfff",
-      "type": "color",
-      "description": "D5BFFF"
+      "type": "color"
     },
     "violet-30v": {
       "value": "#c39deb",
-      "type": "color",
-      "description": "C39DEB"
+      "type": "color"
     },
     "violet-40v": {
       "value": "#ad79e9",
-      "type": "color",
-      "description": "AD79E9"
+      "type": "color"
     },
     "violet-50v": {
       "value": "#9355dc",
-      "type": "color",
-      "description": "9355DC"
+      "type": "color"
     },
     "violet-60v": {
       "value": "#783cb9",
-      "type": "color",
-      "description": "783CB9"
+      "type": "color"
     },
     "violet-70v": {
       "value": "#54278f",
-      "type": "color",
-      "description": "54278F"
+      "type": "color"
     },
     "violet-80v": {
       "value": "#39215e",
+      "type": "color"
+    },
+    "violet-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "39215E"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "violet-warm-5": {
       "value": "#f8f0f9",
-      "type": "color",
-      "description": "F8F0F9"
+      "type": "color"
     },
     "violet-warm-10": {
       "value": "#f6dff8",
-      "type": "color",
-      "description": "F6DFF8"
+      "type": "color"
     },
     "violet-warm-20": {
       "value": "#e2bee4",
-      "type": "color",
-      "description": "E2BEE4"
+      "type": "color"
     },
     "violet-warm-30": {
       "value": "#d29ad8",
-      "type": "color",
-      "description": "D29AD8"
+      "type": "color"
     },
     "violet-warm-40": {
       "value": "#bf77c8",
-      "type": "color",
-      "description": "BF77C8"
+      "type": "color"
     },
     "violet-warm-50": {
       "value": "#b04abd",
-      "type": "color",
-      "description": "B04ABD"
+      "type": "color"
     },
     "violet-warm-60": {
       "value": "#864381",
-      "type": "color",
-      "description": "864381"
+      "type": "color"
     },
     "violet-warm-70": {
       "value": "#5c395a",
-      "type": "color",
-      "description": "5C395A"
+      "type": "color"
     },
     "violet-warm-80": {
       "value": "#382936",
-      "type": "color",
-      "description": "382936"
+      "type": "color"
     },
     "violet-warm-90": {
       "value": "#1b151b",
+      "type": "color"
+    },
+    "violet-warm-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1B151B"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "violet-warm-5v": {
       "value": "#fef2ff",
-      "type": "color",
-      "description": "FEF2FF"
+      "type": "color"
     },
     "violet-warm-10v": {
       "value": "#fbdcff",
-      "type": "color",
-      "description": "FBDCFF"
+      "type": "color"
     },
     "violet-warm-20v": {
       "value": "#f4b2ff",
-      "type": "color",
-      "description": "F4B2FF"
+      "type": "color"
     },
     "violet-warm-30v": {
       "value": "#ee83ff",
-      "type": "color",
-      "description": "EE83FF"
+      "type": "color"
     },
     "violet-warm-40v": {
       "value": "#d85bef",
-      "type": "color",
-      "description": "D85BEF"
+      "type": "color"
     },
     "violet-warm-50v": {
       "value": "#be32d0",
-      "type": "color",
-      "description": "BE32D0"
+      "type": "color"
     },
     "violet-warm-60v": {
       "value": "#93348c",
-      "type": "color",
-      "description": "93348C"
+      "type": "color"
     },
     "violet-warm-70v": {
       "value": "#711e6c",
-      "type": "color",
-      "description": "711E6C"
+      "type": "color"
     },
     "violet-warm-80v": {
       "value": "#481441",
+      "type": "color"
+    },
+    "magenta": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "481441"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "magenta-5": {
       "value": "#f9f0f2",
-      "type": "color",
-      "description": "F9F0F2"
+      "type": "color"
     },
     "magenta-10": {
       "value": "#f6e1e8",
-      "type": "color",
-      "description": "F6E1E8"
+      "type": "color"
     },
     "magenta-20": {
       "value": "#f0bbcc",
-      "type": "color",
-      "description": "F0BBCC"
+      "type": "color"
     },
     "magenta-30": {
       "value": "#e895b3",
-      "type": "color",
-      "description": "E895B3"
+      "type": "color"
     },
     "magenta-40": {
       "value": "#e0699f",
-      "type": "color",
-      "description": "E0699F"
+      "type": "color"
     },
     "magenta-50": {
       "value": "#c84281",
-      "type": "color",
-      "description": "C84281"
+      "type": "color"
     },
     "magenta-60": {
       "value": "#8b4566",
-      "type": "color",
-      "description": "8B4566"
+      "type": "color"
     },
     "magenta-70": {
       "value": "#66364b",
-      "type": "color",
-      "description": "66364B"
+      "type": "color"
     },
     "magenta-80": {
       "value": "#402731",
-      "type": "color",
-      "description": "402731"
+      "type": "color"
     },
     "magenta-90": {
       "value": "#1b1617",
+      "type": "color"
+    },
+    "magenta-vivid": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "1B1617"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "magenta-5v": {
       "value": "#fff2f5",
-      "type": "color",
-      "description": "FFF2F5"
+      "type": "color"
     },
     "magenta-10v": {
       "value": "#ffddea",
-      "type": "color",
-      "description": "FFDDEA"
+      "type": "color"
     },
     "magenta-20v": {
       "value": "#ffb4cf",
-      "type": "color",
-      "description": "FFB4CF"
+      "type": "color"
     },
     "magenta-30v": {
       "value": "#ff87b2",
-      "type": "color",
-      "description": "FF87B2"
+      "type": "color"
     },
     "magenta-40v": {
       "value": "#fd4496",
-      "type": "color",
-      "description": "FD4496"
+      "type": "color"
     },
     "magenta-50v": {
       "value": "#d72d79",
-      "type": "color",
-      "description": "D72D79"
+      "type": "color"
     },
     "magenta-60v": {
       "value": "#ab2165",
-      "type": "color",
-      "description": "AB2165"
+      "type": "color"
     },
     "magenta-70v": {
       "value": "#731f44",
-      "type": "color",
-      "description": "731F44"
+      "type": "color"
     },
     "magenta-80v": {
       "value": "#4f172e",
-      "type": "color",
-      "description": "4F172E"
+      "type": "color"
     },
     "gray-cool-1": {
       "value": "#fbfcfd",
-      "type": "color",
-      "description": "FBFCFD"
+      "type": "color"
     },
     "gray-cool-2": {
       "value": "#f7f9fa",
-      "type": "color",
-      "description": "F7F9FA"
+      "type": "color"
     },
     "gray-cool-3": {
       "value": "#f5f6f7",
-      "type": "color",
-      "description": "F5F6F7"
+      "type": "color"
     },
     "gray-cool-4": {
       "value": "#f1f3f6",
+      "type": "color"
+    },
+    "gray-cool": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "F1F3F6"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "gray-cool-5": {
       "value": "#edeff0",
-      "type": "color",
-      "description": "EDEFF0"
+      "type": "color"
     },
     "gray-cool-10": {
       "value": "#dfe1e2",
-      "type": "color",
-      "description": "DFE1E2"
+      "type": "color"
     },
     "gray-cool-20": {
       "value": "#c6cace",
-      "type": "color",
-      "description": "C6CACE"
+      "type": "color"
     },
     "gray-cool-30": {
       "value": "#a9aeb1",
-      "type": "color",
-      "description": "A9AEB1"
+      "type": "color"
     },
     "gray-cool-40": {
       "value": "#8d9297",
-      "type": "color",
-      "description": "8D9297"
+      "type": "color"
     },
     "gray-cool-50": {
       "value": "#71767a",
-      "type": "color",
-      "description": "71767A"
+      "type": "color"
     },
     "gray-cool-60": {
       "value": "#565c65",
-      "type": "color",
-      "description": "565C65"
+      "type": "color"
     },
     "gray-cool-70": {
       "value": "#3d4551",
-      "type": "color",
-      "description": "3D4551"
+      "type": "color"
     },
     "gray-cool-80": {
       "value": "#2d2e2f",
-      "type": "color",
-      "description": "2D2E2F"
+      "type": "color"
     },
     "gray-cool-90": {
       "value": "#1c1d1f",
-      "type": "color",
-      "description": "1C1D1F"
+      "type": "color"
     },
     "gray-1": {
       "value": "#fcfcfc",
-      "type": "color",
-      "description": "FCFCFC"
+      "type": "color"
     },
     "gray-2": {
       "value": "#f9f9f9",
-      "type": "color",
-      "description": "F9F9F9"
+      "type": "color"
     },
     "gray-3": {
       "value": "#f6f6f6",
-      "type": "color",
-      "description": "F6F6F6"
+      "type": "color"
     },
     "gray-4": {
       "value": "#f3f3f3",
+      "type": "color"
+    },
+    "gray": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "F3F3F3"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "gray-5": {
       "value": "#f0f0f0",
-      "type": "color",
-      "description": "F0F0F0"
+      "type": "color"
     },
     "gray-10": {
       "value": "#e6e6e6",
-      "type": "color",
-      "description": "E6E6E6"
+      "type": "color"
     },
     "gray-20": {
       "value": "#c9c9c9",
-      "type": "color",
-      "description": "C9C9C9"
+      "type": "color"
     },
     "gray-30": {
       "value": "#adadad",
-      "type": "color",
-      "description": "ADADAD"
+      "type": "color"
     },
     "gray-40": {
       "value": "#919191",
-      "type": "color",
-      "description": "919191"
+      "type": "color"
     },
     "gray-50": {
       "value": "#757575",
-      "type": "color",
-      "description": "757575"
+      "type": "color"
     },
     "gray-60": {
       "value": "#5c5c5c",
-      "type": "color",
-      "description": "5C5C5C"
+      "type": "color"
     },
     "gray-70": {
       "value": "#454545",
-      "type": "color",
-      "description": "454545"
+      "type": "color"
     },
     "gray-80": {
       "value": "#2e2e2e",
-      "type": "color",
-      "description": "2E2E2E"
+      "type": "color"
     },
     "gray-90": {
       "value": "#1b1b1b",
-      "type": "color",
-      "description": "1B1B1B"
+      "type": "color"
     },
     "gray-warm-1": {
       "value": "#fcfcfb",
-      "type": "color",
-      "description": "FCFCFB"
+      "type": "color"
     },
     "gray-warm-2": {
       "value": "#f9f9f7",
-      "type": "color",
-      "description": "F9F9F7"
+      "type": "color"
     },
     "gray-warm-3": {
       "value": "#f6f6f2",
-      "type": "color",
-      "description": "F6F6F2"
+      "type": "color"
     },
     "gray-warm-4": {
       "value": "#f5f5f0",
+      "type": "color"
+    },
+    "gray-warm": {
+      "value": "rgba(0,0,0,0)",
       "type": "color",
-      "description": "F5F5F0"
+      "description": "Color family token. This is set to a neutral value for reference resolution only."
     },
     "gray-warm-5": {
       "value": "#f0f0ec",
-      "type": "color",
-      "description": "F0F0EC"
+      "type": "color"
     },
     "gray-warm-10": {
       "value": "#e6e6e2",
-      "type": "color",
-      "description": "E6E6E2"
+      "type": "color"
     },
     "gray-warm-20": {
       "value": "#cac9c0",
-      "type": "color",
-      "description": "CAC9C0"
+      "type": "color"
     },
     "gray-warm-30": {
       "value": "#afaea2",
-      "type": "color",
-      "description": "AFAEA2"
+      "type": "color"
     },
     "gray-warm-40": {
       "value": "#929285",
-      "type": "color",
-      "description": "929285"
+      "type": "color"
     },
     "gray-warm-50": {
       "value": "#76766a",
-      "type": "color",
-      "description": "76766A"
+      "type": "color"
     },
     "gray-warm-60": {
       "value": "#5d5d52",
-      "type": "color",
-      "description": "5D5D52"
+      "type": "color"
     },
     "gray-warm-70": {
       "value": "#454540",
-      "type": "color",
-      "description": "454540"
+      "type": "color"
     },
     "gray-warm-80": {
       "value": "#2e2e2a",
-      "type": "color",
-      "description": "2E2E2A"
+      "type": "color"
     },
     "gray-warm-90": {
       "value": "#171716",
-      "type": "color",
-      "description": "171716"
+      "type": "color"
     },
     "ink": {
       "value": "{base-ink}",
@@ -2349,11 +2142,13 @@
     },
     "base-lightest": {
       "value": "{gray-warm-4}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects accordion background, outline button background hover, checkbox/radio background hover, follow-up question container background, footer primary section background, background color of the input, background color of the textarea"
     },
     "base-lighter": {
       "value": "{gray-warm-10}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects accordion button hover, disabled button state, footer secondary section background, color of the input inset border, color of the textarea inset border"
     },
     "base-light": {
       "value": "{gray-warm-30}",
@@ -2369,7 +2164,8 @@
     },
     "base-darker": {
       "value": "{gray-warm-70}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects follow up question container border"
     },
     "base-darkest": {
       "value": "{gray-warm-90}",
@@ -2377,7 +2173,8 @@
     },
     "base-ink": {
       "value": "{gray-warm-90}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects outline button, text and border color of the input, text and border color of the select, text and border color of the textarea"
     },
     "primary-family": {
       "value": "{mint}",
@@ -2506,15 +2303,18 @@
     },
     "error": {
       "value": "{orange-warm-50v}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects the danger button, the no button icon color"
     },
     "error-dark": {
       "value": "{orange-warm-60v}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects the error state border color"
     },
     "error-darker": {
       "value": "{orange-warm-70v}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects the danger button hover state"
     },
     "warning-family": {
       "value": "{gold-vivid}",
@@ -2592,11 +2392,11 @@
       "type": "color"
     },
     "emergency": {
-      "value": "{orange-warm-50v}",
+      "value": "{orange-warm-30v}",
       "type": "color"
     },
     "emergency-dark": {
-      "value": "{orange-warm-80v}",
+      "value": "{orange-warm-60v}",
       "type": "color"
     },
     "disabled-family": {
@@ -2606,15 +2406,18 @@
     },
     "disabled-light": {
       "value": "{gray-warm-10}",
-      "type": "color"
+      "type": "color",
+      "description": "Affects disabled button"
     },
     "disabled": {
-      "value": "{gray-warm-20}",
-      "type": "color"
+      "value": "{gray-warm-50}",
+      "type": "color",
+      "description": "Affects disabled outline button"
     },
     "disabled-dark": {
-      "value": "{gray-warm-30}",
-      "type": "color"
+      "value": "{gray-warm-70}",
+      "type": "color",
+      "description": "Affects disabled button text"
     },
     "link-color": {
       "value": "{primary}",

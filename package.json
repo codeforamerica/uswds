@@ -32,11 +32,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@factorial/eleventy-plugin-twig": "^0.1.2",
+    "@tokens-studio/sd-transforms": "^0.12.1",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^8.2.2",
     "highlight.js": "^11.9.0",
     "js-beautify": "^1.14.7",
     "markdown-it-attrs": "^4.1.6",
+    "style-dictionary": "^3.9.0",
     "thymeleaf": "^0.21.0"
   },
   "dependencies": {
