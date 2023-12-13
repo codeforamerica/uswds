@@ -53,7 +53,19 @@ import FileSelector from '../../packages/cfa-file-selector/cfa-file-selector.js'
 accordion.on(document.body);
 button.on(document.body);
 
-new Copy();
+new Copy({
+  copied: c => {
+    let icon = c.element.querySelector(c.selectors.ICON);
+    let href = icon.getAttribute('href').split('#');
+    icon.setAttribute('href', `${href[0]}#check_circle`);
+  },
+  after: c => {
+    let icon = c.element.querySelector(c.selectors.ICON);
+    let href = icon.getAttribute('href').split('#');
+    icon.setAttribute('href', `${href[0]}#content_copy`);
+  }
+});
+
 new Details();
 new FollowUpQuestion();
 

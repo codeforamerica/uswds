@@ -183,10 +183,11 @@ const block = (str, lang = 'html', beautifyStr = true, escapeStr = true) => {
       <div class="code-block__utility position-sticky pin-top">
         <button data-js="copy" data-copy="${id}" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-            <use href="${config.baseUrl}assets/img/sprite.svg#content_copy"></use>
+            <use data-copy="icon" href="${config.baseUrl}assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
         <textarea hidden data-copy-target="${id}">${escaped}</textarea>
       </div>
       <pre class="language-${lang} padding-top-0">${highlighted}</pre>

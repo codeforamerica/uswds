@@ -4,7 +4,8 @@
 
 .cfa-file-input {
   .usa-file-input__target {
-    @include u-border($cfa-form-elements-border-width, dashed, $theme-color-primary);
+    @include u-border($cfa-form-elements-border-width, dashed);
+    border-color: color($theme-color-primary, override);
 
     cursor: pointer;
 

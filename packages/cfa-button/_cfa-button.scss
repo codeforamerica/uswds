@@ -3,6 +3,12 @@
 @use '../cfa-transition/_cfa-transition.scss' as *;
 @use '../cfa-links/_cfa-links.scss' as *;
 
+.cfa-button {
+  > * {
+    pointer-events: none;
+  }
+}
+
 /**
  * Match closest size of small CfA buttons
  */
