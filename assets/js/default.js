@@ -1536,7 +1536,7 @@
 
 	    this.selectors = (s.hasOwnProperty('selectors')) ? s.selectors : Copy.selectors;
 
-	    this.aria = (s.hasOwnProperty('aria')) ? s.aria : Copy.aria;
+	    this.message = (s.hasOwnProperty('message')) ? s.message : Copy.message;
 
 	    this.notifyTimeout = (s.hasOwnProperty('notifyTimeout')) ? s.notifyTimeout : Copy.notifyTimeout;
 
@@ -1559,7 +1559,8 @@
 
 	      this.element = event.target;
 
-	      this.element.setAttribute(this.aria, false);
+	      this.elementMessage = (this.element.nextElementSibling.matches(this.selectors.MESSAGE))
+	        ? this.element.nextElementSibling : null;
 
 	      this.target = this.element.dataset.copy;
 
@@ -1568,12 +1569,16 @@
 	      if (this.copy(this.target)) {
 	        this.copied(this);
 
-	        this.element.setAttribute(this.aria, true);
+	        if (this.elementMessage) {
+	          this.elementMessage.innerText = this.message;
+	        }
 
 	        clearTimeout(this.element['timeout']);
 
 	        this.element['timeout'] = setTimeout(() => {
-	          this.element.setAttribute(this.aria, false);
+	          if (this.elementMessage) {
+	            this.elementMessage.innerText = '';
+	          }
 
 	          this.after(this);
 	        }, this.notifyTimeout);
@@ -1630,21 +1635,23 @@
 	 * The selectors for various elements queried by the utility. Refer to the
 	 * source for defaults.
 	 *
-	 * @var {[type]}
+	 * @var {Object}
 	 */
 	Copy.selectors = {
-	  TARGETS: '[data-copy-target]'
+	  TARGETS: '[data-copy-target]',
+	  MESSAGE: '[data-copy="message"]',
+	  ICON: '[data-copy="icon"]'
 	};
 
 	/**
-	 * Button aria role to toggle
+	 * The message that is asserted when the copy is successful.
 	 *
 	 * @var {String}
 	 */
-	Copy.aria = 'aria-pressed';
+	Copy.message = 'Copied!';
 
 	/**
-	 * Timeout for the "Copied!" notification
+	 * Timeout for the "Copied!" notification.
 	 *
 	 * @var {Number}
 	 */
@@ -14491,7 +14498,19 @@
 	accordion$2.on(document.body);
 	button.on(document.body);
 
-	new Copy();
+	new Copy({
+	  copied: c => {
+	    let icon = c.element.querySelector(c.selectors.ICON);
+	    let href = icon.getAttribute('href').split('#');
+	    icon.setAttribute('href', `${href[0]}#check_circle`);
+	  },
+	  after: c => {
+	    let icon = c.element.querySelector(c.selectors.ICON);
+	    let href = icon.getAttribute('href').split('#');
+	    icon.setAttribute('href', `${href[0]}#content_copy`);
+	  }
+	});
+
 	new Details();
 	new FollowUpQuestion();
 
