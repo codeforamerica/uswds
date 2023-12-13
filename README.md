@@ -1,4 +1,4 @@
-# Code for America, U.S. Web Design System (USWDS) theme
+![Code for America, U.S. Web Design System (USWDS) theme](dist/assets/site/thumbnail-site.png)
 
 This theme replaces the <a href="https://github.com/codeforamerica/honeycrisp-gem" target="_blank" rel="noindex noopener nofollow">Honeycrisp Ruby gem</a> but preserves the style and design. The theme uses “design tokens” from the Honeycrisp Design System to make the USWDS look similar to Honeycrisp. Full documentation on using the theme can be referenced on the <a href="https://codeforamerica.github.io/uswds" target="_blank" rel="noindex noopener nofollow">corresponding documentation site</a>.
 
