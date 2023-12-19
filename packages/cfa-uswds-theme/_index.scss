@@ -229,25 +229,25 @@ $cfa-font-mono-custom-stack: monospace !default;
 // - Type scales
 $cfa-type-scale-3xs: 3 !default;
 $cfa-type-scale-2xs: 4 !default;
-$cfa-type-scale-xs: 5 !default;     // h6?
-$cfa-type-scale-sm: 6 !default;     // h5 + paragraphs?
-$cfa-type-scale-md: 7 !default;     // h4?
-// $cfa-type-scale-lg: 9 !default;  // h3
-// $cfa-type-scale-xl: 12 !default; // h2
-$cfa-type-scale-2xl: 15 !default;   // h1
-$cfa-type-scale-3xl: 17 !default;   // Pushing this more because h1 is originally set to 15
+$cfa-type-scale-xs: 5 !default;   //
+$cfa-type-scale-sm: 6 !default;   // h5, h6, and paragraphs
+$cfa-type-scale-md: 7 !default;   // h4
+$cfa-type-scale-lg: 8 !default;   // h3
+$cfa-type-scale-xl: 11 !default;  // h2
+$cfa-type-scale-2xl: 15 !default; // h1
+$cfa-type-scale-3xl: 17 !default; // Pushing this more because h1 is originally set to 15
 
 $cfa-style-body-element: true !default; // Not well documented but necessary to make type size and line heights consistent with .usa-prose
 $cfa-body-line-height: 4 !default;
 $cfa-h6-font-size: 'xs' !default;
+$cfa-lead-font-size: 'xl' !default;   // Match heading level 2
+$cfa-lead-line-height: 2 !default;    // Match heading line heights
 $cfa-small-font-size: '2xs' !default; // Affects details font size
 
 // Setting measures to none prevents text from having a fixed width and allows it to flow
 $cfa-text-measure-narrow: 'none' !default;
 $cfa-text-measure: 'none' !default;
 $cfa-text-measure-wide: 'none' !default;
-
-$cfa-lead-line-height: 4 !default;
 
 // Components
 // - Accordion
