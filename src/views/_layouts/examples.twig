@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>{% if title %}{{ title }} | {% endif %}{{ package.nice }}</title>
+  <meta name="title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
+
+  <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/site/site.css">
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  {{ content|raw }}
+
+  <script src="{{ config.baseUrl }}{{ config.assets }}/js/default.js"></script>
+
+  {% block scripts %}{% endblock %}
+
+  {% include '../../../dist/assets/site/svgs.svg' %}
+</body>
+</html>

@@ -1,0 +1,1 @@
+<iframe tabindex="0" src="{{ src }}" title="{{ title }}" width="800" height="450" class="border border-base-lighter radius-lg width-full add-aspect-16x9 margin-0 margin-y-3 padding-3 tablet:padding-4"></iframe>
