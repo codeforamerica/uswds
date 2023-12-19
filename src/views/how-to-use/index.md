@@ -6,7 +6,7 @@ layout: default
 story: Guides to help you get started with the Code for America USWDS theme.
 sublist: true
 thumbnail: assets/site/thumbnail-how-to-use.png
-thumbnail_description: Browse simple and consistent solutions to common user-interface needs in the Code for America U.S. Web Design System theme.
+thumbnail_description: Browse guides to help you get started with the Code for America USWDS theme.
 ---
 
 <ul class="usa-card-group flex-row margin-top-4">

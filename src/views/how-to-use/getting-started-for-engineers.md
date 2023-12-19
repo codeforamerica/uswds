@@ -23,7 +23,7 @@ sublist: [
   }
 ]
 thumbnail: assets/site/thumbnail-installation.png
-thumbnail_description: Browse simple and consistent solutions to common user-interface needs in the Code for America U.S. Web Design System theme.
+thumbnail_description: Learn how to install and configure the Code for America USWDS theme.
 ---
 
 {% capture utility_alert %}{% capture context %}{
