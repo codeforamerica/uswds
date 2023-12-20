@@ -1,7 +1,7 @@
 {
   "name": "@codeforamerica/uswds",
   "nice": "Code for America U.S. Web Design System theme",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "The Code for America Honeycrisp component library, recreated using the U.S. Web Design System.",
   "repository": {
     "type": "git",
