@@ -244,6 +244,9 @@ $cfa-lead-font-size: 'xl' !default;   // Match heading level 2
 $cfa-lead-line-height: 2 !default;    // Match heading line heights
 $cfa-small-font-size: '2xs' !default; // Affects details font size
 
+$cfa-heading-margin-top: 1.5rem;   // 3 x 8 spacing units
+$cfa-paragraph-margin-top: 1.5rem; // 3 x 8 spacing units
+
 // Setting measures to none prevents text from having a fixed width and allows it to flow
 $cfa-text-measure-narrow: 'none' !default;
 $cfa-text-measure: 'none' !default;

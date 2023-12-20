@@ -1,9 +1,63 @@
 @use 'uswds-core' as *;
+@use 'cfa-core' as *;
 
-.usa-prose > h6, h6 {
-  text-transform: none;
+@mixin cfa-typeset-heading-1 {
+  margin-top: units($cfa-heading-1-margin-top);
 }
 
-ol, ul {
-  line-height: line-height('body', 6);
+@mixin cfa-typeset-heading-2 {
+  margin-top: units($cfa-heading-2-margin-top);
+}
+
+@mixin cfa-typeset-heading-6 {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@mixin cfa-typeset-lists {
+  li {
+    margin-bottom: units($cfa-list-item-margin-bottom);
+  }
+}
+
+@mixin cfa-content-styles {
+  * + h1 {
+    @include cfa-typeset-heading-1;
+  }
+
+  * + h2 {
+    @include cfa-typeset-heading-2;
+  }
+
+  h6 {
+    @include cfa-typeset-heading-6
+  }
+
+  ol, ul {
+    @include cfa-typeset-lists
+  }
+}
+
+.usa-prose {
+  & > {
+    * + h1 {
+       @include cfa-typeset-heading-1;
+    }
+
+    * + h2 {
+       @include cfa-typeset-heading-2;
+    }
+
+    h6 {
+      @include cfa-typeset-heading-6
+    }
+
+    ol, ul {
+      @include cfa-typeset-lists
+    }
+  }
+}
+
+@if $theme-global-content-styles == true {
+  @include cfa-content-styles;
 }
