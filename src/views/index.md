@@ -8,11 +8,11 @@ intro:
     <div class="usa-prose text-center maxw-mobile-lg margin-x-auto radius-lg padding-y-8">
       <h1>
         <span class="usa-sr-only">{{ package.nice }}</span>
-        <svg aria-hidden="true" width="573" height="128" class="maxw-full">
+        <svg aria-hidden="true" width="480" height="108" class="maxw-full">
           <use href="#logo">
         </svg>
       </h1>
-      <p class="usa-intro">{{ package.description }}</p>
+      <div><p class="usa-intro">{{ package.description }}</p></div>
       <div>
         <a class="cfa-button usa-button usa-button--outline usa-button--big margin-x-0" href="{{ config.baseUrl }}how-to-use">
           <span>How to use</span>
