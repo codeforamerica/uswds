@@ -18,6 +18,10 @@
   li {
     margin-bottom: units($cfa-list-item-margin-bottom);
   }
+
+  ul, ol {
+    margin-top: units($cfa-list-item-margin-bottom);
+  }
 }
 
 @mixin cfa-content-styles {
