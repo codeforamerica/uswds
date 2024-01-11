@@ -40,9 +40,9 @@ thumbnail_description: Learn how to install and configure the Code for America U
   "text": "You may use the <a href=\"https://github.com/codeforamerica/uswds-starter\" target=\"_blank\" target=\"_blank\" rel=\"noopener nofollow\" class=\"usa-link--external\">Code for America USWDS starter repository</a> to quickly get started or follow a similar step-by-step process below."
 }{% endcapture %}{% component 'alert' context %}{% endcapture %}
 
-## Overview of the new design system {#overview}
+## Overview of the theme {#overview}
 
-The Code for America, U. S. Web Design System (USWDS) theme replaces the Honeycrisp Ruby gem but preserves its design style. The theme uses “design tokens” from the Honeycrisp design system to make the USWDS look similar to Honeycrisp. On this site, engineers can reference documentation for component replacements.
+The Code for America, U. S. Web Design System (USWDS) theme extends the USWDS to replace the Honeycrisp Ruby gem. On this site, engineers can reference the theme installation, customization, and usage documentation for component replacements (written in the Thymeleaf and ERB template languages).
 
 ### Migrating from Honeycrisp
 
@@ -56,33 +56,11 @@ Migration requires changes in installation and how components are written in app
 
 * Code snippets for Thymeleaf template fragments (Java Spring) and Embedded Ruby (ERB) partials (Ruby on Rails).
 
-### Additional features
-
-USWDS components unavailable in Honeycrisp can be used in applications*. Some examples include:
-
-* the <a href="https://designsystem.digital.gov/components/combo-box" target="_blank" rel="noopener nofollow" class="usa-link--external">Combobox</a>,
-
-* the <a href="https://designsystem.digital.gov/components/date-picker" target="_blank" rel="noopener nofollow" class="usa-link--external">Date Picker</a>,
-
-* the <a href="https://designsystem.digital.gov/components/time-picker" target="_blank" rel="noopener nofollow" class="usa-link--external">Time Picker</a>,
-
-* and <a href="https://designsystem.digital.gov/components/overview" target="_blank" rel="noopener nofollow" class="usa-link--external">others</a>.
-
-Extended USWDS themes are more easily supported, if desired, using Sass configuration methods.
-
-The USWDS provides a robust set of CSS utilities that can be used to make small modifications to components or templates. Utilities can also be used to create entirely new components.
-
-Code snippets for each component are rendered using pre-built Thymeleaf template fragments and ERB templates that can be included in your project. Parameters can be passed to these components to customize their appearance.
-
-<small>*Please keep in mind, however, due to the Form Flow Builder’s focus on a limited set of components, we have not tested all USWDS components with this theme.</small>
-
 ## Enabling the theme in the Form Flow Builder {#ffb}
 
 The theme is already available in the Code for America Form Flow Builder <a href="https://github.com/codeforamerica/form-flow" target="_blank" rel="noopener nofollow" class="usa-link--external">Library</a> and <a href="https://github.com/codeforamerica/form-flow-starter-app" target="_blank" rel="noopener nofollow" class="usa-link--external">Starter Application</a>. To enable the theme, follow these steps:
 
-1. Run the setup script. This will check and handle the installation of NPM and Node.js.
-
-2. Add env variables to `.env`.
+1. Follow the <a href="https://github.com/codeforamerica/form-flow-starter-app?tab=readme-ov-file#setup-instructions" target="_blank" rel="noopener nofollow" class="usa-link--external">setup instructions for the Form Flow Builder Starter Application</a>.
 
 3. Change the <a href="https://github.com/codeforamerica/form-flow#design-system" target="_blank" rel="noopener nofollow" class="usa-link--external">design system configuration setting in your application.yaml file</a>. Enabling this property sets template resolution to use the theme templates and an updated head template linking to precompiled styles and scripts.
 

@@ -750,16 +750,34 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addGlobalData('config', config);
 
-  eleventyConfig.addCollection('componentByAlpha', (collectionApi) => {
-    let alpha = collectionApi.getFilteredByTag('component').sort((a, b) => a.data.title.localeCompare(b.data.title));
+  eleventyConfig.addCollection('aboutByAlpha', (collectionApi) => {
+    let alpha = collectionApi.getFilteredByTag('about')
+      .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-    return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
+    return [
+      ...alpha.filter(item => item.data.tags.includes('primary')),
+      ...alpha.filter(item => !item.data.tags.includes('primary'))
+    ];
+  });
+
+  eleventyConfig.addCollection('componentByAlpha', (collectionApi) => {
+    let alpha = collectionApi.getFilteredByTag('component')
+      .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+    return [
+      ...alpha.filter(item => item.data.tags.includes('primary')),
+      ...alpha.filter(item => !item.data.tags.includes('primary'))
+    ];
   });
 
   eleventyConfig.addCollection('documentationByAlpha', (collectionApi) => {
-    let alpha = collectionApi.getFilteredByTag('documentation').sort((a, b) => a.data.title.localeCompare(b.data.title));
+    let alpha = collectionApi.getFilteredByTag('documentation')
+      .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-    return [...alpha.filter(item => item.data.tags.includes('primary')), ...alpha.filter(item => !item.data.tags.includes('primary'))];
+    return [
+      ...alpha.filter(item => item.data.tags.includes('primary')),
+      ...alpha.filter(item => !item.data.tags.includes('primary'))
+    ];
   });
 
   /**

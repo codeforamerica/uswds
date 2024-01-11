@@ -2,25 +2,25 @@
 
 <div class="usa-overlay"></div>
 
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container flex-align-center">
-    <div class="usa-navbar">
-      <div class="usa-logo margin-y-2">
-        <a href="{{ config.baseUrl }}" title="{{ package.nice }}">
-          <svg aria-hidden="true" tabindex="-1" width="380" height="85" xmlns="http://www.w3.org/2000/svg" class="display-none desktop:display-block maxw-full">
-            <use href="#logo">
-          </svg>
-        </a>
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo margin-y-2">
+      <a href="{{ config.baseUrl }}" title="{{ package.nice }}">
+        <svg aria-hidden="true" tabindex="-1" width="380" height="85" xmlns="http://www.w3.org/2000/svg" class="display-none desktop:display-block maxw-full">
+          <use href="#logo">
+        </svg>
+      </a>
 
-        <em class="usa-logo__text desktop:display-none">
-          <a href="{{ config.baseUrl }}" title="{{ package.nice }}">{{ package.nice }}</a>
-        </em>
-      </div>
-
-      <button type="button" class="usa-menu-btn">Menu</button>
+      <em class="usa-logo__text desktop:display-none">
+        <a href="{{ config.baseUrl }}" title="{{ package.nice }}">{{ package.nice }}</a>
+      </em>
     </div>
 
-    <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+
+  <nav aria-label="Primary navigation" class="usa-nav desktop:padding-0">
+    <div class="usa-nav__inner">
       <button type="button" class="usa-nav__close">
         <img src="{{ config.baseUrl }}assets/img/usa-icons/close.svg" role="img" alt="Close" />
       </button>
@@ -28,12 +28,19 @@
       <ul class="usa-nav__primary usa-accordion flex-align-center">
         {% for item in collections.primary %}
         {% set ID = createId() %}
-        <li class="usa-nav__primary-item">
+        <li class="usa-nav__primary-item{% if item.data.collection in tags %} usa-current{% endif %}">
+          {% set url = item.url|split('/', 2) %}
+          <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %} class="usa-nav-link">
+            <span>{{ item.data.title }}</span>
+          </a>
+        </li>
+
+        {# <li class="usa-nav__primary-item">
           <button type="button" class="usa-accordion__button usa-nav__link{% if item.data.collection in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
             <span>{{ item.data.title }}</span>
-          </button>
+          </button> #}
 
-          <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
+          {# <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
             {% for item in collections[item.data.collection] %}
               <li class="usa-nav__submenu-item">
                 {% set url = item.url|split('/', 2) %}
@@ -41,87 +48,33 @@
               </li>
             {% endfor %}
           </ul>
-        </li>
+        </li> #}
         {% endfor %}
-
-        <li class="usa-nav__primary-item">
-          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link">
-            <span class="usa-sr-only">Design library</span>
-
-            <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
-              <use href="#icon-figma"></use>
-            </svg>
-          </a>
-        </li>
-
-        <li class="usa-nav__primary-item">
-          <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="usa-nav-link" title="Latest Release v{{ package.version }}">
-            <span class="usa-sr-only">Source (GitHub)</span>
-
-            <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
-              <use href="{{ config.baseUrl }}assets/img/sprite.svg#github"></use>
-            </svg>
-          </a>
-        </li>
       </ul>
 
-      {# <ul class="usa-nav__primary usa-accordion">
-        <li class="usa-nav__primary-item">
-          {% set ID = createId() %}
-          <button type="button" class="usa-accordion__button usa-nav__link{% if 'component' in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
-            <span>Components</span>
-          </button>
+      <div class="usa-nav__secondary desktop:margin-y-2 desktop:bottom-4 desktop:flex-justify-center" style="height: 85px; bottom: 3rem">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item desktop:margin-0 desktop:padding-0 desktop:border-0">
+            <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link desktop:padding-2">
+              <span class="usa-sr-only">Design library</span>
 
-          <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
-            {% for item in collections.component %}
-              <li class="usa-nav__submenu-item">
-                {% set url = item.url|split('/', 2) %}
-                <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
-              </li>
-            {% endfor %}
-          </ul>
-        </li>
+              <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
+                <use href="#icon-figma"></use>
+              </svg>
+            </a>
+          </li>
 
-        <li class="usa-nav__primary-item">
-          {% set ID = createId() %}
-          <button type="button" class="usa-accordion__button usa-nav__link{% if 'design_token' in tags %} usa-current{% endif %}" aria-expanded="false" aria-controls="aria-c-{{ ID }}">
-            <span>Design tokens</span>
-          </button>
+          <li class="usa-nav__secondary-item desktop:margin-0 desktop:padding-0 desktop:border-0">
+            <a href="{{ package.repository.url }}/releases/tag/v{{ package.version }}" target="_blank" rel="noopener nofollow" class="usa-nav-link desktop:padding-2" title="Latest Release v{{ package.version }}">
+              <span class="usa-sr-only">Source (GitHub)</span>
 
-          <ul id="aria-c-{{ ID }}" class="usa-nav__submenu">
-            {% for item in collections.design_token %}
-              <li class="usa-nav__submenu-item">
-                {% set url = item.url|split('/', 2) %}
-                <a href="{{ config.baseUrl }}{{ url[0] ~ url[1] }}" {% if item.url == page.url %}aria-current="page"{% endif %}><span>{{ item.data.title }}</span></a>
-              </li>
-            {% endfor %}
-          </ul>
-        </li>
-
-        <li class="usa-nav__primary-item">
-          <a href="{{ package.design.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>Design Library</span></a>
-        </li>
-
-        <li class="usa-nav__primary-item">
-          <a href="{{ package.repository.url }}" target="_blank" rel="noopener nofollow" class="usa-nav-link usa-link--external"><span>v{{ package.version }}</span></a>
-        </li>
-      </ul> #}
-
-      {# <section aria-label="Search component">
-        <form class="usa-search usa-search--small" role="search">
-          <label class="usa-sr-only" for="search-field">Search</label>
-
-          <input class="usa-input" id="search-field" type="search" name="search"/>
-
-          <button class="usa-button" type="submit">
-            <img
-              src="{{ config.baseUrl }}assets/img/usa-icons-bg/search--white.svg"
-              class="usa-search__submit-icon"
-              alt="Search"
-            />
-          </button>
-        </form>
-      </section> #}
-    </nav>
-  </div>
+              <svg class="usa-icon square-4" aria-hidden="true" focusable="false" role="img">
+                <use href="{{ config.baseUrl }}assets/img/sprite.svg#github"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

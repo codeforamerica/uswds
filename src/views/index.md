@@ -1,6 +1,5 @@
 ---
 layout: full
-intro:
 ---
 
 <section class="bg-main usa-section padding-y-8">

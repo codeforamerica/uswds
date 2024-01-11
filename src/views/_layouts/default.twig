@@ -47,6 +47,13 @@
               } %}
               {% endif %}
 
+              {% if 'about' in tags %}
+              {% set sidenav = {
+                type: 'about',
+                items: collections.aboutByAlpha
+              } %}
+              {% endif %}
+
               {% for item in sidenav.items %}
               <li class="usa-sidenav__item is-current">
                 {% set url = item.url|split('/', 2) %}
@@ -83,9 +90,9 @@
           <div class="usa-prose">
             <h1>{{ title }}</h1>
 
-            <blockquote class="usa-intro margin-start-0 padding-start-2 padding-y-1 border-0 border-solid border-base-lighter border-start-width-1">
+            <p class="usa-intro margin-start-0 margin-bottom-6 padding-start-2 padding-y-1 border-0 border-solid border-start-width-1 border-base-lighter">
               {{ story }}
-            </blockquote>
+            </p>
           </div>
 
           {{ content|raw }}
