@@ -175,7 +175,7 @@ The {{ title }} component is used to allow the user to enter a date in an online
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'memorable-date', nice: title, context: context, caption: 'Memorable date' %}
+{% render 'figure.md', name: 'memorable-date', nice: title, context: context, caption: 'Memorable date', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

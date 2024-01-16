@@ -49,7 +49,7 @@ The {{ title }} component is used when longer form content needs to be entered i
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'textarea', nice: title, context: context, caption: 'Textarea' %}
+{% render 'figure.md', name: 'textarea', nice: title, context: context, caption: 'Textarea', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

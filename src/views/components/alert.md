@@ -63,7 +63,7 @@ We will use this information to evaluate the fairness of this application, and w
   "body": "{% md body %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Informational', context: context, caption: caption %}
+{% render 'figure.md', name: 'alert', nice: 'Informational', context: context, caption: caption, dictionary: dictionary %}
 
 {% capture caption %}
 
@@ -85,7 +85,7 @@ You were recommended for expedited food assistance (SNAP). [Click here to learn 
   "body": "{% md body %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Success', context: context, caption: caption %}
+{% render 'figure.md', name: 'alert', nice: 'Success', context: context, caption: caption, dictionary: dictionary %}
 
 {% capture caption %}
 
@@ -105,7 +105,7 @@ We couldn't find your address. To make sure you get mail from the county, you ma
   "body": "{% md body %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Warning', context: context, caption: caption %}
+{% render 'figure.md', name: 'alert', nice: 'Warning', context: context, caption: caption, dictionary: dictionary %}
 
 {% capture caption %}
 
@@ -127,7 +127,7 @@ This is an example error notice. Its a great way to highlight **errors or danger
   "body": "{% md body %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Error', context: context, caption: caption %}
+{% render 'figure.md', name: 'alert', nice: 'Error', context: context, caption: caption, dictionary: dictionary %}
 
 {% capture caption %}
 
@@ -149,7 +149,7 @@ Additional context and followup information including [a link](#). {.usa-alert__
   "body": "{% md body %}"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'alert', nice: 'Success', context: context, caption: caption %}
+{% render 'figure.md', name: 'alert', nice: 'Success', context: context, caption: caption, dictionary: dictionary %}
 
 ## Guidance {#guidance}
 

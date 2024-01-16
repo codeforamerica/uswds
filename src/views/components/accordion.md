@@ -99,7 +99,7 @@ Most programs on this application, including food and cash assistance, require a
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'accordion', nice: 'Bordered', context: context, caption: 'Bordered' %}
+{% render 'figure.md', name: 'accordion', nice: 'Bordered', context: context, caption: 'Bordered', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

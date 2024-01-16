@@ -62,7 +62,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Primary button' %}
+{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Primary button', dictionary: dictionary %}
 
 {% capture context %}{
   "items": [
@@ -86,7 +86,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Outline button' %}
+{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Outline button', dictionary: dictionary %}
 
 {% capture context %}{
   "items": [
@@ -110,7 +110,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Big button' %}
+{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Big button', dictionary: dictionary %}
 
 {% capture context %}{
   "items": [
@@ -134,7 +134,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Big outline button' %}
+{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Big outline button', dictionary: dictionary %}
 
 {% capture context %}{
   "items": [
@@ -162,7 +162,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Button with icons. Any button type may have a prefixed or postfixed icon inside the label.' %}
+{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Button with icons. Any butt, dictionary: dictionary n type may have a prefixed or postfixed icon inside the label.' %}
 
 {% capture context %}{
   "items": [
@@ -186,7 +186,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Unstyled button' %}
+{% render 'figure.md', name: 'button', nice: 'Big Button', context: context, caption: 'Unstyled button', dictionary: dictionary %}
 
 {% capture context %}{
   "items": [
@@ -203,7 +203,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Secondary button' %}
+{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Secondary button', dictionary: dictionary %}
 
 {% capture caption %}
 
@@ -241,7 +241,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: caption %}
+{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: caption, dictionary: dictionary %}
 
 {% capture context %}{
   "items": [
@@ -267,7 +267,7 @@ The {{ title }} component allows users to trigger actions. They are styled consi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Link button' %}
+{% render 'figure.md', name: 'button', nice: 'Button', context: context, caption: 'Link button', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

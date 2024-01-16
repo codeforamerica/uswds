@@ -123,7 +123,7 @@ The Footer component is the last landmark of a web page and appears globally on 
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'footer', nice: title, context: context, caption: nice_uswds %}
+{% render 'figure.md', name: 'footer', nice: title, context: context, caption: nice_uswds, dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

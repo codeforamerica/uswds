@@ -111,7 +111,7 @@ The {{ title }} component allows a user to select multiple files from their devi
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'file-selector', nice: title, context: context, caption: title %}
+{% render 'figure.md', name: 'file-selector', nice: title, context: context, caption: title, dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

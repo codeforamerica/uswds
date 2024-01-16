@@ -138,6 +138,7 @@ module.exports = {
   dictionary: {
     package: 'Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts.',
     tokens: 'Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries.',
-    modifier: 'A modifier is a class name that applies a variant, type, or extended style customization to modify the component\'s visual appearance.'
+    modifier: 'A modifier is a class name that applies a variant, type, or extended style customization to modify the component\'s visual appearance.',
+    context: 'Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values.'
   }
 };

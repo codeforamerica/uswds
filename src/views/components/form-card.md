@@ -316,7 +316,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with multiple form groups and fieldsets' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with multiple form groups and fieldsets', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 {% capture id_street_address_line_1 %}{% createId %}{% endcapture %}
@@ -438,7 +438,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question and multi-part text input fieldset' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question and multi-part text input fieldset', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 {% capture id_alert_label %}{% createId %}{% endcapture %}
@@ -504,7 +504,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, alert, and radios fieldset' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, alert, and radios fieldset', dictionary: dictionary %}
 
 {% capture context %}{
   "form": {
@@ -535,7 +535,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, continue, and skip links' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, continue, and skip links', dictionary: dictionary %}
 
 {% capture help_message_content %}
 
@@ -574,7 +574,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, yes, and no links' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card with single question, yes, and no links', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 {% capture id_document_type %}{% createId %}{% endcapture %}
@@ -716,7 +716,7 @@ We accept any file with a name that ends in .pdf, .jpeg, .jpg, .png, .bmp, .gif,
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card for uploading documents' %}
+{% render 'figure.md', name: 'form-card', nice: title, context: context, caption: 'Form card for uploading documents', dictionary: dictionary %}
 
 ## Guidance {#guidance}
 

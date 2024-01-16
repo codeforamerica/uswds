@@ -42,6 +42,11 @@ The {{ title }} component is used as the header landmark for a page and appears 
 ## Examples {#examples}
 
 {% capture context %}{
+  "alert": {
+    "modifier": "cfa-alert cfa-site-alert usa-alert--info margin-0 border-top-0 border-x-0",
+    "role": "status",
+    "text": "This site is for demonstration purposes only."
+  },
   "container": {
     "modifier": "tablet:padding-y-2"
   },
@@ -63,15 +68,10 @@ The {{ title }} component is used as the header landmark for a page and appears 
     }
   },
   "chat": "{{ config.baseUrl }}assets/img/sprite.svg#chat",
-  "languageSelector": "{{ config.baseUrl }}assets/img/sprite.svg#translate",
-  "alert": {
-    "modifier": "cfa-alert cfa-site-alert usa-alert--info margin-0 border-top-0 border-x-0",
-    "role": "status",
-    "text": "This site is for demonstration purposes only."
-  }
+  "languageSelector": "{{ config.baseUrl }}assets/img/sprite.svg#translate"
 }{% endcapture %}
 
-{% render 'figure.md', name: 'toolbar', nice: title, context: context, caption: 'Toolbar' %}
+{% render 'figure.md', name: 'toolbar', nice: title, context: context, caption: 'Toolbar', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

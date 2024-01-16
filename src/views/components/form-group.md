@@ -68,7 +68,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with text input' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with text input', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -103,7 +103,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Invalid form group' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Invalid form group', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -130,7 +130,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with email input' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with email input', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -150,7 +150,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -171,7 +171,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -205,7 +205,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with prefix and mask (U.S. Dollars)' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with prefix and mask (U.S. Dollars)', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -237,7 +237,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with postfix' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with postfix', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -271,7 +271,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with prefix and input mask (U.S. Phone)' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with prefix and input mask (U.S. Phone)', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -295,7 +295,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with input mask (SSN)' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with input mask (SSN)', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -416,7 +416,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with select' %}
+{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with select', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

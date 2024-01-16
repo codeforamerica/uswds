@@ -117,7 +117,7 @@ The {{ title }} component progressively discloses a clarifying question. It only
   }
 }{% endcapture %}
 
-{% render 'figure.md', name: 'follow-up-question', nice: title, context: context, caption: 'Follow up question' %}
+{% render 'figure.md', name: 'follow-up-question', nice: title, context: context, caption: 'Follow up question', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 

@@ -137,7 +137,7 @@ p .code, li .code, td .code, dl .code, dd .code {
   color: var(--cfa-code-text) !important
 }
 
-.hljs-meta {
+.hljs-meta, .hljs-punctuation {
   color: var(--cfa-code-text-comment) !important
 }
 

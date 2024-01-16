@@ -69,7 +69,7 @@ The {{ title }} component allows users to choose one or more options from a list
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Checkboxes' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Checkboxes', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 
@@ -102,7 +102,7 @@ The {{ title }} component allows users to choose one or more options from a list
   ]
 }{% endcapture %}
 
-{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Checkboxes with descriptions' %}
+{% render 'figure.md', name: 'input-select', nice: title, context: context, caption: 'Checkboxes with descriptions', dictionary: dictionary %}
 
 <!-- GUIDANCE -->
 
