@@ -228,8 +228,8 @@
   <li><strong>Extends:</strong> <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier, no logos</a></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-1ea6d4f530df1"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-1ea6d4f530df1"><p>The <b>Identifier</b> extends the <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier, no logos</a>. </p></div>
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-8f7e17db16811"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-8f7e17db16811"><p>The <b>Identifier</b> extends the <a href="https://designsystem.digital.gov/components/identifier" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Identifier, no logos</a>. </p></div>
 </div>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
@@ -266,21 +266,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3690f90d86e34">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-bc8730e5c5fb1">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3690f90d86e34" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-bc8730e5c5fb1" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-98cec361f1f51" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-64a4deaebbc08" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-98cec361f1f51">&lt;div class=&quot;usa-identifier cfa-font-smooth&quot;&gt;
+        <textarea hidden data-copy-target="block-64a4deaebbc08">&lt;div class=&quot;usa-identifier cfa-font-smooth&quot;&gt;
   &lt;section class=&quot;usa-identifier__section usa-identifier__section--masthead&quot; aria-label=&quot;Agency identifier&quot;&gt;
     &lt;div class=&quot;usa-identifier__container&quot;&gt;
       &lt;div class=&quot;usa-identifier__identity&quot;&gt;
@@ -337,6 +338,101 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+    </div>
+      </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-bc8730e5c5fb1">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-bc8730e5c5fb1" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-85cb14bbd12df" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-85cb14bbd12df">{
+  &quot;modifier&quot;: &quot;cfa-font-smooth&quot;,
+  &quot;identity&quot;: {
+    &quot;ariaLabel&quot;: &quot;Agency identifier&quot;,
+    &quot;domain&quot;: &quot;domain.gov&quot;,
+    &quot;disclaimer&quot;: &quot;This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.&quot;
+  },
+  &quot;requiredLinks&quot;: {
+    &quot;ariaLabel&quot;: &quot;Important links&quot;,
+    &quot;items&quot;: [
+      {
+        &quot;label&quot;: &quot;About Code for America&quot;,
+        &quot;href&quot;: &quot;https://codeforamerica.org&quot;,
+        &quot;target&quot;: &quot;_blank&quot;,
+        &quot;rel&quot;: &quot;noopener nofollow&quot;,
+        &quot;modifier&quot;: &quot;usa-link--external&quot;
+      },
+      {
+        &quot;label&quot;: &quot;Diversity, Equity, &amp; Inclusion&quot;,
+        &quot;href&quot;: &quot;https://codeforamerica.org/about-us/diversity-equity-inclusion&quot;,
+        &quot;target&quot;: &quot;_blank&quot;,
+        &quot;rel&quot;: &quot;noopener nofollow&quot;,
+        &quot;modifier&quot;: &quot;usa-link--external&quot;
+      }
+    ]
+  },
+  &quot;governmentSection&quot;: {
+    &quot;ariaLabel&quot;: &quot;Domain.gov government information and services&quot;,
+    &quot;description&quot;: &quot;Looking for government information and services?&quot;,
+    &quot;link&quot;: {
+      &quot;label&quot;: &quot;Visit domain.gov&quot;,
+      &quot;href&quot;: &quot;https://get.gov&quot;,
+      &quot;target&quot;: &quot;_blank&quot;,
+      &quot;rel&quot;: &quot;noopener nofollow&quot;,
+      &quot;modifier&quot;: &quot;usa-link--external&quot;
+    }
+  }
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-font-smooth&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;identity&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;ariaLabel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Agency identifier&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;domain&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;domain.gov&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;disclaimer&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;This service was built by Code for America in partnership with Domain.gov on behalf of the people of the United States of America.&quot;</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;requiredLinks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;ariaLabel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Important links&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;About Code for America&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;href&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.org&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;target&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;_blank&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;rel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;noopener nofollow&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;usa-link--external&quot;</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Diversity, Equity, &amp; Inclusion&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;href&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.org/about-us/diversity-equity-inclusion&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;target&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;_blank&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;rel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;noopener nofollow&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;usa-link--external&quot;</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;governmentSection&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;ariaLabel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Domain.gov government information and services&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Looking for government information and services?&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;link&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Visit domain.gov&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;href&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://get.gov&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;target&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;_blank&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;rel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;noopener nofollow&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;usa-link--external&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span></pre>
     </div>
       </div>
     </div>
@@ -455,8 +551,8 @@
   <li><strong>Embedded Ruby (ERB) partial template:</strong> <code>./_cfa-identifier.html.erb</code></li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-101da77c87943"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-101da77c87943">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-ce558e5e7469b"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-ce558e5e7469b">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -467,14 +563,14 @@
       <p>Refer to the <a href="https://designsystem.digital.gov/components/identifier/#using-the-identifier-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional USWDS theme settings.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-9048b83137308" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1dc06aacbdab6" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-9048b83137308">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
+        <textarea hidden data-copy-target="block-1dc06aacbdab6">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
       </div>
       <pre class="language-scss padding-top-0"><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;uswds-core&quot;</span> with ( /* additional USWDS theme settings */ );</pre>
     </div>
@@ -488,14 +584,14 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-ef740ade42ab3" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-bd38aedd5a47c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-ef740ade42ab3">&lt;div th:fragment=&quot;identifier(modifier, identity, requiredLinks, governmentSection)&quot; class=&quot;usa-identifier&quot; th:classappend=&quot;${modifier}&quot;&gt;
+        <textarea hidden data-copy-target="block-bd38aedd5a47c">&lt;div th:fragment=&quot;identifier(modifier, identity, requiredLinks, governmentSection)&quot; class=&quot;usa-identifier&quot; th:classappend=&quot;${modifier}&quot;&gt;
   &lt;section th:if=&quot;${identity}&quot; class=&quot;usa-identifier__section usa-identifier__section--masthead&quot; th:attr=&quot;aria-label=${identity.ariaLabel}&quot;&gt;
     &lt;div class=&quot;usa-identifier__container&quot;&gt;
       &lt;div class=&quot;usa-identifier__identity&quot;&gt;
@@ -555,16 +651,16 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-c424d37630bc7" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-2bddbf164a566" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-c424d37630bc7">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-identifier/cfa-identifier.th :: identifier(${modifier}, ${identity}, ${requiredLinks}, ${governmentSection})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-2bddbf164a566">&lt;th:block th:replace=&quot;~{packages/cfa-identifier/cfa-identifier.th :: identifier(${modifier}, ${identity}, ${requiredLinks}, ${governmentSection})}&quot; /&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-identifier/cfa-identifier.th :: identifier(${modifier}, ${identity}, ${requiredLinks}, ${governmentSection})}&quot;</span> /&gt;</span></pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-identifier/cfa-identifier.th :: identifier(${modifier}, ${identity}, ${requiredLinks}, ${governmentSection})}&quot;</span> /&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -576,14 +672,14 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-f7d291b904bb1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-3c2649558627c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-f7d291b904bb1">&lt;div class=&quot;usa-identifier&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
+        <textarea hidden data-copy-target="block-3c2649558627c">&lt;div class=&quot;usa-identifier&lt;% if defined?(modifier) %&gt; &lt;%= modifier %&gt;&lt;% end %&gt;&quot;&gt;
   &lt;% if defined?(identity) %&gt;&lt;section class=&quot;usa-identifier__section usa-identifier__section--masthead&quot;&lt;% if identity['ariaLabel'] %&gt; aria-label=&quot;&lt;%= identity['ariaLabel'] %&gt;&quot;&lt;% end %&gt;&gt;
     &lt;div class=&quot;usa-identifier__container&quot;&gt;
       &lt;div class=&quot;usa-identifier__identity&quot;&gt;
@@ -655,16 +751,16 @@
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-4b57c8f14327f" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-146ba00720bb6" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-4b57c8f14327f">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-identifier/_cfa-identifier.html.erb'), 0, 0, '@identifier').result_with_hash({modifier: modifier, identity: identity, requiredLinks: requiredLinks, governmentSection: governmentSection}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-146ba00720bb6">&lt;%= ERB.new(File.read('packages/cfa-identifier/_cfa-identifier.html.erb'), 0, 0, '@identifier').result_with_hash({modifier: modifier, identity: identity, requiredLinks: requiredLinks, governmentSection: governmentSection}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-identifier/_cfa-identifier.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@identifier&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">identity:</span> identity, <span class="hljs-symbol">requiredLinks:</span> requiredLinks, <span class="hljs-symbol">governmentSection:</span> governmentSection}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;packages/cfa-identifier/_cfa-identifier.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@identifier&#x27;</span>).result_with_hash({<span class="hljs-symbol">modifier:</span> modifier, <span class="hljs-symbol">identity:</span> identity, <span class="hljs-symbol">requiredLinks:</span> requiredLinks, <span class="hljs-symbol">governmentSection:</span> governmentSection}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>

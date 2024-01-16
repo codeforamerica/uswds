@@ -234,8 +234,8 @@
   <li><strong>Modifier:</strong> <code>.cfa-button</code></li>
 </ul>
 <div class="cfa-details">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-648aa98a5e7b7"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-648aa98a5e7b7"><p>The <b>Button</b> extends the <a href="https://designsystem.digital.gov/components/button" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Button component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/button/#using-the-button-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Button component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Button atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-button</code> to add <b>styles</b> defined in a custom stylesheet.</p><p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-db229948efd1b"><span>More details</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-db229948efd1b"><p>The <b>Button</b> extends the <a href="https://designsystem.digital.gov/components/button" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Button component</a>. The visual appearance is modified using <b>design tokens</b> applied to the <a href="https://designsystem.digital.gov/components/button/#using-the-button-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">USWDS Button component settings</a> from the <a href="http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-buttons" target="_blank" rel="noopener nofollow" class="usa-link--external">Honeycrisp Button atom</a>. Further customization is applied using the <b>CSS modifier(s)</b> <code>.cfa-button</code> to add <b>styles</b> defined in a custom stylesheet.</p><p><b>Design tokens</b>. Tokens define the name of basic system elements such as color, typography, or spacing. The values of tokens are relative to how the system defines them. This enables teams to alter the visual appearance of components yet remain within the system boundaries. <a href="https://bixal.github.io/uswds-design-tokens-guide" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about tokens on the Bixal's Design Tokens Guide</a>.</p><p><b>Modifier</b>. A modifier is a class name that applies a variant, type, or extended style customization to modify the component's visual appearance.</p></div>
 </div>
 <!-- EXAMPLES -->
 <h2 id="examples">Examples</h2>
@@ -253,21 +253,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-55bdeb1dcbc1">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-79ffc5025e87d">
           View HTML
         </button>
       </div>
-      <div id="aria-c-55bdeb1dcbc1" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-79ffc5025e87d" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-3ac7fc17e14c1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-bf3dd03bc1ba" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-3ac7fc17e14c1">&lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-bf3dd03bc1ba">&lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Primary&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot; disabled=&quot;true&quot;&gt;
@@ -288,6 +289,67 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-79ffc5025e87d">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-79ffc5025e87d" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-64ab4f44d2726" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-64ab4f44d2726">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Primary&quot;,
+      &quot;modifier&quot;: &quot;cfa-button&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;disabled&quot;: &quot;true&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ARIA Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;ariaDisabled&quot;: &quot;true&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Primary&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;disabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ARIA Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;ariaDisabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
@@ -305,21 +367,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-860a77d2e0aed">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-c86a1427f9cd1">
           View HTML
         </button>
       </div>
-      <div id="aria-c-860a77d2e0aed" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-c86a1427f9cd1" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-ff0e4a87873e" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-9c115c61a0a2a" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-ff0e4a87873e">&lt;button class=&quot;usa-button cfa-button usa-button--outline&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-9c115c61a0a2a">&lt;button class=&quot;usa-button cfa-button usa-button--outline&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Outline&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button cfa-button usa-button--outline&quot; type=&quot;button&quot; disabled=&quot;true&quot;&gt;
@@ -340,6 +403,67 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-c86a1427f9cd1">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-c86a1427f9cd1" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-ccc2e9317316d" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-ccc2e9317316d">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Outline&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;disabled&quot;: &quot;true&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ARIA Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;ariaDisabled&quot;: &quot;true&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;disabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ARIA Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;ariaDisabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
@@ -357,21 +481,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-06f27affecf62">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-1da7189ae90b2">
           View HTML
         </button>
       </div>
-      <div id="aria-c-06f27affecf62" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-1da7189ae90b2" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-e28bc636ef156" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-6e93f37fecd4c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-e28bc636ef156">&lt;button class=&quot;usa-button cfa-button usa-button--big&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-6e93f37fecd4c">&lt;button class=&quot;usa-button cfa-button usa-button--big&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Big Primary&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button cfa-button usa-button--big&quot; type=&quot;button&quot; disabled=&quot;true&quot;&gt;
@@ -392,6 +517,67 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-1da7189ae90b2">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-1da7189ae90b2" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-17279ac826915" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-17279ac826915">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Big Primary&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;disabled&quot;: &quot;true&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ARIA Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;ariaDisabled&quot;: &quot;true&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Big Primary&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;disabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ARIA Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;ariaDisabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
@@ -409,21 +595,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-9a51b4fc50f46">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-029edef655173">
           View HTML
         </button>
       </div>
-      <div id="aria-c-9a51b4fc50f46" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-029edef655173" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-1604e8ddbd4cb" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-5cc4ee92fb40e" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-1604e8ddbd4cb">&lt;button class=&quot;usa-button cfa-button usa-button--big usa-button--outline&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-5cc4ee92fb40e">&lt;button class=&quot;usa-button cfa-button usa-button--big usa-button--outline&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Big Outline&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button cfa-button usa-button--big usa-button--outline&quot; type=&quot;button&quot; disabled=&quot;true&quot;&gt;
@@ -444,11 +631,72 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-029edef655173">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-029edef655173" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-3d5fbec60b433" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-3d5fbec60b433">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Big Outline&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;disabled&quot;: &quot;true&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ARIA Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;ariaDisabled&quot;: &quot;true&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Big Outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;disabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ARIA Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;ariaDisabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
 <figure class="border border-base-lighter margin-0 margin-y-3 padding-3 tablet:padding-4 radius-lg" >
-  <figcaption class="margin-bottom-2">Button with icons. Any button type may have a prefixed or postfixed icon inside the label.</figcaption>
+  <figcaption class="margin-bottom-2">Button with icons. Any butt, dictionary: dictionary n type may have a prefixed or postfixed icon inside the label.</figcaption>
   <button class="usa-button cfa-button" type="button">
   <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
     <use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate"></use>
@@ -476,21 +724,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-ec1d18c090059">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-f00d33232ca76">
           View HTML
         </button>
       </div>
-      <div id="aria-c-ec1d18c090059" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-f00d33232ca76" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-f795801b181a6" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-5bbae32dd010b" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-f795801b181a6">&lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-5bbae32dd010b">&lt;button class=&quot;usa-button cfa-button&quot; type=&quot;button&quot;&gt;
   &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
     &lt;use href=&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate&quot;&gt;&lt;/use&gt;
   &lt;/svg&gt;
@@ -541,6 +790,75 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-f00d33232ca76">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-f00d33232ca76" class="usa-accordion__content overflow-visible">
+        <p> The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-f6c232baeb6ef" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-f6c232baeb6ef">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Button&quot;,
+      &quot;modifier&quot;: &quot;cfa-button&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;prefix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Button&quot;,
+      &quot;modifier&quot;: &quot;cfa-button&quot;,
+      &quot;postfix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Button&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big&quot;,
+      &quot;prefix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Button&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--big&quot;,
+      &quot;postfix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;prefix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;postfix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;prefix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#translate&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;postfix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
@@ -558,21 +876,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-3015a2573a6ee">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-46e07bd731f98">
           View HTML
         </button>
       </div>
-      <div id="aria-c-3015a2573a6ee" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-46e07bd731f98" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-007f2f8ffedc1" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-cac2cef5c1bf3" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-007f2f8ffedc1">&lt;button class=&quot;usa-button usa-button--unstyled&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-cac2cef5c1bf3">&lt;button class=&quot;usa-button usa-button--unstyled&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Unstyled&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button usa-button--unstyled&quot; type=&quot;button&quot; disabled=&quot;true&quot;&gt;
@@ -593,6 +912,67 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-46e07bd731f98">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-46e07bd731f98" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-6865c9c88e759" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-6865c9c88e759">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Unstyled&quot;,
+      &quot;modifier&quot;: &quot;usa-button--unstyled&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Disabled&quot;,
+      &quot;modifier&quot;: &quot;usa-button--unstyled&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;disabled&quot;: &quot;true&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ARIA Disabled&quot;,
+      &quot;modifier&quot;: &quot;usa-button--unstyled&quot;,
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;ariaDisabled&quot;: &quot;true&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Unstyled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;usa-button--unstyled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;usa-button--unstyled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;disabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ARIA Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;usa-button--unstyled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;ariaDisabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
@@ -607,21 +987,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-311e1202e90fd">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-336f57239002a">
           View HTML
         </button>
       </div>
-      <div id="aria-c-311e1202e90fd" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-336f57239002a" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-41b7c2e1adcfa" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-0492babf3013b" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-41b7c2e1adcfa">&lt;button class=&quot;usa-button cfa-button usa-button--secondary&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-0492babf3013b">&lt;button class=&quot;usa-button cfa-button usa-button--secondary&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Secondary&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button cfa-button usa-button--secondary usa-button--big&quot; type=&quot;button&quot;&gt;
@@ -634,6 +1015,53 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;usa-button cfa-button usa-button--secondary usa-button--big&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Big Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
+    </div>
+      </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-336f57239002a">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-336f57239002a" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-87203161bb8e" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-87203161bb8e">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Secondary&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--secondary&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Big Secondary&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--secondary usa-button--big&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Secondary&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--secondary&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Big Secondary&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--secondary usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
     </div>
       </div>
     </div>
@@ -661,21 +1089,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-e97a1933a7e32">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-2dde4b5cd902f">
           View HTML
         </button>
       </div>
-      <div id="aria-c-e97a1933a7e32" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-2dde4b5cd902f" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-0cd93948296d8" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-a7f8721a0cbaa" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-0cd93948296d8">&lt;button class=&quot;usa-button cfa-button cfa-button--danger&quot; type=&quot;button&quot;&gt;
+        <textarea hidden data-copy-target="block-a7f8721a0cbaa">&lt;button class=&quot;usa-button cfa-button cfa-button--danger&quot; type=&quot;button&quot;&gt;
   &lt;span&gt;Danger&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;usa-button cfa-button cfa-button--danger usa-button--big&quot; type=&quot;button&quot;&gt;
@@ -708,6 +1137,83 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
     </div>
       </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-2dde4b5cd902f">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-2dde4b5cd902f" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-03c7f113c31ad" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-03c7f113c31ad">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Danger&quot;,
+      &quot;modifier&quot;: &quot;cfa-button cfa-button--danger&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Danger&quot;,
+      &quot;modifier&quot;: &quot;cfa-button cfa-button--danger usa-button--big&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Danger&quot;,
+      &quot;modifier&quot;: &quot;cfa-button cfa-button--danger usa-button--outline&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Danger&quot;,
+      &quot;modifier&quot;: &quot;cfa-button cfa-button--danger usa-button--outline usa-button--big&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Danger&quot;,
+      &quot;modifier&quot;: &quot;cfa-button cfa-button--danger usa-button--unstyled&quot;,
+      &quot;type&quot;: &quot;button&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Danger&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button cfa-button--danger&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Danger&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button cfa-button--danger usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Danger&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button cfa-button--danger usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Danger&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button cfa-button--danger usa-button--outline usa-button--big&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Danger&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button cfa-button--danger usa-button--unstyled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
+    </div>
+      </div>
     </div>
   </div>
 </figure>
@@ -734,21 +1240,22 @@
   <div class="margin-0 margin-top-3">
     <div class="usa-accordion cfa-accordion">
       <div class="usa-accordion__heading">
-        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-aefbd896b1147">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-html-fade3abdc3d75">
           View HTML
         </button>
       </div>
-      <div id="aria-c-aefbd896b1147" class="usa-accordion__content overflow-visible padding-0">
+      <div id="aria-c-html-fade3abdc3d75" class="usa-accordion__content overflow-visible">
+        <p>The HTML for the demonstration above is rendered using context passed to the component's Thymeleaf template fragment. Learn how to include component templates for Thymeleaf and Ruby in the <a href="#source-and-usage">source and usage section</a>.</p>
         <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-aa240e100d7de" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-330b9194244d1" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-aa240e100d7de">&lt;a class=&quot;usa-button cfa-button usa-button--outline&quot; href=&quot;#&quot;&gt;
+        <textarea hidden data-copy-target="block-330b9194244d1">&lt;a class=&quot;usa-button cfa-button usa-button--outline&quot; href=&quot;#&quot;&gt;
   &lt;span&gt;Internal Link&lt;/span&gt;
   &lt;svg class=&quot;usa-icon&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
     &lt;use href=&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;&gt;&lt;/use&gt;
@@ -785,6 +1292,71 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#launch&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+    </div>
+      </div>
+      <div class="usa-accordion__heading">
+        <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="aria-c-context-fade3abdc3d75">
+          View context passed to this component
+        </button>
+      </div>
+      <div id="aria-c-context-fade3abdc3d75" class="usa-accordion__content overflow-visible">
+        <p>Context is the information necessary to configure and render a component template to HTML. It may include plain text strings, HTML, class names, IDs or other HTML attribute values. The context here is defined as JSON but the root attributes are translated to different variable syntaxes for Thymeleaf and Ruby templates. Learn how to pass these variables to each component template in the <a href="#source-and-usage">source and usage section</a>.</p>
+        <div class="code-block">
+      <div class="code-block__utility position-sticky pin-top">
+        <button data-js="copy" data-copy="block-5e8b032ebd99c" class="usa-button cfa-button">
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
+          </svg>
+          <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
+        </button>
+        <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
+        <textarea hidden data-copy-target="block-5e8b032ebd99c">{
+  &quot;items&quot;: [
+    {
+      &quot;label&quot;: &quot;Internal Link&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--outline&quot;,
+      &quot;href&quot;: &quot;#&quot;,
+      &quot;postfix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;
+    },
+    {
+      &quot;label&quot;: &quot;External Link&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--outline&quot;,
+      &quot;href&quot;: &quot;#&quot;,
+      &quot;postfix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#launch&quot;
+    },
+    {
+      &quot;label&quot;: &quot;ARIA Disabled&quot;,
+      &quot;modifier&quot;: &quot;cfa-button usa-button--outline&quot;,
+      &quot;href&quot;: &quot;#&quot;,
+      &quot;postfix&quot;: &quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#launch&quot;,
+      &quot;ariaDisabled&quot;: &quot;true&quot;
+    }
+  ]
+}</textarea>
+      </div>
+      <pre class="language-json padding-top-0"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;items&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Internal Link&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;href&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;postfix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#arrow_forward&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;External Link&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;href&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;postfix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#launch&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ARIA Disabled&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;modifier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cfa-button usa-button--outline&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;href&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;postfix&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://codeforamerica.github.io/uswds/assets/img/sprite.svg#launch&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;ariaDisabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></pre>
     </div>
       </div>
     </div>
@@ -937,8 +1509,8 @@ enables links that are styled as buttons to be invoked using the space bar.
 <code>@codeforamerica/js/index.js</code>. This entrypoint is compiled using Rollup.js and distributed to <code>@codeforamerica/dist/js/default.js</code>.</li>
 </ul>
 <div class="cfa-details margin-bottom-3">
-  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-9a38513dcf0bf"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
-  <div class="cfa-details__content" id="aria-c-9a38513dcf0bf">
+  <button class="cfa-details__summary" data-js="details" data-aria-controls="aria-c-f060753bc1a2a"><span>What is a package?</span> <svg class="usa-icon" aria-hidden="true" focusable="false" role="img"><use href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#chevron_right"></use></svg></button>
+  <div class="cfa-details__content" id="aria-c-f060753bc1a2a">
   Packages are collections of functionality that make up a component. Typically, they include stylesheets, templates, and scripts. <a href="https://designsystem.digital.gov/components/packages" target="_blank" rel="noopener nofollow" class="usa-link--external">Learn more about packages on the USWDS documentation site</a>.
   </div>
 </div>
@@ -949,14 +1521,14 @@ enables links that are styled as buttons to be invoked using the space bar.
       <p>Below is a demonstration of customizing the component theme settings. Refer to the <a href="https://docs.google.com/spreadsheets/d/1nVIAmi6pRDu5Z7II6ttwKryGrdYBhuJYmpO4YjXmuxQ/edit#gid=0" target="_blank" rel="noopener nofollow" class="usa-link--external">theme and package-level settings documentation</a>.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-89bab7734de0e" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-1657a57179085" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-89bab7734de0e">
+        <textarea hidden data-copy-target="block-1657a57179085">
 // Theme-level settings
 @use 'cfa-uswds-theme' with (
   // Global theme settings that affect the component, changing these will affect other components
@@ -1013,14 +1585,14 @@ enables links that are styled as buttons to be invoked using the space bar.
       <p>Refer to the <a href="https://designsystem.digital.gov/components/button/#using-the-button-component-2" target="_blank" rel="noopener nofollow" class="usa-link--external">usage documentation</a> for additional USWDS theme settings.</p></figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-c510e7ad241" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-3951d7becce9d" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-c510e7ad241">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
+        <textarea hidden data-copy-target="block-3951d7becce9d">@use &quot;uswds-core&quot; with ( /* additional USWDS theme settings */ );</textarea>
       </div>
       <pre class="language-scss padding-top-0"><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;uswds-core&quot;</span> with ( /* additional USWDS theme settings */ );</pre>
     </div>
@@ -1034,14 +1606,14 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-12ef3cbc8a94" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-cc3b7fc67a35" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-12ef3cbc8a94">&lt;th:block th:fragment=&quot;button(items)&quot; th:each=&quot;button: ${items}&quot;&gt;
+        <textarea hidden data-copy-target="block-cc3b7fc67a35">&lt;th:block th:fragment=&quot;button(items)&quot; th:each=&quot;button: ${items}&quot;&gt;
   &lt;button th:unless=&quot;${button.href}&quot; class=&quot;usa-button&quot; th:classappend=&quot;${button.modifier}&quot; th:attr=&quot;type=${button.type},disabled=${button.disabled},aria-disabled=${button.ariaDisabled}&quot;&gt;
     &lt;svg th:if=&quot;${button.check}&quot; class=&quot;usa-icon&quot; viewBox=&quot;0 0 22 22&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; role=&quot;img&quot;&gt;
       &lt;path d=&quot;M3.5 9.42857L0 13L8 22L22 3.5L18 0L7.5 14L3.5 9.42857Z&quot; fill=&quot;inherit&quot;/&gt;
@@ -1115,16 +1687,16 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-33e7afc8303e4" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-9b06ecdcd87c4" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-33e7afc8303e4">&lt;th:block th:replace=&quot;~{@codeforamerica/uswds/packages/cfa-button/cfa-button.th :: button(${items})}&quot; /&gt;</textarea>
+        <textarea hidden data-copy-target="block-9b06ecdcd87c4">&lt;th:block th:replace=&quot;~{packages/cfa-button/cfa-button.th :: button(${items})}&quot; /&gt;</textarea>
       </div>
-      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{@codeforamerica/uswds/packages/cfa-button/cfa-button.th :: button(${items})}&quot;</span> /&gt;</span></pre>
+      <pre class="language-html padding-top-0"><span class="hljs-tag">&lt;<span class="hljs-name">th:block</span> <span class="hljs-attr">th:replace</span>=<span class="hljs-string">&quot;~{packages/cfa-button/cfa-button.th :: button(${items})}&quot;</span> /&gt;</span></pre>
     </div>
   </figure>
 </div>
@@ -1136,14 +1708,14 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-31ed9c21ca3fb" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-cf0ba9306c232" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-31ed9c21ca3fb">&lt;% items.each do |button| %&gt;
+        <textarea hidden data-copy-target="block-cf0ba9306c232">&lt;% items.each do |button| %&gt;
   &lt;% if button['href'] %&gt;
     &lt;a href=&quot;&lt;%= button['href'] %&gt;&quot; class=&quot;usa-button&lt;% if button['modifier'] %&gt; &lt;%= button['modifier'] %&gt;&lt;% end %&gt;&quot;
       &lt;% if button['ariaDisabled'] %&gt; aria-disabled=&quot;&lt;%= button['ariaDisabled'] %&gt;&quot;&lt;% end %&gt;
@@ -1239,16 +1811,16 @@ enables links that are styled as buttons to be invoked using the space bar.
     </figcaption>
     <div class="code-block">
       <div class="code-block__utility position-sticky pin-top">
-        <button data-js="copy" data-copy="block-dcc2b9bd9116b" class="usa-button cfa-button">
+        <button data-js="copy" data-copy="block-cbad433f4059c" class="usa-button cfa-button">
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
             <use data-copy="icon" href="https://codeforamerica.github.io/uswds/assets/img/sprite.svg#content_copy"></use>
           </svg>
           <span>Copy<span class="usa-sr-only"> the following block to clipboard</span></span>
         </button>
         <span data-copy="message" aria-live="assertive" class="usa-sr-only"></span>
-        <textarea hidden data-copy-target="block-dcc2b9bd9116b">&lt;%= ERB.new(File.read('@codeforamerica/uswds/packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@button').result_with_hash({items: items}) %&gt;</textarea>
+        <textarea hidden data-copy-target="block-cbad433f4059c">&lt;%= ERB.new(File.read('packages/cfa-button/_cfa-button.html.erb'), 0, 0, '@button').result_with_hash({items: items}) %&gt;</textarea>
       </div>
-      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;@codeforamerica/uswds/packages/cfa-button/_cfa-button.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@button&#x27;</span>).result_with_hash({<span class="hljs-symbol">items:</span> items}) </span><span class="language-xml">%&gt;</span></pre>
+      <pre class="language-erb padding-top-0"><span class="language-xml">&lt;%=</span><span class="language-ruby"> <span class="hljs-variable constant_">ERB</span>.new(<span class="hljs-title class_">File</span>.read(<span class="hljs-string">&#x27;packages/cfa-button/_cfa-button.html.erb&#x27;</span>), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;@button&#x27;</span>).result_with_hash({<span class="hljs-symbol">items:</span> items}) </span><span class="language-xml">%&gt;</span></pre>
     </div>
   </figure>
 </div>
