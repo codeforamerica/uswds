@@ -15,7 +15,7 @@
   {% block head %}{% endblock %}
 </head>
 
-<body>
+<body class="{{ body }}">
   {{ content|raw }}
 
   <script src="{{ config.baseUrl }}{{ config.assets }}/js/default.js"></script>
