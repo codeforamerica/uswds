@@ -1,7 +1,11 @@
-<!-- in production environments the skip nav link would be embedded above the main header -->
-<!-- <a class="usa-skipnav" href="#main-content">Skip to main content</a> -->
+<header th:fragment="toolbar(modifier, alert, container, startEl, startElModifier, home, logo, endEl, endElModifier, chat, languageSelector, links)" th:class="${modifier}">
+  <div th:if="${alert}">
+    <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${alert.modifier}, ${alert.role}, ${alert.heading}, ${alert.label}, ${alert.labelledby}, ${alert.body}, ${alert.text})}"></th:block>
+  </div>
 
-<header th:fragment="toolbar(modifier, container, startEl, startElModifier, home, logo, endEl, endElModifier, chat, languageSelector, links, alert)" th:class="${modifier}">
+  <!-- In production environments the skip nav link would be embedded here -->
+  <a th:if="${skipNav}" class="usa-skipnav" th:href="${skipNav}">Skip to main content</a>
+
   <div class="grid-container display-flex flex-justify flex-align-center" th:classappend="${container.modifier}">
     <div th:if="${startEl}" th:replace="${startEl}">
       Toolbar start contents
@@ -56,9 +60,5 @@
         </nav>
       </div>
     </div>
-  </div>
-
-  <div th:if="${alert}">
-    <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${alert.modifier}, ${alert.role}, ${alert.heading}, ${alert.label}, ${alert.labelledby}, ${alert.body}, ${alert.text})}"></th:block>
   </div>
 </header>

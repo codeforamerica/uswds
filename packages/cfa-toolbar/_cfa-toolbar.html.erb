@@ -1,7 +1,20 @@
-<!-- in production environments the skip nav link would be embedded above the main header -->
-<!-- <a class="usa-skipnav" href="#main-content">Skip to main content</a> -->
-
 <header<% if defined?(modifier) %> class="<%= modifier %>"<% end %>>
+  <% if defined?(alert) %><div>
+    <%= ERB.new(File.read('packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert')
+      .result_with_hash({
+        modifier: (alert['modifier'] if alert['modifier']),
+        role: (alert['role'] if alert['role']),
+        heading: (alert['heading'] if alert['heading']),
+        label: (alert['label'] if alert['label']),
+        labelledby: (alert['labelledby'] if alert['labelledby']),
+        body: (alert['body'] if alert['body']),
+        text: (alert['text'] if alert['text'])
+      }.compact) %>
+  </div><% end %>
+
+  <!-- In production environments the skip nav link would be embedded here -->
+  <% if defined?(skipNav) %><a class="usa-skipnav" href="<%= skipNav %>">Skip to main content</a><% end %>
+
   <div class="grid-container display-flex flex-justify flex-align-center<% if container['modifier'] %> <%= container['modifier'] %><% end %>">
     <% if defined?(startEl) %>
       <%= startEl %>
@@ -57,17 +70,4 @@
     </div>
     <% end %>
   </div>
-
-  <% if defined?(alert) %><div>
-    <%= ERB.new(File.read('packages/cfa-alert/_cfa-alert.html.erb'), 0, 0, '@alert')
-      .result_with_hash({
-        modifier: (alert['modifier'] if alert['modifier']),
-        role: (alert['role'] if alert['role']),
-        heading: (alert['heading'] if alert['heading']),
-        label: (alert['label'] if alert['label']),
-        labelledby: (alert['labelledby'] if alert['labelledby']),
-        body: (alert['body'] if alert['body']),
-        text: (alert['text'] if alert['text'])
-      }.compact) %>
-  </div><% end %>
 </header>
