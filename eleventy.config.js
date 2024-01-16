@@ -584,7 +584,7 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addShortcode('thymeleaf', async function(name, include = false) {
     let templatePath = getFile(name, 'thymeleaf')
-      .replace(__dirname, package.name)
+      .replace(`${__dirname}/`, '')
       .replace('.html', '');
 
     let template = removeNewLines(fs.readFileSync(getFile(name, 'thymeleaf'), 'utf-8'));
@@ -637,9 +637,7 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addShortcode('erb', async function(name, include = false) {
     let templatePath = getFile(name, 'erb')
-      .replace(__dirname, package.name);
-      // .replace('/_', '/')
-      // .replace('.html.erb', '');
+      .replace(`${__dirname}/`, '');
 
     let template = removeNewLines(fs.readFileSync(getFile(name, 'erb'), 'utf-8'));
 
