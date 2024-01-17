@@ -7,26 +7,32 @@
 
   <meta name="robots" content="noindex, nofollow" />
 
-  <title>Recover from errors | Code for America U.S. Web Design System theme</title>
-  <meta name="title" content="Recover from errors | Code for America U.S. Web Design System theme" />
-
+  <title>Please check your answers</title>  <meta name="title" content="Please check your answers" />
   <link rel="stylesheet" href="https://codeforamerica.github.io/uswds/assets/site/site.css">
 
   </head>
 
 <body class="bg-base-lightest">
-  <header>
-  <div>
-    <div class="usa-alert cfa-alert cfa-site-alert usa-alert--error margin-0 border-top-0 border-x-0" role="alert">
-      <div class="usa-alert__body">
-        <div>
-          <p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p>
-        </div>
-      </div>
+  <div class="usa-alert cfa-alert cfa-site-alert usa-alert--error margin-0 border-top-0 border-x-0" role="alert">
+  <div class="usa-alert__body">
+    <div>
+      <p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p>
+      <ol>
+        <li>
+          <a href="#form-group-83df17c235767">First name is required</a>
+        </li>
+        <li>
+          <a href="#form-group-1b76c4817457e">Last name is required</a>
+        </li>
+        <li>
+          <a href="#fieldset-1562931b96181">Date of birth doesn’t match the format we need</a>
+        </li>
+      </ol>
     </div>
   </div>
-  <!-- In production environments the skip nav link would be embedded here -->
-  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+</div>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header>
   <div class="grid-container display-flex flex-justify flex-align-center tablet:padding-y-2">
     <div>
       <a href="https://codeforamerica.github.io/uswds/">
@@ -67,9 +73,9 @@
     </div>
   </div>
 </header>
-<main>
+<main id="#main-content">
   <section class="grid-container usa-section">
-    <div class="maxw-tablet margin-x-auto padding-bottom-4">
+    <div class="maxw-form-card margin-x-auto padding-bottom-4">
       <a href="#">Go back</a>
     </div>
     <main class="cfa-form-card">
@@ -85,15 +91,16 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-">
-                <label class="usa-label cfa-label" for="input-">
+              <div class="usa-form-group cfa-form-group cfa-form-group--error" id="form-group-83df17c235767">
+                <label class="usa-label cfa-label" for="input-83df17c235767">
                   <span>What is your first name?</span>
                   <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                 </label>
-                <div class="usa-hint cfa-hint" id="hint-">Legally as it appears on your I.D.</div>
+                <div class="usa-hint cfa-hint" id="hint-83df17c235767">Legally as it appears on your I.D.</div>
+                <span class="usa-error-message" id="error-message-83df17c235767">This field is required</span>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-" name="input['']" aria-describedby="hint-" required="true">
+                    <input class="usa-input cfa-input" type="text" id="input-83df17c235767" name="input['83df17c235767']" aria-invalid="true" aria-describedby="hint-83df17c235767 error-message-83df17c235767" required="true">
                   </div>
                 </div>
               </div>
@@ -103,16 +110,16 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group usa-form-group--error" id="form-group-">
-                <label class="usa-label cfa-label" for="input-">
+              <div class="usa-form-group cfa-form-group cfa-form-group--error" id="form-group-1b76c4817457e">
+                <label class="usa-label cfa-label" for="input-1b76c4817457e">
                   <span>What is your last name?</span>
                   <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                 </label>
-                <div class="usa-hint cfa-hint" id="hint-">Legally as it appears on your I.D.</div>
-                <span class="usa-error-message" id="error-message-" role="alert">This field is required</span>
+                <div class="usa-hint cfa-hint" id="hint-1b76c4817457e">Legally as it appears on your I.D.</div>
+                <span class="usa-error-message" id="error-message-1b76c4817457e">This field is required</span>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-" name="input['']" aria-describedby="hint-" required="true">
+                    <input class="usa-input cfa-input" type="text" id="input-1b76c4817457e" name="input['1b76c4817457e']" aria-invalid="true" aria-describedby="hint-1b76c4817457e error-message-1b76c4817457e" required="true">
                   </div>
                 </div>
               </div>
@@ -121,20 +128,25 @@
         </div>
         <div>
           <div>
-            <fieldset class="usa-fieldset cfa-fieldset">
+            <fieldset class="usa-fieldset cfa-fieldset cfa-fieldset--error" id="fieldset-1562931b96181">
               <legend class="usa-legend cfa-legend">
                 <span>What is your date of birth?</span>
               </legend>
-              <div class="usa-hint cfa-hint" id="hint-">For example January / 1 / 2000</div>
+              <div class="usa-hint cfa-hint" id="hint-1562931b96181">For example January / 1 / 2000</div>
+              <div>
+                <span class="usa-error-message" id="error-message-month-1562931b96181">Please select a month</span>
+                <span class="usa-error-message" id="error-message-day-1562931b96181">Please enter a valid day</span>
+                <span class="usa-error-message" id="error-message-year-1562931b96181">Please enter a valid year</span>
+              </div>
               <div class="usa-memorable-date cfa-memorable-date">
                 <div>
-                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="month-">
-                    <label class="usa-label cfa-label text-normal" for="month-">
+                  <div class="usa-form-group usa-form-group--month usa-form-group--select" id="form-group-month-1562931b96181">
+                    <label class="usa-label cfa-label text-normal" for="month-1562931b96181">
                       <span>Month</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
-                      <select class="usa-select cfa-select" id="month-" name="month['']" aria-describedby="hint-" required="true">
+                      <select class="usa-select cfa-select" id="month-1562931b96181" name="month['1562931b96181']" aria-invalid="true" aria-describedby="hint-1562931b96181 error-message-month-1562931b96181" required="true">
                         <option selected="true">Click to select month</option>
                         <option disabled="true">---</option>
                         <option value="1">01 - January</option>
@@ -154,27 +166,27 @@
                   </div>
                 </div>
                 <div>
-                  <div class="usa-form-group usa-form-group--day" id="form-group-">
-                    <label class="usa-label cfa-label text-normal" for="day-">
+                  <div class="usa-form-group usa-form-group--day" id="form-group-day-1562931b96181">
+                    <label class="usa-label cfa-label text-normal" for="day-1562931b96181">
                       <span>Day</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
                       <div>
-                        <input class="usa-input cfa-input" type="text" id="day-" name="day['']" aria-describedby="hint-" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        <input class="usa-input cfa-input" type="text" id="day-1562931b96181" name="day['1562931b96181']" aria-invalid="true" aria-describedby="hint-1562931b96181 error-message-day-1562931b96181" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="2">
                       </div>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <div class="usa-form-group usa-form-group--year" id="form-group-">
-                    <label class="usa-label cfa-label text-normal" for="year-">
+                  <div class="usa-form-group usa-form-group--year" id="form-group-year-1562931b96181">
+                    <label class="usa-label cfa-label text-normal" for="year-1562931b96181">
                       <span>Year</span>
                       <abbr title="required" class="usa-hint usa-hint--required cfa-hint">*</abbr>
                     </label>
                     <div>
                       <div>
-                        <input class="usa-input cfa-input" type="text" id="year-" name="year['']" aria-describedby="hint-" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                        <input class="usa-input cfa-input" type="text" id="year-1562931b96181" name="year['1562931b96181']" aria-invalid="true" aria-describedby="hint-1562931b96181 error-message-year-1562931b96181" required="true" pattern="[0-9]*" inputmode="numeric" maxlength="4">
                       </div>
                     </div>
                   </div>
@@ -186,14 +198,14 @@
         <div>
           <div>
             <div>
-              <div class="usa-form-group cfa-form-group" id="form-group-">
-                <label class="usa-label cfa-label" for="input-">
+              <div class="usa-form-group cfa-form-group" id="form-group-38b4c06d4121f">
+                <label class="usa-label cfa-label" for="input-38b4c06d4121f">
                   <span>Which gender do you identify with?</span>
                 </label>
-                <div class="usa-hint cfa-hint" id="hint-">For example, man, woman, or non-binary.</div>
+                <div class="usa-hint cfa-hint" id="hint-38b4c06d4121f">For example, man, woman, or non-binary.</div>
                 <div>
                   <div>
-                    <input class="usa-input cfa-input" type="text" id="input-" name="input['']" aria-describedby="hint-">
+                    <input class="usa-input cfa-input" type="text" id="input-38b4c06d4121f" name="input['38b4c06d4121f']" aria-describedby="hint-38b4c06d4121f">
                   </div>
                 </div>
               </div>
@@ -207,14 +219,14 @@
                 <span>Did you move to the state within the last year?</span>
               </legend>
               <div class="usa-radio cfa-radio">
-                <input type="radio" id="radio-9b891d7126f0c" name="radio['']" value="yes" class="usa-radio__input usa-radio__input--tile">
-                <label for="radio-9b891d7126f0c" class="usa-radio__label">
+                <input type="radio" id="radio-753def5ae84d6" name="radio['e0fd659a56401']" value="yes" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-753def5ae84d6" class="usa-radio__label">
                   <span>Yes</span>
                 </label>
               </div>
               <div class="usa-radio cfa-radio">
-                <input type="radio" id="radio-057f5288da773" name="radio['']" value="no" class="usa-radio__input usa-radio__input--tile">
-                <label for="radio-057f5288da773" class="usa-radio__label">
+                <input type="radio" id="radio-90def40a3c686" name="radio['e0fd659a56401']" value="no" class="usa-radio__input usa-radio__input--tile">
+                <label for="radio-90def40a3c686" class="usa-radio__label">
                   <span>No</span>
                 </label>
               </div>
@@ -305,7 +317,6 @@
     </div>
   </div>
 </footer>
-
 
   <script src="https://codeforamerica.github.io/uswds/assets/js/default.js"></script>
 
