@@ -1,17 +1,20 @@
 @use 'uswds-core' as *;
 
-// .cfa-fieldset {
-//   margin-top: units(7);
-// }
+.cfa-fieldset {
+  margin-top: revert;
+  margin-inline-start: re
+}
 
+// same as cfa-form-group--error
+.cfa-fieldset--error,
 .cfa-fieldset.usa-fieldset--error {
-  border-inline-start-color: color($theme-color-error-dark);
+  border: none;
+  border-inline-start: solid units(0.5) color($theme-color-error-dark);
 
   padding-left: units(4) - units(0.5);
   margin-left: units(-3);
 
   @include at-media('tablet') {
-    // margin-left: (units(-4) - units(0.5))
     margin-left: units(-4)
   }
 }

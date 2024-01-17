@@ -4,8 +4,11 @@
   margin-top: revert;
 }
 
+// same as cfa-fieldset--error
+.cfa-form-group--error,
 .cfa-form-group.usa-form-group--error {
-  border-inline-start-color: color($theme-color-error-dark);
+  border: none;
+  border-inline-start: solid units(0.5) color($theme-color-error-dark);
 
   padding-left: units(4) - units(0.5);
   margin-left: units(-3);
