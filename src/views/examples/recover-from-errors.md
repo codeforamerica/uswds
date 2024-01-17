@@ -1,15 +1,23 @@
 ---
-title: Recover from errors
+title: Please check your answers
 layout: examples
 body: bg-base-lightest
 ---
 
+{% capture id %}{% createId %}{% endcapture %}
+{% capture id_first_name %}{% createId %}{% endcapture %}
+{% capture id_last_name %}{% createId %}{% endcapture %}
+{% capture id_birthday %}{% createId %}{% endcapture %}
+{% capture id_gender %}{% createId %}{% endcapture %}
+{% capture id_residency_within_year %}{% createId %}{% endcapture %}
+
+{% capture alert %}{
+  "modifier": "cfa-alert cfa-site-alert usa-alert--error margin-0 border-top-0 border-x-0",
+  "role": "alert",
+  "body": "<p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p><ol><li><a href=\"#form-group-{{ id_first_name }}\">First name is required</a></li><li><a href=\"#form-group-{{ id_last_name }}\">Last name is required</a></li><li><a href=\"#fieldset-{{ id_birthday }}\">Date of birth doesn’t match the format we need</a></li></ol>"
+}{% endcapture %}
+
 {% capture toolbar %}{
-  "alert": {
-    "modifier": "cfa-alert cfa-site-alert usa-alert--error margin-0 border-top-0 border-x-0",
-    "role": "alert",
-    "body": "<p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p>"
-  },
   "skipNav": "#main-content",
   "container": {
     "modifier": "tablet:padding-y-2"
@@ -47,7 +55,7 @@ body: bg-base-lightest
   },
   "formGroups": [
     {
-      "modifier": "cfa-form-group",
+      "modifier": "cfa-form-group cfa-form-group--error",
       "id": "form-group-{{ id_first_name }}",
       "label": {
         "text": "What is your first name?",
@@ -60,17 +68,22 @@ body: bg-base-lightest
         "modifier": "cfa-hint",
         "id": "hint-{{ id_first_name }}"
       },
+      "error": {
+        "text": "This field is required",
+        "id": "error-message-{{ id_first_name }}"
+      },
       "input": {
         "modifier": "cfa-input",
         "id": "input-{{ id_first_name }}",
         "name": "input['{{ id_first_name }}']",
-        "ariaDescribedby": "hint-{{ id_first_name }}",
         "type": "text",
-        "required": "true"
+        "required": "true",
+        "ariaDescribedby": "hint-{{ id_first_name }} error-message-{{ id_first_name }}",
+        "ariaInvalid": true
       }
     },
     {
-      "modifier": "cfa-form-group usa-form-group--error",
+      "modifier": "cfa-form-group cfa-form-group--error",
       "id": "form-group-{{ id_last_name }}",
       "label": {
         "text": "What is your last name?",
@@ -85,38 +98,53 @@ body: bg-base-lightest
       },
       "error": {
         "text": "This field is required",
-        "id": "error-message-{{ id }}",
-        "role": "alert"
+        "id": "error-message-{{ id_last_name }}"
       },
       "input": {
         "modifier": "cfa-input",
         "id": "input-{{ id_last_name }}",
         "name": "input['{{ id_last_name }}']",
-        "ariaDescribedby": "hint-{{ id_last_name }}",
         "type": "text",
-        "required": "true"
+        "required": "true",
+        "ariaDescribedby": "hint-{{ id_last_name }} error-message-{{ id_last_name }}",
+        "ariaInvalid": true
       }
     },
     {
-      "modifier": "cfa-memorable-date",
       "memorableDate": "true",
+      "modifier": "cfa-memorable-date",
+      "id": "fieldset-{{ id_birthday }}",
       "fieldset": {
-        "modifier": "cfa-fieldset",
+        "modifier": "cfa-fieldset cfa-fieldset--error",
+        "legend": {
+          "text": "What is your date of birth?",
+          "modifier": "cfa-legend",
+          "modifierHint": "cfa-hint"
+        },
         "hint": {
           "text": "For example January / 1 / 2000",
           "id": "hint-{{ id_birthday }}",
           "modifier": "cfa-hint"
         },
-        "legend": {
-          "text": "What is your date of birth?",
-          "modifier": "cfa-legend",
-          "modifierHint": "cfa-hint"
-        }
+        "error": [
+          {
+            "text": "Please select a month",
+            "id": "error-message-month-{{ id_birthday }}"
+          },
+          {
+            "text": "Please enter a valid day",
+            "id": "error-message-day-{{ id_birthday }}"
+          },
+          {
+            "text": "Please enter a valid year",
+            "id": "error-message-year-{{ id_birthday }}"
+          }
+        ]
       },
       "month": {
         "type": "select",
         "modifier": "usa-form-group--month usa-form-group--select",
-        "id": "month-{{ id_birthday }}",
+        "id": "form-group-month-{{ id_birthday }}",
         "label": {
           "text": "Month",
           "for": "month-{{ id_birthday }}",
@@ -128,7 +156,8 @@ body: bg-base-lightest
           "id": "month-{{ id_birthday }}",
           "name": "month['{{ id_birthday }}']",
           "required": "true",
-          "ariaDescribedby": "hint-{{ id_birthday }}",
+          "ariaDescribedby": "hint-{{ id_birthday }} error-message-month-{{ id_birthday }}",
+          "ariaInvalid": true,
           "default": {
             "label": "Click to select month",
             "selected": "true"
@@ -191,7 +220,7 @@ body: bg-base-lightest
       },
       "day": {
         "modifier": "usa-form-group--day",
-        "id": "form-group-{{ id_birthday }}",
+        "id": "form-group-day-{{ id_birthday }}",
         "label": {
           "text": "Day",
           "for": "day-{{ id_birthday }}",
@@ -207,12 +236,13 @@ body: bg-base-lightest
           "maxlength": "2",
           "pattern": "[0-9]*",
           "required": "true",
-          "ariaDescribedby": "hint-{{ id_birthday }}"
+          "ariaDescribedby": "hint-{{ id_birthday }} error-message-day-{{ id_birthday }}",
+          "ariaInvalid": true
         }
       },
       "year": {
         "modifier": "usa-form-group--year",
-        "id": "form-group-{{ id_birthday }}",
+        "id": "form-group-year-{{ id_birthday }}",
         "label": {
           "text": "Year",
           "for": "year-{{ id_birthday }}",
@@ -229,7 +259,8 @@ body: bg-base-lightest
           "maxlength": "4",
           "pattern": "[0-9]*",
           "required": "true",
-          "ariaDescribedby": "hint-{{ id_birthday }}"
+          "ariaDescribedby": "hint-{{ id_birthday }} error-message-year-{{ id_birthday }}",
+          "ariaInvalid": true
         }
       }
     },
@@ -382,15 +413,15 @@ body: bg-base-lightest
   }
 }{% endcapture %}
 
+{% component 'alert' alert %}
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
 {% component 'toolbar' toolbar %}
-
-<main>
+<main id="#main-content">
   <section class="grid-container usa-section">
-    <div class="maxw-tablet margin-x-auto padding-bottom-4">
+    <div class="maxw-form-card margin-x-auto padding-bottom-4">
       <a href="#">Go back</a>
     </div>
     {% component 'form-card' formCard %}
   </section>
 </main>
-
 {% component 'footer' footer %}
