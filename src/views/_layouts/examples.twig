@@ -7,8 +7,8 @@
 
   <meta name="robots" content="noindex, nofollow" />
 
-  <title>{% if title %}{{ title }} | {% endif %}{{ package.nice }}</title>
-  <meta name="title" content="{% if title %}{{ title }} | {% endif %}{{ package.nice }}" />
+  {% if title %}<title>{{ title }}</title>{% endif %}
+  {% if title %}<meta name="title" content="{{ title }}" />{% endif %}
 
   <link rel="stylesheet" href="{{ config.baseUrl }}{{ config.assets }}/site/site.css">
 
