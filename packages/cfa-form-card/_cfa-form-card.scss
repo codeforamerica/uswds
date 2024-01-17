@@ -14,8 +14,17 @@
   margin-bottom: units(0.5);
 
   @include at-media('tablet') {
-    max-width: units('tablet');
+    // max-width: units('tablet');
+    max-width: units(1) * $cfa-form-card-width;
+
     padding: units(7) units(4);
+  }
+}
+
+// Custom utility breakpoint
+.maxw-form-card {
+  @include at-media('tablet') {
+    max-width: units(1) * $cfa-form-card-width;
   }
 }
 
