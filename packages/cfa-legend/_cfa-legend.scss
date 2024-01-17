@@ -3,4 +3,9 @@
 .cfa-legend {
   font-weight: $theme-font-weight-bold;
   cursor: pointer;
+
+  // Attempting to reset the legend's top offset is unsuccessful
+  // margin-top: 0;
+  // float: left;
+  // width: 100%;
 }
