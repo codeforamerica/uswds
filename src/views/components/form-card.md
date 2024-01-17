@@ -100,11 +100,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-hint",
         "id": "hint-{{ id_last_name }}"
       },
-      "error": {
-        "text": "This field is required",
-        "id": "error-message-{{ id }}",
-        "role": "alert"
-      },
       "input": {
         "modifier": "cfa-input",
         "id": "input-{{ id_last_name }}",
@@ -117,6 +112,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
     {
       "modifier": "cfa-memorable-date",
       "memorableDate": "true",
+      "id": "fieldset-{{ id_birthday }}",
       "fieldset": {
         "modifier": "cfa-fieldset",
         "hint": {
@@ -133,7 +129,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
       "month": {
         "type": "select",
         "modifier": "usa-form-group--month usa-form-group--select",
-        "id": "month-{{ id_birthday }}",
+        "id": "form-group-month-{{ id_birthday }}",
         "label": {
           "text": "Month",
           "for": "month-{{ id_birthday }}",
@@ -208,7 +204,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
       },
       "day": {
         "modifier": "usa-form-group--day",
-        "id": "form-group-{{ id_birthday }}",
+        "id": "form-group-day-{{ id_birthday }}",
         "label": {
           "text": "Day",
           "for": "day-{{ id_birthday }}",
@@ -229,7 +225,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
       },
       "year": {
         "modifier": "usa-form-group--year",
-        "id": "form-group-{{ id_birthday }}",
+        "id": "form-group-year-{{ id_birthday }}",
         "label": {
           "text": "Year",
           "for": "year-{{ id_birthday }}",

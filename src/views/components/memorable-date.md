@@ -57,7 +57,7 @@ The {{ title }} component is used to allow the user to enter a date in an online
   "month": {
     "type": "select",
     "modifier": "usa-form-group--month usa-form-group--select",
-    "id": "month-{{ id }}",
+    "id": "form-group-month-{{ id }}",
     "label": {
       "text": "Month",
       "for": "month-{{ id }}",
@@ -132,7 +132,7 @@ The {{ title }} component is used to allow the user to enter a date in an online
   },
   "day": {
     "modifier": "usa-form-group--day",
-    "id": "form-group-{{ id }}",
+    "id": "form-group-day-{{ id }}",
     "label": {
       "text": "Day",
       "for": "day-{{ id }}",
@@ -153,7 +153,7 @@ The {{ title }} component is used to allow the user to enter a date in an online
   },
   "year": {
     "modifier": "usa-form-group--year",
-    "id": "form-group-{{ id }}",
+    "id": "form-group-year-{{ id }}",
     "label": {
       "text": "Year",
       "for": "year-{{ id }}",

@@ -95,11 +95,10 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
-    "ariaDescribedby": "hint-{{ id }}",
     "type": "text",
     "required": "true",
     "ariaInvalid": "true",
-    "ariaDescribedby": "error-message-{{ id }}"
+    "ariaDescribedby": "hint-{{ id }} error-message-{{ id }}"
   }
 }{% endcapture %}
 
