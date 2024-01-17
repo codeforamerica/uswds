@@ -1,11 +1,8 @@
+<!-- In production environments a site wide alert would be embedded here -->
+
+<!-- In production environments the skip nav link would be embedded here -->
+
 <header th:fragment="toolbar(modifier, alert, container, startEl, startElModifier, home, logo, endEl, endElModifier, chat, languageSelector, links)" th:class="${modifier}">
-  <div th:if="${alert}">
-    <th:block th:replace="~{packages/cfa-alert/cfa-alert.th :: alert(${alert.modifier}, ${alert.role}, ${alert.heading}, ${alert.label}, ${alert.labelledby}, ${alert.body}, ${alert.text})}"></th:block>
-  </div>
-
-  <!-- In production environments the skip nav link would be embedded here -->
-  <a th:if="${skipNav}" class="usa-skipnav" th:href="${skipNav}">Skip to main content</a>
-
   <div class="grid-container display-flex flex-justify flex-align-center" th:classappend="${container.modifier}">
     <div th:if="${startEl}" th:replace="${startEl}">
       Toolbar start contents
