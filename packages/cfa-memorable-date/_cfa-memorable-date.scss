@@ -3,19 +3,29 @@
 .cfa-memorable-date {
   display: revert;
 
-  .usa-form-group--month,
-  .usa-form-group--month,
-  .usa-form-group--day,
-  .usa-form-group--year {
-    width: auto
+  .usa-form-group {
+    width: 100%;
+    margin-top: units(1);
+
+    select, input {
+      width: 100%;
+    }
   }
 
-  .usa-form-group--month select,
-  .usa-form-group--month input,
-  .usa-form-group--day input,
-  .usa-form-group--year input {
-    width: 100%
-  }
+  // .usa-form-group--month,
+  // .usa-form-group--month,
+  // .usa-form-group--day,
+  // .usa-form-group--year {
+  //   width: 100%;
+  //   margin-top: units(1);
+  // }
+
+  // .usa-form-group--month select,
+  // .usa-form-group--month input,
+  // .usa-form-group--day input,
+  // .usa-form-group--year input {
+  //   width: 100%
+  // }
 
   @include at-media('tablet') {
     display: flex;

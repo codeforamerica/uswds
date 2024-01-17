@@ -7,7 +7,9 @@
 
   <div th:if="${fieldset.hint}" class="usa-hint" th:classappend="${fieldset.hint.modifier}" th:attr="id=${fieldset.hint.id}" th:text="${fieldset.hint.text}">Hint</div>
 
-  <span th:if="${fieldset.error}" class="usa-error-message" th:attr="id=${fieldset.error.id},role=${fieldset.error.role},aria-live=${fieldset.error.ariaLive}" th:text="${fieldset.error.text}">Message</span>
+  <div th:if="${fieldset.error}">
+    <span th:each="error: ${fieldset.error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
+  </div>
 
   <div class="usa-memorable-date" th:classappend="${modifier}">
     <div th:if="${month.selectEl}">
