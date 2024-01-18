@@ -1,13 +1,13 @@
 <fieldset th:fragment="fieldset(modifier, id, legend, required, hint, error, options)" class="usa-fieldset" th:classappend="${modifier}" th:attr="id=${id}">
-  <legend class="usa-legend" th:classappend="${legend.modifier}" th:attr="tabindex=${legend.tabindex}">
-    <span th:text="${legend.text}">Legend</span>
+  <legend class="usa-legend" th:classappend="${legend.modifier}" th:attr="id=${legend.id},tabindex=${legend.tabindex}">
+    <span th:utext="${legend.text}">Legend</span>
 
     <abbr th:if="${required}" title="required" class="usa-hint usa-hint--required" th:classappend="${legend.modifierHint}">*</abbr>
   </legend>
 
-  <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:text="${hint.text}">Hint</div>
+  <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:utext="${hint.text}">Hint</div>
 
-  <span th:if="${error}" class="usa-error-message" th:classappend="${error.modifier}" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
+  <span th:if="${error}" class="usa-error-message" th:classappend="${error.modifier}" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:utext="${error.text}">Message</span>
 
   <th:block th:replace="~{packages/cfa-input-select/cfa-input-select.th :: inputSelect(${options}, ${required})}" />
 </fieldset>

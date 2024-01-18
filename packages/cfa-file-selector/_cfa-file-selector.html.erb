@@ -1,6 +1,6 @@
 <div class="usa-form-group cfa-form-group cfa-file-selector" data-js="file-selector"<% if defined?(id) %> id="<%= id %>"<% end %>>
   <div data-dropzone="uploads">
-    <% if fileInput['label'] %><label class="usa-label<% if fileInput['label']['modifier'] %> <%= fileInput['label']['modifier'] %><% end %>"<% if fileInput['label']['for'] %> for="<%= fileInput['label']['for'] %>"<% end %><% if fileInput['label']['tabindex'] %> tabindex="<%= fileInput['label']['tabindex'] %>"<% end %>>
+    <% if fileInput['label'] %><label class="usa-label<% if fileInput['label']['modifier'] %> <%= fileInput['label']['modifier'] %><% end %>"<% if fileInput['label']['id'] %> id="<%= fileInput['label']['id'] %>"<% end %><% if fileInput['label']['for'] %> for="<%= fileInput['label']['for'] %>"<% end %><% if fileInput['label']['tabindex'] %> tabindex="<%= fileInput['label']['tabindex'] %>"<% end %>>
       <span><%= fileInput['label']['text'] %></span>
 
       <% if fileInput['input']['required'] %>

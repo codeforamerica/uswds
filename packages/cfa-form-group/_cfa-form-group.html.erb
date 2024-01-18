@@ -1,6 +1,6 @@
 <div class="usa-form-group<% if defined?(modifier) %> <%= modifier %><% end %>"
   <% if defined?(id) %> id="<%= id %>"<% end %>>
-  <label class="usa-label<% if label['modifier'] %> <%= label['modifier'] %><% end %>"<% if label['for'] %> for="<%= label['for'] %>"<% end %><% if label['tabindex'] %> tabindex="<%= label['tabindex'] %>"<% end %>>
+  <label class="usa-label<% if label['modifier'] %> <%= label['modifier'] %><% end %>"<% if label['id'] %> id="<%= label['id'] %>"<% end %><% if label['for'] %> for="<%= label['for'] %>"<% end %><% if label['tabindex'] %> tabindex="<%= label['tabindex'] %>"<% end %>>
     <span><%= label['text'] %></span>
 
     <% if defined?(input) && input['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>

@@ -1,12 +1,12 @@
 <div th:fragment="fileSelector(id, fileInput, previewHeader, previewTemplate, defaultPreviewTemplate, dict)" class="usa-form-group cfa-form-group cfa-file-selector" th:attr="id=${id}" data-js="file-selector">
   <div data-dropzone="uploads">
-    <label class="usa-label" th:if="${fileInput.label}" th:classappend="${fileInput.label.modifier}" th:attr="for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
-      <span th:text="${fileInput.label.text}">Label</span>
+    <label class="usa-label" th:if="${fileInput.label}" th:classappend="${fileInput.label.modifier}" th:attr="id=${fileInput.label.id},for=${fileInput.label.for},tabindex=${fileInput.label.tabindex}">
+      <span th:utext="${fileInput.label.text}">Label</span>
 
       <abbr th:if="${fileInput.input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${fileInput.label.modifierHint}">*</abbr>
     </label>
 
-    <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:text="${fileInput.error.text}">Message</span>
+    <span class="usa-error-message" aria-hidden="true" data-dropzone="input-error-message" th:classappend="${fileInput.error.modifier}" th:attr="id=${fileInput.error.id}" th:utext="${fileInput.error.text}">Message</span>
 
     <div class="usa-file-input cfa-file-input">
       <div class="usa-file-input__target margin-bottom-3" data-dropzone="drag-and-drop-region">

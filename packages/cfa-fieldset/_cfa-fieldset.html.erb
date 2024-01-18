@@ -1,6 +1,6 @@
 <fieldset class="usa-fieldset<% if defined?(modifier) %> <%= modifier %><% end %>"
   <% if defined?(id) %> id="<%= id %>"<% end %>>
-  <legend class="usa-legend<% if legend['modifier'] %> <%= legend['modifier'] %><% end %>"<% if legend['for'] %> for="<%= legend['for'] %>"<% end %><% if legend['tabindex'] %> tabindex="<%= legend['tabindex'] %>"<% end %>>
+  <legend class="usa-legend<% if legend['modifier'] %> <%= legend['modifier'] %><% end %>"<% if legend['id'] %> id="<%= legend['id'] %>"<% end %><% if legend['for'] %> for="<%= legend['for'] %>"<% end %><% if legend['tabindex'] %> tabindex="<%= legend['tabindex'] %>"<% end %>>
     <span><%= legend['text'] %></span>
 
     <% if defined?(required) %><abbr title="required" class="usa-hint usa-hint--required<% if legend['modifierHint'] %> <%= legend['modifierHint'] %><% end %>">*</abbr><% end %>

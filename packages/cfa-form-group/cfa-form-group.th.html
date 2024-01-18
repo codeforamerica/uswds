@@ -1,17 +1,17 @@
 <div th:fragment="formGroup(modifier, id, label, input, textarea, selectEl, hint, error, inputGroup)" class="usa-form-group" th:classappend="${modifier}" th:attr="id=${id}">
-  <label class="usa-label" th:classappend="${label.modifier}" th:attr="for=${label.for},tabindex=${label.tabindex}">
-    <span th:text="${label.text}">Label</span>
+  <label class="usa-label" th:classappend="${label.modifier}" th:attr="id=${label.id},for=${label.for},tabindex=${label.tabindex}">
+    <span th:utext="${label.text}">Label</span>
 
-    <abbr th:if="${input.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${input.required}" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
 
-    <abbr th:if="${textarea.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${textarea.required}" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
 
-    <abbr th:if="${selectEl.required}" title="required" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${selectEl.required}" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
   </label>
 
-  <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:text="${hint.text}">Hint</div>
+  <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:utext="${hint.text}">Hint</div>
 
-  <span th:if="${error}" class="usa-error-message" th:classappend="${error.modifier}" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
+  <span th:if="${error}" class="usa-error-message" th:classappend="${error.modifier}" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:utext="${error.text}">Message</span>
 
   <div th:if="${input}">
     <th:block th:replace="~{packages/cfa-input/cfa-input.th :: input(${input}, ${inputGroup})}" />
