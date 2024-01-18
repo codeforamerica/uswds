@@ -73,40 +73,6 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
 {% capture id %}{% createId %}{% endcapture %}
 
 {% capture context %}{
-  "modifier": "cfa-form-group usa-form-group--error",
-  "id": "form-group-{{ id }}",
-  "label": {
-    "text": "What is your first name?",
-    "for": "input-{{ id }}",
-    "modifier": "cfa-label",
-    "modifierHint": "cfa-hint"
-  },
-  "hint": {
-    "text": "Legally as it appears on your I.D.",
-    "modifier": "cfa-hint",
-    "id": "hint-{{ id }}"
-  },
-  "error": {
-    "text": "This field is required",
-    "id": "error-message-{{ id }}",
-    "role": "alert"
-  },
-  "input": {
-    "modifier": "cfa-input",
-    "id": "input-{{ id }}",
-    "name": "input['{{ id }}']",
-    "type": "text",
-    "required": "true",
-    "ariaInvalid": "true",
-    "ariaDescribedby": "hint-{{ id }} error-message-{{ id }}"
-  }
-}{% endcapture %}
-
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Invalid form group', dictionary: dictionary %}
-
-{% capture id %}{% createId %}{% endcapture %}
-
-{% capture context %}{
   "modifier": "cfa-form-group",
   "id": "form-group-{{ id }}",
   "label": {
