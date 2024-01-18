@@ -14,7 +14,7 @@ body: bg-base-lightest
 {% capture alert %}{
   "modifier": "cfa-alert cfa-site-alert usa-alert--error margin-0 border-top-0 border-x-0",
   "role": "alert",
-  "body": "<p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p><ol><li><a href=\"#form-group-{{ id_first_name }}\">First name is required</a></li><li><a href=\"#form-group-{{ id_last_name }}\">Last name is required</a></li><li><a href=\"#fieldset-{{ id_birthday }}\">Date of birth doesn’t match the format we need</a></li></ol>"
+  "body": "<p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p><ol><li><a href=\"#label-{{ id_first_name }}\">First name is required</a></li><li><a href=\"#label-{{ id_last_name }}\">Last name is required</a></li><li><a href=\"#legend-{{ id_birthday }}\">Date of birth doesn’t match the format we need</a></li></ol>"
 }{% endcapture %}
 
 {% capture toolbar %}{
@@ -60,6 +60,8 @@ body: bg-base-lightest
       "label": {
         "text": "What is your first name?",
         "for": "input-{{ id_first_name }}",
+        "id": "label-{{ id_first_name }}",
+        "tabindex": 0,
         "modifier": "cfa-label",
         "modifierHint": "cfa-hint"
       },
@@ -88,6 +90,8 @@ body: bg-base-lightest
       "label": {
         "text": "What is your last name?",
         "for": "input-{{ id_last_name }}",
+        "id": "label-{{ id_last_name }}",
+        "tabindex": 0,
         "modifier": "cfa-label",
         "modifierHint": "cfa-hint"
       },
@@ -118,6 +122,8 @@ body: bg-base-lightest
         "modifier": "cfa-fieldset cfa-fieldset--error",
         "legend": {
           "text": "What is your date of birth?",
+          "id": "legend-{{ id_birthday }}",
+          "tabindex": 0,
           "modifier": "cfa-legend",
           "modifierHint": "cfa-hint"
         },
@@ -416,7 +422,7 @@ body: bg-base-lightest
 {% component 'alert' alert %}
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 {% component 'toolbar' toolbar %}
-<main id="#main-content">
+<main id="main-content">
   <section class="grid-container usa-section">
     <div class="maxw-form-card margin-x-auto padding-bottom-4">
       <a href="#">Go back</a>
