@@ -1,14 +1,12 @@
-<fieldset th:fragment="memorableDate(fieldset, id, required, modifier, month, day, year)" class="usa-fieldset" th:classappend="${fieldset.modifier}" th:attr="id=${id}">
-  <legend class="usa-legend" th:classappend="${fieldset.legend.modifier}" th:attr="tabindex=${fieldset.legend.tabindex}">
-    <span th:text="${fieldset.legend.text}">Legend</span>
-
-    <abbr th:if="${required}" title="required" class="usa-hint usa-hint--required" th:classappend="${fieldset.legend.modifierHint}">*</abbr>
+<fieldset th:fragment="memorableDate(fieldset, id, modifier, month, day, year)" class="usa-fieldset" th:classappend="${fieldset.modifier}" th:attr="id=${id}">
+  <legend class="usa-legend" th:classappend="${fieldset.legend.modifier}" th:attr="id=${fieldset.legend.id},tabindex=${fieldset.legend.tabindex}">
+    <span th:utext="${fieldset.legend.text}">Legend</span>
   </legend>
 
-  <div th:if="${fieldset.hint}" class="usa-hint" th:classappend="${fieldset.hint.modifier}" th:attr="id=${fieldset.hint.id}" th:text="${fieldset.hint.text}">Hint</div>
+  <div th:if="${fieldset.hint}" class="usa-hint" th:classappend="${fieldset.hint.modifier}" th:attr="id=${fieldset.hint.id}" th:utext="${fieldset.hint.text}">Hint</div>
 
   <div th:if="${fieldset.error}">
-    <span th:each="error: ${fieldset.error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:text="${error.text}">Message</span>
+    <span th:each="error: ${fieldset.error}" class="usa-error-message" th:attr="id=${error.id},role=${error.role},aria-live=${error.ariaLive}" th:utext="${error.text}">Message</span>
   </div>
 
   <div class="usa-memorable-date" th:classappend="${modifier}">

@@ -114,7 +114,7 @@
           </div>
 
           <div th:if="${formGroup.memorableDate}">
-            <th:block th:replace="~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.fieldset}, ${formGroup.id}, ${formGroup.required}, ${formGroup.modifier}, ${formGroup.month}, ${formGroup.day}, ${formGroup.year})}" />
+            <th:block th:replace="~{packages/cfa-memorable-date/cfa-memorable-date.th :: memorableDate(${formGroup.fieldset}, ${formGroup.id}, ${formGroup.modifier}, ${formGroup.month}, ${formGroup.day}, ${formGroup.year})}" />
           </div>
 
           <div th:if="${formGroup.options}" class="cfa-form-card__input-select-group">

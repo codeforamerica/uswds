@@ -1,13 +1,15 @@
 <fieldset class="usa-fieldset<% if fieldset['modifier'] %> <%= fieldset['modifier'] %><% end %>"<% if defined?(id) %> id="<%= id %>"<% end %>>
-  <legend class="usa-legend<% if fieldset['legend']['modifier'] %> <%= fieldset['legend']['modifier'] %><% end %>"<% if fieldset['legend']['for'] %> for="<%= fieldset['legend']['for'] %>"<% end %><% if fieldset['legend']['tabindex'] %> tabindex="<%= fieldset['legend']['tabindex'] %>"<% end %>>
+  <legend class="usa-legend<% if fieldset['legend']['modifier'] %> <%= fieldset['legend']['modifier'] %><% end %>"<% if fieldset['legend']['id'] %> id="<%= fieldset['legend']['id'] %>"<% end %><% if fieldset['legend']['for'] %> for="<%= fieldset['legend']['for'] %>"<% end %><% if fieldset['legend']['tabindex'] %> tabindex="<%= fieldset['legend']['tabindex'] %>"<% end %>>
     <span><%= fieldset['legend']['text'] %></span>
-
-    <% if defined?(required) %><abbr title="required" class="usa-hint usa-hint--required<% if fieldset['legend']['modifierHint'] %> <%= fieldset['legend']['modifierHint'] %><% end %>">*</abbr><% end %>
   </legend>
 
   <% if fieldset['hint'] %><div class="usa-hint<% if fieldset['hint']['modifier'] %> <%= fieldset['hint']['modifier'] %><% end %>"<% if fieldset['hint']['id'] %> id="<%= fieldset['hint']['id'] %>"<% end %>><%= fieldset['hint']['text'] %></div><% end %>
 
-  <% if fieldset['error'] %><span class="usa-error-message"<% if fieldset['error']['id'] %> id="<%= fieldset['error']['id'] %>"<% end %><% if fieldset['error']['role'] %> role="<%= fieldset['error']['role'] %>"<% end %><% if fieldset['error']['ariaLive'] %> aria-live="<%= fieldset['error']['ariaLive'] %>"<% end %>><%= fieldset['error']['text'] %></span><% end %>
+  <% if fieldset['error'] %><div>
+    <% fieldset['error'].each do |error| %>
+    <span class="usa-error-message"<% if error['id'] %> id="<%= error['id'] %>"<% end %><% if error['role'] %> role="<%= error['role'] %>"<% end %><% if error['ariaLive'] %> aria-live="<%= error['ariaLive'] %>"<% end %>><%= error['text'] %></span>
+    <% end %>
+  </div><% end %>
 
   <div class="usa-memorable-date<% if defined?(modifier) %> <%= modifier %><% end %>">
     <% if month['selectEl'] %><div>
