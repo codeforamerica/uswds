@@ -4,7 +4,7 @@
       <span><%= fileInput['label']['text'] %></span>
 
       <% if fileInput['input']['required'] %>
-      <abbr title="required" class="usa-hint usa-hint--required<% if fileInput['label']['modifierHint'] %> <%= fileInput['label']['modifierHint'] %><% end %>">*</abbr>
+      <abbr aria-hidden="true" class="usa-hint usa-hint--required<% if fileInput['label']['modifierHint'] %> <%= fileInput['label']['modifierHint'] %><% end %>">*</abbr>
       <% end %>
     </label><% end %>
 

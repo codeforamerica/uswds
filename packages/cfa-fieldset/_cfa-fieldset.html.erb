@@ -3,7 +3,7 @@
   <legend class="usa-legend<% if legend['modifier'] %> <%= legend['modifier'] %><% end %>"<% if legend['id'] %> id="<%= legend['id'] %>"<% end %><% if legend['for'] %> for="<%= legend['for'] %>"<% end %><% if legend['tabindex'] %> tabindex="<%= legend['tabindex'] %>"<% end %>>
     <span><%= legend['text'] %></span>
 
-    <% if defined?(required) %><abbr title="required" class="usa-hint usa-hint--required<% if legend['modifierHint'] %> <%= legend['modifierHint'] %><% end %>">*</abbr><% end %>
+    <% if defined?(required) %><abbr aria-hidden="true" class="usa-hint usa-hint--required<% if legend['modifierHint'] %> <%= legend['modifierHint'] %><% end %>">*</abbr><% end %>
   </legend>
 
   <% if defined?(hint) %><div class="usa-hint<% if hint['modifier'] %> <%= hint['modifier'] %><% end %>"<% if hint['id'] %> id="<%= hint['id'] %>"<% end %>><%= hint['text'] %></div><% end %>

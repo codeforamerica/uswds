@@ -2,11 +2,11 @@
   <label class="usa-label" th:classappend="${label.modifier}" th:attr="id=${label.id},for=${label.for},tabindex=${label.tabindex}">
     <span th:utext="${label.text}">Label</span>
 
-    <abbr th:if="${input.required}" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${input.required}" aria-hidden="true" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
 
-    <abbr th:if="${textarea.required}" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${textarea.required}" aria-hidden="true" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
 
-    <abbr th:if="${selectEl.required}" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
+    <abbr th:if="${selectEl.required}" aria-hidden="true" class="usa-hint usa-hint--required" th:classappend="${label.modifierHint}">*</abbr>
   </label>
 
   <div th:if="${hint}" class="usa-hint" th:classappend="${hint.modifier}" th:attr="id=${hint.id}" th:utext="${hint.text}">Hint</div>

@@ -3,11 +3,11 @@
   <label class="usa-label<% if label['modifier'] %> <%= label['modifier'] %><% end %>"<% if label['id'] %> id="<%= label['id'] %>"<% end %><% if label['for'] %> for="<%= label['for'] %>"<% end %><% if label['tabindex'] %> tabindex="<%= label['tabindex'] %>"<% end %>>
     <span><%= label['text'] %></span>
 
-    <% if defined?(input) && input['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+    <% if defined?(input) && input['required'] %><abbr aria-hidden="true" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
 
-    <% if defined?(textarea) && textarea['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+    <% if defined?(textarea) && textarea['required'] %><abbr aria-hidden="true" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
 
-    <% if defined?(selectEl) && selectEl['required'] %><abbr title="required" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
+    <% if defined?(selectEl) && selectEl['required'] %><abbr aria-hidden="true" class="usa-hint usa-hint--required<% if label['modifierHint'] %> <%= label['modifierHint'] %><% end %>">*</abbr><% end %>
   </label>
 
   <% if defined?(hint) %><div class="usa-hint<% if hint['modifier'] %> <%= hint['modifier'] %><% end %>"<% if hint['id'] %> id="<%= hint['id'] %>"<% end %>><%= hint['text'] %></div><% end %>
