@@ -1,5 +1,5 @@
 ---
-title: Please check your answers
+title: Please, check your answers
 layout: examples
 body: bg-base-lightest
 ---
@@ -14,7 +14,7 @@ body: bg-base-lightest
 {% capture alert %}{
   "modifier": "cfa-alert cfa-site-alert usa-alert--error margin-0 border-top-0 border-x-0",
   "role": "alert",
-  "body": "<p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p><ol><li><a href=\"#label-{{ id_first_name }}\">First name is required</a></li><li><a href=\"#label-{{ id_last_name }}\">Last name is required</a></li><li><a href=\"#legend-{{ id_birthday }}\">Date of birth doesn’t match the format we need</a></li></ol>"
+  "body": "<p>Some required questions aren’t filled or we can’t accept some of the answers. We’ll be able to continue with your application once the issues are addressed.</p><ol><li><a href=\"#label-{{ id_first_name }}\">First name is required</a></li><li><a href=\"#label-{{ id_last_name }}\">Last name is required</a></li><li><a href=\"#legend-{{ id_birthday }}\">Date of birth doesn’t match the format we need</a></li></ol><p>If you need assistance to complete your application request a reasonable accommodation. This can be done at any time by contacting your case manager or calling 1-800-123-4567.</p>"
 }{% endcapture %}
 
 {% capture toolbar %}{
@@ -51,6 +51,9 @@ body: bg-base-lightest
   "header": {
     "heading": {
       "text": "Tell us about yourself"
+    },
+    "helpMessage": {
+      "content": "<p><small>Required fields are indicated visually using an asterisk<span aria-hidden=\"true\"> (<abbr class=\"usa-hint usa-hint--required cfa-hint\">*</abbr>)</span>.</small></p>"
     }
   },
   "formGroups": [
@@ -134,15 +137,15 @@ body: bg-base-lightest
         },
         "error": [
           {
-            "text": "Please select a month",
+            "text": "Select a month",
             "id": "error-message-month-{{ id_birthday }}"
           },
           {
-            "text": "Please enter a valid day",
+            "text": "Enter a valid day",
             "id": "error-message-day-{{ id_birthday }}"
           },
           {
-            "text": "Please enter a valid year",
+            "text": "Enter a valid year",
             "id": "error-message-year-{{ id_birthday }}"
           }
         ]
@@ -425,7 +428,7 @@ body: bg-base-lightest
 <main id="main-content">
   <section class="grid-container usa-section">
     <div class="maxw-form-card margin-x-auto padding-bottom-4">
-      <a href="#">Go back</a>
+      <a href="{{ config.baseUrl }}examples/prevent-errors">Go back</a>
     </div>
     {% component 'form-card' formCard %}
   </section>
