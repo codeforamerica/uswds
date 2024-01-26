@@ -39,7 +39,10 @@ body: bg-base-lightest
 
 {% capture formCard %}{
   "form": {
-    "modifier": "cfa-form"
+    "modifier": "cfa-form",
+    "method": "post",
+    "action": "{{ config.baseUrl }}examples/recover-from-errors",
+    "novalidate": "true"
   },
   "graphic": "{{ config.baseUrl }}assets/img/sprite.svg#person",
   "header": {
@@ -136,7 +139,7 @@ body: bg-base-lightest
           "ariaDescribedby": "hint-{{ id_birthday }}",
           "default": {
             "label": "Click to select month",
-            "selected": "true"
+            "value": ""
           },
           "options": [
             {
@@ -298,7 +301,7 @@ body: bg-base-lightest
       {
         "label": "Continue",
         "modifier": "cfa-form-card__footer-first-button cfa-button usa-button--big",
-        "href": "{{ config.baseUrl }}examples/recover-from-errors"
+        "type": "submit"
       }
     ]
   }

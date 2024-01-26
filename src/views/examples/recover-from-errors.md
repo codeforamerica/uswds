@@ -74,7 +74,7 @@ body: bg-base-lightest
         "id": "hint-{{ id_first_name }}"
       },
       "error": {
-        "text": "This field is required",
+        "text": "Fill out this field.",
         "id": "error-message-{{ id_first_name }}"
       },
       "input": {
@@ -104,7 +104,7 @@ body: bg-base-lightest
         "id": "hint-{{ id_last_name }}"
       },
       "error": {
-        "text": "This field is required",
+        "text": "Fill out this field.",
         "id": "error-message-{{ id_last_name }}"
       },
       "input": {
@@ -137,15 +137,15 @@ body: bg-base-lightest
         },
         "error": [
           {
-            "text": "Select a month",
+            "text": "Select a month.",
             "id": "error-message-month-{{ id_birthday }}"
           },
           {
-            "text": "Enter a valid day",
+            "text": "Fill out day using one or two numbers. Example, “19”.",
             "id": "error-message-day-{{ id_birthday }}"
           },
           {
-            "text": "Enter a valid year",
+            "text": "Fill out year using four numbers. Example, “1986”.",
             "id": "error-message-year-{{ id_birthday }}"
           }
         ]
@@ -168,8 +168,8 @@ body: bg-base-lightest
           "ariaDescribedby": "hint-{{ id_birthday }} error-message-month-{{ id_birthday }}",
           "ariaInvalid": true,
           "default": {
-            "label": "Click to select month",
-            "selected": "true"
+            "label": "Select a month",
+            "value": ""
           },
           "options": [
             {
