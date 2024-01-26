@@ -1,5 +1,5 @@
 <main th:fragment="formCard(modifier, id, ariaLabel, form, graphic, fieldset, header, content, formGroups, footer)" class="cfa-form-card" th:classappend="${modifier}" th:attr="id=${id},aria-label=${ariaLabel}">
-  <form class="usa-form" th:classappend="${form.modifier}">
+  <form class="usa-form" th:classappend="${form.modifier}" th:attr="name=${form.name},rel=${form.rel},method=${form.method},action=${form.action},autocomplete=${form.autocomplete},enctype=${form.enctype},novalidate=${form.novalidate},target=${form.target}">
     <svg th:if="${graphic}" class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
       <use th:href="${graphic}"></use>
     </svg>

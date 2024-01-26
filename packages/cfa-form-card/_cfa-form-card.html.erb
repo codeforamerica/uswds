@@ -1,7 +1,15 @@
 <main class="cfa-form-card<% if defined?(modifier) %> <%= modifier %><% end %>"
   <% if defined?(id) %> id="<%= id %>"<% end %>
   <% if defined?(ariaLabel) %> aria-label="<%= ariaLabel %>"<% end %>>
-  <form class="usa-form<% if defined?(form) && form['modifier'] %> <%= form['modifier'] %><% end %>">
+  <form class="usa-form<% if defined?(form) && form['modifier'] %> <%= form['modifier'] %><% end %>"
+    <% if defined?(form) && form['name'] %> name="<%= form['name'] %><% end %>
+    <% if defined?(form) && form['rel'] %> rel="<%= form['rel'] %><% end %>
+    <% if defined?(form) && form['method'] %> method="<%= form['method'] %><% end %>
+    <% if defined?(form) && form['action'] %> action="<%= form['action'] %><% end %>
+    <% if defined?(form) && form['autocomplete'] %> autocomplete="<%= form['autocomplete'] %><% end %>
+    <% if defined?(form) && form['enctype'] %> enctype="<%= form['enctype'] %><% end %>
+    <% if defined?(form) && form['novalidate'] %> novalidate="<%= form['novalidate'] %><% end %>
+    <% if defined?(form) && form['target'] %> target="<%= form['target'] %><% end %>>
     <% if defined?(graphic) %><svg class="cfa-form-card__graphic usa-icon" aria-hidden="true" focusable="false" role="img">
       <use href="<%= graphic %>"></use>
     </svg><% end %>
