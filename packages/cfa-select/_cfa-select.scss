@@ -23,6 +23,9 @@
 
   cursor: pointer;
   text-overflow: ellipsis;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cfa-select:not(.usa-input--error):not(.usa-input--success),
