@@ -37,12 +37,13 @@ The pattern described here works within a few constraints.
 
 **Validation happens after the screen is submitted**. In an ideal scenario, validation occurs before the screen is submitted. This solution reduces the burden on engineers to maintain JavaScript that would normally support the interactivity required for front-end validation. This recommendation will ensure WCAG 2.1 AA success criteria.
 
-**This guidance is mostly agnostic to any design system**. It is mostly written with the Honeycrisp Design System or the USWDS in mind but the annotations only illustrate code related to accessibility, not styling.
+**This guidance is mostly agnostic to any design system**. But, it is mostly written with the Honeycrisp Design System or the USWDS in mind.
 
 ## Prevent errors {#prevent-errors}
 
-Illustrate which questions are required. Use the required attribute on required inputs. If a question is optional, consider whether it needs to be asked. If it does, mark it as optional.
-Use the appropriate input types that suggest formatting for answers. For example, text for generic alpha-numeric answers, email for email addresses, phone for phone numbers, memorable dates, etc.
+Illustrate which questions are required. Use the required attribute on required inputs. If a question is optional, consider whether it needs to be asked. If it does, describe it as optional.
+
+Use the appropriate input types and modes that suggest formatting for answers. For example, text for generic alpha-numeric answers, numeric input mode for numbers, email for email addresses, phone for phone numbers, memorable dates, etc.
 
 Provide text to help users understand special formatting. This is text underneath the question label (help text).
 

@@ -158,10 +158,10 @@
 <h2 id="constraints">Constraints</h2>
 <p>The pattern described here works within a few constraints.</p>
 <p><strong>Validation happens after the screen is submitted</strong>. In an ideal scenario, validation occurs before the screen is submitted. This solution reduces the burden on engineers to maintain JavaScript that would normally support the interactivity required for front-end validation. This recommendation will ensure WCAG 2.1 AA success criteria.</p>
-<p><strong>This guidance is mostly agnostic to any design system</strong>. It is mostly written with the Honeycrisp Design System or the USWDS in mind but the annotations only illustrate code related to accessibility, not styling.</p>
+<p><strong>This guidance is mostly agnostic to any design system</strong>. But, it is mostly written with the Honeycrisp Design System or the USWDS in mind.</p>
 <h2 id="prevent-errors">Prevent errors</h2>
-<p>Illustrate which questions are required. Use the required attribute on required inputs. If a question is optional, consider whether it needs to be asked. If it does, mark it as optional.
-Use the appropriate input types that suggest formatting for answers. For example, text for generic alpha-numeric answers, email for email addresses, phone for phone numbers, memorable dates, etc.</p>
+<p>Illustrate which questions are required. Use the required attribute on required inputs. If a question is optional, consider whether it needs to be asked. If it does, describe it as optional.</p>
+<p>Use the appropriate input types and modes that suggest formatting for answers. For example, text for generic alpha-numeric answers, numeric input mode for numbers, email for email addresses, phone for phone numbers, memorable dates, etc.</p>
 <p>Provide text to help users understand special formatting. This is text underneath the question label (help text).</p>
 <p>Disabled buttons can prevent the applicant from skipping required questions. Ensure you have provided an affordance for sighted and screen-reader users as to why the button is disabled.</p>
 <p><strong>Relevant WCAG 2.1 Criteria</strong></p>
