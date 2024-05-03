@@ -47,26 +47,11 @@ The {{ title }} component is the most common form component for receiving user i
     "modifier": "cfa-input",
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
-    "type": "text",
-    "required": "true"
+    "type": "text"
   }
 }{% endcapture %}
 
 {% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Text input', dictionary: dictionary %}
-
-{% capture id %}{% createId %}{% endcapture %}
-
-{% capture context %}{
-  "input": {
-    "modifier": "cfa-input",
-    "id": "input-{{ id }}",
-    "name": "input['{{ id }}']",
-    "type": "text",
-    "required": "true"
-  }
-}{% endcapture %}
-
-{% render 'figure.md', name: 'input', nice: title, context: context, caption: 'Required text input', dictionary: dictionary %}
 
 {% capture id %}{% createId %}{% endcapture %}
 

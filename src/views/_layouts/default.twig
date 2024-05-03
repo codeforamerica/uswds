@@ -40,6 +40,13 @@
               } %}
               {% endif %}
 
+              {% if 'pattern' in tags %}
+              {% set sidenav = {
+                type: 'pattern',
+                items: collections.patternByAlpha
+              } %}
+              {% endif %}
+
               {% if 'documentation' in tags %}
               {% set sidenav = {
                 type: 'documentation',

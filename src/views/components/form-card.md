@@ -67,7 +67,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
       "modifier": "cfa-form-group",
       "id": "form-group-{{ id_first_name }}",
       "label": {
-        "text": "What is your first name?",
+        "text": "What is your first name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
         "for": "input-{{ id_first_name }}",
         "modifier": "cfa-label",
         "modifierHint": "cfa-hint"
@@ -82,15 +82,14 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "id": "input-{{ id_first_name }}",
         "name": "input['{{ id_first_name }}']",
         "ariaDescribedby": "hint-{{ id_first_name }}",
-        "type": "text",
-        "required": "true"
+        "type": "text"
       }
     },
     {
-      "modifier": "cfa-form-group usa-form-group--error",
+      "modifier": "cfa-form-group",
       "id": "form-group-{{ id_last_name }}",
       "label": {
-        "text": "What is your last name?",
+        "text": "What is your last name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
         "for": "input-{{ id_last_name }}",
         "modifier": "cfa-label",
         "modifierHint": "cfa-hint"
@@ -105,8 +104,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "id": "input-{{ id_last_name }}",
         "name": "input['{{ id_last_name }}']",
         "ariaDescribedby": "hint-{{ id_last_name }}",
-        "type": "text",
-        "required": "true"
+        "type": "text"
       }
     },
     {
@@ -121,7 +119,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "modifier": "cfa-hint"
         },
         "legend": {
-          "text": "What is your date of birth?",
+          "text": "What is your date of birth? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "modifier": "cfa-legend",
           "modifierHint": "cfa-hint"
         }
@@ -140,7 +138,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "modifier": "cfa-select",
           "id": "month-{{ id_birthday }}",
           "name": "month['{{ id_birthday }}']",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }}",
           "default": {
             "label": "Click to select month",
@@ -219,7 +216,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "inputmode": "numeric",
           "maxlength": "2",
           "pattern": "[0-9]*",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }}"
         }
       },
@@ -241,7 +237,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "minlength": "4",
           "maxlength": "4",
           "pattern": "[0-9]*",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }}"
         }
       }
@@ -338,7 +333,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-form-group",
         "id": "form-group-{{ id_street_address_line_1 }}",
         "label": {
-          "text": "Street address",
+          "text": "Street address <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "for": "input-{{ id_street_address_line_1 }}",
           "modifier": "cfa-label"
         },
@@ -347,7 +342,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "id": "input-{{ id_street_address_line_1 }}",
           "name": "input['{{ id_street_address_line_1 }}']",
           "type": "text",
-          "required": "true",
           "autocomplete": "address-line1"
         }
       },
@@ -364,7 +358,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "id": "input-{{ id_street_address_line_2 }}",
           "name": "input['{{ id_street_address_line_2 }}']",
           "type": "text",
-          "required": "true",
           "autocomplete": "address-line2"
         }
       },
@@ -372,7 +365,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-form-group",
         "id": "form-group-{{ id_city }}",
         "label": {
-          "text": "City",
+          "text": "City <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "for": "input-{{ id_city }}",
           "modifier": "cfa-label"
         },
@@ -381,7 +374,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "id": "input-{{ id_city }}",
           "name": "input['{{ id_city }}']",
           "type": "text",
-          "required": "true",
           "autocomplete": "address-level2"
         }
       },
@@ -389,7 +381,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-form-group",
         "id": "form-group-{{ id_state }}",
         "label": {
-          "text": "State, territory, or military post",
+          "text": "State, territory, or military post <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "for": "input-{{ id_state }}",
           "modifier": "cfa-label"
         },
@@ -398,7 +390,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "id": "input-{{ id_state }}",
           "name": "input['{{ id_state }}']",
           "type": "text",
-          "required": "true",
           "maxlength": "2",
           "autocomplete": "address-level1"
         }
@@ -407,7 +398,7 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
         "modifier": "cfa-form-group",
         "id": "form-group-{{ id_zip_code }}",
         "label": {
-          "text": "ZIP code",
+          "text": "ZIP code <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "for": "input-{{ id_zip_code }}",
           "modifier": "cfa-label"
         },
@@ -416,7 +407,6 @@ The {{ title }} is a custom component that extends the <a href="{{ url_uswds }}"
           "id": "input-{{ id_zip_code }}",
           "name": "input['{{ id_zip_code }}']",
           "type": "text",
-          "required": "true",
           "pattern": "[\\d]{5}(-[\\d]{4})?",
           "autocomplete": "postal-code"
         }

@@ -768,6 +768,16 @@ module.exports = function(eleventyConfig) {
     ];
   });
 
+  eleventyConfig.addCollection('patternByAlpha', (collectionApi) => {
+    let alpha = collectionApi.getFilteredByTag('pattern')
+      .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+    return [
+      ...alpha.filter(item => item.data.tags.includes('primary')),
+      ...alpha.filter(item => !item.data.tags.includes('primary'))
+    ];
+  });
+
   eleventyConfig.addCollection('documentationByAlpha', (collectionApi) => {
     let alpha = collectionApi.getFilteredByTag('documentation')
       .sort((a, b) => a.data.title.localeCompare(b.data.title));

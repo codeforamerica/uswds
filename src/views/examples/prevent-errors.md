@@ -41,16 +41,12 @@ body: bg-base-lightest
   "form": {
     "modifier": "cfa-form",
     "method": "post",
-    "action": "{{ config.baseUrl }}examples/recover-from-errors",
-    "novalidate": "true"
+    "action": "{{ config.baseUrl }}examples/recover-from-errors"
   },
   "graphic": "{{ config.baseUrl }}assets/img/sprite.svg#person",
   "header": {
     "heading": {
       "text": "Tell us about yourself"
-    },
-    "helpMessage": {
-      "content": "<p><small>Required fields are indicated visually using an asterisk<span aria-hidden=\"true\"> (<abbr class=\"usa-hint usa-hint--required cfa-hint\">*</abbr>)</span>.</small></p>"
     }
   },
   "formGroups": [
@@ -58,7 +54,7 @@ body: bg-base-lightest
       "modifier": "cfa-form-group",
       "id": "form-group-{{ id_first_name }}",
       "label": {
-        "text": "What is your first name?",
+        "text": "What is your first name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
         "for": "input-{{ id_first_name }}",
         "id": "label-{{ id_first_name }}",
         "modifier": "cfa-label",
@@ -74,7 +70,6 @@ body: bg-base-lightest
         "id": "input-{{ id_first_name }}",
         "name": "input['{{ id_first_name }}']",
         "type": "text",
-        "required": "true",
         "ariaDescribedby": "hint-{{ id_first_name }}"
       }
     },
@@ -82,7 +77,7 @@ body: bg-base-lightest
       "modifier": "cfa-form-group",
       "id": "form-group-{{ id_last_name }}",
       "label": {
-        "text": "What is your last name?",
+        "text": "What is your last name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
         "for": "input-{{ id_last_name }}",
         "id": "label-{{ id_last_name }}",
         "modifier": "cfa-label",
@@ -98,7 +93,6 @@ body: bg-base-lightest
         "id": "input-{{ id_last_name }}",
         "name": "input['{{ id_last_name }}']",
         "type": "text",
-        "required": "true",
         "ariaDescribedby": "hint-{{ id_last_name }}"
       }
     },
@@ -109,7 +103,7 @@ body: bg-base-lightest
       "fieldset": {
         "modifier": "cfa-fieldset",
         "legend": {
-          "text": "What is your date of birth?",
+          "text": "What is your date of birth? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "id": "legend-{{ id_birthday }}",
 
           "modifier": "cfa-legend",
@@ -135,7 +129,6 @@ body: bg-base-lightest
           "modifier": "cfa-select",
           "id": "month-{{ id_birthday }}",
           "name": "month['{{ id_birthday }}']",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }}",
           "default": {
             "label": "Click to select month",
@@ -214,7 +207,6 @@ body: bg-base-lightest
           "inputmode": "numeric",
           "maxlength": "2",
           "pattern": "[0-9]*",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }}"
         }
       },
@@ -236,7 +228,6 @@ body: bg-base-lightest
           "minlength": "4",
           "maxlength": "4",
           "pattern": "[0-9]*",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }}"
         }
       }

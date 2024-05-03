@@ -52,7 +52,7 @@ The {{ title }} component allows a user to select multiple files from their devi
     "modifier": "cfa-form-group cfa-file-input",
     "id": "form-group-{{ id }}",
     "label": {
-      "text": "Add your files or photos",
+      "text": "Add your files or photos <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
       "for": "input-{{ id }}",
       "modifier": "cfa-label",
       "modifierHint": "cfa-hint"
@@ -69,8 +69,7 @@ The {{ title }} component allows a user to select multiple files from their devi
       "ariaDescribedby": "hint-{{ id }}",
       "type": "file",
       "accept": ".jpeg, .jpg, .png, .pdf, .bmp, .gif, .doc, .docx, .odt, .ods, .odp",
-      "multiple": "multiple",
-      "required": "true"
+      "multiple": "multiple"
     },
     "button": {
       "icon": "{{ config.baseUrl }}assets/img/sprite.svg#add"

@@ -3,9 +3,9 @@ tags: component
 title: Memorable date
 layout: default
 story: A memorable date is one I can easily recall without having to pick it in a calendar.
-url_uswds: https://designsystem.digital.gov/components/text-input
-url_uswds_guidance: https://designsystem.digital.gov/components/text-input#guidance
-url_uswds_usage: https://designsystem.digital.gov/components/text-input#using-the-text-input-component-2
+url_uswds: https://designsystem.digital.gov/components/memorable-date
+url_uswds_guidance: https://designsystem.digital.gov/components/memorable-date#guidance
+url_uswds_usage: https://designsystem.digital.gov/components/memorable-date#using-the-text-input-component-2
 nice_uswds: Memorable date component
 # url_honeycrisp: http://honeycrisp.herokuapp.com/cfa/styleguide#atoms-form_elements
 # nice_honeycrisp: Form element atom
@@ -49,7 +49,7 @@ The {{ title }} component is used to allow the user to enter a date in an online
       "modifier": "cfa-hint"
     },
     "legend": {
-      "text": "What is your date of birth?",
+      "text": "What is your date of birth? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
       "modifier": "cfa-legend",
       "modifierHint": "cfa-hint"
     }
@@ -68,7 +68,6 @@ The {{ title }} component is used to allow the user to enter a date in an online
       "modifier": "cfa-select",
       "id": "month-{{ id }}",
       "name": "month['{{ id }}']",
-      "required": "true",
       "ariaDescribedby": "hint-{{ id }}",
       "default": {
         "label": "Click to select month",
@@ -147,7 +146,6 @@ The {{ title }} component is used to allow the user to enter a date in an online
       "inputmode": "numeric",
       "maxlength": "2",
       "pattern": "[0-9]*",
-      "required": "true",
       "ariaDescribedby": "hint-{{ id }}"
     }
   },
@@ -169,7 +167,6 @@ The {{ title }} component is used to allow the user to enter a date in an online
       "minlength": "4",
       "maxlength": "4",
       "pattern": "[0-9]*",
-      "required": "true",
       "ariaDescribedby": "hint-{{ id }}"
     }
   }

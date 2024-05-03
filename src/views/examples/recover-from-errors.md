@@ -51,9 +51,6 @@ body: bg-base-lightest
   "header": {
     "heading": {
       "text": "Tell us about yourself"
-    },
-    "helpMessage": {
-      "content": "<p><small>Required fields are indicated visually using an asterisk<span aria-hidden=\"true\"> (<abbr class=\"usa-hint usa-hint--required cfa-hint\">*</abbr>)</span>.</small></p>"
     }
   },
   "formGroups": [
@@ -61,7 +58,7 @@ body: bg-base-lightest
       "modifier": "cfa-form-group cfa-form-group--error",
       "id": "form-group-{{ id_first_name }}",
       "label": {
-        "text": "What is your first name?",
+        "text": "What is your first name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
         "for": "input-{{ id_first_name }}",
         "id": "label-{{ id_first_name }}",
         "tabindex": 0,
@@ -82,7 +79,6 @@ body: bg-base-lightest
         "id": "input-{{ id_first_name }}",
         "name": "input['{{ id_first_name }}']",
         "type": "text",
-        "required": "true",
         "ariaDescribedby": "hint-{{ id_first_name }} error-message-{{ id_first_name }}",
         "ariaInvalid": true
       }
@@ -91,7 +87,7 @@ body: bg-base-lightest
       "modifier": "cfa-form-group cfa-form-group--error",
       "id": "form-group-{{ id_last_name }}",
       "label": {
-        "text": "What is your last name?",
+        "text": "What is your last name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
         "for": "input-{{ id_last_name }}",
         "id": "label-{{ id_last_name }}",
         "tabindex": 0,
@@ -112,7 +108,6 @@ body: bg-base-lightest
         "id": "input-{{ id_last_name }}",
         "name": "input['{{ id_last_name }}']",
         "type": "text",
-        "required": "true",
         "ariaDescribedby": "hint-{{ id_last_name }} error-message-{{ id_last_name }}",
         "ariaInvalid": true
       }
@@ -124,7 +119,7 @@ body: bg-base-lightest
       "fieldset": {
         "modifier": "cfa-fieldset cfa-fieldset--error",
         "legend": {
-          "text": "What is your date of birth?",
+          "text": "What is your date of birth? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
           "id": "legend-{{ id_birthday }}",
           "tabindex": 0,
           "modifier": "cfa-legend",
@@ -164,7 +159,6 @@ body: bg-base-lightest
           "modifier": "cfa-select",
           "id": "month-{{ id_birthday }}",
           "name": "month['{{ id_birthday }}']",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }} error-message-month-{{ id_birthday }}",
           "ariaInvalid": true,
           "default": {
@@ -244,7 +238,6 @@ body: bg-base-lightest
           "inputmode": "numeric",
           "maxlength": "2",
           "pattern": "[0-9]*",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }} error-message-day-{{ id_birthday }}",
           "ariaInvalid": true
         }
@@ -267,7 +260,6 @@ body: bg-base-lightest
           "minlength": "4",
           "maxlength": "4",
           "pattern": "[0-9]*",
-          "required": "true",
           "ariaDescribedby": "hint-{{ id_birthday }} error-message-year-{{ id_birthday }}",
           "ariaInvalid": true
         }

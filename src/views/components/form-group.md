@@ -48,7 +48,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   "modifier": "cfa-form-group",
   "id": "form-group-{{ id }}",
   "label": {
-    "text": "What is your first name?",
+    "text": "What is your first name? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
     "for": "input-{{ id }}",
     "modifier": "cfa-label",
     "modifierHint": "cfa-hint"
@@ -63,8 +63,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "id": "input-{{ id }}",
     "name": "input['{{ id }}']",
     "ariaDescribedby": "hint-{{ id }}",
-    "type": "text",
-    "required": "true"
+    "type": "text"
   }
 }{% endcapture %}
 
@@ -103,7 +102,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   "modifier": "cfa-form-group",
   "id": "form-group-{{ id }}",
   "label": {
-    "text": "Please describe in as much detail as possible.",
+    "text": "Please describe in as much detail as possible <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
     "for": "textarea-{{ id }}",
     "modifier": "cfa-label",
     "modifierHint": "cfa-hint"
@@ -112,27 +111,6 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "modifier": "cfa-textarea",
     "id": "textarea-{{ id }}",
     "name": "textarea['{{ id }}']"
-  }
-}{% endcapture %}
-
-{% render 'figure.md', name: 'form-group', nice: title, context: context, caption: 'Form group with textarea', dictionary: dictionary %}
-
-{% capture id %}{% createId %}{% endcapture %}
-
-{% capture context %}{
-  "modifier": "cfa-form-group",
-  "id": "form-group-{{ id }}",
-  "label": {
-    "text": "Please describe in as much detail as possible.",
-    "for": "textarea-{{ id }}",
-    "modifier": "cfa-label",
-    "modifierHint": "cfa-hint"
-  },
-  "textarea": {
-    "modifier": "cfa-textarea",
-    "id": "textarea-{{ id }}",
-    "name": "textarea['{{ id }}']",
-    "required": "true"
   }
 }{% endcapture %}
 
@@ -178,7 +156,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   "modifier": "cfa-form-group",
   "id": "{% createId %}",
   "label": {
-    "text": "What percentage of your monthly income do you spend on monthly expenses?",
+    "text": "What percentage of your monthly income do you spend on monthly expenses? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
     "for": "input-{{ id }}",
     "modifier": "cfa-label",
     "modifierHint": "cfa-hint"
@@ -268,7 +246,7 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
   "modifier": "cfa-form-group",
   "id": "form-group-{{ id }}",
   "label": {
-    "text": "What type of income have you had most recently?",
+    "text": "What type of income have you had most recently? <abbr class=\"usa-hint usa-hint--required cfa-hint text-normal\">(required)</abbr>",
     "for": "select-{{ id }}",
     "modifier": "cfa-label",
     "modifierHint": "cfa-hint"
@@ -283,7 +261,6 @@ The {{ title }} includes the <a href="{{ config.baseUrl }}components/input">text
     "id": "select-{{ id }}",
     "name": "select['{{ id }}']",
     "ariaDescribedby": "hint-{{ id }}",
-    "required": "true",
     "default": {
       "label": "Click to select an income type",
       "selected": "true"
